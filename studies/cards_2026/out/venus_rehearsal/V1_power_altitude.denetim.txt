@@ -1,0 +1,5 @@
+figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] dogrudan-etiket    eksen 0: 4 çizgi serisi lejantla adlandırılmış
+          → çizgi sonlarına doğrudan etiket: datawiz.etiket.cizgi_sonu(ax)  [Mayer2017 mekânsal bitişiklik d=0.79; Sweller2019]
+  [BİLGİ] banking-45         eksen 0: çizim alanı y/g = 0.40; 45° için ≈ 0.99
+          → eğim karşılaştırması amaçsa oranı yaklaştır (ax.set_box_aspect)  [Kosara2013b]

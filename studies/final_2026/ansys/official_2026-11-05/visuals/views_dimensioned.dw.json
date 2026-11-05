@@ -1,0 +1,252 @@
+{
+ "surum": 1,
+ "ad": "views_dimensioned",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  10.8,
+  1.5,
+  811.5,
+  402.3
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   18.0,
+   20.0,
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "metin": 18.0
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    0.0,
+    0.0,
+    540.8,
+    411.0
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "",
+     "tur": "cizgi",
+     "renk": "#1a1a1a",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 1.6,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cizgi",
+     "renk": "#1a1a1a",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 1.6,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cizgi",
+     "renk": "#1a1a1a",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 1.6,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": true,
+   "x": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -40.0,
+     1385.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "500",
+     "1000"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "y": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -178.0,
+     905.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "200",
+     "400",
+     "600",
+     "800"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  },
+  {
+   "konum_pt": [
+    578.3,
+    0.0,
+    864.6,
+    411.0
+   ],
+   "baslik": "",
+   "seriler": [],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     1.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     1
+    ],
+    "ondalik_isareti": ".",
+    "tikler": [
+     "0.0",
+     "0.5",
+     "1.0"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "y": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     1.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     1
+    ],
+    "ondalik_isareti": ".",
+    "tikler": [
+     "0.0",
+     "0.2",
+     "0.4",
+     "0.6",
+     "0.8",
+     "1.0"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

@@ -1,0 +1,307 @@
+{
+ "_about": "Editable bracket set-up (lengths mm, forces N, moments N m). Roles and loads are a PROPOSAL from aerokit.bracket.features [Y]: check every hole role, load direction and magnitude against the organisers' drawing before trusting any result.",
+ "name": "sketch2_loop",
+ "units": {
+  "length": "mm",
+  "force": "N",
+  "moment": "N m"
+ },
+ "voxel_mm": 1.2,
+ "origin_mm": [
+  0.044922,
+  0.0,
+  0.0
+ ],
+ "bbox_mm": [
+  [
+   0.045,
+   0.0,
+   0.0
+  ],
+  [
+   159.645,
+   69.6,
+   27.6
+  ]
+ ],
+ "temperature_C": 300.0,
+ "holes": [
+  {
+   "id": "H1",
+   "axis": "y",
+   "center_mm": [
+    70.026,
+    48.0,
+    14.072
+   ],
+   "diameter_mm": 19.538,
+   "segments_mm": [
+    [
+     42.0,
+     54.0
+    ]
+   ],
+   "roundness": 0.257,
+   "role": "load"
+  },
+  {
+   "id": "H2",
+   "axis": "y",
+   "center_mm": [
+    99.91,
+    22.125,
+    11.967
+   ],
+   "diameter_mm": 12.524,
+   "segments_mm": [
+    [
+     17.25,
+     18.75
+    ],
+    [
+     24.75,
+     27.0
+    ]
+   ],
+   "roundness": 0.259,
+   "role": "load"
+  },
+  {
+   "id": "H3",
+   "axis": "z",
+   "center_mm": [
+    18.004,
+    34.958,
+    4.125
+   ],
+   "diameter_mm": 8.505,
+   "segments_mm": [
+    [
+     0.0,
+     8.25
+    ]
+   ],
+   "roundness": 0.047,
+   "role": "support"
+  },
+  {
+   "id": "H4",
+   "axis": "z",
+   "center_mm": [
+    31.945,
+    55.967,
+    4.125
+   ],
+   "diameter_mm": 8.463,
+   "segments_mm": [
+    [
+     0.0,
+     8.25
+    ]
+   ],
+   "roundness": 0.039,
+   "role": "support"
+  },
+  {
+   "id": "H5",
+   "axis": "z",
+   "center_mm": [
+    31.947,
+    13.971,
+    4.125
+   ],
+   "diameter_mm": 8.463,
+   "segments_mm": [
+    [
+     0.0,
+     8.25
+    ]
+   ],
+   "roundness": 0.039,
+   "role": "support"
+  },
+  {
+   "id": "H6",
+   "axis": "z",
+   "center_mm": [
+    99.963,
+    21.992,
+    4.125
+   ],
+   "diameter_mm": 5.984,
+   "segments_mm": [
+    [
+     0.0,
+     8.25
+    ]
+   ],
+   "roundness": 0.066,
+   "role": "support"
+  },
+  {
+   "id": "H7",
+   "axis": "z",
+   "center_mm": [
+    127.945,
+    13.967,
+    4.125
+   ],
+   "diameter_mm": 8.463,
+   "segments_mm": [
+    [
+     0.0,
+     8.25
+    ]
+   ],
+   "roundness": 0.039,
+   "role": "support"
+  },
+  {
+   "id": "H8",
+   "axis": "z",
+   "center_mm": [
+    127.945,
+    55.967,
+    4.125
+   ],
+   "diameter_mm": 8.463,
+   "segments_mm": [
+    [
+     0.0,
+     8.25
+    ]
+   ],
+   "roundness": 0.039,
+   "role": "support"
+  },
+  {
+   "id": "H9",
+   "axis": "z",
+   "center_mm": [
+    142.019,
+    34.957,
+    4.125
+   ],
+   "diameter_mm": 8.463,
+   "segments_mm": [
+    [
+     0.0,
+     8.25
+    ]
+   ],
+   "roundness": 0.044,
+   "role": "support"
+  }
+ ],
+ "supports": [
+  {
+   "hole": "H3",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H4",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H5",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H6",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H7",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H8",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H9",
+   "type": "fixed_bore"
+  }
+ ],
+ "load_cases": [
+  {
+   "name": "LC1 +x",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "bearing",
+     "force_N": [
+      5000.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "hole": "H2",
+     "type": "bearing",
+     "force_N": [
+      5000.0,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LC2 +y",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      5000.0,
+      0.0
+     ]
+    },
+    {
+     "hole": "H2",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      5000.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LC3 +z",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      0.0,
+      5000.0
+     ]
+    },
+    {
+     "hole": "H2",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      0.0,
+      5000.0
+     ]
+    }
+   ]
+  }
+ ],
+ "non_design": {
+  "ring_factor": 0.75,
+  "ring_min_voxels": 2,
+  "boxes_mm": []
+ },
+ "build_direction": "+z",
+ "load_case_weights": null,
+ "roles_source": "auto",
+ "_proposal_signature": "c9274d3a1ebc5d9b",
+ "exclusion_mm": 3.6
+}

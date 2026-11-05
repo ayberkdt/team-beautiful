@@ -1,0 +1,954 @@
+{
+ "venus_atmosphere": [
+  {
+   "Altitude": 0.0,
+   "Temperature": 462.0,
+   "Pressure": 92.10000000000016,
+   "Density": 65.46898849477354,
+   "Gravity": 8.87,
+   "Density vs Earth SL": 53.444072240631456
+  },
+  {
+   "Altitude": 20.0,
+   "Temperature": 306.0,
+   "Pressure": 22.520000000000003,
+   "Density": 20.320261283854332,
+   "Gravity": 8.811662166198275,
+   "Density vs Earth SL": 16.58796839498313
+  },
+  {
+   "Altitude": 40.0,
+   "Temperature": 143.0,
+   "Pressure": 3.5009999999999994,
+   "Density": 4.3963693781241515,
+   "Gravity": 8.753897975818353,
+   "Density vs Earth SL": 3.588872961734001
+  },
+  {
+   "Altitude": 45.0,
+   "Temperature": 110.0,
+   "Pressure": 1.9790000000000003,
+   "Density": 2.69916184866023,
+   "Gravity": 8.739545678827026,
+   "Density vs Earth SL": 2.2033974274777384
+  },
+  {
+   "Altitude": 50.0,
+   "Temperature": 75.0,
+   "Pressure": 1.0659999999999992,
+   "Density": 1.6000839450840187,
+   "Gravity": 8.725228649500568,
+   "Density vs Earth SL": 1.3061909755787908
+  },
+  {
+   "Altitude": 52.5,
+   "Temperature": 51.0,
+   "Pressure": 0.7526436075593803,
+   "Density": 1.2133757578308597,
+   "Gravity": 8.71808332411331,
+   "Density vs Earth SL": 0.9905108227190691
+  },
+  {
+   "Altitude": 55.0,
+   "Temperature": 27.0,
+   "Pressure": 0.5313999999999999,
+   "Density": 0.9251990215667779,
+   "Gravity": 8.710946772383345,
+   "Density vs Earth SL": 0.7552645074014513
+  },
+  {
+   "Altitude": 57.5,
+   "Temperature": 8.5,
+   "Pressure": 0.35390815192645714,
+   "Density": 0.6566482227488979,
+   "Gravity": 8.703818979952457,
+   "Density vs Earth SL": 0.5360393655093043
+  },
+  {
+   "Altitude": 60.0,
+   "Temperature": -10.0,
+   "Pressure": 0.23570000000000016,
+   "Density": 0.468067158801175,
+   "Gravity": 8.696699932491798,
+   "Density vs Earth SL": 0.38209563983769385
+  },
+  {
+   "Altitude": 65.0,
+   "Temperature": -30.0,
+   "Pressure": 0.0976499999999999,
+   "Density": 0.20986979396136984,
+   "Gravity": 8.682488015312126,
+   "Density vs Earth SL": 0.1713222807847917
+  },
+  {
+   "Altitude": 70.0,
+   "Temperature": -43.0,
+   "Pressure": 0.036899999999999974,
+   "Density": 0.08378520746217366,
+   "Gravity": 8.668310906797974,
+   "Density vs Earth SL": 0.0683960877242234
+  }
+ ],
+ "venus_buoyancy": [
+  {
+   "Gas": "Hydrogen",
+   "Altitude": 50,
+   "Net lift": 1.525846794142239,
+   "Volume for 100 kg": 65.53737923355236,
+   "Sphere diameter": 5.0022279983598095
+  },
+  {
+   "Gas": "Hydrogen",
+   "Altitude": 55,
+   "Net lift": 0.8822736865390376,
+   "Volume for 100 kg": 113.34351406566101,
+   "Sphere diameter": 6.004350237471788
+  },
+  {
+   "Gas": "Hydrogen",
+   "Altitude": 60,
+   "Net lift": 0.44635081546458316,
+   "Volume for 100 kg": 224.03902162901898,
+   "Sphere diameter": 7.535435353549809
+  },
+  {
+   "Gas": "Helium",
+   "Altitude": 50,
+   "Net lift": 1.452683420829663,
+   "Volume for 100 kg": 68.83812299784323,
+   "Sphere diameter": 5.084834231181722
+  },
+  {
+   "Gas": "Helium",
+   "Altitude": 55,
+   "Net lift": 0.8399692301939266,
+   "Volume for 100 kg": 119.05198000754464,
+   "Sphere diameter": 6.103505404693979
+  },
+  {
+   "Gas": "Helium",
+   "Altitude": 60,
+   "Net lift": 0.42494858067562724,
+   "Volume for 100 kg": 235.3225885376759,
+   "Sphere diameter": 7.659874688868771
+  },
+  {
+   "Gas": "Earth air (N2/O2)",
+   "Altitude": 50,
+   "Net lift": 0.5339821347232123,
+   "Volume for 100 kg": 187.27218290146473,
+   "Sphere diameter": 7.098363197034826
+  },
+  {
+   "Gas": "Earth air (N2/O2)",
+   "Altitude": 55,
+   "Net lift": 0.30875864363110883,
+   "Volume for 100 kg": 323.87757254004384,
+   "Sphere diameter": 8.520415055401745
+  },
+  {
+   "Gas": "Earth air (N2/O2)",
+   "Altitude": 60,
+   "Net lift": 0.15620399255825052,
+   "Volume for 100 kg": 640.1885019853682,
+   "Sphere diameter": 10.69308656159051
+  },
+  {
+   "Gas": "Nitrogen",
+   "Altitude": 50,
+   "Net lift": 0.568457556513043,
+   "Volume for 100 kg": 175.91462872515365,
+   "Sphere diameter": 6.9518615008183895
+  },
+  {
+   "Gas": "Nitrogen",
+   "Altitude": 55,
+   "Net lift": 0.3286929893296894,
+   "Volume for 100 kg": 304.23526891745433,
+   "Sphere diameter": 8.344563915718465
+  },
+  {
+   "Gas": "Nitrogen",
+   "Altitude": 60,
+   "Net lift": 0.16628897139652693,
+   "Volume for 100 kg": 601.3627912914528,
+   "Sphere diameter": 10.47239408987864
+  }
+ ],
+ "venus_hover": [
+  {
+   "Case": "Earth sea level",
+   "Density": 1.225,
+   "Gravity": 9.80665,
+   "Hover power": 443.1695734267426,
+   "Specific power": 88.63391468534851
+  },
+  {
+   "Case": "Venus 65 km",
+   "Density": 0.20986979396136984,
+   "Gravity": 8.682488015312126,
+   "Hover power": 891.965973195866,
+   "Specific power": 178.3931946391732
+  },
+  {
+   "Case": "Venus 55 km",
+   "Density": 0.9251990215667779,
+   "Gravity": 8.710946772383345,
+   "Hover power": 426.9110775787293,
+   "Specific power": 85.38221551574586
+  },
+  {
+   "Case": "Venus 40 km",
+   "Density": 4.3963693781241515,
+   "Gravity": 8.753897975818353,
+   "Hover power": 197.29319252921402,
+   "Specific power": 39.458638505842806
+  },
+  {
+   "Case": "Venus surface",
+   "Density": 65.46898849477354,
+   "Gravity": 8.87,
+   "Hover power": 52.14642990246954,
+   "Specific power": 10.429285980493908
+  }
+ ],
+ "venus_multirotor": [
+  {
+   "Pack energy": 150,
+   "Hover time": 10,
+   "Payload": 0.5,
+   "Take-off mass": 1.100161288186415,
+   "Hover power": 31.550805778613352
+  },
+  {
+   "Pack energy": 150,
+   "Hover time": 10,
+   "Payload": 2.0,
+   "Take-off mass": 4.958340627615711,
+   "Hover power": 301.8772981185411
+  },
+  {
+   "Pack energy": 150,
+   "Hover time": 20,
+   "Payload": 0.5,
+   "Take-off mass": 1.2395851569039278,
+   "Hover power": 37.734662264817636
+  },
+  {
+   "Pack energy": 150,
+   "Hover time": 20,
+   "Payload": 2.0,
+   "Take-off mass": 7.733292377097766,
+   "Hover power": 587.9935493017938
+  },
+  {
+   "Pack energy": 150,
+   "Hover time": 30,
+   "Payload": 0.5,
+   "Take-off mass": 1.45881368025627,
+   "Hover power": 48.175436397964965
+  },
+  {
+   "Pack energy": 150,
+   "Hover time": 30,
+   "Payload": 2.0,
+   "Take-off mass": NaN,
+   "Hover power": NaN
+  },
+  {
+   "Pack energy": 150,
+   "Hover time": 60,
+   "Payload": 0.5,
+   "Take-off mass": NaN,
+   "Hover power": NaN
+  },
+  {
+   "Pack energy": 150,
+   "Hover time": 60,
+   "Payload": 2.0,
+   "Take-off mass": NaN,
+   "Hover power": NaN
+  },
+  {
+   "Pack energy": 250,
+   "Hover time": 10,
+   "Payload": 0.5,
+   "Take-off mass": 1.0565599206759944,
+   "Hover power": 29.693891325841573
+  },
+  {
+   "Pack energy": 250,
+   "Hover time": 10,
+   "Payload": 2.0,
+   "Take-off mass": 4.496581199942772,
+   "Hover power": 260.7051299658372
+  },
+  {
+   "Pack energy": 250,
+   "Hover time": 20,
+   "Payload": 0.5,
+   "Take-off mass": 1.124145299985693,
+   "Hover power": 32.58814124572965
+  },
+  {
+   "Pack energy": 250,
+   "Hover time": 20,
+   "Payload": 2.0,
+   "Take-off mass": 5.254603609648564,
+   "Hover power": 329.333459433138
+  },
+  {
+   "Pack energy": 250,
+   "Hover time": 30,
+   "Payload": 0.5,
+   "Take-off mass": 1.2072430264538814,
+   "Hover power": 36.26752963029472
+  },
+  {
+   "Pack energy": 250,
+   "Hover time": 30,
+   "Payload": 2.0,
+   "Take-off mass": 6.724356752142178,
+   "Hover power": 476.76244233905845
+  },
+  {
+   "Pack energy": 250,
+   "Hover time": 60,
+   "Payload": 0.5,
+   "Take-off mass": 1.6810893130355453,
+   "Hover power": 59.59531193933483
+  },
+  {
+   "Pack energy": 250,
+   "Hover time": 60,
+   "Payload": 2.0,
+   "Take-off mass": NaN,
+   "Hover power": NaN
+  }
+ ],
+ "venus_aeroplane": [
+  {
+   "Mass": 10.0,
+   "Wing area": 2.0,
+   "Altitude": 50,
+   "Speed": 8.256044612549532,
+   "Power at L/D 15": 80.03986331663555,
+   "Solar in on wing": 1040.0
+  },
+  {
+   "Mass": 10.0,
+   "Wing area": 2.0,
+   "Altitude": 55,
+   "Speed": 10.848510261248908,
+   "Power at L/D 15": 105.00088382821531,
+   "Solar in on wing": 1040.0
+  },
+  {
+   "Mass": 10.0,
+   "Wing area": 2.0,
+   "Altitude": 60,
+   "Speed": 15.2397612751645,
+   "Power at L/D 15": 147.2618120587936,
+   "Solar in on wing": 1040.0
+  },
+  {
+   "Mass": 10.0,
+   "Wing area": 2.0,
+   "Altitude": 65,
+   "Speed": 22.740611285443446,
+   "Power at L/D 15": 219.38342771859377,
+   "Solar in on wing": 1040.0
+  },
+  {
+   "Mass": 50.0,
+   "Wing area": 6.0,
+   "Altitude": 50,
+   "Speed": 10.658507763316601,
+   "Power at L/D 15": 516.6550960967456,
+   "Solar in on wing": 3120.0
+  },
+  {
+   "Mass": 50.0,
+   "Wing area": 6.0,
+   "Altitude": 55,
+   "Speed": 14.005366524325764,
+   "Power at L/D 15": 677.7777906728959,
+   "Solar in on wing": 3120.0
+  },
+  {
+   "Mass": 50.0,
+   "Wing area": 6.0,
+   "Altitude": 60,
+   "Speed": 19.67444720629627,
+   "Power at L/D 15": 950.5709093933903,
+   "Solar in on wing": 3120.0
+  },
+  {
+   "Mass": 50.0,
+   "Wing area": 6.0,
+   "Altitude": 65,
+   "Speed": 29.358002930366304,
+   "Power at L/D 15": 1416.1139366466873,
+   "Solar in on wing": 3120.0
+  }
+ ],
+ "venus_environment_file": "studies\\challenges_2026\\venus_environment.json",
+ "venus_scalars": {
+  "circumnavigation_days_100ms_60km": 4.4446263843078935,
+  "circumnavigation_days_60ms_55km": 7.401650469499286,
+  "light_time_min_minutes": 2.300977592239696,
+  "light_time_max_minutes": 14.332515202298852,
+  "altitude_1bar_km": 50.45904616717768,
+  "altitude_0C_km": 58.648648648648646,
+  "altitude_125C_km": 42.72727272727273,
+  "altitude_300C_km": 20.714285714285715,
+  "solar_day_days": 116.75
+ },
+ "approach_descent": [
+  {
+   "Path angle": 3.0,
+   "Ground speed": 70,
+   "Descent rate": 371.50833914334333,
+   "Height per NM": 318.4357192657228,
+   "Above FSF 1000 fpm": "no"
+  },
+  {
+   "Path angle": 3.0,
+   "Ground speed": 90,
+   "Descent rate": 477.65357889858427,
+   "Height per NM": 318.4357192657228,
+   "Above FSF 1000 fpm": "no"
+  },
+  {
+   "Path angle": 3.0,
+   "Ground speed": 120,
+   "Descent rate": 636.8714385314457,
+   "Height per NM": 318.4357192657228,
+   "Above FSF 1000 fpm": "no"
+  },
+  {
+   "Path angle": 3.0,
+   "Ground speed": 140,
+   "Descent rate": 743.0166782866867,
+   "Height per NM": 318.4357192657228,
+   "Above FSF 1000 fpm": "no"
+  },
+  {
+   "Path angle": 3.2,
+   "Ground speed": 70,
+   "Descent rate": 396.3255276942552,
+   "Height per NM": 339.7075951665044,
+   "Above FSF 1000 fpm": "no"
+  },
+  {
+   "Path angle": 3.2,
+   "Ground speed": 90,
+   "Descent rate": 509.5613927497567,
+   "Height per NM": 339.7075951665044,
+   "Above FSF 1000 fpm": "no"
+  },
+  {
+   "Path angle": 3.2,
+   "Ground speed": 120,
+   "Descent rate": 679.4151903330088,
+   "Height per NM": 339.7075951665044,
+   "Above FSF 1000 fpm": "no"
+  },
+  {
+   "Path angle": 3.2,
+   "Ground speed": 140,
+   "Descent rate": 792.6510553885104,
+   "Height per NM": 339.7075951665044,
+   "Above FSF 1000 fpm": "no"
+  },
+  {
+   "Path angle": 4.5,
+   "Ground speed": 70,
+   "Descent rate": 557.9007695069737,
+   "Height per NM": 478.20065957740593,
+   "Above FSF 1000 fpm": "no"
+  },
+  {
+   "Path angle": 4.5,
+   "Ground speed": 90,
+   "Descent rate": 717.300989366109,
+   "Height per NM": 478.20065957740593,
+   "Above FSF 1000 fpm": "no"
+  },
+  {
+   "Path angle": 4.5,
+   "Ground speed": 120,
+   "Descent rate": 956.401319154812,
+   "Height per NM": 478.20065957740593,
+   "Above FSF 1000 fpm": "no"
+  },
+  {
+   "Path angle": 4.5,
+   "Ground speed": 140,
+   "Descent rate": 1115.8015390139474,
+   "Height per NM": 478.20065957740593,
+   "Above FSF 1000 fpm": "yes"
+  },
+  {
+   "Path angle": 5.5,
+   "Ground speed": 70,
+   "Descent rate": 682.5739396505307,
+   "Height per NM": 585.063376843312,
+   "Above FSF 1000 fpm": "no"
+  },
+  {
+   "Path angle": 5.5,
+   "Ground speed": 90,
+   "Descent rate": 877.5950652649682,
+   "Height per NM": 585.063376843312,
+   "Above FSF 1000 fpm": "no"
+  },
+  {
+   "Path angle": 5.5,
+   "Ground speed": 120,
+   "Descent rate": 1170.126753686624,
+   "Height per NM": 585.063376843312,
+   "Above FSF 1000 fpm": "yes"
+  },
+  {
+   "Path angle": 5.5,
+   "Ground speed": 140,
+   "Descent rate": 1365.1478793010615,
+   "Height per NM": 585.063376843312,
+   "Above FSF 1000 fpm": "yes"
+  }
+ ],
+ "approach_cold": [
+  {
+   "ISA deviation": -10,
+   "Indicated height": 500,
+   "True height": 482.61803147528985,
+   "Aircraft low by": 17.381968524710146
+  },
+  {
+   "ISA deviation": -10,
+   "Indicated height": 1000,
+   "True height": 965.1759974850967,
+   "Aircraft low by": 34.82400251490333
+  },
+  {
+   "ISA deviation": -10,
+   "Indicated height": 2000,
+   "True height": 1930.110062487752,
+   "Aircraft low by": 69.88993751224803
+  },
+  {
+   "ISA deviation": -10,
+   "Indicated height": 3000,
+   "True height": 2894.798809915675,
+   "Aircraft low by": 105.20119008432494
+  },
+  {
+   "ISA deviation": -20,
+   "Indicated height": 500,
+   "True height": 465.2360629505798,
+   "Aircraft low by": 34.76393704942018
+  },
+  {
+   "ISA deviation": -20,
+   "Indicated height": 1000,
+   "True height": 930.3519949701936,
+   "Aircraft low by": 69.64800502980643
+  },
+  {
+   "ISA deviation": -20,
+   "Indicated height": 2000,
+   "True height": 1860.2201249755035,
+   "Aircraft low by": 139.7798750244965
+  },
+  {
+   "ISA deviation": -20,
+   "Indicated height": 3000,
+   "True height": 2789.59761983135,
+   "Aircraft low by": 210.40238016864987
+  },
+  {
+   "ISA deviation": -30,
+   "Indicated height": 500,
+   "True height": 447.85409442586985,
+   "Aircraft low by": 52.145905574130154
+  },
+  {
+   "ISA deviation": -30,
+   "Indicated height": 1000,
+   "True height": 895.5279924552906,
+   "Aircraft low by": 104.47200754470941
+  },
+  {
+   "ISA deviation": -30,
+   "Indicated height": 2000,
+   "True height": 1790.330187463254,
+   "Aircraft low by": 209.6698125367459
+  },
+  {
+   "ISA deviation": -30,
+   "Indicated height": 3000,
+   "True height": 2684.3964297470247,
+   "Aircraft low by": 315.60357025297526
+  },
+  {
+   "ISA deviation": -40,
+   "Indicated height": 500,
+   "True height": 430.4721259011596,
+   "Aircraft low by": 69.52787409884041
+  },
+  {
+   "ISA deviation": -40,
+   "Indicated height": 1000,
+   "True height": 860.7039899403873,
+   "Aircraft low by": 139.29601005961274
+  },
+  {
+   "ISA deviation": -40,
+   "Indicated height": 2000,
+   "True height": 1720.440249951006,
+   "Aircraft low by": 279.5597500489939
+  },
+  {
+   "ISA deviation": -40,
+   "Indicated height": 3000,
+   "True height": 2579.1952396627,
+   "Aircraft low by": 420.8047603373002
+  }
+ ],
+ "approach_radar_angle": [
+  {
+   "Range": 10.0,
+   "Angle error": 0.05,
+   "Position error": 16.16174887346749
+  },
+  {
+   "Range": 10.0,
+   "Angle error": 0.1,
+   "Position error": 32.32349774693498
+  },
+  {
+   "Range": 10.0,
+   "Angle error": 0.3,
+   "Position error": 96.97049324080494
+  },
+  {
+   "Range": 5.0,
+   "Angle error": 0.05,
+   "Position error": 8.080874436733746
+  },
+  {
+   "Range": 5.0,
+   "Angle error": 0.1,
+   "Position error": 16.16174887346749
+  },
+  {
+   "Range": 5.0,
+   "Angle error": 0.3,
+   "Position error": 48.48524662040247
+  },
+  {
+   "Range": 2.0,
+   "Angle error": 0.05,
+   "Position error": 3.2323497746934984
+  },
+  {
+   "Range": 2.0,
+   "Angle error": 0.1,
+   "Position error": 6.464699549386997
+  },
+  {
+   "Range": 2.0,
+   "Angle error": 0.3,
+   "Position error": 19.394098648160988
+  },
+  {
+   "Range": 1.0,
+   "Angle error": 0.05,
+   "Position error": 1.6161748873467492
+  },
+  {
+   "Range": 1.0,
+   "Angle error": 0.1,
+   "Position error": 3.2323497746934984
+  },
+  {
+   "Range": 1.0,
+   "Angle error": 0.3,
+   "Position error": 9.697049324080494
+  },
+  {
+   "Range": 0.6,
+   "Angle error": 0.05,
+   "Position error": 0.9697049324080496
+  },
+  {
+   "Range": 0.6,
+   "Angle error": 0.1,
+   "Position error": 1.9394098648160991
+  },
+  {
+   "Range": 0.6,
+   "Angle error": 0.3,
+   "Position error": 5.8182295944482965
+  }
+ ],
+ "radar_range_resolution_m": {
+  "10 MHz": 14.9896229,
+  "50 MHz": 2.99792458,
+  "150 MHz": 0.9993081933333333,
+  "500 MHz": 0.299792458
+ },
+ "approach_montecarlo": [
+  {
+   "Navigation source": "Ideal (truth)",
+   "Vertical mean": 0.8384048765005627,
+   "Vertical P95 abs. dev.": 0.8463154786262251,
+   "Lateral P95 abs. dev.": 0.0003353003546456432
+  },
+  {
+   "Navigation source": "SBAS LPV-like: \u03c3 1.0/1.0/1.5 m",
+   "Vertical mean": 0.8581428719439351,
+   "Vertical P95 abs. dev.": 2.8418531976025343,
+   "Lateral P95 abs. dev.": 1.6567705802796635
+  },
+  {
+   "Navigation source": "Baro-VNAV, ISA\u221230 K bias, \u03c3 2 m",
+   "Vertical mean": -5.215698073981055,
+   "Vertical P95 abs. dev.": 7.552473833855168,
+   "Lateral P95 abs. dev.": 5.12837838352234
+  },
+  {
+   "Navigation source": "Ground radar 0.1\u00b0 monopulse",
+   "Vertical mean": 0.7221090675217278,
+   "Vertical P95 abs. dev.": 1.9022536420208742,
+   "Lateral P95 abs. dev.": 1.7774386119456527
+  },
+  {
+   "Navigation source": "Ground radar 0.3\u00b0 (search-type)",
+   "Vertical mean": 0.9207020913309318,
+   "Vertical P95 abs. dev.": 4.103796903431648,
+   "Lateral P95 abs. dev.": 5.889359980562123
+  },
+  {
+   "Navigation source": "Vision/INS, 2 % range-scaled",
+   "Vertical mean": 1.6740370799844613,
+   "Vertical P95 abs. dev.": 23.971049467664567,
+   "Lateral P95 abs. dev.": 28.38122002580903
+  }
+ ],
+ "approach_montecarlo_inputs": {
+  "runway": "synthetic, 3\u00b0 path, TCH 15.24 m, 2500 m",
+  "x0_m": 8000.0,
+  "y0_m": 150.0,
+  "z0_above_path_m": 60.0,
+  "wind_ms": 10.0,
+  "wind_rel_deg": 40.0,
+  "gust_sigma": 2.0,
+  "runs": 200,
+  "seed": 7,
+  "baro_bias_note": "ISA\u221230 K at 200 ft above the station: indicated \u2212 true from the approach_cold model",
+  "baro_bias_m": 6.351062158652134
+ },
+ "approach_cda": [
+  {
+   "Start height": 3000,
+   "Path angle": 3.0,
+   "Distance to threshold": 9.421053664826498
+  },
+  {
+   "Start height": 3000,
+   "Path angle": 3.2,
+   "Distance to threshold": 8.831124304211034
+  },
+  {
+   "Start height": 4000,
+   "Path angle": 3.0,
+   "Distance to threshold": 12.561404886435332
+  },
+  {
+   "Start height": 4000,
+   "Path angle": 3.2,
+   "Distance to threshold": 11.774832405614712
+  },
+  {
+   "Start height": 6000,
+   "Path angle": 3.0,
+   "Distance to threshold": 18.842107329652997
+  },
+  {
+   "Start height": 6000,
+   "Path angle": 3.2,
+   "Distance to threshold": 17.66224860842207
+  }
+ ],
+ "debris": [
+  {
+   "Break-up": "cruise FL350",
+   "Ballistic coefficient": 1,
+   "Along track": 0.023885724177452643,
+   "Wind drift": 40.90617561086076,
+   "Fall time": 34.090091833104815,
+   "Impact speed": 20.396375204178327
+  },
+  {
+   "Break-up": "cruise FL350",
+   "Ballistic coefficient": 10,
+   "Along track": 0.1782477056386592,
+   "Wind drift": 12.957700900744232,
+   "Fall time": 10.810114841622818,
+   "Impact speed": 23.669271089863983
+  },
+  {
+   "Break-up": "cruise FL350",
+   "Ballistic coefficient": 100,
+   "Along track": 1.1663588205066922,
+   "Wind drift": 4.105380542317917,
+   "Fall time": 3.4998733744822035,
+   "Impact speed": 44.8760540513677
+  },
+  {
+   "Break-up": "cruise FL350",
+   "Ballistic coefficient": 1000,
+   "Along track": 5.449123451822717,
+   "Wind drift": 1.1288078986784653,
+   "Fall time": 1.3084596589839081,
+   "Impact speed": 133.92294549588223
+  },
+  {
+   "Break-up": "cruise FL350",
+   "Ballistic coefficient": 5000,
+   "Along track": 9.523692710915231,
+   "Wind drift": 0.30876365147332363,
+   "Fall time": 0.9001008770544648,
+   "Impact speed": 304.9115606920562
+  },
+  {
+   "Break-up": "FL100",
+   "Ballistic coefficient": 1,
+   "Along track": 0.009479558219660657,
+   "Wind drift": 14.15767883587956,
+   "Fall time": 11.799294149033772,
+   "Impact speed": 20.396375275171753
+  },
+  {
+   "Break-up": "FL100",
+   "Ballistic coefficient": 10,
+   "Along track": 0.06966807998975101,
+   "Wind drift": 4.493576818716907,
+   "Fall time": 3.753675609836837,
+   "Impact speed": 23.66927007555954
+  },
+  {
+   "Break-up": "FL100",
+   "Ballistic coefficient": 100,
+   "Along track": 0.44727183546510446,
+   "Wind drift": 1.4287682807194524,
+   "Fall time": 1.2486020268656832,
+   "Impact speed": 44.876058304544834
+  },
+  {
+   "Break-up": "FL100",
+   "Ballistic coefficient": 1000,
+   "Along track": 1.9575860366059274,
+   "Wind drift": 0.3580966203155891,
+   "Fall time": 0.5520967059786661,
+   "Impact speed": 129.27082470986562
+  },
+  {
+   "Break-up": "FL100",
+   "Ballistic coefficient": 5000,
+   "Along track": 2.8637935645603667,
+   "Wind drift": 0.0901889527090821,
+   "Fall time": 0.4462754171214065,
+   "Impact speed": 219.14966040521838
+  }
+ ],
+ "debris_inputs": {
+  "wind_cross_ms": 20.0,
+  "atmosphere": "ISA, wind constant with height"
+ },
+ "search_radius": [
+  {
+   "Position \u03c3 per axis": 50,
+   "Probability": 50.0,
+   "Radius": 0.05887050112577374,
+   "Area": 0.010887930451518013
+  },
+  {
+   "Position \u03c3 per axis": 50,
+   "Probability": 95.0,
+   "Radius": 0.1223873415340408,
+   "Area": 0.04705685251359531
+  },
+  {
+   "Position \u03c3 per axis": 50,
+   "Probability": 99.0,
+   "Radius": 0.1517427129385146,
+   "Area": 0.07233784412415462
+  },
+  {
+   "Position \u03c3 per axis": 500,
+   "Probability": 50.0,
+   "Radius": 0.5887050112577373,
+   "Area": 1.088793045151801
+  },
+  {
+   "Position \u03c3 per axis": 500,
+   "Probability": 95.0,
+   "Radius": 1.223873415340408,
+   "Area": 4.705685251359531
+  },
+  {
+   "Position \u03c3 per axis": 500,
+   "Probability": 99.0,
+   "Radius": 1.5174271293851462,
+   "Area": 7.2337844124154635
+  },
+  {
+   "Position \u03c3 per axis": 2000,
+   "Probability": 50.0,
+   "Radius": 2.3548200450309493,
+   "Area": 17.420688722428817
+  },
+  {
+   "Position \u03c3 per axis": 2000,
+   "Probability": 95.0,
+   "Radius": 4.895493661361632,
+   "Area": 75.2909640217525
+  },
+  {
+   "Position \u03c3 per axis": 2000,
+   "Probability": 99.0,
+   "Radius": 6.069708517540585,
+   "Area": 115.74055059864742
+  }
+ ],
+ "glide": [
+  {
+   "Height": 35000,
+   "L/D": 17,
+   "Still-air reach": 97.9244060475162,
+   "Drift (25 m/s wind)": 18.831616547599268
+  },
+  {
+   "Height": 10000,
+   "L/D": 17,
+   "Still-air reach": 27.978401727861772,
+   "Drift (25 m/s wind)": 5.380461870742648
+  },
+  {
+   "Height": 5000,
+   "L/D": 9,
+   "Still-air reach": 7.406047516198704,
+   "Drift (25 m/s wind)": 3.08585313174946
+  }
+ ],
+ "glide_inputs": {
+  "glide_tas_ms": {
+   "high": 130.0,
+   "low": 60.0
+  }
+ },
+ "isa_check_rho_sl": 1.2249994633486807
+}

@@ -1,0 +1,7 @@
+figür denetimi: 0 HATA · 1 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR
+  [UYARI] genis-doygun-dolgu eksen 0: çizim alanının ≈%15'i doygun dolgu (#009e73, #d55e00)
+          → dolguya açık ton (dw.paletler.alan() / dw.renk.alan_tonu), kimliği kenar ve etiket taşısın  [renk.md R18; Wilke2019 §19 'Avoid large filled areas of overly saturated colors'; Ware2004]
+  [BİLGİ] birim              eksen 0: x etiketi birim içermiyor: 'Barrier weight'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [Kosslyn2012; TufteNotebookPP (birimler kaybolmasın)]
+  [BİLGİ] birim              eksen 0: y etiketi birim içermiyor: 'ERCS barrier'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [Kosslyn2012; TufteNotebookPP (birimler kaybolmasın)]

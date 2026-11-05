@@ -1,0 +1,330 @@
+{
+ "surum": 1,
+ "ad": "F9_sensitivity",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  830.4,
+  391.9
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   19.2,
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 19.2
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    265.9,
+    74.0,
+    861.6,
+    408.0
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#eda987",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#84b1d6",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#eda987",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#84b1d6",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#eda987",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#84b1d6",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#eda987",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#84b1d6",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#eda987",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#84b1d6",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#eda987",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#84b1d6",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#eda987",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#84b1d6",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#eda987",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#84b1d6",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#eda987",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#eda987",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#84b1d6",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Change in flight time from the 49 h baseline (h)",
+    "nicelik": "Change in flight time from the 49 h baseline",
+    "birim": "h",
+    "bicim": "parantez",
+    "anahtar": "changeinflighttimefromthe49hbaseline",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -11.624166666666666,
+     11.624166666666666
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "-10",
+     "-5",
+     "0",
+     "5",
+     "10"
+    ],
+    "eksi": "unicode",
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     330.7,
+     3.0,
+     796.8,
+     26.0
+    ]
+   },
+   "y": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.78,
+     9.78
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "Atmosphere (probe envelope)",
+     "Motor specific torque",
+     "Blade areal mass",
+     "Payload",
+     "Solar array efficiency",
+     "Gearbox torque density",
+     "Mass contingency",
+     "Battery cell energy",
+     "Cruise altitude",
+     "Battery reserve (hover)"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "Atmosphere (probe envelope)",
+     "Motor specific torque",
+     "Blade areal mass",
+     "Payload",
+     "Solar array efficiency",
+     "Gearbox torque density",
+     "Mass contingency",
+     "Battery cell energy",
+     "Cruise altitude",
+     "Battery reserve (hover)"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

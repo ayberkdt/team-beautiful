@@ -1,0 +1,172 @@
+{
+ "surum": 1,
+ "ad": "F4_btf_kirilma",
+ "boyut_pt": [
+  510.2,
+  214.3
+ ],
+ "metin_kutusu_pt": [
+  69.7,
+  3.2,
+  507.9,
+  193.6
+ ],
+ "hedef": "genel-cift",
+ "ortam": "makale",
+ "boyut_mm": [
+  180.0,
+  75.6
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   8.1
+  ],
+  "eksen_adi": [
+   9.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   8.1
+  ]
+ },
+ "punto_tepe": {
+  "tik": 8.1,
+  "eksen_adi": 9.0,
+  "metin": 8.1
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    105.7,
+    32.3,
+    434.6,
+    197.3
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "7075 talaşlı",
+     "tur": "cizgi",
+     "renk": "#0072b2",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 1.2,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Ti-6Al-4V TO + talaşlı",
+     "tur": "cizgi",
+     "renk": "#cc79a7",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 1.2,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Buy-to-fly oranı (–)",
+    "nicelik": "Buy-to-fly oranı",
+    "birim": "–",
+    "bicim": "parantez",
+    "anahtar": "buytoflyoranı",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     26.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "5",
+     "10",
+     "15",
+     "20",
+     "25"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     235.1,
+     3.2,
+     305.2,
+     11.5
+    ]
+   },
+   "y": {
+    "ham": "Üretim CO₂ / bitmiş parça kütlesi (kg/kg)",
+    "nicelik": "Üretim CO₂ / bitmiş parça kütlesi",
+    "birim": "kg/kg",
+    "bicim": "parantez",
+    "anahtar": "üretimco₂/bitmişparçakütlesi",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     1281.6465999999998
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "200",
+     "400",
+     "600",
+     "800",
+     "1000",
+     "1200"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     69.7,
+     39.1,
+     78.8,
+     190.5
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [
+    "7075 talaşlı",
+    "Ti-6Al-4V TO + talaşlı"
+   ],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

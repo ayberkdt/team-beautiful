@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cockpit ATC Advisory</title>
+<style>
+:root {
+  --bg: #0d1117; --panel: #161b22; --line: #30363d; --text: #e6edf3; --muted: #9aa4af;
+  --accent: #39c5e0; --ok: #3fb950; --caution: #e3b341; --warn: #f47067; --stale: #9aa4af;
+  --r1: 4px; --r2: 8px; --s1: 8px; --s2: 16px; --s3: 24px;
+  --f1: 12px; --f2: 14px; --f3: 16px; --f4: 20px; --f5: 28px; --f6: 40px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: var(--f3)/1.4 system-ui, "Segoe UI", sans-serif; }
+header { display: flex; flex-wrap: wrap; gap: var(--s2); align-items: center; justify-content: space-between;
+  padding: var(--s2); border-bottom: 1px solid var(--line); }
+h1 { font-size: var(--f4); margin: 0; font-weight: 600; }
+nav a { color: var(--accent); font-size: var(--f2); }
+main { max-width: 960px; margin: 0 auto; padding: var(--s2); display: grid; gap: var(--s3); }
+.banner { padding: var(--s2); border-radius: var(--r2); border: 2px solid var(--line); font-size: var(--f4);
+  font-weight: 700; letter-spacing: .02em; }
+.banner small { display: block; font-size: var(--f2); font-weight: 400; color: var(--muted); margin-top: 4px; }
+/* colour is never the only cue (green/amber/red merge for protan/deutan): text + border style differ per level */
+.banner[data-level="ok"] { border-color: var(--ok); border-style: solid; }
+.banner[data-level="caution"] { border-color: var(--caution); color: var(--caution); border-style: dashed; }
+.banner[data-level="warn"] { border-color: var(--warn); color: var(--warn); border-style: double; border-width: 4px; }
+section { background: var(--panel); border-radius: var(--r2); padding: var(--s2); }
+h2 { font-size: var(--f2); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 var(--s1); }
+.items { display: grid; gap: var(--s1); }
+.item { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: var(--s1);
+  padding: var(--s1) 0; border-bottom: 1px solid var(--line); }
+.item:last-child { border-bottom: 0; }
+.value { font: 600 var(--f5)/1.2 ui-monospace, Consolas, monospace; }
+.tag { font-size: var(--f1); font-weight: 700; padding: 2px 8px; border-radius: var(--r1); border: 1px solid currentColor; }
+.tag[data-t="CONFIRMED"] { color: var(--ok); border-style: solid; }
+.tag[data-t="UNCONFIRMED"], .tag[data-t="LOW_CONFIDENCE"], .tag[data-t="AMBIGUOUS"] { color: var(--caution); border-style: dashed; }
+.tag[data-t="INVALID"] { color: var(--warn); border-style: double; border-width: 3px; }
+.tag[data-t="NOT_RECEIVED"] { color: var(--warn); border-style: dashed; }
+.tag[data-t="STALE"] { color: var(--stale); border-style: dotted; }
+.meta { font-size: var(--f2); color: var(--muted); margin: 0 0 var(--s1); }
+.empty { color: var(--muted); font-size: var(--f3); }
+ul { margin: 0; padding-left: var(--s2); }
+li { margin: 4px 0; font-size: var(--f2); }
+.controls { display: flex; flex-wrap: wrap; gap: var(--s2); align-items: center; }
+button { min-height: 44px; min-width: 44px; padding: 0 var(--s2); border-radius: var(--r1); font: 600 var(--f3) system-ui, sans-serif;
+  cursor: pointer; border: 1px solid var(--line); background: transparent; color: var(--text); }
+button.btn-primary { background: var(--accent); color: #062029; border-color: var(--accent); }
+button:disabled { opacity: .45; cursor: not-allowed; }
+input[type=range] { flex: 1 1 240px; min-height: 44px; accent-color: var(--accent); }
+.time { font: var(--f2) ui-monospace, Consolas, monospace; color: var(--muted); min-width: 64px; }
+.foot { font-size: var(--f1); color: var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <h1>ATC advisory · BTL123</h1>
+  <nav><a href="scope.html">Radar scope view</a></nav>
+</header>
+<main>
+  <div class="banner" id="banner" data-level="ok" role="status" aria-live="polite">VHF VOICE OK<small id="why">—</small></div>
+
+  <section aria-labelledby="h-last">
+    <h2 id="h-last">Last ATC clearance heard</h2>
+    <p class="meta" id="src"></p>
+    <p class="meta" id="note" hidden></p>
+    <div class="items" id="items"><p class="empty">No clearance received yet.</p></div>
+    <div class="controls" style="margin-top: var(--s1)">
+      <button class="btn-primary" id="confirm" type="button">Confirm heard</button>
+      <span class="meta">Only the crew can confirm. The display never creates or completes a clearance.</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-rem" id="rem-sec" hidden>
+    <h2 id="h-rem">Communication lost: reference</h2>
+    <ul id="rem"></ul>
+  </section>
+
+  <section aria-labelledby="h-demo">
+    <h2 id="h-demo">Scenario replay (300 s scripted approach)</h2>
+    <div class="controls">
+      <button id="play" type="button" aria-pressed="false">Play</button>
+      <input id="t" type="range" min="0" value="0" step="1" aria-label="Scenario time">
+      <span class="time" id="tt">0 s</span>
+    </div>
+  </section>
+
+  <p class="foot">ADVISORY ONLY — prototype, not certified. Values come from speech recognition of the VHF voice message and
+  must be verified against the original transmission. Data: <code>out/cockpit_data.js</code> from <code>scripts/atc_day.py</code>.</p>
+</main>
+<script src="out/cockpit_data.js"></script>
+<script>
+(function () {
+  const views = (window.COCKPIT_DATA || { views: [] }).views;
+  const $ = (id) => document.getElementById(id);
+  const slider = $("t");
+  slider.max = Math.max(0, views.length - 1);
+  const confirmed = new Set();
+  let timer = null;
+  const LEVEL = { NORMAL: "ok", DEGRADED: "caution", ALTERNATE_AVAILABLE: "caution",
+                  RX_LOST: "warn", TX_LOST: "warn", ALL_COMMS_LOST: "warn" };
+
+  function tagOf(it) {
+    if (it.tag.indexOf("STALE") === 0) return ["STALE", it.tag];
+    if (confirmed.has(it.msg_id) && it.tag === "UNCONFIRMED") return ["CONFIRMED", "PILOT CONFIRMED"];
+    if (it.pilot_confirmed && it.tag === "CONFIRMED") return ["CONFIRMED", "PILOT CONFIRMED"];
+    return [it.tag, it.tag.replace("_", " ")];
+  }
+
+  function render(k) {
+    const v = views[k];
+    if (!v) return;
+    $("tt").textContent = v.t.toFixed(0) + " s";
+    const b = $("banner");
+    b.dataset.level = LEVEL[v.state] || "caution";
+    b.firstChild.nodeValue = v.banner;
+    $("why").textContent = v.reasons && v.reasons.length ? v.reasons.join(" · ") : "no fault evidence";
+    const box = $("items");
+    box.textContent = "";
+    if (!v.items.length) {
+      const p = document.createElement("p");
+      p.className = "empty";
+      p.textContent = "No clearance received yet.";
+      box.appendChild(p);
+    }
+    let lastId = null;
+    v.items.forEach((it) => {
+      lastId = it.msg_id;
+      const row = document.createElement("div");
+      row.className = "item";
+      const val = document.createElement("span");
+      val.className = "value";
+      val.textContent = it.text;
+      const [t, label] = tagOf(it);
+      const tag = document.createElement("span");
+      tag.className = "tag";
+      tag.dataset.t = t;
+      tag.textContent = label;
+      row.append(val, tag);
+      box.appendChild(row);
+    });
+    $("src").textContent = v.items.length
+      ? `Source: ${v.items[0].source} · message #${lastId} · received ${v.items[0].t_received.toFixed(0)} s · age ${v.last_rx_age_s.toFixed(0)} s`
+      : "";
+    const canConfirm = v.items.some((it) => it.tag === "UNCONFIRMED" || it.tag === "CONFIRMED") &&
+                       !v.items.some((it) => it.tag.indexOf("STALE") === 0);
+    $("confirm").disabled = !canConfirm || confirmed.has(lastId);
+    $("confirm").dataset.msg = lastId;
+    const notes = [];
+    if (v.similar_callsigns && v.similar_callsigns.length) notes.push("Similar callsign on frequency: " + v.similar_callsigns.join(", ") + " — check every call sign");
+    if (v.partial) notes.unshift("Part of this transmission was not received (dropout) — nothing is filled in");
+    if (v.not_for_us && v.not_for_us.age_s < 60) notes.push(`Last call was for ${v.not_for_us.callsign} (${v.not_for_us.age_s.toFixed(0)} s ago) — not shown`);
+    $("note").hidden = !notes.length;
+    $("note").textContent = notes.join(" · ");
+    const rs = $("rem-sec");
+    rs.hidden = !v.reminders.length;
+    $("rem").textContent = "";
+    v.reminders.forEach((r) => { const li = document.createElement("li"); li.textContent = r; $("rem").appendChild(li); });
+  }
+
+  slider.addEventListener("input", () => render(+slider.value));
+  $("confirm").addEventListener("click", () => {
+    const id = +$("confirm").dataset.msg;
+    if (id) confirmed.add(id);
+    render(+slider.value);
+  });
+  $("play").addEventListener("click", () => {
+    if (timer) { clearInterval(timer); timer = null; $("play").textContent = "Play"; $("play").setAttribute("aria-pressed", "false"); return; }
+    $("play").textContent = "Pause";
+    $("play").setAttribute("aria-pressed", "true");
+    timer = setInterval(() => {
+      if (+slider.value >= +slider.max) { slider.value = 0; }
+      else { slider.value = +slider.value + 1; }
+      render(+slider.value);
+    }, 250);
+  });
+  render(0);
+})();
+</script>
+</body>
+</html>

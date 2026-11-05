@@ -1,0 +1,5 @@
+figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] cvd-protan         eksen 0: #877f0f ile #d55e00 protan görüşte ΔE00=4.7 (ikincil kodlama var: çizgi tipi/işaret/doğrudan etiket)
+          → renk değiştir ya da ikincil kodlama (biçim, çizgi tipi, doğrudan etiket)  [Szafir2018 Tablo 1 (1° nokta L* JND 5.75; 0.25° 8.37); taban=JND bölgesi, hedef=BrychtovaColtekin 'güvenli' 10. Benzetim: Viénot1999/Brettel1997]
+  [BİLGİ] cvd-deutan         eksen 0: #877f0f ile #d55e00 deutan görüşte ΔE00=5.3 (ikincil kodlama var: çizgi tipi/işaret/doğrudan etiket)
+          → renk değiştir ya da ikincil kodlama (biçim, çizgi tipi, doğrudan etiket)  [Szafir2018 Tablo 1 (1° nokta L* JND 5.75; 0.25° 8.37); taban=JND bölgesi, hedef=BrychtovaColtekin 'güvenli' 10. Benzetim: Viénot1999/Brettel1997]

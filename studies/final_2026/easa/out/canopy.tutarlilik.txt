@@ -1,0 +1,7 @@
+set tutarlılığı (6 figür): 0 HATA · 2 UYARI · 1 BİLGİ · SET TUTARLI
+  [UYARI] isaret-boyu        isaret boyu figürden figüre değişiyor — 13.43 pt: C1_missed_alert_by_architecture, C5_lock_related_by_phase, C6_lock_related_by_type · 9 pt: C4_ercs_barriers
+          → aynı rol aynı kalınlık; vurgu/bağlam farkı figür içinde kalsın  [06 T6: APSStyleGuide §II.S.1 ('consistent line widths'); tolerans datawiz-secimi]
+  [UYARI] cizim-alani-hizasi sunum-tam: çizim alanının sol kenarı figürden figüre 308.8 pt oynuyor — C1_missed_alert_by_architecture 126.3 mm, C2_trip_point_window 20.1 mm, C3_cry_wolf 17.4 mm, C4_ercs_barriers 86.9 mm, C5_lock_related_by_phase 39.5 mm
+          → alt alta duran figürlerde eksenler aynı hizada olsun: S.kenar(*S.kenar_oner()) ile sabit kenar, sonra figürleri yeniden üret  [06 T15: Wilke2019Ch21 §21.2 (paneller hizalı) — figürler arasına genişletme datawiz-secimi]
+  [BİLGİ] nicelik-aralik     'investigatedlockrelatedopenings' (x) aralığı figürden figüre farklı — 0…91.2: C5_lock_related_by_phase · 0…62.4: C6_lock_related_by_type
+          → figürler karşılaştırılacaksa ortak sınır: Seti.nicelik(ad, sinir=(a, b))  [06 T5 + §7a: Wilke2019Ch21 §21.1; UrbanStyle; Qu2018 C1.1; mekanizma (tek grafik, dolaylı): Correll2020, Witt2019 — dar aralık aynı etkiyi büyük gösterir; serbest/ortak ölçek deneyi yok]

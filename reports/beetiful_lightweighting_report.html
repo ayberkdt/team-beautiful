@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Light-weighting Preparation Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1f2328;
+  --ink-2: #4d4d4d;
+  --line: #d0d4d9;
+  --paper: #ffffff;
+  --tint: #f6f7f8;
+  --accent: #c98a00;
+  --accent-soft: #fbf1d9;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #e8eaed; --ink-2: #b8bcc2; --line: #3a3f45; --paper: #15181b; --tint: #1d2125;
+    --accent: #f0b429; --accent-soft: #2b2416;
+  }
+}
+:root[data-theme="dark"] {
+  --ink: #e8eaed; --ink-2: #b8bcc2; --line: #3a3f45; --paper: #15181b; --tint: #1d2125;
+  --accent: #f0b429; --accent-soft: #2b2416;
+}
+@page { size: A4; margin: 15mm 15mm 16mm 15mm; }
+* { box-sizing: border-box; }
+html { font-size: 10.5pt; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif; line-height: 1.45;
+}
+main { max-width: 180mm; margin: 0 auto; padding: 0 16px; }
+h1 { font-size: 18pt; line-height: 1.2; margin: 0 0 10pt; padding-top: 4pt; border-top: 3pt solid var(--accent); }
+h2 { font-size: 13pt; margin: 14pt 0 6pt; }
+p { margin: 0 0 7pt; }
+section { margin-bottom: 14pt; }
+.chapter { break-before: page; }
+.small, figcaption, .src, td, th { font-size: 8.5pt; }
+table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; }
+caption { caption-side: top; text-align: left; font-size: 8.5pt; font-weight: 600; padding-bottom: 3pt; }
+th, td { text-align: left; vertical-align: top; padding: 3pt 5pt; border-bottom: 0.5pt solid var(--line); }
+th { border-bottom: 1pt solid var(--ink); font-weight: 600; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+tr { break-inside: avoid; }
+#katalog td:first-child { white-space: nowrap; }
+figure { margin: 8pt 0 12pt; break-inside: avoid; }
+figure img { width: 100%; height: auto; display: block; }
+figcaption { color: var(--ink-2); margin-top: 3pt; }
+ul, ol { margin: 0 0 7pt; padding-left: 16pt; }
+li { margin-bottom: 2pt; }
+code { font-family: Consolas, "Courier New", monospace; font-size: 8.5pt; }
+.note { background: var(--tint); padding: 6pt 8pt; margin: 6pt 0 10pt; }
+/* cover */
+.cover { height: 265mm; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
+.cover svg.comb { position: absolute; right: 0; top: 0; width: 95mm; height: auto; }
+.cover .top { font-size: 10.5pt; color: var(--ink-2); letter-spacing: 0.04em; text-transform: uppercase; }
+.cover .title { margin-top: 70mm; max-width: 140mm; }
+.cover h1.cover-title { font-size: 34pt; border: 0; padding: 0; margin: 0 0 8pt; }
+.cover .sub { font-size: 14pt; color: var(--ink-2); margin: 0; }
+.cover .meta { font-size: 10.5pt; color: var(--ink-2); }
+.cover .team { display: flex; align-items: center; gap: 8pt; border-top: 1pt solid var(--line); padding-top: 8pt; font-size: 14pt; font-weight: 600; }
+.toc ol { padding-left: 14pt; }
+.toc li { margin-bottom: 3pt; }
+@media screen {
+  body { padding: 24px 0; }
+  main > * { margin-left: auto; margin-right: auto; }
+  .cover { height: auto; min-height: 92vh; }
+  .cover .title { margin-top: 40vh; }
+}
+@media (max-width: 640px) {
+  .cover svg.comb { width: 55%; }
+  .cover h1.cover-title { font-size: 18pt; }
+  table { display: block; overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+<main>
+
+<section class="cover" aria-label="Cover">
+  <svg class="comb" viewBox="0 0 300 260" aria-hidden="true">
+    <g fill="none" stroke="var(--accent)" stroke-width="2">
+      <polygon points="150,10 190,33 190,79 150,102 110,79 110,33"/>
+      <polygon points="230,10 270,33 270,79 230,102 190,79 190,33"/>
+      <polygon points="190,79 230,102 230,148 190,171 150,148 150,102"/>
+      <polygon points="110,79 150,102 150,148 110,171 70,148 70,102"/>
+      <polygon points="270,79 300,96 300,148 270,171 230,148 230,102"/>
+      <polygon points="150,148 190,171 190,217 150,240 110,217 110,171"/>
+    </g>
+    <polygon points="190,79 230,102 230,148 190,171 150,148 150,102" fill="var(--accent-soft)"/>
+  </svg>
+  <div class="top">EUROAVIA Ideathon 2026 · Ansys challenge</div>
+  <div class="title">
+    <h1 class="cover-title">Light-weighting decisions</h1>
+    <p class="sub">Pre-competition preparation report for topology optimisation, material selection and life cycle</p>
+  </div>
+  <div>
+    <p class="meta">1 November 2026 · ahead of Bruges, 3–8 November 2026</p>
+    <div class="team">
+      <svg width="22" height="24" viewBox="0 0 22 24" aria-hidden="true"><polygon points="11,1 21,6.5 21,17.5 11,23 1,17.5 1,6.5" fill="var(--accent)"/></svg>
+      Team Beetiful
+    </div>
+  </div>
+</section>
+
+<section class="toc chapter" aria-label="Contents">
+  <h1>Contents</h1>
+  <ol>
+    <li>Where we are heading</li>
+    <li>The likely form of the task</li>
+    <li>What we bring ready to competition day</li>
+    <li>Decision catalogue</li>
+    <li>Trade-off study for the human reader</li>
+    <li>Trade-off study for an AI agent</li>
+    <li>Data tables, contradictions and gaps</li>
+  </ol>
+  <h2>Source tags</h2>
+  <p>The tag next to each number shows how the number was obtained. A value tagged D was read from its source in the session that prepared this report. A value tagged A was read from the full text by a sub-agent, and the report author did not read it a second time. A value tagged S was seen only in a search summary and does not go on a slide on its own. A value tagged H was calculated in this study and carries the weakest tag of its inputs. The Y tag means an assumption or an engineering judgement.</p>
+  <p class="small">File paths are relative to the project root (<code>D:\Masaustu\Ideathon 2026</code>). The calculations were done with the <code>aerokit</code> package. The result of the full test suite is in Section 6. Every number produced by code can be reproduced from the files named below.</p>
+</section>
+
+<section class="chapter" id="ozet">
+  <h1>1. Where we are heading</h1>
+  <p>The Synopsys introductory presentation dated 27 October 2026 lists four skills for the 2026 Ansys task (p. 12) [D]. These are structural finite element analysis, optimisation and trade-off, material selection and life-cycle thinking. The recommended courses are topology optimisation in Ansys Discovery, Ansys Mechanical, Granta EduPack performance indices and the Eco Audit tool (pp. 12–13) [D]. The aircraft sizing and STK mission planning of the 2023 card are not on this list.</p>
+  <p>We think the task will be to light-weight an aircraft structural part, select its material and defend the decision with life-cycle CO₂ [Y]. Under this assumption seven options were compared in five scenarios [H]. Four options are machined aluminium or titanium parts, and three of these go through topology optimisation. Three options are produced by topology optimisation and additive manufacturing. In this report topology optimisation is abbreviated TO and additive manufacturing AM. Table 1 gives the winners. The direction comes down to these six points:</p>
+  <ul>
+    <li>In a flying part, mass selects the material. The production phase did not exceed 2.0 % of lifetime CO₂ in any option [H].</li>
+    <li>Scalmalloy TO + AM is recommended if strength governs, and AlSi10Mg TO + AM if stiffness governs [H].</li>
+    <li>In a part that burns no fuel, the winner is set by the balance between the production footprint and the monetary value of mass; the satellite scenario shows this balance [H].</li>
+    <li>Titanium stays in the race only through the AM route. The yield strength of Scalmalloy is 475 MPa at room temperature, 319 MPa at 150 °C and 60 MPa at 300 °C [D]. For a hot part the candidate is therefore titanium.</li>
+    <li>On the mass and CO₂ axes, the only input that can reverse the choice is the mass factor of the AM route, and it is the first number to measure on competition day [H]. Once cost enters, the choice loses its robustness and the AM manufacturing cost becomes decisive (Section 5).</li>
+    <li>In a rehearsal with a made-up card, deflection governed the design and the three aluminium options did not separate. In a planar bracket, machined 7075 competes with additive manufacturing [H].</li>
+  </ul>
+  <table>
+    <caption>Table 1 · Winning option and its robustness in five scenarios (per kilogram of the conventional machined 7075-T6 part)</caption>
+    <thead><tr><th>Scenario</th><th>Criterion</th><th>Winner</th><th class="n">Mass (kg)</th><th class="n">Lifetime CO₂ (kg)</th><th class="n">P(best)</th><th>Runner-up</th></tr></thead>
+    <tbody>
+      <tr><td>A320 bracket, strength</td><td>CO₂</td><td>Scalmalloy TO + AM</td><td class="n">0.58</td><td class="n">10,677</td><td class="n">0.84</td><td>Ti-6Al-4V TO + AM</td></tr>
+      <tr><td>ATR 72 bracket, strength</td><td>CO₂</td><td>Scalmalloy TO + AM</td><td class="n">0.58</td><td class="n">2,684</td><td class="n">0.81</td><td>Ti-6Al-4V TO + AM</td></tr>
+      <tr><td>A320 bracket, stiffness</td><td>CO₂</td><td>AlSi10Mg TO + AM</td><td class="n">0.57</td><td class="n">10,371</td><td class="n">0.61</td><td>Scalmalloy TO + AM</td></tr>
+      <tr><td>Satellite bracket, strength</td><td>production CO₂ only</td><td>AlSi10Mg TO + AM</td><td class="n">0.99</td><td class="n">28</td><td class="n">0.70</td><td>Ti-6Al-4V TO + AM</td></tr>
+      <tr><td>Satellite bracket, strength</td><td>penalty function Z</td><td>Scalmalloy TO + AM</td><td class="n">0.58</td><td class="n">117</td><td class="n">0.86</td><td>Ti-6Al-4V TO + AM</td></tr>
+    </tbody>
+  </table>
+  <p class="small">The values were taken from the <code>studies/tradeoff/out/*.results.json</code> files [H]. P(best) is the share of samples in which the option gets the best score when the inputs are sampled uniformly over the stated ranges. It is not a probability of being correct. The CO₂ values of alloys that share the same primary aluminium route were sampled together. Z is defined in Section 5.</p>
+</section>
+
+<section class="chapter" id="gorev">
+  <h1>2. The likely form of the task</h1>
+  <p>The presentation contains no task text. It contains only the skills, the courses and the note "See you on November 5th!" (p. 15) [D]. According to Regulations v1.1, the card will be released on the morning of 4 November and the competition blocks run on 5–6 November. This document was read on 25 October and was not read again today. </p>
+  <p>The only public Ansys Ideathon card is from 2023 [A]. The card asks for conceptual aircraft design and STK mission planning and says not to go into structural detail [D]. The 2024 Ansys task text has not been published [A].</p>
+  <p>The closest of the similar academic tasks is the Ansys bicycle crank example [A]. The example links material selection in EduPack, topology optimisation in Discovery, a simplified life-cycle analysis and trade-off indicators in one workflow. The 2013 GE engine bracket challenge specified the material as Ti-6Al-4V and the minimum wall as 1.27 mm [A]. The part had to stay inside the original envelope and carry four load cases.</p>
+  <table>
+    <caption>Table 2 · Likely task forms, in order of likelihood (the ranking is an inference [Y])</caption>
+    <thead><tr><th>Rank</th><th>Task form</th><th>Use phase</th><th>Ready scenario file</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td>Fuselage or engine bracket / fitting, 1–3 static load cases</td><td>fuel (marginal)</td><td><code>bracket_a320_*.json</code>, <code>bracket_atr72_strength.json</code></td></tr>
+      <tr><td class="n">2</td><td>UAV or eVTOL arm / boom</td><td>battery electricity</td><td>none; the A320 file is adapted with grid and energy inputs</td></tr>
+      <tr><td class="n">3</td><td>Satellite bracket (g load + frequency limit)</td><td>none; launch cost</td><td><code>bracket_satellite_strength.json</code>, <code>bracket_satellite_penalty.json</code></td></tr>
+      <tr><td class="n">4</td><td>Cabin seat or tray part, high volume</td><td>fuel</td><td>A320 file</td></tr>
+      <tr><td class="n">5</td><td>Wing rib, landing gear fitting, door hinge</td><td>fuel</td><td>A320 file, index changes</td></tr>
+    </tbody>
+  </table>
+  <h2>Installation status</h2>
+  <p>On 1 November the C: drive of this laptop had 3.42 GB of free space, and Ansys Student requires 50 GB [D]. Ansys Student is not installed. The graphics card is a GTX 1660 Ti with the Turing architecture. The Discovery list in the presentation includes Kepler, Maxwell and Pascal but not Turing (p. 9) [D]. Granta EduPack is not part of the student package [D].</p>
+  <p>If Discovery does not open, topology optimisation is done in Mechanical. If EduPack is not available, the material data come from the sourced tables in Section 7.</p>
+</section>
+
+<section class="chapter" id="hazir">
+  <h1>3. What we bring ready to competition day</h1>
+  <p>The first half of a five-hour slot consists of decisions that can be made before the task card is read. The default values, sources and code for these decisions are ready. When the card is released, only the numbers the card gives and the topology result will be entered.</p>
+  <table>
+    <caption>Table 3 · Decisions made in advance and gaps to be filled during the day</caption>
+    <thead><tr><th>Step</th><th>Ready</th><th>To be filled when the card arrives</th></tr></thead>
+    <tbody>
+      <tr><td>Load factor</td><td>For a fitting, ultimate load = 1.5 × 1.15 = 1.725 × limit load (14 CFR 25.303, 25.625) [A]</td><td>Limit loads; if the card gives ultimate loads, the 1.5 is not added</td></tr>
+      <tr><td>Performance index</td><td>Both the stiffness (<code>beam_stiff</code>) and the strength (<code>beam_strong</code>) index are run [H]</td><td>Which constraint governs, from the verification analysis</td></tr>
+      <tr><td>Candidate materials</td><td>7 options, with sourced properties and CO₂ values (Section 7)</td><td>EduPack alloy records and prices</td></tr>
+      <tr><td>Temperature</td><td>Scalmalloy stays below 100 °C; above that, titanium [D]</td><td>Operating temperature of the part</td></tr>
+      <tr><td>Topology settings</td><td>Volume sweep 50 / 35 / 25 / 15 %, as a range; either a 45° overhang or a minimum member size ≥ 2.5 × element size, not both [A]</td><td>Design envelope, preserved regions, minimum wall</td></tr>
+      <tr><td>Verification</td><td>Smoothing, reconnecting the interfaces, a verification solve in each load case; mesh refinement if within 5 % of the limit [A]</td><td>Verified mass → route mass factor</td></tr>
+      <tr><td>Life cycle</td><td>Marginal fuel per flight, number of flights, grid and fuel CO₂ factors, with their ranges</td><td>Aircraft class and stage length</td></tr>
+      <tr><td>Trade-off</td><td><code>scripts/tradeoff_study.py</code>: nominal ranking, Pareto, Monte Carlo, tornado</td><td>Re-run with the inputs above (≈ 10 s)</td></tr>
+      <tr><td>Jury outputs</td><td>Volume sweep curve (Figure 5 template), before/after table per load case, phase bars + sensitivity [Y]</td><td>Visuals</td></tr>
+    </tbody>
+  </table>
+  <h2>The volume sweep template</h2>
+  <p>The volume sweep was run in advance on the L-bracket benchmark problem (aerokit SIMP, 60 × 60 elements, density filter) [H]. When the retained volume fell from 50 % to 25 %, compliance rose 1.99 times, and at 15 % it rose 4.61 times. The knee of the curve lies between 25 % and 35 %, so on competition day the sweep is set up around this range [Y].</p>
+  <figure>
+    <img src="figures_en/F5_hacim_taramasi.png" alt="Left, a curve of compliance rising as the retained volume fraction falls. Right, the density distribution of the L-bracket at four retained volume fractions.">
+    <figcaption><strong>Figure 5</strong> · On the L-bracket benchmark problem, compliance rises quickly once the retained volume falls below 25 %. The curve on the left gives compliance relative to the 50 % design (unit load, unit modulus). The four panels on the right show the density distribution. Black is solid material and white is void.</figcaption>
+  </figure>
+  <table>
+    <caption>Table 4 · Volume sweep table; the last three columns are the Scalmalloy values from the rehearsal in Section 3, and the same columns are filled on competition day</caption>
+    <thead><tr><th class="n">Retained volume (%)</th><th class="n">Relative compliance</th><th class="n">Iterations</th><th class="n">Greyness measure (%)</th><th class="n">Part mass (g)</th><th class="n">σ ultimate / Rp0.2</th><th>Deflection limit 0.5 mm</th></tr></thead>
+    <tbody>
+      <tr><td class="n">50</td><td class="n">1.00</td><td class="n">103</td><td class="n">11.0</td><td class="n">197</td><td class="n">0.36</td><td>passed (0.38 mm)</td></tr>
+      <tr><td class="n">35</td><td class="n">1.34</td><td class="n">275</td><td class="n">17.3</td><td class="n">139</td><td class="n">0.39</td><td>passed (0.47 mm)</td></tr>
+      <tr><td class="n">25</td><td class="n">1.99</td><td class="n">109</td><td class="n">20.2</td><td class="n">101</td><td class="n">0.46</td><td>failed (0.60 mm)</td></tr>
+      <tr><td class="n">15</td><td class="n">4.61</td><td class="n">334</td><td class="n">21.9</td><td class="n">63</td><td class="n">0.63</td><td>failed (0.92 mm)</td></tr>
+    </tbody>
+  </table>
+  <h2>In the first 20 minutes of the card</h2>
+  <ol>
+    <li>Write the requirements with their units in a table: loads, interfaces, displacement or stiffness limit, safety factor, manufacturing route, operating temperature.</li>
+    <li>Identify the aircraft or vehicle of the part and copy the scenario file closest to it.</li>
+    <li>Narrow the option list with the material or process constraint the card gives. 7075 and 2024 are not offered on the AM route. According to Liang et al. 2025, Al7075 shows solidification cracking in laser powder bed fusion and needs a nucleant for crack-free printing [D]. The same paper reports that 2024 has also been printed after modification with Ti nanoparticles.</li>
+    <li>Enter the card into the <code>studies/cards/template_cantilever.json</code> or <code>rehearsal_l_bracket.json</code> template and run the command <code>python scripts/card_day.py</code>. The command produces the designs, the verification, the ranking and the English presentation figures in one or two minutes [H].</li>
+    <li>Get the overall ranking with <code>python scripts/tradeoff_study.py</code> and use the first three inputs of the tornado list as the measurement order.</li>
+  </ol>
+</section>
+
+<section id="prova" aria-label="Rehearsal with a made-up card">
+  <h2>Rehearsal of the first half with a made-up card</h2>
+  <p>A made-up task card was solved end to end to see whether the preparation really covers half of the way [H]. The card is not official. It gives an L-shaped design space of 120 × 120 mm for an A320 cabin bracket, an arm width of 48 mm and a thickness of 10 mm. The top edge is bolted and a vertical limit load of 2.0 kN acts at the arm tip. Tip deflection at limit load is at most 0.5 mm, and the operating temperature is 20–60 °C.</p>
+  <p>The ultimate load was 1.5 × 1.15 × 2.0 = 3.45 kN. The topology designs were taken from the sweep in Figure 5, and a run at 30 % volume was added. Each design was converted to black and white with a threshold of 0.5 and solved with 2 mm plane-stress elements [H]. The element-centre von Mises calculation reproduced σ = P/(h·t) for a plate under uniform tension with a ratio of 1.0000 [H]. Three rows of elements around the load point and the bolted edge were excluded from the evaluation because of singular stresses.</p>
+  <table>
+    <caption>Table 5 · Lightest design that passes the card in the rehearsal, and its lifetime CO₂; deflection with the correction from the four-times refined mesh (A320 use factors)</caption>
+    <thead><tr><th>Option</th><th class="n">Retained volume (%)</th><th class="n">Mass (g)</th><th class="n">σ ultimate / Rp0.2</th><th class="n">Deflection (mm)</th><th class="n">Lifetime CO₂ (kg)</th></tr></thead>
+    <tbody>
+      <tr><td>AlSi10Mg TO + AM</td><td class="n">35</td><td class="n">139</td><td class="n">0.86</td><td class="n">0.462</td><td class="n">2527</td></tr>
+      <tr><td>Scalmalloy TO + AM</td><td class="n">35</td><td class="n">139</td><td class="n">0.39</td><td class="n">0.482</td><td class="n">2551</td></tr>
+      <tr><td>7075 TO + machined</td><td class="n">35</td><td class="n">146</td><td class="n">0.38</td><td class="n">0.464</td><td class="n">2661</td></tr>
+      <tr><td>Ti-6Al-4V TO + AM</td><td class="n">25</td><td class="n">167</td><td class="n">0.27</td><td class="n">0.393</td><td class="n">3058</td></tr>
+    </tbody>
+  </table>
+  <figure>
+    <img src="figures_en/F6_prova_kutle_sapma.png" alt="Mass against tip deflection at limit load for four options. The three aluminium options lie almost on one curve. The titanium curve is heavier but stiffer. A vertical line marks the deflection limit of 0.5 mm.">
+    <figcaption><strong>Figure 6</strong> · In the rehearsal the three aluminium options reach the deflection limit at the same mass. Titanium is heavier at the same deflection. Each marker is one retained volume level (50, 35, 30, 25 %). Deflection was calculated at limit load with the 2 mm mesh, and mass with a 10 mm thickness.</figcaption>
+  </figure>
+  <p>Deflection governs the design for this card. The strength margin is wide for Scalmalloy, 7075 and titanium and narrow for AlSi10Mg, where the σ ultimate / Rp0.2 ratio is 0.86 [H]. The three aluminium options meet the deflection limit at the same retained volume, 35 %. The uncertainty in E for AlSi10Mg is ±3 GPa, or about 4 % [D]. The deflection difference between the options is of the same size. For this card the aluminium alloys do not separate on deflection, and the choice is set by strength margin, manufacturing and price [H].</p>
+  <p>The topology result of a planar bracket is 2.5-dimensional, so it is also suitable for machining. The buy-to-fly ratio of the 7075 part relative to stock plate came out at 2.8, far below the default of 8 in the studies [H]. The mass advantage of AM disappears in this geometry. For AM to make a difference, the part has to call for a three-dimensional shape that cannot be cut from plate [Y].</p>
+  <p>The same 35 % design was solved again on meshes refined two and four times [H]. Tip deflection rose by 2.2 % and 3.7 %. The 2 mm mesh underestimates deflection by at least 3.7 %. The deflections in Table 5 were therefore multiplied by 1.037. AlSi10Mg passed the limit at 30 % volume with 0.499 mm before the correction and fails with 0.517 mm after it.</p>
+  <p>With refinement the maximum von Mises stress rose 1.39 and 1.92 times, while the 99th-percentile value changed by only 1.8 % [H]. This is the signature of the singular point at the inner corner of the L. In the real part the corner is given a fillet. Stress is read away from the corner or with a converging measure. The strength ratios in Table 5 were calculated from the largest value outside the corner on the coarse mesh.</p>
+  <p>The rehearsal used a two-dimensional plane-stress model and does not replace the three-dimensional analysis in Discovery. The command is <code>python scripts/rehearsal_bracket.py</code>, and the results are in the file <code>studies/rehearsal/rehearsal.json</code>.</p>
+</section>
+
+<section class="chapter" id="katalog">
+  <h1>4. Decision catalogue</h1>
+  <p>The detailed evidence for the 25 decisions in the catalogue is in the file <code>reports/Havacılık hafifletme karar kataloğu.md</code>. The machine-readable version is in the file <code>studies/tradeoff/decision_rules.json</code>, together with rule D-26 from the rehearsal. Table 6 gives the defaults and the deviation conditions in slot order.</p>
+  <table>
+    <caption>Table 6 · Decisions, defaults and deviation conditions</caption>
+    <thead><tr><th>No.</th><th>Decision</th><th>Default and evidence</th><th>When to deviate</th></tr></thead>
+    <tbody>
+      <tr><td>D-25</td><td>Tool chain</td><td>Mechanical + aerokit [D]</td><td>EduPack and Discovery if they work</td></tr>
+      <tr><td>D-04</td><td>Load factor</td><td>1.725 × limit; A-basis on a single load path [A]</td><td>For AM, show 1.25 by analogy with the casting factor; do not stack factors (25.619)</td></tr>
+      <tr><td>D-12</td><td>Load cases</td><td>≥ 3 independent cases, at ultimate load [A]</td><td>If the card gives a single load, write the extra cases as assumptions</td></tr>
+      <tr><td>D-07</td><td>Index</td><td>Stiffness and strength index together [D] [H]</td><td>Thin shell or long strut: panel or buckling index</td></tr>
+      <tr><td>D-01</td><td>Material family</td><td>Strength-limited: Scalmalloy AM; stiffness-limited: AlSi10Mg AM; above 100 °C: Ti-6Al-4V AM [H] [A]</td><td>Contact with CFRP: titanium or glass-ply isolation; cabin: no magnesium</td></tr>
+      <tr><td>D-02</td><td>Route</td><td>AM if the machined buy-to-fly exceeds ≈ 1.8 [A] [H]</td><td>Prismatic part; forging with low buy-to-fly</td></tr>
+      <tr><td>D-03</td><td>Volume target</td><td>50 / 35 / 25 % sweep [A]</td><td>Over-designed reference: go down to 15–20 %</td></tr>
+      <tr><td>D-11</td><td>Manufacturing constraint</td><td>Overhang 45° or member size ≥ 2.5 h [A]</td><td>Tetrahedral mesh + pull-out: ≥ 4 h</td></tr>
+      <tr><td>D-26</td><td>Governing constraint</td><td>On the same topology, strength margin and deflection are read together for each candidate [H] [D]</td><td>If the aluminium alloys stay within the E uncertainty, the choice is made on strength margin, manufacturing and price</td></tr>
+      <tr><td>D-13</td><td>Verification</td><td>Verification solve in every case [A]</td><td>Mesh refinement if closer than 5 % to the limit</td></tr>
+      <tr><td>D-14</td><td>Fatigue</td><td>AM Ti-6Al-4V: HIP + machining of fatigue surfaces [A]</td><td>—</td></tr>
+      <tr><td>D-17</td><td>Material CO₂</td><td>EduPack record + low and high grid case [D] [A]</td><td>Without EduPack, Tables 9 and 11</td></tr>
+      <tr><td>D-05</td><td>Use phase</td><td>Marginal fuel per trip [A] [H]</td><td>Non-aircraft vehicle: f/(1−f) with its own mission fuel fraction</td></tr>
+      <tr><td>D-06</td><td>End of life</td><td>EduPack recycled-content method; end-of-life potential as a separate bar [A]</td><td>A separate case if the jury asks for recycling credit</td></tr>
+      <tr><td>D-09</td><td>Trade-off</td><td>Pareto (unweighted); if cost enters, Z = C + α·m [D] [A]</td><td>If a single number is requested, give it with an α range and the break-even α*</td></tr>
+      <tr><td>D-23</td><td>Headline claim</td><td>% and kg saving + binding constraint + CO₂ + P(best) + reversing input [Y]</td><td>—</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="chapter" id="insan">
+  <h1>5. Trade-off study for the human reader</h1>
+  <p>The mass of each option was calculated from the governing index ratio relative to the reference part (7075-T6, machined, 1 kg) and from the mass factor of the route. Production CO₂ is the sum of the embodied CO₂ of the purchased material and the grid CO₂ of the process electricity. Use CO₂ is the product of mass × marginal fuel per flight × number of flights × 3.16 kg CO₂/kg fuel [H]. The input ranges are in the tables in Section 7.</p>
+  <figure>
+    <img src="figures_en/F1_evre_paylari.png" alt="Horizontal stacked bars of production and use (fuel) CO₂ for seven options. The production share is at most two per cent in every option, and the total lies between 10.7 and 19.4 tonnes.">
+    <figcaption><strong>Figure 1</strong> · On the A320 bracket at least 98 % of lifetime CO₂ comes from the use phase. The scenario is strength-limited with nominal inputs, and the values are per kilogram of the conventional part. The option with the highest production share is machined Ti-6Al-4V (2.0 %), and for scandium-bearing Scalmalloy the share is 1.1 %.</figcaption>
+  </figure>
+  <p>In Figure 1 the mass of the part is what separates the options. The share of the production phase does not exceed 2.0 % in any option, so the production effect of the route choice moves the total by at most this much. The headline number of the eco audit is therefore the verified mass.</p>
+  <figure>
+    <img src="figures_en/F2_kutle_co2.png" alt="Two panels. In the strength-limited panel Scalmalloy AM stands apart with the lowest mass and CO₂. In the stiffness-limited panel AlSi10Mg and Scalmalloy are very close to each other.">
+    <figcaption><strong>Figure 2</strong> · On the Pareto front only Scalmalloy AM remains for the strength-limited bracket, and only AlSi10Mg AM for the stiffness-limited bracket. The markers show the Monte Carlo median and the lines show the 5–95 % interval. The Monte Carlo run used 3000 samples. The left panel uses the <code>beam_strong</code> index and the right panel the <code>beam_stiff</code> index.</figcaption>
+  </figure>
+  <p>In the stiffness-limited panel the AlSi10Mg part is 0.569 kg and the Scalmalloy part 0.581 kg, a difference of 2.1 % [H]. The difference comes from the E moduli and the scandium footprint. The calculation used 72 GPa for AlSi10Mg and 69 GPa for Scalmalloy [D]. AlSi10Mg leads in 61 % of the samples [H].</p>
+  <figure>
+    <img src="figures_en/F3_tornado.png" alt="Tornado chart. The longest bars are marginal fuel per flight, lifetime number of flights and the AM mass factor. No bar crosses zero, where the choice reverses.">
+    <figcaption><strong>Figure 3</strong> · No single input reverses the choice in the strength-limited A320 scenario. Each bar gives the CO₂ difference between Scalmalloy AM and Ti-6Al-4V AM when one input is at the lower or upper end of its range. The dark vertical line shows the nominal difference and the dashed line shows zero.</figcaption>
+  </figure>
+  <p>The difference in Figure 3 is moved most by the fuel factor, the number of flights and the AM mass factor. The embodied CO₂ range of Scalmalloy, 68–128 kg/kg, keeps the difference within only 1.74 to 1.79 t [H].</p>
+  <figure>
+    <img src="figures_en/F4_btf_kirilma.png" alt="Two lines. The production CO₂ of machined titanium rises quickly with buy-to-fly. The machined 7075 line crosses the 80 kg/kg horizontal line of AM titanium at the break-even buy-to-fly of 6.4.">
+    <figcaption><strong>Figure 4</strong> · Above a buy-to-fly ratio of 6.4, machined 7075 carries more production CO₂ than AM Ti-6Al-4V. The comparison is per kilogram of finished part, and for AM titanium the value is 80 kg/kg. The calculation took embodied CO₂ as 12 kg/kg for aluminium and 46.5 kg/kg for titanium [D]. Process energy is 8 MJ/kg on the machined route and 118.9 MJ/kg for AM [A]. Grid intensity is 211 g/kWh (EU-27, 2024) [D].</figcaption>
+  </figure>
+  <p>The buy-to-fly ratios of the ORNL machined brackets are 8 and 33 [A]. According to Figure 4, at these ratios the production CO₂ of machined titanium per finished kilogram is about 5 to 19 times that of AM titanium [H]. If titanium is chosen, the route is AM; machined titanium ranked between 4th and 7th place in the five scenarios [H].</p>
+  <h2>A part with no use phase: the satellite</h2>
+  <p>Fuel does not enter the satellite scenario. When only production CO₂ was counted, AlSi10Mg AM came first in 70 % of the samples and Scalmalloy fell to sixth place [H]. One kilogram of Scalmalloy contains 0.35 kg of AlSc2 master alloy, and one kilogram of this master alloy carries 172 kg CO₂e (Table 11) [D].</p>
+  <p>In a satellite the value of mass is measured by launch cost. The penalty function was set up as Z = α·mass + c·CO₂ [D]. For the value of mass, the lower end of the exchange constant Ashby gives for spacecraft was taken, 3000 per kilogram [D]. The carbon price is the 2025 EU ETS average, 74.31 € per tonne [D]. On this criterion Scalmalloy came first in 86 % of the samples [H].</p>
+  <p>For the ranking to reverse, the carbon price would have to be ≈ 13,800 €/t, about 186 times the 2025 average [H]. The calculation treats pounds sterling and euros as the same order of magnitude, because the currency symbol in the Ashby table could not be read [Y].</p>
+  <h2>Assumptions that could change the result</h2>
+  <ul>
+    <li><strong>AM mass factor 0.6.</strong> It was taken from the 30–50 % savings in flying AM parts [A]. With the machined TO factor at 0.8, the machined route wins if the AM factor exceeds ≈ 0.82, with 7075 for strength and 2024 for stiffness [H].</li>
+    <li><strong>Scandium footprint.</strong> The lower bound is the new production route from red mud by Hengevoss et al., and it gives Scalmalloy 68 kg CO₂/kg [H]. The upper bound is 128, because the same paper gives the GWP of current production as about twice that of the new route. For flying parts Scalmalloy stayed ahead over the whole of this range.</li>
+    <li><strong>Powder production.</strong> Atomisation was not added. According to ORNL it increases the energy of titanium powder by 2.4 % [A].</li>
+  </ul>
+  <h2>Once cost enters, the decision loses its robustness</h2>
+  <p>Material price and manufacturing cost were entered with a separate range for each material and route pair. The ranges are in Table 16 [A] [S] [Y]. The criterion was Z = cost + α·mass + c·CO₂. The value of mass was taken as α = 500 €/kg and the carbon price as c = 74.31 €/t [D]. In the nominal ranking Scalmalloy AM is again first, but its share of first places in 3000 samples is only 0.26 [H]. Ti-6Al-4V AM, at 0.43, and topology-optimised machined 7075, at 0.31, come first more often.</p>
+  <table>
+    <caption>Table 7 · A320 bracket, strength-limited, cost included (per kilogram of the conventional part, €)</caption>
+    <thead><tr><th>Option</th><th class="n">Mass (kg)</th><th class="n">Cost (€)</th><th class="n">Lifetime CO₂ (kg)</th><th class="n">Z (€)</th><th class="n">P(best)</th></tr></thead>
+    <tbody>
+      <tr><td>Scalmalloy TO + AM</td><td class="n">0.58</td><td class="n">464</td><td class="n">10,677</td><td class="n">1547</td><td class="n">0.26</td></tr>
+      <tr><td>7075 TO + machined</td><td class="n">0.80</td><td class="n">144</td><td class="n">14,641</td><td class="n">1632</td><td class="n">0.31</td></tr>
+      <tr><td>Ti-6Al-4V TO + AM</td><td class="n">0.68</td><td class="n">452</td><td class="n">12,414</td><td class="n">1713</td><td class="n">0.43</td></tr>
+    </tbody>
+  </table>
+  <p>Six inputs can each reverse the choice on their own, and the strongest is the AM manufacturing cost, with a range of 220–1910 € per kilogram [H]. With carbon priced, Scalmalloy AM overtakes machined 7075 once the value of mass exceeds 116 €/kg [H]. Without a carbon price this threshold rises to 1456 €/kg. The range of 100–500/kg that Ashby gives for civil aircraft lies between these two thresholds [D]. The choice that is robust on the mass and CO₂ axes should be presented to the jury together with the assumption under which cost changes it [Y].</p>
+  <h2>Caution on the use-phase factor</h2>
+  <p>The EduPack mobile use mode uses a freight transport intensity of 6.5 MJ/t·km for long-haul aircraft [S]. This value is an average transport intensity. The marginal value Steinegger gives for the A320, A330 and A380 is 0.020–0.041 kg fuel/kg/1000 km [A]. With a lower heating value of about 43 MJ/kg [Y], this range equals 0.86–1.76 MJ/t·km. The EduPack use bar can therefore come out at about 4–8 times the marginal calculation [H]. We recommend showing the jury both values side by side and using the lower one in the headline claim [Y].</p>
+</section>
+
+<section class="chapter" id="ajan">
+  <h1>6. Trade-off study for an AI agent</h1>
+  <p>The study built for the human reader was also stored in a form that an agent can modify and re-run on competition day. Table 8 lists the files of this version.</p>
+  <table>
+    <caption>Table 8 · Files of the agent version</caption>
+    <thead><tr><th>File</th><th>Content</th></tr></thead>
+    <tbody>
+      <tr><td><code>studies/tradeoff/README.md</code></td><td>Schema, full model equations, editing rules, how to read the result (in English)</td></tr>
+      <tr><td><code>studies/tradeoff/*.json</code></td><td>Six scenarios; each numerical input is a factor object with the fields <code>value, low, high, unit, source, tag</code> and an optional <code>group</code> field</td></tr>
+      <tr><td><code>studies/tradeoff/decision_rules.json</code></td><td>24 decision rules (23 of the 25 catalogue decisions and D-26 from the rehearsal): condition → default → evidence (tagged) → linked input field; four invariant rules</td></tr>
+      <tr><td><code>studies/tradeoff/build_studies.py</code></td><td>Rewrites the six scenarios from a single definition</td></tr>
+      <tr><td><code>src/aerokit/design/tradeoff.py</code></td><td>Evaluator: nominal, Pareto, penalty function, correlated Monte Carlo, tornado; tests in <code>tests/test_tradeoff.py</code></td></tr>
+      <tr><td><code>scripts/retain_sweep.py</code></td><td>Volume sweep; results in <code>studies/retain_sweep/retain_sweep.json</code></td></tr>
+      <tr><td><code>src/aerokit/design/card.py</code>, <code>scripts/card_day.py</code></td><td>Loads, topology, verification, mesh factor, ranking and presentation figures from the card JSON; tests in <code>tests/test_card.py</code></td></tr>
+    </tbody>
+  </table>
+  <p>The evaluator rejects a bare number. Every input must have a source and a tag. The condition <code>low ≤ value ≤ high</code> is checked on loading. Inputs that carry the same <code>group</code> name are drawn from the same quantile in the Monte Carlo run. The primary aluminium alloys move together in this way. The <code>weak_inputs</code> list in the output lists the inputs tagged [S] and [Y]. The agent changes these first, and then the inputs in tornado order.</p>
+  <p>Four invariant rules were defined for the agent:</p>
+  <ol>
+    <li>A tag is never upgraded.</li>
+    <li>Marginal and average fuel factors are not mixed in the same chain.</li>
+    <li>Route mass factors count as assumptions until the topology result is verified.</li>
+    <li>A choice is reported only if P(best) ≥ 0.8 or if it is written with the name of the input that reverses it.</li>
+  </ol>
+  <div class="note small">The command <code>python scripts/tradeoff_study.py studies/tradeoff/bracket_a320_strength.json</code> writes the files <code>out/&lt;scenario&gt;.results.json</code> and <code>.results.md</code>. The figures are produced by <code>python scripts/report_figures.py --lang en</code>, <code>python scripts/retain_sweep.py --figure-only --lang en</code> and <code>python scripts/rehearsal_bracket.py --figure-only --lang en</code>. The datawiz check found no ERROR in any of the six figures, and the set was found consistent.</div>
+  <p class="small" id="test-sonucu">On 1 November 2026 the full test suite passed 1372 tests with 1 skipped, and all 3324 numerical checks passed [H]. This number includes the 18 hand-calculation checks of the trade-off module and the 3 of the rehearsal stress calculation.</p>
+</section>
+
+<section class="chapter" id="veri">
+  <h1>7. Data tables, contradictions and gaps</h1>
+  <table>
+    <caption>Table 9 · Primary production values of material families (Ashby, Materials and the Environment, 2nd ed., 2013; transcription of "Useful numbers for environmental studies", pp. 1–11) [D]</caption>
+    <thead><tr><th>Family</th><th class="n">Embodied energy (MJ/kg)</th><th class="n">CO₂ (kg/kg)</th><th class="n">Recycling CO₂ (kg/kg)</th><th class="n">Recycled fraction in supply</th></tr></thead>
+    <tbody>
+      <tr><td>Titanium alloys</td><td class="n">650–720</td><td class="n">46.5</td><td class="n">5.2</td><td class="n">23 %</td></tr>
+      <tr><td>Carbon fibre (fibre only)</td><td class="n">450–500</td><td class="n">33–36</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Magnesium alloys</td><td class="n">300–330</td><td class="n">36</td><td class="n">2.9</td><td class="n">36–41 %</td></tr>
+      <tr><td>Nickel superalloys</td><td class="n">221–244</td><td class="n">11.6</td><td class="n">2.14</td><td class="n">22–26 %</td></tr>
+      <tr><td>Aluminium</td><td class="n">200–220</td><td class="n">12</td><td class="n">2.1</td><td class="n">41–45 %</td></tr>
+      <tr><td>Epoxy</td><td class="n">127–140</td><td class="n">6.8–7.5</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>GFRP</td><td class="n">107–118</td><td class="n">7.47–8.26</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Stainless steel</td><td class="n">81–88</td><td class="n">5.0</td><td class="n">0.73</td><td class="n">35–40 %</td></tr>
+    </tbody>
+  </table>
+  <p class="small">According to the IAI, the footprint of primary aluminium mostly lies in the range 4.5–22 kg CO₂e/kg, and the 2023 world average is 14.8 [A]. Ti-6Al-4V ingot is 16.1 kg CO₂e/kg with hydropower and 37.3 kg CO₂e/kg with the Chinese grid (Lessard et al. 2025) [A]. According to OWID/Ember data, the CO₂ intensity of electricity in 2024 was 211 g/kWh in the EU-27 and 40.5 g/kWh in France [D]. For the same year the data give 469.7 g/kWh for Türkiye and 555.4 g/kWh for China. The decimal places are as printed in the source.</p>
+
+  <table>
+    <caption>Table 10 · Alloys suitable for additive manufacturing and aerospace plates, datasheet values</caption>
+    <thead><tr><th>Material and condition</th><th class="n">ρ (kg/m³)</th><th class="n">Rp0.2 (MPa)</th><th class="n">Tensile (MPa)</th><th>E and note</th></tr></thead>
+    <tbody>
+      <tr><td>Scalmalloy, stress-relieved 325 °C/4 h [A]</td><td class="n">2670</td><td class="n">490–500</td><td class="n">520–530</td><td>E 69 GPa horizontal, 68 GPa vertical (same heat treatment; Colibrium) [D]</td></tr>
+      <tr><td>Ti-6Al-4V ELI, L-PBF (EOS M290, 800 °C/2 h) [A]</td><td class="n">≈ 4410</td><td class="n">945 / 965</td><td class="n">1055 / 1075</td><td>horizontal / vertical</td></tr>
+      <tr><td>Ti-6Al-4V, EBM (Colibrium, as-built) [A]</td><td class="n">—</td><td class="n">907–940</td><td class="n">986–1015</td><td>E column empty</td></tr>
+      <tr><td>Airware 2050-T84 plate, 12.7–38.1 mm [A]</td><td class="n">2700</td><td class="n">≥ 476</td><td class="n">≥ 503</td><td>E 76.5 GPa (typical)</td></tr>
+      <tr><td>2099-T83 extrusion, 0.50–0.999" [A]</td><td class="n">—</td><td class="n">524</td><td class="n">558</td><td>E 78 GPa</td></tr>
+      <tr><td>AlSi10Mg, stress-relieved 270 °C/90 min (EOS) [A]</td><td class="n">2670</td><td class="n">220 / 225</td><td class="n">340 / 350</td><td>E 72 ± 3 GPa (XY, as-built; AddUp) [D]</td></tr>
+    </tbody>
+  </table>
+  <p class="small">The composition of Scalmalloy powder is Al-4.7Mg-0.7Sc-0.27Zr-0.48Mn (wt %, Höganäs powder; Mehta et al. 2022, Table 2) [D]. The Nikon SLM datasheet gives a range of 0.68–0.84 % for Sc [D]. According to AddUp, the E modulus of AlSi10Mg rises to 77 ± 4 GPa after stress relief at 210 °C/2 h [D].</p>
+
+  <table>
+    <caption>Table 11 · Life-cycle values of the scandium chain (Hengevoss et al. 2024, Cleaner Waste Systems 7:100129, Table 1) [D]</caption>
+    <thead><tr><th>Product</th><th class="n">Cumulative energy (GJ/kg)</th><th class="n">GWP (kg CO₂e/kg)</th></tr></thead>
+    <tbody>
+      <tr><td>Sc₂O₃</td><td class="n">148</td><td class="n">5290</td></tr>
+      <tr><td>ScF₃</td><td class="n">99.8</td><td class="n">3500</td></tr>
+      <tr><td>AlSc 2 % master alloy</td><td class="n">4.8</td><td class="n">172</td></tr>
+    </tbody>
+  </table>
+  <p class="small">The literature cited by Hengevoss et al. gives 743, ≈ 3940 and ≈ 5500 kg CO₂e/kg for Sc₂O₃ [D]. For Scalmalloy, 0.35 × 172 + 0.65 × 12 ≈ 68 kg CO₂/kg gives the lower bound, and doubling the Sc share gives ≈ 128 as the upper bound [H].</p>
+
+</section>
+
+<section id="veri-1b" aria-label="Exchange constant, process, certification and use-phase tables">
+  <table>
+    <caption>Table 12 · Ashby's exchange constants for transport systems (Acta Materialia 48, 2000, Table 3, p. 363) [D]</caption>
+    <thead><tr><th>Sector</th><th class="n">α (currency unit/kg)</th><th class="n">α ($/lb)</th></tr></thead>
+    <tbody>
+      <tr><td>Spacecraft, structural</td><td class="n">3000–10,000</td><td class="n">2000–75,000</td></tr>
+      <tr><td>Military vehicle, structural</td><td class="n">500–1000</td><td class="n">350–750</td></tr>
+      <tr><td>Civil aircraft, structural</td><td class="n">100–500</td><td class="n">75–300</td></tr>
+      <tr><td>Bicycle, structural parts</td><td class="n">80–1000</td><td class="n">50–700</td></tr>
+      <tr><td>Truck, structural parts</td><td class="n">5–10</td><td class="n">4–8</td></tr>
+      <tr><td>Family car, structural</td><td class="n">0.5–1.5</td><td class="n">0.4–1.1</td></tr>
+    </tbody>
+  </table>
+  <p class="small">The currency symbol is corrupted in the text layer, and because $/lb is also given it is thought to be pounds sterling [Y]. The $/lb range in the spacecraft row is inconsistent with the kg value and may be a typo in the original print [A]. For civil aircraft NRC 2003 gives 200 $/lb (≈ 441 $/kg) [A].</p>
+  <table>
+    <caption>Table 13 · Process energies and buy-to-fly ratios</caption>
+    <thead><tr><th>Value</th><th class="n">Magnitude</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td>Autoclave moulding (Ashby)</td><td class="n">100–300 MJ/kg</td><td>Useful Numbers p. 9 [D]</td></tr>
+      <tr><td>DMLS / EBM / SLM</td><td class="n">158.4 / 118.9 / 118.2 MJ/kg</td><td>ORNL/TM-2014/93 [A]</td></tr>
+      <tr><td>Machining, heavy / fine</td><td class="n">108.9 / 8 MJ/kg</td><td>ORNL/TM-2014/93 [A]</td></tr>
+      <tr><td>EBM, Arcam A1, Ti-6Al-4V</td><td class="n">61 MJ/kg</td><td>ORNL/TM-2014/93 [A]</td></tr>
+      <tr><td>Ti cabin bracket, machined</td><td class="n">buy-to-fly 33 and 8</td><td>ORNL/TM-2014/93 [A]</td></tr>
+      <tr><td>EBM</td><td class="n">buy-to-fly 1.5</td><td>ORNL/TM-2014/93 [A]</td></tr>
+      <tr><td>B787 fuselage side beam, Ti</td><td class="n">buy-to-fly 41 / 25</td><td>Walker, Titanium USA 2013 [A]</td></tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Table 14 · Certification factors (14 CFR Part 25, eCFR 2026-10-01) [A]</caption>
+    <thead><tr><th>Item</th><th class="n">Factor</th><th>Section</th></tr></thead>
+    <tbody>
+      <tr><td>Non-critical casting, visual inspection only</td><td class="n">2.00</td><td>§25.621(d)</td></tr>
+      <tr><td>Factor of safety on limit load</td><td class="n">1.50</td><td>§25.303</td></tr>
+      <tr><td>Critical casting, surface + radiography + 1 static test</td><td class="n">1.50</td><td>§25.621(c)(3)</td></tr>
+      <tr><td>Critical casting, surface + radiography + 3 static tests</td><td class="n">1.25</td><td>§25.621(c)(2)</td></tr>
+      <tr><td>Fitting factor</td><td class="n">≥ 1.15</td><td>§25.625</td></tr>
+      <tr><td>Special factors</td><td class="n">highest only</td><td>§25.619</td></tr>
+      <tr><td>Design value, single load path / redundant</td><td class="n">99/95 % · 90/95 %</td><td>§25.613</td></tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Table 15 · Use-phase factors</caption>
+    <thead><tr><th>Aircraft or vehicle</th><th class="n">Value</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td>A380, 12,000 km trip</td><td class="n">0.45 kg fuel/kg/trip</td><td>Steinegger 2017, Figure 15 [A]</td></tr>
+      <tr><td>A320 family ("A322" in the source), 2000 / 4000 / 5000 km trip</td><td class="n">0.07 / 0.12 / 0.16 kg/kg/trip</td><td>Steinegger 2017, Figure 15 [A]</td></tr>
+      <tr><td>A320 family, initial certified life</td><td class="n">48,000 flights (ESA I: 60,000)</td><td>Emerald AEAT 2008 [D]</td></tr>
+      <tr><td>ATR 72-600, marginal</td><td class="n">0.04–0.06 kg/kg/1000 km</td><td>derived from the ATR 2020 fact sheet [A]</td></tr>
+      <tr><td>EduPack mobile, long haul / helicopter</td><td class="n">6.5 / 55 MJ/t·km</td><td>EduPack 2021 R1 help page [S]</td></tr>
+      <tr><td>Bell 407 helicopter</td><td class="n">&lt; 5 % fuel at +14.1 % weight</td><td>FAA AEDT report, p. 23 [A]</td></tr>
+      <tr><td>Jet fuel CO₂</td><td class="n">3.16 kg/kg</td><td>ICAO CEC v8; read on 25 October [D]</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="veri-2" aria-label="Contradictions, gaps and references">
+  <table>
+    <caption>Table 16 · Cost inputs, € / kg, ECB exchange rate of 16 September 2026</caption>
+    <thead><tr><th>Input</th><th class="n">Value</th><th class="n">Range</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td>Ti-6Al-4V plate</td><td class="n">50</td><td class="n">29–96</td><td>Dutta and Froes 2014 [A]</td></tr>
+      <tr><td>Ti-6Al-4V EBM powder</td><td class="n">110</td><td class="n">71–180</td><td>Fraunhofer IAPT 2021, Figure 13 [A]</td></tr>
+      <tr><td>AlSi10Mg powder</td><td class="n">80</td><td class="n">40–126</td><td>Depboylu et al., SFF 2024 [A]</td></tr>
+      <tr><td>Scalmalloy powder</td><td class="n">200</td><td class="n">120–400</td><td>no published price, placeholder [Y]</td></tr>
+      <tr><td>Aerospace aluminium plate</td><td class="n">10</td><td class="n">7.5–20</td><td>lower: Constellium 2024 [A]; value and upper are assumptions [Y]</td></tr>
+      <tr><td>L-PBF manufacturing, excluding powder</td><td class="n">500</td><td class="n">220–1910</td><td>AMPOWER; Simpson 2021 [A]</td></tr>
+      <tr><td>Machined Ti / Al manufacturing</td><td class="n">300 / 100</td><td class="n">120–620 / 40–240</td><td>template and vendor summaries [S]</td></tr>
+    </tbody>
+  </table>
+  <h2>Contradictions to watch</h2>
+  <ul>
+    <li>For the GE bracket, Carter et al. 2014 give an 80 % saving and a reference of ≈ 1.8 kg, while GE Reports gives 2033 g → 327 g (84 %). Both sources are quoted correctly, and the reference masses differ [A].</li>
+    <li>Autoclave energy is 100–300 MJ/kg in Ashby and 11.8 MJ/kg in the Cranfield cure step, a difference of ≈ 17 times [A].</li>
+    <li>The EduPack transport table changes with the version, and long-haul air freight is 8.3 in 2008 and 6.5 MJ/t·km in 2021 R1 [A; S].</li>
+    <li>The intensity implied by the ORNL use phase is ≈ 3.15 MJ/kg/1000 km, which is 1.8–3.7 times the Steinegger marginal value [H]. ORNL may be using average fuel.</li>
+    <li>Two search summaries show the scandium content of Scalmalloy as 0.02–0.04 wt % and &lt; 2 % [S]. The full text of Mehta et al. 2022 gives 0.7 %, and the calculation uses this value [D].</li>
+  </ul>
+
+  <h2>To read from EduPack on competition day</h2>
+  <ol>
+    <li>Alloy-level embodied CO₂ and energy: 2050, 2099, AlSi10Mg, Scalmalloy (whether scandium is included), Ti-6Al-4V powder.</li>
+        <li>The aircraft rows in the mobile use mode, and whether their factors are average or marginal.</li>
+    <li>How the "% removed" field in machining enlarges the material phase. Audit the same part with 0 % and 50 % and see which bar changes.</li>
+    <li>Country electricity mix and fuel CO₂ factor (EduPack uses 0.072 kg per MJ [S]).</li>
+    <li>The end-of-life options in 2026 R1 (Landfill, Combust, Downcycle, Recycle, Re-manufacture, Reuse, None) and the end-of-life potential of each [A].</li>
+  </ol>
+
+  <h2>References</h2>
+  <ol class="src">
+    <li>Synopsys/Ansys, "Euroavia ideathon 2026 – Ansys challenge and support", 27 October 2026, restricted distribution.</li>
+    <li>M. F. Ashby, Materials and the Environment, 2nd ed., 2013; transcription of "Useful numbers for environmental studies", polybags.co.uk.</li>
+    <li>M. F. Ashby, "Multi-objective optimization in material design and selection", Acta Materialia 48, 2000, pp. 359–369.</li>
+    <li>S. Nimbalkar et al., ORNL/TM-2014/93, July 2014.</li>
+    <li>D. Steinegger, Fuel Economy for Aircraft Operation as a Function of Weight and Distance, ZHAW, 2017.</li>
+    <li>W. J. Carter et al., paper on the GE engine bracket challenge, SFF Symposium 2014.</li>
+    <li>14 CFR Part 25, eCFR, version of 1 October 2026; FAA AC 20-107B Change 1; EASA CM-S-008 Issue 04.</li>
+    <li>Our World in Data / Ember, Carbon intensity of electricity, CSV, downloaded on 1 November 2026.</li>
+    <li>International Aluminium Institute, Aluminium carbon footprint FAQ; Lessard et al., J. Sustainable Metallurgy 2025, supplementary Table S-2.</li>
+    <li>D. Hengevoss et al., "Life cycle assessment of a novel production route for scandium recovery from bauxite residues", Cleaner Waste Systems 7, 2024, 100129.</li>
+    <li>B. Mehta, A. Svanberg, L. Nyborg, "Laser powder bed fusion of an Al-Mg-Sc-Zr alloy", Metals 12, 2022, 57.</li>
+    <li>Y. Liang et al., "Laser powder bed fusion of high-strength crack-free Al7075 alloy", Composites Part B 289, 2025, 111940 (Cardiff author version).</li>
+    <li>Datasheets from EOS, 3D Systems, Nikon SLM, Colibrium, AddUp, Smiths Metal and Airware (Table 10).</li>
+    <li>Montel, EU ETS December 2025 contract average, GMK Center news item, 16 December 2025.</li>
+    <li>The cost inputs are based on Dutta and Froes 2014, the Fraunhofer IAPT 2021 powder survey, Depboylu et al. 2024, Constellium 2024 results, AMPOWER, Simpson 2021 and NIST SP 1176.</li>
+    <li>Ansys Help 2024 R2, Structural Optimization and Additive sections; Ansys Help v261, Granta EduPack Eco Audit.</li>
+    <li>Notes from two rounds of research: the <code>research_notes/</code> folder.</li>
+  </ol>
+</section>
+
+</main>
+</body>
+</html>

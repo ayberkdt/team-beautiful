@@ -1,0 +1,11 @@
+{
+ "_not": "PREVIEW — geometry and loads only, no analysis. Film input (paths relative to this folder): manifest film.json + loads. 'geometri' is the BASELINE CAD because hazirla.mjs requires geometri or yogunluk; there is no redesigned part yet.",
+ "ansys": "film.json",
+ "yukler": "yukler.json",
+ "geometri": {
+  "dosya": "baslangic.stl",
+  "birim": "mm",
+  "hizala": "yok",
+  "yukari": "z"
+ }
+}

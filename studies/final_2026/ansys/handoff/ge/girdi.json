@@ -1,0 +1,26 @@
+{
+ "_not": "aerokit.bracket hand-off of 'GE-type engine bracket (envelope approximation)'; every number from the files in this folder.",
+ "parca_adi": "GE-type engine bracket (envelope approximation)",
+ "sonuc": "result.json",
+ "yukler": "yukler.json",
+ "geometri": {
+  "dosya": "parca.stl",
+  "birim": "mm",
+  "hizala": "yok",
+  "yukari": "z"
+ },
+ "yogunluk": {
+  "dosya": "yogunluk.json",
+  "anahtar": "runs",
+  "kok_mm": [
+   -163.34,
+   -74.6,
+   0.0
+  ],
+  "yukari": "z",
+  "voksel_mm": 2.2
+ },
+ "malzeme": "in718_lpbf",
+ "kaynak": "aerokit.bracket pipeline · studies/final_2026/ansys/inputs/ge_bracket.json",
+ "gerilme_csv": "gerilme.txt"
+}

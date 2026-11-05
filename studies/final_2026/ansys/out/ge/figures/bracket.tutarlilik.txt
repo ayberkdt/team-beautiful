@@ -1,0 +1,5 @@
+set tutarlılığı (4 figür): 0 HATA · 1 UYARI · 1 BİLGİ · SET TUTARLI
+  [UYARI] harf-bicimi        eksen adlarında harf düzeni karışık — Cümle düzeni: f1_convergence, f3_eco, f4_history · Tek sözcük: f3_eco, f4_history · karışık: f1_convergence
+          → tek düzen: cümle düzeni ('Elapsed time'); Nature: ilk harf büyük, gerisi küçük  [06 T3/T16: AIAAFig; APSStyleGuide; Kosslyn2012]
+  [BİLGİ] adlandirma-yontemi seri adlandırma yöntemi karışık — lejant: f3_eco · doğrudan etiket: f4_history
+          → mümkünse hep doğrudan etiket; lejant gerekiyorsa her figürde aynı konum  [06 T1/T2: Qu2018 C1.4, C2.4; UrbanStyle; DatawrapperColors2018; TableauBlueprint; Few2008Color; Kosslyn2012 — işaret/çizgi tipi datawiz-secimi]

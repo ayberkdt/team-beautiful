@@ -1,0 +1,411 @@
+{
+  "name": "Hot-zone bracket, strength-limited, A320 life cycle (per kg of the conventional 7075-T6 machined part)",
+  "case": "beam_strong",
+  "reference_material": "7075-T6",
+  "reference_mass": {
+    "value": 1.0,
+    "unit": "kg",
+    "tag": "Y",
+    "source": "normalisation: results are per kg of the conventional machined 7075-T6 part; replace with the task's part mass"
+  },
+  "lifecycle": {
+    "fuel_per_kg_per_flight": {
+      "value": 0.12,
+      "low": 0.07,
+      "high": 0.16,
+      "unit": "kg fuel / kg carried / flight",
+      "tag": "A",
+      "source": "Steinegger 2017 (ZHAW), Fig. 15, A320-200 marginal fuel at 2000/4000/5000 km; full text read by a sub-agent 2026-11-01; not peer-reviewed"
+    },
+    "flights": {
+      "value": 48000,
+      "low": 30000,
+      "high": 60000,
+      "unit": "flights over life",
+      "tag": "D",
+      "source": "A320 original approved validity 48,000 FC; ESA I 60,000 FC (Emerald AEAT 2008, doi 10.1108/aeat.2008.12780caf.005, fetch summary 2026-11-01); low 30,000 = assumption (early retirement)"
+    },
+    "co2_per_kg_fuel": {
+      "value": 3.16,
+      "unit": "kg CO2 / kg Jet-A",
+      "tag": "D",
+      "source": "ICAO CEC methodology v8 / UK CORSIA Order 2021 art. 28(5); read 2026-10-25 (aerokit.design.sustainability)"
+    },
+    "grid_co2_per_MJ": {
+      "value": 0.0587,
+      "low": 0.0112,
+      "high": 0.1543,
+      "unit": "kg CO2 / MJ electricity",
+      "tag": "D",
+      "source": "OWID/Ember carbon intensity of electricity, CSV read 2026-11-01: EU-27 2024 211.2, France 2024 40.5, China 2024 555.4 g/kWh, divided by 3600"
+    }
+  },
+  "materials": {
+    "7075-T6": {
+      "E": 71700000000.0,
+      "Fty": 503000000.0,
+      "rho": 2810,
+      "properties_source": "AA typical (aerokit.materials.library)",
+      "co2_per_kg": {
+        "value": 12.0,
+        "low": 4.5,
+        "high": 22.0,
+        "unit": "kg CO2 / kg",
+        "tag": "D",
+        "source": "Ashby 2013 family value 12 (Useful Numbers PDF p. 1, read 2026-11-01); range 4.5-22 = IAI 'most footprints' (fetch by sub-agent 2026-11-01)",
+        "group": "primary_al"
+      },
+      "cost_by_route": {
+        "machined": {
+          "price_per_kg": {
+            "value": 10,
+            "low": 7.5,
+            "high": 20,
+            "unit": "EUR/kg",
+            "tag": "Y",
+            "source": "aerospace Al plate: low 7.5 = Constellium A&T FY2024 revenue/volume (fetch); value and high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md (sub-agent 2026-11-01; EUR at ECB 16 Sep 2026)",
+            "group": "al_plate"
+          },
+          "route_cost_per_kg": {
+            "value": 100,
+            "low": 40,
+            "high": 240,
+            "unit": "EUR/kg",
+            "tag": "S",
+            "source": "CNC Al route per kg finished at buy-to-fly ~10, template on Walker 2013 removal rates and snippet shop rates; research_notes/Hafifletme derin araştırma 2/cost_data.md (sub-agent 2026-11-01; EUR at ECB 16 Sep 2026)",
+            "group": "cnc_al"
+          }
+        },
+        "machined_TO": {
+          "price_per_kg": {
+            "value": 10,
+            "low": 7.5,
+            "high": 20,
+            "unit": "EUR/kg",
+            "tag": "Y",
+            "source": "aerospace Al plate: low 7.5 = Constellium A&T FY2024 revenue/volume (fetch); value and high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md (sub-agent 2026-11-01; EUR at ECB 16 Sep 2026)",
+            "group": "al_plate"
+          },
+          "route_cost_per_kg": {
+            "value": 100,
+            "low": 40,
+            "high": 240,
+            "unit": "EUR/kg",
+            "tag": "S",
+            "source": "CNC Al route per kg finished at buy-to-fly ~10, template on Walker 2013 removal rates and snippet shop rates; research_notes/Hafifletme derin araştırma 2/cost_data.md (sub-agent 2026-11-01; EUR at ECB 16 Sep 2026)",
+            "group": "cnc_al"
+          }
+        }
+      }
+    },
+    "2024-T351": {
+      "E": 73100000000.0,
+      "Fty": 324000000.0,
+      "rho": 2780,
+      "properties_source": "AA typical (aerokit.materials.library)",
+      "co2_per_kg": {
+        "value": 12.0,
+        "low": 4.5,
+        "high": 22.0,
+        "unit": "kg CO2 / kg",
+        "tag": "D",
+        "source": "as 7075-T6 (aluminium family value)",
+        "group": "primary_al"
+      },
+      "cost_by_route": {
+        "machined_TO": {
+          "price_per_kg": {
+            "value": 10,
+            "low": 7.5,
+            "high": 20,
+            "unit": "EUR/kg",
+            "tag": "Y",
+            "source": "aerospace Al plate: low 7.5 = Constellium A&T FY2024 revenue/volume (fetch); value and high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md (sub-agent 2026-11-01; EUR at ECB 16 Sep 2026)",
+            "group": "al_plate"
+          },
+          "route_cost_per_kg": {
+            "value": 100,
+            "low": 40,
+            "high": 240,
+            "unit": "EUR/kg",
+            "tag": "S",
+            "source": "CNC Al route per kg finished at buy-to-fly ~10, template on Walker 2013 removal rates and snippet shop rates; research_notes/Hafifletme derin araştırma 2/cost_data.md (sub-agent 2026-11-01; EUR at ECB 16 Sep 2026)",
+            "group": "cnc_al"
+          }
+        }
+      }
+    },
+    "Ti-6Al-4V": {
+      "E": 110000000000.0,
+      "Fty": 827000000.0,
+      "rho": 4430,
+      "properties_source": "supplier minimum (aerokit.materials.library)",
+      "co2_per_kg": {
+        "value": 46.5,
+        "low": 16.1,
+        "high": 46.5,
+        "unit": "kg CO2 / kg",
+        "tag": "D",
+        "source": "Ashby 2013 Ti alloys 46.5 (Useful Numbers PDF p. 4, read 2026-11-01); low 16.1 = Ti-6Al-4V ingot on hydro grid, Lessard et al. 2025 SI Table S-2 (sub-agent full PDF)"
+      },
+      "cost_by_route": {
+        "machined_TO": {
+          "price_per_kg": {
+            "value": 50,
+            "low": 29,
+            "high": 96,
+            "unit": "EUR/kg",
+            "tag": "A",
+            "source": "Ti-6Al-4V sheet 15-50 USD/lb, Dutta & Froes 2014 slide 3; research_notes/Hafifletme derin araştırma 2/cost_data.md (sub-agent 2026-11-01; EUR at ECB 16 Sep 2026)"
+          },
+          "route_cost_per_kg": {
+            "value": 300,
+            "low": 120,
+            "high": 620,
+            "unit": "EUR/kg",
+            "tag": "S",
+            "source": "CNC Ti route per kg finished, template; research_notes/Hafifletme derin araştırma 2/cost_data.md (sub-agent 2026-11-01; EUR at ECB 16 Sep 2026)"
+          }
+        },
+        "am_TO": {
+          "price_per_kg": {
+            "value": 110,
+            "low": 71,
+            "high": 180,
+            "unit": "EUR/kg",
+            "tag": "A",
+            "source": "Ti-6Al-4V EBM powder 45-106 um, Fraunhofer IAPT 2021 Fig. 13; research_notes/Hafifletme derin araştırma 2/cost_data.md (sub-agent 2026-11-01; EUR at ECB 16 Sep 2026)"
+          },
+          "route_cost_per_kg": {
+            "value": 500,
+            "low": 250,
+            "high": 855,
+            "unit": "EUR/kg",
+            "tag": "A",
+            "source": "EBM/L-PBF Ti route excluding powder; research_notes/Hafifletme derin araştırma 2/cost_data.md (sub-agent 2026-11-01; EUR at ECB 16 Sep 2026)"
+          }
+        }
+      }
+    },
+    "AlSi10Mg": {
+      "E": 72000000000.0,
+      "Fty": 220000000.0,
+      "rho": 2670,
+      "properties_source": "EOS AlSi10Mg M290 datasheet 12.2017, stress-relieved 270 C/90 min: Rp0.2 220 (XY) / 225 (Z) MPa, 2670 kg/m3 (sub-agent full PDF 2026-11-01); E = 72 +- 3 GPa XY as-built (AddUp AlSi10Mg datasheet 2023, read 2026-11-01; 77 +- 4 after 210 C/2 h)",
+      "co2_per_kg": {
+        "value": 12.0,
+        "low": 4.5,
+        "high": 22.0,
+        "unit": "kg CO2 / kg",
+        "tag": "D",
+        "group": "primary_al",
+        "source": "Ashby 2013 aluminium family 12 (Useful Numbers PDF p. 1, read 2026-11-01); range 4.5-22 = IAI 'most footprints' (sub-agent fetch 2026-11-01); powder atomisation not added (ORNL: +2.4 % energy for Ti powder)"
+      },
+      "cost_by_route": {
+        "am_TO": {
+          "price_per_kg": {
+            "value": 80,
+            "low": 40,
+            "high": 126,
+            "unit": "EUR/kg",
+            "tag": "A",
+            "source": "AlSi10Mg powder: Depboylu et al. SFF 2024 p. 1 (135-145 USD/kg standard, ~85 NExP-1); research_notes/Hafifletme derin araştırma 2/cost_data.md (sub-agent 2026-11-01; EUR at ECB 16 Sep 2026)"
+          },
+          "route_cost_per_kg": {
+            "value": 500,
+            "low": 220,
+            "high": 1910,
+            "unit": "EUR/kg",
+            "tag": "A",
+            "source": "L-PBF route excluding powder: AMPOWER ~298 EUR/kg Al to Simpson 2021 EOS M290; research_notes/Hafifletme derin araştırma 2/cost_data.md (sub-agent 2026-11-01; EUR at ECB 16 Sep 2026)",
+            "group": "lpbf_al"
+          }
+        }
+      }
+    },
+    "Scalmalloy": {
+      "E": 69000000000.0,
+      "Fty": 490000000.0,
+      "rho": 2670,
+      "properties_source": "3D Systems Scalmalloy datasheet, stress-relieved 325 C/4 h: Rp0.2 490-500 MPa; density 2670 kg/m3 from the APWORKS sheet (sub-agent full PDF 2026-11-01); E = 69 GPa horizontal after 325 C/4 h (Colibrium Additive M2 Series 5 Al-Mg-Sc datasheet 2025-08-21 RevB, ASTM E8, read 2026-11-01; 70 GPa as-built); yield 319 MPa at 150 C and 60 MPa at 300 C (same sheet)",
+      "co2_per_kg": {
+        "value": 128.0,
+        "low": 68.0,
+        "high": 128.0,
+        "unit": "kg CO2 / kg",
+        "tag": "H",
+        "source": "0.35 kg AlSc2% master alloy per kg (Sc 0.7 wt%, Mehta et al. 2022 Metals 12:57 Table 2, read 2026-11-01) x 172 kg CO2e/kg AlSc2% (Hengevoss et al. 2024 Cleaner Waste Systems 7:100129 Table 1, novel bauxite-residue route, read 2026-11-01) + 0.65 kg Al x 12 = 68 (low); the same paper puts the novel route at about half the state-of-the-art Sc2O3 GWP -> Sc share x2 = 128 (value, current supply)"
+      },
+      "cost_by_route": {
+        "am_TO": {
+          "price_per_kg": {
+            "value": 200,
+            "low": 120,
+            "high": 400,
+            "unit": "EUR/kg",
+            "tag": "Y",
+            "source": "Scalmalloy powder: no published price found, placeholder; research_notes/Hafifletme derin araştırma 2/cost_data.md (sub-agent 2026-11-01; EUR at ECB 16 Sep 2026)"
+          },
+          "route_cost_per_kg": {
+            "value": 500,
+            "low": 220,
+            "high": 1910,
+            "unit": "EUR/kg",
+            "tag": "A",
+            "source": "L-PBF route excluding powder: AMPOWER ~298 EUR/kg Al to Simpson 2021 EOS M290; research_notes/Hafifletme derin araştırma 2/cost_data.md (sub-agent 2026-11-01; EUR at ECB 16 Sep 2026)",
+            "group": "lpbf_al"
+          }
+        }
+      }
+    },
+    "2618-T61": {
+      "E": 73800000000.0,
+      "Fty": 324000000.0,
+      "rho": 2768,
+      "co2_per_kg": {
+        "value": 12.0,
+        "low": 4.5,
+        "high": 22.0,
+        "unit": "kg CO2 / kg",
+        "tag": "D",
+        "group": "primary_al",
+        "source": "Ashby 2013 aluminium family 12 (Useful Numbers PDF p. 1, read 2026-11-01); range 4.5-22 = IAI 'most footprints' (sub-agent fetch 2026-11-01); powder atomisation not added (ORNL: +2.4 % energy for Ti powder)"
+      },
+      "properties_source": "MMPDS-01 Table 3.2.13.0(c) p 3-211, hand forging < 2 in, S-basis L [D]; research_notes/Üç sapma alanı/C_isil_enerji.md §1a"
+    },
+    "Inconel 718": {
+      "E": 200000000000.0,
+      "Fty": 1145000000.0,
+      "rho": 8150,
+      "co2_per_kg": {
+        "value": 11.6,
+        "low": 11.6,
+        "high": 25.0,
+        "unit": "kg CO2 / kg",
+        "tag": "Y",
+        "source": "nickel superalloy family 11.6 (Ashby 2013 p. 483 via the compilation, aerokit.materials.eco) as the low end; high end 25 assumed for the Nb/Mo content and powder atomisation"
+      },
+      "properties_source": "EOS IN718 L-PBF, AMS 2774/5662 heat treatment, Rp0.2 1145 (V) MPa, rho >= 8150 [D]; E 200 GPa Special Metals SMC-045 Table 4 [D]; research_notes/Üç sapma alanı/C_isil_enerji.md §1b"
+    }
+  },
+  "routes": {
+    "machined": {
+      "buy_to_fly": {
+        "value": 8,
+        "low": 8,
+        "high": 33,
+        "unit": "-",
+        "tag": "A",
+        "source": "ORNL/TM-2014/93 Tables 6-7: machined brackets 8:1 and 33:1 (sub-agent full text)"
+      },
+      "process_MJ_per_kg": {
+        "value": 8,
+        "low": 8,
+        "high": 108.9,
+        "unit": "MJ / kg bought",
+        "tag": "A",
+        "source": "ORNL/TM-2014/93 appendix: machining 8 (finishing) - 108.9 (heavy) MJ/kg"
+      },
+      "mass_factor": {
+        "value": 1.0,
+        "unit": "-",
+        "tag": "Y",
+        "source": "reference geometry"
+      }
+    },
+    "machined_TO": {
+      "buy_to_fly": {
+        "value": 8,
+        "low": 8,
+        "high": 33,
+        "unit": "-",
+        "tag": "A",
+        "source": "as machined"
+      },
+      "process_MJ_per_kg": {
+        "value": 8,
+        "low": 8,
+        "high": 108.9,
+        "unit": "MJ / kg bought",
+        "tag": "A",
+        "source": "as machined"
+      },
+      "mass_factor": {
+        "value": 0.8,
+        "low": 0.7,
+        "high": 0.9,
+        "unit": "-",
+        "tag": "Y",
+        "source": "assumption: topology optimisation with an extrusion / pull-out constraint keeps a machinable shape and saves less than AM"
+      }
+    },
+    "am_TO": {
+      "buy_to_fly": {
+        "value": 1.5,
+        "low": 1.2,
+        "high": 2.0,
+        "unit": "-",
+        "tag": "A",
+        "source": "ORNL/TM-2014/93: EBM 1.5:1; range = assumption"
+      },
+      "process_MJ_per_kg": {
+        "value": 118.9,
+        "low": 61,
+        "high": 158.4,
+        "unit": "MJ / kg bought",
+        "tag": "A",
+        "source": "ORNL/TM-2014/93 appendix: EBM 118.9, Arcam A1 61, DMLS 158.4 MJ/kg"
+      },
+      "mass_factor": {
+        "value": 0.6,
+        "low": 0.5,
+        "high": 0.7,
+        "unit": "-",
+        "tag": "A",
+        "source": "flown AM parts 30-50 % lighter (A350 bracket, Liebherr, RUAG, Bionic Partition; decision catalogue D-03)"
+      }
+    }
+  },
+  "options": [
+    {
+      "material": "7075-T6",
+      "route": "machined"
+    },
+    {
+      "material": "7075-T6",
+      "route": "machined_TO"
+    },
+    {
+      "material": "2024-T351",
+      "route": "machined_TO"
+    },
+    {
+      "material": "Ti-6Al-4V",
+      "route": "machined_TO"
+    },
+    {
+      "material": "Ti-6Al-4V",
+      "route": "am_TO"
+    },
+    {
+      "material": "AlSi10Mg",
+      "route": "am_TO"
+    },
+    {
+      "material": "Scalmalloy",
+      "route": "am_TO"
+    },
+    {
+      "material": "2618-T61",
+      "route": "machined_TO"
+    },
+    {
+      "material": "Inconel 718",
+      "route": "am_TO"
+    }
+  ],
+  "objectives": [
+    "mass_kg",
+    "co2_total_kg"
+  ]
+}

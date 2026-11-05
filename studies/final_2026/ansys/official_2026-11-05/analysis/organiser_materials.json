@@ -1,0 +1,285 @@
+{
+ "materials": {
+  "S275N": {
+   "name": "Structural steel, S275N, normalized",
+   "page_props": "p.8-13",
+   "rho": [
+    7800,
+    7900
+   ],
+   "E": [
+    200,
+    221
+   ],
+   "Fy": [
+    205,
+    275
+   ],
+   "Fu": [
+    350,
+    510
+   ],
+   "elong": [
+    23,
+    24
+   ],
+   "fatigue_1e7": [
+    194,
+    233
+   ],
+   "K1c": [
+    26.4,
+    38.1
+   ],
+   "Tmax": [
+    471,
+    501
+   ],
+   "price": [
+    1.02,
+    1.56
+   ],
+   "cte": [
+    11,
+    13
+   ],
+   "k": [
+    48,
+    53
+   ],
+   "co2_virgin": [
+    2.89,
+    3.18
+   ],
+   "co2_typical": [
+    2.03,
+    2.23
+   ],
+   "ee_virgin": [
+    27.4,
+    30.2
+   ],
+   "co2_powder": [
+    5.28,
+    6.79
+   ],
+   "ee_powder": [
+    64.7,
+    83.2
+   ],
+   "co2_cast": null,
+   "co2_recycle": [
+    0.78,
+    0.859
+   ],
+   "recycle_fraction": 41,
+   "casting": "Unsuitable",
+   "oxidation_500C": "Acceptable",
+   "scc": "Slightly susceptible",
+   "weldability": "Good",
+   "mass_per_stiffness": [
+    528,
+    556
+   ],
+   "cost_per_stiffness": [
+    552,
+    846
+   ]
+  },
+  "Al2618T6": {
+   "name": "Aluminum, 2618, T6",
+   "page_props": "p.8-13",
+   "rho": [
+    2720,
+    2780
+   ],
+   "E": [
+    72,
+    76
+   ],
+   "Fy": [
+    320,
+    380
+   ],
+   "Fu": [
+    400,
+    440
+   ],
+   "elong": [
+    8,
+    9
+   ],
+   "fatigue_1e7": [
+    118,
+    130
+   ],
+   "K1c": [
+    31,
+    34
+   ],
+   "Tmax": [
+    250,
+    300
+   ],
+   "price": [
+    3.12,
+    3.48
+   ],
+   "cte": [
+    21.5,
+    22.6
+   ],
+   "k": [
+    148,
+    154
+   ],
+   "co2_virgin": [
+    12,
+    13.2
+   ],
+   "co2_typical": [
+    8.77,
+    9.64
+   ],
+   "ee_virgin": [
+    167,
+    184
+   ],
+   "co2_powder": [
+    3.89,
+    5.17
+   ],
+   "ee_powder": [
+    47.9,
+    63.6
+   ],
+   "co2_cast": null,
+   "co2_recycle": [
+    2.76,
+    3.04
+   ],
+   "recycle_fraction": 35,
+   "casting": "Unsuitable",
+   "oxidation_500C": "Unacceptable",
+   "scc": "Highly susceptible",
+   "weldability": "Poor",
+   "mass_per_stiffness": [
+    314,
+    325
+   ],
+   "cost_per_stiffness": [
+    995,
+    1120
+   ]
+  },
+  "Ti811SA": {
+   "name": "Titanium, near-alpha alloy, Ti-8Al-1Mo-1V, single annealed",
+   "page_props": "p.8-13",
+   "rho": [
+    4350,
+    4400
+   ],
+   "E": [
+    121,
+    127
+   ],
+   "Fy": [
+    758,
+    931
+   ],
+   "Fu": [
+    827,
+    1000
+   ],
+   "elong": [
+    6,
+    10
+   ],
+   "fatigue_1e7": [
+    529,
+    579
+   ],
+   "K1c": [
+    65,
+    75
+   ],
+   "Tmax": [
+    407,
+    455
+   ],
+   "price": [
+    23,
+    26.3
+   ],
+   "cte": [
+    8.73,
+    9.18
+   ],
+   "k": [
+    6.1,
+    6.61
+   ],
+   "co2_virgin": [
+    33.6,
+    37.1
+   ],
+   "co2_typical": [
+    21.7,
+    23.9
+   ],
+   "ee_virgin": [
+    553,
+    609
+   ],
+   "co2_powder": [
+    6.24,
+    7.26
+   ],
+   "ee_powder": [
+    76.4,
+    88.9
+   ],
+   "co2_cast": [
+    3.79,
+    4.28
+   ],
+   "co2_recycle": [
+    9.74,
+    10.8
+   ],
+   "recycle_fraction": 50,
+   "casting": "Limited use",
+   "oxidation_500C": "Acceptable",
+   "scc": "Slightly susceptible",
+   "weldability": "Good",
+   "mass_per_stiffness": [
+    388,
+    398
+   ],
+   "cost_per_stiffness": [
+    9020,
+    10300
+   ]
+  }
+ },
+ "source": "Material selection report Ideathon challenge.pdf",
+ "eco_check_152kg": {
+  "material": 460.7932082832819,
+  "manufacture": 910.1132483378098,
+  "transport": 18.316,
+  "use": 51217.92,
+  "disposal": 7.45,
+  "total_first_life": 52614.59245662109,
+  "eol_potential": -336.37398918912425,
+  "total_with_eol": 52278.218467431965
+ },
+ "eco_report": {
+  "material": 461,
+  "manufacture": 910,
+  "transport": 18.5,
+  "use": 51200.0,
+  "disposal": 7.45,
+  "total_first_life": 52600.0,
+  "eol_potential": -336
+ }
+}

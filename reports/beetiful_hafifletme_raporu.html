@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hafifletme Hazırlık Raporu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1f2328;
+  --ink-2: #4d4d4d;
+  --line: #d0d4d9;
+  --paper: #ffffff;
+  --tint: #f6f7f8;
+  --accent: #c98a00;
+  --accent-soft: #fbf1d9;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #e8eaed; --ink-2: #b8bcc2; --line: #3a3f45; --paper: #15181b; --tint: #1d2125;
+    --accent: #f0b429; --accent-soft: #2b2416;
+  }
+}
+:root[data-theme="dark"] {
+  --ink: #e8eaed; --ink-2: #b8bcc2; --line: #3a3f45; --paper: #15181b; --tint: #1d2125;
+  --accent: #f0b429; --accent-soft: #2b2416;
+}
+@page { size: A4; margin: 15mm 15mm 16mm 15mm; }
+* { box-sizing: border-box; }
+html { font-size: 10.5pt; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif; line-height: 1.45;
+}
+main { max-width: 180mm; margin: 0 auto; padding: 0 16px; }
+h1 { font-size: 18pt; line-height: 1.2; margin: 0 0 10pt; padding-top: 4pt; border-top: 3pt solid var(--accent); }
+h2 { font-size: 13pt; margin: 14pt 0 6pt; }
+p { margin: 0 0 7pt; }
+section { margin-bottom: 14pt; }
+.chapter { break-before: page; }
+.small, figcaption, .src, td, th { font-size: 8.5pt; }
+table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; }
+caption { caption-side: top; text-align: left; font-size: 8.5pt; font-weight: 600; padding-bottom: 3pt; }
+th, td { text-align: left; vertical-align: top; padding: 3pt 5pt; border-bottom: 0.5pt solid var(--line); }
+th { border-bottom: 1pt solid var(--ink); font-weight: 600; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+tr { break-inside: avoid; }
+#katalog td:first-child { white-space: nowrap; }
+figure { margin: 8pt 0 12pt; break-inside: avoid; }
+figure img { width: 100%; height: auto; display: block; }
+figcaption { color: var(--ink-2); margin-top: 3pt; }
+ul, ol { margin: 0 0 7pt; padding-left: 16pt; }
+li { margin-bottom: 2pt; }
+code { font-family: Consolas, "Courier New", monospace; font-size: 8.5pt; }
+.note { background: var(--tint); padding: 6pt 8pt; margin: 6pt 0 10pt; }
+/* cover */
+.cover { height: 265mm; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
+.cover svg.comb { position: absolute; right: 0; top: 0; width: 95mm; height: auto; }
+.cover .top { font-size: 10.5pt; color: var(--ink-2); letter-spacing: 0.04em; text-transform: uppercase; }
+.cover .title { margin-top: 70mm; max-width: 140mm; }
+.cover h1.cover-title { font-size: 34pt; border: 0; padding: 0; margin: 0 0 8pt; }
+.cover .sub { font-size: 14pt; color: var(--ink-2); margin: 0; }
+.cover .meta { font-size: 10.5pt; color: var(--ink-2); }
+.cover .team { display: flex; align-items: center; gap: 8pt; border-top: 1pt solid var(--line); padding-top: 8pt; font-size: 14pt; font-weight: 600; }
+.toc ol { padding-left: 14pt; }
+.toc li { margin-bottom: 3pt; }
+@media screen {
+  body { padding: 24px 0; }
+  main > * { margin-left: auto; margin-right: auto; }
+  .cover { height: auto; min-height: 92vh; }
+  .cover .title { margin-top: 40vh; }
+}
+@media (max-width: 640px) {
+  .cover svg.comb { width: 55%; }
+  .cover h1.cover-title { font-size: 18pt; }
+  table { display: block; overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+<main>
+
+<section class="cover" aria-label="Kapak">
+  <svg class="comb" viewBox="0 0 300 260" aria-hidden="true">
+    <g fill="none" stroke="var(--accent)" stroke-width="2">
+      <polygon points="150,10 190,33 190,79 150,102 110,79 110,33"/>
+      <polygon points="230,10 270,33 270,79 230,102 190,79 190,33"/>
+      <polygon points="190,79 230,102 230,148 190,171 150,148 150,102"/>
+      <polygon points="110,79 150,102 150,148 110,171 70,148 70,102"/>
+      <polygon points="270,79 300,96 300,148 270,171 230,148 230,102"/>
+      <polygon points="150,148 190,171 190,217 150,240 110,217 110,171"/>
+    </g>
+    <polygon points="190,79 230,102 230,148 190,171 150,148 150,102" fill="var(--accent-soft)"/>
+  </svg>
+  <div class="top">EUROAVIA Ideathon 2026 · Ansys görevi</div>
+  <div class="title">
+    <h1 class="cover-title">Hafifletme kararları</h1>
+    <p class="sub">Topoloji optimizasyonu, malzeme seçimi ve yaşam döngüsü için yarışma öncesi hazırlık raporu</p>
+  </div>
+  <div>
+    <p class="meta">1 Kasım 2026 · Brugge, 3–8 Kasım 2026 öncesi</p>
+    <div class="team">
+      <svg width="22" height="24" viewBox="0 0 22 24" aria-hidden="true"><polygon points="11,1 21,6.5 21,17.5 11,23 1,17.5 1,6.5" fill="var(--accent)"/></svg>
+      Takım Beetiful
+    </div>
+  </div>
+</section>
+
+<section class="toc chapter" aria-label="İçindekiler">
+  <h1>İçindekiler</h1>
+  <ol>
+    <li>Hangi yöndeyiz</li>
+    <li>Görevin olası biçimi</li>
+    <li>Yarışma gününe hazır gelenler</li>
+    <li>Karar kataloğu</li>
+    <li>İnsan okuru için trade-off çalışması</li>
+    <li>Yapay zekâ ajanı için trade-off çalışması</li>
+    <li>Veri tabloları, çelişkiler ve boşluklar</li>
+  </ol>
+  <h2>Kaynak etiketleri</h2>
+  <p>Her sayının yanındaki etiket, sayının nasıl elde edildiğini gösterir. D etiketli değer bu raporu hazırlayan oturumda kaynağından okundu. A etiketli değeri bir alt ajan tam metinden okudu, rapor yazarı ikinci kez okumadı. S etiketli değer yalnızca arama özetinde görüldü ve slayta tek başına konmaz. H etiketli değer bu çalışmada hesaplandı ve girdilerin en zayıf etiketini taşır. Y etiketi varsayım ya da mühendislik yargısı demektir.</p>
+  <p class="small">Dosya yolları proje köküne (<code>D:\Masaustu\Ideathon 2026</code>) göredir. Hesaplar <code>aerokit</code> paketiyle yapıldı; tam test paketinin sonucu Bölüm 6'dadır. Kodla üretilen her sayı aşağıda adı verilen dosyalardan yeniden üretilebilir.</p>
+</section>
+
+<section class="chapter" id="ozet">
+  <h1>1. Hangi yöndeyiz</h1>
+  <p>Synopsys'in 27 Ekim 2026 tarihli tanıtım sunumu, 2026 Ansys görevi için dört beceri sayıyor (s. 12) [D]. Bunlar yapısal sonlu elemanlar analizi, optimizasyon ve ödünleşim, malzeme seçimi ve yaşam döngüsü düşüncesidir. Önerilen kurslar Ansys Discovery'de topoloji optimizasyonu, Ansys Mechanical, Granta EduPack performans indeksleri ve Eco Audit aracıdır (s. 12–13) [D]. 2023 kartındaki uçak boyutlandırma ve STK görev planlaması bu listede yok.</p>
+  <p>Görevin bir hava aracı yapı parçasını hafifletmek, malzemesini seçmek ve kararı yaşam döngüsü CO₂'siyle savunmak olacağını düşünüyoruz [Y]. Bu varsayımla yedi seçenek beş senaryoda karşılaştırıldı [H]. Dört seçenek talaşlı alüminyum ya da titanyum parçadır ve bunların üçü topoloji optimizasyonundan geçer. Üç seçenek topoloji optimizasyonu ve eklemeli imalatla üretilir. Raporda topoloji optimizasyonu TO, eklemeli imalat Eİ diye kısaltıldı. Tablo 1 kazananları verir; yön şu altı maddede toplanıyor:</p>
+  <ul>
+    <li>Uçan parçada malzemeyi kütle seçiyor. Üretim evresi hiçbir seçenekte ömür boyu CO₂'nin %2,0'ını geçmedi [H].</li>
+    <li>Dayanım yönetiyorsa Scalmalloy TO + Eİ, rijitlik yönetiyorsa AlSi10Mg TO + Eİ öneriliyor [H].</li>
+    <li>Yakıt yakmayan bir parçada kazananı üretim ayak izi ile kütlenin parasal değeri arasındaki denge belirliyor; uydu senaryosu bu dengeyi gösteriyor [H].</li>
+    <li>Titanyum yalnızca Eİ rotasıyla yarışta kalıyor. Scalmalloy'un akma dayanımı oda sıcaklığında 475 MPa, 150 °C'de 319 MPa, 300 °C'de 60 MPa [D]. Sıcak bir parçada aday bu yüzden titanyumdur.</li>
+    <li>Kütle ve CO₂ ekseninde seçimi tersine çevirebilecek tek girdi Eİ rotasının kütle katsayısı; yarışma günü ilk ölçülecek sayı odur [H]. Maliyet girince seçim sağlamlığını yitiriyor ve Eİ imalat maliyeti belirleyici oluyor (Bölüm 5).</li>
+    <li>Uydurma bir kartla yapılan provada tasarımı sapma yönetti ve üç alüminyum seçeneği ayrışmadı. Düzlemsel bir brakette talaşlı 7075 eklemeli imalatla yarışıyor [H].</li>
+  </ul>
+  <table>
+    <caption>Tablo 1 · Beş senaryoda kazanan seçenek ve sağlamlığı (konvansiyonel 7075-T6 talaşlı parçanın kilogramı başına)</caption>
+    <thead><tr><th>Senaryo</th><th>Ölçüt</th><th>Kazanan</th><th class="n">Kütle (kg)</th><th class="n">Ömür boyu CO₂ (kg)</th><th class="n">P(en iyi)</th><th>İkinci</th></tr></thead>
+    <tbody>
+      <tr><td>A320 braketi, dayanım</td><td>CO₂</td><td>Scalmalloy TO + Eİ</td><td class="n">0,58</td><td class="n">10 677</td><td class="n">0,84</td><td>Ti-6Al-4V TO + Eİ</td></tr>
+      <tr><td>ATR 72 braketi, dayanım</td><td>CO₂</td><td>Scalmalloy TO + Eİ</td><td class="n">0,58</td><td class="n">2 684</td><td class="n">0,81</td><td>Ti-6Al-4V TO + Eİ</td></tr>
+      <tr><td>A320 braketi, rijitlik</td><td>CO₂</td><td>AlSi10Mg TO + Eİ</td><td class="n">0,57</td><td class="n">10 371</td><td class="n">0,61</td><td>Scalmalloy TO + Eİ</td></tr>
+      <tr><td>Uydu braketi, dayanım</td><td>yalnız üretim CO₂</td><td>AlSi10Mg TO + Eİ</td><td class="n">0,99</td><td class="n">28</td><td class="n">0,70</td><td>Ti-6Al-4V TO + Eİ</td></tr>
+      <tr><td>Uydu braketi, dayanım</td><td>ceza fonksiyonu Z</td><td>Scalmalloy TO + Eİ</td><td class="n">0,58</td><td class="n">117</td><td class="n">0,86</td><td>Ti-6Al-4V TO + Eİ</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Değerler <code>studies/tradeoff/out/*.results.json</code> dosyalarından alındı [H]. P(en iyi), girdiler belirtilen aralıklarda düzgün dağılımla örneklendiğinde seçeneğin en iyi puanı aldığı örneklerin payıdır; doğruluk olasılığı değildir. Aynı birincil alüminyum rotasını paylaşan alaşımların CO₂ değerleri birlikte örneklendi. Z'nin tanımı Bölüm 5'tedir.</p>
+</section>
+
+<section class="chapter" id="gorev">
+  <h1>2. Görevin olası biçimi</h1>
+  <p>Sunumda görev metni yok; yalnızca beceriler, kurslar ve "See you on November 5th!" notu var (s. 15) [D]. Regulations v1.1'e göre kart 4 Kasım sabahı açıklanacak, yarışma blokları 5–6 Kasım'da. Bu belge 25 Ekim'de okundu, bugün yeniden okunmadı. </p>
+  <p>Kamuya açık tek Ansys Ideathon kartı 2023'e ait [A]. Kart kavramsal uçak tasarımı ile STK görev planlaması istiyor ve yapısal ayrıntıya girilmemesini söylüyor [D]. 2024'ün Ansys görev metni yayımlanmamış [A].</p>
+  <p>Benzer akademik görevlerden en yakını Ansys'in bisiklet krankı örneği [A]. Örnekte EduPack ile malzeme seçimi, Discovery ile topoloji optimizasyonu, sadeleştirilmiş yaşam döngüsü analizi ve ödünleşim göstergeleri tek akışta bağlanmış. GE'nin 2013 motor braketi yarışması malzemeyi Ti-6Al-4V, en küçük duvarı 1,27 mm olarak vermişti [A]. Parça özgün zarfın içinde kalmalı ve dört yük durumunu taşımalıydı.</p>
+  <table>
+    <caption>Tablo 2 · Olası görev biçimleri, olasılık sırasıyla (sıralama çıkarımdır [Y])</caption>
+    <thead><tr><th>Sıra</th><th>Görev biçimi</th><th>Kullanım evresi</th><th>Hazır senaryo dosyası</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td>Gövde ya da motor braketi / bağlantı parçası, 1–3 statik yük durumu</td><td>yakıt (marjinal)</td><td><code>bracket_a320_*.json</code>, <code>bracket_atr72_strength.json</code></td></tr>
+      <tr><td class="n">2</td><td>İHA ya da eVTOL kolu / bomu</td><td>batarya elektriği</td><td>yok; A320 dosyası şebeke ve enerji girdisiyle uyarlanır</td></tr>
+      <tr><td class="n">3</td><td>Uydu braketi (g yükü + frekans sınırı)</td><td>yok; fırlatma maliyeti</td><td><code>bracket_satellite_strength.json</code>, <code>bracket_satellite_penalty.json</code></td></tr>
+      <tr><td class="n">4</td><td>Kabin koltuğu ya da tepsi parçası, yüksek adet</td><td>yakıt</td><td>A320 dosyası</td></tr>
+      <tr><td class="n">5</td><td>Kanat kaburgası, iniş takımı bağlantısı, kapı menteşesi</td><td>yakıt</td><td>A320 dosyası, indeks değişir</td></tr>
+    </tbody>
+  </table>
+  <h2>Kurulum durumu</h2>
+  <p>1 Kasım'da bu dizüstü bilgisayarda C: sürücüsünde 3,42 GB boş yer ölçüldü; Ansys Student 50 GB istiyor [D]. Ansys Student kurulu değil. Ekran kartı Turing mimarili GTX 1660 Ti. Sunumdaki Discovery listesinde Kepler, Maxwell ve Pascal var, Turing yok (s. 9) [D]. Granta EduPack öğrenci paketinde yer almıyor [D].</p>
+  <p>Discovery açılmazsa topoloji optimizasyonu Mechanical'da yapılır; EduPack yoksa malzeme verisi Bölüm 7'deki kaynaklı tablolardan gelir.</p>
+</section>
+
+<section class="chapter" id="hazir">
+  <h1>3. Yarışma gününe hazır gelenler</h1>
+  <p>Beş saatlik bir slotun ilk yarısı, görev kartı okunmadan yapılabilecek kararlardan oluşuyor. Bu kararların varsayılan değeri, kaynağı ve kodu hazır; kart açıldığında yalnızca kartın verdiği sayılar ve topoloji sonucu girilecek.</p>
+  <table>
+    <caption>Tablo 3 · Önceden verilmiş kararlar ve gün içinde doldurulacak boşluklar</caption>
+    <thead><tr><th>Adım</th><th>Hazır olan</th><th>Kart gelince doldurulacak</th></tr></thead>
+    <tbody>
+      <tr><td>Yük katsayısı</td><td>Bağlantı parçasında nihai yük = 1,5 × 1,15 = 1,725 × sınır yük (14 CFR 25.303, 25.625) [A]</td><td>Sınır yükler; kart nihai yük veriyorsa 1,5 eklenmez</td></tr>
+      <tr><td>Performans indeksi</td><td>Hem rijitlik (<code>beam_stiff</code>) hem dayanım (<code>beam_strong</code>) indeksi koşulur [H]</td><td>Hangi kısıtın yönettiği, doğrulama analizinden</td></tr>
+      <tr><td>Aday malzemeler</td><td>7 seçenek, özellikleri ve CO₂ değerleri kaynaklı (Bölüm 7)</td><td>EduPack alaşım kayıtları ve fiyatları</td></tr>
+      <tr><td>Sıcaklık</td><td>Scalmalloy 100 °C'nin altında kalır; üstünde titanyum [D]</td><td>Parçanın çalışma sıcaklığı</td></tr>
+      <tr><td>Topoloji ayarı</td><td>Hacim taraması %50 / 35 / 25 / 15, aralık olarak; ya çıkıntı 45° ya en küçük eleman boyutu ≥ 2,5 × eleman boyu, ikisi birden değil [A]</td><td>Tasarım zarfı, korunacak bölgeler, en küçük duvar</td></tr>
+      <tr><td>Doğrulama</td><td>Düzgünleştirme, arayüzleri yeniden bağlama, her yük durumunda doğrulama çözümü; sınırın %5 yakınındaysa ağ inceltme [A]</td><td>Doğrulanmış kütle → rota kütle katsayısı</td></tr>
+      <tr><td>Yaşam döngüsü</td><td>Uçuş başına marjinal yakıt, uçuş sayısı, şebeke ve yakıt CO₂ katsayıları, aralıklarıyla</td><td>Uçak sınıfı ve sefer uzunluğu</td></tr>
+      <tr><td>Ödünleşim</td><td><code>scripts/tradeoff_study.py</code>: nominal sıra, Pareto, Monte Carlo, tornado</td><td>Yukarıdaki girdilerle yeniden koşmak (≈ 10 s)</td></tr>
+      <tr><td>Jüri çıktıları</td><td>Hacim taraması eğrisi (Şekil 5 kalıbı), yük durumu başına önce/sonra tablosu, evre çubukları + duyarlılık [Y]</td><td>Görseller</td></tr>
+    </tbody>
+  </table>
+  <h2>Hacim taramasının kalıbı</h2>
+  <p>Hacim taraması L-braket kıyas probleminde önceden koşuldu (aerokit SIMP, 60 × 60 eleman, yoğunluk filtresi) [H]. Korunan hacim %50'den %25'e inince uyum 1,99 katına, %15'e inince 4,61 katına çıktı. Eğrinin dirseği %25 ile %35 arasında kaldığından yarışma günü tarama bu aralığın çevresine kurulur [Y].</p>
+  <figure>
+    <img src="figures/F5_hacim_taramasi.png" alt="Solda korunan hacim azaldıkça uyumun arttığı eğri, sağda dört hacim oranında L-braketin yoğunluk dağılımı.">
+    <figcaption><strong>Şekil 5</strong> · L-braket kıyas probleminde korunan hacim %25'in altına inince uyum hızla artıyor. Soldaki eğri %50 tasarıma göre uyumu verir (birim yük, birim modül). Sağdaki dört panel yoğunluk dağılımını gösterir; siyah dolu, beyaz boş malzemedir.</figcaption>
+  </figure>
+  <table>
+    <caption>Tablo 4 · Hacim taraması tablosu; son üç sütun Bölüm 3'teki provanın Scalmalloy değerleridir, yarışma günü aynı sütunlar doldurulur</caption>
+    <thead><tr><th class="n">Korunan hacim (%)</th><th class="n">Göreli uyum</th><th class="n">İterasyon</th><th class="n">Gri ölçüsü (%)</th><th class="n">Parça kütlesi (g)</th><th class="n">σ nihai / Rp0,2</th><th>Sapma sınırı 0,5 mm</th></tr></thead>
+    <tbody>
+      <tr><td class="n">50</td><td class="n">1,00</td><td class="n">103</td><td class="n">11,0</td><td class="n">197</td><td class="n">0,36</td><td>geçti (0,38 mm)</td></tr>
+      <tr><td class="n">35</td><td class="n">1,34</td><td class="n">275</td><td class="n">17,3</td><td class="n">139</td><td class="n">0,39</td><td>geçti (0,47 mm)</td></tr>
+      <tr><td class="n">25</td><td class="n">1,99</td><td class="n">109</td><td class="n">20,2</td><td class="n">101</td><td class="n">0,46</td><td>kaldı (0,60 mm)</td></tr>
+      <tr><td class="n">15</td><td class="n">4,61</td><td class="n">334</td><td class="n">21,9</td><td class="n">63</td><td class="n">0,63</td><td>kaldı (0,92 mm)</td></tr>
+    </tbody>
+  </table>
+  <h2>Kartın ilk 20 dakikasında</h2>
+  <ol>
+    <li>Gereksinimleri birimleriyle tabloya yazın: yükler, arayüzler, yer değiştirme ya da rijitlik sınırı, emniyet katsayısı, imalat yolu, çalışma sıcaklığı.</li>
+    <li>Parçanın uçağını ya da aracını belirleyin ve ona en yakın senaryo dosyasını kopyalayın.</li>
+    <li>Kartın verdiği malzeme ya da süreç kısıtıyla seçenek listesini daraltın. 7075 ve 2024 Eİ rotasında sunulmaz. Liang vd. 2025'e göre Al7075 toz yataklı lazer füzyonda katılaşma çatlağı veriyor ve çatlaksız baskı için çekirdeklendirici gerekiyor [D]. Aynı makale 2024'ün de Ti nano parçacıkla değiştirilerek basıldığını aktarıyor.</li>
+    <li>Kartı <code>studies/cards/template_cantilever.json</code> ya da <code>rehearsal_l_bracket.json</code> kalıbına girin ve <code>python scripts/card_day.py</code> komutunu çalıştırın. Komut tasarımları, doğrulamayı, sıralamayı ve İngilizce sunum figürlerini bir iki dakikada üretiyor [H].</li>
+    <li><code>python scripts/tradeoff_study.py</code> ile genel sıralamayı alın ve tornado listesinin ilk üç girdisini ölçüm sırası olarak kullanın.</li>
+  </ol>
+</section>
+
+<section id="prova" aria-label="Uydurma kartla prova">
+  <h2>Uydurma bir kartla ilk yarının provası</h2>
+  <p>Hazırlığın yarım yolu gerçekten karşılayıp karşılamadığını görmek için uydurma bir görev kartı uçtan uca çözüldü [H]. Kart resmî değildir. A320 kabin braketi için 120 × 120 mm'lik L biçimli bir tasarım alanı, 48 mm kol genişliği ve 10 mm kalınlık verildi. Üst kenar cıvatalı ve kol ucunda 2,0 kN düşey sınır yük var. Sınır yükte uç sapması en çok 0,5 mm, çalışma sıcaklığı 20–60 °C.</p>
+  <p>Nihai yük 1,5 × 1,15 × 2,0 = 3,45 kN oldu. Topoloji tasarımları Şekil 5'teki taramadan alındı ve %30 hacimde bir koşu eklendi. Her tasarım 0,5 eşiğiyle siyah-beyaza çevrildi ve 2 mm'lik düzlem gerilme elemanlarıyla çözüldü [H]. Eleman merkezi von Mises hesabı, düzgün çekme altındaki bir levhada σ = P/(h·t) sonucunu 1,0000 oranla verdi [H]. Yük noktası ve cıvatalı kenar çevresindeki üç sıra eleman tekil gerilme nedeniyle değerlendirme dışında tutuldu.</p>
+  <table>
+    <caption>Tablo 5 · Provada kartı geçen en hafif tasarım ve ömür boyu CO₂; sapma dört kat inceltilmiş ağın düzeltmesiyle (A320 kullanım katsayıları)</caption>
+    <thead><tr><th>Seçenek</th><th class="n">Korunan hacim (%)</th><th class="n">Kütle (g)</th><th class="n">σ nihai / Rp0,2</th><th class="n">Sapma (mm)</th><th class="n">Ömür boyu CO₂ (kg)</th></tr></thead>
+    <tbody>
+      <tr><td>AlSi10Mg TO + Eİ</td><td class="n">35</td><td class="n">139</td><td class="n">0,86</td><td class="n">0,462</td><td class="n">2527</td></tr>
+      <tr><td>Scalmalloy TO + Eİ</td><td class="n">35</td><td class="n">139</td><td class="n">0,39</td><td class="n">0,482</td><td class="n">2551</td></tr>
+      <tr><td>7075 TO + talaşlı</td><td class="n">35</td><td class="n">146</td><td class="n">0,38</td><td class="n">0,464</td><td class="n">2661</td></tr>
+      <tr><td>Ti-6Al-4V TO + Eİ</td><td class="n">25</td><td class="n">167</td><td class="n">0,27</td><td class="n">0,393</td><td class="n">3058</td></tr>
+    </tbody>
+  </table>
+  <figure>
+    <img src="figures/F6_prova_kutle_sapma.png" alt="Dört seçenek için kütle-sapma eğrileri: üç alüminyum eğrisi neredeyse üst üste, titanyum eğrisi daha ağır ama daha rijit; 0,5 mm'de dikey sınır çizgisi.">
+    <figcaption><strong>Şekil 6</strong> · Provada sapma sınırına üç alüminyum seçeneği aynı kütleyle ulaşıyor; titanyum aynı sapmada daha ağır. Her işaret bir korunan hacim düzeyidir (%50, 35, 30, 25); sapma sınır yükte ve 2 mm'lik ağla, kütle 10 mm kalınlıkla hesaplandı.</figcaption>
+  </figure>
+  <p>Bu kartta tasarımı sapma yönetiyor. Dayanım marjı Scalmalloy, 7075 ve titanyumda geniş, AlSi10Mg'de dar; AlSi10Mg'de σ nihai / Rp0,2 oranı 0,86 [H]. Üç alüminyum seçeneği sapma sınırını aynı korunan hacimde, %35'te karşılıyor. AlSi10Mg'nin E belirsizliği ±3 GPa, yani yaklaşık %4 [D]; aralarındaki sapma farkı da bu büyüklükte. Bu kartta alüminyum alaşımları sapmaya göre ayrışmıyor, seçimi dayanım marjı, imalat ve fiyat belirliyor [H].</p>
+  <p>Düzlemsel bir braketin topoloji sonucu 2,5 boyutludur, bu yüzden talaşlı imalata da uygundur. 7075 parçanın stok plakaya göre buy-to-fly oranı 2,8 çıktı; çalışmalarda varsayılan 8'in çok altında [H]. Eİ'nin kütle avantajı bu geometride kayboluyor. Eİ'nin fark yaratması için parçanın üç boyutlu, plakadan çıkarılamayan bir biçim istemesi gerekir [Y].</p>
+  <p>Aynı %35 tasarımı iki ve dört kat inceltilmiş ağlarda yeniden çözüldü [H]. Uç sapması %2,2 ve %3,7 arttı; 2 mm'lik ağ sapmayı en az %3,7 düşük tahmin ediyor. Tablo 5'teki sapmalar bu yüzden 1,037 ile çarpıldı. Düzeltmeden önce %30 hacimde sınırı 0,499 mm ile geçen AlSi10Mg, düzeltmeden sonra 0,517 mm ile kalıyor.</p>
+  <p>En büyük von Mises gerilmesi inceltmeyle 1,39 ve 1,92 katına çıktı; yüzde 99'luk değer ise yalnızca %1,8 değişti [H]. Bu, L'nin iç köşesindeki tekil noktanın imzası. Gerçek parçada köşeye kavis verilir; gerilme köşeden uzakta ya da yakınsayan bir ölçüyle okunur. Tablo 5'teki dayanım oranları kaba ağın köşe dışı en büyük değerinden hesaplandı.</p>
+  <p>Prova iki boyutlu bir düzlem gerilme modeliyle yapıldı ve Discovery'nin üç boyutlu analizinin yerini tutmaz. Komut <code>python scripts/rehearsal_bracket.py</code>, sonuçlar <code>studies/rehearsal/rehearsal.json</code> dosyasındadır.</p>
+</section>
+
+<section class="chapter" id="katalog">
+  <h1>4. Karar kataloğu</h1>
+  <p>Katalogdaki 25 kararın ayrıntılı kanıtları <code>reports/Havacılık hafifletme karar kataloğu.md</code> dosyasındadır. Makine okunur sürüm <code>studies/tradeoff/decision_rules.json</code> dosyasında, provadan çıkan D-26 kuralıyla birlikte duruyor. Tablo 6, slot sırasına göre varsayılanları ve sapma koşullarını veriyor.</p>
+  <table>
+    <caption>Tablo 6 · Kararlar, varsayılanlar ve sapma koşulları</caption>
+    <thead><tr><th>No</th><th>Karar</th><th>Varsayılan ve kanıt</th><th>Ne zaman sapılır</th></tr></thead>
+    <tbody>
+      <tr><td>D-25</td><td>Araç zinciri</td><td>Mechanical + aerokit [D]</td><td>EduPack ve Discovery çalışıyorsa onlar</td></tr>
+      <tr><td>D-04</td><td>Yük katsayısı</td><td>1,725 × sınır; tek yük yolunda A-basis [A]</td><td>Eİ için 1,25'i döküm katsayısı benzetmesiyle göster, üst üste ekleme (25.619)</td></tr>
+      <tr><td>D-12</td><td>Yük durumları</td><td>≥ 3 bağımsız durum, nihai yükte [A]</td><td>Kart tek yük veriyorsa ek durumları varsayım olarak yaz</td></tr>
+      <tr><td>D-07</td><td>İndeks</td><td>Rijitlik ve dayanım indeksi birlikte [D] [H]</td><td>İnce gövde ya da uzun dikme: panel ya da burkulma indeksi</td></tr>
+      <tr><td>D-01</td><td>Malzeme ailesi</td><td>Dayanım sınırlı: Scalmalloy Eİ; rijitlik sınırlı: AlSi10Mg Eİ; 100 °C üstü: Ti-6Al-4V Eİ [H] [A]</td><td>CFRP'ye temas: titanyum ya da cam kat yalıtımı; kabin: magnezyum yok</td></tr>
+      <tr><td>D-02</td><td>Rota</td><td>Talaşlı buy-to-fly ≈ 1,8'i aşıyorsa Eİ [A] [H]</td><td>Prizmatik parça; düşük buy-to-fly'lı dövme</td></tr>
+      <tr><td>D-03</td><td>Hacim hedefi</td><td>%50 / 35 / 25 taraması [A]</td><td>Aşırı tasarlanmış referans: %15–20'ye in</td></tr>
+      <tr><td>D-11</td><td>İmalat kısıtı</td><td>Çıktı 45° ya da eleman boyu ≥ 2,5 h [A]</td><td>Tetrahedral ağ + pull-out: ≥ 4 h</td></tr>
+      <tr><td>D-26</td><td>Yönetici kısıt</td><td>Aynı topolojide her aday için dayanım marjı ve sapma birlikte okunur [H] [D]</td><td>Alüminyumlar E belirsizliği içinde kalırsa seçim dayanım marjı, imalat ve fiyatla yapılır</td></tr>
+      <tr><td>D-13</td><td>Doğrulama</td><td>Her durumda doğrulama çözümü [A]</td><td>Sınıra %5'ten yakınsa ağ inceltme</td></tr>
+      <tr><td>D-14</td><td>Yorulma</td><td>Eİ Ti-6Al-4V: HIP + yorulma yüzeylerini işleme [A]</td><td>—</td></tr>
+      <tr><td>D-17</td><td>Malzeme CO₂</td><td>EduPack kaydı + düşük ve yüksek şebeke durumu [D] [A]</td><td>EduPack yoksa Tablo 9 ve 11</td></tr>
+      <tr><td>D-05</td><td>Kullanım evresi</td><td>Marjinal sefer başı yakıt [A] [H]</td><td>Uçak dışı araç: kendi görev yakıt oranıyla f/(1−f)</td></tr>
+      <tr><td>D-06</td><td>Ömür sonu</td><td>EduPack geri dönüşmüş içerik yöntemi; ömür sonu potansiyeli ayrı çubuk [A]</td><td>Jüri geri dönüşüm kredisi isterse ayrı durum</td></tr>
+      <tr><td>D-09</td><td>Ödünleşim</td><td>Pareto (ağırlıksız); maliyet girerse Z = C + α·m [D] [A]</td><td>Tek sayı istenirse α aralığıyla ve başa baş α* ile</td></tr>
+      <tr><td>D-23</td><td>Başlık iddiası</td><td>% ve kg kazanç + tutulan kısıt + CO₂ + P(en iyi) + tersine çeviren girdi [Y]</td><td>—</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="chapter" id="insan">
+  <h1>5. İnsan okuru için trade-off çalışması</h1>
+  <p>Her seçeneğin kütlesi, referans parçanın (7075-T6, talaşlı, 1 kg) yönetici indeks oranıyla ve rotanın kütle katsayısıyla hesaplandı. Üretim CO₂'si, satın alınan malzemenin gömülü CO₂'si ile süreç elektriğinin şebeke CO₂'sinin toplamıdır. Kullanım CO₂'si kütle × uçuş başına marjinal yakıt × uçuş sayısı × 3,16 kg CO₂/kg yakıt çarpımıdır [H]. Girdi aralıkları Bölüm 7'deki tablolardadır.</p>
+  <figure>
+    <img src="figures/F1_evre_paylari.png" alt="Yedi seçenek için yatay yığın çubuklar: üretim payı her seçenekte en çok yüzde iki, toplam 10,7 ile 19,4 ton arasında.">
+    <figcaption><strong>Şekil 1</strong> · A320 braketinde ömür boyu CO₂'nin en az %98'i kullanım evresinden geliyor. Dayanım sınırlı senaryo, nominal girdiler; değerler konvansiyonel parçanın kilogramı başına. Üretim payı en yüksek seçenek talaşlı Ti-6Al-4V (%2,0), skandiyumlu Scalmalloy'da %1,1.</figcaption>
+  </figure>
+  <p>Şekil 1'de seçenekleri ayıran şey parçanın kütlesi. Üretim evresinin payı hiçbir seçenekte %2,0'ı geçmediği için rota seçiminin üretim etkisi toplamı en çok bu kadar oynatıyor. Eko denetimin başlık sayısı bu yüzden doğrulanmış kütledir.</p>
+  <figure>
+    <img src="figures/F2_kutle_co2.png" alt="İki panel: dayanım sınırlı panelde Scalmalloy Eİ en düşük kütle ve CO₂ ile ayrı duruyor; rijitlik sınırlı panelde AlSi10Mg ve Scalmalloy birbirine çok yakın.">
+    <figcaption><strong>Şekil 2</strong> · Pareto cephesinde dayanım sınırlı brakette yalnızca Scalmalloy Eİ, rijitlik sınırlı brakette yalnızca AlSi10Mg Eİ kalıyor. İşaretler Monte Carlo ortancasını, çizgiler %5–95 aralığını gösterir; Monte Carlo 3000 örnekle koşuldu. Sol panel <code>beam_strong</code>, sağ panel <code>beam_stiff</code> indeksini kullanıyor.</figcaption>
+  </figure>
+  <p>Rijitlik sınırlı panelde AlSi10Mg parça 0,569 kg, Scalmalloy parça 0,581 kg; fark %2,1 [H]. Farkın kaynağı E modülleri ve skandiyumun ayak izi; hesaba AlSi10Mg için 72 GPa, Scalmalloy için 69 GPa girildi [D]. AlSi10Mg örneklerin %61'inde önde [H].</p>
+  <figure>
+    <img src="figures/F3_tornado.png" alt="Tornado grafiği: en uzun çubuklar uçuş başına marjinal yakıt, ömür boyu uçuş sayısı ve Eİ kütle katsayısı; hiçbir çubuk sıfırı geçmiyor.">
+    <figcaption><strong>Şekil 3</strong> · Hiçbir girdi tek başına dayanım sınırlı A320 senaryosundaki seçimi tersine çevirmiyor. Her çubuk, bir girdi aralığın alt ya da üst ucundayken Scalmalloy Eİ ile Ti-6Al-4V Eİ arasındaki CO₂ farkını verir. Dikey koyu çizgi nominal farkı, kesikli çizgi sıfırı gösterir.</figcaption>
+  </figure>
+  <p>Şekil 3'teki farkı en çok yakıt katsayısı, uçuş sayısı ve Eİ kütle katsayısı oynatıyor. Scalmalloy'un 68–128 kg/kg'lık gömülü CO₂ aralığı farkı yalnızca 1,74 ile 1,79 t arasında tutuyor [H].</p>
+  <figure>
+    <img src="figures/F4_btf_kirilma.png" alt="İki doğru: talaşlı titanyumun üretim CO₂'si buy-to-fly ile hızla artıyor; talaşlı 7075 doğrusu, Eİ titanyumun 80 kg/kg yatay çizgisini buy-to-fly 6,4'te kesiyor.">
+    <figcaption><strong>Şekil 4</strong> · Buy-to-fly oranı 6,4'ü aşınca talaşlı 7075, Eİ Ti-6Al-4V'den daha çok üretim CO₂'si taşıyor. Karşılaştırma bitmiş parçanın kilogramı başınadır; Eİ titanyumda değer 80 kg/kg. Hesapta gömülü CO₂ alüminyum için 12, titanyum için 46,5 kg/kg alındı [D]. Süreç enerjisi talaşlı rotada 8, Eİ'de 118,9 MJ/kg [A]; şebeke yoğunluğu 211 g/kWh (AB-27, 2024) [D].</figcaption>
+  </figure>
+  <p>ORNL'nin talaşlı braketlerinde buy-to-fly oranı 8 ve 33 [A]. Şekil 4'e göre bu oranlarda talaşlı titanyumun bitmiş kilogram başına üretim CO₂'si Eİ titanyumunkinin yaklaşık 5 ila 19 katıdır [H]. Titanyum seçilecekse rota Eİ'dir; talaşlı titanyum beş senaryoda 4. ile 7. sıra arasında kaldı [H].</p>
+  <h2>Kullanım evresi olmayan parça: uydu</h2>
+  <p>Uydu senaryosunda yakıt hesaba girmiyor. Yalnızca üretim CO₂'si sayıldığında AlSi10Mg Eİ örneklerin %70'inde birinci oldu, Scalmalloy altıncı sıraya düştü [H]. Bir kilogram Scalmalloy 0,35 kg AlSc2 ana alaşımı içeriyor; bu ana alaşımın kilogramı 172 kg CO₂e taşıyor (Tablo 11) [D].</p>
+  <p>Uyduda kütlenin değeri fırlatma maliyetiyle ölçülür. Ceza fonksiyonu Z = α·kütle + c·CO₂ olarak kuruldu [D]. Kütlenin değeri için Ashby'nin uzay aracına verdiği değişim sabitinin alt ucu, kilogram başına 3000 alındı [D]. Karbonun fiyatı 2025 AB ETS ortalamasıdır, ton başına 74,31 € [D]. Bu ölçütle Scalmalloy örneklerin %86'sında birinci oldu [H].</p>
+  <p>Sıranın tersine dönmesi için karbon fiyatının ≈ 13 800 €/t, yani 2025 ortalamasının yaklaşık 186 katı olması gerekir [H]. Hesap sterlinle avroyu aynı mertebede sayıyor, çünkü Ashby'nin tablosunda para birimi simgesi okunamadı [Y].</p>
+  <h2>Sonucu değiştirebilecek varsayımlar</h2>
+  <ul>
+    <li><strong>Eİ kütle katsayısı 0,6.</strong> Uçan Eİ parçalarındaki %30–50 kazançtan alındı [A]. Talaşlı TO katsayısı 0,8 iken Eİ katsayısı ≈ 0,82'yi aşarsa talaşlı rota kazanıyor; dayanımda 7075, rijitlikte 2024 [H].</li>
+    <li><strong>Skandiyumun ayak izi.</strong> Alt sınır Hengevoss vd.'nin kırmızı çamurdan yeni üretim rotasıdır ve Scalmalloy'a 68 kg CO₂/kg verir [H]. Üst sınır 128'dir, çünkü aynı makale mevcut üretimin GWP'sini yeni rotanın yaklaşık iki katı veriyor. Uçan parçalarda bu aralığın tamamında Scalmalloy önde kaldı.</li>
+    <li><strong>Toz üretimi.</strong> Atomizasyon eklenmedi; ORNL'ye göre titanyum tozunda enerjiyi %2,4 artırıyor [A].</li>
+  </ul>
+  <h2>Maliyet girince karar sağlamlığını yitiriyor</h2>
+  <p>Malzeme fiyatı ve imalat maliyeti her malzeme ve rota çifti için ayrı aralıkla girildi. Aralıklar Tablo 16'dadır [A] [S] [Y]. Ölçüt Z = maliyet + α·kütle + c·CO₂ oldu. Kütlenin değeri α = 500 €/kg, karbonun fiyatı c = 74,31 €/t alındı [D]. Nominal sırada Scalmalloy Eİ yine birinci, ama 3000 örnekte birinci gelme payı yalnızca 0,26 [H]. Ti-6Al-4V Eİ 0,43, topoloji optimizasyonlu talaşlı 7075 0,31 ile ondan daha sık birinci oluyor.</p>
+  <table>
+    <caption>Tablo 7 · A320 braketi, dayanım sınırlı, maliyet dahil (konvansiyonel parçanın kilogramı başına, €)</caption>
+    <thead><tr><th>Seçenek</th><th class="n">Kütle (kg)</th><th class="n">Maliyet (€)</th><th class="n">Ömür boyu CO₂ (kg)</th><th class="n">Z (€)</th><th class="n">P(en iyi)</th></tr></thead>
+    <tbody>
+      <tr><td>Scalmalloy TO + Eİ</td><td class="n">0,58</td><td class="n">464</td><td class="n">10 677</td><td class="n">1547</td><td class="n">0,26</td></tr>
+      <tr><td>7075 TO + talaşlı</td><td class="n">0,80</td><td class="n">144</td><td class="n">14 641</td><td class="n">1632</td><td class="n">0,31</td></tr>
+      <tr><td>Ti-6Al-4V TO + Eİ</td><td class="n">0,68</td><td class="n">452</td><td class="n">12 414</td><td class="n">1713</td><td class="n">0,43</td></tr>
+    </tbody>
+  </table>
+  <p>Altı girdi tek başına seçimi tersine çevirebiliyor; en güçlüsü Eİ imalat maliyeti, aralığı kilogram başına 220–1910 € [H]. Karbon fiyatlandığında Scalmalloy Eİ, kütlenin değeri 116 €/kg'yi aşınca talaşlı 7075'i geçiyor [H]. Karbon fiyatlanmazsa bu eşik 1456 €/kg'ye çıkıyor. Ashby'nin sivil uçak için verdiği 100–500/kg aralığı bu iki eşiğin arasında kalıyor [D]. Jüriye kütle ve CO₂ ekseninde sağlam olan seçimi, maliyetin hangi varsayımla değiştiğini söyleyerek sunmak gerekiyor [Y].</p>
+  <h2>Kullanım evresi katsayısında dikkat</h2>
+  <p>EduPack'in mobil kullanım modu, uzun menzilli uçak için 6,5 MJ/t·km'lik bir yük taşıma yoğunluğu kullanıyor [S]. Bu değer ortalama bir taşıma yoğunluğudur. Steinegger'in A320, A330 ve A380 için verdiği marjinal değer 0,020–0,041 kg yakıt/kg/1000 km'dir [A]. Yaklaşık 43 MJ/kg alt ısıl değerle [Y] bu aralık 0,86–1,76 MJ/t·km eder. EduPack'in kullanım çubuğu bu yüzden marjinal hesabın yaklaşık 4–8 katı çıkabilir [H]. Jüriye iki değeri yan yana göstermek ve başlık iddiasında düşük olanı kullanmak öneriliyor [Y].</p>
+</section>
+
+<section class="chapter" id="ajan">
+  <h1>6. Yapay zekâ ajanı için trade-off çalışması</h1>
+  <p>İnsan okuru için kurulan çalışma, bir ajanın yarışma günü değiştirip yeniden koşabileceği biçimde de saklandı. Tablo 8 bu sürümün dosyalarını sıralar.</p>
+  <table>
+    <caption>Tablo 8 · Ajan sürümünün dosyaları</caption>
+    <thead><tr><th>Dosya</th><th>İçerik</th></tr></thead>
+    <tbody>
+      <tr><td><code>studies/tradeoff/README.md</code></td><td>Şema, modelin tam denklemleri, düzenleme kuralları, sonucun nasıl okunacağı (İngilizce)</td></tr>
+      <tr><td><code>studies/tradeoff/*.json</code></td><td>Altı senaryo; her sayısal girdi <code>value, low, high, unit, source, tag</code> ve isteğe bağlı <code>group</code> alanlı bir faktör nesnesi</td></tr>
+      <tr><td><code>studies/tradeoff/decision_rules.json</code></td><td>24 karar kuralı (katalogdaki 25 kararın 23'ü ve provadan gelen D-26): koşul → varsayılan → kanıt (etiketli) → bağlandığı girdi alanı; dört değişmez kural</td></tr>
+      <tr><td><code>studies/tradeoff/build_studies.py</code></td><td>Altı senaryoyu tek tanımdan yeniden yazar</td></tr>
+      <tr><td><code>src/aerokit/design/tradeoff.py</code></td><td>Değerlendirici: nominal, Pareto, ceza fonksiyonu, ilişkili Monte Carlo, tornado; testleri <code>tests/test_tradeoff.py</code></td></tr>
+      <tr><td><code>scripts/retain_sweep.py</code></td><td>Hacim taraması; sonuçlar <code>studies/retain_sweep/retain_sweep.json</code></td></tr>
+      <tr><td><code>src/aerokit/design/card.py</code>, <code>scripts/card_day.py</code></td><td>Kart JSON'undan yük, topoloji, doğrulama, ağ katsayısı, sıralama ve sunum figürleri; testleri <code>tests/test_card.py</code></td></tr>
+    </tbody>
+  </table>
+  <p>Değerlendirici çıplak sayıyı reddeder: her girdinin kaynağı ve etiketi olmalıdır. <code>low ≤ value ≤ high</code> koşulu yüklemede denetlenir. Aynı <code>group</code> adını taşıyan girdiler Monte Carlo'da aynı kuantilden çekilir; birincil alüminyum alaşımları bu yolla birlikte hareket eder. Çıktıdaki <code>weak_inputs</code> listesi [S] ve [Y] etiketli girdileri sıralar. Ajan önce bunları, sonra tornado sırasındaki girdileri değiştirir.</p>
+  <p>Ajan için dört değişmez kural tanımlandı:</p>
+  <ol>
+    <li>Etiket hiçbir zaman yükseltilmez.</li>
+    <li>Marjinal ve ortalama yakıt katsayısı aynı zincirde karıştırılmaz.</li>
+    <li>Rota kütle katsayıları topoloji sonucu doğrulanana kadar varsayım sayılır.</li>
+    <li>Bir seçim ancak P(en iyi) ≥ 0,8 ise ya da onu tersine çeviren girdi adıyla yazılırsa raporlanır.</li>
+  </ol>
+  <div class="note small"><code>python scripts/tradeoff_study.py studies/tradeoff/bracket_a320_strength.json</code> komutu <code>out/&lt;senaryo&gt;.results.json</code> ve <code>.results.md</code> dosyalarını yazar. Figürleri <code>python scripts/report_figures.py</code>, <code>python scripts/retain_sweep.py</code> ve <code>python scripts/rehearsal_bracket.py</code> üretir. Datawiz denetiminde altı figürün hiçbirinde HATA çıkmadı ve set tutarlı bulundu.</div>
+  <p class="small" id="test-sonucu">1 Kasım 2026'da tam test paketinde 1372 test geçti, 1 test atlandı ve 3324 sayısal kontrolün tamamı geçti [H]. Trade-off modülünün 18 ve prova gerilim hesabının 3 el hesabı kontrolü bu sayıya dahildir.</p>
+</section>
+
+<section class="chapter" id="veri">
+  <h1>7. Veri tabloları, çelişkiler ve boşluklar</h1>
+  <table>
+    <caption>Tablo 9 · Malzeme ailelerinin birincil üretim değerleri (Ashby, Materials and the Environment, 2. bs., 2013; "Useful numbers for environmental studies" aktarımı, s. 1–11) [D]</caption>
+    <thead><tr><th>Aile</th><th class="n">Gömülü enerji (MJ/kg)</th><th class="n">CO₂ (kg/kg)</th><th class="n">Geri dönüşüm CO₂ (kg/kg)</th><th class="n">Arzdaki geri dönüşüm payı</th></tr></thead>
+    <tbody>
+      <tr><td>Titanyum alaşımları</td><td class="n">650–720</td><td class="n">46,5</td><td class="n">5,2</td><td class="n">%23</td></tr>
+      <tr><td>Karbon elyaf (yalnız elyaf)</td><td class="n">450–500</td><td class="n">33–36</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Magnezyum alaşımları</td><td class="n">300–330</td><td class="n">36</td><td class="n">2,9</td><td class="n">%36–41</td></tr>
+      <tr><td>Nikel süperalaşımları</td><td class="n">221–244</td><td class="n">11,6</td><td class="n">2,14</td><td class="n">%22–26</td></tr>
+      <tr><td>Alüminyum</td><td class="n">200–220</td><td class="n">12</td><td class="n">2,1</td><td class="n">%41–45</td></tr>
+      <tr><td>Epoksi</td><td class="n">127–140</td><td class="n">6,8–7,5</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>CTP (GFRP)</td><td class="n">107–118</td><td class="n">7,47–8,26</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Paslanmaz çelik</td><td class="n">81–88</td><td class="n">5,0</td><td class="n">0,73</td><td class="n">%35–40</td></tr>
+    </tbody>
+  </table>
+  <p class="small">IAI'ye göre birincil alüminyumun ayak izi çoğunlukla 4,5–22 kg CO₂e/kg aralığında, 2023 dünya ortalaması 14,8 [A]. Ti-6Al-4V külçesi hidroelektrikle 16,1, Çin şebekesiyle 37,3 kg CO₂e/kg (Lessard vd. 2025) [A]. OWID/Ember verilerine göre 2024'te elektriğin CO₂ yoğunluğu AB-27'de 211, Fransa'da 40,5 g/kWh'ydi [D]. Aynı yıl için Türkiye'de 469,7, Çin'de 555,4 g/kWh veriliyor. Ondalık basamaklar kaynakta basıldığı gibidir.</p>
+
+  <table>
+    <caption>Tablo 10 · Eklemeli imalata uygun alaşımlar ve havacılık levhaları, veri sayfası değerleri</caption>
+    <thead><tr><th>Malzeme ve durum</th><th class="n">ρ (kg/m³)</th><th class="n">Rp0,2 (MPa)</th><th class="n">Çekme (MPa)</th><th>E ve not</th></tr></thead>
+    <tbody>
+      <tr><td>Scalmalloy, gerilim giderilmiş 325 °C/4 h [A]</td><td class="n">2670</td><td class="n">490–500</td><td class="n">520–530</td><td>E 69 GPa yatay, 68 GPa dikey (aynı ısıl işlem; Colibrium) [D]</td></tr>
+      <tr><td>Ti-6Al-4V ELI, L-PBF (EOS M290, 800 °C/2 h) [A]</td><td class="n">≈ 4410</td><td class="n">945 / 965</td><td class="n">1055 / 1075</td><td>yatay / dikey</td></tr>
+      <tr><td>Ti-6Al-4V, EBM (Colibrium, imal edildiği gibi) [A]</td><td class="n">—</td><td class="n">907–940</td><td class="n">986–1015</td><td>E sütunu boş</td></tr>
+      <tr><td>Airware 2050-T84 levha, 12,7–38,1 mm [A]</td><td class="n">2700</td><td class="n">≥ 476</td><td class="n">≥ 503</td><td>E 76,5 GPa (tipik)</td></tr>
+      <tr><td>2099-T83 profil, 0,50–0,999" [A]</td><td class="n">—</td><td class="n">524</td><td class="n">558</td><td>E 78 GPa</td></tr>
+      <tr><td>AlSi10Mg, gerilim giderilmiş 270 °C/90 dk (EOS) [A]</td><td class="n">2670</td><td class="n">220 / 225</td><td class="n">340 / 350</td><td>E 72 ± 3 GPa (XY, imal edildiği gibi; AddUp) [D]</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Scalmalloy tozunun bileşimi Al-4,7Mg-0,7Sc-0,27Zr-0,48Mn (ağırlıkça %, Höganäs tozu; Mehta vd. 2022, Tablo 2) [D]. Nikon SLM veri sayfası Sc için %0,68–0,84 aralığı veriyor [D]. AddUp'a göre AlSi10Mg'nin E modülü 210 °C/2 h gerilim gidermeden sonra 77 ± 4 GPa'ya çıkıyor [D].</p>
+
+  <table>
+    <caption>Tablo 11 · Skandiyum zincirinin yaşam döngüsü değerleri (Hengevoss vd. 2024, Cleaner Waste Systems 7:100129, Tablo 1) [D]</caption>
+    <thead><tr><th>Ürün</th><th class="n">Birikimli enerji (GJ/kg)</th><th class="n">GWP (kg CO₂e/kg)</th></tr></thead>
+    <tbody>
+      <tr><td>Sc₂O₃</td><td class="n">148</td><td class="n">5290</td></tr>
+      <tr><td>ScF₃</td><td class="n">99,8</td><td class="n">3500</td></tr>
+      <tr><td>AlSc %2 ana alaşımı</td><td class="n">4,8</td><td class="n">172</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Hengevoss vd.'nin aktardığı literatürde Sc₂O₃ için 743, ≈ 3940 ve ≈ 5500 kg CO₂e/kg geçiyor [D]. Scalmalloy için 0,35 × 172 + 0,65 × 12 ≈ 68 kg CO₂/kg alt sınır, Sc payı iki katına çıkarılınca ≈ 128 üst sınır elde edildi [H].</p>
+
+</section>
+
+<section id="veri-1b" aria-label="Değişim sabitleri, süreç, sertifikasyon ve kullanım evresi tabloları">
+  <table>
+    <caption>Tablo 12 · Ashby'nin taşıt sistemleri için değişim sabitleri (Acta Materialia 48, 2000, Tablo 3, s. 363) [D]</caption>
+    <thead><tr><th>Sektör</th><th class="n">α (para birimi/kg)</th><th class="n">α ($/lb)</th></tr></thead>
+    <tbody>
+      <tr><td>Uzay aracı, yapısal</td><td class="n">3000–10.000</td><td class="n">2000–75.000</td></tr>
+      <tr><td>Askerî araç, yapısal</td><td class="n">500–1000</td><td class="n">350–750</td></tr>
+      <tr><td>Sivil uçak, yapısal</td><td class="n">100–500</td><td class="n">75–300</td></tr>
+      <tr><td>Bisiklet, yapısal parçalar</td><td class="n">80–1000</td><td class="n">50–700</td></tr>
+      <tr><td>Kamyon, yapısal parçalar</td><td class="n">5–10</td><td class="n">4–8</td></tr>
+      <tr><td>Aile otomobili, yapısal</td><td class="n">0,5–1,5</td><td class="n">0,4–1,1</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Metin katmanında para birimi simgesi bozuk; ayrıca $/lb verildiği için sterlin olduğu düşünülüyor [Y]. Uzay aracı satırındaki $/lb aralığı kg değeriyle tutarsız, özgün baskıda yazım hatası olabilir [A]. Sivil uçak için NRC 2003, 200 $/lb (≈ 441 $/kg) veriyor [A].</p>
+  <table>
+    <caption>Tablo 13 · Süreç enerjileri ve buy-to-fly oranları</caption>
+    <thead><tr><th>Değer</th><th class="n">Büyüklük</th><th>Kaynak</th></tr></thead>
+    <tbody>
+      <tr><td>Otoklav kalıplama (Ashby)</td><td class="n">100–300 MJ/kg</td><td>Useful Numbers s. 9 [D]</td></tr>
+      <tr><td>DMLS / EBM / SLM</td><td class="n">158,4 / 118,9 / 118,2 MJ/kg</td><td>ORNL/TM-2014/93 [A]</td></tr>
+      <tr><td>Talaşlı işleme, ağır / ince</td><td class="n">108,9 / 8 MJ/kg</td><td>ORNL/TM-2014/93 [A]</td></tr>
+      <tr><td>EBM, Arcam A1, Ti-6Al-4V</td><td class="n">61 MJ/kg</td><td>ORNL/TM-2014/93 [A]</td></tr>
+      <tr><td>Ti kabin braketi, talaşlı</td><td class="n">buy-to-fly 33 ve 8</td><td>ORNL/TM-2014/93 [A]</td></tr>
+      <tr><td>EBM</td><td class="n">buy-to-fly 1,5</td><td>ORNL/TM-2014/93 [A]</td></tr>
+      <tr><td>B787 gövde yan kirişi, Ti</td><td class="n">buy-to-fly 41 / 25</td><td>Walker, Titanium USA 2013 [A]</td></tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Tablo 14 · Sertifikasyon katsayıları (14 CFR Part 25, eCFR 2026-10-01) [A]</caption>
+    <thead><tr><th>Madde</th><th class="n">Katsayı</th><th>Bölüm</th></tr></thead>
+    <tbody>
+      <tr><td>Kritik olmayan döküm, yalnız gözle muayene</td><td class="n">2,00</td><td>§25.621(d)</td></tr>
+      <tr><td>Sınır yük üzerine emniyet katsayısı</td><td class="n">1,50</td><td>§25.303</td></tr>
+      <tr><td>Kritik döküm, yüzey + radyografi + 1 statik test</td><td class="n">1,50</td><td>§25.621(c)(3)</td></tr>
+      <tr><td>Kritik döküm, yüzey + radyografi + 3 statik test</td><td class="n">1,25</td><td>§25.621(c)(2)</td></tr>
+      <tr><td>Bağlantı parçası katsayısı</td><td class="n">≥ 1,15</td><td>§25.625</td></tr>
+      <tr><td>Özel katsayılar</td><td class="n">yalnız en yükseği</td><td>§25.619</td></tr>
+      <tr><td>Tasarım değeri, tek yük yolu / yedekli</td><td class="n">%99/95 · %90/95</td><td>§25.613</td></tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Tablo 15 · Kullanım evresi katsayıları</caption>
+    <thead><tr><th>Uçak ya da araç</th><th class="n">Değer</th><th>Kaynak</th></tr></thead>
+    <tbody>
+      <tr><td>A380, 12.000 km sefer</td><td class="n">0,45 kg yakıt/kg/sefer</td><td>Steinegger 2017, Şekil 15 [A]</td></tr>
+      <tr><td>A320 ailesi (kaynakta "A322"), 2000 / 4000 / 5000 km sefer</td><td class="n">0,07 / 0,12 / 0,16 kg/kg/sefer</td><td>Steinegger 2017, Şekil 15 [A]</td></tr>
+      <tr><td>A320 ailesi, ilk onaylı ömür</td><td class="n">48.000 uçuş (ESA I: 60.000)</td><td>Emerald AEAT 2008 [D]</td></tr>
+      <tr><td>ATR 72-600, marjinal</td><td class="n">0,04–0,06 kg/kg/1000 km</td><td>ATR 2020 bilgi sayfasından türetildi [A]</td></tr>
+      <tr><td>EduPack mobil, uzun menzil / helikopter</td><td class="n">6,5 / 55 MJ/t·km</td><td>EduPack 2021 R1 yardım sayfası [S]</td></tr>
+      <tr><td>Bell 407 helikopter</td><td class="n">+%14,1 ağırlıkta &lt; %5 yakıt</td><td>FAA AEDT raporu, s. 23 [A]</td></tr>
+      <tr><td>Jet yakıtı CO₂</td><td class="n">3,16 kg/kg</td><td>ICAO CEC v8; 25 Ekim'de okundu [D]</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="veri-2" aria-label="Çelişkiler, boşluklar ve kaynakça">
+  <table>
+    <caption>Tablo 16 · Maliyet girdileri, € / kg, ECB kuru 16 Eylül 2026</caption>
+    <thead><tr><th>Girdi</th><th class="n">Değer</th><th class="n">Aralık</th><th>Kaynak</th></tr></thead>
+    <tbody>
+      <tr><td>Ti-6Al-4V levha</td><td class="n">50</td><td class="n">29–96</td><td>Dutta ve Froes 2014 [A]</td></tr>
+      <tr><td>Ti-6Al-4V EBM tozu</td><td class="n">110</td><td class="n">71–180</td><td>Fraunhofer IAPT 2021, Şekil 13 [A]</td></tr>
+      <tr><td>AlSi10Mg tozu</td><td class="n">80</td><td class="n">40–126</td><td>Depboylu vd., SFF 2024 [A]</td></tr>
+      <tr><td>Scalmalloy tozu</td><td class="n">200</td><td class="n">120–400</td><td>yayımlanmış fiyat yok, yer tutucu [Y]</td></tr>
+      <tr><td>Havacılık alüminyum levhası</td><td class="n">10</td><td class="n">7,5–20</td><td>alt: Constellium 2024 [A]; değer ve üst varsayım [Y]</td></tr>
+      <tr><td>L-PBF imalatı, toz hariç</td><td class="n">500</td><td class="n">220–1910</td><td>AMPOWER; Simpson 2021 [A]</td></tr>
+      <tr><td>Talaşlı Ti / Al imalatı</td><td class="n">300 / 100</td><td class="n">120–620 / 40–240</td><td>şablon ve satıcı özetleri [S]</td></tr>
+    </tbody>
+  </table>
+  <h2>Dikkat edilecek çelişkiler</h2>
+  <ul>
+    <li>GE braketi için Carter vd. 2014 %80 kazanç ve ≈ 1,8 kg referans veriyor, GE Reports ise 2033 g → 327 g (%84). İki kaynak da doğru aktarılmış; referans kütleleri farklı [A].</li>
+    <li>Otoklav enerjisi Ashby'de 100–300 MJ/kg, Cranfield'in kür adımında 11,8 MJ/kg; fark ≈ 17 kat [A].</li>
+    <li>EduPack taşıma tablosu sürüme göre değişiyor; uzun menzilli hava kargosu 2008'de 8,3, 2021 R1'de 6,5 MJ/t·km [A; S].</li>
+    <li>ORNL'nin kullanım evresinden çıkan örtük yoğunluk ≈ 3,15 MJ/kg/1000 km; bu, Steinegger'in marjinal değerinin 1,8–3,7 katı [H]. ORNL ortalama yakıt kullanıyor olabilir.</li>
+    <li>Scalmalloy'un skandiyum içeriği iki arama özetinde ağırlıkça %0,02–0,04 ve &lt; %2 görünüyor [S]. Mehta vd. 2022'nin tam metni %0,7 veriyor; hesap bu değeri kullanıyor [D].</li>
+  </ul>
+
+  <h2>Yarışma günü EduPack'ten okunacaklar</h2>
+  <ol>
+    <li>Alaşım düzeyinde gömülü CO₂ ve enerji: 2050, 2099, AlSi10Mg, Scalmalloy (skandiyum dahil mi), Ti-6Al-4V tozu.</li>
+        <li>Mobil kullanım modundaki uçak satırları ve katsayılarının ortalama mı marjinal mi olduğu.</li>
+    <li>Talaşlı işlemede "% removed" alanının malzeme evresini nasıl büyüttüğü: aynı parçayı %0 ve %50 ile denetleyip hangi çubuğun değiştiğine bakın.</li>
+    <li>Ülke elektrik karışımı ve yakıt CO₂ katsayısı (EduPack MJ başına 0,072 kg kullanıyor [S]).</li>
+    <li>2026 R1'deki ömür sonu seçenekleri (Landfill, Combust, Downcycle, Recycle, Re-manufacture, Reuse, None) ve her birinin ömür sonu potansiyeli [A].</li>
+  </ol>
+
+  <h2>Kaynakça</h2>
+  <ol class="src">
+    <li>Synopsys/Ansys, "Euroavia ideathon 2026 – Ansys challenge and support", 27 Ekim 2026, dağıtımı kısıtlı.</li>
+    <li>M. F. Ashby, Materials and the Environment, 2. bs., 2013; "Useful numbers for environmental studies" aktarımı, polybags.co.uk.</li>
+    <li>M. F. Ashby, "Multi-objective optimization in material design and selection", Acta Materialia 48, 2000, s. 359–369.</li>
+    <li>S. Nimbalkar vd., ORNL/TM-2014/93, Temmuz 2014.</li>
+    <li>D. Steinegger, Fuel Economy for Aircraft Operation as a Function of Weight and Distance, ZHAW, 2017.</li>
+    <li>W. J. Carter vd., GE motor braketi yarışması üzerine bildiri, SFF Symposium 2014.</li>
+    <li>14 CFR Part 25, eCFR, 1 Ekim 2026 sürümü; FAA AC 20-107B Change 1; EASA CM-S-008 Issue 04.</li>
+    <li>Our World in Data / Ember, Carbon intensity of electricity, CSV, 1 Kasım 2026'da indirildi.</li>
+    <li>International Aluminium Institute, Aluminium carbon footprint FAQ; Lessard vd., J. Sustainable Metallurgy 2025, ek Tablo S-2.</li>
+    <li>D. Hengevoss vd., "Life cycle assessment of a novel production route for scandium recovery from bauxite residues", Cleaner Waste Systems 7, 2024, 100129.</li>
+    <li>B. Mehta, A. Svanberg, L. Nyborg, "Laser powder bed fusion of an Al-Mg-Sc-Zr alloy", Metals 12, 2022, 57.</li>
+    <li>Y. Liang vd., "Laser powder bed fusion of high-strength crack-free Al7075 alloy", Composites Part B 289, 2025, 111940 (Cardiff yazar sürümü).</li>
+    <li>EOS, 3D Systems, Nikon SLM, Colibrium, AddUp, Smiths Metal ve Airware veri sayfaları (Tablo 10).</li>
+    <li>Montel, AB ETS Aralık 2025 sözleşmesi ortalaması, GMK Center haberi, 16 Aralık 2025.</li>
+    <li>Maliyet girdileri Dutta ve Froes 2014, Fraunhofer IAPT 2021 toz anketi, Depboylu vd. 2024, Constellium 2024 sonuçları, AMPOWER, Simpson 2021 ve NIST SP 1176 kaynaklarına dayanıyor.</li>
+    <li>Ansys Help 2024 R2, Structural Optimization ve Additive bölümleri; Ansys Help v261, Granta EduPack Eco Audit.</li>
+    <li>İki tur araştırmanın notları: <code>research_notes/</code> klasörü.</li>
+  </ol>
+</section>
+
+</main>
+</body>
+</html>

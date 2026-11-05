@@ -1,0 +1,296 @@
+{
+ "surum": 1,
+ "ad": "F13_day_and_station_keeping",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  846.2,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   19.2,
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    40.3,
+    74.0,
+    423.3,
+    378.8
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Sun overhead",
+     "tur": "cizgi",
+     "renk": "#cc79a7",
+     "isaret": null,
+     "cizgi": ":",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Loiter at bucket speed",
+     "tur": "cizgi",
+     "renk": "#009e73",
+     "isaret": null,
+     "cizgi": "-.",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Hover",
+     "tur": "cizgi",
+     "renk": "#d55e00",
+     "isaret": null,
+     "cizgi": "--",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Hours from dawn, drifting at 55 km",
+    "nicelik": "Hours from dawn, drifting at 55 km",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "hoursfromdawn,driftingat55km",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     157.13992250845894
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "50",
+     "100",
+     "150"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     57.6,
+     3.0,
+     406.0,
+     26.0
+    ]
+   },
+   "y": {
+    "ham": "Power over the day (kW)",
+    "nicelik": "Power over the day",
+    "birim": "kW",
+    "bicim": "parantez",
+    "anahtar": "powerovertheday",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     3.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     1
+    ],
+    "ondalik_isareti": ".",
+    "tikler": [
+     "0.0",
+     "0.5",
+     "1.0",
+     "1.5",
+     "2.0",
+     "2.5",
+     "3.0"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     40.3,
+     388.0,
+     283.1,
+     411.0
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  },
+  {
+   "konum_pt": [
+    478.6,
+    74.0,
+    861.6,
+    378.8
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "VESPER",
+     "tur": "cizgi",
+     "renk": "#0072b2",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Pioneer Venus",
+     "tur": "cizgi",
+     "renk": "#919191",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Airspeed (m/s)",
+    "nicelik": "Airspeed",
+    "birim": "m/s",
+    "bicim": "parantez",
+    "anahtar": "airspeed",
+    "harf": "tek",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     85.782
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "20",
+     "40",
+     "60",
+     "80"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     597.2,
+     3.0,
+     742.9,
+     26.0
+    ]
+   },
+   "y": {
+    "ham": "Power to hold that airspeed (kW)",
+    "nicelik": "Power to hold that airspeed",
+    "birim": "kW",
+    "bicim": "parantez",
+    "anahtar": "powertoholdthatairspeed",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     1.0681565201163565,
+     148.97851411213588
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "mathdefault10^1",
+     "mathdefault10^2"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "mathdefault10^1",
+     "mathdefault10^2"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     478.6,
+     388.0,
+     806.9,
+     411.0
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

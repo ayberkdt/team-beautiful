@@ -1,0 +1,134 @@
+{
+ "birim": "mm",
+ "tasarim_alani": [
+  {
+   "min": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "max": [
+    120.69999999999999,
+    59.5,
+    74.8
+   ]
+  }
+ ],
+ "destekler": [
+  {
+   "ad": "H2 fixed (fixed_bore)",
+   "tur": "silindir",
+   "merkez": [
+    15.0,
+    15.0,
+    0.0
+   ],
+   "eksen": [
+    0,
+    0,
+    1
+   ],
+   "yaricap": 4.25,
+   "bas": 0.003,
+   "son": 7.997
+  },
+  {
+   "ad": "H3 fixed (fixed_bore)",
+   "tur": "silindir",
+   "merkez": [
+    15.0,
+    45.0,
+    0.0
+   ],
+   "eksen": [
+    0,
+    0,
+    1
+   ],
+   "yaricap": 4.25,
+   "bas": 0.003,
+   "son": 7.997
+  },
+  {
+   "ad": "H4 fixed (fixed_bore)",
+   "tur": "silindir",
+   "merkez": [
+    105.0,
+    15.0,
+    0.0
+   ],
+   "eksen": [
+    0,
+    0,
+    1
+   ],
+   "yaricap": 4.25,
+   "bas": 0.003,
+   "son": 7.997
+  },
+  {
+   "ad": "H5 fixed (fixed_bore)",
+   "tur": "silindir",
+   "merkez": [
+    105.0,
+    45.0,
+    0.0
+   ],
+   "eksen": [
+    0,
+    0,
+    1
+   ],
+   "yaricap": 4.25,
+   "bas": 0.003,
+   "son": 7.997
+  }
+ ],
+ "kuvvetler": [
+  {
+   "ad": "LC1 +x",
+   "durum": "LC1",
+   "nokta": [
+    60.0,
+    30.0,
+    55.0
+   ],
+   "yon": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "buyukluk_N": 2544.117407260678
+  },
+  {
+   "ad": "LC2 +y",
+   "durum": "LC2",
+   "nokta": [
+    60.0,
+    30.0,
+    55.0
+   ],
+   "yon": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "buyukluk_N": 2544.117407260678
+  },
+  {
+   "ad": "LC3 +z",
+   "durum": "LC3",
+   "nokta": [
+    60.0,
+    30.0,
+    55.0
+   ],
+   "yon": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "buyukluk_N": 2544.117407260678
+  }
+ ]
+}

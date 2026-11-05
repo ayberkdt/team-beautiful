@@ -1,0 +1,177 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "genel",
+ "hedef": "genel-cift",
+ "ortam": "makale",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ",",
+ "varliklar": {
+  "7075 talaşlı": {
+   "renk": "#0072b2",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 0
+  },
+  "7075 TO + talaşlı": {
+   "renk": "#d55e00",
+   "baglam": false,
+   "isaret": "s",
+   "cizgi": "--",
+   "sira": 1
+  },
+  "2024 TO + talaşlı": {
+   "renk": "#009e73",
+   "baglam": false,
+   "isaret": "^",
+   "cizgi": "-.",
+   "sira": 2
+  },
+  "Ti-6Al-4V TO + talaşlı": {
+   "renk": "#cc79a7",
+   "baglam": false,
+   "isaret": "D",
+   "cizgi": ":",
+   "sira": 3
+  },
+  "Ti-6Al-4V TO + Eİ": {
+   "renk": "#e69f00",
+   "baglam": false,
+   "isaret": "v",
+   "cizgi": [
+    0,
+    [
+     5,
+     1
+    ]
+   ],
+   "sira": 4
+  },
+  "AlSi10Mg TO + Eİ": {
+   "renk": "#56b4e9",
+   "baglam": false,
+   "isaret": "P",
+   "cizgi": [
+    0,
+    [
+     3,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   ],
+   "sira": 5
+  },
+  "Scalmalloy TO + Eİ": {
+   "renk": "#000000",
+   "baglam": false,
+   "isaret": "X",
+   "cizgi": [
+    0,
+    [
+     1,
+     1
+    ]
+   ],
+   "sira": 6
+  }
+ },
+ "nicelikler": {
+  "co2": {
+   "etiket": "Ömür boyu CO₂",
+   "birim": "t",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "kutle": {
+   "etiket": "Parça kütlesi",
+   "birim": "kg",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "fark": {
+   "etiket": "Kazanan ile ikinci arasındaki CO₂ farkı",
+   "birim": "t",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "btf": {
+   "etiket": "Buy-to-fly oranı",
+   "birim": "–",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "uretim": {
+   "etiket": "Üretim CO₂ / bitmiş parça kütlesi",
+   "birim": "kg/kg",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "hacim": {
+   "etiket": "Korunan hacim oranı",
+   "birim": "%",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "uyum": {
+   "etiket": "Uyum (%50 tasarıma göre)",
+   "birim": "–",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "yogunluk": {
+   "etiket": "Malzeme yoğunluğu",
+   "birim": "–",
+   "eksen": "serbest",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "sapma": {
+   "etiket": "Uç sapması, sınır yükte",
+   "birim": "mm",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "F1_evre_paylari": "F1_evre_paylari.dw.json",
+  "F2_kutle_co2": "F2_kutle_co2.dw.json",
+  "F3_tornado": "F3_tornado.dw.json",
+  "F4_btf_kirilma": "F4_btf_kirilma.dw.json",
+  "F5_hacim_taramasi": "F5_hacim_taramasi.dw.json",
+  "F6_prova_kutle_sapma": "F6_prova_kutle_sapma.dw.json"
+ },
+ "kenar_mm": {
+  "cift": [
+   37.3,
+   11.4,
+   26.7,
+   6.0
+  ]
+ }
+}

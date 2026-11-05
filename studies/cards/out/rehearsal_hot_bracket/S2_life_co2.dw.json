@@ -1,0 +1,168 @@
+{
+ "surum": 1,
+ "ad": "S2_life_co2",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  2.2,
+  9.2,
+  581.5,
+  385.7
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [
+   20.4
+  ],
+  "panel": [],
+  "metin": [
+   20.4,
+   24.0
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "lejant": 20.4,
+  "metin": 24.0
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    220.8,
+    73.1,
+    598.4,
+    353.2
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Production",
+     "tur": "cubuk",
+     "renk": "#669eca",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Use (fuel)",
+     "tur": "cubuk",
+     "renk": "#eba581",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Life-cycle CO₂ (t)",
+    "nicelik": "Life-cycle CO₂",
+    "birim": "t",
+    "bicim": "parantez",
+    "anahtar": "lifecycleco₂",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     2.284266418050657
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "1",
+     "2"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     326.9,
+     9.2,
+     492.4,
+     32.2
+    ]
+   },
+   "y": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": true,
+    "sinir": [
+     4.585,
+     -0.585
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "AlSi10Mg TO + AM",
+     "2618-T61 TO + machined",
+     "7075-T6 TO + machined",
+     "Ti-6Al-4V TO + AM",
+     "Inconel 718 TO + AM"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "AlSi10Mg TO + AM",
+     "2618-T61 TO + machined",
+     "7075-T6 TO + machined",
+     "Ti-6Al-4V TO + AM",
+     "Inconel 718 TO + AM"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "lejant": [
+    "Production",
+    "Use (fuel)"
+   ],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": false
+   },
+   "cerceve": [],
+   "alan": false,
+   "cerceve_kalinlik": null,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

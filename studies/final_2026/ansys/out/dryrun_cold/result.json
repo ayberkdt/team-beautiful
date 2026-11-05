@@ -1,0 +1,2568 @@
+{
+ "case": "dryrun_bracket",
+ "temperature_C": 300.0,
+ "ranking": [
+  {
+   "material": "Ti-6Al-4V (L-PBF, stress relieved / HIP)",
+   "route": "AM L-PBF + HIP",
+   "mass_kg": 0.08032569765777854,
+   "co2_production_kg": 6.00086511968711,
+   "co2_use_kg": 2255.545590230421,
+   "volume": 0.24774229704691544,
+   "sigma_ult_Pa": 582803525.0949478,
+   "utilisation": 0.7753764803203693,
+   "voxel_utilisation": 0.7753764803203693,
+   "stress_basis": "T10",
+   "ultimate_N": 2452.305368989501,
+   "design": "topo 25 %",
+   "temperature_C": 300.0,
+   "passes": true
+  },
+  {
+   "material": "17-4PH H1025 (wrought data; L-PBF route)",
+   "route": "AM L-PBF + H1025 + HIP",
+   "mass_kg": 0.14218194918744204,
+   "co2_production_kg": 2.951223325300672,
+   "co2_use_kg": 3992.469133183372,
+   "volume": 0.24774229704691544,
+   "sigma_ult_Pa": 582803525.0949478,
+   "utilisation": 0.6459283043575142,
+   "voxel_utilisation": 0.6459283043575142,
+   "stress_basis": "T10",
+   "ultimate_N": 2452.305368989501,
+   "design": "topo 25 %",
+   "temperature_C": 300.0,
+   "passes": true
+  },
+  {
+   "material": "Inconel 718 (L-PBF, solution + double age)",
+   "route": "AM L-PBF + STA",
+   "mass_kg": 0.148447717893627,
+   "co2_production_kg": 4.354961217272704,
+   "co2_use_kg": 4168.411918453046,
+   "volume": 0.24774229704691544,
+   "sigma_ult_Pa": 582803525.0949478,
+   "utilisation": 0.45734990525162117,
+   "voxel_utilisation": 0.45734990525162117,
+   "stress_basis": "T10",
+   "ultimate_N": 2452.305368989501,
+   "design": "topo 25 %",
+   "temperature_C": 300.0,
+   "passes": true
+  },
+  {
+   "material": "Structural Steel (Ansys Engineering Data default)",
+   "route": "machined from plate / welded",
+   "mass_kg": 0.28797543215584026,
+   "co2_production_kg": 5.447535258281311,
+   "co2_use_kg": 8086.350134935992,
+   "volume": 0.49896493354987775,
+   "sigma_ult_Pa": 186202884.9579433,
+   "utilisation": 0.7626610538582426,
+   "voxel_utilisation": 0.7626610538582426,
+   "stress_basis": "voxel",
+   "ultimate_N": 2452.305368989501,
+   "design": "topo 50 %",
+   "temperature_C": 300.0,
+   "passes": true
+  }
+ ],
+ "baseline": {
+  "material": "structural_steel",
+  "mass_kg": 0.5771456324736968
+ },
+ "element_size_m": 0.0013,
+ "details": {
+  "result": {
+   "case": "dryrun_bracket",
+   "temperature_C": 300.0,
+   "ranking": [
+    {
+     "material": "Ti-6Al-4V (L-PBF, stress relieved / HIP)",
+     "route": "AM L-PBF + HIP",
+     "mass_kg": 0.08032569765777854,
+     "co2_production_kg": 6.00086511968711,
+     "co2_use_kg": 2255.545590230421,
+     "volume": 0.24774229704691544,
+     "sigma_ult_Pa": 582803525.0949478,
+     "utilisation": 0.7753764803203693,
+     "voxel_utilisation": 0.7753764803203693,
+     "stress_basis": "T10",
+     "ultimate_N": 2452.305368989501,
+     "design": "topo 25 %",
+     "temperature_C": 300.0,
+     "passes": true
+    },
+    {
+     "material": "17-4PH H1025 (wrought data; L-PBF route)",
+     "route": "AM L-PBF + H1025 + HIP",
+     "mass_kg": 0.14218194918744204,
+     "co2_production_kg": 2.951223325300672,
+     "co2_use_kg": 3992.469133183372,
+     "volume": 0.24774229704691544,
+     "sigma_ult_Pa": 582803525.0949478,
+     "utilisation": 0.6459283043575142,
+     "voxel_utilisation": 0.6459283043575142,
+     "stress_basis": "T10",
+     "ultimate_N": 2452.305368989501,
+     "design": "topo 25 %",
+     "temperature_C": 300.0,
+     "passes": true
+    },
+    {
+     "material": "Inconel 718 (L-PBF, solution + double age)",
+     "route": "AM L-PBF + STA",
+     "mass_kg": 0.148447717893627,
+     "co2_production_kg": 4.354961217272704,
+     "co2_use_kg": 4168.411918453046,
+     "volume": 0.24774229704691544,
+     "sigma_ult_Pa": 582803525.0949478,
+     "utilisation": 0.45734990525162117,
+     "voxel_utilisation": 0.45734990525162117,
+     "stress_basis": "T10",
+     "ultimate_N": 2452.305368989501,
+     "design": "topo 25 %",
+     "temperature_C": 300.0,
+     "passes": true
+    },
+    {
+     "material": "Structural Steel (Ansys Engineering Data default)",
+     "route": "machined from plate / welded",
+     "mass_kg": 0.28797543215584026,
+     "co2_production_kg": 5.447535258281311,
+     "co2_use_kg": 8086.350134935992,
+     "volume": 0.49896493354987775,
+     "sigma_ult_Pa": 186202884.9579433,
+     "utilisation": 0.7626610538582426,
+     "voxel_utilisation": 0.7626610538582426,
+     "stress_basis": "voxel",
+     "ultimate_N": 2452.305368989501,
+     "design": "topo 50 %",
+     "temperature_C": 300.0,
+     "passes": true
+    }
+   ],
+   "baseline": {
+    "material": "structural_steel",
+    "mass_kg": 0.5771456324736968
+   },
+   "element_size_m": 0.0013
+  },
+  "options": {
+   "target_elements": 25000,
+   "voxel_mm": null,
+   "temperature_C": null,
+   "baseline": "structural_steel",
+   "candidates": [
+    "ti64_lpbf",
+    "in718_lpbf",
+    "ss_17_4ph",
+    "scalmalloy",
+    "structural_steel"
+   ],
+   "snapshot_every": 5,
+   "volfracs": [
+    0.5,
+    0.35,
+    0.25
+   ],
+   "rmin_vox": 2.0,
+   "max_iter": 50,
+   "am_filter": false,
+   "convergence": true,
+   "limit_to_ultimate": 1.5,
+   "exclusion_vox": 3.0,
+   "hole_resolution": 2.5,
+   "max_elements": 80000,
+   "calibrate_utilisation": 0.8,
+   "tet_check": true,
+   "tet_sizes_vox": [
+    2.0,
+    1.3
+   ],
+   "unit": "mm",
+   "magnitude_N": 10000.0,
+   "element": "H8IM",
+   "log": true
+  },
+  "setup": {
+   "name": "dryrun_bracket",
+   "units": {
+    "length": "mm",
+    "force": "N",
+    "moment": "N m"
+   },
+   "voxel_mm": 1.3,
+   "origin_mm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "bbox_mm": [
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     89.7,
+     59.8,
+     62.4
+    ]
+   ],
+   "temperature_C": 300.0,
+   "holes": [
+    {
+     "id": "H1",
+     "axis": "x",
+     "center_mm": [
+      4.125,
+      30.0,
+      52.009
+     ],
+     "diameter_mm": 11.908,
+     "segments_mm": [
+      [
+       0.0,
+       8.25
+      ]
+     ],
+     "roundness": 0.031,
+     "role": "load"
+    },
+    {
+     "id": "H2",
+     "axis": "z",
+     "center_mm": [
+      30.0,
+      12.0,
+      4.125
+     ],
+     "diameter_mm": 6.555,
+     "segments_mm": [
+      [
+       0.0,
+       8.25
+      ]
+     ],
+     "roundness": 0.072,
+     "role": "support"
+    },
+    {
+     "id": "H3",
+     "axis": "z",
+     "center_mm": [
+      30.0,
+      48.0,
+      4.125
+     ],
+     "diameter_mm": 6.555,
+     "segments_mm": [
+      [
+       0.0,
+       8.25
+      ]
+     ],
+     "roundness": 0.072,
+     "role": "support"
+    },
+    {
+     "id": "H4",
+     "axis": "z",
+     "center_mm": [
+      75.0,
+      12.0,
+      4.125
+     ],
+     "diameter_mm": 8.956,
+     "segments_mm": [
+      [
+       0.0,
+       8.25
+      ]
+     ],
+     "roundness": 0.038,
+     "role": "support"
+    },
+    {
+     "id": "H5",
+     "axis": "z",
+     "center_mm": [
+      75.0,
+      48.0,
+      4.125
+     ],
+     "diameter_mm": 8.956,
+     "segments_mm": [
+      [
+       0.0,
+       8.25
+      ]
+     ],
+     "roundness": 0.038,
+     "role": "support"
+    }
+   ],
+   "supports": [
+    {
+     "hole": "H2",
+     "type": "fixed_bore"
+    },
+    {
+     "hole": "H3",
+     "type": "fixed_bore"
+    },
+    {
+     "hole": "H4",
+     "type": "fixed_bore"
+    },
+    {
+     "hole": "H5",
+     "type": "fixed_bore"
+    }
+   ],
+   "load_cases": [
+    {
+     "name": "LC1 +x",
+     "loads": [
+      {
+       "hole": "H1",
+       "type": "bearing",
+       "force_N": [
+        1634.8702459929946,
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "name": "LC2 +y",
+     "loads": [
+      {
+       "hole": "H1",
+       "type": "bearing",
+       "force_N": [
+        0.0,
+        1634.8702459929946,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "name": "LC3 +z",
+     "loads": [
+      {
+       "hole": "H1",
+       "type": "bearing",
+       "force_N": [
+        0.0,
+        0.0,
+        1634.8702459929946
+       ]
+      }
+     ]
+    }
+   ],
+   "non_design": {
+    "ring_factor": 0.75,
+    "ring_min_voxels": 2,
+    "boxes_mm": []
+   },
+   "build_direction": "+z",
+   "load_case_weights": null,
+   "roles_source": "auto",
+   "exclusion_mm": 3.9
+  },
+  "baseline": {
+   "material": "structural_steel",
+   "T_C": 300.0,
+   "mass_kg": 0.5771456324736968,
+   "volume_m3": 7.352173662085309e-05,
+   "volume_elements_m3": 7.114536962962961e-05,
+   "vol_corr": 1.0334015692601561,
+   "at_T": {
+    "cases": [
+     {
+      "name": "LC1 +x",
+      "compliance_J": 0.09139345238846952,
+      "max_disp_m": 7.970199358055006e-05,
+      "load_disp_m": 6.007860826046718e-05,
+      "max_disp_at_m": [
+       0.0,
+       0.0312,
+       0.0624
+      ],
+      "vm_outside_Pa": 130212765.95744534,
+      "vm_outside_at_m": [
+       0.0481,
+       0.026,
+       0.0091
+      ],
+      "vm_max_Pa": 131258711.21837349,
+      "vm_max_at_m": [
+       0.026,
+       0.0143,
+       0.0078
+      ],
+      "vm_element_max_Pa": 109291581.32197933,
+      "applied_N": [
+       1634.8702459930007,
+       0.0,
+       0.0
+      ],
+      "reaction_N": [
+       -1634.8702460145123,
+       1.2890406964061185e-08,
+       1.1295014701317996e-08
+      ],
+      "solver": "pardiso",
+      "solve_s": 5.222143299997697,
+      "residual": 2.939977486698657e-12
+     },
+     {
+      "name": "LC2 +y",
+      "compliance_J": 0.07674025571514145,
+      "max_disp_m": 6.374619234471703e-05,
+      "load_disp_m": 4.616669508139234e-05,
+      "max_disp_at_m": [
+       0.0078,
+       0.0598,
+       0.0624
+      ],
+      "vm_outside_Pa": 77620472.15747994,
+      "vm_outside_at_m": [
+       0.0078,
+       0.058499999999999996,
+       0.0091
+      ],
+      "vm_max_Pa": 150671361.456231,
+      "vm_max_at_m": [
+       0.026,
+       0.050699999999999995,
+       0.0
+      ],
+      "vm_element_max_Pa": 122541715.6485331,
+      "applied_N": [
+       0.0,
+       1634.8702459929948,
+       0.0
+      ],
+      "reaction_N": [
+       7.636938192945308e-09,
+       -1634.8702459839299,
+       4.000249020919e-09
+      ],
+      "solver": "pardiso",
+      "solve_s": 5.222143299997697,
+      "residual": 2.939977486698657e-12
+     },
+     {
+      "name": "LC3 +z",
+      "compliance_J": 0.027759135285825208,
+      "max_disp_m": 3.27756906742469e-05,
+      "load_disp_m": 2.6589445522480906e-05,
+      "max_disp_at_m": [
+       0.0,
+       0.0299,
+       0.0624
+      ],
+      "vm_outside_Pa": 54766666.49363332,
+      "vm_outside_at_m": [
+       0.0481,
+       0.026,
+       0.0091
+      ],
+      "vm_max_Pa": 93750198.36172262,
+      "vm_max_at_m": [
+       0.026,
+       0.0455,
+       0.0
+      ],
+      "vm_element_max_Pa": 79797118.75705796,
+      "applied_N": [
+       0.0,
+       0.0,
+       1634.8702459929937
+      ],
+      "reaction_N": [
+       -9.10813469090499e-09,
+       6.5088325840179095e-09,
+       -1634.870245986169
+      ],
+      "solver": "pardiso",
+      "solve_s": 5.222143299997697,
+      "residual": 2.939977486698657e-12
+     }
+    ],
+    "volume_m3": 7.114536962962961e-05,
+    "elements": 32524,
+    "dofs": 118467,
+    "h_m": 0.0013,
+    "E_Pa": 182674919309.46973,
+    "nu": 0.3,
+    "element": "H8IM"
+   },
+   "at_20C": {
+    "cases": [
+     {
+      "name": "LC1 +x",
+      "compliance_J": 0.08347645770243359,
+      "max_disp_m": 7.279777623069376e-05,
+      "load_disp_m": 5.487427458106916e-05,
+      "max_disp_at_m": [
+       0.0,
+       0.0312,
+       0.0624
+      ],
+      "vm_outside_Pa": 130212765.95751171,
+      "vm_outside_at_m": [
+       0.0481,
+       0.026,
+       0.0091
+      ],
+      "vm_max_Pa": 131258711.21869135,
+      "vm_max_at_m": [
+       0.026,
+       0.0143,
+       0.0078
+      ],
+      "vm_element_max_Pa": 109291581.32225803,
+      "applied_N": [
+       1634.8702459930007,
+       0.0,
+       0.0
+      ],
+      "reaction_N": [
+       -1634.8702460106656,
+       1.1673918720589427e-08,
+       2.3113670977181755e-09
+      ],
+      "solver": "pardiso",
+      "solve_s": 3.7158156000004965,
+      "residual": 2.945570133793771e-12
+     },
+     {
+      "name": "LC2 +y",
+      "compliance_J": 0.07009260010316615,
+      "max_disp_m": 5.822415271462201e-05,
+      "load_disp_m": 4.2167486494140963e-05,
+      "max_disp_at_m": [
+       0.0078,
+       0.0598,
+       0.0624
+      ],
+      "vm_outside_Pa": 77620472.15792438,
+      "vm_outside_at_m": [
+       0.0078,
+       0.058499999999999996,
+       0.0091
+      ],
+      "vm_max_Pa": 150671361.45706522,
+      "vm_max_at_m": [
+       0.026,
+       0.050699999999999995,
+       0.0
+      ],
+      "vm_element_max_Pa": 122541715.64921045,
+      "applied_N": [
+       0.0,
+       1634.8702459929948,
+       0.0
+      ],
+      "reaction_N": [
+       6.727720602839327e-09,
+       -1634.8702459945998,
+       3.288109340360279e-09
+      ],
+      "solver": "pardiso",
+      "solve_s": 3.7158156000004965,
+      "residual": 2.945570133793771e-12
+     },
+     {
+      "name": "LC3 +z",
+      "compliance_J": 0.025354488992238418,
+      "max_disp_m": 2.9936483246199373e-05,
+      "load_disp_m": 2.4286124076555803e-05,
+      "max_disp_at_m": [
+       0.0,
+       0.0299,
+       0.0624
+      ],
+      "vm_outside_Pa": 54766666.49371766,
+      "vm_outside_at_m": [
+       0.0481,
+       0.026,
+       0.0091
+      ],
+      "vm_max_Pa": 93750198.36191241,
+      "vm_max_at_m": [
+       0.026,
+       0.0455,
+       0.0
+      ],
+      "vm_element_max_Pa": 79797118.7572191,
+      "applied_N": [
+       0.0,
+       0.0,
+       1634.8702459929937
+      ],
+      "reaction_N": [
+       -7.45495754017611e-09,
+       5.846761297334524e-09,
+       -1634.8702459916683
+      ],
+      "solver": "pardiso",
+      "solve_s": 3.7158156000004965,
+      "residual": 2.945570133793771e-12
+     }
+    ],
+    "volume_m3": 7.114536962962961e-05,
+    "elements": 32524,
+    "dofs": 118467,
+    "h_m": 0.0013,
+    "E_Pa": 200000000000.0,
+    "nu": 0.3,
+    "element": "H8IM"
+   },
+   "worst_T": {
+    "max_disp_m": 7.970199358055006e-05,
+    "compliance_J": 0.09139345238846952,
+    "load_disp_m": 6.007860826046718e-05,
+    "vm_outside_Pa": 130212765.95744534,
+    "vm_max_Pa": 150671361.456231
+   },
+   "worst_20C": {
+    "max_disp_m": 7.279777623069376e-05,
+    "compliance_J": 0.08347645770243359,
+    "load_disp_m": 5.487427458106916e-05,
+    "vm_outside_Pa": 130212765.95751171,
+    "vm_max_Pa": 150671361.45706522
+   },
+   "thermal": {
+    "delta_T_K": 278.0,
+    "alpha_per_K": 1.2e-05,
+    "E_T_Pa": 182674919309.46973,
+    "E_alpha_dT_Pa": 609403530.816391,
+    "vm_outside_Pa": 1060950727.919601,
+    "vm_max_Pa": 1736731532.7614474,
+    "max_disp_m": 0.00027707345796328196
+   }
+  },
+  "convergence": [
+   {
+    "h_mm": 1.95,
+    "elements": 9688,
+    "dofs": 38505,
+    "max_disp_m": 8.475293572262713e-05,
+    "compliance_J": 0.0986516557146773,
+    "load_disp_m": 6.44027054127889e-05,
+    "vm_outside_Pa": 113775157.53708684,
+    "vm_max_Pa": 126795583.01733448,
+    "volume_m3": 7.035947424999998e-05
+   },
+   {
+    "h_mm": 1.3,
+    "elements": 32524,
+    "dofs": 118467,
+    "max_disp_m": 7.970199358055006e-05,
+    "compliance_J": 0.09139345238846952,
+    "load_disp_m": 6.007860826046718e-05,
+    "vm_outside_Pa": 130212765.95744534,
+    "vm_max_Pa": 150671361.456231,
+    "volume_m3": 7.114536962962961e-05
+   },
+   {
+    "h_mm": 0.975,
+    "elements": 78293,
+    "dofs": 272235,
+    "max_disp_m": 7.900583103468016e-05,
+    "compliance_J": 0.08901271600713404,
+    "load_disp_m": 5.842801398406063e-05,
+    "vm_outside_Pa": 133923563.97924405,
+    "vm_max_Pa": 159927926.7115598,
+    "volume_m3": 7.185364021875e-05
+   }
+  ],
+  "designs": [
+   {
+    "label": "initial",
+    "volfrac": 1.0,
+    "volume_m3": 7.352173662085309e-05,
+    "stress_unitE": {
+     "LC1 +x": 130212765.95744534,
+     "LC2 +y": 77620472.15747994,
+     "LC3 +z": 54766666.49363332
+    },
+    "disp_unitE": 14559555.246130856,
+    "compliance_unitE": 16695291540.477533,
+    "vm_max_unitE": 150671361.456231
+   },
+   {
+    "label": "topo 50 %",
+    "volfrac": 0.5,
+    "volume_m3": 3.6684768427495574e-05,
+    "iterations": 50,
+    "converged": false,
+    "gray_pct": 1.3329971290898956,
+    "seconds": 233.57909910000308,
+    "compliance_history": [
+     21.02624567164701,
+     9.336270735691311,
+     5.808935405743906,
+     4.634303745992611,
+     4.365844446962754,
+     4.213816424394038,
+     4.126630385609329,
+     4.0761102929378525,
+     4.045734083952467,
+     4.026271491399479,
+     3.966217697466413,
+     3.967017568795149,
+     3.9596868513922754,
+     3.953825472064779,
+     3.949077324817689,
+     3.945154867428169,
+     3.9419213192202074,
+     3.9392147029642253,
+     3.9369936815491626,
+     3.9351472319572007,
+     3.8468675280260274,
+     3.8534499424561854,
+     3.851782408273252,
+     3.850374859802,
+     3.849148803843145,
+     3.8480821155825424,
+     3.8471145776407156,
+     3.8462047425898716,
+     3.8454090377807475,
+     3.844718022516192,
+     3.7601215021040497,
+     3.7596589428709057,
+     3.75797281980247,
+     3.7565980254906717,
+     3.7554321876392227,
+     3.7544308299107585,
+     3.753647322413671,
+     3.7529716445223107,
+     3.752316731341405,
+     3.7516949559881247,
+     3.713803994042865,
+     3.7120650835555296,
+     3.7109032295722635,
+     3.7110907816951704,
+     3.710436120309101,
+     3.710382017402007,
+     3.7102498656724605,
+     3.7105359033550753,
+     3.7104612010192883,
+     3.710637927310762
+    ],
+    "beta_history": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0
+    ],
+    "volume_fraction_kept": 0.5011376214487763,
+    "overhang_violations": 0,
+    "stress_unitE": {
+     "LC1 +x": 124135256.63862886,
+     "LC2 +y": 122263060.77357043,
+     "LC3 +z": 58779702.73032022
+    },
+    "disp_unitE": 18227212.637472577,
+    "compliance_unitE": 20300989675.732777,
+    "vm_max_unitE": 185832157.56854838,
+    "settings": {
+     "volfrac": 0.5,
+     "rmin": 2.0,
+     "penal": 3.0,
+     "emin_ratio": 1e-06,
+     "projection": true,
+     "eta": 0.5,
+     "beta_max": 16.0,
+     "move": 0.2,
+     "am_axis": null,
+     "am_sign": 1,
+     "element": "H8",
+     "solver": "pardiso"
+    }
+   },
+   {
+    "label": "topo 35 %",
+    "volfrac": 0.35,
+    "volume_m3": 2.5616650095130824e-05,
+    "iterations": 50,
+    "converged": false,
+    "gray_pct": 1.9133624389299164,
+    "seconds": 192.8945090999987,
+    "compliance_history": [
+     4.062632746436199,
+     6.619185190459721,
+     8.437932348828628,
+     7.2319155064948974,
+     6.699209903222421,
+     6.404958305037795,
+     6.212391676330028,
+     6.082463986920617,
+     5.992589667478915,
+     5.928081517236361,
+     5.730926060333944,
+     5.693721780058777,
+     5.672665869917449,
+     5.656863359528337,
+     5.644466144808669,
+     5.634465481440945,
+     5.626294466183883,
+     5.61958386874589,
+     5.6139689499591485,
+     5.609140474522389,
+     5.312784196483353,
+     5.296184126892333,
+     5.292837473799699,
+     5.290065000081203,
+     5.287679004510138,
+     5.285588928293921,
+     5.283835367360133,
+     5.28235415806576,
+     5.2810638437895605,
+     5.2798250341835455,
+     4.999983255208411,
+     4.982758533669635,
+     4.978345300980818,
+     4.97513725942129,
+     4.9725633805993725,
+     4.970271672680614,
+     4.968275026055833,
+     4.966444911470709,
+     4.964726145172664,
+     4.96326187366644,
+     4.839794519160069,
+     4.8341040075320745,
+     4.82825835400891,
+     4.832999931698212,
+     4.825978347780241,
+     4.833862461498577,
+     4.826041204811757,
+     4.83492192909579,
+     4.826827693226035,
+     4.836187272664853
+    ],
+    "beta_history": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0
+    ],
+    "volume_fraction_kept": 0.35124830894108966,
+    "overhang_violations": 0,
+    "stress_unitE": {
+     "LC1 +x": 146619277.308492,
+     "LC2 +y": 171047257.19201407,
+     "LC3 +z": 63667910.33631813
+    },
+    "disp_unitE": 23296806.515712097,
+    "compliance_unitE": 26126542506.930862,
+    "vm_max_unitE": 236386055.32867604,
+    "settings": {
+     "volfrac": 0.35,
+     "rmin": 2.0,
+     "penal": 3.0,
+     "emin_ratio": 1e-06,
+     "projection": true,
+     "eta": 0.5,
+     "beta_max": 16.0,
+     "move": 0.2,
+     "am_axis": null,
+     "am_sign": 1,
+     "element": "H8",
+     "solver": "pardiso"
+    }
+   },
+   {
+    "label": "topo 25 %",
+    "volfrac": 0.25,
+    "volume_m3": 1.821444391332847e-05,
+    "iterations": 50,
+    "converged": false,
+    "gray_pct": 2.18732541858698,
+    "seconds": 182.63034949999928,
+    "compliance_history": [
+     5.904074994678937,
+     10.09572159068623,
+     14.788742986967378,
+     12.641458933137896,
+     11.479054838468876,
+     10.866537547911786,
+     10.485025533031662,
+     10.217897968877475,
+     10.02063928295576,
+     9.870620540139083,
+     9.446921173301053,
+     9.21069445193126,
+     9.154852097575715,
+     9.11454147458661,
+     9.083132002784465,
+     9.058078544802362,
+     9.03780793007306,
+     9.020598798090527,
+     9.006565059887496,
+     8.994429238357718,
+     8.288877354733216,
+     8.124723852171057,
+     8.113451949243137,
+     8.104956521138911,
+     8.097628140695708,
+     8.091279727077236,
+     8.085544533272856,
+     8.080155388724297,
+     8.075696637076799,
+     8.071825897286423,
+     7.366279549240041,
+     7.294605262185971,
+     7.279143634105736,
+     7.266726947281097,
+     7.256851224658205,
+     7.249386388583183,
+     7.2431572955943,
+     7.237647323846533,
+     7.232391560045612,
+     7.227289598399853,
+     6.899314724041691,
+     6.8959362976027485,
+     6.880954698428358,
+     6.894013816596526,
+     6.879254779014105,
+     6.89393130972207,
+     6.881009467353456,
+     6.890996086012851,
+     6.882377028988843,
+     6.887898847732243
+    ],
+    "beta_history": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0
+    ],
+    "volume_fraction_kept": 0.25092239576927805,
+    "overhang_violations": 0,
+    "stress_unitE": {
+     "LC1 +x": 218811873.96238634,
+     "LC2 +y": 239104677.92224884,
+     "LC3 +z": 80592154.59080048
+    },
+    "disp_unitE": 32428721.33907281,
+    "compliance_unitE": 36524546111.05025,
+    "vm_max_unitE": 311463392.5983677,
+    "settings": {
+     "volfrac": 0.25,
+     "rmin": 2.0,
+     "penal": 3.0,
+     "emin_ratio": 1e-06,
+     "projection": true,
+     "eta": 0.5,
+     "beta_max": 16.0,
+     "move": 0.2,
+     "am_axis": null,
+     "am_sign": 1,
+     "element": "H8",
+     "solver": "pardiso"
+    }
+   }
+  ],
+  "materials": [
+   {
+    "key": "ti64_lpbf",
+    "name": "Ti-6Al-4V (L-PBF, stress relieved / HIP)",
+    "route": "AM L-PBF + HIP",
+    "am": true,
+    "temp_ok": true,
+    "Tmax_C": 350.0,
+    "E_T_Pa": 96800000000.0,
+    "Fty_T_Pa": 590143550.0405924,
+    "Ftu_T_Pa": 751639416.3183098,
+    "rho": 4410.0,
+    "co2_per_kg": 46.5,
+    "designs": [
+     {
+      "design": "initial",
+      "mass_kg": 0.3242308584979621,
+      "vm_limit_Pa": 130212765.95744534,
+      "stress_factor": 1.0,
+      "utilisation": 0.2598575123865681,
+      "passes": true,
+      "max_disp_m": 0.00015040862857573198,
+      "voxel_vm_limit_Pa": 130212765.95744534,
+      "voxel_utilisation": 0.2598575123865681,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 50 %",
+      "mass_kg": 0.16177982876525548,
+      "vm_limit_Pa": 124135256.63862886,
+      "stress_factor": 1.0,
+      "utilisation": 0.24772900531215453,
+      "passes": true,
+      "max_disp_m": 0.0001882976512135597,
+      "voxel_vm_limit_Pa": 124135256.63862886,
+      "voxel_utilisation": 0.24772900531215453,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 35 %",
+      "mass_kg": 0.11296942691952694,
+      "vm_limit_Pa": 171047257.19201407,
+      "stress_factor": 1.0,
+      "utilisation": 0.34134836494440385,
+      "passes": true,
+      "max_disp_m": 0.0002406694887986787,
+      "voxel_vm_limit_Pa": 171047257.19201407,
+      "voxel_utilisation": 0.34134836494440385,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 25 %",
+      "mass_kg": 0.08032569765777854,
+      "vm_limit_Pa": 388535683.39663184,
+      "stress_factor": 1.6249606104443277,
+      "utilisation": 0.7753764803203693,
+      "passes": true,
+      "max_disp_m": 0.0003350074518499257,
+      "voxel_vm_limit_Pa": 388535683.39663184,
+      "voxel_utilisation": 0.7753764803203693,
+      "stress_basis": "T10"
+     }
+    ],
+    "best": {
+     "design": "topo 25 %",
+     "mass_kg": 0.08032569765777854,
+     "vm_limit_Pa": 388535683.39663184,
+     "stress_factor": 1.6249606104443277,
+     "utilisation": 0.7753764803203693,
+     "passes": true,
+     "max_disp_m": 0.0003350074518499257,
+     "voxel_vm_limit_Pa": 388535683.39663184,
+     "voxel_utilisation": 0.7753764803203693,
+     "stress_basis": "T10"
+    }
+   },
+   {
+    "key": "in718_lpbf",
+    "name": "Inconel 718 (L-PBF, solution + double age)",
+    "route": "AM L-PBF + STA",
+    "am": true,
+    "temp_ok": true,
+    "Tmax_C": 700.0,
+    "E_T_Pa": 184000000000.0,
+    "Fty_T_Pa": 1095828220.8588958,
+    "Ftu_T_Pa": 1274305555.5555556,
+    "rho": 8150.0,
+    "co2_per_kg": 11.6,
+    "designs": [
+     {
+      "design": "initial",
+      "mass_kg": 0.5992021534599526,
+      "vm_limit_Pa": 130212765.95744534,
+      "stress_factor": 1.0,
+      "utilisation": 0.15327497246217,
+      "passes": true,
+      "max_disp_m": 7.912801764201553e-05,
+      "voxel_vm_limit_Pa": 130212765.95744534,
+      "voxel_utilisation": 0.15327497246217,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 50 %",
+      "mass_kg": 0.2989808626840889,
+      "vm_limit_Pa": 124135256.63862886,
+      "stress_factor": 1.0,
+      "utilisation": 0.14612106503511627,
+      "passes": true,
+      "max_disp_m": 9.906093824713357e-05,
+      "voxel_vm_limit_Pa": 124135256.63862886,
+      "voxel_utilisation": 0.14612106503511627,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 35 %",
+      "mass_kg": 0.20877569827531622,
+      "vm_limit_Pa": 171047257.19201407,
+      "stress_factor": 1.0,
+      "utilisation": 0.2013417305366487,
+      "passes": true,
+      "max_disp_m": 0.00012661307888973966,
+      "voxel_vm_limit_Pa": 171047257.19201407,
+      "voxel_utilisation": 0.2013417305366487,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 25 %",
+      "mass_kg": 0.148447717893627,
+      "vm_limit_Pa": 388535683.39663184,
+      "stress_factor": 1.6249606104443277,
+      "utilisation": 0.45734990525162117,
+      "passes": true,
+      "max_disp_m": 0.00017624305075583047,
+      "voxel_vm_limit_Pa": 388535683.39663184,
+      "voxel_utilisation": 0.45734990525162117,
+      "stress_basis": "T10"
+     }
+    ],
+    "best": {
+     "design": "topo 25 %",
+     "mass_kg": 0.148447717893627,
+     "vm_limit_Pa": 388535683.39663184,
+     "stress_factor": 1.6249606104443277,
+     "utilisation": 0.45734990525162117,
+     "passes": true,
+     "max_disp_m": 0.00017624305075583047,
+     "voxel_vm_limit_Pa": 388535683.39663184,
+     "voxel_utilisation": 0.45734990525162117,
+     "stress_basis": "T10"
+    }
+   },
+   {
+    "key": "ss_17_4ph",
+    "name": "17-4PH H1025 (wrought data; L-PBF route)",
+    "route": "AM L-PBF + H1025 + HIP",
+    "am": true,
+    "temp_ok": true,
+    "Tmax_C": 316.0,
+    "E_T_Pa": 173005467386.49258,
+    "Fty_T_Pa": 816108660.785886,
+    "Ftu_T_Pa": 902272777.2777278,
+    "rho": 7806.0,
+    "co2_per_kg": 5.0,
+    "designs": [
+     {
+      "design": "initial",
+      "mass_kg": 0.5739106760623792,
+      "vm_limit_Pa": 130212765.95744534,
+      "stress_factor": 1.0,
+      "utilisation": 0.21647461150880648,
+      "passes": true,
+      "max_disp_m": 8.415661924489905e-05,
+      "voxel_vm_limit_Pa": 130212765.95744534,
+      "voxel_utilisation": 0.21647461150880648,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 50 %",
+      "mass_kg": 0.28636130234503043,
+      "vm_limit_Pa": 124135256.63862886,
+      "stress_factor": 1.0,
+      "utilisation": 0.20637094418357735,
+      "passes": true,
+      "max_disp_m": 0.00010535628100557745,
+      "voxel_vm_limit_Pa": 124135256.63862886,
+      "voxel_utilisation": 0.20637094418357735,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 35 %",
+      "mass_kg": 0.1999635706425912,
+      "vm_limit_Pa": 171047257.19201407,
+      "stress_factor": 1.0,
+      "utilisation": 0.2843606637031965,
+      "passes": true,
+      "max_disp_m": 0.00013465936578563296,
+      "voxel_vm_limit_Pa": 171047257.19201407,
+      "voxel_utilisation": 0.2843606637031965,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 25 %",
+      "mass_kg": 0.14218194918744204,
+      "vm_limit_Pa": 388535683.39663184,
+      "stress_factor": 1.6249606104443277,
+      "utilisation": 0.6459283043575142,
+      "passes": true,
+      "max_disp_m": 0.00018744333245045576,
+      "voxel_vm_limit_Pa": 388535683.39663184,
+      "voxel_utilisation": 0.6459283043575142,
+      "stress_basis": "T10"
+     }
+    ],
+    "best": {
+     "design": "topo 25 %",
+     "mass_kg": 0.14218194918744204,
+     "vm_limit_Pa": 388535683.39663184,
+     "stress_factor": 1.6249606104443277,
+     "utilisation": 0.6459283043575142,
+     "passes": true,
+     "max_disp_m": 0.00018744333245045576,
+     "voxel_vm_limit_Pa": 388535683.39663184,
+     "voxel_utilisation": 0.6459283043575142,
+     "stress_basis": "T10"
+    }
+   },
+   {
+    "key": "scalmalloy",
+    "name": "Scalmalloy (Al-Mg-Sc, L-PBF)",
+    "route": "AM L-PBF + age",
+    "am": true,
+    "temp_ok": false,
+    "Tmax_C": 150.0,
+    "E_T_Pa": 29000000000.0,
+    "Fty_T_Pa": 60000000.0,
+    "Ftu_T_Pa": 103000000.0,
+    "rho": 2670.0,
+    "co2_per_kg": 128.0,
+    "designs": [
+     {
+      "design": "initial",
+      "mass_kg": 0.19630303677767774,
+      "vm_limit_Pa": 130212765.95744534,
+      "stress_factor": 1.0,
+      "utilisation": 2.170212765957422,
+      "passes": false,
+      "max_disp_m": 0.0005020536291769261,
+      "voxel_vm_limit_Pa": 130212765.95744534,
+      "voxel_utilisation": 2.170212765957422,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 50 %",
+      "mass_kg": 0.09794833170141318,
+      "vm_limit_Pa": 124135256.63862886,
+      "stress_factor": 1.0,
+      "utilisation": 2.0689209439771474,
+      "passes": false,
+      "max_disp_m": 0.0006285245737059509,
+      "voxel_vm_limit_Pa": 124135256.63862886,
+      "voxel_utilisation": 2.0689209439771474,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 35 %",
+      "mass_kg": 0.0683964557539993,
+      "vm_limit_Pa": 171047257.19201407,
+      "stress_factor": 1.0,
+      "utilisation": 2.8507876198669013,
+      "passes": false,
+      "max_disp_m": 0.0008033381557142102,
+      "voxel_vm_limit_Pa": 171047257.19201407,
+      "voxel_utilisation": 2.8507876198669013,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 25 %",
+      "mass_kg": 0.04863256524858701,
+      "vm_limit_Pa": 388535683.39663184,
+      "stress_factor": 1.6249606104443277,
+      "utilisation": 6.475594723277197,
+      "passes": false,
+      "max_disp_m": 0.0011182317703128555,
+      "voxel_vm_limit_Pa": 388535683.39663184,
+      "voxel_utilisation": 6.475594723277197,
+      "stress_basis": "T10"
+     }
+    ],
+    "best": null
+   },
+   {
+    "key": "structural_steel",
+    "name": "Structural Steel (Ansys Engineering Data default)",
+    "route": "machined from plate / welded",
+    "am": false,
+    "temp_ok": true,
+    "Tmax_C": 400.0,
+    "E_T_Pa": 182674919309.46973,
+    "Fty_T_Pa": 162765957.44680852,
+    "Ftu_T_Pa": 414157291.20146215,
+    "rho": 7850.0,
+    "co2_per_kg": 1.8,
+    "designs": [
+     {
+      "design": "initial",
+      "mass_kg": 0.5771456324736968,
+      "vm_limit_Pa": 130212765.95744534,
+      "stress_factor": 1.0,
+      "utilisation": 0.7999999999999909,
+      "passes": true,
+      "max_disp_m": 7.970199358055006e-05,
+      "voxel_vm_limit_Pa": 130212765.95744534,
+      "voxel_utilisation": 0.7999999999999909,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 50 %",
+      "mass_kg": 0.28797543215584026,
+      "vm_limit_Pa": 124135256.63862886,
+      "stress_factor": 1.0,
+      "utilisation": 0.7626610538582426,
+      "passes": true,
+      "max_disp_m": 9.977950288070932e-05,
+      "voxel_vm_limit_Pa": 124135256.63862886,
+      "voxel_utilisation": 0.7626610538582426,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 35 %",
+      "mass_kg": 0.20109070324677697,
+      "vm_limit_Pa": 171047257.19201407,
+      "stress_factor": 1.0,
+      "utilisation": 1.0508785735979949,
+      "passes": false,
+      "max_disp_m": 0.0001275315002397508,
+      "voxel_vm_limit_Pa": 171047257.19201407,
+      "voxel_utilisation": 1.0508785735979949,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 25 %",
+      "mass_kg": 0.1429833847196285,
+      "vm_limit_Pa": 388535683.39663184,
+      "stress_factor": 1.6249606104443277,
+      "utilisation": 2.387081976423751,
+      "passes": false,
+      "max_disp_m": 0.00017752147619200687,
+      "voxel_vm_limit_Pa": 388535683.39663184,
+      "voxel_utilisation": 2.387081976423751,
+      "stress_basis": "T10"
+     }
+    ],
+    "best": {
+     "design": "topo 50 %",
+     "mass_kg": 0.28797543215584026,
+     "vm_limit_Pa": 124135256.63862886,
+     "stress_factor": 1.0,
+     "utilisation": 0.7626610538582426,
+     "passes": true,
+     "max_disp_m": 9.977950288070932e-05,
+     "voxel_vm_limit_Pa": 124135256.63862886,
+     "voxel_utilisation": 0.7626610538582426,
+     "stress_basis": "voxel"
+    }
+   }
+  ],
+  "choice": {
+   "material": "ti64_lpbf",
+   "design": "topo 25 %",
+   "mass_kg": 0.08032569765777854,
+   "utilisation": 0.7753764803203693,
+   "passes": true
+  },
+  "eco": {
+   "baseline": {
+    "label": "baseline (initial, machined)",
+    "material": "Structural Steel (Ansys Engineering Data default)",
+    "mass_kg": 0.5771456324736968,
+    "bought_kg": 4.617165059789574,
+    "phases": {
+     "material": {
+      "energy_MJ": 122.35487408442371,
+      "co2_kg": 8.310897107621233
+     },
+     "manufacture": {
+      "energy_MJ": 38.668757375737684,
+      "co2_kg": 2.606774440006197
+     },
+     "transport": {
+      "energy_MJ": 0.542516894525275,
+      "co2_kg": 0.0390612164058198
+     },
+     "use": {
+      "energy_MJ": 225086.79666474173,
+      "co2_kg": 16206.249359861404
+     },
+     "end_of_life": {
+      "energy_MJ": 0.0,
+      "co2_kg": 0.0
+     }
+    },
+    "total": {
+     "energy_MJ": 225248.36281309644,
+     "co2_kg": 16217.206092625436
+    },
+    "eol_potential": {
+     "energy_MJ": -0.0,
+     "co2_kg": -0.0
+    },
+    "use_marginal_co2_kg": 5699.313120677755,
+    "inputs": {
+     "route": "machined",
+     "buy_to_fly": null,
+     "am_kwh_per_kg": 31.0,
+     "atomisation_mj_per_kg": 20.0,
+     "rolling_mj_per_kg": 4.0,
+     "rolling_co2_per_kg": 0.2,
+     "machining_mj_per_kg_removed": 5.0,
+     "grid_kgCO2_per_kWh": 0.3,
+     "transport_km": 1000.0,
+     "transport_mj_per_tkm": 0.94,
+     "co2_per_mj_fuel": 0.072,
+     "use_mj_per_tkm": 6.5,
+     "life_km": 60000000.0,
+     "marginal_fuel_kg_per_kg_year": 125.0,
+     "life_years": 25.0,
+     "recovered_fraction": 0.9,
+     "recycled_content": 0.0,
+     "sources": {
+      "am_kwh_per_kg": "Baumers et al. 2010, SFF Symp., Table 5 (SLM250, 316L: 31 kWh/kg) [D-ag]",
+      "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
+      "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
+      "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level (research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+      "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
+      "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
+      "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"
+     },
+     "buy_to_fly_used": 8.0
+    }
+   },
+   "candidates": {
+    "ti64_lpbf": {
+     "audit": {
+      "label": "Ti-6Al-4V (L-PBF, stress relieved / HIP) · topo 25 %",
+      "material": "Ti-6Al-4V (L-PBF, stress relieved / HIP)",
+      "mass_kg": 0.08032569765777854,
+      "bought_kg": 0.10442340695511211,
+      "phases": {
+       "material": {
+        "energy_MJ": 71.5300337642518,
+        "co2_kg": 4.855688423412714
+       },
+       "manufacture": {
+        "energy_MJ": 13.742120355292755,
+        "co2_kg": 1.1451766962743963
+       },
+       "transport": {
+        "energy_MJ": 0.07550615579831182,
+        "co2_kg": 0.005436443217478451
+       },
+       "use": {
+        "energy_MJ": 31327.02208653363,
+        "co2_kg": 2255.545590230421
+       },
+       "end_of_life": {
+        "energy_MJ": 0.0,
+        "co2_kg": 0.0
+       }
+      },
+      "total": {
+       "energy_MJ": 31412.369746808974,
+       "co2_kg": 2261.551891793326
+      },
+      "eol_potential": {
+       "energy_MJ": -0.0,
+       "co2_kg": -2.9857061819396287
+      },
+      "use_marginal_co2_kg": 793.2162643705632,
+      "inputs": {
+       "route": "am",
+       "buy_to_fly": null,
+       "am_kwh_per_kg": 31.0,
+       "atomisation_mj_per_kg": 20.0,
+       "rolling_mj_per_kg": 4.0,
+       "rolling_co2_per_kg": 0.2,
+       "machining_mj_per_kg_removed": 5.0,
+       "grid_kgCO2_per_kWh": 0.3,
+       "transport_km": 1000.0,
+       "transport_mj_per_tkm": 0.94,
+       "co2_per_mj_fuel": 0.072,
+       "use_mj_per_tkm": 6.5,
+       "life_km": 60000000.0,
+       "marginal_fuel_kg_per_kg_year": 125.0,
+       "life_years": 25.0,
+       "recovered_fraction": 0.9,
+       "recycled_content": 0.0,
+       "sources": {
+        "am_kwh_per_kg": "Baumers et al. 2010, SFF Symp., Table 5 (SLM250, 316L: 31 kWh/kg) [D-ag]",
+        "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
+        "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
+        "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level (research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+        "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
+        "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
+        "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"
+       },
+       "buy_to_fly_used": 1.3
+      }
+     },
+     "vs_baseline": {
+      "phases": {
+       "material": {
+        "base_co2_kg": 8.310897107621233,
+        "new_co2_kg": 4.855688423412714,
+        "delta_co2_kg": -3.45520868420852
+       },
+       "manufacture": {
+        "base_co2_kg": 2.606774440006197,
+        "new_co2_kg": 1.1451766962743963,
+        "delta_co2_kg": -1.4615977437318006
+       },
+       "transport": {
+        "base_co2_kg": 0.0390612164058198,
+        "new_co2_kg": 0.005436443217478451,
+        "delta_co2_kg": -0.033624773188341346
+       },
+       "use": {
+        "base_co2_kg": 16206.249359861404,
+        "new_co2_kg": 2255.545590230421,
+        "delta_co2_kg": -13950.703769630982
+       },
+       "end_of_life": {
+        "base_co2_kg": 0.0,
+        "new_co2_kg": 0.0,
+        "delta_co2_kg": 0.0
+       }
+      },
+      "total_base_co2_kg": 16217.206092625436,
+      "total_new_co2_kg": 2261.551891793326,
+      "delta_total_co2_kg": -13955.65420083211,
+      "extra_production_co2_kg": -4.91680642794032,
+      "break_even_km": 0.0,
+      "mass_saving_kg": 0.49681993481591824,
+      "delta_use_marginal_co2_kg": -4906.096856307192
+     },
+     "passes": true
+    },
+    "in718_lpbf": {
+     "audit": {
+      "label": "Inconel 718 (L-PBF, solution + double age) · topo 25 %",
+      "material": "Inconel 718 (L-PBF, solution + double age)",
+      "mass_kg": 0.148447717893627,
+      "bought_kg": 0.19298203326171512,
+      "phases": {
+       "material": {
+        "energy_MJ": 44.86832273334876,
+        "co2_kg": 2.2385915858358953
+       },
+       "manufacture": {
+        "energy_MJ": 25.39643557724171,
+        "co2_kg": 2.1163696314368092
+       },
+       "transport": {
+        "energy_MJ": 0.13954085482000939,
+        "co2_kg": 0.010046941547040675
+       },
+       "use": {
+        "energy_MJ": 57894.609978514534,
+        "co2_kg": 4168.411918453046
+       },
+       "end_of_life": {
+        "energy_MJ": 0.0,
+        "co2_kg": 0.0
+       }
+      },
+      "total": {
+       "energy_MJ": 57965.01427767995,
+       "co2_kg": 4172.776926611866
+      },
+      "eol_potential": {
+       "energy_MJ": -0.0,
+       "co2_kg": -1.2638838701463404
+      },
+      "use_marginal_co2_kg": 1465.9212141995667,
+      "inputs": {
+       "route": "am",
+       "buy_to_fly": null,
+       "am_kwh_per_kg": 31.0,
+       "atomisation_mj_per_kg": 20.0,
+       "rolling_mj_per_kg": 4.0,
+       "rolling_co2_per_kg": 0.2,
+       "machining_mj_per_kg_removed": 5.0,
+       "grid_kgCO2_per_kWh": 0.3,
+       "transport_km": 1000.0,
+       "transport_mj_per_tkm": 0.94,
+       "co2_per_mj_fuel": 0.072,
+       "use_mj_per_tkm": 6.5,
+       "life_km": 60000000.0,
+       "marginal_fuel_kg_per_kg_year": 125.0,
+       "life_years": 25.0,
+       "recovered_fraction": 0.9,
+       "recycled_content": 0.0,
+       "sources": {
+        "am_kwh_per_kg": "Baumers et al. 2010, SFF Symp., Table 5 (SLM250, 316L: 31 kWh/kg) [D-ag]",
+        "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
+        "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
+        "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level (research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+        "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
+        "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
+        "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"
+       },
+       "buy_to_fly_used": 1.3
+      }
+     },
+     "vs_baseline": {
+      "phases": {
+       "material": {
+        "base_co2_kg": 8.310897107621233,
+        "new_co2_kg": 2.2385915858358953,
+        "delta_co2_kg": -6.0723055217853386
+       },
+       "manufacture": {
+        "base_co2_kg": 2.606774440006197,
+        "new_co2_kg": 2.1163696314368092,
+        "delta_co2_kg": -0.49040480856938773
+       },
+       "transport": {
+        "base_co2_kg": 0.0390612164058198,
+        "new_co2_kg": 0.010046941547040675,
+        "delta_co2_kg": -0.029014274858779124
+       },
+       "use": {
+        "base_co2_kg": 16206.249359861404,
+        "new_co2_kg": 4168.411918453046,
+        "delta_co2_kg": -12037.837441408357
+       },
+       "end_of_life": {
+        "base_co2_kg": 0.0,
+        "new_co2_kg": 0.0,
+        "delta_co2_kg": 0.0
+       }
+      },
+      "total_base_co2_kg": 16217.206092625436,
+      "total_new_co2_kg": 4172.776926611866,
+      "delta_total_co2_kg": -12044.429166013571,
+      "extra_production_co2_kg": -6.562710330354726,
+      "break_even_km": 0.0,
+      "mass_saving_kg": 0.4286979145800698,
+      "delta_use_marginal_co2_kg": -4233.3919064781885
+     },
+     "passes": true
+    },
+    "ss_17_4ph": {
+     "audit": {
+      "label": "17-4PH H1025 (wrought data; L-PBF route) · topo 25 %",
+      "material": "17-4PH H1025 (wrought data; L-PBF route)",
+      "mass_kg": 0.14218194918744204,
+      "bought_kg": 0.18483653394367466,
+      "phases": {
+       "material": {
+        "energy_MJ": 15.618687118240508,
+        "co2_kg": 0.9241826697183733
+       },
+       "manufacture": {
+        "energy_MJ": 24.324487866987585,
+        "co2_kg": 2.0270406555822986
+       },
+       "transport": {
+        "energy_MJ": 0.1336510322361955,
+        "co2_kg": 0.009622874321006076
+       },
+       "use": {
+        "energy_MJ": 55450.96018310239,
+        "co2_kg": 3992.469133183372
+       },
+       "end_of_life": {
+        "energy_MJ": 0.0,
+        "co2_kg": 0.0
+       }
+      },
+      "total": {
+       "energy_MJ": 55491.03700911986,
+       "co2_kg": 3995.4299793829937
+      },
+      "eol_potential": {
+       "energy_MJ": -0.0,
+       "co2_kg": -0.5464052307273397
+      },
+      "use_marginal_co2_kg": 1404.04674822599,
+      "inputs": {
+       "route": "am",
+       "buy_to_fly": null,
+       "am_kwh_per_kg": 31.0,
+       "atomisation_mj_per_kg": 20.0,
+       "rolling_mj_per_kg": 4.0,
+       "rolling_co2_per_kg": 0.2,
+       "machining_mj_per_kg_removed": 5.0,
+       "grid_kgCO2_per_kWh": 0.3,
+       "transport_km": 1000.0,
+       "transport_mj_per_tkm": 0.94,
+       "co2_per_mj_fuel": 0.072,
+       "use_mj_per_tkm": 6.5,
+       "life_km": 60000000.0,
+       "marginal_fuel_kg_per_kg_year": 125.0,
+       "life_years": 25.0,
+       "recovered_fraction": 0.9,
+       "recycled_content": 0.0,
+       "sources": {
+        "am_kwh_per_kg": "Baumers et al. 2010, SFF Symp., Table 5 (SLM250, 316L: 31 kWh/kg) [D-ag]",
+        "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
+        "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
+        "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level (research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+        "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
+        "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
+        "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"
+       },
+       "buy_to_fly_used": 1.3
+      }
+     },
+     "vs_baseline": {
+      "phases": {
+       "material": {
+        "base_co2_kg": 8.310897107621233,
+        "new_co2_kg": 0.9241826697183733,
+        "delta_co2_kg": -7.38671443790286
+       },
+       "manufacture": {
+        "base_co2_kg": 2.606774440006197,
+        "new_co2_kg": 2.0270406555822986,
+        "delta_co2_kg": -0.5797337844238983
+       },
+       "transport": {
+        "base_co2_kg": 0.0390612164058198,
+        "new_co2_kg": 0.009622874321006076,
+        "delta_co2_kg": -0.02943834208481372
+       },
+       "use": {
+        "base_co2_kg": 16206.249359861404,
+        "new_co2_kg": 3992.469133183372,
+        "delta_co2_kg": -12213.78022667803
+       },
+       "end_of_life": {
+        "base_co2_kg": 0.0,
+        "new_co2_kg": 0.0,
+        "delta_co2_kg": 0.0
+       }
+      },
+      "total_base_co2_kg": 16217.206092625436,
+      "total_new_co2_kg": 3995.4299793829937,
+      "delta_total_co2_kg": -12221.776113242442,
+      "extra_production_co2_kg": -7.966448222326758,
+      "break_even_km": 0.0,
+      "mass_saving_kg": 0.43496368328625473,
+      "delta_use_marginal_co2_kg": -4295.266372451765
+     },
+     "passes": true
+    },
+    "structural_steel": {
+     "audit": {
+      "label": "Structural Steel (Ansys Engineering Data default) · topo 50 %",
+      "material": "Structural Steel (Ansys Engineering Data default)",
+      "mass_kg": 0.28797543215584026,
+      "bought_kg": 2.303803457246722,
+      "phases": {
+       "material": {
+        "energy_MJ": 61.050791617038136,
+        "co2_kg": 4.1468462230441
+       },
+       "manufacture": {
+        "energy_MJ": 19.2943539544413,
+        "co2_kg": 1.3006890352372118
+       },
+       "transport": {
+        "energy_MJ": 0.27069690622648984,
+        "co2_kg": 0.019490177248307268
+       },
+       "use": {
+        "energy_MJ": 112310.41854077768,
+        "co2_kg": 8086.350134935992
+       },
+       "end_of_life": {
+        "energy_MJ": 0.0,
+        "co2_kg": 0.0
+       }
+      },
+      "total": {
+       "energy_MJ": 112391.03438325539,
+       "co2_kg": 8091.817160371522
+      },
+      "eol_potential": {
+       "energy_MJ": -0.0,
+       "co2_kg": -0.0
+      },
+      "use_marginal_co2_kg": 2843.757392538923,
+      "inputs": {
+       "route": "machined",
+       "buy_to_fly": null,
+       "am_kwh_per_kg": 31.0,
+       "atomisation_mj_per_kg": 20.0,
+       "rolling_mj_per_kg": 4.0,
+       "rolling_co2_per_kg": 0.2,
+       "machining_mj_per_kg_removed": 5.0,
+       "grid_kgCO2_per_kWh": 0.3,
+       "transport_km": 1000.0,
+       "transport_mj_per_tkm": 0.94,
+       "co2_per_mj_fuel": 0.072,
+       "use_mj_per_tkm": 6.5,
+       "life_km": 60000000.0,
+       "marginal_fuel_kg_per_kg_year": 125.0,
+       "life_years": 25.0,
+       "recovered_fraction": 0.9,
+       "recycled_content": 0.0,
+       "sources": {
+        "am_kwh_per_kg": "Baumers et al. 2010, SFF Symp., Table 5 (SLM250, 316L: 31 kWh/kg) [D-ag]",
+        "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
+        "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
+        "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level (research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+        "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
+        "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
+        "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"
+       },
+       "buy_to_fly_used": 8.0
+      }
+     },
+     "vs_baseline": {
+      "phases": {
+       "material": {
+        "base_co2_kg": 8.310897107621233,
+        "new_co2_kg": 4.1468462230441,
+        "delta_co2_kg": -4.164050884577134
+       },
+       "manufacture": {
+        "base_co2_kg": 2.606774440006197,
+        "new_co2_kg": 1.3006890352372118,
+        "delta_co2_kg": -1.3060854047689852
+       },
+       "transport": {
+        "base_co2_kg": 0.0390612164058198,
+        "new_co2_kg": 0.019490177248307268,
+        "delta_co2_kg": -0.01957103915751253
+       },
+       "use": {
+        "base_co2_kg": 16206.249359861404,
+        "new_co2_kg": 8086.350134935992,
+        "delta_co2_kg": -8119.8992249254115
+       },
+       "end_of_life": {
+        "base_co2_kg": 0.0,
+        "new_co2_kg": 0.0,
+        "delta_co2_kg": 0.0
+       }
+      },
+      "total_base_co2_kg": 16217.206092625436,
+      "total_new_co2_kg": 8091.817160371522,
+      "delta_total_co2_kg": -8125.388932253914,
+      "extra_production_co2_kg": -5.470136289346119,
+      "break_even_km": 0.0,
+      "mass_saving_kg": 0.2891702003178565,
+      "delta_use_marginal_co2_kg": -2855.5557281388324
+     },
+     "passes": true
+    }
+   }
+  },
+  "timings": {
+   "calibration_factor": 0.16348702459929945,
+   "baseline_s": 53.04461000000083,
+   "convergence_s": 46.25313329999699,
+   "topology_s": 615.7158682754002,
+   "tet_check_s": 250.08658279999872,
+   "total_s": 965.2643375000007
+  },
+  "cad": {
+   "initial": {
+    "copied": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\out\\dryrun_cold\\cad\\initial.step"
+   },
+   "initial_voxel_surface": {
+    "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\out\\dryrun_cold\\cad\\initial_voxels.stl",
+    "triangles": 24594,
+    "volume_mm3": 70507.4765625,
+    "level": 0.5,
+    "target_volume_mm3": null,
+    "bodies": 1,
+    "watertight": true,
+    "method": "vtk flying edges + Taubin"
+   },
+   "topo 50 %": {
+    "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\out\\dryrun_cold\\cad\\optimised_50.stl",
+    "triangles": 23356,
+    "volume_mm3": 36221.41796875,
+    "level": 0.485,
+    "target_volume_mm3": 35808.903,
+    "bodies": 1,
+    "watertight": true,
+    "method": "vtk flying edges + Taubin"
+   },
+   "topo 35 %": {
+    "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\out\\dryrun_cold\\cad\\optimised_35.stl",
+    "triangles": 24432,
+    "volume_mm3": 25244.0234375,
+    "level": 0.47,
+    "target_volume_mm3": 25098.528,
+    "bodies": 1,
+    "watertight": true,
+    "method": "vtk flying edges + Taubin"
+   },
+   "topo 25 %": {
+    "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\out\\dryrun_cold\\cad\\optimised_25.stl",
+    "triangles": 21792,
+    "volume_mm3": 17821.654296875,
+    "level": 0.45499999999999996,
+    "target_volume_mm3": 17929.716999999997,
+    "bodies": 1,
+    "watertight": true,
+    "method": "vtk flying edges + Taubin"
+   }
+  },
+  "tet": {
+   "initial": [
+    {
+     "cases": [
+      {
+       "name": "LC1 +x",
+       "compliance_J": 0.08647750643456814,
+       "max_disp_m": 7.604523138119008e-05,
+       "load_disp_m": 5.6773636242656494e-05,
+       "vm_outside_Pa": 106786110.35615438,
+       "vm_outside_at_m": [
+        0.04710163945352273,
+        0.034,
+        0.008898360546477272
+       ],
+       "vm_max_Pa": 230380910.91452605,
+       "vm_max_at_m": [
+        0.008236067977499999,
+        0.026000000000000002,
+        0.047527864045
+       ]
+      },
+      {
+       "name": "LC2 +y",
+       "compliance_J": 0.0697682443951653,
+       "max_disp_m": 5.858763447575326e-05,
+       "load_disp_m": 4.200997880762761e-05,
+       "vm_outside_Pa": 78099293.44581458,
+       "vm_outside_at_m": [
+        0.008,
+        0.0577797426969828,
+        0.008906067595137903
+       ],
+       "vm_max_Pa": 179356819.21311688,
+       "vm_max_at_m": [
+        0.026812444773246073,
+        0.0488541028488383,
+        0.0
+       ]
+      },
+      {
+       "name": "LC3 +z",
+       "compliance_J": 0.025370710406462316,
+       "max_disp_m": 3.0788274415152315e-05,
+       "load_disp_m": 2.486953844290713e-05,
+       "vm_outside_Pa": 45014400.67038701,
+       "vm_outside_at_m": [
+        0.04710163945352273,
+        0.034,
+        0.008898360546477272
+       ],
+       "vm_max_Pa": 128746460.95480675,
+       "vm_max_at_m": [
+        0.02681244477324608,
+        0.04714589715116167,
+        0.0
+       ]
+      }
+     ],
+     "elements": 28723,
+     "nodes": 48170,
+     "dofs": 144510,
+     "volume_m3": 7.352188087221082e-05,
+     "solver": "pardiso",
+     "solve_s": 3.9352863999993133,
+     "assemble_s": 42.67309560000285,
+     "total_s": 49.78704410000137,
+     "mesh": {
+      "size_mm": 2.6,
+      "elements": 28723,
+      "nodes": 48170,
+      "mesh_s": 1.9523475999994844
+     },
+     "size_mm": 2.6,
+     "worst": {
+      "max_disp_m": 7.604523138119008e-05,
+      "compliance_J": 0.08647750643456814,
+      "load_disp_m": 5.6773636242656494e-05,
+      "vm_outside_Pa": 106786110.35615438,
+      "vm_max_Pa": 230380910.91452605
+     }
+    },
+    {
+     "cases": [
+      {
+       "name": "LC1 +x",
+       "compliance_J": 0.08721951411324594,
+       "max_disp_m": 7.652030798382877e-05,
+       "load_disp_m": 5.724246125888578e-05,
+       "vm_outside_Pa": 123160029.9820344,
+       "vm_outside_at_m": [
+        0.047418707881691176,
+        0.034,
+        0.008581292118308825
+       ],
+       "vm_max_Pa": 221708171.44438013,
+       "vm_max_at_m": [
+        0.008236067977499999,
+        0.026000000000000002,
+        0.047527864045
+       ]
+      },
+      {
+       "name": "LC2 +y",
+       "compliance_J": 0.07035733965015863,
+       "max_disp_m": 5.905012614590906e-05,
+       "load_disp_m": 4.241121086293615e-05,
+       "vm_outside_Pa": 91923695.07440105,
+       "vm_outside_at_m": [
+        0.008,
+        0.05711438492155967,
+        0.00862446321671521
+       ],
+       "vm_max_Pa": 184054243.46951497,
+       "vm_max_at_m": [
+        0.02707799511534439,
+        0.010466413532255598,
+        0.0
+       ]
+      },
+      {
+       "name": "LC3 +z",
+       "compliance_J": 0.02544457110319354,
+       "max_disp_m": 3.0823074248898106e-05,
+       "load_disp_m": 2.496344326414952e-05,
+       "vm_outside_Pa": 51575741.06552347,
+       "vm_outside_at_m": [
+        0.047418707881691176,
+        0.034,
+        0.008581292118308825
+       ],
+       "vm_max_Pa": 131600247.32560952,
+       "vm_max_at_m": [
+        0.0267,
+        0.048000000000000036,
+        0.0
+       ]
+      }
+     ],
+     "elements": 78805,
+     "nodes": 124374,
+     "dofs": 373122,
+     "volume_m3": 7.352179778091367e-05,
+     "solver": "pardiso",
+     "solve_s": 16.063088500002777,
+     "assemble_s": 102.61741640000037,
+     "total_s": 124.63444979999986,
+     "mesh": {
+      "size_mm": 1.69,
+      "elements": 78805,
+      "nodes": 124374,
+      "mesh_s": 6.626263800000743
+     },
+     "size_mm": 1.69,
+     "worst": {
+      "max_disp_m": 7.652030798382877e-05,
+      "compliance_J": 0.08721951411324594,
+      "load_disp_m": 5.724246125888578e-05,
+      "vm_outside_Pa": 123160029.9820344,
+      "vm_max_Pa": 221708171.44438013
+     }
+    }
+   ],
+   "chosen": {
+    "cases": [
+     {
+      "name": "LC1 +x",
+      "compliance_J": 0.34658251005914487,
+      "max_disp_m": 0.0003015955385393477,
+      "load_disp_m": 0.00022482405244375335,
+      "vm_outside_Pa": 231133504.75258663,
+      "vm_outside_at_m": [
+       0.003733450174331665,
+       0.03971188735961914,
+       0.02021786117553711
+      ],
+      "vm_max_Pa": 326281610.84436476,
+      "vm_max_at_m": [
+       0.025724200248718264,
+       0.011035289287567139,
+       -6.815697997808456e-05
+      ]
+     },
+     {
+      "name": "LC2 +y",
+      "compliance_J": 0.33577283133023506,
+      "max_disp_m": 0.00024752758866082954,
+      "load_disp_m": 0.00020414604606780893,
+      "vm_outside_Pa": 388535683.39663184,
+      "vm_outside_at_m": [
+       0.010977303504943848,
+       0.02971652030944824,
+       0.02028742504119873
+      ],
+      "vm_max_Pa": 504381109.9498282,
+      "vm_max_at_m": [
+       0.029595301628112792,
+       0.008331671237945556,
+       0.00022739794850349426
+      ]
+     },
+     {
+      "name": "LC3 +z",
+      "compliance_J": 0.0986264977244294,
+      "max_disp_m": 0.00010816051723926164,
+      "load_disp_m": 9.18058925400914e-05,
+      "vm_outside_Pa": 117374184.73466644,
+      "vm_outside_at_m": [
+       0.003733450174331665,
+       0.03971188735961914,
+       0.02021786117553711
+      ],
+      "vm_max_Pa": 259016276.50953934,
+      "vm_max_at_m": [
+       0.025724200248718264,
+       0.011035289287567139,
+       -6.815697997808456e-05
+      ]
+     }
+    ],
+    "elements": 42096,
+    "nodes": 78501,
+    "dofs": 235503,
+    "volume_m3": 1.782162839310022e-05,
+    "solver": "pardiso",
+    "solve_s": 4.613147799998842,
+    "assemble_s": 51.88376289999724,
+    "total_s": 61.103217899999436,
+    "mesh": {
+     "size_mm": 1.69,
+     "elements": 42096,
+     "nodes": 78501,
+     "mesh_s": 4.411634500000218,
+     "source": "stl (discrete)"
+    },
+    "worst": {
+     "max_disp_m": 0.0003015955385393477,
+     "compliance_J": 0.34658251005914487,
+     "load_disp_m": 0.00022482405244375335,
+     "vm_outside_Pa": 388535683.39663184,
+     "vm_max_Pa": 504381109.9498282
+    },
+    "utilisation": 0.7753764803203693,
+    "voxel_utilisation": 0.4771663235014362
+   },
+   "errors": [],
+   "stl": {
+    "topo 25 %": {
+     "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\out\\dryrun_cold\\cad\\optimised_25.stl",
+     "triangles": 21792,
+     "volume_mm3": 17821.654296875,
+     "level": 0.45499999999999996,
+     "target_volume_mm3": 17929.716999999997,
+     "bodies": 1,
+     "watertight": true,
+     "method": "vtk flying edges + Taubin"
+    }
+   }
+  },
+  "verification": [
+   {
+    "material": "ti64_lpbf",
+    "design": "topo 25 %",
+    "voxel_stress_Pa": 239104677.92224884,
+    "t10_stress_Pa": 388535683.39663184,
+    "factor": 1.6249606104443277,
+    "t10_utilisation": 0.7753764803203693,
+    "passes": true
+   }
+  ],
+  "stress_factors": {
+   "topo 25 %": 1.6249606104443277
+  },
+  "voxel": {
+   "h_m": 0.0013,
+   "shape": [
+    70,
+    47,
+    49
+   ],
+   "origin_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "elements": 32524,
+   "keep_elements": 2316
+  },
+  "bolt_check": {
+   "rows": [
+    {
+     "case": "LC1 +x",
+     "hole": "H2",
+     "fea_shear_N": 427.8460342416547,
+     "fea_axial_N": -480.30173919940256,
+     "classical_shear_N": 406.280631741592,
+     "classical_axial_N": -869.6601447434966,
+     "fea_clamp_moment_Nm": 23.93062710819207
+    },
+    {
+     "case": "LC1 +x",
+     "hole": "H3",
+     "fea_shear_N": 450.32489354165585,
+     "fea_axial_N": -474.87303213385184,
+     "classical_shear_N": 411.17741003343946,
+     "classical_axial_N": -869.6601447434966,
+     "fea_clamp_moment_Nm": 24.169325815067218
+    },
+    {
+     "case": "LC1 +x",
+     "hole": "H4",
+     "fea_shear_N": 501.05819480558324,
+     "fea_axial_N": 486.1451317676647,
+     "classical_shear_N": 406.280631741592,
+     "classical_axial_N": 869.6601447434961,
+     "fea_clamp_moment_Nm": 7.218069070035122
+    },
+    {
+     "case": "LC1 +x",
+     "hole": "H5",
+     "fea_shear_N": 497.81248666223183,
+     "fea_axial_N": 469.0296395768849,
+     "classical_shear_N": 411.17741003343946,
+     "classical_axial_N": 869.6601447434961,
+     "fea_clamp_moment_Nm": 6.973883126279103
+    },
+    {
+     "case": "LC2 +y",
+     "hole": "H2",
+     "fea_shear_N": 1269.2388940108394,
+     "fea_axial_N": -2101.4194622194677,
+     "classical_shear_N": 1040.3467289542032,
+     "classical_axial_N": -1087.14235996454,
+     "fea_clamp_moment_Nm": 16.786391586701853
+    },
+    {
+     "case": "LC2 +y",
+     "hole": "H3",
+     "fea_shear_N": 1268.3097247548542,
+     "fea_axial_N": 2099.7013707011115,
+     "classical_shear_N": 1040.3467289542032,
+     "classical_axial_N": 1087.1423599645402,
+     "fea_clamp_moment_Nm": 16.780917963229847
+    },
+    {
+     "case": "LC2 +y",
+     "hole": "H4",
+     "fea_shear_N": 96.09669267933135,
+     "fea_axial_N": 31.051423577368404,
+     "classical_shear_N": 449.7252342081333,
+     "classical_axial_N": -1087.14235996454,
+     "fea_clamp_moment_Nm": 0.45756111047946785
+    },
+    {
+     "case": "LC2 +y",
+     "hole": "H5",
+     "fea_shear_N": 96.15926214441815,
+     "fea_axial_N": -29.333332055012296,
+     "classical_shear_N": 449.7252342081335,
+     "classical_axial_N": 1087.1423599645402,
+     "fea_clamp_moment_Nm": 0.44153456529603824
+    },
+    {
+     "case": "LC3 +z",
+     "hole": "H2",
+     "fea_shear_N": 275.5258135532572,
+     "fea_axial_N": -1017.4664054180362,
+     "classical_shear_N": 0.0,
+     "classical_axial_N": -1290.7914451479216,
+     "fea_clamp_moment_Nm": 15.074162882655944
+    },
+    {
+     "case": "LC3 +z",
+     "hole": "H3",
+     "fea_shear_N": 275.8999845029649,
+     "fea_axial_N": -1027.461404818867,
+     "classical_shear_N": 0.0,
+     "classical_axial_N": -1292.3035435210104,
+     "fea_clamp_moment_Nm": 15.332445497637037
+    },
+    {
+     "case": "LC3 +z",
+     "hole": "H4",
+     "fea_shear_N": 137.16295086967912,
+     "fea_axial_N": 208.36829456006842,
+     "classical_shear_N": 0.0,
+     "classical_axial_N": 474.86842052451294,
+     "fea_clamp_moment_Nm": 2.9164587492210607
+    },
+    {
+     "case": "LC3 +z",
+     "hole": "H5",
+     "fea_shear_N": 136.34278097768458,
+     "fea_axial_N": 201.68926969066652,
+     "classical_shear_N": 0.0,
+     "classical_axial_N": 473.3563221514243,
+     "fea_clamp_moment_Nm": 2.8216230985737254
+    }
+   ],
+   "axis": "z",
+   "reaction_N": {
+    "LC1 +x": {
+     "H2": [
+      -344.51468784605345,
+      -253.69639113445726,
+      -480.30173919940256
+     ],
+     "H3": [
+      -372.62189971104874,
+      252.87433558792168,
+      -474.87303213385184
+     ],
+     "H4": [
+      -460.4565442102285,
+      197.5831102999538,
+      486.1451317676647
+     ],
+     "H5": [
+      -457.2771142471813,
+      -196.7610547405279,
+      469.0296395768849
+     ]
+    },
+    "LC2 +y": {
+     "H2": [
+      944.2054216646985,
+      -848.2001484135966,
+      -2101.4194622194677
+     ],
+     "H3": [
+      -943.1222507122445,
+      -848.0153171489324,
+      2099.7013707011115
+     ],
+     "H4": [
+      90.54741319653019,
+      32.1829194965697,
+      31.051423577368404
+     ],
+     "H5": [
+      -91.63058414134768,
+      29.162300082029383,
+      -29.333332055012296
+     ]
+    },
+    "LC3 +z": {
+     "H2": [
+      122.83643309202893,
+      -246.62863710326047,
+      -1017.4664054180362
+     ],
+     "H3": [
+      123.11629546914658,
+      246.90722800009334,
+      -1027.461404818867
+     ],
+     "H4": [
+      -123.50014365005981,
+      59.67737938023589,
+      208.36829456006842
+     ],
+     "H5": [
+      -122.45258492022366,
+      -59.955970270560066,
+      201.68926969066652
+     ]
+    }
+   },
+   "clamp_moment_Nm": {
+    "LC1 +x": {
+     "H2": [
+      1.1647922361177354,
+      -23.862724048956938,
+      1.374253907161679
+     ],
+     "H3": [
+      -1.0155603505295545,
+      -24.106982494988056,
+      -1.4065356432193559
+     ],
+     "H4": [
+      3.208575827636496,
+      6.462904199627724,
+      0.19087054392650266
+     ],
+     "H5": [
+      -3.1474455814079714,
+      6.2202540273877664,
+      -0.19254091991597772
+     ]
+    },
+    "LC2 +y": {
+     "H2": [
+      2.2529246777726266,
+      -16.574688469172376,
+      1.4096010244966892
+     ],
+     "H3": [
+      1.9383264488945442,
+      16.630053055291462,
+      1.1328873043498997
+     ],
+     "H4": [
+      -0.22339254708709874,
+      0.3956482395676429,
+      0.054040820276594785
+     ],
+     "H5": [
+      -0.2268580537582135,
+      -0.37369870680041956,
+      0.06194733514761586
+     ]
+    },
+    "LC3 +z": {
+     "H2": [
+      -3.5258500859561277,
+      -14.65375254933866,
+      0.2574956445379375
+     ],
+     "H3": [
+      3.7509480689982446,
+      -14.864902745708017,
+      -0.2212236025627349
+     ],
+     "H4": [
+      1.1050620268889961,
+      2.697635873125558,
+      0.08561687136402266
+     ],
+     "H5": [
+      -1.0844631147017965,
+      2.6034963926249137,
+      -0.08545874352650952
+     ]
+    }
+   }
+  }
+ }
+}

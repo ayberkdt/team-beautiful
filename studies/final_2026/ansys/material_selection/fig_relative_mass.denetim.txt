@@ -1,0 +1,5 @@
+figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] birim              eksen 0: x etiketi birim içermiyor: 'Mass relative to the best at 300 °C'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [APSStyleGuide (nicelik (birim)); NatureFigGuide; Wilke2019 W6]
+  [BİLGİ] birim              eksen 0: y etiketi birim içermiyor: 'Material'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [APSStyleGuide (nicelik (birim)); NatureFigGuide; Wilke2019 W6]

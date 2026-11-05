@@ -1,0 +1,7 @@
+set tutarlılığı (7 figür): 0 HATA · 2 UYARI · 1 BİLGİ · SET TUTARLI
+  [UYARI] cizim-alani-hizasi sunum-tam: çizim alanının sol kenarı figürden figüre 171.9 pt oynuyor — F1_wrong_values_vs_snr 16.0 mm, F2_withheld_vs_snr 16.0 mm, F3_psr_pd_vs_range 14.3 mm, F4_comm_state_timeline 73.1 mm, F5_real_asr_threshold 16.0 mm
+          → alt alta duran figürlerde eksenler aynı hizada olsun: S.kenar(*S.kenar_oner()) ile sabit kenar, sonra figürleri yeniden üret  [06 T15: Wilke2019Ch21 §21.2 (paneller hizalı) — figürler arasına genişletme datawiz-secimi]
+  [UYARI] izgara             izgara figürden figüre değişiyor — değer: F1_wrong_values_vs_snr, F2_withheld_vs_snr, F3_psr_pd_vs_range, F5_real_asr_threshold … · kategori: F4_comm_state_timeline, F6_psr_false_plots
+          → aynı tema her figürde: Seti.figur(...)  [06 T6: AIAAFig; ElsevierSizing; Kosslyn2012 (anlamsız görsel değişim)]
+  [BİLGİ] adlandirma-yontemi seri adlandırma yöntemi karışık — doğrudan etiket: F1_wrong_values_vs_snr, F2_withheld_vs_snr, F3_psr_pd_vs_range, F5_real_asr_threshold … · lejant: F6_psr_false_plots
+          → mümkünse hep doğrudan etiket; lejant gerekiyorsa her figürde aynı konum  [06 T1/T2: Qu2018 C1.4, C2.4; UrbanStyle; DatawrapperColors2018; TableauBlueprint; Few2008Color; Kosslyn2012 — işaret/çizgi tipi datawiz-secimi]

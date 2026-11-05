@@ -1,0 +1,14 @@
+{
+ "fake_ansys_data": true,
+ "scenario": "room_temperature",
+ "planted_factors": {
+  "max_deformation_mm": 0.9133745965473486,
+  "load_point_deformation_mm": 0.9133745965473486,
+  "strain_energy_J": 0.9133745965473486,
+  "compliance_J": 0.9133745965473486,
+  "max_von_mises_MPa": 1.06,
+  "von_mises_outside_MPa": 1.06,
+  "min_safety_factor": 0.9433962264150942
+ },
+ "source_folder": "studies\\final_2026\\ansys\\out\\sketch"
+}

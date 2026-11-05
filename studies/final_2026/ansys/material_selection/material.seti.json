@@ -1,0 +1,43 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "genel",
+ "hedef": "genel-tek",
+ "ortam": "makale",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {
+  "20 °C": {
+   "renk": "#919191",
+   "baglam": true,
+   "isaret": null,
+   "cizgi": "-",
+   "sira": 0
+  },
+  "300 °C": {
+   "renk": "#0072b2",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 1
+  }
+ },
+ "nicelikler": {
+  "relm": {
+   "etiket": "Mass relative to the best at 300 °C",
+   "birim": null,
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "fig_relative_mass": "fig_relative_mass.dw.json"
+ }
+}

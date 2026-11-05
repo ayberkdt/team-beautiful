@@ -1,0 +1,170 @@
+{
+ "surum": 1,
+ "ad": "F12_deployment_monte_carlo",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  850.2,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    40.6,
+    73.3,
+    659.4,
+    379.5
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Pull-out in forward flight",
+     "tur": "cizgi",
+     "renk": "#0072b2",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Pull-out straight down",
+     "tur": "cizgi",
+     "renk": "#000000",
+     "isaret": null,
+     "cizgi": ":",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Altitude lost after release (m)",
+    "nicelik": "Altitude lost after release",
+    "birim": "m",
+    "bicim": "parantez",
+    "anahtar": "altitudelostafterrelease",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     20.0,
+     60.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "20",
+     "30",
+     "40",
+     "50",
+     "60"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     204.8,
+     3.0,
+     495.1,
+     25.3
+    ]
+   },
+   "y": {
+    "ham": "Fraction of 300 runs",
+    "nicelik": "Fraction of 300 runs",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "fractionof300runs",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     1.02
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     1
+    ],
+    "ondalik_isareti": ".",
+    "tikler": [
+     "0.0",
+     "0.2",
+     "0.4",
+     "0.6",
+     "0.8",
+     "1.0"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     40.6,
+     388.7,
+     238.8,
+     411.0
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [
+    "Pull-out in forward flight",
+    "Pull-out straight down"
+   ],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

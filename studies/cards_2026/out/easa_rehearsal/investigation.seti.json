@@ -1,0 +1,99 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "sunum",
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {
+  "Flown": {
+   "renk": "#0072b2",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 0
+  },
+  "3° path": {
+   "renk": "#919191",
+   "baglam": true,
+   "isaret": null,
+   "cizgi": "-",
+   "sira": 1
+  },
+  "Held": {
+   "renk": "#009e73",
+   "baglam": false,
+   "isaret": "s",
+   "cizgi": "--",
+   "sira": 2
+  },
+  "Failed": {
+   "renk": "#d55e00",
+   "baglam": false,
+   "isaret": "^",
+   "cizgi": "-.",
+   "sira": 3
+  }
+ },
+ "nicelikler": {
+  "dist": {
+   "etiket": "Distance to the threshold",
+   "birim": "km",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "hgt": {
+   "etiket": "Height above the threshold",
+   "birim": "ft",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "gs": {
+   "etiket": "Ground speed",
+   "birim": "kt",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "barrier": {
+   "etiket": "ERCS barrier",
+   "birim": null,
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "weight": {
+   "etiket": "Barrier weight",
+   "birim": null,
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "E1_vertical_profile": "E1_vertical_profile.dw.json",
+  "E2_speed_profile": "E2_speed_profile.dw.json",
+  "E3_ercs_barriers": "E3_ercs_barriers.dw.json"
+ },
+ "kenar_mm": {
+  "tam": [
+   86.6,
+   25.6,
+   71.2,
+   12.2
+  ]
+ }
+}

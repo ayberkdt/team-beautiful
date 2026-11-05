@@ -1,0 +1,167 @@
+{
+ "schema": "ansys-film/1",
+ "status": "preview",
+ "_preview": "PREVIEW — geometry and loads only, no analysis",
+ "card": "PREVIEW — geometry and loads only, no analysis · official EUROAVIA 2026 bracket (organiser CAD + card)",
+ "part_name": "EUROAVIA 2026 cowling-support bracket (initial S275N design)",
+ "temperature_C": 300.0,
+ "baseline": {
+  "material": "Structural steel, S275N",
+  "mass_kg": 152.26533757522702,
+  "geometry": "baslangic.stl",
+  "unit": "mm",
+  "up": "z",
+  "note": "organiser CAD, initial design"
+ },
+ "redesign": {
+  "material": null,
+  "route": null,
+  "mass_kg": null,
+  "geometry": null,
+  "retained_volume": null
+ },
+ "loads": "yukler.json",
+ "density": null,
+ "print": null,
+ "stress": null,
+ "materials": [
+  {
+   "name": "Structural steel, S275N",
+   "baseline": true,
+   "catalogue_key": "S275N"
+  },
+  {
+   "name": "Aluminum 2618-T6",
+   "catalogue_key": "Al2618"
+  },
+  {
+   "name": "Ti-8Al-1Mo-1V (single annealed)",
+   "catalogue_key": "Ti811"
+  }
+ ],
+ "materials_catalogue": "catalogue/materials_catalogue.json",
+ "eco_audit": null,
+ "cad_setup": {
+  "holes": [
+   {
+    "id": "H1",
+    "role": "load",
+    "center_mm": [
+     500.0,
+     65.0,
+     260.0
+    ],
+    "diameter_mm": 60.0,
+    "axis": "y"
+   },
+   {
+    "id": "H2",
+    "role": "load",
+    "center_mm": [
+     500.0,
+     335.56,
+     260.0
+    ],
+    "diameter_mm": 60.0,
+    "axis": "y"
+   },
+   {
+    "id": "H3",
+    "role": "support",
+    "center_mm": [
+     245.0,
+     95.0,
+     65.0
+    ],
+    "diameter_mm": 60.0,
+    "axis": "z"
+   },
+   {
+    "id": "H4",
+    "role": "support",
+    "center_mm": [
+     245.0,
+     305.0,
+     65.0
+    ],
+    "diameter_mm": 60.0,
+    "axis": "z"
+   },
+   {
+    "id": "H5",
+    "role": "support",
+    "center_mm": [
+     755.0,
+     95.0,
+     65.0
+    ],
+    "diameter_mm": 60.0,
+    "axis": "z"
+   },
+   {
+    "id": "H6",
+    "role": "support",
+    "center_mm": [
+     755.0,
+     305.0,
+     65.0
+    ],
+    "diameter_mm": 60.0,
+    "axis": "z"
+   }
+  ],
+  "roles_source": "edited",
+  "about": "holes measured from the organiser CAD (derived/features.json); roles set from the organiser card (setup/boundary_conditions.md §2–3, [Y] interpretation), not by the automatic scan"
+ },
+ "convergence": null,
+ "crosscheck": null,
+ "_missing": {
+  "redesign.*": "no topology / redesign yet",
+  "density": "no topology run on the official part",
+  "print": "printability belongs to the redesign; omitted so shot 04 does not judge the steel baseline",
+  "stress": "no FEA on the official part (no gerilme.txt / stress_300C.txt)",
+  "materials[].density_kg_m3, Fty_*, curve, mass_kg, utilisation, passes, co2e_kg, stress_basis": "names only; values come from official_2026-11-05/catalogue/ and the analysis",
+  "eco_audit": "no Eco Audit numbers in this package (organiser .prd set-up not evaluated here)",
+  "convergence, crosscheck": "no optimiser run, no Ansys numbers"
+ },
+ "_kaynak": {
+  "built": "2026-11-05 11:38:32",
+  "by": "film_preview/build_preview.py",
+  "baslangic.stl": {
+   "source": "visuals/initial_exact.stl",
+   "source_sha256": "e46e8bddbc678b3a07cf0a253b4ec0d28821149054effa6a1af916845c898425",
+   "triangles": 129088,
+   "volume_mm3": 19397299.539242618,
+   "bbox_mm": [
+    [
+     170.0,
+     30.0,
+     30.0
+    ],
+    [
+     831.010009765625,
+     371.1199951171875,
+     321.3699951171875
+    ]
+   ]
+  },
+  "baseline.mass_kg": {
+   "value_source": "unpacked/dsco/SpaceClaim/document.xml (Discovery Mass monitor)",
+   "monitors_in_file_kg": [
+    206.05997862294316,
+    206.08961693942547,
+    182.26485550403595,
+    152.26533757522702
+   ],
+   "check_volume_x_density_kg": 152.26880138305455,
+   "density_kg_m3": 7850.0,
+   "density_source": [
+    "unpacked/dsco/SpaceClaim/Discovery/table__a314c4f3-fe7a-4eab-b09d-5a55eea46924__dt1.xml",
+    "unpacked/dsco/SpaceClaim/Discovery/table__ab2a4cd6-1ef7-46ff-b6be-426911cb513f__dt1.xml"
+   ]
+  },
+  "baseline.material": "unpacked/dsco/SpaceClaim/document.xml MaterialEntitySurrogate label",
+  "temperature_C, cad_setup, yukler.json": "setup/setup_official_fixed_bores.json (sha256 86ee4e45404f5e8a985488a6d63b87e30960669ea4471b7b96df47bf51da7fdd)",
+  "materials[].name (candidates)": "task brief 2026-11-05 (names only)"
+ }
+}

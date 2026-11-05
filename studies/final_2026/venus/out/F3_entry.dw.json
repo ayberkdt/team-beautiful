@@ -1,0 +1,291 @@
+{
+ "surum": 1,
+ "ad": "F3_entry",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  861.6,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   19.2
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 19.2
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    45.4,
+    74.0,
+    412.5,
+    378.1
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "VESPER",
+     "tur": "cizgi",
+     "renk": "#0072b2",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Pioneer Venus",
+     "tur": "cizgi",
+     "renk": "#919191",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Time around peak deceleration (s)",
+    "nicelik": "Time around peak deceleration",
+    "birim": "s",
+    "bicim": "parantez",
+    "anahtar": "timearoundpeakdeceleration",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     80.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "20",
+     "40",
+     "60",
+     "80"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     57.3,
+     3.0,
+     400.5,
+     26.0
+    ]
+   },
+   "y": {
+    "ham": "Deceleration (g)",
+    "nicelik": "Deceleration",
+    "birim": "g",
+    "bicim": "parantez",
+    "anahtar": "deceleration",
+    "harf": "tek",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     300.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "50",
+     "100",
+     "150",
+     "200",
+     "250",
+     "300"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     45.4,
+     387.3,
+     204.8,
+     410.3
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  },
+  {
+   "konum_pt": [
+    484.1,
+    74.0,
+    851.1,
+    378.1
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "VESPER",
+     "tur": "cizgi",
+     "renk": "#0072b2",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Pioneer Venus",
+     "tur": "cizgi",
+     "renk": "#919191",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Time around peak deceleration (s)",
+    "nicelik": "Time around peak deceleration",
+    "birim": "s",
+    "bicim": "parantez",
+    "anahtar": "timearoundpeakdeceleration",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     80.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "20",
+     "40",
+     "60",
+     "80"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     496.0,
+     3.0,
+     839.2,
+     26.0
+    ]
+   },
+   "y": {
+    "ham": "Stagnation heat flux (W/cm²)",
+    "nicelik": "Stagnation heat flux",
+    "birim": "W/cm²",
+    "bicim": "parantez",
+    "anahtar": "stagnationheatflux",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     5000.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "1000",
+     "2000",
+     "3000",
+     "4000",
+     "5000"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     484.1,
+     387.3,
+     772.2,
+     411.0
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [
+    "Pioneer Venus"
+   ],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

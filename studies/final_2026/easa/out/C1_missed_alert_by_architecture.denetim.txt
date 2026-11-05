@@ -1,0 +1,7 @@
+figür denetimi: 0 HATA · 0 UYARI · 3 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] birim              eksen 0: x etiketi birim içermiyor: 'Missed-alert probability'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [Kosslyn2012; TufteNotebookPP (birimler kaybolmasın)]
+  [BİLGİ] birim              eksen 0: y etiketi birim içermiyor: 'Sensor architecture'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [Kosslyn2012; TufteNotebookPP (birimler kaybolmasın)]
+  [BİLGİ] belirsizlik-tanimi eksen 0: hata çubuğu/bant var
+          → altyazıda ne gösterdiğini yaz: SD mi, SE mi, %95 GA mı; n kaç  [Franconeri2021 (genel kitleye hata çubuğu yerine ayrık sonuç)]

@@ -1,0 +1,12 @@
+metric,unit,ours,ansys,description
+mass_kg,kg,1.99636,1.99636,"FAKE ANSYS DATA (rehearsal 'units_m'): part mass (geometry × density) (tolerance ±2 %) [initial design, baseline material, ours = T10 conforming mesh]"
+volume_mm3,mm3,254313,254313,"FAKE ANSYS DATA (rehearsal 'units_m'): part volume (tolerance ±2 %) [initial design, baseline material, ours = T10 conforming mesh]"
+max_deformation_mm,mm,0.688166,0.000701929,"FAKE ANSYS DATA (rehearsal 'units_m'): maximum total deformation (worst load case) (tolerance ±10 %) [initial design, baseline material, ours = T10 conforming mesh]"
+load_point_deformation_mm,mm,0.485336,0.000495043,"FAKE ANSYS DATA (rehearsal 'units_m'): mean deformation of the loaded bore (probe: average over the bore face) (tolerance ±10 %) [initial design, baseline material, ours = T10 conforming mesh]"
+strain_energy_J,J,8.29569,8.4616,"FAKE ANSYS DATA (rehearsal 'units_m'): strain energy = compliance / 2 (worst load case) (tolerance ±10 %) [initial design, baseline material, ours = T10 conforming mesh]"
+compliance_J,J,16.5914,16.9232,"FAKE ANSYS DATA (rehearsal 'units_m'): compliance F·u (worst load case) (tolerance ±10 %) [initial design, baseline material, ours = T10 conforming mesh]"
+max_von_mises_MPa,MPa,1070.16,1134.37,"FAKE ANSYS DATA (rehearsal 'units_m'): maximum equivalent stress anywhere (singular at supports: loose) (tolerance ±25 %) [initial design, baseline material, ours = T10 conforming mesh]"
+von_mises_outside_MPa,MPa,1070.16,1134.37,"FAKE ANSYS DATA (rehearsal 'units_m'): maximum equivalent stress outside the support/load zones (tolerance ±15 %) [initial design, baseline material, ours = T10 conforming mesh]"
+min_safety_factor,-,0.152095,0.143486,"FAKE ANSYS DATA (rehearsal 'units_m'): minimum safety factor (yield at temperature / von Mises) (tolerance ±15 %) [initial design, baseline material, ours = T10 conforming mesh]"
+retained_volume_fraction,-,1,1,"FAKE ANSYS DATA (rehearsal 'units_m'): topology: retained volume / design-space volume (tolerance ±5 %) [initial design, baseline material, ours = T10 conforming mesh]"
+reaction_force_N,N,42258.1,42258.1,"FAKE ANSYS DATA (rehearsal 'units_m'): sum of support reactions (equals the applied load) (tolerance ±1 %) [initial design, baseline material, ours = T10 conforming mesh]"

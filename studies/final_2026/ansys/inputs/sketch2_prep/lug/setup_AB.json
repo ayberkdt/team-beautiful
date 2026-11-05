@@ -1,0 +1,302 @@
+{
+ "_about": "sketch2 lug, hypothesis AB: load on both arches, equal; bolts fixed, small hole free; directions from the sketch, magnitudes [Y] invented — replace on the day. Hole ids refer to THIS geometry: on the day copy load_cases and set the ids of the day's own setup.json.",
+ "name": "sketch2_lug",
+ "units": {
+  "length": "mm",
+  "force": "N",
+  "moment": "N m"
+ },
+ "voxel_mm": 1.2,
+ "origin_mm": [
+  0.044922,
+  0.0,
+  0.0
+ ],
+ "bbox_mm": [
+  [
+   0.045,
+   0.0,
+   0.0
+  ],
+  [
+   159.645,
+   69.6,
+   48.0
+  ]
+ ],
+ "temperature_C": 300.0,
+ "holes": [
+  {
+   "id": "H1",
+   "axis": "y",
+   "center_mm": [
+    70.017,
+    47.6,
+    28.008
+   ],
+   "diameter_mm": 27.94,
+   "segments_mm": [
+    [
+     41.6,
+     53.6
+    ]
+   ],
+   "roundness": 0.016,
+   "role": "load"
+  },
+  {
+   "id": "H2",
+   "axis": "y",
+   "center_mm": [
+    99.985,
+    22.0,
+    22.0
+   ],
+   "diameter_mm": 18.009,
+   "segments_mm": [
+    [
+     16.8,
+     27.2
+    ]
+   ],
+   "roundness": 0.024,
+   "role": "load"
+  },
+  {
+   "id": "H3",
+   "axis": "z",
+   "center_mm": [
+    18.0,
+    34.996,
+    4.0
+   ],
+   "diameter_mm": 8.564,
+   "segments_mm": [
+    [
+     0.0,
+     8.0
+    ]
+   ],
+   "roundness": 0.05,
+   "role": "support"
+  },
+  {
+   "id": "H4",
+   "axis": "z",
+   "center_mm": [
+    31.981,
+    14.0,
+    4.0
+   ],
+   "diameter_mm": 8.468,
+   "segments_mm": [
+    [
+     0.0,
+     8.0
+    ]
+   ],
+   "roundness": 0.049,
+   "role": "support"
+  },
+  {
+   "id": "H5",
+   "axis": "z",
+   "center_mm": [
+    32.045,
+    56.0,
+    4.0
+   ],
+   "diameter_mm": 8.468,
+   "segments_mm": [
+    [
+     0.0,
+     8.0
+    ]
+   ],
+   "roundness": 0.046,
+   "role": "support"
+  },
+  {
+   "id": "H6",
+   "axis": "z",
+   "center_mm": [
+    100.045,
+    22.0,
+    4.4
+   ],
+   "diameter_mm": 5.988,
+   "segments_mm": [
+    [
+     0.0,
+     8.8
+    ]
+   ],
+   "roundness": 0.057,
+   "role": "free"
+  },
+  {
+   "id": "H7",
+   "axis": "z",
+   "center_mm": [
+    127.988,
+    14.0,
+    4.0
+   ],
+   "diameter_mm": 8.468,
+   "segments_mm": [
+    [
+     0.0,
+     8.0
+    ]
+   ],
+   "roundness": 0.049,
+   "role": "support"
+  },
+  {
+   "id": "H8",
+   "axis": "z",
+   "center_mm": [
+    128.045,
+    56.0,
+    4.0
+   ],
+   "diameter_mm": 8.468,
+   "segments_mm": [
+    [
+     0.0,
+     8.0
+    ]
+   ],
+   "roundness": 0.046,
+   "role": "support"
+  },
+  {
+   "id": "H9",
+   "axis": "z",
+   "center_mm": [
+    142.0,
+    34.996,
+    4.0
+   ],
+   "diameter_mm": 8.564,
+   "segments_mm": [
+    [
+     0.0,
+     8.0
+    ]
+   ],
+   "roundness": 0.05,
+   "role": "support"
+  }
+ ],
+ "supports": [
+  {
+   "hole": "H3",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H4",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H5",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H7",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H8",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H9",
+   "type": "fixed_bore"
+  }
+ ],
+ "load_cases": [
+  {
+   "name": "LC1 vertical pull-off (+z)",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      0.0,
+      2000.0
+     ]
+    },
+    {
+     "hole": "H2",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      0.0,
+      2000.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LC2 lateral, in the arch plane (+x)",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "bearing",
+     "force_N": [
+      1250.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "hole": "H2",
+     "type": "bearing",
+     "force_N": [
+      1250.0,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LC3 along the arch axis (+y)",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      750.0,
+      0.0
+     ]
+    },
+    {
+     "hole": "H2",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      750.0,
+      0.0
+     ]
+    }
+   ]
+  }
+ ],
+ "non_design": {
+  "ring_factor": 0.75,
+  "ring_min_voxels": 2,
+  "boxes_mm": []
+ },
+ "build_direction": "+z",
+ "load_case_weights": null,
+ "roles_source": "edited",
+ "exclusion_mm": 3.6,
+ "design_criteria": {
+  "limit_to_ultimate": 1.5,
+  "_about": "loads are LIMIT loads [Y]; ultimate = 1.5 × limit (CS 25.303)"
+ }
+}

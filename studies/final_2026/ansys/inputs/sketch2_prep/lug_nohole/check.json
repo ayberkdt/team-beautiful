@@ -1,0 +1,128 @@
+{
+ "variant": "lug_nohole",
+ "solids_in_step": 1,
+ "volume_mm3": 92583.05471921088,
+ "mass_steel_kg": 0.7267769795458054,
+ "bbox_mm": [
+  [
+   0.04,
+   -0.0,
+   -0.0
+  ],
+  [
+   159.96,
+   70.0,
+   47.95
+  ]
+ ],
+ "voxel_mm": 1.6,
+ "elements": 22742,
+ "holes_cut_in_drawing": 8,
+ "holes_found_from_step": [
+  {
+   "id": "H1",
+   "axis": "y",
+   "d_mm": 27.94,
+   "c_mm": [
+    70.0,
+    47.6,
+    28.0
+   ],
+   "role": "load"
+  },
+  {
+   "id": "H2",
+   "axis": "y",
+   "d_mm": 18.009,
+   "c_mm": [
+    100.0,
+    22.0,
+    22.0
+   ],
+   "role": "load"
+  },
+  {
+   "id": "H3",
+   "axis": "z",
+   "d_mm": 8.564,
+   "c_mm": [
+    18.0,
+    35.0,
+    4.0
+   ],
+   "role": "support"
+  },
+  {
+   "id": "H4",
+   "axis": "z",
+   "d_mm": 8.468,
+   "c_mm": [
+    32.0,
+    14.0,
+    4.0
+   ],
+   "role": "support"
+  },
+  {
+   "id": "H5",
+   "axis": "z",
+   "d_mm": 8.468,
+   "c_mm": [
+    32.0,
+    56.0,
+    4.0
+   ],
+   "role": "support"
+  },
+  {
+   "id": "H6",
+   "axis": "z",
+   "d_mm": 8.468,
+   "c_mm": [
+    128.0,
+    14.0,
+    4.0
+   ],
+   "role": "support"
+  },
+  {
+   "id": "H7",
+   "axis": "z",
+   "d_mm": 8.468,
+   "c_mm": [
+    128.0,
+    56.0,
+    4.0
+   ],
+   "role": "support"
+  },
+  {
+   "id": "H8",
+   "axis": "z",
+   "d_mm": 8.564,
+   "c_mm": [
+    142.0,
+    35.0,
+    4.0
+   ],
+   "role": "support"
+  }
+ ],
+ "supports": [
+  "H3",
+  "H4",
+  "H5",
+  "H6",
+  "H7",
+  "H8"
+ ],
+ "load_holes": [
+  "H1",
+  "H2"
+ ],
+ "preview": {
+  "png": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\inputs\\sketch2_prep\\lug_nohole\\preview.png",
+  "audit_hata": 0,
+  "panels": "(a) iso, (b) top (x\u2013y), (c) front (x\u2013z), (d) side (y\u2013z)"
+ }
+}

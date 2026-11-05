@@ -1,0 +1,175 @@
+{
+ "surum": 1,
+ "ad": "A3_angle_error_range",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  165.1,
+  2.2,
+  723.0,
+  408.6
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    207.5,
+    73.1,
+    700.2,
+    376.4
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "0.05°",
+     "tur": "cizgi",
+     "renk": "#919191",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "0.1°",
+     "tur": "cizgi",
+     "renk": "#000000",
+     "isaret": null,
+     "cizgi": "--",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "0.3°",
+     "tur": "cizgi",
+     "renk": "#919191",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Distance from the ground sensor (NM)",
+    "nicelik": "Distance from the ground sensor",
+    "birim": "NM",
+    "bicim": "parantez",
+    "anahtar": "distancefromthegroundsensor",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     10.5
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "5",
+     "10"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     264.2,
+     2.2,
+     643.4,
+     25.2
+    ]
+   },
+   "y": {
+    "ham": "Position error for the angle error (m)",
+    "nicelik": "Position error for the angle error",
+    "birim": "m",
+    "bicim": "parantez",
+    "anahtar": "positionerrorfortheangleerror",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     101.79477527953499
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "50",
+     "100"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     207.5,
+     385.5,
+     569.7,
+     408.6
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [
+    "0.05°",
+    "0.1°",
+    "0.3°"
+   ],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

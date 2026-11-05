@@ -1,0 +1,169 @@
+{
+ "surum": 1,
+ "ad": "F7_guidance_needle",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  848.6,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    35.2,
+    73.3,
+    639.4,
+    378.8
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "True deviation",
+     "tur": "cizgi",
+     "renk": "#919191",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Panel needle",
+     "tur": "cizgi",
+     "renk": "#1f3a93",
+     "isaret": null,
+     "cizgi": ":",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Time on final (s)",
+    "nicelik": "Time on final",
+    "birim": "s",
+    "bicim": "parantez",
+    "anahtar": "timeonfinal",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     220.41999999999186
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "50",
+     "100",
+     "150",
+     "200"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     257.4,
+     3.0,
+     417.2,
+     25.3
+    ]
+   },
+   "y": {
+    "ham": "Vertical deviation shown to the pilot (dots)",
+    "nicelik": "Vertical deviation shown to the pilot",
+    "birim": "dots",
+    "bicim": "parantez",
+    "anahtar": "verticaldeviationshowntothepilot",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -2.2,
+     2.2
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "-2",
+     "-1",
+     "0",
+     "1",
+     "2"
+    ],
+    "eksi": "unicode",
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     35.2,
+     388.0,
+     460.3,
+     411.0
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [
+    "Panel needle",
+    "True deviation"
+   ],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

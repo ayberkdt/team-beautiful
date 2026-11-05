@@ -1,0 +1,830 @@
+{
+ "schema": "venus_rotorcraft_design/1",
+ "version": "0.1",
+ "status": "draft",
+ "name": "VESPER — Venus Solar-Electric Powered Exploration Rotorcraft",
+ "note": "PROVISIONAL geometry and masses (tag Y) written early for the visual; atmosphere from aerokit.planetary (Wikipedia VIRA table, primary check in progress). Numbers will be refined; ids and keys stay.",
+ "frame": "origin body centre; x forward (between arms 1 and 6), y left, z up; metres; hover, arms deployed",
+ "atmosphere": {
+  "source": "aerokit.planetary.venus_atmosphere (VIRA-like table via Wikipedia, ideal gas M=43.45 g/mol); wind: Landis 2001/2002 anchors, linear interpolation [Y]; speed of sound: aerokit.venus.gas (NIST Cp, ideal gas)",
+  "profile": [
+   {
+    "altitude_km": 30,
+    "temperature_K": 495.15,
+    "pressure_Pa": 985100.0,
+    "density_kg_m3": 10.3967,
+    "zonal_wind_m_s": 29.8,
+    "speed_of_sound_m_s": 341.8,
+    "gravity_m_s2": 8.783
+   },
+   {
+    "altitude_km": 31,
+    "temperature_K": 486.75,
+    "pressure_Pa": 889620.1,
+    "density_kg_m3": 9.551,
+    "zonal_wind_m_s": 30.8,
+    "speed_of_sound_m_s": 339.2,
+    "gravity_m_s2": 8.78
+   },
+   {
+    "altitude_km": 32,
+    "temperature_K": 478.35,
+    "pressure_Pa": 803394.4,
+    "density_kg_m3": 8.7768,
+    "zonal_wind_m_s": 31.8,
+    "speed_of_sound_m_s": 336.4,
+    "gravity_m_s2": 8.777
+   },
+   {
+    "altitude_km": 33,
+    "temperature_K": 469.95,
+    "pressure_Pa": 725526.1,
+    "density_kg_m3": 8.0678,
+    "zonal_wind_m_s": 32.8,
+    "speed_of_sound_m_s": 333.7,
+    "gravity_m_s2": 8.774
+   },
+   {
+    "altitude_km": 34,
+    "temperature_K": 461.55,
+    "pressure_Pa": 655205.2,
+    "density_kg_m3": 7.4184,
+    "zonal_wind_m_s": 33.7,
+    "speed_of_sound_m_s": 331.0,
+    "gravity_m_s2": 8.771
+   },
+   {
+    "altitude_km": 35,
+    "temperature_K": 453.15,
+    "pressure_Pa": 591700.0,
+    "density_kg_m3": 6.8236,
+    "zonal_wind_m_s": 34.7,
+    "speed_of_sound_m_s": 328.2,
+    "gravity_m_s2": 8.768
+   },
+   {
+    "altitude_km": 36,
+    "temperature_K": 445.75,
+    "pressure_Pa": 532745.4,
+    "density_kg_m3": 6.2457,
+    "zonal_wind_m_s": 35.7,
+    "speed_of_sound_m_s": 325.7,
+    "gravity_m_s2": 8.765
+   },
+   {
+    "altitude_km": 37,
+    "temperature_K": 438.35,
+    "pressure_Pa": 479664.7,
+    "density_kg_m3": 5.7183,
+    "zonal_wind_m_s": 36.7,
+    "speed_of_sound_m_s": 323.2,
+    "gravity_m_s2": 8.763
+   },
+   {
+    "altitude_km": 38,
+    "temperature_K": 430.95,
+    "pressure_Pa": 431872.8,
+    "density_kg_m3": 5.237,
+    "zonal_wind_m_s": 37.7,
+    "speed_of_sound_m_s": 320.7,
+    "gravity_m_s2": 8.76
+   },
+   {
+    "altitude_km": 39,
+    "temperature_K": 423.55,
+    "pressure_Pa": 388842.7,
+    "density_kg_m3": 4.7976,
+    "zonal_wind_m_s": 38.6,
+    "speed_of_sound_m_s": 318.2,
+    "gravity_m_s2": 8.757
+   },
+   {
+    "altitude_km": 40,
+    "temperature_K": 416.15,
+    "pressure_Pa": 350100.0,
+    "density_kg_m3": 4.3964,
+    "zonal_wind_m_s": 39.6,
+    "speed_of_sound_m_s": 315.6,
+    "gravity_m_s2": 8.754
+   },
+   {
+    "altitude_km": 41,
+    "temperature_K": 409.55,
+    "pressure_Pa": 312351.0,
+    "density_kg_m3": 3.9855,
+    "zonal_wind_m_s": 40.6,
+    "speed_of_sound_m_s": 313.3,
+    "gravity_m_s2": 8.751
+   },
+   {
+    "altitude_km": 42,
+    "temperature_K": 402.95,
+    "pressure_Pa": 278672.2,
+    "density_kg_m3": 3.6141,
+    "zonal_wind_m_s": 41.6,
+    "speed_of_sound_m_s": 311.0,
+    "gravity_m_s2": 8.748
+   },
+   {
+    "altitude_km": 43,
+    "temperature_K": 396.35,
+    "pressure_Pa": 248624.7,
+    "density_kg_m3": 3.2781,
+    "zonal_wind_m_s": 42.5,
+    "speed_of_sound_m_s": 308.7,
+    "gravity_m_s2": 8.745
+   },
+   {
+    "altitude_km": 44,
+    "temperature_K": 389.75,
+    "pressure_Pa": 221817.1,
+    "density_kg_m3": 2.9741,
+    "zonal_wind_m_s": 43.5,
+    "speed_of_sound_m_s": 306.3,
+    "gravity_m_s2": 8.742
+   },
+   {
+    "altitude_km": 45,
+    "temperature_K": 383.15,
+    "pressure_Pa": 197900.0,
+    "density_kg_m3": 2.6992,
+    "zonal_wind_m_s": 44.5,
+    "speed_of_sound_m_s": 303.9,
+    "gravity_m_s2": 8.74
+   },
+   {
+    "altitude_km": 46,
+    "temperature_K": 376.15,
+    "pressure_Pa": 174867.1,
+    "density_kg_m3": 2.4294,
+    "zonal_wind_m_s": 47.1,
+    "speed_of_sound_m_s": 301.4,
+    "gravity_m_s2": 8.737
+   },
+   {
+    "altitude_km": 47,
+    "temperature_K": 369.15,
+    "pressure_Pa": 154514.9,
+    "density_kg_m3": 2.1874,
+    "zonal_wind_m_s": 49.6,
+    "speed_of_sound_m_s": 298.8,
+    "gravity_m_s2": 8.734
+   },
+   {
+    "altitude_km": 48,
+    "temperature_K": 362.15,
+    "pressure_Pa": 136531.4,
+    "density_kg_m3": 1.9701,
+    "zonal_wind_m_s": 52.2,
+    "speed_of_sound_m_s": 296.2,
+    "gravity_m_s2": 8.731
+   },
+   {
+    "altitude_km": 49,
+    "temperature_K": 355.15,
+    "pressure_Pa": 120641.0,
+    "density_kg_m3": 1.7752,
+    "zonal_wind_m_s": 54.8,
+    "speed_of_sound_m_s": 293.6,
+    "gravity_m_s2": 8.728
+   },
+   {
+    "altitude_km": 50,
+    "temperature_K": 348.15,
+    "pressure_Pa": 106600.0,
+    "density_kg_m3": 1.6001,
+    "zonal_wind_m_s": 57.3,
+    "speed_of_sound_m_s": 291.0,
+    "gravity_m_s2": 8.725
+   },
+   {
+    "altitude_km": 51,
+    "temperature_K": 338.55,
+    "pressure_Pa": 92744.9,
+    "density_kg_m3": 1.4316,
+    "zonal_wind_m_s": 59.9,
+    "speed_of_sound_m_s": 287.4,
+    "gravity_m_s2": 8.722
+   },
+   {
+    "altitude_km": 52,
+    "temperature_K": 328.95,
+    "pressure_Pa": 80690.6,
+    "density_kg_m3": 1.2819,
+    "zonal_wind_m_s": 62.4,
+    "speed_of_sound_m_s": 283.7,
+    "gravity_m_s2": 8.72
+   },
+   {
+    "altitude_km": 53,
+    "temperature_K": 319.35,
+    "pressure_Pa": 70203.0,
+    "density_kg_m3": 1.1488,
+    "zonal_wind_m_s": 65.0,
+    "speed_of_sound_m_s": 279.9,
+    "gravity_m_s2": 8.717
+   },
+   {
+    "altitude_km": 54,
+    "temperature_K": 309.75,
+    "pressure_Pa": 61078.5,
+    "density_kg_m3": 1.0305,
+    "zonal_wind_m_s": 67.0,
+    "speed_of_sound_m_s": 276.1,
+    "gravity_m_s2": 8.714
+   },
+   {
+    "altitude_km": 55,
+    "temperature_K": 300.15,
+    "pressure_Pa": 53140.0,
+    "density_kg_m3": 0.9252,
+    "zonal_wind_m_s": 72.5,
+    "speed_of_sound_m_s": 272.2,
+    "gravity_m_s2": 8.711
+   },
+   {
+    "altitude_km": 56,
+    "temperature_K": 292.75,
+    "pressure_Pa": 45165.7,
+    "density_kg_m3": 0.8062,
+    "zonal_wind_m_s": 78.0,
+    "speed_of_sound_m_s": 268.9,
+    "gravity_m_s2": 8.708
+   },
+   {
+    "altitude_km": 57,
+    "temperature_K": 285.35,
+    "pressure_Pa": 38388.1,
+    "density_kg_m3": 0.703,
+    "zonal_wind_m_s": 83.5,
+    "speed_of_sound_m_s": 265.8,
+    "gravity_m_s2": 8.705
+   },
+   {
+    "altitude_km": 58,
+    "temperature_K": 277.95,
+    "pressure_Pa": 32627.5,
+    "density_kg_m3": 0.6134,
+    "zonal_wind_m_s": 89.0,
+    "speed_of_sound_m_s": 262.6,
+    "gravity_m_s2": 8.702
+   },
+   {
+    "altitude_km": 59,
+    "temperature_K": 270.55,
+    "pressure_Pa": 27731.4,
+    "density_kg_m3": 0.5356,
+    "zonal_wind_m_s": 94.5,
+    "speed_of_sound_m_s": 259.4,
+    "gravity_m_s2": 8.7
+   },
+   {
+    "altitude_km": 60,
+    "temperature_K": 263.15,
+    "pressure_Pa": 23570.0,
+    "density_kg_m3": 0.4681,
+    "zonal_wind_m_s": 100.0,
+    "speed_of_sound_m_s": 256.2,
+    "gravity_m_s2": 8.697
+   },
+   {
+    "altitude_km": 61,
+    "temperature_K": 259.15,
+    "pressure_Pa": 19761.6,
+    "density_kg_m3": 0.3985,
+    "zonal_wind_m_s": 99.3,
+    "speed_of_sound_m_s": 254.4,
+    "gravity_m_s2": 8.694
+   },
+   {
+    "altitude_km": 62,
+    "temperature_K": 255.15,
+    "pressure_Pa": 16568.6,
+    "density_kg_m3": 0.3393,
+    "zonal_wind_m_s": 98.6,
+    "speed_of_sound_m_s": 252.6,
+    "gravity_m_s2": 8.691
+   },
+   {
+    "altitude_km": 63,
+    "temperature_K": 251.15,
+    "pressure_Pa": 13891.4,
+    "density_kg_m3": 0.289,
+    "zonal_wind_m_s": 97.9,
+    "speed_of_sound_m_s": 250.8,
+    "gravity_m_s2": 8.688
+   },
+   {
+    "altitude_km": 64,
+    "temperature_K": 247.15,
+    "pressure_Pa": 11646.9,
+    "density_kg_m3": 0.2463,
+    "zonal_wind_m_s": 97.1,
+    "speed_of_sound_m_s": 248.9,
+    "gravity_m_s2": 8.685
+   },
+   {
+    "altitude_km": 65,
+    "temperature_K": 243.15,
+    "pressure_Pa": 9765.0,
+    "density_kg_m3": 0.2099,
+    "zonal_wind_m_s": 96.4,
+    "speed_of_sound_m_s": 247.1,
+    "gravity_m_s2": 8.682
+   },
+   {
+    "altitude_km": 66,
+    "temperature_K": 240.55,
+    "pressure_Pa": 8037.9,
+    "density_kg_m3": 0.1746,
+    "zonal_wind_m_s": 95.7,
+    "speed_of_sound_m_s": 245.9,
+    "gravity_m_s2": 8.68
+   },
+   {
+    "altitude_km": 67,
+    "temperature_K": 237.95,
+    "pressure_Pa": 6616.3,
+    "density_kg_m3": 0.1453,
+    "zonal_wind_m_s": 95.0,
+    "speed_of_sound_m_s": 244.6,
+    "gravity_m_s2": 8.677
+   },
+   {
+    "altitude_km": 68,
+    "temperature_K": 235.35,
+    "pressure_Pa": 5446.1,
+    "density_kg_m3": 0.1209,
+    "zonal_wind_m_s": 95.0,
+    "speed_of_sound_m_s": 243.4,
+    "gravity_m_s2": 8.674
+   },
+   {
+    "altitude_km": 69,
+    "temperature_K": 232.75,
+    "pressure_Pa": 4482.9,
+    "density_kg_m3": 0.1007,
+    "zonal_wind_m_s": 95.0,
+    "speed_of_sound_m_s": 242.1,
+    "gravity_m_s2": 8.671
+   },
+   {
+    "altitude_km": 70,
+    "temperature_K": 230.15,
+    "pressure_Pa": 3690.0,
+    "density_kg_m3": 0.0838,
+    "zonal_wind_m_s": 95.0,
+    "speed_of_sound_m_s": 240.9,
+    "gravity_m_s2": 8.668
+   },
+   {
+    "altitude_km": 71,
+    "temperature_K": 226.85,
+    "pressure_Pa": 3006.7,
+    "density_kg_m3": 0.0693,
+    "zonal_wind_m_s": 95.0,
+    "speed_of_sound_m_s": 239.3,
+    "gravity_m_s2": 8.665
+   },
+   {
+    "altitude_km": 72,
+    "temperature_K": 223.55,
+    "pressure_Pa": 2449.9,
+    "density_kg_m3": 0.0573,
+    "zonal_wind_m_s": 95.0,
+    "speed_of_sound_m_s": 237.6,
+    "gravity_m_s2": 8.663
+   },
+   {
+    "altitude_km": 73,
+    "temperature_K": 220.25,
+    "pressure_Pa": 1996.2,
+    "density_kg_m3": 0.0474,
+    "zonal_wind_m_s": 95.0,
+    "speed_of_sound_m_s": 235.8,
+    "gravity_m_s2": 8.66
+   },
+   {
+    "altitude_km": 74,
+    "temperature_K": 216.95,
+    "pressure_Pa": 1626.5,
+    "density_kg_m3": 0.0392,
+    "zonal_wind_m_s": 95.0,
+    "speed_of_sound_m_s": 234.1,
+    "gravity_m_s2": 8.657
+   },
+   {
+    "altitude_km": 75,
+    "temperature_K": 213.65,
+    "pressure_Pa": 1325.3,
+    "density_kg_m3": 0.0324,
+    "zonal_wind_m_s": 95.0,
+    "speed_of_sound_m_s": 232.3,
+    "gravity_m_s2": 8.654
+   },
+   {
+    "altitude_km": 76,
+    "temperature_K": 210.35,
+    "pressure_Pa": 1079.9,
+    "density_kg_m3": 0.0268,
+    "zonal_wind_m_s": 95.0,
+    "speed_of_sound_m_s": 230.5,
+    "gravity_m_s2": 8.651
+   },
+   {
+    "altitude_km": 77,
+    "temperature_K": 207.05,
+    "pressure_Pa": 879.9,
+    "density_kg_m3": 0.0222,
+    "zonal_wind_m_s": 95.0,
+    "speed_of_sound_m_s": 228.7,
+    "gravity_m_s2": 8.649
+   },
+   {
+    "altitude_km": 78,
+    "temperature_K": 203.75,
+    "pressure_Pa": 717.0,
+    "density_kg_m3": 0.0184,
+    "zonal_wind_m_s": 95.0,
+    "speed_of_sound_m_s": 226.8,
+    "gravity_m_s2": 8.646
+   },
+   {
+    "altitude_km": 79,
+    "temperature_K": 200.45,
+    "pressure_Pa": 584.2,
+    "density_kg_m3": 0.0152,
+    "zonal_wind_m_s": 95.0,
+    "speed_of_sound_m_s": 225.0,
+    "gravity_m_s2": 8.643
+   },
+   {
+    "altitude_km": 80,
+    "temperature_K": 197.15,
+    "pressure_Pa": 476.0,
+    "density_kg_m3": 0.0126,
+    "zonal_wind_m_s": 95.0,
+    "speed_of_sound_m_s": 223.1,
+    "gravity_m_s2": 8.64
+   }
+  ],
+  "cloud_layers": [
+   {
+    "name": "lower cloud",
+    "base_km": 47.5,
+    "top_km": 50.5,
+    "tag": "Y (to be replaced by Knollenberg & Hunten 1980)"
+   },
+   {
+    "name": "middle cloud",
+    "base_km": 50.5,
+    "top_km": 56.5,
+    "tag": "Y"
+   },
+   {
+    "name": "upper cloud",
+    "base_km": 56.5,
+    "top_km": 70.0,
+    "tag": "Y"
+   }
+  ]
+ },
+ "operating_band": {
+  "min_km": 52,
+  "nominal_km": 55,
+  "max_km": 60,
+  "tag": "K/Y",
+  "rationale": "0-45 °C for Li-ion and electronics (27 °C at 55 km), ρ≈0.9 kg/m³ like Earth, inside the cloud deck for science; above 60 km power rises as 1/√ρ"
+ },
+ "vehicle": {
+  "total_mass_kg": 28.0,
+  "rotor": {
+   "count": 6,
+   "coaxial": false,
+   "diameter_m": 1.6,
+   "blades": 2,
+   "rpm": 1500.0,
+   "arm_radius_m": 1.7,
+   "hub_height_m": 0.3,
+   "folding": true,
+   "duct": false,
+   "root_chord_m": 0.14,
+   "tip_chord_m": 0.09,
+   "tip_speed_m_s": 125.7,
+   "tip_mach_55km": 0.462,
+   "disk_area_total_m2": 12.064,
+   "disk_loading_N_m2": 20.22,
+   "spin": [
+    "ccw",
+    "cw",
+    "ccw",
+    "cw",
+    "ccw",
+    "cw"
+   ],
+   "arm_azimuths_deg": [
+    30,
+    90,
+    150,
+    210,
+    270,
+    330
+   ],
+   "tag": "Y"
+  },
+  "body": {
+   "shape": "cylinder",
+   "length_m": 0.6,
+   "width_m": 0.6,
+   "height_m": 0.32,
+   "tag": "Y"
+  },
+  "envelope": null,
+  "solar": {
+   "area_m2": 1.38,
+   "placement": "body_top",
+   "bifacial": true,
+   "shape": "hexagon",
+   "circumradius_m": 0.8,
+   "tag": "Y"
+  },
+  "span_m": 5.0,
+  "components": [
+   {
+    "id": "rotors",
+    "name": "6 folding 2-blade rotors + sealed BLDC motors",
+    "mass_kg": 5.6,
+    "colour": "#c9cdd3",
+    "material": "CFRP blades, FEP-film wrap; SmCo-magnet motors in PTFE-sealed cans",
+    "tag": "Y",
+    "position_m": [
+     0.0,
+     0.0,
+     0.13999999999999999
+    ],
+    "size_m": [
+     5.0,
+     5.0,
+     0.12
+    ],
+    "note": "arm i at azimuth 30°+60°·i; adjacent rotors counter-rotate"
+   },
+   {
+    "id": "body",
+    "name": "Pressure-sealed avionics/battery vessel",
+    "mass_kg": 3.2,
+    "colour": "#e8e4da",
+    "material": "Ti-6Al-4V shell, PTFE/FEP coated; dry N2 fill",
+    "tag": "Y",
+    "position_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "size_m": [
+     0.6,
+     0.6,
+     0.32
+    ]
+   },
+   {
+    "id": "battery",
+    "name": "Li-ion battery (inside vessel)",
+    "mass_kg": 9.0,
+    "colour": "#4f6d7a",
+    "material": "Li-ion 18650 class cells, 0-45 °C charge window",
+    "tag": "Y",
+    "position_m": [
+     0.0,
+     0.0,
+     -0.06
+    ],
+    "size_m": [
+     0.4,
+     0.4,
+     0.12
+    ]
+   },
+   {
+    "id": "solar",
+    "name": "Bifacial solar deck (hexagon around body)",
+    "mass_kg": 2.0,
+    "colour": "#1f3a5f",
+    "material": "thin GaAs bifacial cells, FEP encapsulant",
+    "tag": "Y",
+    "position_m": [
+     0.0,
+     0.0,
+     0.08999999999999998
+    ],
+    "size_m": [
+     1.6,
+     1.6,
+     0.01
+    ],
+    "note": "outside every rotor disk (deck circumradius < arm radius - rotor radius)"
+   },
+   {
+    "id": "payload",
+    "name": "Science payload: nephelometer, T/p/wind sensors, aerosol mass spectrometer, camera",
+    "mass_kg": 3.0,
+    "colour": "#d98e04",
+    "material": "sapphire windows, PTFE inlets",
+    "tag": "Y",
+    "position_m": [
+     0.0,
+     0.0,
+     -0.24
+    ],
+    "size_m": [
+     0.3,
+     0.3,
+     0.16
+    ]
+   },
+   {
+    "id": "avionics",
+    "name": "Flight computer, IMU, star/sun sensor, baro",
+    "mass_kg": 1.2,
+    "colour": "#6b8e23",
+    "material": "inside the vessel",
+    "tag": "Y",
+    "position_m": [
+     0.0,
+     0.0,
+     0.08
+    ],
+    "size_m": [
+     0.25,
+     0.25,
+     0.08
+    ]
+   },
+   {
+    "id": "antenna",
+    "name": "UHF relay antenna (crossed dipole) + S-band patch",
+    "mass_kg": 0.6,
+    "colour": "#b0b7bf",
+    "material": "Ti mast, PTFE radome",
+    "tag": "Y",
+    "position_m": [
+     0.0,
+     0.0,
+     0.41000000000000003
+    ],
+    "size_m": [
+     0.2,
+     0.2,
+     0.5
+    ]
+   },
+   {
+    "id": "thermal",
+    "name": "Aerogel insulation + radiator fins",
+    "mass_kg": 1.0,
+    "colour": "#f2f2f2",
+    "material": "silica aerogel blanket, Al fins (coated)",
+    "tag": "Y",
+    "position_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "size_m": [
+     0.64,
+     0.64,
+     0.32
+    ]
+   },
+   {
+    "id": "coating",
+    "name": "Acid-protection skin on every exposed part",
+    "mass_kg": 0.6,
+    "colour": "#ffffff",
+    "material": "FEP/PTFE film and PFA coating",
+    "tag": "Y",
+    "position_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "size_m": null
+   },
+   {
+    "id": "attach",
+    "name": "Deployment hard points: bridle ring, arm hinges, pyro release",
+    "mass_kg": 1.0,
+    "colour": "#a0522d",
+    "material": "Ti fittings",
+    "tag": "Y",
+    "position_m": [
+     0.0,
+     0.0,
+     0.16
+    ],
+    "size_m": [
+     0.15,
+     0.15,
+     0.05
+    ]
+   },
+   {
+    "id": "arms",
+    "name": "6 folding CFRP arms with hinges",
+    "mass_kg": 0.8,
+    "colour": "#2b2b2b",
+    "material": "CFRP tube, FEP sleeve, Ti hinge",
+    "tag": "Y",
+    "position_m": [
+     0.0,
+     0.0,
+     0.13999999999999999
+    ],
+    "size_m": [
+     3.4,
+     3.4,
+     0.05
+    ]
+   }
+  ]
+ },
+ "entry": {
+  "aeroshell_diameter_m": 2.6,
+  "aeroshell_shape": "45° sphere-cone (Pioneer Venus / Venera class)",
+  "entry_speed_km_s": 11.0,
+  "entry_altitude_km": 175.0,
+  "entry_flight_path_deg": -20.0,
+  "parachute_deploy_km": 66.0,
+  "heatshield_jettison_km": 64.0,
+  "release_km": 60.0,
+  "parachute_diameter_m": 6.0,
+  "rotor_spinup_km": 61.0,
+  "spinup_time_s": 15.0,
+  "tag": "Y — provisional; replaced by aerokit.venus.entry/descent results"
+ },
+ "deployment_sequence": [
+  {
+   "step": 1,
+   "name": "Cruise on carrier, release 5 days before entry",
+   "altitude_km": null,
+   "tag": "Y"
+  },
+  {
+   "step": 2,
+   "name": "Entry interface",
+   "altitude_km": 175.0,
+   "speed_m_s": 11000.0,
+   "tag": "Y"
+  },
+  {
+   "step": 3,
+   "name": "Peak heating and deceleration",
+   "altitude_km": null,
+   "tag": "K pending"
+  },
+  {
+   "step": 4,
+   "name": "Pilot + main parachute, Mach < 1",
+   "altitude_km": 66.0,
+   "tag": "Y"
+  },
+  {
+   "step": 5,
+   "name": "Heat-shield jettison",
+   "altitude_km": 64.0,
+   "tag": "Y"
+  },
+  {
+   "step": 6,
+   "name": "Lower rotorcraft on bridle; arms and blades unfold",
+   "altitude_km": 62.5,
+   "tag": "Y"
+  },
+  {
+   "step": 7,
+   "name": "Rotor spin-up while hanging",
+   "altitude_km": 61.0,
+   "tag": "Y"
+  },
+  {
+   "step": 8,
+   "name": "Release, pull-out, first hover",
+   "altitude_km": 60.0,
+   "tag": "Y"
+  },
+  {
+   "step": 9,
+   "name": "Descend to 55 km operating band; science ops",
+   "altitude_km": 55.0,
+   "tag": "Y"
+  }
+ ],
+ "operations": {
+  "drift_speed_m_s": 72.5,
+  "circumnavigation_days": 6.13,
+  "mission_days": null,
+  "tag": "K"
+ },
+ "generated_by": "python scripts/venus_design.py",
+ "generated_at": "2026-11-04T16:07+03:00"
+}

@@ -1,0 +1,186 @@
+{
+ "surum": 1,
+ "ad": "F10_robustness",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  791.0,
+  395.8
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [
+   20.4
+  ],
+  "panel": [],
+  "metin": [
+   19.2,
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "lejant": 20.4,
+  "metin": 19.2
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    161.5,
+    74.0,
+    861.6,
+    408.0
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "D 2.6 m, geared 5:1 (VESPER)",
+     "tur": "cizgi",
+     "renk": "#0072b2",
+     "isaret": "Path(array([[ 1.55884573e-01,  7.30000000e-01],\n       [ 1.75185684e-16,  1.00000000e+00],\n       [-1.55884573e-01,  7.30000000e-01],\n       [-7.10140831e-01, -2.30000000e-01],\n       [-8.66025404e-01, -5.00000000e-01],\n       [-5.54256258e-01, -5.00000000e-01],\n       [ 5.54256258e-01, -5.00000000e-01],\n       [ 8.66025404e-01, -5.00000000e-01],\n       [ 7.10140831e-01, -2.30000000e-01],\n       [ 1.55884573e-01,  7.30000000e-01]]), array([ 1,  3,  3,  2,  3,  3,  2,  3,  3, 79], dtype=uint8))",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 14.35
+    },
+    {
+     "etiket": "D 2.6 m, direct drive",
+     "tur": "cizgi",
+     "renk": "#000000",
+     "isaret": "Path(array([[-0.126, -1.075],\n       [ 0.   , -1.25 ],\n       [ 0.126, -1.075],\n       [ 0.774, -0.175],\n       [ 0.9  ,  0.   ],\n       [ 0.774,  0.175],\n       [ 0.126,  1.075],\n       [ 0.   ,  1.25 ],\n       [-0.126,  1.075],\n       [-0.774,  0.175],\n       [-0.9  ,  0.   ],\n       [-0.774, -0.175],\n       [-0.126, -1.075]]), array([ 1,  3,  3,  2,  3,  3,  2,  3,  3,  2,  3,  3, 79], dtype=uint8))",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 13.43
+    },
+    {
+     "etiket": "D 2.3 m, geared 5:1",
+     "tur": "cizgi",
+     "renk": "#56b4e9",
+     "isaret": "Path(array([[-1.55884573e-01, -7.30000000e-01],\n       [-2.97650364e-16, -1.00000000e+00],\n       [ 1.55884573e-01, -7.30000000e-01],\n       [ 7.10140831e-01,  2.30000000e-01],\n       [ 8.66025404e-01,  5.00000000e-01],\n       [ 5.54256258e-01,  5.00000000e-01],\n       [-5.54256258e-01,  5.00000000e-01],\n       [-8.66025404e-01,  5.00000000e-01],\n       [-7.10140831e-01,  2.30000000e-01],\n       [-1.55884573e-01, -7.30000000e-01]]), array([ 1,  3,  3,  2,  3,  3,  2,  3,  3, 79], dtype=uint8))",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 14.35
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Flight time (h)",
+    "nicelik": "Flight time",
+    "birim": "h",
+    "bicim": "parantez",
+    "anahtar": "flighttime",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     56.54166666666666
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "10",
+     "20",
+     "30",
+     "40",
+     "50"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     441.6,
+     3.0,
+     581.5,
+     26.0
+    ]
+   },
+   "y": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.4,
+     7.9
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "nominal",
+     "cells 180 Wh/kg",
+     "contingency 30 %",
+     "motors 5 N·m/kg",
+     "payload 5 kg",
+     "thin atmosphere"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "nominal",
+     "cells 180 Wh/kg",
+     "contingency 30 %",
+     "motors 5 N·m/kg",
+     "payload 5 kg",
+     "thin atmosphere"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "lejant": [
+    "D 2.6 m, geared 5:1 (VESPER)",
+    "D 2.6 m, direct drive",
+    "D 2.3 m, geared 5:1"
+   ],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

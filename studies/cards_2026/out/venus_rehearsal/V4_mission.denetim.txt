@@ -1,0 +1,7 @@
+figür denetimi: 0 HATA · 0 UYARI · 3 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] banking-45         eksen 0: çizim alanı y/g = 0.09; 45° için ≈ 0.25
+          → eğim karşılaştırması amaçsa oranı yaklaştır (ax.set_box_aspect)  [Kosara2013b]
+  [BİLGİ] banking-45         eksen 1: çizim alanı y/g = 0.09; 45° için ≈ 0.49
+          → eğim karşılaştırması amaçsa oranı yaklaştır (ax.set_box_aspect)  [Kosara2013b]
+  [BİLGİ] banking-45         eksen 2: çizim alanı y/g = 0.09; 45° için ≈ 1.68
+          → eğim karşılaştırması amaçsa oranı yaklaştır (ax.set_box_aspect)  [Kosara2013b]

@@ -1,0 +1,703 @@
+{
+ "card": "Scenario S4 (satellite equipment bracket, frequency + quasi-static): invented card, not an official task",
+ "source": "invented 2026-11-02 for docs/12 scenario S4; 20 g from the TURKSAT 6A star-tracker bracket (vendor, research_notes/Görev senaryoları/R3 §4); 100 Hz from NASA GEVS 2021 (modes < 100 Hz may need coupled-loads analysis, research_notes/Üç sapma alanı/A §3)",
+ "ultimate_N": 676.1999999999999,
+ "limit_N": 392.0,
+ "element_size_m": 0.002,
+ "tension_check": 0.9999999999999928,
+ "deflection_mesh_factor": 1.0368809930007408,
+ "mesh_check": [
+  {
+   "refinement": 1,
+   "solid_elements": 1298,
+   "solid_fraction": 0.3605555555555556,
+   "vm_unit_max": 1.0998820266967873,
+   "vm_unit_p99": 0.6110932807970837,
+   "tip_unit": 160.47006425869733
+  },
+  {
+   "refinement": 2,
+   "solid_elements": 5192,
+   "solid_fraction": 0.3605555555555556,
+   "vm_unit_max": 1.5300308939027576,
+   "vm_unit_p99": 0.619298499056951,
+   "tip_unit": 164.01007459220105
+  },
+  {
+   "refinement": 4,
+   "solid_elements": 20768,
+   "solid_fraction": 0.3605555555555556,
+   "vm_unit_max": 2.107505267573502,
+   "vm_unit_p99": 0.6191767476105365,
+   "tip_unit": 166.38835957545078
+  }
+ ],
+ "designs": [
+  {
+   "volume": 0.5,
+   "iterations": 103,
+   "grey_percent": 11.025245599109263,
+   "compliance": 153.1755320280498,
+   "solid_elements": 1841,
+   "solid_fraction": 0.5113888888888889,
+   "vm_unit_max": 1.0193571210666157,
+   "vm_unit_p99": 0.5464433000773219,
+   "tip_unit": 129.6893356202053,
+   "element_size_m": 0.002
+  },
+  {
+   "volume": 0.35,
+   "iterations": 275,
+   "grey_percent": 17.253939431396443,
+   "compliance": 206.00475487873592,
+   "solid_elements": 1298,
+   "solid_fraction": 0.3605555555555556,
+   "vm_unit_max": 1.0998820266967873,
+   "vm_unit_p99": 0.6110932807970837,
+   "tip_unit": 160.47006425869733,
+   "element_size_m": 0.002
+  },
+  {
+   "volume": 0.3,
+   "iterations": 107,
+   "grey_percent": 18.61247082089353,
+   "compliance": 242.5171524144365,
+   "solid_elements": 1117,
+   "solid_fraction": 0.31027777777777776,
+   "vm_unit_max": 1.1486861419682086,
+   "vm_unit_p99": 0.6600285395653307,
+   "tip_unit": 179.49322212152046,
+   "element_size_m": 0.002
+  },
+  {
+   "volume": 0.25,
+   "iterations": 109,
+   "grey_percent": 20.211652423802526,
+   "compliance": 304.7324317102514,
+   "solid_elements": 944,
+   "solid_fraction": 0.26222222222222225,
+   "vm_unit_max": 1.2930938046783513,
+   "vm_unit_p99": 0.7369556315453426,
+   "tip_unit": 208.34187333076974,
+   "element_size_m": 0.002
+  },
+  {
+   "volume": 0.2,
+   "iterations": 126,
+   "grey_percent": 21.453371235652682,
+   "compliance": 423.7058695392693,
+   "solid_elements": 772,
+   "solid_fraction": 0.21444444444444444,
+   "vm_unit_max": 1.4397450773439218,
+   "vm_unit_p99": 0.8272207573019603,
+   "tip_unit": 242.8927432045737,
+   "element_size_m": 0.002
+  },
+  {
+   "volume": 0.15,
+   "iterations": 334,
+   "grey_percent": 21.902479142844108,
+   "compliance": 705.8844088552372,
+   "solid_elements": 591,
+   "solid_fraction": 0.16416666666666666,
+   "vm_unit_max": 1.7947289353397995,
+   "vm_unit_p99": 1.003693741679871,
+   "tip_unit": 317.4748362235339,
+   "element_size_m": 0.002
+  }
+ ],
+ "rows": [
+  {
+   "material": "AlSi10Mg",
+   "route": "am_TO",
+   "volume": 0.5,
+   "mass_kg": 0.1966188,
+   "sigma_ult_Pa": 34464464.26326227,
+   "sigma_over_Fty": 0.15665665574210125,
+   "deflection_m": 7.321275497638618e-05,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.15665665574210125,
+    "frequency": 0.3871894922281047
+   },
+   "missing": [],
+   "f1_Hz": 258.27147173995894,
+   "co2_production_kg": 5.597569126926,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 5.597569126926
+  },
+  {
+   "material": "AlSi10Mg",
+   "route": "am_TO",
+   "volume": 0.35,
+   "mass_kg": 0.1386264,
+   "sigma_ult_Pa": 37187011.322618365,
+   "sigma_over_Fty": 0.1690318696482653,
+   "deflection_m": 9.058921799107876e-05,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.1690318696482653,
+    "frequency": 0.4459364184213546
+   },
+   "missing": [],
+   "f1_Hz": 224.24721522858982,
+   "co2_production_kg": 3.946575082428,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 3.946575082428
+  },
+  {
+   "material": "AlSi10Mg",
+   "route": "am_TO",
+   "volume": 0.3,
+   "mass_kg": 0.1192956,
+   "sigma_ult_Pa": 38837078.45994513,
+   "sigma_over_Fty": 0.1765321748179324,
+   "deflection_m": 0.0001013282489902552,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.1765321748179324,
+    "frequency": 0.5265807145993313
+   },
+   "missing": [],
+   "f1_Hz": 189.9044101455344,
+   "co2_production_kg": 3.396243734262,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 3.396243734262
+  },
+  {
+   "material": "AlSi10Mg",
+   "route": "am_TO",
+   "volume": 0.25,
+   "mass_kg": 0.10081920000000001,
+   "sigma_ult_Pa": 43719501.53617505,
+   "sigma_over_Fty": 0.19872500698261386,
+   "deflection_m": 0.0001176140077404368,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.19872500698261386,
+    "frequency": 0.6772042035906468
+   },
+   "missing": [],
+   "f1_Hz": 147.6659469474403,
+   "co2_production_kg": 2.870236423584,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 2.870236423584
+  },
+  {
+   "material": "AlSi10Mg",
+   "route": "am_TO",
+   "volume": 0.2,
+   "mass_kg": 0.08244960000000001,
+   "sigma_ult_Pa": 48677781.064997986,
+   "sigma_over_Fty": 0.2212626412045363,
+   "deflection_m": 0.0001371188063284998,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.2212626412045363,
+    "frequency": 0.9285136691500979
+   },
+   "missing": [],
+   "f1_Hz": 107.69900683479825,
+   "co2_production_kg": 2.3472696175920005,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 2.3472696175920005
+  },
+  {
+   "material": "AlSi10Mg",
+   "route": "am_TO",
+   "volume": 0.15,
+   "mass_kg": 0.06311879999999999,
+   "sigma_ult_Pa": 60679785.30383861,
+   "sigma_over_Fty": 0.27581720592653913,
+   "deflection_m": 0.000179222194981934,
+   "buy_to_fly": 1.5,
+   "passes": false,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.27581720592653913,
+    "frequency": 1.4470768258785567
+   },
+   "missing": [],
+   "f1_Hz": 69.10483134804366,
+   "co2_production_kg": 1.7969382694259999,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 1.7969382694259999
+  },
+  {
+   "material": "Scalmalloy",
+   "route": "am_TO",
+   "volume": 0.5,
+   "mass_kg": 0.1966188,
+   "sigma_ult_Pa": 34464464.26326227,
+   "sigma_over_Fty": 0.07033564135359648,
+   "deflection_m": 7.639591823622905e-05,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.07033564135359648,
+    "frequency": 0.3955171006811206
+   },
+   "missing": [],
+   "f1_Hz": 252.8335685809535,
+   "co2_production_kg": 39.809240326926,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 39.809240326926
+  },
+  {
+   "material": "Scalmalloy",
+   "route": "am_TO",
+   "volume": 0.35,
+   "mass_kg": 0.1386264,
+   "sigma_ult_Pa": 37187011.322618365,
+   "sigma_over_Fty": 0.0758918598420783,
+   "deflection_m": 9.45278796428648e-05,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.0758918598420783,
+    "frequency": 0.4555275461816729
+   },
+   "missing": [],
+   "f1_Hz": 219.52569243774806,
+   "co2_production_kg": 28.067568682428,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 28.067568682428
+  },
+  {
+   "material": "Scalmalloy",
+   "route": "am_TO",
+   "volume": 0.3,
+   "mass_kg": 0.1192956,
+   "sigma_ult_Pa": 38837078.45994513,
+   "sigma_over_Fty": 0.07925934379580639,
+   "deflection_m": 0.00010573382503330978,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.07925934379580639,
+    "frequency": 0.5379063267289415
+   },
+   "missing": [],
+   "f1_Hz": 185.9059747597864,
+   "co2_production_kg": 24.153678134262,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 24.153678134262
+  },
+  {
+   "material": "Scalmalloy",
+   "route": "am_TO",
+   "volume": 0.25,
+   "mass_kg": 0.10081920000000001,
+   "sigma_ult_Pa": 43719501.53617505,
+   "sigma_over_Fty": 0.08922347252280623,
+   "deflection_m": 0.00012272766025089057,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.08922347252280623,
+    "frequency": 0.6917694011607065
+   },
+   "missing": [],
+   "f1_Hz": 144.5568419652733,
+   "co2_production_kg": 20.412777223584005,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 20.412777223584005
+  },
+  {
+   "material": "Scalmalloy",
+   "route": "am_TO",
+   "volume": 0.2,
+   "mass_kg": 0.08244960000000001,
+   "sigma_ult_Pa": 48677781.064997986,
+   "sigma_over_Fty": 0.09934241033673058,
+   "deflection_m": 0.0001430804935601737,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.09934241033673058,
+    "frequency": 0.9484839897217543
+   },
+   "missing": [],
+   "f1_Hz": 105.43140536229382,
+   "co2_production_kg": 16.693500017592,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 16.693500017592
+  },
+  {
+   "material": "Scalmalloy",
+   "route": "am_TO",
+   "volume": 0.15,
+   "mass_kg": 0.06311879999999999,
+   "sigma_ult_Pa": 60679785.30383861,
+   "sigma_over_Fty": 0.12383629653844615,
+   "deflection_m": 0.00018701446432897462,
+   "buy_to_fly": 1.5,
+   "passes": false,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.12383629653844615,
+    "frequency": 1.4782003182492582
+   },
+   "missing": [],
+   "f1_Hz": 67.64982984067909,
+   "co2_production_kg": 12.779609469426,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 12.779609469426
+  },
+  {
+   "material": "7075-T6",
+   "route": "machined_TO",
+   "volume": 0.5,
+   "mass_kg": 0.2069284,
+   "sigma_ult_Pa": 34464464.26326227,
+   "sigma_over_Fty": 0.06851782159694289,
+   "deflection_m": 7.351908449511582e-05,
+   "buy_to_fly": 1.9554589896795218,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.06851782159694289,
+    "frequency": 0.3882863511115274
+   },
+   "missing": [],
+   "f1_Hz": 257.5418881290448,
+   "co2_production_kg": 5.045698944,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 5.045698944
+  },
+  {
+   "material": "7075-T6",
+   "route": "machined_TO",
+   "volume": 0.35,
+   "mass_kg": 0.1458952,
+   "sigma_ult_Pa": 37187011.322618365,
+   "sigma_over_Fty": 0.0739304400052055,
+   "deflection_m": 9.096825237597868e-05,
+   "buy_to_fly": 2.773497688751926,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.0739304400052055,
+    "frequency": 0.4473070207507232
+   },
+   "missing": [],
+   "f1_Hz": 223.56009488106903,
+   "co2_production_kg": 5.045698944,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 5.045698944
+  },
+  {
+   "material": "7075-T6",
+   "route": "machined_TO",
+   "volume": 0.3,
+   "mass_kg": 0.1255508,
+   "sigma_ult_Pa": 38837078.45994513,
+   "sigma_over_Fty": 0.07721089157046745,
+   "deflection_m": 0.00010175221655925208,
+   "buy_to_fly": 3.222918531781558,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.07721089157046745,
+    "frequency": 0.5282608089512438
+   },
+   "missing": [],
+   "f1_Hz": 189.30043324343896,
+   "co2_production_kg": 5.045698944,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 5.045698944
+  },
+  {
+   "material": "7075-T6",
+   "route": "machined_TO",
+   "volume": 0.25,
+   "mass_kg": 0.10610560000000001,
+   "sigma_ult_Pa": 43719501.53617505,
+   "sigma_over_Fty": 0.08691749808384702,
+   "deflection_m": 0.00011810611655943442,
+   "buy_to_fly": 3.813559322033898,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.08691749808384702,
+    "frequency": 0.6792688992955694
+   },
+   "missing": [],
+   "f1_Hz": 147.2171037179889,
+   "co2_production_kg": 5.045698944,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 5.045698944
+  },
+  {
+   "material": "7075-T6",
+   "route": "machined_TO",
+   "volume": 0.2,
+   "mass_kg": 0.08677280000000001,
+   "sigma_ult_Pa": 48677781.064997986,
+   "sigma_over_Fty": 0.09677491265407154,
+   "deflection_m": 0.00013769252518343078,
+   "buy_to_fly": 4.66321243523316,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.09677491265407154,
+    "frequency": 0.9311646036149733
+   },
+   "missing": [],
+   "f1_Hz": 107.39239830614194,
+   "co2_production_kg": 5.045698944,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 5.045698944
+  },
+  {
+   "material": "7075-T6",
+   "route": "machined_TO",
+   "volume": 0.15,
+   "mass_kg": 0.0664284,
+   "sigma_ult_Pa": 60679785.30383861,
+   "sigma_over_Fty": 0.12063575607124973,
+   "deflection_m": 0.0001799720786429463,
+   "buy_to_fly": 6.091370558375635,
+   "passes": false,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.12063575607124973,
+    "frequency": 1.4509801156216928
+   },
+   "missing": [],
+   "f1_Hz": 68.918932053837,
+   "co2_production_kg": 5.045698944,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 5.045698944
+  },
+  {
+   "material": "Ti-6Al-4V",
+   "route": "am_TO",
+   "volume": 0.5,
+   "mass_kg": 0.32622520000000005,
+   "sigma_ult_Pa": 34464464.26326227,
+   "sigma_over_Fty": 0.04167408012486369,
+   "deflection_m": 4.7921075984543673e-05,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.04167408012486369,
+    "frequency": 0.31619687536030694
+   },
+   "missing": [],
+   "f1_Hz": 316.25865969121236,
+   "co2_production_kg": 26.169506621454,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 26.169506621454
+  },
+  {
+   "material": "Ti-6Al-4V",
+   "route": "am_TO",
+   "volume": 0.35,
+   "mass_kg": 0.23000560000000003,
+   "sigma_ult_Pa": 37187011.322618365,
+   "sigma_over_Fty": 0.044966156375596575,
+   "deflection_m": 5.929476086688792e-05,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.044966156375596575,
+    "frequency": 0.3652722715815167
+   },
+   "missing": [],
+   "f1_Hz": 273.76838533905334,
+   "co2_production_kg": 18.450852577212004,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 18.450852577212004
+  },
+  {
+   "material": "Ti-6Al-4V",
+   "route": "am_TO",
+   "volume": 0.3,
+   "mass_kg": 0.1979324,
+   "sigma_ult_Pa": 38837078.45994513,
+   "sigma_over_Fty": 0.046961400797998945,
+   "deflection_m": 6.632394479362159e-05,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.046961400797998945,
+    "frequency": 0.4318775422280669
+   },
+   "missing": [],
+   "f1_Hz": 231.54711746319924,
+   "co2_production_kg": 15.877967895798001,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 15.877967895798001
+  },
+  {
+   "material": "Ti-6Al-4V",
+   "route": "am_TO",
+   "volume": 0.25,
+   "mass_kg": 0.16727680000000003,
+   "sigma_ult_Pa": 43719501.53617505,
+   "sigma_over_Fty": 0.05286517719005447,
+   "deflection_m": 7.698371415737681e-05,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.05286517719005447,
+    "frequency": 0.5544480404480023
+   },
+   "missing": [],
+   "f1_Hz": 180.35955167088065,
+   "co2_production_kg": 13.418801874336005,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 13.418801874336005
+  },
+  {
+   "material": "Ti-6Al-4V",
+   "route": "am_TO",
+   "volume": 0.2,
+   "mass_kg": 0.13679840000000001,
+   "sigma_ult_Pa": 48677781.064997986,
+   "sigma_over_Fty": 0.058860678434096717,
+   "deflection_m": 8.975049141501805e-05,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.058860678434096717,
+    "frequency": 0.7583892664940619
+   },
+   "missing": [],
+   "f1_Hz": 131.85840625393791,
+   "co2_production_kg": 10.973850685368003,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 10.973850685368003
+  },
+  {
+   "material": "Ti-6Al-4V",
+   "route": "am_TO",
+   "volume": 0.15,
+   "mass_kg": 0.10472519999999999,
+   "sigma_ult_Pa": 60679785.30383861,
+   "sigma_over_Fty": 0.0733733800530092,
+   "deflection_m": 0.0001173090730790841,
+   "buy_to_fly": 1.5,
+   "passes": false,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.0733733800530092,
+    "frequency": 1.1796369673552103
+   },
+   "missing": [],
+   "f1_Hz": 84.77184317494195,
+   "co2_production_kg": 8.400966003954,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 8.400966003954
+  }
+ ],
+ "ranking": [
+  {
+   "material": "AlSi10Mg",
+   "route": "am_TO",
+   "volume": 0.2,
+   "mass_kg": 0.08244960000000001,
+   "sigma_ult_Pa": 48677781.064997986,
+   "sigma_over_Fty": 0.2212626412045363,
+   "deflection_m": 0.0001371188063284998,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.2212626412045363,
+    "frequency": 0.9285136691500979
+   },
+   "missing": [],
+   "f1_Hz": 107.69900683479825,
+   "co2_production_kg": 2.3472696175920005,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 2.3472696175920005
+  },
+  {
+   "material": "7075-T6",
+   "route": "machined_TO",
+   "volume": 0.2,
+   "mass_kg": 0.08677280000000001,
+   "sigma_ult_Pa": 48677781.064997986,
+   "sigma_over_Fty": 0.09677491265407154,
+   "deflection_m": 0.00013769252518343078,
+   "buy_to_fly": 4.66321243523316,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.09677491265407154,
+    "frequency": 0.9311646036149733
+   },
+   "missing": [],
+   "f1_Hz": 107.39239830614194,
+   "co2_production_kg": 5.045698944,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 5.045698944
+  },
+  {
+   "material": "Ti-6Al-4V",
+   "route": "am_TO",
+   "volume": 0.2,
+   "mass_kg": 0.13679840000000001,
+   "sigma_ult_Pa": 48677781.064997986,
+   "sigma_over_Fty": 0.058860678434096717,
+   "deflection_m": 8.975049141501805e-05,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.058860678434096717,
+    "frequency": 0.7583892664940619
+   },
+   "missing": [],
+   "f1_Hz": 131.85840625393791,
+   "co2_production_kg": 10.973850685368003,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 10.973850685368003
+  },
+  {
+   "material": "Scalmalloy",
+   "route": "am_TO",
+   "volume": 0.2,
+   "mass_kg": 0.08244960000000001,
+   "sigma_ult_Pa": 48677781.064997986,
+   "sigma_over_Fty": 0.09934241033673058,
+   "deflection_m": 0.0001430804935601737,
+   "buy_to_fly": 1.5,
+   "passes": true,
+   "governs": "frequency",
+   "utilisation": {
+    "strength": 0.09934241033673058,
+    "frequency": 0.9484839897217543
+   },
+   "missing": [],
+   "f1_Hz": 105.43140536229382,
+   "co2_production_kg": 16.693500017592,
+   "co2_use_kg": 0.0,
+   "co2_total_kg": 16.693500017592
+  }
+ ],
+ "excluded": [],
+ "note": "2-D plane stress; element-centre von Mises excluding elements near the load and supports; deflection multiplied by the 4x-mesh factor; yield at ultimate as the allowable; f1 from the solid elements with consistent mass"
+}

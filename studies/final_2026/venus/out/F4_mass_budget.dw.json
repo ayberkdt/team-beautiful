@@ -1,0 +1,173 @@
+{
+ "surum": 1,
+ "ad": "F4_mass_budget",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  850.2,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    394.4,
+    74.0,
+    840.7,
+    379.5
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#5393c4",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Mass (kg)",
+    "nicelik": "Mass",
+    "birim": "kg",
+    "bicim": "parantez",
+    "anahtar": "mass",
+    "harf": "tek",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     8.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "2",
+     "4",
+     "6",
+     "8"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     570.9,
+     3.0,
+     664.1,
+     26.0
+    ]
+   },
+   "y": {
+    "ham": "Component",
+    "nicelik": "Component",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "component",
+    "harf": "tek",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.896,
+     10.896
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "avionics",
+     "wiring",
+     "blades + hubs",
+     "payload",
+     "vessel",
+     "motors",
+     "other: ESCs, thermal, comms, attach, coating",
+     "solar",
+     "battery",
+     "contingency 20 %",
+     "arms + hinges"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "avionics",
+     "wiring",
+     "blades + hubs",
+     "payload",
+     "vessel",
+     "motors",
+     "other: ESCs, thermal, comms, attach, coating",
+     "solar",
+     "battery",
+     "contingency 20 %",
+     "arms + hinges"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     394.4,
+     388.7,
+     513.4,
+     411.0
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

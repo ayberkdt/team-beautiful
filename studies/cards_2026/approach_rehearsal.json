@@ -1,0 +1,129 @@
+{
+ "name": "Advionics rehearsal: GNSS-independent ground-radar approach guidance",
+ "note": "Rehearsal card. Runway position is synthetic; sensor sigmas, transponder power and antenna gains are ASSUMPTIONS to be replaced by the challenge's own numbers.",
+ "runway": {
+  "lat": 51.0,
+  "lon": 3.0,
+  "elevation_m": 10.0,
+  "course_deg": 262.0,
+  "glide_path_deg": 3.0,
+  "tch_m": 15.24
+ },
+ "sim": {
+  "x0_m": 8000.0,
+  "y0_m": 150.0,
+  "z0_above_path_m": 60.0,
+  "wind_speed_ms": 10.0,
+  "wind_from_rel_deg": 40.0,
+  "gust_sigma_ms": 2.0,
+  "tas_ms": 70.0
+ },
+ "gate_ft": 200,
+ "runs": 200,
+ "seed": 7,
+ "radar_range_at_gate_m": 1200.0,
+ "sensors": [
+  {
+   "name": "SBAS LPV-like",
+   "sigma_m": [
+    1.0,
+    1.0,
+    1.5
+   ],
+   "tau_s": 60.0
+  },
+  {
+   "name": "Baro-VNAV at ISA-30 K",
+   "bias_m": [
+    0.0,
+    0.0,
+    6.4
+   ],
+   "sigma_m": [
+    3.0,
+    3.0,
+    2.0
+   ],
+   "tau_s": 30.0
+  },
+  {
+   "name": "Ground radar 0.1 deg",
+   "angle_deg": 0.1,
+   "range_sigma_m": 3.0,
+   "tau_s": 2.0
+  },
+  {
+   "name": "Ground radar 0.3 deg",
+   "angle_deg": 0.3,
+   "range_sigma_m": 5.0,
+   "tau_s": 2.0
+  },
+  {
+   "name": "Vision/INS 2 % of range",
+   "range_fraction": 0.02,
+   "along_sigma_m": 10.0,
+   "tau_s": 5.0
+  }
+ ],
+ "spoof": {
+  "primary": "SBAS LPV-like",
+  "monitor": "Ground radar 0.1 deg",
+  "ramp_m_s": [
+   0.0,
+   0.0,
+   -1.0
+  ],
+  "ramp_start_s": 20.0,
+  "p_false_alert": 1e-05,
+  "p_missed_detection": 0.001,
+  "x0_m": 6000.0,
+  "seed": 3
+ },
+ "integrity_risk": 1e-07,
+ "alert_limit": "LPV-200",
+ "angle_accuracies_deg": [
+  0.05,
+  0.1,
+  0.3
+ ],
+ "link": {
+  "note": "ASSUMED values: transponder reply power, antenna gains, receiver bandwidth and noise figure",
+  "p_tx_w": 250.0,
+  "frequency_hz": 1090000000.0,
+  "gain_tx_dbi": 0.0,
+  "gain_rx_dbi": 20.0,
+  "losses_db": 3.0,
+  "bandwidth_hz": 8000000.0,
+  "noise_figure_db": 4.0,
+  "beamwidth_deg": 6.0,
+  "k_m": 1.6,
+  "samples": 10,
+  "ranges_nm": [
+   10.0,
+   5.0,
+   2.0,
+   0.6
+  ]
+ },
+ "autoland": {
+  "runs": 20,
+  "seed": 11,
+  "x0_m": 6000.0,
+  "radar_site_m": [
+   -300.0,
+   150.0,
+   2.0
+  ],
+  "radar_sigma": [
+   3.0,
+   0.1,
+   0.1
+  ],
+  "baro_bias_cold_m": 6.4,
+  "touchdown_box_m": [
+   150.0,
+   900.0
+  ],
+  "note": "radar site beside the touchdown zone, sigma range m / az deg / el deg (ASSUMED); baro bias = ISA-30 K at 200 ft (approach_cold model)"
+ }
+}

@@ -1,0 +1,7 @@
+figür denetimi: 0 HATA · 3 UYARI · 0 BİLGİ · TESLİM EDİLEBİLİR
+  [UYARI] panel-hizasi       aynı satırdaki paneller 18.2 pt kaymış
+          → constrained layout + ortak gridspec; renk çubuğunu tek panele değil satıra bağla (fig.colorbar(m, ax=axs))  [06 T15: Wilke2019Ch21 §21.2; Gleicher2018 §6.1; tolerans datawiz-secimi]
+  [UYARI] panel-boslugu      sabit oranlı paneller arasında 35 mm boşluk (figür genişliğinin %20'i)
+          → layout='compressed' (S.figur(..., layout='compressed')) ya da figür oranını panellere göre seç; boşluk sayfada veriye ayrılabilecek yeri harcar  [datawiz-secimi (%15 figür genişliği) — veri-mürekkep/alan ekonomisi: Wilke2019Ch21 §21.2 (paneller hizalı, düzenli); MPL compressed layout belgesi]
+  [UYARI] renk-cubugu-boyu   eksen 3: renk çubuğu haritadan %30 uzun
+          → dw.ciz.isi(...) ya da fig.colorbar(..., shrink=…) ile boyu eşitle  [datawiz seçimi (bant hangi çizginin]

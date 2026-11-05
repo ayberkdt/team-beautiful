@@ -1,0 +1,48 @@
+{
+ "units": "SI",
+ "source": "scripts/venus_day.py (aerokit.planetary)",
+ "vehicles": [
+  {
+   "name": "Battery quadrotor",
+   "kind": "rotor",
+   "mass_kg": 10.0,
+   "weight_N": 87.10946772383345,
+   "buoyant_force_N": 0.0,
+   "rotor_disk_area_m2": 1.13,
+   "wing_area_m2": null,
+   "power_to_stay_aloft_W": 1235.705106530583,
+   "air_density_kg_m3": 0.9251990215667779,
+   "gravity_m_s2": 8.710946772383345,
+   "altitude_m": 55000.0,
+   "zonal_wind_m_s": 72.5
+  },
+  {
+   "name": "Helium-assisted quad",
+   "kind": "rotor",
+   "mass_kg": 10.0,
+   "weight_N": 87.10946772383345,
+   "buoyant_force_N": 65.85234529193197,
+   "rotor_disk_area_m2": 1.13,
+   "wing_area_m2": null,
+   "power_to_stay_aloft_W": 148.96132003858585,
+   "air_density_kg_m3": 0.9251990215667779,
+   "gravity_m_s2": 8.710946772383345,
+   "altitude_m": 55000.0,
+   "zonal_wind_m_s": 72.5
+  },
+  {
+   "name": "Solar aeroplane",
+   "kind": "wing",
+   "mass_kg": 10.0,
+   "weight_N": 87.10946772383345,
+   "buoyant_force_N": 0.0,
+   "rotor_disk_area_m2": null,
+   "wing_area_m2": 2.0,
+   "power_to_stay_aloft_W": 105.00088382821531,
+   "air_density_kg_m3": 0.9251990215667779,
+   "gravity_m_s2": 8.710946772383345,
+   "altitude_m": 55000.0,
+   "zonal_wind_m_s": 72.5
+  }
+ ]
+}

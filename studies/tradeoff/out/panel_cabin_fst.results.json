@@ -1,0 +1,354 @@
+{
+  "study": "A320 cabin panel, stiffness-limited, only materials that pass the cabin fire tests (OSU 65/65, 14 CFR 25.853)",
+  "case": "panel_stiff",
+  "objectives": [
+    "mass_kg",
+    "co2_total_kg"
+  ],
+  "score": "co2_total_kg",
+  "exchange": {},
+  "exchange_unit": "",
+  "nominal": [
+    {
+      "material": "Al-Li 2050-T84",
+      "route": "sheet_formed",
+      "mass_kg": 2.8698478352335877,
+      "co2_production_kg": 48.59295230965556,
+      "co2_use_kg": 52235.82235778767,
+      "co2_total_kg": 52284.41531009733,
+      "co2_eol_potential_kg": -28.985463135859234,
+      "cost": null,
+      "score": 52284.41531009733,
+      "rank": 1
+    },
+    {
+      "material": "Glass/phenolic 7781",
+      "route": "autoclave_layup",
+      "mass_kg": 2.9468573544944383,
+      "co2_production_kg": 76.00534488712056,
+      "co2_use_kg": 53637.51882356597,
+      "co2_total_kg": 53713.52416845309,
+      "co2_eol_potential_kg": 0.0,
+      "cost": null,
+      "score": 53713.52416845309,
+      "rank": 2
+    },
+    {
+      "material": "2024-T3",
+      "route": "sheet_formed",
+      "mass_kg": 2.9999999999999996,
+      "co2_production_kg": 50.79671999999999,
+      "co2_use_kg": 54604.79999999999,
+      "co2_total_kg": 54655.59671999999,
+      "co2_eol_potential_kg": -30.299999999999994,
+      "cost": null,
+      "score": 54655.59671999999,
+      "rank": 3
+    }
+  ],
+  "pareto": [
+    "Al-Li 2050-T84 / sheet_formed"
+  ],
+  "monte_carlo": {
+    "samples": 3000,
+    "seed": 1,
+    "p_best": {
+      "2024-T3 / sheet_formed": 0.0,
+      "Al-Li 2050-T84 / sheet_formed": 1.0,
+      "Glass/phenolic 7781 / autoclave_layup": 0.0
+    },
+    "quantiles": {
+      "2024-T3 / sheet_formed": {
+        "mass_kg": {
+          "p05": 2.15769082527826,
+          "p50": 3.502953810916285,
+          "p95": 4.871971934279104
+        },
+        "co2_total_kg": {
+          "p05": 26659.90273398983,
+          "p50": 54501.90269268222,
+          "p95": 98342.03182867976
+        }
+      },
+      "Al-Li 2050-T84 / sheet_formed": {
+        "mass_kg": {
+          "p05": 2.064081448009396,
+          "p50": 3.3509814703937826,
+          "p95": 4.660606036303228
+        },
+        "co2_total_kg": {
+          "p05": 25510.58579481705,
+          "p50": 52129.98721473345,
+          "p95": 94066.1962907985
+        }
+      },
+      "Glass/phenolic 7781 / autoclave_layup": {
+        "mass_kg": {
+          "p05": 2.1194690257321382,
+          "p50": 3.440901733384325,
+          "p95": 4.785668775140291
+        },
+        "co2_total_kg": {
+          "p05": 26208.683905967522,
+          "p50": 53598.88533418665,
+          "p95": 96654.14727973766
+        }
+      }
+    }
+  },
+  "tornado": [
+    {
+      "factor": "reference_mass",
+      "unit": "kg",
+      "low": 2.0,
+      "high": 5.0,
+      "tag": "Y",
+      "margin_low": 952.7392389038432,
+      "margin_high": 2381.848097259586,
+      "swing": 1429.108858355743,
+      "reverses": false
+    },
+    {
+      "factor": "lifecycle.fuel_per_kg_per_flight",
+      "unit": "kg fuel / kg carried / flight",
+      "low": 0.07,
+      "high": 0.16,
+      "tag": "A",
+      "margin_low": 845.0686642814762,
+      "margin_high": 1896.3410136151797,
+      "swing": 1051.2723493337035,
+      "reverses": false
+    },
+    {
+      "factor": "lifecycle.flights",
+      "unit": "flights over life",
+      "low": 30000.0,
+      "high": 60000.0,
+      "tag": "D",
+      "margin_low": 903.4726836889022,
+      "margin_high": 1779.5329748003423,
+      "swing": 876.0602911114402,
+      "reverses": false
+    },
+    {
+      "factor": "lifecycle.grid_co2_per_MJ",
+      "unit": "kg CO2 / MJ electricity",
+      "low": 0.0112,
+      "high": 0.1543,
+      "tag": "D",
+      "margin_low": 1393.4240224430614,
+      "margin_high": 1500.9292860032292,
+      "swing": 107.5052635601678,
+      "reverses": false
+    },
+    {
+      "factor": "routes.autoclave_layup.process_MJ_per_kg",
+      "unit": "MJ/kg",
+      "low": 100.0,
+      "high": 300.0,
+      "tag": "S",
+      "margin_low": 1406.6213898836213,
+      "margin_high": 1451.5963268279156,
+      "swing": 44.97493694429431,
+      "reverses": false
+    },
+    {
+      "factor": "materials.Al-Li 2050-T84.co2_per_kg",
+      "unit": "kg CO2 / kg",
+      "low": 6.6,
+      "high": 15.1,
+      "tag": "Y",
+      "margin_low": 1452.2025238858914,
+      "margin_high": 1420.4907053065617,
+      "swing": 31.7118185793297,
+      "reverses": false
+    },
+    {
+      "factor": "routes.autoclave_layup.buy_to_fly",
+      "unit": "-",
+      "low": 1.1,
+      "high": 1.5,
+      "tag": "Y",
+      "margin_low": 1417.4157283731329,
+      "margin_high": 1440.801988338404,
+      "swing": 23.386259965271165,
+      "reverses": false
+    },
+    {
+      "factor": "routes.sheet_formed.buy_to_fly",
+      "unit": "-",
+      "low": 1.1,
+      "high": 1.6,
+      "tag": "Y",
+      "margin_low": 1436.584697172635,
+      "margin_high": 1417.8951001304595,
+      "swing": 18.689597042175592,
+      "reverses": false
+    },
+    {
+      "factor": "materials.Glass/phenolic 7781.co2_per_kg",
+      "unit": "kg CO2 / kg",
+      "low": 7.47,
+      "high": 8.26,
+      "tag": "D",
+      "margin_low": 1426.6953821824354,
+      "margin_high": 1429.721804685505,
+      "swing": 3.0264225030696252,
+      "reverses": false
+    },
+    {
+      "factor": "routes.sheet_formed.process_MJ_per_kg",
+      "unit": "MJ/kg",
+      "low": 3.0,
+      "high": 5.0,
+      "tag": "S",
+      "margin_low": 1429.3278564440698,
+      "margin_high": 1428.8898602674599,
+      "swing": 0.4379961766098859,
+      "reverses": false
+    },
+    {
+      "factor": "materials.2024-T3.co2_per_kg",
+      "unit": "kg CO2 / kg",
+      "low": 6.6,
+      "high": 15.1,
+      "tag": "D",
+      "margin_low": 1429.1088583557648,
+      "margin_high": 1429.1088583557648,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.2024-T3.eol_credit_per_kg",
+      "unit": "kg CO2 / kg",
+      "low": 4.07,
+      "high": 12.49,
+      "tag": "H",
+      "margin_low": 1429.1088583557648,
+      "margin_high": 1429.1088583557648,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.Al-Li 2050-T84.eol_credit_per_kg",
+      "unit": "kg CO2 / kg",
+      "low": 4.07,
+      "high": 12.49,
+      "tag": "Y",
+      "margin_low": 1429.1088583557648,
+      "margin_high": 1429.1088583557648,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.CFRP QI IM7/8552.co2_per_kg",
+      "unit": "kg CO2 / kg",
+      "low": 14.9,
+      "high": 46.2,
+      "tag": "H",
+      "margin_low": 1429.1088583557648,
+      "margin_high": 1429.1088583557648,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.CFRP QI IM7/8552.eol_credit_per_kg",
+      "unit": "kg CO2 / kg",
+      "low": 0.0,
+      "high": 23.0,
+      "tag": "S",
+      "margin_low": 1429.1088583557648,
+      "margin_high": 1429.1088583557648,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.Flax/epoxy.co2_per_kg",
+      "unit": "kg CO2 / kg",
+      "low": 3.4,
+      "high": 4.0,
+      "tag": "H",
+      "margin_low": 1429.1088583557648,
+      "margin_high": 1429.1088583557648,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.CF/PEEK 5HS.co2_per_kg",
+      "unit": "kg CO2 / kg",
+      "low": 14.7,
+      "high": 44.9,
+      "tag": "H",
+      "margin_low": 1429.1088583557648,
+      "margin_high": 1429.1088583557648,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.CF/PEEK 5HS.eol_credit_per_kg",
+      "unit": "kg CO2 / kg",
+      "low": 0.0,
+      "high": 23.0,
+      "tag": "Y",
+      "margin_low": 1429.1088583557648,
+      "margin_high": 1429.1088583557648,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "routes.thermoplastic_press.buy_to_fly",
+      "unit": "-",
+      "low": 1.1,
+      "high": 1.4,
+      "tag": "Y",
+      "margin_low": 1429.1088583557648,
+      "margin_high": 1429.1088583557648,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "routes.thermoplastic_press.process_MJ_per_kg",
+      "unit": "MJ/kg",
+      "low": 11.0,
+      "high": 16.0,
+      "tag": "S",
+      "margin_low": 1429.1088583557648,
+      "margin_high": 1429.1088583557648,
+      "swing": 0.0,
+      "reverses": false
+    }
+  ],
+  "weak_inputs": [
+    "materials.Al-Li 2050-T84.co2_per_kg",
+    "materials.Al-Li 2050-T84.eol_credit_per_kg",
+    "materials.CF/PEEK 5HS.eol_credit_per_kg",
+    "materials.CFRP QI IM7/8552.eol_credit_per_kg",
+    "reference_mass",
+    "routes.autoclave_layup.buy_to_fly",
+    "routes.autoclave_layup.mass_factor",
+    "routes.autoclave_layup.process_MJ_per_kg",
+    "routes.sheet_formed.buy_to_fly",
+    "routes.sheet_formed.mass_factor",
+    "routes.sheet_formed.process_MJ_per_kg",
+    "routes.thermoplastic_press.buy_to_fly",
+    "routes.thermoplastic_press.mass_factor",
+    "routes.thermoplastic_press.process_MJ_per_kg"
+  ],
+  "screened": [
+    {
+      "material": "CFRP QI IM7/8552",
+      "route": "autoclave_layup",
+      "reason": "lacks fst_cabin"
+    },
+    {
+      "material": "Flax/epoxy",
+      "route": "autoclave_layup",
+      "reason": "lacks fst_cabin"
+    },
+    {
+      "material": "CF/PEEK 5HS",
+      "route": "thermoplastic_press",
+      "reason": "lacks fst_cabin"
+    }
+  ]
+}

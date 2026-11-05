@@ -1,0 +1,176 @@
+{
+ "surum": 1,
+ "ad": "A1_gate_accuracy",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  2.3,
+  2.2,
+  691.3,
+  407.9
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [
+   20.4
+  ],
+  "panel": [],
+  "metin": [
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "lejant": 20.4,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    207.5,
+    73.1,
+    700.2,
+    376.4
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Vertical",
+     "tur": "sacilim",
+     "renk": "#0072b2",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 9.0
+    },
+    {
+     "etiket": "Lateral",
+     "tur": "sacilim",
+     "renk": "#d55e00",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 8.08
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Deviation at the gate, P95 (m)",
+    "nicelik": "Deviation at the gate, P95",
+    "birim": "m",
+    "bicim": "parantez",
+    "anahtar": "deviationatthegate,p95",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     31.219342028389935
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "10",
+     "20",
+     "30"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     306.2,
+     2.2,
+     601.4,
+     25.2
+    ]
+   },
+   "y": {
+    "ham": "Navigation source",
+    "nicelik": "Navigation source",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "navigationsource",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.332,
+     4.332
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "Vision/INS 2 % of range",
+     "Baro-VNAV at ISA-30 K",
+     "Ground radar 0.3 deg",
+     "SBAS LPV-like",
+     "Ground radar 0.1 deg"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": ".",
+    "tikler": [
+     "Vision/INS 2 % of range",
+     "Baro-VNAV at ISA-30 K",
+     "Ground radar 0.3 deg",
+     "SBAS LPV-like",
+     "Ground radar 0.1 deg"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     207.5,
+     385.5,
+     388.6,
+     407.9
+    ]
+   },
+   "lejant": [
+    "Vertical",
+    "Lateral"
+   ],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

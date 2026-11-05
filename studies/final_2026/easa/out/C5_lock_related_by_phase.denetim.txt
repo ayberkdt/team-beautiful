@@ -1,0 +1,5 @@
+figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] birim              eksen 0: x etiketi birim içermiyor: 'Investigated lock-related openings'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [Kosslyn2012; TufteNotebookPP (birimler kaybolmasın)]
+  [BİLGİ] birim              eksen 0: y etiketi birim içermiyor: 'Flight phase'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [Kosslyn2012; TufteNotebookPP (birimler kaybolmasın)]

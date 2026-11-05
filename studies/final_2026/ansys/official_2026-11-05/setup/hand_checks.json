@@ -1,0 +1,15 @@
+{
+ "bearing_MPa": 23.095238095238095,
+ "lug_halfwidth_at_pin_mm": 77.80053405986362,
+ "net_section_tension_MPa": 14.494757359602598,
+ "ligament_above_pin_mm": 31.370000000000005,
+ "lug_root_out_of_plane_bending_MPa": 25.01085540599218,
+ "lug_root_axial_MPa": 7.37082066869301,
+ "plate_bending_fixed_fixed_MPa": 44.39457537236283,
+ "plate_bending_pinned_MPa": 88.78915074472566,
+ "bolt_tension_LC1_kN": 48.5,
+ "bolt_shear_LC1_kN": 12.0,
+ "bolt_axial_LC2_kN": 1.9607843137254901,
+ "largest_dimension_mm": 661.01,
+ "displacement_limit_mm": 1.652525
+}

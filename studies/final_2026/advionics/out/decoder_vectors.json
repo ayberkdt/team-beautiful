@@ -1,0 +1,182 @@
+[
+ {
+  "vector": "identification",
+  "hex": "8D4840D6202CC371C32CE0576098",
+  "field": "callsign",
+  "decoded": "KLM1023",
+  "expected": "KLM1023",
+  "ok": true,
+  "read_by": "[D]"
+ },
+ {
+  "vector": "position pair",
+  "hex": "8D40621D58C382D690C8AC2863A7 + ...6435CC412692AD6",
+  "field": "lat",
+  "decoded": 52.2572,
+  "expected": 52.2572,
+  "ok": true,
+  "read_by": "[D]"
+ },
+ {
+  "vector": "position pair",
+  "hex": "(same)",
+  "field": "lon",
+  "decoded": 3.91937,
+  "expected": 3.91937,
+  "ok": true,
+  "read_by": "[D]"
+ },
+ {
+  "vector": "position",
+  "hex": "8D40621D58C382D690C8AC2863A7",
+  "field": "altitude ft",
+  "decoded": 38000,
+  "expected": 38000,
+  "ok": true,
+  "read_by": "[D]"
+ },
+ {
+  "vector": "velocity st1",
+  "hex": "8D485020994409940838175B284F",
+  "field": "ground speed kt",
+  "decoded": 159.2,
+  "expected": 159.2,
+  "ok": true,
+  "read_by": "[D]"
+ },
+ {
+  "vector": "velocity st1",
+  "hex": "(same)",
+  "field": "track deg",
+  "decoded": 182.88,
+  "expected": 182.88,
+  "ok": true,
+  "read_by": "[D]"
+ },
+ {
+  "vector": "velocity st1",
+  "hex": "(same)",
+  "field": "vertical rate fpm",
+  "decoded": -832,
+  "expected": -832,
+  "ok": true,
+  "read_by": "[D]"
+ },
+ {
+  "vector": "velocity st3",
+  "hex": "8DA05F219B06B6AF189400CBC33F",
+  "field": "TAS kt",
+  "decoded": 375.0,
+  "expected": 375,
+  "ok": true,
+  "read_by": "[D]"
+ },
+ {
+  "vector": "DF4 altitude",
+  "hex": "2000171806A983",
+  "field": "altitude ft",
+  "decoded": 36000,
+  "expected": 36000,
+  "ok": true,
+  "read_by": "[D]"
+ },
+ {
+  "vector": "DF5 identity",
+  "hex": "2A00516D492B80",
+  "field": "squawk",
+  "decoded": "0356",
+  "expected": "0356",
+  "ok": true,
+  "read_by": "[D]"
+ },
+ {
+  "vector": "CRC (corrupted)",
+  "hex": "8D4CA251204994B1C36E60A5343D",
+  "field": "remainder",
+  "decoded": 16,
+  "expected": 16,
+  "ok": true,
+  "read_by": "[D-ag]"
+ },
+ {
+  "vector": "DF20 address/parity",
+  "hex": "A0001838CA380031440000F24177",
+  "field": "ICAO",
+  "decoded": "3C6DD0",
+  "expected": "3C6DD0",
+  "ok": true,
+  "read_by": "[D-ag]"
+ },
+ {
+  "vector": "DF11 all-call",
+  "hex": "5D484FDEA248F5",
+  "field": "ICAO",
+  "decoded": "484FDE",
+  "expected": "484FDE",
+  "ok": true,
+  "read_by": "[D-ag]"
+ },
+ {
+  "vector": "DF20 Comm-B BDS 2,0",
+  "hex": "A000083E202CC371C31DE0AA1CCF",
+  "field": "callsign",
+  "decoded": "KLM1017",
+  "expected": "KLM1017",
+  "ok": true,
+  "read_by": "[D-ag]"
+ },
+ {
+  "vector": "surface pair (ref 51.990, 4.375)",
+  "hex": "8C4841753AAB2387... + 8C4841753A8A3532...",
+  "field": "lat",
+  "decoded": 52.320607,
+  "expected": 52.320607,
+  "ok": true,
+  "read_by": "[D]"
+ },
+ {
+  "vector": "surface pair",
+  "hex": "(same)",
+  "field": "lon",
+  "decoded": 4.734735,
+  "expected": 4.734735,
+  "ok": true,
+  "read_by": "[D]"
+ },
+ {
+  "vector": "surface local",
+  "hex": "8C4841753A9A153237AEF0F275BE",
+  "field": "lat",
+  "decoded": 52.320561,
+  "expected": 52.320561,
+  "ok": true,
+  "read_by": "[D]"
+ },
+ {
+  "vector": "surface local",
+  "hex": "(same)",
+  "field": "lon",
+  "decoded": 4.735735,
+  "expected": 4.735735,
+  "ok": true,
+  "read_by": "[D]"
+ },
+ {
+  "vector": "surface movement",
+  "hex": "(same)",
+  "field": "speed kt",
+  "decoded": 17.0,
+  "expected": 17.0,
+  "ok": true,
+  "read_by": "[D]"
+ },
+ {
+  "vector": "surface track",
+  "hex": "(same)",
+  "field": "track deg",
+  "decoded": 92.8125,
+  "expected": 92.8125,
+  "ok": true,
+  "read_by": "[D]"
+ }
+]

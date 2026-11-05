@@ -1,0 +1,169 @@
+{
+ "surum": 1,
+ "ad": "F3_psr_pd_vs_range",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  850.2,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    40.6,
+    74.0,
+    699.3,
+    378.8
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Swerling 1, 2 m²",
+     "tur": "cizgi",
+     "renk": "#009e73",
+     "isaret": null,
+     "cizgi": "-.",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Swerling 1, 10 m²",
+     "tur": "cizgi",
+     "renk": "#cc79a7",
+     "isaret": null,
+     "cizgi": ":",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Range from the radar (NM)",
+    "nicelik": "Range from the radar",
+    "birim": "NM",
+    "bicim": "parantez",
+    "anahtar": "rangefromtheradar",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     3.5,
+     80.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "20",
+     "40",
+     "60",
+     "80"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     237.4,
+     3.0,
+     502.5,
+     26.0
+    ]
+   },
+   "y": {
+    "ham": "Probability of detection per scan",
+    "nicelik": "Probability of detection per scan",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "probabilityofdetectionperscan",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     1.02
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     1
+    ],
+    "ondalik_isareti": ".",
+    "tikler": [
+     "0.0",
+     "0.2",
+     "0.4",
+     "0.6",
+     "0.8",
+     "1.0"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     40.6,
+     388.0,
+     366.6,
+     411.0
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [
+    "Swerling 1, 10 m²",
+    "Swerling 1, 2 m²"
+   ],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

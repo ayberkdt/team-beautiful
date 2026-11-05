@@ -1,0 +1,175 @@
+{
+ "surum": 1,
+ "ad": "F1_evre_paylari",
+ "boyut_pt": [
+  510.2,
+  214.3
+ ],
+ "metin_kutusu_pt": [
+  33.3,
+  4.8,
+  393.1,
+  212.1
+ ],
+ "hedef": "genel-cift",
+ "ortam": "makale",
+ "boyut_mm": [
+  180.0,
+  75.6
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   8.1
+  ],
+  "eksen_adi": [
+   9.0
+  ],
+  "baslik": [],
+  "lejant": [
+   8.1
+  ],
+  "panel": [],
+  "metin": [
+   8.0,
+   8.1
+  ]
+ },
+ "punto_tepe": {
+  "tik": 8.1,
+  "eksen_adi": 9.0,
+  "lejant": 8.1,
+  "metin": 8.0
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    105.7,
+    32.3,
+    434.6,
+    197.3
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Üretim",
+     "tur": "cubuk",
+     "renk": "#679fcc",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Kullanım (yakıt)",
+     "tur": "cubuk",
+     "renk": "#eda784",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Ömür boyu CO₂ (t)",
+    "nicelik": "Ömür boyu CO₂",
+    "birim": "t",
+    "bicim": "parantez",
+    "anahtar": "ömürboyuco₂",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     29.1307495894051
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "5",
+     "10",
+     "15",
+     "20",
+     "25"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     235.8,
+     4.8,
+     304.5,
+     14.0
+    ]
+   },
+   "y": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": true,
+    "sinir": [
+     6.6850000000000005,
+     -0.685
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "Scalmalloy TO + Eİ",
+     "Ti-6Al-4V TO + Eİ",
+     "7075 TO + talaşlı",
+     "Ti-6Al-4V TO + talaşlı",
+     "AlSi10Mg TO + Eİ",
+     "7075 talaşlı",
+     "2024 TO + talaşlı"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "Scalmalloy TO + Eİ",
+     "Ti-6Al-4V TO + Eİ",
+     "7075 TO + talaşlı",
+     "Ti-6Al-4V TO + talaşlı",
+     "AlSi10Mg TO + Eİ",
+     "7075 talaşlı",
+     "2024 TO + talaşlı"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "lejant": [
+    "Üretim",
+    "Kullanım (yakıt)"
+   ],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": false
+   },
+   "cerceve": [],
+   "alan": false,
+   "cerceve_kalinlik": null,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

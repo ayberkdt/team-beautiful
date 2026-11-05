@@ -1,0 +1,179 @@
+{
+ "surum": 1,
+ "ad": "C6_lock_related_by_type",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  845.7,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   20.4,
+   24.0
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 24.0
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    178.8,
+    73.2,
+    861.6,
+    378.8
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Partial lock",
+     "tur": "cizgi",
+     "renk": "#000000",
+     "isaret": "Path(array([[-0.126, -1.075],\n       [ 0.   , -1.25 ],\n       [ 0.126, -1.075],\n       [ 0.774, -0.175],\n       [ 0.9  ,  0.   ],\n       [ 0.774,  0.175],\n       [ 0.126,  1.075],\n       [ 0.   ,  1.25 ],\n       [-0.126,  1.075],\n       [-0.774,  0.175],\n       [-0.9  ,  0.   ],\n       [-0.774, -0.175],\n       [-0.126, -1.075]]), array([ 1,  3,  3,  2,  3,  3,  2,  3,  3,  2,  3,  3, 79], dtype=uint8))",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 13.43
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Investigated lock-related openings",
+    "nicelik": "Investigated lock-related openings",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "investigatedlockrelatedopenings",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     62.4
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "10",
+     "20",
+     "30",
+     "40",
+     "50",
+     "60"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     346.3,
+     3.0,
+     694.0,
+     25.3
+    ]
+   },
+   "y": {
+    "ham": "Type family",
+    "nicelik": "Type family",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "typefamily",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.55,
+     11.55
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "all other types",
+     "Lancair",
+     "Cap / Mudry",
+     "Europa",
+     "Extra",
+     "Schweizer",
+     "Evektor",
+     "SportCruiser",
+     "Rutan-type canards",
+     "Zenith / Zenair CH",
+     "Grob",
+     "Vans RV"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "all other types",
+     "Lancair",
+     "Cap / Mudry",
+     "Europa",
+     "Extra",
+     "Schweizer",
+     "Evektor",
+     "SportCruiser",
+     "Rutan-type canards",
+     "Zenith / Zenair CH",
+     "Grob",
+     "Vans RV"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     178.8,
+     388.0,
+     295.0,
+     411.0
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

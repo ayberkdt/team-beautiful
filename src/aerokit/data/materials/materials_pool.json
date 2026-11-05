@@ -1,0 +1,2225 @@
+{
+  "about": "Sourced material-property pool for EUROAVIA Ideathon 2026 (Ansys: topology optimisation + materials selection + eco audit). Built 2026-11-03. Tags: D = read from the primary source (datasheet, handbook, standard, original paper) - either in this session (2026-11-03: MIL-HDBK-5J local PDF, EOS IN625, Victrex 450G, Stratasys ULTEM 9085 and Nylon 12CF, EOS PA 2200, Eckart A205, Aubert & Duval Ti5553, ICE v2.0) or in the 2026-11-01/02 sessions recorded in the project notes named in each source string (those tags are inherited, not re-read); S = secondary (distributor, compilation, review, search snippet); Y = own calculation, proxy or judgement. Units: rho kg/m3, E GPa, Fty/Ftu/fatigue MPa, k W/mK, cte 1e-6/K, Tmax C, co2 kg CO2e/kg, price currency in unit. Metal strengths are design allowables (A- or S-basis) where MIL-HDBK-5J has them, AM and polymer values are typical. Optional keys: condition, low, high. Missing keys = NOT FOUND (see README.md). Conversions: 1 ksi = 6.894757 MPa, 1 lb/in3 = 27679.9 kg/m3, 1 Btu/(h ft F) = 1.7307 W/mK, 1e-6/F = 1.8e-6/K.",
+  "materials": {
+    "Al 2024-T3 sheet": {
+      "family": "aluminium",
+      "routes": [
+        "sheet forming",
+        "machined",
+        "riveted assembly"
+      ],
+      "flags": [
+        "fst_cabin (metal, non-combustible) [Y]",
+        "fire_resistant per 14 CFR 1.1 benchmark (Al alloy)"
+      ],
+      "properties": {
+        "rho": {
+          "value": 2768,
+          "unit": "kg/m3",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.2.3.0(b1), PDF p.373 (0.100 lb/in3)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 72.4,
+          "unit": "GPa",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.2.3.0(b1) (10.5 Msi)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 324,
+          "unit": "MPa",
+          "condition": "A-basis, L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.2.3.0(b1), AMS 4037 sheet 0.010-0.128 in, L (47 ksi)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 441,
+          "unit": "MPa",
+          "condition": "A-basis, L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.2.3.0(b1), sheet 0.010-0.128 in, L (64 ksi)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 15,
+          "unit": "%",
+          "condition": "LT, minimum",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.2.3.0(c), T3 0.021-0.249 in, LT minimum",
+          "tag": "D"
+        },
+        "fatigue": {
+          "value": 124,
+          "unit": "MPa",
+          "condition": "R=-1, 1e7, unnotched bare sheet 0.090 in, electropolished; mean curve (equation [D])",
+          "source": "MIL-HDBK-5J Fig. 3.2.3.1.8(e) p.3-116 best-fit equation solved at N=1e7, via research_notes/Üç sapma alanı/A_titresim_yorulma.md",
+          "tag": "Y"
+        },
+        "k": {
+          "value": 119,
+          "unit": "W/mK",
+          "condition": "70 F",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.2.3.0 p.3-69 (~69 Btu/h ft F, eye-read)",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 22.9,
+          "unit": "1e-6/K",
+          "condition": "70-212 F",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.2.3.0 (~12.7e-6/F, eye-read)",
+          "tag": "D"
+        },
+        "Tmax": {
+          "value": 120,
+          "unit": "C",
+          "source": "judgement from MMPDS-01 Fty-vs-temperature curves (10,000 h exposure falls steeply above ~120 C), research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "tag": "Y"
+        },
+        "co2": {
+          "value": 12.79,
+          "unit": "kg CO2e/kg",
+          "low": 6.6,
+          "high": 15.1,
+          "condition": "primary ingot, cradle-to-gate, fabrication excluded",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "co2_recycled": {
+          "value": 1.81,
+          "unit": "kg CO2e/kg",
+          "condition": "100 % recycled route",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "price": {
+          "value": 10,
+          "unit": "EUR/kg (2024-2026 nominal)",
+          "low": 7.5,
+          "high": 20,
+          "condition": "aerospace plate, mill/distributor",
+          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "tag": "Y"
+        }
+      },
+      "notes": "Design allowables (A-basis) not typical values. AA typical (aerospacemetals.com 2023, [S]) is 345/483 MPa and 2780 kg/m3 (used in build_studies.py panel study). At 150 C / 10,000 h Fty retains 82 % (MMPDS-01)."
+    },
+    "Al 2024-T351 plate": {
+      "family": "aluminium",
+      "routes": [
+        "machined from plate"
+      ],
+      "flags": [
+        "fst_cabin (metal) [Y]"
+      ],
+      "properties": {
+        "rho": {
+          "value": 2768,
+          "unit": "kg/m3",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.2.3.0(b1) (0.100 lb/in3)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 73.8,
+          "unit": "GPa",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.2.3.0(b1), plate columns (10.7 Msi)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 331,
+          "unit": "MPa",
+          "condition": "A-basis, L; 0.500-1.000 in also 48 ksi",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.2.3.0(b1) col 6, AMS 4037 plate 0.250-0.499 in, L (48 ksi)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 441,
+          "unit": "MPa",
+          "condition": "A-basis, L; 63 ksi for 0.500-1.000 in",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.2.3.0(b1) col 6, plate 0.250-0.499 in, L (64 ksi)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 12,
+          "unit": "%",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.2.3.0(b1) col 6 / Table 3.2.3.0(c), 0.250-0.499 in, LT min",
+          "tag": "D"
+        },
+        "fatigue": {
+          "value": 160,
+          "unit": "MPa",
+          "condition": "R=-1, 1e7, 2024-T4 BAR used as proxy for T351 plate (same natural-aged temper), polished; mean curve",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Fig. 3.2.3.1.8(a) (2024-T4 rolled/drawn/extruded bar, longitudinally polished): log Nf = 20.83 - 9.09 log Seq, Seq = Smax(1-R)^0.52, solved at N=1e7, R=-1",
+          "tag": "Y"
+        },
+        "k": {
+          "value": 119,
+          "unit": "W/mK",
+          "condition": "70 F; figure covers 2024 tempers",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.2.3.0 (2024, eye-read)",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 22.9,
+          "unit": "1e-6/K",
+          "condition": "70-212 F",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.2.3.0",
+          "tag": "D"
+        },
+        "Tmax": {
+          "value": 120,
+          "unit": "C",
+          "source": "judgement as for 2024-T3, research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "tag": "Y"
+        },
+        "co2": {
+          "value": 12.79,
+          "unit": "kg CO2e/kg",
+          "low": 6.6,
+          "high": 15.1,
+          "condition": "primary ingot, cradle-to-gate, fabrication excluded",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "co2_recycled": {
+          "value": 1.81,
+          "unit": "kg CO2e/kg",
+          "condition": "100 % recycled route",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "price": {
+          "value": 10,
+          "unit": "EUR/kg (2024-2026 nominal)",
+          "low": 7.5,
+          "high": 20,
+          "condition": "aerospace plate, mill/distributor",
+          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "tag": "Y"
+        }
+      },
+      "notes": "library.py AA typical Fty 324 MPa is BELOW this A-basis 331 MPa (known discrepancy, library.py docstring). 2024-T351 plate S-N curve not in MIL-HDBK-5J; 2024-T4 bar is the proxy."
+    },
+    "Al-Li 2050-T84 plate": {
+      "family": "aluminium",
+      "routes": [
+        "machined from thick plate (12-165 mm)"
+      ],
+      "flags": [
+        "fst_cabin (metal) [Y]"
+      ],
+      "properties": {
+        "rho": {
+          "value": 2700,
+          "unit": "kg/m3",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (Airware 2050 sheet p2, typical)",
+          "tag": "S"
+        },
+        "E": {
+          "value": 76.5,
+          "unit": "GPa",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (typical, tension)",
+          "tag": "S"
+        },
+        "Fty": {
+          "value": 476,
+          "unit": "MPa",
+          "condition": "minimum, L",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (L minimum, 12.7-38.1 mm; 455 MPa at 101.6-175 mm)",
+          "tag": "S"
+        },
+        "Ftu": {
+          "value": 503,
+          "unit": "MPa",
+          "condition": "minimum, L",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (L minimum, 12.7-38.1 mm)",
+          "tag": "S"
+        },
+        "elongation": {
+          "value": 8,
+          "unit": "%",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (L minimum, 12.7-38.1 mm)",
+          "tag": "S"
+        },
+        "co2": {
+          "value": 12.79,
+          "unit": "kg CO2e/kg",
+          "low": 6.6,
+          "high": 15.1,
+          "condition": "primary ingot, cradle-to-gate, fabrication excluded",
+          "source": "Al-Li footprint NOT FOUND; aluminium (ICE/EA/IAI) values applied as proxy; research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "Y"
+        },
+        "co2_recycled": {
+          "value": 1.81,
+          "unit": "kg CO2e/kg",
+          "condition": "100 % recycled route",
+          "source": "proxy: ICE recycled Al; Constellium brochure says recycling Airware 'uses only 5% of the energy' (research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md)",
+          "tag": "Y"
+        },
+        "price": {
+          "value": 10,
+          "unit": "EUR/kg (2024-2026 nominal)",
+          "low": 7.5,
+          "high": 20,
+          "condition": "aerospace plate, mill/distributor",
+          "source": "Al-Li price NOT FOUND; conventional Al plate placeholder; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "tag": "Y"
+        }
+      },
+      "notes": "Constellium claims vs 7050-T7451: -4 % density, +7 % stiffness, +8 % strength, +25 % fatigue (relative, marketing). Fatigue (numeric), k, CTE, Tmax: NOT FOUND. AMS 4413."
+    },
+    "Al-Li 2198-T8 sheet": {
+      "family": "aluminium",
+      "routes": [
+        "sheet forming (fuselage skin)"
+      ],
+      "flags": [
+        "fst_cabin (metal) [Y]"
+      ],
+      "properties": {
+        "rho": {
+          "value": 2700,
+          "unit": "kg/m3",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (Airware 2198 sheet)",
+          "tag": "S"
+        },
+        "E": {
+          "value": 76.5,
+          "unit": "GPa",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (L; identical value printed on the 2050 sheet, may be copied)",
+          "tag": "S"
+        },
+        "Fty": {
+          "value": 407,
+          "unit": "MPa",
+          "condition": "minimum, LT",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (LT minimum, 1.6-3.2 mm; 427 at 3.2-6.3 mm)",
+          "tag": "S"
+        },
+        "Ftu": {
+          "value": 462,
+          "unit": "MPa",
+          "condition": "minimum, LT",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (LT minimum, 1.6-3.2 mm; 476 at 3.2-6.3 mm)",
+          "tag": "S"
+        },
+        "co2": {
+          "value": 12.79,
+          "unit": "kg CO2e/kg",
+          "low": 6.6,
+          "high": 15.1,
+          "condition": "primary ingot, cradle-to-gate, fabrication excluded",
+          "source": "Al-Li footprint NOT FOUND; aluminium (ICE/EA/IAI) values applied as proxy; research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "Y"
+        },
+        "co2_recycled": {
+          "value": 1.81,
+          "unit": "kg CO2e/kg",
+          "condition": "100 % recycled route",
+          "source": "proxy: ICE recycled Al; Constellium brochure says recycling Airware 'uses only 5% of the energy' (research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md)",
+          "tag": "Y"
+        }
+      },
+      "notes": "Constellium brochure: '-3 % density, +3 % stiffness' vs 7050/2024 [D, relative only]. Elongation, fatigue, k, CTE, Tmax, price: NOT FOUND."
+    },
+    "Al 6061-T6 sheet": {
+      "family": "aluminium",
+      "routes": [
+        "sheet",
+        "extrusion",
+        "machined",
+        "weldable"
+      ],
+      "flags": [
+        "fst_cabin (metal) [Y]"
+      ],
+      "properties": {
+        "rho": {
+          "value": 2713,
+          "unit": "kg/m3",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.6.2.0(b1), PDF p.566 (0.098 lb/in3)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 68.3,
+          "unit": "GPa",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.6.2.0(b1) (9.9 Msi)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 248,
+          "unit": "MPa",
+          "condition": "A-basis, L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.6.2.0(b1), AMS 4025/4027 sheet 0.010-0.249 in, L (36 ksi)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 290,
+          "unit": "MPa",
+          "condition": "A-basis, L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.6.2.0(b1), sheet 0.010-0.249 in, L (42 ksi)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 10,
+          "unit": "%",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.6.2.0(b3), T6 sheet 0.021-0.249 in, LT min",
+          "tag": "D"
+        },
+        "fatigue": {
+          "value": 109,
+          "unit": "MPa",
+          "condition": "R=-1, 1e7, unnotched rod/bar, surface not specified; mean curve",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Fig. 3.6.2.2.8 p.3-289: log Nf = 20.68 - 9.84 log Seq, Seq = Smax(1-R)^0.63, solved at N=1e7, R=-1 (R=-1 is in the tested range per figure legend)",
+          "tag": "Y"
+        },
+        "k": {
+          "value": 154,
+          "unit": "W/mK",
+          "condition": "70 F",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.6.2.0 p.3-273 (~89 Btu, eye-read)",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 22.9,
+          "unit": "1e-6/K",
+          "condition": "70-200 F",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.6.2.0 (~12.7e-6/F)",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 12.79,
+          "unit": "kg CO2e/kg",
+          "low": 6.6,
+          "high": 15.1,
+          "condition": "primary ingot, cradle-to-gate, fabrication excluded",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "co2_recycled": {
+          "value": 1.81,
+          "unit": "kg CO2e/kg",
+          "condition": "100 % recycled route",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "price": {
+          "value": 10,
+          "unit": "EUR/kg (2024-2026 nominal)",
+          "low": 7.5,
+          "high": 20,
+          "condition": "aerospace plate, mill/distributor",
+          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "tag": "Y"
+        }
+      },
+      "notes": "AA typical (aerospacemetals.com 2023 [S]) 276/310 MPa, 2700 kg/m3; library.py fatigue_5e8 96.5 MPa (ASM/MatWeb, rotating beam). Tmax NOT FOUND."
+    },
+    "Al 7050-T7451 plate": {
+      "family": "aluminium",
+      "routes": [
+        "machined from thick plate"
+      ],
+      "flags": [
+        "fst_cabin (metal) [Y]"
+      ],
+      "properties": {
+        "rho": {
+          "value": 2823,
+          "unit": "kg/m3",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.4.0(b1), PDF p.626 (0.102 lb/in3)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 71.0,
+          "unit": "GPa",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.4.0(b1) (10.3 Msi)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 441,
+          "unit": "MPa",
+          "condition": "A-basis, L (S-basis footnote b)",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.4.0(b1) col 1, AMS 4050 plate 0.250-1.500 in, L (64 ksi)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 510,
+          "unit": "MPa",
+          "condition": "A-basis, L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.4.0(b1) col 1, plate 0.250-1.500 in, L (74 ksi)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 10,
+          "unit": "%",
+          "condition": "S-basis, L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.4.0(b1) col 1, L",
+          "tag": "D"
+        },
+        "fatigue": {
+          "value": 100,
+          "unit": "MPa",
+          "condition": "R=-1, 1e7, unnotched 1.0 in plate, T/2, surface not specified; mean curve",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Fig. 3.7.4.2.8(a) p.3-342: log Nf = 9.73 - 3.24 log(Seq-15.5), Seq = Smax(1-R)^0.63, solved at N=1e7, R=-1; checked against the R=-1 curve on the page image (~15 ksi at 1e7)",
+          "tag": "Y"
+        },
+        "k": {
+          "value": 157.5,
+          "unit": "W/mK",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.4.0(b1) physical row (91 Btu/(h ft F) at 77 F)",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 23.0,
+          "unit": "1e-6/K",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.4.0(b1) physical row (12.8e-6/F, 68-212 F)",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 12.79,
+          "unit": "kg CO2e/kg",
+          "low": 6.6,
+          "high": 15.1,
+          "condition": "primary ingot, cradle-to-gate, fabrication excluded",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "co2_recycled": {
+          "value": 1.81,
+          "unit": "kg CO2e/kg",
+          "condition": "100 % recycled route",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "price": {
+          "value": 10,
+          "unit": "EUR/kg (2024-2026 nominal)",
+          "low": 7.5,
+          "high": 20,
+          "condition": "aerospace plate, mill/distributor",
+          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "tag": "Y"
+        }
+      },
+      "notes": "MIL A-basis 441/510 confirms the AMS 4050 snippet reading (441/510/9) in alloy_datasheets.md; distributor 'typical' 480-520 / 540-590 is not comparable. Tmax NOT FOUND (MIL Fig. 3.7.4.2.1 has the curves)."
+    },
+    "Al 7075-T6 sheet": {
+      "family": "aluminium",
+      "routes": [
+        "sheet",
+        "machined from T651 plate"
+      ],
+      "flags": [
+        "fst_cabin (metal) [Y]"
+      ],
+      "properties": {
+        "rho": {
+          "value": 2796,
+          "unit": "kg/m3",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.6.0(b1), PDF p.673 (0.101 lb/in3)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 71.0,
+          "unit": "GPa",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.6.0(b1) (10.3 Msi)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 483,
+          "unit": "MPa",
+          "condition": "A-basis, L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.6.0(b1) col 4, AMS 4045 sheet 0.040-0.125 in, L (70 ksi); T651 plate 0.250-0.499 in: 69 ksi",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 538,
+          "unit": "MPa",
+          "condition": "A-basis, L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.6.0(b1) col 4, sheet 0.040-0.125 in, L (78 ksi)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 8,
+          "unit": "%",
+          "condition": "S-basis, LT",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.6.0(b1) col 4, LT",
+          "tag": "D"
+        },
+        "fatigue": {
+          "value": 170,
+          "unit": "MPa",
+          "condition": "R=-1, 1e7, unnotched rod/bar/extrusion, surface unspecified; mean curve (sheet, electropolished: 111 MPa)",
+          "source": "MIL-HDBK-5J Fig. 3.7.6.1.8(a) p.3-406 equation solved at 1e7, via research_notes/Üç sapma alanı/A_titresim_yorulma.md",
+          "tag": "Y"
+        },
+        "k": {
+          "value": 131,
+          "unit": "W/mK",
+          "condition": "70 F",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.7.6.0 p.3-388 (T6, eye-read)",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 22.9,
+          "unit": "1e-6/K",
+          "condition": "70-212 F",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.7.6.0 (~12.75e-6/F)",
+          "tag": "D"
+        },
+        "Tmax": {
+          "value": 100,
+          "unit": "C",
+          "source": "judgement: at 150 C / 10,000 h Fty keeps only ~34 % (MMPDS-01 Fig 3.7.6.1.1(d)), research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "tag": "Y"
+        },
+        "co2": {
+          "value": 12.79,
+          "unit": "kg CO2e/kg",
+          "low": 6.6,
+          "high": 15.1,
+          "condition": "primary ingot, cradle-to-gate, fabrication excluded",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "co2_recycled": {
+          "value": 1.81,
+          "unit": "kg CO2e/kg",
+          "condition": "100 % recycled route",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "price": {
+          "value": 10,
+          "unit": "EUR/kg (2024-2026 nominal)",
+          "low": 7.5,
+          "high": 20,
+          "condition": "aerospace plate, mill/distributor",
+          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "tag": "Y"
+        }
+      },
+      "notes": "AA typical (library.py, ASM/MatWeb) 503/572 MPa, 2810 kg/m3, fatigue_5e8 159 MPa: typical vs A-basis allowable, not a contradiction."
+    },
+    "Al 7075-T73 / T7351": {
+      "family": "aluminium",
+      "routes": [
+        "sheet (T73)",
+        "machined from plate (T7351)",
+        "forgings"
+      ],
+      "flags": [
+        "fst_cabin (metal) [Y]",
+        "overaged: better SCC resistance than T6"
+      ],
+      "properties": {
+        "rho": {
+          "value": 2796,
+          "unit": "kg/m3",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.6.0(b3), PDF p.675",
+          "tag": "D"
+        },
+        "E": {
+          "value": 71.0,
+          "unit": "GPa",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.6.0(b3)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 393,
+          "unit": "MPa",
+          "condition": "A-basis, L, T7351 plate",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.6.0(b3) col 3, AMS 4078 T7351 plate 0.500-1.000 in, L (57 ksi); T73 sheet 0.040-0.249 in S-basis 56 ksi",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 469,
+          "unit": "MPa",
+          "condition": "A-basis, L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.6.0(b3) col 3, T7351 plate, L (68 ksi); T73 sheet 67 ksi",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 7,
+          "unit": "%",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.7.6.0(b3) col 3 (T7351 plate, LT); T73 sheet 8 %",
+          "tag": "D"
+        },
+        "k": {
+          "value": 156,
+          "unit": "W/mK",
+          "condition": "70 F",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.7.6.0 (T73 curve, eye-read)",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 22.9,
+          "unit": "1e-6/K",
+          "condition": "70-212 F",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.7.6.0",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 12.79,
+          "unit": "kg CO2e/kg",
+          "low": 6.6,
+          "high": 15.1,
+          "condition": "primary ingot, cradle-to-gate, fabrication excluded",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "co2_recycled": {
+          "value": 1.81,
+          "unit": "kg CO2e/kg",
+          "condition": "100 % recycled route",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "price": {
+          "value": 10,
+          "unit": "EUR/kg (2024-2026 nominal)",
+          "low": 7.5,
+          "high": 20,
+          "condition": "aerospace plate, mill/distributor",
+          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "tag": "Y"
+        }
+      },
+      "notes": "Fatigue for T73 NOT extracted (use the 7075-T6 curve only as a rough proxy). Tmax NOT FOUND."
+    },
+    "Al 2618-T61 forging": {
+      "family": "aluminium",
+      "routes": [
+        "die/hand forging",
+        "machined"
+      ],
+      "flags": [
+        "elevated-temperature Al alloy"
+      ],
+      "properties": {
+        "rho": {
+          "value": 2768,
+          "unit": "kg/m3",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.2.13.0(c) p.3-211 (0.100 lb/in3)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 73.8,
+          "unit": "GPa",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.2.13.0(c) (10.7 Msi)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 324,
+          "unit": "MPa",
+          "condition": "S-basis, L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.2.13.0(c), AMS 4132 hand forging < 2.000 in, L (47 ksi; LT 42)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 400,
+          "unit": "MPa",
+          "condition": "S-basis, L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.2.13.0(c), hand forging < 2.000 in, L (58 ksi; LT 55)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 7,
+          "unit": "%",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 3.2.13.0(c), L (LT 5)",
+          "tag": "D"
+        },
+        "k": {
+          "value": 156,
+          "unit": "W/mK",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Table 3.2.13.0(c) (90 Btu at 77 F); MIL-HDBK-5J prints the same 90",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 20.8,
+          "unit": "1e-6/K",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.2.13.0 (11.55e-6/F, 70-200 F)",
+          "tag": "D"
+        },
+        "Tmax": {
+          "value": 316,
+          "unit": "C",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ §3.2.13.0 p.3-209: 'excellent properties over a range of temperatures from -452 to 600 F' (statement, not a certified limit)",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 12.79,
+          "unit": "kg CO2e/kg",
+          "low": 6.6,
+          "high": 15.1,
+          "condition": "primary ingot, cradle-to-gate, fabrication excluded",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "co2_recycled": {
+          "value": 1.81,
+          "unit": "kg CO2e/kg",
+          "condition": "100 % recycled route",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "price": {
+          "value": 10,
+          "unit": "EUR/kg (2024-2026 nominal)",
+          "low": 7.5,
+          "high": 20,
+          "condition": "aerospace plate, mill/distributor",
+          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "tag": "Y"
+        }
+      },
+      "notes": "At 200 C, 1,000 h: Fty keeps ~73 % (MMPDS-01 fig, C notes). Fatigue NOT FOUND."
+    },
+    "AlSi10Mg L-PBF": {
+      "family": "aluminium",
+      "routes": [
+        "AM L-PBF",
+        "machined critical faces",
+        "stress relief 270 C/90 min or T6"
+      ],
+      "flags": [
+        "as-built surface halves fatigue strength",
+        "HIP lowers fatigue (Uzan 2017)"
+      ],
+      "properties": {
+        "rho": {
+          "value": 2670,
+          "unit": "kg/m3",
+          "source": "EOS 'Materialdatenblatt FlexLine EOS Aluminium AlSi10Mg' CR507 v01 12.2017, M290, techpilot copy https://cdn.techpilot.com/public/132713/documents/4b7c1a54-6356-48a4-9cda-7a02f7f11853/alsi10mg_9011-0024_m290_material_data_sheet_12-17_de.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (ISO 3369)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 72,
+          "unit": "GPa",
+          "source": "AddUp AlSi10Mg datasheet 2023 (72 +- 3 GPa XY as-built; 77 +- 4 after 210 C/2 h), read by sub-agent 2026-11-01, as cited in studies/tradeoff/build_studies.py",
+          "tag": "S"
+        },
+        "Fty": {
+          "value": 220,
+          "unit": "MPa",
+          "condition": "stress relieved, XY; T6 (EOS web) 260 H / 250 V; as-built 270 XY / 235 Z",
+          "source": "EOS 'Materialdatenblatt FlexLine EOS Aluminium AlSi10Mg' CR507 v01 12.2017, M290, techpilot copy https://cdn.techpilot.com/public/132713/documents/4b7c1a54-6356-48a4-9cda-7a02f7f11853/alsi10mg_9011-0024_m290_material_data_sheet_12-17_de.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md p4, stress relieved 270 C/90 min, XY (Z 225)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 340,
+          "unit": "MPa",
+          "condition": "stress relieved, XY",
+          "source": "EOS 'Materialdatenblatt FlexLine EOS Aluminium AlSi10Mg' CR507 v01 12.2017, M290, techpilot copy https://cdn.techpilot.com/public/132713/documents/4b7c1a54-6356-48a4-9cda-7a02f7f11853/alsi10mg_9011-0024_m290_material_data_sheet_12-17_de.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md p4, stress relieved, XY (Z 350); as-built 460/470",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 12,
+          "unit": "%",
+          "source": "EOS 'Materialdatenblatt FlexLine EOS Aluminium AlSi10Mg' CR507 v01 12.2017, M290, techpilot copy https://cdn.techpilot.com/public/132713/documents/4b7c1a54-6356-48a4-9cda-7a02f7f11853/alsi10mg_9011-0024_m290_material_data_sheet_12-17_de.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md p4, stress relieved XY (Z 9)",
+          "tag": "D"
+        },
+        "fatigue": {
+          "value": 110,
+          "unit": "MPa",
+          "condition": "R=-1, 2e7, turned (machined), V and H; as-built surface ~50-75 MPa (literature, [S])",
+          "source": "EOS PDS AlSi10Mg EOS M 290 30 um (web, last changed 30.10.2026), https://www.eos.info/metal-solutions/data-sheets/aluminium/pds-eos-aluminium-alsi10mg-eos-m-290-30um 'Fatigue' row (ASTM E466-15), via research_notes/Üç sapma alanı/A_titresim_yorulma.md",
+          "tag": "D"
+        },
+        "k": {
+          "value": 110,
+          "unit": "W/mK",
+          "condition": "as-built H (V 100); after T6 155 H / 165 V",
+          "source": "EOS PDS AlSi10Mg EOS M 290 30 um (web, last changed 30.10.2026), https://www.eos.info/metal-solutions/data-sheets/aluminium/pds-eos-aluminium-alsi10mg-eos-m-290-30um (EN ISO 22007-2), via research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 20,
+          "unit": "1e-6/K",
+          "condition": "25-100 C (22 to 200 C, 27 to 300 C)",
+          "source": "EOS PDS AlSi10Mg EOS M 290 30 um (web, last changed 30.10.2026), https://www.eos.info/metal-solutions/data-sheets/aluminium/pds-eos-aluminium-alsi10mg-eos-m-290-30um (ASTM E228), via research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 12.0,
+          "unit": "kg CO2e/kg",
+          "low": 4.5,
+          "high": 22.0,
+          "condition": "primary; powder atomisation not added",
+          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py (aluminium family, p.1 [Ashby p.471])",
+          "tag": "S"
+        },
+        "price": {
+          "value": 80,
+          "unit": "EUR/kg (powder, 2021-2024 sources)",
+          "low": 40,
+          "high": 126,
+          "condition": "powder only; L-PBF route cost excl. powder ~500 (220-1910) EUR/kg finished",
+          "source": "Simpson 2021 USD 78/kg; Depboylu SFF 2024 USD 135-145/kg; low from IAPT ratio; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "tag": "S"
+        }
+      },
+      "notes": "Tmax NOT FOUND (Cao 2021: <200 C for 30 min gives little change; EOS stress relief at 270 C). Ashby Al family CO2 tagged S here (build_studies.py tags it D; the source is a compilation)."
+    },
+    "Scalmalloy L-PBF": {
+      "family": "aluminium",
+      "routes": [
+        "AM L-PBF",
+        "aged 325 C/4 h",
+        "machined critical faces"
+      ],
+      "flags": [
+        "near-isotropic XY/Z",
+        "Sc supply drives CO2 and price"
+      ],
+      "properties": {
+        "rho": {
+          "value": 2670,
+          "unit": "kg/m3",
+          "source": "3D Systems 'Certified Scalmalloy (A)' datasheet PN 10123B 02-22, https://3dsystems.com/sites/default/files/2022-02/3d-systems-certified-scalmalloy(a)-datasheet-usen-2022-02-23-a-print.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md ('value from literature', adopted from APWORKS)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 69,
+          "unit": "GPa",
+          "source": "Colibrium Additive M2 Series 5 Al-Mg-Sc datasheet 2025-08-21 RevB (horizontal, after 325 C/4 h; 70 as-built), read by sub-agent 2026-11-01, as cited in studies/tradeoff/build_studies.py",
+          "tag": "S"
+        },
+        "Fty": {
+          "value": 490,
+          "unit": "MPa",
+          "condition": "SR 325 C/4 h, 95/95 TI basis",
+          "source": "3D Systems 'Certified Scalmalloy (A)' datasheet PN 10123B 02-22, https://3dsystems.com/sites/default/files/2022-02/3d-systems-certified-scalmalloy(a)-datasheet-usen-2022-02-23-a-print.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (30 um, XY and Z; 60 um XY 500)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 520,
+          "unit": "MPa",
+          "source": "3D Systems 'Certified Scalmalloy (A)' datasheet PN 10123B 02-22, https://3dsystems.com/sites/default/files/2022-02/3d-systems-certified-scalmalloy(a)-datasheet-usen-2022-02-23-a-print.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (30 um, XY and Z)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 15.8,
+          "unit": "%",
+          "source": "3D Systems 'Certified Scalmalloy (A)' datasheet PN 10123B 02-22, https://3dsystems.com/sites/default/files/2022-02/3d-systems-certified-scalmalloy(a)-datasheet-usen-2022-02-23-a-print.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (30 um, plastic elongation)",
+          "tag": "D"
+        },
+        "fatigue": {
+          "value": 87,
+          "unit": "MPa",
+          "condition": "R=0.1, ~1e7 run-out, turned, sigma_a (amplitude) read off figure +-3 MPa; as-built ~41",
+          "source": "Musekamp et al. 2021, Metals 11:1961, Fig. 8 p.11, via research_notes/Üç sapma alanı/A_titresim_yorulma.md",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 128,
+          "unit": "kg CO2e/kg",
+          "low": 68,
+          "high": 128,
+          "source": "estimate: Sc share from Mehta et al. 2022 Table 2 x Hengevoss et al. 2024 Table 1, + Al 12; studies/tradeoff/build_studies.py SCAL_CO2",
+          "tag": "Y"
+        },
+        "price": {
+          "value": 200,
+          "unit": "EUR/kg (powder)",
+          "low": 120,
+          "high": 400,
+          "source": "no published price found; placeholder, research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "tag": "Y"
+        }
+      },
+      "notes": "Yield 319 MPa at 150 C and 60 MPa at 300 C (Colibrium sheet, via build_studies.py). k, CTE, Tmax: NOT FOUND."
+    },
+    "A20X / A205 L-PBF": {
+      "family": "aluminium",
+      "routes": [
+        "AM L-PBF",
+        "proprietary T7 heat treatment",
+        "casting (A20X)"
+      ],
+      "flags": [
+        "MMPDS-listed A20X alloy (per Eckart sheet)",
+        "AMS 4471 composition"
+      ],
+      "properties": {
+        "rho": {
+          "value": 2850,
+          "unit": "kg/m3",
+          "source": "ECKART 'A205 Gas Atomised Powder' Technical Information Sheet, Version September 2020, https://www.eckart.net/download/document/view/id/216/ ('Bulk density of the alloy: 2.85 g/cm3'); downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 79,
+          "unit": "GPa",
+          "condition": "heat treated T7",
+          "source": "ECKART A205 sheet Sept 2020, 'Young's Modlus' heat treated (as built 74, stress relieved 77)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 390,
+          "unit": "MPa",
+          "low": 390,
+          "high": 440,
+          "condition": "heat treated T7, range printed",
+          "source": "ECKART A205 sheet Sept 2020, heat treated: 390-440 MPa (ASTM B557, machined bars, no HIP)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 450,
+          "unit": "MPa",
+          "low": 450,
+          "high": 511,
+          "source": "ECKART A205 sheet Sept 2020, heat treated: 450-511 MPa",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 10,
+          "unit": "%",
+          "low": 10,
+          "high": 13,
+          "source": "ECKART A205 sheet Sept 2020, heat treated: 10-13 %",
+          "tag": "D"
+        },
+        "Tmax": {
+          "value": 200,
+          "unit": "C",
+          "source": "judgement from ECKART A205 sheet elevated-temperature table (Rolls-Royce NATEP HighSAP): YS 445/375/354/311/215 MPa at 20/100/150/200/250 C; sheet says no significant loss above 125 C",
+          "tag": "Y"
+        },
+        "co2": {
+          "value": 12.0,
+          "unit": "kg CO2e/kg",
+          "low": 4.5,
+          "high": 22.0,
+          "condition": "primary; powder atomisation not added",
+          "source": "proxy: Ashby Al family; Cu/Ag/TiB2 content and atomisation not counted",
+          "tag": "Y"
+        }
+      },
+      "notes": "Eckart sheet: fatigue 'similar to cast A20X and superior to A357' (no number). Eckart web page (eckart.net/en/a20x) gives 'up to' 511/440/13 for AM, 475/420/3 for A205 castings. Price, k, CTE: NOT FOUND."
+    },
+    "Ti-6Al-4V annealed (wrought)": {
+      "family": "titanium",
+      "routes": [
+        "machined from plate/bar",
+        "forging"
+      ],
+      "flags": [
+        "fireproof-adjacent: 0.016 in Ti accepted as firewall without test (AC 20-135 para 6d(6))"
+      ],
+      "properties": {
+        "rho": {
+          "value": 4429,
+          "unit": "kg/m3",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 5.4.1.0(b), PDF p.945 (0.160 lb/in3)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 110.3,
+          "unit": "GPa",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 5.4.1.0(b) (16.0 Msi)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 869,
+          "unit": "MPa",
+          "condition": "A-basis, L, sheet",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 5.4.1.0(b) col 1, AMS 4911 sheet <=0.1875 in, L (126 ksi); plate 0.1875-2.000 in A: 120 ksi (827)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 924,
+          "unit": "MPa",
+          "condition": "A-basis, L, sheet",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 5.4.1.0(b) col 1, sheet (134 ksi); plate 130 ksi (896)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 8,
+          "unit": "%",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 5.4.1.0(b) col 1, sheet (plate 10 %)",
+          "tag": "D"
+        },
+        "fatigue": {
+          "value": 331,
+          "unit": "MPa",
+          "condition": "R=-1 (Sm=0), ~4e6 (end of curve), unnotched bar, 32 RMS ground; mean curve",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Fig. 5.4.1.1.8(a) p.5-67 (page image read): Sm = 0 curve ends at ~48 ksi near 4e6 cycles; run-outs at ~60 ksi (~410 MPa) beyond 1e7; equation log Nf = 19.18 - 7.55 log Smax extrapolated to 1e7 gives 283 MPa (beyond the fitted range)",
+          "tag": "D"
+        },
+        "k": {
+          "value": 7.3,
+          "unit": "W/mK",
+          "condition": "70 F",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 5.4.1.0 p.5-60 (~4.2 Btu, eye-read)",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 8.8,
+          "unit": "1e-6/K",
+          "condition": "70-200 F",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 5.4.1.0 (~4.9e-6/F)",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 46.5,
+          "unit": "kg CO2e/kg",
+          "condition": "primary, cradle-to-gate",
+          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py (titanium alloy family, p.4)",
+          "tag": "S"
+        },
+        "co2_recycled": {
+          "value": 5.2,
+          "unit": "kg CO2e/kg",
+          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py (titanium alloy family, recycled)",
+          "tag": "S"
+        },
+        "price": {
+          "value": 50,
+          "unit": "EUR/kg (plate/sheet)",
+          "low": 29,
+          "high": 96,
+          "source": "Dutta & Froes 2014 (USD 15-50/lb sheet) via Froes EWI deck slide 3; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "tag": "S"
+        }
+      },
+      "notes": "library.py holds Aubert & Duval minimums 827/896 MPa, 4430 kg/m3. At 300 C Fty keeps ~63 % (MMPDS-01). Tmax for wrought NOT read (EOS gives ~350 C for AM)."
+    },
+    "Ti-6Al-4V L-PBF": {
+      "family": "titanium",
+      "routes": [
+        "AM L-PBF",
+        "stress relief 800 C/2 h",
+        "HIP",
+        "machined critical faces"
+      ],
+      "flags": [
+        "HIP pays only with machining (Greitemeier)",
+        "engine-zone candidate (fireproof benchmark)"
+      ],
+      "properties": {
+        "rho": {
+          "value": 4410,
+          "unit": "kg/m3",
+          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md ('Approx. 4.41 g/cm3', M290)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 110,
+          "unit": "GPa",
+          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md (400 W sheet 07.2022: 110 +- 15 GPa, H and V), via research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 945,
+          "unit": "MPa",
+          "condition": "800 C/2 h, H",
+          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md M290, 800 C/2 h, horizontal (vertical 965)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 1055,
+          "unit": "MPa",
+          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md M290, 800 C/2 h, horizontal (vertical 1075)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 13,
+          "unit": "%",
+          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md M290, H (V 14)",
+          "tag": "D"
+        },
+        "fatigue": {
+          "value": 600,
+          "unit": "MPa",
+          "condition": "R=-1, 1e7, milled + HIP; HIP with as-built surface 175, annealed as-built 200",
+          "source": "Greitemeier (milled + HIP 920 C/100 MPa) via Afroz et al. 2022 Int J Fract 235 Table 3, via research_notes/Üç sapma alanı/A_titresim_yorulma.md",
+          "tag": "S"
+        },
+        "Tmax": {
+          "value": 350,
+          "unit": "C",
+          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md 07.2022 'Thermal properties of parts' (max long-term operating ~350 C), via research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "tag": "D"
+        },
+        "k": {
+          "value": 7.3,
+          "unit": "W/mK",
+          "source": "wrought value assumed (MMPDS-01 Fig 5.4.1.0); EOS gives none",
+          "tag": "Y"
+        },
+        "cte": {
+          "value": 8.8,
+          "unit": "1e-6/K",
+          "source": "wrought value assumed (MMPDS-01 Fig 5.4.1.0)",
+          "tag": "Y"
+        },
+        "co2": {
+          "value": 46.5,
+          "unit": "kg CO2e/kg",
+          "condition": "primary family value; powder atomisation (+2.4 % energy, ORNL) not added",
+          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py (titanium alloy family, p.4)",
+          "tag": "S"
+        },
+        "price": {
+          "value": 180,
+          "unit": "EUR/kg (L-PBF powder 15-63 um, 2021)",
+          "low": 130,
+          "high": 312,
+          "condition": "powder only; route cost excl. powder ~500 (250-855) EUR/kg",
+          "source": "Fraunhofer IAPT 2021 Fig. 13 (cheapest 130-162) and Simpson 2021 USD 360; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "tag": "S"
+        }
+      },
+      "notes": "Colibrium EBM Spectra L Gr23 as built: 907-940 YS / 986-1015 UTS (alloy_datasheets.md). As-HIPed datasheet NOT FOUND."
+    },
+    "Ti-5553 STA": {
+      "family": "titanium",
+      "routes": [
+        "forging (landing gear, structural)",
+        "machined"
+      ],
+      "flags": [
+        "quasi-beta alloy"
+      ],
+      "properties": {
+        "rho": {
+          "value": 4640,
+          "unit": "kg/m3",
+          "source": "Aubert & Duval 'Titanium Alloy Ti5553' datasheet (2 pp), https://www.aubertduval.com/wp-content/uploads/2024/12/Ti5553_GB.pdf ('Density: 4.64'); downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 1000,
+          "unit": "MPa",
+          "low": 1000,
+          "high": 1100,
+          "condition": "STA, typical (not minimum)",
+          "source": "Aubert & Duval Ti5553 datasheet: STA typical 0.2 % YS 1000-1100 N/mm2 (BASCA 950)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 1050,
+          "unit": "MPa",
+          "low": 1050,
+          "high": 1250,
+          "source": "Aubert & Duval Ti5553 datasheet: STA typical UTS 1050-1250 N/mm2 (BASCA 1100)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 5,
+          "unit": "%",
+          "low": 5,
+          "high": 12,
+          "source": "Aubert & Duval Ti5553 datasheet: STA 5-12 % (5d)",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 46.5,
+          "unit": "kg CO2e/kg",
+          "condition": "Ti family value applied; Mo/V/Cr not counted",
+          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py (titanium alloy family, p.4)",
+          "tag": "S"
+        },
+        "co2_recycled": {
+          "value": 5.2,
+          "unit": "kg CO2e/kg",
+          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py (titanium alloy family, recycled)",
+          "tag": "S"
+        }
+      },
+      "notes": "K1c 55 MPa sqrt(m) STA / 70 BASCA; beta transus 860 C (same sheet). The extracted composition line prints 'Vanadium 2.00' (nominal 5) - layout/sheet error, composition not used. E, fatigue, k, CTE, Tmax, price: NOT FOUND (TIMET/ATI sheet not found)."
+    },
+    "17-4PH H1025": {
+      "family": "steel",
+      "routes": [
+        "machined from bar",
+        "AM L-PBF (17-4PH powder)"
+      ],
+      "flags": [
+        "fireproof benchmark material (steel)"
+      ],
+      "properties": {
+        "rho": {
+          "value": 7806,
+          "unit": "kg/m3",
+          "condition": "H900; AK Steel Cond. A 7780 [S]",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Table 2.6.9.0(b) p.2-197 (H900 value; MIL-HDBK-5J leaves omega blank for H1025)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 196.5,
+          "unit": "GPa",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 2.6.9.0(e), PDF p.253 (28.5 Msi)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 1000,
+          "unit": "MPa",
+          "condition": "S-basis (spec minimum), L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 2.6.9.0(e) col 5, AMS 5643 bar < 8.000 in, L (145 ksi)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 1069,
+          "unit": "MPa",
+          "condition": "S-basis, L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 2.6.9.0(e) col 5, AMS 5643 bar, L (155 ksi)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 12,
+          "unit": "%",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 2.6.9.0(e) col 5, L",
+          "tag": "D"
+        },
+        "k": {
+          "value": 17.3,
+          "unit": "W/mK",
+          "condition": "200 F",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 2.6.9.0 p.2-201 (~10.0 Btu at 200 F, eye-read)",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 10.8,
+          "unit": "1e-6/K",
+          "source": "interpolated between H900 10.4 and H1150 11.1 (MMPDS-01 Fig 2.6.9.0, -100 to 70 F, via research_notes/Üç sapma alanı/C_isil_enerji.md)",
+          "tag": "Y"
+        },
+        "Tmax": {
+          "value": 316,
+          "unit": "C",
+          "source": "United Performance Metals 17-4 PH datasheet ('up to 600 F (316 C)'), https://www.upmet.com/sites/default/files/datasheets/17-4-ph.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md",
+          "tag": "S"
+        },
+        "co2": {
+          "value": 5.0,
+          "unit": "kg CO2e/kg",
+          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py (stainless steel family, p.3); family value, not PH-grade specific",
+          "tag": "S"
+        },
+        "co2_recycled": {
+          "value": 0.73,
+          "unit": "kg CO2e/kg",
+          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py (stainless steel family, recycled)",
+          "tag": "S"
+        },
+        "price": {
+          "value": 91,
+          "unit": "USD/kg (2021, L-PBF powder)",
+          "condition": "powder only; wrought bar price NOT FOUND",
+          "source": "Simpson 2021, Additive Manufacturing Media, via research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "tag": "S"
+        }
+      },
+      "notes": "Fatigue for H1025 NOT FOUND (MIL-HDBK-5J has an H900 bar S-N curve only, Fig. 2.6.9.1.8(a))."
+    },
+    "15-5PH H1025": {
+      "family": "steel",
+      "routes": [
+        "machined from bar/plate",
+        "forging"
+      ],
+      "flags": [
+        "fireproof benchmark material (steel)"
+      ],
+      "properties": {
+        "rho": {
+          "value": 7833,
+          "unit": "kg/m3",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 2.6.7.0(b), PDF p.223 (0.283 lb/in3)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 196.5,
+          "unit": "GPa",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 2.6.7.0(b) (28.5 Msi)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 1000,
+          "unit": "MPa",
+          "condition": "S-basis, L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 2.6.7.0(b) col 3, AMS 5659 bar <=12 in, L and T (145 ksi); AMS 5862 plate L 143 ksi",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 1069,
+          "unit": "MPa",
+          "condition": "S-basis",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 2.6.7.0(b) col 3, AMS 5659 bar (155 ksi)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 12,
+          "unit": "%",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 2.6.7.0(b) col 3, L (T 8)",
+          "tag": "D"
+        },
+        "fatigue": {
+          "value": 1052,
+          "unit": "MPa",
+          "condition": "R=0.1, 1e7, sigma_max, unnotched plate (TUS ~170 ksi), ground RMS 8; sigma_a = 0.45 x; very flat curve, 19 specimens",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Fig. 2.6.7.2.8(b) p.2-180: log Nf = 110.1 - 47.22 log Smax, R = 0.1 (only ratio tested), solved at N=1e7",
+          "tag": "Y"
+        },
+        "k": {
+          "value": 17.8,
+          "unit": "W/mK",
+          "condition": "H900, 300 F",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Fig. 2.6.7.0 p.2-172 (page image): K for H900 ~10.3 Btu at 300 F; no H1025 curve",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 11.0,
+          "unit": "1e-6/K",
+          "source": "interpolated between H900 (~5.85e-6/F) and H1075 (~6.2e-6/F) at 200 F, MIL-HDBK-5J Fig. 2.6.7.0 page image; Rolled Alloys 15-5 sheet prints 6.3e-6/F 68-212 F (condition not stated) [S]",
+          "tag": "Y"
+        },
+        "co2": {
+          "value": 5.0,
+          "unit": "kg CO2e/kg",
+          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py (stainless steel family, p.3); family value, not PH-grade specific",
+          "tag": "S"
+        },
+        "co2_recycled": {
+          "value": 0.73,
+          "unit": "kg CO2e/kg",
+          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py (stainless steel family, recycled)",
+          "tag": "S"
+        }
+      },
+      "notes": "Price, Tmax NOT FOUND."
+    },
+    "300M (0.42C, AMS 6257/6419)": {
+      "family": "steel",
+      "routes": [
+        "forging (landing gear)",
+        "machined",
+        "quench and temper"
+      ],
+      "flags": [
+        "needs corrosion protection / hydrogen-embrittlement care [Y]"
+      ],
+      "properties": {
+        "rho": {
+          "value": 7833,
+          "unit": "kg/m3",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 2.3.1.0(f1), PDF p.76 (0.283 lb/in3)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 199.9,
+          "unit": "GPa",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 2.3.1.0(f1) (29.0 Msi)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 1586,
+          "unit": "MPa",
+          "condition": "S-basis, quenched and tempered",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 2.3.1.0(f1) col 8, 0.42C 300M AMS 6257/6419 (230 ksi)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 1931,
+          "unit": "MPa",
+          "condition": "S-basis",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 2.3.1.0(f1) col 8 (280 ksi); 0.40C AMS 6417: 270/220 ksi",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 7,
+          "unit": "%",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 2.3.1.0(f1) col 8, L",
+          "tag": "D"
+        },
+        "fatigue": {
+          "value": 634,
+          "unit": "MPa",
+          "condition": "R=-1, 1e7, unnotched forging Ftu 280 ksi, finish ground RMS 63; mean curve",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Fig. 2.3.1.4.8(a) p.2-60: log Nf = 14.8 - 5.38 log(Seq-63.8), Seq = Sa + 0.48 Sm, solved at N=1e7, R=-1 (R=-1 in tested range, page image)",
+          "tag": "Y"
+        },
+        "k": {
+          "value": 35,
+          "unit": "W/mK",
+          "source": "proxy: 4340 curve in MIL-HDBK-5J Fig. 2.3.1.0 p.2-26 (page image, ~20 Btu at 70 F); 300M is Si-modified 4340, no 300M curve",
+          "tag": "Y"
+        },
+        "cte": {
+          "value": 12.2,
+          "unit": "1e-6/K",
+          "source": "proxy: 4340 alpha 70-200 F ~6.8e-6/F, MIL-HDBK-5J Fig. 2.3.1.0 page image; secondary 300M pages give 11.3-11.5 [S]",
+          "tag": "Y"
+        },
+        "co2": {
+          "value": 2.77,
+          "unit": "kg CO2e/kg",
+          "condition": "proxy; recycled bar & rod 0.45",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf p.(Steel) 'Bar & rod, virgin' 2.77 kgCO2e/kg; generic carbon steel applied to a low-alloy VAR steel",
+          "tag": "Y"
+        },
+        "co2_recycled": {
+          "value": 0.45,
+          "unit": "kg CO2e/kg",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf 'Bar & rod, recycled' (generic steel)",
+          "tag": "Y"
+        }
+      },
+      "notes": "Price, Tmax NOT FOUND."
+    },
+    "Inconel 718 wrought (STA)": {
+      "family": "nickel",
+      "routes": [
+        "machined from bar/forging",
+        "sheet"
+      ],
+      "flags": [
+        "fireproof candidate",
+        "engine zone"
+      ],
+      "properties": {
+        "rho": {
+          "value": 8221,
+          "unit": "kg/m3",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 6.3.5.0(b), PDF p.1092 (0.297 lb/in3); SMC-045 8221 (C notes)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 202.7,
+          "unit": "GPa",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 6.3.5.0(b) (29.4 Msi); SMC-045 Table 4: 200 GPa",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 1034,
+          "unit": "MPa",
+          "condition": "S-basis, L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 6.3.5.0(c), AMS 5662/5663 bar 0.250-5.000 in, L (150 ksi)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 1276,
+          "unit": "MPa",
+          "condition": "S-basis",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 6.3.5.0(c), AMS 5662/5663 bar, L (185 ksi)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 12,
+          "unit": "%",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 6.3.5.0(c), bar, L",
+          "tag": "D"
+        },
+        "fatigue": {
+          "value": 298,
+          "unit": "MPa",
+          "condition": "R=-1, 1e7, unnotched SHEET 0.066-0.109 in (AMS 5596), #400 grit belt polished; R=0.1 gives sigma_max ~474 MPa",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Fig. 6.3.5.1.8(a) p.6-67: log Nf = 8.63 - 2.07 log(Seq-58.48), Seq = Smax(1-R)^0.58, solved at N=1e7, R=-1; matches the R=-1 curve on the page image (~43 ksi)",
+          "tag": "Y"
+        },
+        "k": {
+          "value": 11.4,
+          "unit": "W/mK",
+          "condition": "70 F",
+          "source": "Special Metals SMC-045 'INCONEL alloy 718' (2007), https://www.specialmetals.com/documents/technical-bulletins/inconel/inconel-alloy-718.pdf, via research_notes/Üç sapma alanı/C_isil_enerji.md Table 5",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 13.2,
+          "unit": "1e-6/K",
+          "condition": "70-200 F",
+          "source": "Special Metals SMC-045 'INCONEL alloy 718' (2007), https://www.specialmetals.com/documents/technical-bulletins/inconel/inconel-alloy-718.pdf, via research_notes/Üç sapma alanı/C_isil_enerji.md Table 2 (7.31e-6/F)",
+          "tag": "D"
+        },
+        "Tmax": {
+          "value": 704,
+          "unit": "C",
+          "source": "Special Metals SMC-045 'INCONEL alloy 718' (2007), https://www.specialmetals.com/documents/technical-bulletins/inconel/inconel-alloy-718.pdf, via research_notes/Üç sapma alanı/C_isil_enerji.md p1: service range -423 to 1300 F",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 11.6,
+          "unit": "kg CO2e/kg",
+          "condition": "family value; build_studies.py uses 11.6-25 for AM 718",
+          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py (nickel superalloy family, p.4 [Ashby p.483])",
+          "tag": "S"
+        },
+        "co2_recycled": {
+          "value": 2.14,
+          "unit": "kg CO2e/kg",
+          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py (nickel superalloy family, recycled)",
+          "tag": "S"
+        }
+      },
+      "notes": "Wrought price NOT FOUND."
+    },
+    "Inconel 718 L-PBF": {
+      "family": "nickel",
+      "routes": [
+        "AM L-PBF",
+        "solution + double age (AMS 2774/5662)",
+        "HIP optional"
+      ],
+      "flags": [
+        "fireproof candidate",
+        "engine zone"
+      ],
+      "properties": {
+        "rho": {
+          "value": 8150,
+          "unit": "kg/m3",
+          "condition": "minimum",
+          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md ('min 8.15 g/cm3')",
+          "tag": "D"
+        },
+        "E": {
+          "value": 200,
+          "unit": "GPa",
+          "source": "EOS gives none; wrought SMC-045 Table 4 value assumed (as in build_studies.py)",
+          "tag": "Y"
+        },
+        "Fty": {
+          "value": 1145,
+          "unit": "MPa",
+          "condition": "HT, V",
+          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md M290 40 um, heat treated, vertical (horizontal 1240)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 1375,
+          "unit": "MPa",
+          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md heat treated, vertical (horizontal 1505)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 17,
+          "unit": "%",
+          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md heat treated, vertical (horizontal 12)",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 13.1,
+          "unit": "1e-6/K",
+          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md (25-100 C)",
+          "tag": "D"
+        },
+        "Tmax": {
+          "value": 700,
+          "unit": "C",
+          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md p1: 'good tensile, fatigue, creep and rupture strength at temperatures up to 700 C'",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 11.6,
+          "unit": "kg CO2e/kg",
+          "low": 11.6,
+          "high": 25.0,
+          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py Ni family as low end; high 25 assumed for Nb/Mo and atomisation (studies/tradeoff/build_studies.py)",
+          "tag": "Y"
+        },
+        "price": {
+          "value": 120,
+          "unit": "USD/kg (2021, L-PBF powder)",
+          "condition": "powder only; Simpson total part cost USD 1060/kg",
+          "source": "Simpson 2021 (Barnes Global), via research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "tag": "S"
+        }
+      },
+      "notes": "Fatigue for AM 718 NOT FOUND (EOS gives no number)."
+    },
+    "Inconel 625 L-PBF": {
+      "family": "nickel",
+      "routes": [
+        "AM L-PBF",
+        "stress relief 870 C/1 h"
+      ],
+      "flags": [
+        "corrosion/oxidation resistant"
+      ],
+      "properties": {
+        "rho": {
+          "value": 8400,
+          "unit": "kg/m3",
+          "source": "EOS NickelAlloy IN625 Material data sheet M290 06.2022 (6 pp), https://uk.eos.info/03_system-related-assets/material-related-contents/metal-materials-and-examples/metal-material-datasheet/nickelalloy-inconel/niall-in625-m290_material_data_sheet_06-22_en.pdf, p4 (ISO 3369); downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 204,
+          "unit": "GPa",
+          "source": "EOS NickelAlloy IN625 MDS (multi-system, 189 pp), https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN625/Material_DataSheet_EOS_NickelAlloy_IN625_en.pdf, M290 40 um section, heat treated, vertical (horizontal 214), EN ISO 6892-1; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 640,
+          "unit": "MPa",
+          "condition": "HT, Z",
+          "source": "EOS IN625 M290 06.2022 p5, heat treated 870 C/1 h, vertical (XY 680; as built 630/720)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 890,
+          "unit": "MPa",
+          "source": "EOS IN625 M290 06.2022 p5, heat treated, vertical (XY 1000)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 49,
+          "unit": "%",
+          "source": "EOS IN625 M290 06.2022 p5, heat treated, vertical (XY 34)",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 11.6,
+          "unit": "kg CO2e/kg",
+          "condition": "family value; build_studies.py uses 11.6-25 for AM 718",
+          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py (nickel superalloy family, p.4 [Ashby p.483]); applied to 625 (Mo 8-10 %, Nb 3-4 %) as proxy",
+          "tag": "Y"
+        }
+      },
+      "notes": "Wrought reference only: annealed 625 bar, MIL-HDBK-5J Fig. 6.3.3.1.8(a) (log Nf = 24.49 - 9.62 log Seq, Seq = Smax(1-R)^0.42) gives ~339 MPa at R=-1, 1e7, polished [Y]; no AM fatigue found. k, CTE, Tmax, price: NOT FOUND."
+    },
+    "Mg AZ31B-H24 sheet": {
+      "family": "magnesium",
+      "routes": [
+        "sheet (warm forming)",
+        "extrusion",
+        "machined"
+      ],
+      "flags": [
+        "Mg in seats prohibited by AS8049A/ETSO-C127a; allowed only via special condition (EASA SC D-32)",
+        "corrosion protection required"
+      ],
+      "properties": {
+        "rho": {
+          "value": 1769,
+          "unit": "kg/m3",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 4.2.1.0(b) p.4-7 (0.0639 lb/in3)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 44.8,
+          "unit": "GPa",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 4.2.1.0(b) (6.5 Msi)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 200,
+          "unit": "MPa",
+          "condition": "S-basis, L",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 4.2.1.0(b), AMS 4377 H24 sheet 0.063-0.249 in, L (29 ksi; LT 32)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 269,
+          "unit": "MPa",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 4.2.1.0(b), H24 sheet 0.063-0.249 in, L (39 ksi)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 6,
+          "unit": "%",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Table 4.2.1.0(b), H24 sheet, L",
+          "tag": "D"
+        },
+        "fatigue": {
+          "value": 66,
+          "unit": "MPa",
+          "condition": "R=-1, 1e7, AZ31B-F FORGED DISK (not H24 sheet), polished; R^2 = 55 %",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Fig. 4.2.1.4.8(a) p.4-15: log Nf = 7.13 - 2.20 log(Seq-12.9), Seq = Smax(1-R)^0.56 (R -1 to -0.5), solved at N=1e7, R=-1",
+          "tag": "Y"
+        },
+        "k": {
+          "value": 76,
+          "unit": "W/mK",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Fig. 4.2.1.0 p.4-10 (page image, K ~44 Btu at 70 F, O and H24)",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 25.9,
+          "unit": "1e-6/K",
+          "source": "MIL-HDBK-5J (31 Jan 2003), local copy references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf (https://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/download.php?spec=MIL_HDBK_5J.139.pdf); project extraction src/aerokit/materials/data/ Fig. 4.2.1.0 (page image, alpha ~14.4e-6/F, 70-200 F)",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 25.8,
+          "unit": "kg CO2e/kg",
+          "low": 17.8,
+          "high": 36.0,
+          "condition": "primary Mg ingot",
+          "source": "IMA/DLR (Ehrenberger) Mg LCA study 2013, https://elib.dlr.de/87332/1/2013-12_IMA_LCA-Study_Report_Part-I-and-II_incl-summary.pdf, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md p5/p47 (Pidgeon, China 2011 weighted; 17.8 electrolytic); Ashby family 36 [S]",
+          "tag": "D"
+        },
+        "co2_recycled": {
+          "value": 1.1,
+          "unit": "kg CO2e/kg",
+          "source": "IMA/DLR (Ehrenberger) Mg LCA study 2013, https://elib.dlr.de/87332/1/2013-12_IMA_LCA-Study_Report_Part-I-and-II_incl-summary.pdf, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md p77 (Mg-recovery scenario; 3.8 if recycled into Al alloys); Ashby family 2.9",
+          "tag": "D"
+        }
+      },
+      "notes": "Smiths HP minimums (O 125/220, H24 200/270 MPa) agree with MIL. Tmax and price NOT FOUND."
+    },
+    "Mg WE43B / Elektron 43": {
+      "family": "magnesium",
+      "routes": [
+        "casting (WE43B T6)",
+        "wrought plate/extrusion/forging (Elektron 43, AMS 4371)"
+      ],
+      "flags": [
+        "FAA flammability tested (Luxfer, snippet)",
+        "seat use only via special condition (EASA SC D-32)"
+      ],
+      "properties": {
+        "rho": {
+          "value": 1830,
+          "unit": "kg/m3",
+          "source": "Luxfer MEL Elektron 43 page/datasheet, 'Specific gravity: 1.83' (search snippet only; PDF redirects to homepage), via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md",
+          "tag": "S"
+        },
+        "E": {
+          "value": 45,
+          "unit": "GPa",
+          "condition": "WE43B cast",
+          "source": "Luxfer MEL Elektron WE43B datasheet, https://www.luxfermeltechnologies.com/wp-content/uploads/2024/11/Elektron-WE43B-Datasheet.pdf ('Modulus of elasticity 45 x 10^3 MPa') - search snippet only, PDF not openable (redirect)",
+          "tag": "S"
+        },
+        "Fty": {
+          "value": 172,
+          "unit": "MPa",
+          "condition": "WE43B cast T6, minimum",
+          "source": "Luxfer WE43B datasheet snippet: 0.2 % proof stress minimum design 172 MPa, typical 185 MPa",
+          "tag": "S"
+        },
+        "k": {
+          "value": 51,
+          "unit": "W/mK",
+          "source": "Luxfer WE43B datasheet snippet ('Thermal conductivity 51')",
+          "tag": "S"
+        },
+        "Tmax": {
+          "value": 250,
+          "unit": "C",
+          "condition": "Elektron 43 wrought",
+          "source": "Luxfer Elektron 43: 'for use at temperatures up to 250 C' (snippet; WE43B casting up to 300 C), via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md",
+          "tag": "S"
+        },
+        "co2": {
+          "value": 25.8,
+          "unit": "kg CO2e/kg",
+          "low": 17.8,
+          "high": 36.0,
+          "condition": "primary Mg (generic), rare-earth additions not counted",
+          "source": "IMA/DLR (Ehrenberger) Mg LCA study 2013, https://elib.dlr.de/87332/1/2013-12_IMA_LCA-Study_Report_Part-I-and-II_incl-summary.pdf, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md p5/p47 (Pidgeon, China 2011 weighted; 17.8 electrolytic); Ashby family 36 [S]",
+          "tag": "D"
+        },
+        "co2_recycled": {
+          "value": 1.1,
+          "unit": "kg CO2e/kg",
+          "source": "IMA/DLR (Ehrenberger) Mg LCA study 2013, https://elib.dlr.de/87332/1/2013-12_IMA_LCA-Study_Report_Part-I-and-II_incl-summary.pdf, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md p77 (Mg-recovery scenario; 3.8 if recycled into Al alloys); Ashby family 2.9",
+          "tag": "D"
+        }
+      },
+      "notes": "All values from search snippets of Luxfer PDFs that could not be opened (redirect; no bypass attempted). Smiths HP: Elektron 43 Rm 220 MPa, 1.8 [S]. Unverified secondary values (SG 1.83, E 44.1, 195/303 MPa) noted in B notes must not be cited. Ftu, elongation, fatigue, CTE, price: NOT FOUND."
+    },
+    "CFRP QI IM7/8552": {
+      "family": "composite",
+      "routes": [
+        "autoclave prepreg [25/50/25]",
+        "AFP"
+      ],
+      "flags": [
+        "epoxy: needs FR/phenolic surface for cabin OSU 65/65 [S]",
+        "EoL: continuous fibre not economically re-separable (Granta)"
+      ],
+      "properties": {
+        "rho": {
+          "value": 1570,
+          "unit": "kg/m3",
+          "source": "Hexcel HexPly 8552 EU PDS p2 (IM7/8552, Vf 57.7 %), via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "E": {
+          "value": 57.8,
+          "unit": "GPa",
+          "condition": "[25/50/25], RTD, normalised mean, tension",
+          "source": "NCAMP NCP-RP-2009-028 Rev B p59 Table 5-2 (8.39 Msi), via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 722,
+          "unit": "MPa",
+          "condition": "[25/50/25] unnotched tension; OHT 428, OHC 337, CAI 214 (Hexcel US PDS)",
+          "source": "NCAMP NCP-RP-2009-028 Rev B p58 Table 5-1 (104.69 ksi, UNT); Hexcel US PDS 104 ksi = 717",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 2.4,
+          "unit": "1e-6/K",
+          "source": "proxy: T300/5208 [0/+-45/90]s measured 1.89 (moire) / 2.41 (strain gauge), NASA TM-80788 Table 3; CLT 2.5; via research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "tag": "Y"
+        },
+        "k": {
+          "value": 2.7,
+          "unit": "W/mK",
+          "condition": "in-plane; through-thickness ~0.6",
+          "source": "estimate (k1 4.89 + k3 0.58)/2 in-plane from Ulu 2015 UD IM7/8552, via research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "tag": "Y"
+        },
+        "Tmax": {
+          "value": 121,
+          "unit": "C",
+          "source": "Hexcel HexPly 8552 US PDS p1 'Service Temperature up to 250 F', via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 23.4,
+          "unit": "kg CO2e/kg",
+          "low": 14.9,
+          "high": 46.2,
+          "source": "rule of mixtures 0.65 x carbon fibre (19.85 JCMA / 33 Ashby / 68 Meng coal) + 0.35 x epoxy 5.70 (ICE); studies/tradeoff/build_studies.py; process (autoclave 5-15) not included",
+          "tag": "Y"
+        }
+      },
+      "notes": "QI elongation, fatigue and price: NOT FOUND. Yield not applicable (linear to failure)."
+    },
+    "GFRP 7781 E-glass / epoxy (913)": {
+      "family": "composite",
+      "routes": [
+        "autoclave/oven prepreg (8HS fabric)"
+      ],
+      "flags": [
+        "glass/PHENOLIC 7781 on Nomex passes OSU (HexPly 260: 44/44); epoxy 913 not demonstrated"
+      ],
+      "properties": {
+        "rho": {
+          "value": 1830,
+          "unit": "kg/m3",
+          "source": "Hexcel HexPly 913 US PDS p4 (7781/913, 37 % RC), via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "E": {
+          "value": 22.0,
+          "unit": "GPa",
+          "condition": "warp of balanced fabric (~0/90 laminate)",
+          "source": "Hexcel HexPly 913 US PDS p4, warp (0 deg) of 8HS fabric, RT dry",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 450,
+          "unit": "MPa",
+          "source": "Hexcel HexPly 913 US PDS p4, warp tension",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 8.1,
+          "unit": "kg CO2e/kg",
+          "low": 7.47,
+          "high": 8.26,
+          "condition": "Ashby 2013 7.47-8.26 [S]",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p4 (GFRP, CO2; Ref. 1), via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        }
+      },
+      "notes": "Toray Cetex TC1100 7781/PPS: 1950 kg/m3, 21.2 GPa, 494 MPa [D]. Fatigue, k, CTE, Tmax, price: NOT FOUND."
+    },
+    "CF/PEEK (Toray Cetex TC1200)": {
+      "family": "composite",
+      "routes": [
+        "thermoplastic press forming",
+        "thermoforming",
+        "welding"
+      ],
+      "flags": [
+        "thermoplastic: weldable/remeltable (circularity argument) [Y]"
+      ],
+      "properties": {
+        "rho": {
+          "value": 1530,
+          "unit": "kg/m3",
+          "source": "Toray Cetex TC1200 PDS v4.0 p2 (T300JB 5HS fabric, Vf 50 %), via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        },
+        "E": {
+          "value": 40.8,
+          "unit": "GPa",
+          "condition": "lay-up not printed; 0 deg fabric 56.1 GPa / 776 MPa",
+          "source": "Toray TC1200 PDS v4.0 p3 'plain tensile' AITM 1-0007 (lay-up not printed, QI likely)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 578,
+          "unit": "MPa",
+          "source": "Toray TC1200 PDS v4.0 p3 'plain tensile'",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 23.3,
+          "unit": "kg CO2e/kg",
+          "low": 14.7,
+          "high": 44.9,
+          "source": "rule of mixtures 0.58 x CF (19.85-33-68) + 0.42 x PEEK 7.5-13 (weak unattributed web value); studies/tradeoff/build_studies.py",
+          "tag": "Y"
+        }
+      },
+      "notes": "UD AS4D: 1590 kg/m3, 135 GPa, 2410 MPa. PEEK Tg 143 C limits service (Victrex 450G). FST results, fatigue, k, CTE, price: NOT FOUND."
+    },
+    "PEEK 450G (neat)": {
+      "family": "polymer",
+      "routes": [
+        "injection moulding",
+        "extrusion",
+        "machined stock"
+      ],
+      "flags": [
+        "LOI 35 % at 3.2 mm, 24 % at 0.4 mm (ISO 4589)",
+        "no FAR 25.853 data on sheet"
+      ],
+      "properties": {
+        "rho": {
+          "value": 1300,
+          "unit": "kg/m3",
+          "source": "Victrex 'VICTREX PEEK 450G' TDS, Revision November 2019 (Protolabs-hosted copy), https://Protolabs.com/media/n3vggz1p/victrex_tds_450g.pdf, p1; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) (crystalline, ISO 1183)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 4.0,
+          "unit": "GPa",
+          "source": "Victrex 'VICTREX PEEK 450G' TDS, Revision November 2019 (Protolabs-hosted copy), https://Protolabs.com/media/n3vggz1p/victrex_tds_450g.pdf, p1; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) (ISO 527, 23 C)",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 98,
+          "unit": "MPa",
+          "source": "Victrex 'VICTREX PEEK 450G' TDS, Revision November 2019 (Protolabs-hosted copy), https://Protolabs.com/media/n3vggz1p/victrex_tds_450g.pdf, p1; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) (tensile strength at yield, 23 C)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 45,
+          "unit": "%",
+          "source": "Victrex 'VICTREX PEEK 450G' TDS, Revision November 2019 (Protolabs-hosted copy), https://Protolabs.com/media/n3vggz1p/victrex_tds_450g.pdf, p1; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) (at break)",
+          "tag": "D"
+        },
+        "k": {
+          "value": 0.29,
+          "unit": "W/mK",
+          "source": "Victrex 'VICTREX PEEK 450G' TDS, Revision November 2019 (Protolabs-hosted copy), https://Protolabs.com/media/n3vggz1p/victrex_tds_450g.pdf, p1; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) (average, 23 C, ISO 22007-4; along flow 0.32)",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 55,
+          "unit": "1e-6/K",
+          "source": "Victrex 'VICTREX PEEK 450G' TDS, Revision November 2019 (Protolabs-hosted copy), https://Protolabs.com/media/n3vggz1p/victrex_tds_450g.pdf, p1; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) (average below Tg; along flow 45; above Tg 140)",
+          "tag": "D"
+        },
+        "Tmax": {
+          "value": 240,
+          "unit": "C",
+          "condition": "RTI; stiffness drops above Tg 143 C",
+          "source": "Victrex 'VICTREX PEEK 450G' TDS, Revision November 2019 (Protolabs-hosted copy), https://Protolabs.com/media/n3vggz1p/victrex_tds_450g.pdf, p1; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) UL 746B RTI mechanical w/o impact 240 C (w/ impact 180, electrical 260); Tg onset 143 C, HDT 152 C",
+          "tag": "D"
+        }
+      },
+      "notes": "CO2: only an unattributed web range 7.5-13 kg CO2e/kg (B notes) - NOT FOUND properly. Price NOT FOUND."
+    },
+    "ULTEM 9085 (FDM)": {
+      "family": "polymer",
+      "routes": [
+        "FDM (Fortus 450mc / F900)"
+      ],
+      "flags": [
+        "meets 14 CFR 25.853(a) 60 s and 12 s vertical burn, 15 s horizontal (Table 7)",
+        "OSU heat release 14 CFR 25.853(d): peak 41.8-57.0 kW/m2, 2-min 32.7-52.8 kW min/m2 (<= 65/65)",
+        "smoke BSS 7238 Ds 4-15; toxicity BSS 7239 / AITM 3.0005 reported",
+        "UL 94 V-0 (natural)",
+        "EN 45545-2 tested",
+        "ASTM E595 outgassing TML 0.33-0.37 %, CVCM <=0.02 %",
+        "CG (Certified Grade) has lot traceability"
+      ],
+      "properties": {
+        "rho": {
+          "value": 1270,
+          "unit": "kg/m3",
+          "source": "Stratasys 'ULTEM 9085 Resin Data Sheet' (FDM, reseller-hosted copy, test runs dated Feb 2019), https://cdn.goengineer.com/stratasys_fdm_ultem_9085_material_data_sheet.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) Table 2 (specific gravity 1.27, ASTM D792)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 2.51,
+          "unit": "GPa",
+          "condition": "XZ; ZX 2.41",
+          "source": "Stratasys 'ULTEM 9085 Resin Data Sheet' (FDM, reseller-hosted copy, test runs dated Feb 2019), https://cdn.goengineer.com/stratasys_fdm_ultem_9085_material_data_sheet.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) Table 3 natural T16 tip, XZ (ZX 2.41), ASTM D638",
+          "tag": "D"
+        },
+        "Fty": {
+          "value": 70,
+          "unit": "MPa",
+          "condition": "XZ",
+          "source": "Stratasys 'ULTEM 9085 Resin Data Sheet' (FDM, reseller-hosted copy, test runs dated Feb 2019), https://cdn.goengineer.com/stratasys_fdm_ultem_9085_material_data_sheet.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) Table 3, XZ yield (ZX: no yield)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 68,
+          "unit": "MPa",
+          "condition": "XZ; ZX 49 (weak layer direction)",
+          "source": "Stratasys 'ULTEM 9085 Resin Data Sheet' (FDM, reseller-hosted copy, test runs dated Feb 2019), https://cdn.goengineer.com/stratasys_fdm_ultem_9085_material_data_sheet.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) Table 3, XZ strength at break (ZX 49); below the 70 MPa yield as printed (load drops after yield)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 5.4,
+          "unit": "%",
+          "source": "Stratasys 'ULTEM 9085 Resin Data Sheet' (FDM, reseller-hosted copy, test runs dated Feb 2019), https://cdn.goengineer.com/stratasys_fdm_ultem_9085_material_data_sheet.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) Table 3, XZ at break (ZX 1.9)",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 45,
+          "unit": "1e-6/K",
+          "source": "Stratasys 'ULTEM 9085 Resin Data Sheet' (FDM, reseller-hosted copy, test runs dated Feb 2019), https://cdn.goengineer.com/stratasys_fdm_ultem_9085_material_data_sheet.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) Table 2 mean CTE ASTM E831 -50 to 80 C (80-160 C: 32)",
+          "tag": "D"
+        },
+        "Tmax": {
+          "value": 173,
+          "unit": "C",
+          "condition": "HDT, not a continuous-use rating",
+          "source": "Stratasys 'ULTEM 9085 Resin Data Sheet' (FDM, reseller-hosted copy, test runs dated Feb 2019), https://cdn.goengineer.com/stratasys_fdm_ultem_9085_material_data_sheet.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) Table 2 HDT at 264 psi (Tg 180 C)",
+          "tag": "D"
+        }
+      },
+      "notes": "Distributor sheets print other moduli (2.15-2.27 GPa ipfl; 2.85 GPa SABIC resin ISO 527). CO2 and price NOT FOUND."
+    },
+    "PA12 SLS (EOS PA 2200)": {
+      "family": "polymer",
+      "routes": [
+        "SLS"
+      ],
+      "flags": [
+        "no flame retardant: 'PA2200-parts can burn' (EOS 2004)",
+        "UL 94 HB only - cabin FST not demonstrated",
+        "CarbonReduced grade: '45% less CO2e' (EOS, no absolute value)"
+      ],
+      "properties": {
+        "rho": {
+          "value": 930,
+          "unit": "kg/m3",
+          "source": "EOS PA 2200 Balance 120 um web datasheet (last changed 20.10.2026), https://www.eos.info/polymer-solutions/polymer-materials/data-sheets/mds-pa-2200 (EOS method)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 1.65,
+          "unit": "GPa",
+          "source": "EOS PA 2200 Balance 120 um web datasheet (last changed 20.10.2026), https://www.eos.info/polymer-solutions/polymer-materials/data-sheets/mds-pa-2200 (X, Y, Z; ISO 527)",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 48,
+          "unit": "MPa",
+          "condition": "XY; Z 42",
+          "source": "EOS PA 2200 Balance 120 um web datasheet (last changed 20.10.2026), https://www.eos.info/polymer-solutions/polymer-materials/data-sheets/mds-pa-2200 (X/Y; Z 42)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 18,
+          "unit": "%",
+          "condition": "XY; Z 4",
+          "source": "EOS PA 2200 Balance 120 um web datasheet (last changed 20.10.2026), https://www.eos.info/polymer-solutions/polymer-materials/data-sheets/mds-pa-2200 (X/Y; Z 4)",
+          "tag": "D"
+        },
+        "k": {
+          "value": 0.144,
+          "unit": "W/mK",
+          "source": "EOS 'Feinpolyamide PA 2200 for EOSINT P' Product Information MAG/07.04 (UZH-hosted copy), https://www.amf.uzh.ch/dam/jcr:59a8b14a-c212-4693-8443-d5e543aeabe2/Material-Data-PA2200-ENGLISH.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) p3 (vertical to layers; parallel 0.127)",
+          "tag": "D"
+        },
+        "cte": {
+          "value": 109,
+          "unit": "1e-6/K",
+          "source": "EOS 'Feinpolyamide PA 2200 for EOSINT P' Product Information MAG/07.04 (UZH-hosted copy), https://www.amf.uzh.ch/dam/jcr:59a8b14a-c212-4693-8443-d5e543aeabe2/Material-Data-PA2200-ENGLISH.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) p2 (1.09e-4 /K, DIN 53752-A)",
+          "tag": "D"
+        },
+        "Tmax": {
+          "value": 80,
+          "unit": "C",
+          "source": "EOS 'Feinpolyamide PA 2200 for EOSINT P' Product Information MAG/07.04 (UZH-hosted copy), https://www.amf.uzh.ch/dam/jcr:59a8b14a-c212-4693-8443-d5e543aeabe2/Material-Data-PA2200-ENGLISH.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) p4: high strength under steady stress from -40 to +80 C (short-time unloaded up to 160 C); HDT 1.8 MPa 64 C X (EOS web)",
+          "tag": "D"
+        },
+        "co2": {
+          "value": 9.14,
+          "unit": "kg CO2e/kg",
+          "condition": "PA6 proxy; SLS process energy not included",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf plastics: Nylon (Polyamide) 6 polymer (PlasticsEurope), used as a PA12 proxy; layout of the table makes the pairing slightly uncertain (EE 120.5 MJ, 5.47 CO2 / 9.14 CO2e)",
+          "tag": "Y"
+        }
+      },
+      "notes": "EOS 2004 sheet: 1700 +-150 MPa, 45 +-3 MPa, 20 +-5 %, 0.90-0.95 g/cm3 (older than current web values). Price NOT FOUND."
+    },
+    "PA12-CF (Stratasys FDM Nylon 12CF)": {
+      "family": "polymer",
+      "routes": [
+        "FDM (Fortus 450mc, F900, F3300)"
+      ],
+      "flags": [
+        "35 wt % chopped carbon fibre",
+        "no FAR 25.853 / UL 94 data on sheet",
+        "electrically conductive"
+      ],
+      "properties": {
+        "rho": {
+          "value": 1190,
+          "unit": "kg/m3",
+          "source": "Stratasys 'FDM Nylon 12CF' Material Data Sheet rev 0925a (15 pp), https://www.stratasys.co.jp/siteassets/materials/materials-catalog/fdm-materials/nylon-12cf/mds_fdm_nylon-12cf_0925a.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) Table 3 (specific gravity 1.190 at 23 C)",
+          "tag": "D"
+        },
+        "E": {
+          "value": 9.46,
+          "unit": "GPa",
+          "condition": "XZ; ZX 3.00",
+          "source": "Stratasys 'FDM Nylon 12CF' Material Data Sheet rev 0925a (15 pp), https://www.stratasys.co.jp/siteassets/materials/materials-catalog/fdm-materials/nylon-12cf/mds_fdm_nylon-12cf_0925a.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) Table 4 F900 T20C 0.25 mm, XZ (ZX 3.00); F3300 0.25 mm 12.1 / 2.6",
+          "tag": "D"
+        },
+        "Ftu": {
+          "value": 83.5,
+          "unit": "MPa",
+          "condition": "XZ",
+          "source": "Stratasys 'FDM Nylon 12CF' Material Data Sheet rev 0925a (15 pp), https://www.stratasys.co.jp/siteassets/materials/materials-catalog/fdm-materials/nylon-12cf/mds_fdm_nylon-12cf_0925a.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) Table 4, XZ strength at break (ZX 32.7)",
+          "tag": "D"
+        },
+        "elongation": {
+          "value": 2.4,
+          "unit": "%",
+          "source": "Stratasys 'FDM Nylon 12CF' Material Data Sheet rev 0925a (15 pp), https://www.stratasys.co.jp/siteassets/materials/materials-catalog/fdm-materials/nylon-12cf/mds_fdm_nylon-12cf_0925a.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) Table 4, XZ (ZX 1.2)",
+          "tag": "D"
+        },
+        "k": {
+          "value": 0.6,
+          "unit": "W/mK",
+          "source": "Stratasys 'FDM Nylon 12CF' Material Data Sheet rev 0925a (15 pp), https://www.stratasys.co.jp/siteassets/materials/materials-catalog/fdm-materials/nylon-12cf/mds_fdm_nylon-12cf_0925a.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) (ASTM E1952, 0.5988 at 30 C)",
+          "tag": "D"
+        },
+        "Tmax": {
+          "value": 130,
+          "unit": "C",
+          "condition": "HDT; note Tg 37.5 C",
+          "source": "Stratasys 'FDM Nylon 12CF' Material Data Sheet rev 0925a (15 pp), https://www.stratasys.co.jp/siteassets/materials/materials-catalog/fdm-materials/nylon-12cf/mds_fdm_nylon-12cf_0925a.pdf; downloaded and read with pdftotext on 2026-11-03 (session scratch copy, not kept in the project) Table 3 HDT at 264 psi, XY (ZX 154); Tg 37.5 C",
+          "tag": "D"
+        }
+      },
+      "notes": "CTE in Table 3 could not be assigned to orientation from the PDF text layout (115.7 vs 37.31 um/m/C at -50 to 20 C) - omitted. This is an FDM filament, not SLS. CO2 and price NOT FOUND."
+    },
+    "Nomex honeycomb HRH-10 1/8-3.0": {
+      "family": "core",
+      "routes": [
+        "sandwich core (bonded faces)"
+      ],
+      "flags": [
+        "meets FAR 25.853 'self extinguishing' (HRH-10 PDS p3)"
+      ],
+      "properties": {
+        "rho": {
+          "value": 48,
+          "unit": "kg/m3",
+          "source": "Hexcel HexWeb HRH-10 PDS (US, (c)2017) p4 table, 3.0 pcf, https://www.hexcel.com/wp-content/uploads/2026/01/HexWeb_HRH10_DataSheet_us.pdf, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "tag": "D"
+        }
+      },
+      "notes": "Shear: G_L 41 MPa, tau_L 1.21 MPa, G_W 24 MPa, tau_W 0.69 MPa (same table). Al 5052 core 1/8-3.1 (50 kg/m3) is ~7x stiffer in shear. CO2 and price NOT FOUND."
+    }
+  }
+}

@@ -1,0 +1,519 @@
+{
+  "study": "Satellite bracket, strength-limited, production only (per kg of the conventional 7075-T6 machined part)",
+  "case": "beam_strong",
+  "objectives": [
+    "mass_kg",
+    "co2_total_kg"
+  ],
+  "score": "co2_total_kg",
+  "exchange": {},
+  "exchange_unit": "",
+  "nominal": [
+    {
+      "material": "AlSi10Mg",
+      "route": "am_TO",
+      "mass_kg": 0.9894330082412246,
+      "co2_production_kg": 28.16831177940562,
+      "co2_use_kg": 0.0,
+      "co2_total_kg": 28.16831177940562,
+      "cost": 613.4484651095593,
+      "score": 28.16831177940562,
+      "rank": 1
+    },
+    {
+      "material": "Ti-6Al-4V",
+      "route": "am_TO",
+      "mass_kg": 0.6790321028057458,
+      "co2_production_kg": 54.471374714629036,
+      "co2_use_kg": 0.0,
+      "co2_total_kg": 54.471374714629036,
+      "cost": 451.55634836582095,
+      "score": 54.471374714629036,
+      "rank": 2
+    },
+    {
+      "material": "7075-T6",
+      "route": "machined_TO",
+      "mass_kg": 0.8,
+      "co2_production_kg": 79.80544,
+      "co2_use_kg": 0.0,
+      "co2_total_kg": 79.80544,
+      "cost": 144.0,
+      "score": 79.80544,
+      "rank": 3
+    },
+    {
+      "material": "7075-T6",
+      "route": "machined",
+      "mass_kg": 1.0,
+      "co2_production_kg": 99.7568,
+      "co2_use_kg": 0.0,
+      "co2_total_kg": 99.7568,
+      "cost": 180.0,
+      "score": 99.7568,
+      "rank": 4
+    },
+    {
+      "material": "2024-T351",
+      "route": "machined_TO",
+      "mass_kg": 1.061150817313723,
+      "co2_production_kg": 105.85700985260159,
+      "co2_use_kg": 0.0,
+      "co2_total_kg": 105.85700985260159,
+      "cost": 191.00714711647015,
+      "score": 105.85700985260159,
+      "rank": 5
+    },
+    {
+      "material": "Scalmalloy",
+      "route": "am_TO",
+      "mass_kg": 0.5801462132683824,
+      "co2_production_kg": 117.46170777543705,
+      "co2_use_kg": 0.0,
+      "co2_total_kg": 117.46170777543705,
+      "cost": 464.1169706147059,
+      "score": 117.46170777543705,
+      "rank": 6
+    },
+    {
+      "material": "Ti-6Al-4V",
+      "route": "machined_TO",
+      "mass_kg": 0.9053761370743278,
+      "co2_production_kg": 340.2012400634108,
+      "co2_use_kg": 0.0,
+      "co2_total_kg": 340.2012400634108,
+      "cost": 633.7632959520295,
+      "score": 340.2012400634108,
+      "rank": 7
+    }
+  ],
+  "pareto": [
+    "Ti-6Al-4V / am_TO",
+    "AlSi10Mg / am_TO",
+    "Scalmalloy / am_TO"
+  ],
+  "monte_carlo": {
+    "samples": 3000,
+    "seed": 1,
+    "p_best": {
+      "7075-T6 / machined": 0.0,
+      "7075-T6 / machined_TO": 0.0,
+      "2024-T351 / machined_TO": 0.0,
+      "Ti-6Al-4V / machined_TO": 0.0,
+      "Ti-6Al-4V / am_TO": 0.298,
+      "AlSi10Mg / am_TO": 0.7016666666666667,
+      "Scalmalloy / am_TO": 0.0003333333333333333
+    },
+    "quantiles": {
+      "7075-T6 / machined": {
+        "mass_kg": {
+          "p05": 1.0,
+          "p50": 1.0,
+          "p95": 1.0
+        },
+        "co2_total_kg": {
+          "p05": 124.25897413556739,
+          "p50": 338.7181394563133,
+          "p95": 721.6845983210399
+        }
+      },
+      "7075-T6 / machined_TO": {
+        "mass_kg": {
+          "p05": 0.7093034431581074,
+          "p50": 0.8005185111344602,
+          "p95": 0.890387375028596
+        },
+        "co2_total_kg": {
+          "p05": 98.71747858248762,
+          "p50": 263.1244524410133,
+          "p95": 594.9868991713643
+        }
+      },
+      "2024-T351 / machined_TO": {
+        "mass_kg": {
+          "p05": 0.9404893059339003,
+          "p50": 1.0619861881389314,
+          "p95": 1.1825045415674955
+        },
+        "co2_total_kg": {
+          "p05": 129.77760187370217,
+          "p50": 368.06246018781235,
+          "p95": 792.3926197298517
+        }
+      },
+      "Ti-6Al-4V / machined_TO": {
+        "mass_kg": {
+          "p05": 0.8036613514261811,
+          "p50": 0.9055218649065747,
+          "p95": 1.0049330994860577
+        },
+        "co2_total_kg": {
+          "p05": 258.6814326501013,
+          "p50": 626.6013764541574,
+          "p95": 1229.8293105158548
+        }
+      },
+      "Ti-6Al-4V / am_TO": {
+        "mass_kg": {
+          "p05": 0.5785330791610502,
+          "p50": 0.6791292970206586,
+          "p95": 0.7812189509863746
+        },
+        "co2_total_kg": {
+          "p05": 23.990237013844677,
+          "p50": 42.66895378916701,
+          "p95": 68.67534114793521
+        }
+      },
+      "AlSi10Mg / am_TO": {
+        "mass_kg": {
+          "p05": 0.8418205174360619,
+          "p50": 0.9895826291220768,
+          "p95": 1.1375542735147797
+        },
+        "co2_total_kg": {
+          "p05": 15.747173465220758,
+          "p50": 33.9441528777796,
+          "p95": 59.39586524128964
+        }
+      },
+      "Scalmalloy / am_TO": {
+        "mass_kg": {
+          "p05": 0.4942493906244958,
+          "p50": 0.5811350077614522,
+          "p95": 0.6671867299114036
+        },
+        "co2_total_kg": {
+          "p05": 63.96795611258707,
+          "p50": 96.20256589072167,
+          "p95": 143.48234040788898
+        }
+      }
+    }
+  },
+  "tornado": [
+    {
+      "factor": "materials.Ti-6Al-4V.co2_per_kg",
+      "unit": "kg CO2 / kg",
+      "low": 16.1,
+      "high": 46.5,
+      "tag": "D",
+      "margin_low": -4.660800952718596,
+      "margin_high": 26.303062935223416,
+      "swing": 30.96386388794201,
+      "reverses": true
+    },
+    {
+      "factor": "materials.AlSi10Mg.co2_per_kg",
+      "unit": "kg CO2 / kg",
+      "low": 4.5,
+      "high": 22.0,
+      "tag": "D",
+      "margin_low": 37.43418427793719,
+      "margin_high": 11.46156781160505,
+      "swing": 25.97261646633214,
+      "reverses": false
+    },
+    {
+      "factor": "routes.am_TO.buy_to_fly",
+      "unit": "-",
+      "low": 1.2,
+      "high": 2.0,
+      "tag": "A",
+      "margin_low": 21.042450348178726,
+      "margin_high": 35.07075058029787,
+      "swing": 14.028300232119143,
+      "reverses": false
+    },
+    {
+      "factor": "routes.am_TO.mass_factor",
+      "unit": "-",
+      "low": 0.5,
+      "high": 0.7,
+      "tag": "A",
+      "margin_low": 21.91921911268618,
+      "margin_high": 30.686906757760646,
+      "swing": 8.767687645074467,
+      "reverses": false
+    },
+    {
+      "factor": "lifecycle.grid_co2_per_MJ",
+      "unit": "kg CO2 / MJ electricity",
+      "low": 0.0112,
+      "high": 0.1543,
+      "tag": "D",
+      "margin_low": 28.93266300573326,
+      "margin_high": 21.010646793313086,
+      "swing": 7.922016212420175,
+      "reverses": false
+    },
+    {
+      "factor": "routes.am_TO.process_MJ_per_kg",
+      "unit": "MJ / kg bought",
+      "low": 61.0,
+      "high": 158.4,
+      "tag": "A",
+      "margin_low": 27.885516239219506,
+      "margin_high": 25.22349634614146,
+      "swing": 2.662019893078046,
+      "reverses": false
+    },
+    {
+      "factor": "materials.7075-T6.co2_per_kg",
+      "unit": "kg CO2 / kg",
+      "low": 4.5,
+      "high": 22.0,
+      "tag": "D",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.7075-T6.cost_by_route.machined.price_per_kg",
+      "unit": "EUR/kg",
+      "low": 7.5,
+      "high": 20.0,
+      "tag": "Y",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.7075-T6.cost_by_route.machined.route_cost_per_kg",
+      "unit": "EUR/kg",
+      "low": 40.0,
+      "high": 240.0,
+      "tag": "S",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.7075-T6.cost_by_route.machined_TO.price_per_kg",
+      "unit": "EUR/kg",
+      "low": 7.5,
+      "high": 20.0,
+      "tag": "Y",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.7075-T6.cost_by_route.machined_TO.route_cost_per_kg",
+      "unit": "EUR/kg",
+      "low": 40.0,
+      "high": 240.0,
+      "tag": "S",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.2024-T351.co2_per_kg",
+      "unit": "kg CO2 / kg",
+      "low": 4.5,
+      "high": 22.0,
+      "tag": "D",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.2024-T351.cost_by_route.machined_TO.price_per_kg",
+      "unit": "EUR/kg",
+      "low": 7.5,
+      "high": 20.0,
+      "tag": "Y",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.2024-T351.cost_by_route.machined_TO.route_cost_per_kg",
+      "unit": "EUR/kg",
+      "low": 40.0,
+      "high": 240.0,
+      "tag": "S",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.Ti-6Al-4V.cost_by_route.machined_TO.price_per_kg",
+      "unit": "EUR/kg",
+      "low": 29.0,
+      "high": 96.0,
+      "tag": "A",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.Ti-6Al-4V.cost_by_route.machined_TO.route_cost_per_kg",
+      "unit": "EUR/kg",
+      "low": 120.0,
+      "high": 620.0,
+      "tag": "S",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.Ti-6Al-4V.cost_by_route.am_TO.price_per_kg",
+      "unit": "EUR/kg",
+      "low": 71.0,
+      "high": 180.0,
+      "tag": "A",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.Ti-6Al-4V.cost_by_route.am_TO.route_cost_per_kg",
+      "unit": "EUR/kg",
+      "low": 250.0,
+      "high": 855.0,
+      "tag": "A",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.AlSi10Mg.cost_by_route.am_TO.price_per_kg",
+      "unit": "EUR/kg",
+      "low": 40.0,
+      "high": 126.0,
+      "tag": "A",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.AlSi10Mg.cost_by_route.am_TO.route_cost_per_kg",
+      "unit": "EUR/kg",
+      "low": 220.0,
+      "high": 1910.0,
+      "tag": "A",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.Scalmalloy.co2_per_kg",
+      "unit": "kg CO2 / kg",
+      "low": 68.0,
+      "high": 128.0,
+      "tag": "H",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.Scalmalloy.cost_by_route.am_TO.price_per_kg",
+      "unit": "EUR/kg",
+      "low": 120.0,
+      "high": 400.0,
+      "tag": "Y",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "materials.Scalmalloy.cost_by_route.am_TO.route_cost_per_kg",
+      "unit": "EUR/kg",
+      "low": 220.0,
+      "high": 1910.0,
+      "tag": "A",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "routes.machined.buy_to_fly",
+      "unit": "-",
+      "low": 8.0,
+      "high": 33.0,
+      "tag": "A",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "routes.machined.process_MJ_per_kg",
+      "unit": "MJ / kg bought",
+      "low": 8.0,
+      "high": 108.9,
+      "tag": "A",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "routes.machined_TO.buy_to_fly",
+      "unit": "-",
+      "low": 8.0,
+      "high": 33.0,
+      "tag": "A",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "routes.machined_TO.process_MJ_per_kg",
+      "unit": "MJ / kg bought",
+      "low": 8.0,
+      "high": 108.9,
+      "tag": "A",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    },
+    {
+      "factor": "routes.machined_TO.mass_factor",
+      "unit": "-",
+      "low": 0.7,
+      "high": 0.9,
+      "tag": "Y",
+      "margin_low": 26.303062935223416,
+      "margin_high": 26.303062935223416,
+      "swing": 0.0,
+      "reverses": false
+    }
+  ],
+  "weak_inputs": [
+    "lifecycle.flights",
+    "lifecycle.fuel_per_kg_per_flight",
+    "materials.2024-T351.cost_by_route.machined_TO.price_per_kg",
+    "materials.2024-T351.cost_by_route.machined_TO.route_cost_per_kg",
+    "materials.7075-T6.cost_by_route.machined.price_per_kg",
+    "materials.7075-T6.cost_by_route.machined.route_cost_per_kg",
+    "materials.7075-T6.cost_by_route.machined_TO.price_per_kg",
+    "materials.7075-T6.cost_by_route.machined_TO.route_cost_per_kg",
+    "materials.Scalmalloy.cost_by_route.am_TO.price_per_kg",
+    "materials.Ti-6Al-4V.cost_by_route.machined_TO.route_cost_per_kg",
+    "reference_mass",
+    "routes.machined.mass_factor",
+    "routes.machined_TO.mass_factor"
+  ]
+}

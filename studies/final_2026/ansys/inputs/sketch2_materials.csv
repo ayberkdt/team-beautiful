@@ -1,0 +1,6 @@
+material,note
+Structural Steel,baseline (Ansys Engineering Data default)
+Ti-6Al-4V,L-PBF + HIP
+Inconel 718,L-PBF + STA
+17-4PH,L-PBF + H1025 + HIP
+Scalmalloy,L-PBF (expected to fail at 300 C)

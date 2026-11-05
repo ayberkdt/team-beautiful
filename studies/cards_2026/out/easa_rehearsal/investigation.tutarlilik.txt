@@ -1,0 +1,5 @@
+set tutarlılığı (3 figür): 0 HATA · 1 UYARI · 1 BİLGİ · SET TUTARLI
+  [UYARI] izgara             izgara figürden figüre değişiyor — değer: E1_vertical_profile, E2_speed_profile · kategori: E3_ercs_barriers
+          → aynı tema her figürde: Seti.figur(...)  [06 T6: AIAAFig; ElsevierSizing; Kosslyn2012 (anlamsız görsel değişim)]
+  [BİLGİ] nicelik-aralik     'distancetothethreshold' (x) aralığı figürden figüre farklı — -0.2424…12.24: E1_vertical_profile · -3.121…12.3: E2_speed_profile
+          → figürler karşılaştırılacaksa ortak sınır: Seti.nicelik(ad, sinir=(a, b))  [06 T5 + §7a: Wilke2019Ch21 §21.1; UrbanStyle; Qu2018 C1.1; mekanizma (tek grafik, dolaylı): Correll2020, Witt2019 — dar aralık aynı etkiyi büyük gösterir; serbest/ortak ölçek deneyi yok]

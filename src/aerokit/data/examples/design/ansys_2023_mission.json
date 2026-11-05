@@ -1,0 +1,13 @@
+{
+  "name": "Ansys 2023 search mission (rehearsal geometry)",
+  "source": "The 2023 card asks for a predetermined search area that is only given at the event; base, area and sensor below are ASSUMPTIONS for the rehearsal.",
+  "base": [39.0, 30.0],
+  "area_bearing": "90 deg",
+  "area_distance": "400 km",
+  "area_width": "50 km",
+  "area_length": "50 km",
+  "pattern": "PS",
+  "search_altitude": "1500 m",
+  "fov": "60 deg",
+  "overlap": "10 %"
+}

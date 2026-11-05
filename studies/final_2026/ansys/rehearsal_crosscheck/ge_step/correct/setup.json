@@ -1,0 +1,195 @@
+{
+ "_about": "Editable bracket set-up (lengths mm, forces N, moments N m). Roles and loads are a PROPOSAL from aerokit.bracket.features [Y]: check every hole role, load direction and magnitude against the organisers' drawing before trusting any result.",
+ "name": "ge_bracket",
+ "units": {
+  "length": "mm",
+  "force": "N",
+  "moment": "N m"
+ },
+ "voxel_mm": 2.8,
+ "origin_mm": [
+  -163.34,
+  -74.6,
+  0.0
+ ],
+ "bbox_mm": [
+  [
+   -163.34,
+   -74.6,
+   0.0
+  ],
+  [
+   15.86,
+   34.6,
+   61.6
+  ]
+ ],
+ "temperature_C": 300.0,
+ "holes": [
+  {
+   "id": "H1",
+   "axis": "x",
+   "center_mm": [
+    -75.14,
+    -56.734,
+    44.72
+   ],
+   "diameter_mm": 18.957,
+   "segments_mm": [
+    [
+     -93.34,
+     -84.94
+    ],
+    [
+     -62.54,
+     -56.94
+    ]
+   ],
+   "roundness": 0.082,
+   "role": "load"
+  },
+  {
+   "id": "H2",
+   "axis": "z",
+   "center_mm": [
+    -147.94,
+    -34.0,
+    7.0
+   ],
+   "diameter_mm": 14.478,
+   "segments_mm": [
+    [
+     0.0,
+     14.0
+    ]
+   ],
+   "roundness": 0.042,
+   "role": "support"
+  },
+  {
+   "id": "H3",
+   "axis": "z",
+   "center_mm": [
+    -147.94,
+    19.2,
+    7.0
+   ],
+   "diameter_mm": 14.478,
+   "segments_mm": [
+    [
+     0.0,
+     14.0
+    ]
+   ],
+   "roundness": 0.042,
+   "role": "support"
+  },
+  {
+   "id": "H4",
+   "axis": "z",
+   "center_mm": [
+    -0.129,
+    -37.832,
+    7.0
+   ],
+   "diameter_mm": 13.772,
+   "segments_mm": [
+    [
+     0.0,
+     14.0
+    ]
+   ],
+   "roundness": 0.111,
+   "role": "support"
+  },
+  {
+   "id": "H5",
+   "axis": "z",
+   "center_mm": [
+    0.46,
+    -0.4,
+    7.0
+   ],
+   "diameter_mm": 14.478,
+   "segments_mm": [
+    [
+     0.0,
+     14.0
+    ]
+   ],
+   "roundness": 0.042,
+   "role": "support"
+  }
+ ],
+ "supports": [
+  {
+   "hole": "H2",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H3",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H4",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H5",
+   "type": "fixed_bore"
+  }
+ ],
+ "load_cases": [
+  {
+   "name": "LC1 +x",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "bearing",
+     "force_N": [
+      2490.400064728633,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LC2 +y",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      2490.400064728633,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LC3 +z",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      0.0,
+      2490.400064728633
+     ]
+    }
+   ]
+  }
+ ],
+ "non_design": {
+  "ring_factor": 0.75,
+  "ring_min_voxels": 2,
+  "boxes_mm": []
+ },
+ "build_direction": "+z",
+ "load_case_weights": null,
+ "exclusion_mm": 8.4,
+ "_calibration": "all loads multiplied by 0.24904 so that structural_steel on the initial design has utilisation 0.8 at 300 C [Y: no loads were given]"
+}

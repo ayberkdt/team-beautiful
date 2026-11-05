@@ -1,0 +1,222 @@
+{
+ "card": "Advionics rehearsal: GNSS-independent ground-radar approach guidance",
+ "note": "Rehearsal card. Runway position is synthetic; sensor sigmas, transponder power and antenna gains are ASSUMPTIONS to be replaced by the challenge's own numbers.",
+ "gate_ft": 200,
+ "runs": 200,
+ "alert_limit": "LPV-200",
+ "hal_m": 40.0,
+ "val_m": 35.0,
+ "integrity_risk": 1e-07,
+ "k_factor": 5.326723886384496,
+ "sources": [
+  {
+   "source": "SBAS LPV-like",
+   "sigma_m": [
+    1.0,
+    1.0,
+    1.5
+   ],
+   "bias_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "vertical_mean_m": 0.8581428719439351,
+   "vertical_p95_m": 2.8418531976025343,
+   "lateral_p95_m": 1.6567705802796635,
+   "vpl_m": 7.990085829576744,
+   "hpl_m": 5.326723886384496,
+   "meets_alert_limits": true
+  },
+  {
+   "source": "Baro-VNAV at ISA-30 K",
+   "sigma_m": [
+    3.0,
+    3.0,
+    2.0
+   ],
+   "bias_m": [
+    0.0,
+    0.0,
+    6.4
+   ],
+   "vertical_mean_m": -5.215698073981055,
+   "vertical_p95_m": 7.552473833855168,
+   "lateral_p95_m": 5.12837838352234,
+   "vpl_m": 17.05344777276899,
+   "hpl_m": 15.980171659153488,
+   "meets_alert_limits": true
+  },
+  {
+   "source": "Ground radar 0.1 deg",
+   "sigma_m": [
+    3.0,
+    2.0943951023931957,
+    2.0943951023931957
+   ],
+   "bias_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "vertical_mean_m": 0.7221090675217278,
+   "vertical_p95_m": 1.9022536420208742,
+   "lateral_p95_m": 1.7774386119456527,
+   "vpl_m": 11.156264419444538,
+   "hpl_m": 11.156264419444538,
+   "meets_alert_limits": true
+  },
+  {
+   "source": "Ground radar 0.3 deg",
+   "sigma_m": [
+    5.0,
+    6.283185307179585,
+    6.283185307179585
+   ],
+   "bias_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "vertical_mean_m": 0.9207020913309318,
+   "vertical_p95_m": 4.103796903431648,
+   "lateral_p95_m": 5.889359980562123,
+   "vpl_m": 33.468793258333605,
+   "hpl_m": 33.468793258333605,
+   "meets_alert_limits": true
+  },
+  {
+   "source": "Vision/INS 2 % of range",
+   "sigma_m": [
+    10.0,
+    24.0,
+    24.0
+   ],
+   "bias_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "vertical_mean_m": 1.6740370799844613,
+   "vertical_p95_m": 23.971049467664567,
+   "lateral_p95_m": 28.38122002580903,
+   "vpl_m": 127.8413732732279,
+   "hpl_m": 127.8413732732279,
+   "meets_alert_limits": false
+  }
+ ],
+ "spoof": {
+  "threshold_m": [
+   13.968328806502795,
+   10.251735969955336,
+   11.3792515836279
+  ],
+  "vertical_fault_bound_m": 19.340118765458048,
+  "ramp_m_s": [
+   0.0,
+   0.0,
+   -1.0
+  ],
+  "ramp_start_s": 20.0,
+  "alarm_t_s": 34.40000000000022,
+  "alarm_height_m": 204.59432118705365,
+  "detection_delay_s": 14.400000000000219,
+  "undetected_error_m": 13.492078046087656,
+  "monitored_dev_at_gate_m": -1.0154787576771795,
+  "unmonitored_dev_at_end_m": 67.76197080322221,
+  "unmonitored_min_height_m": 67.64654735069634
+ },
+ "link": [
+  {
+   "range_nm": 10.0,
+   "received_dbm": -47.569732740893784,
+   "snr_db": 53.374554583414884,
+   "angle_sigma_deg": 0.001797995252728214,
+   "position_sigma_m": 0.5811749550056021
+  },
+  {
+   "range_nm": 5.0,
+   "received_dbm": -41.54913282761416,
+   "snr_db": 59.39515449669451,
+   "angle_sigma_deg": 0.000898997626364107,
+   "position_sigma_m": 0.14529373875140053
+  },
+  {
+   "range_nm": 2.0,
+   "received_dbm": -33.5903326541734,
+   "snr_db": 67.35395467013527,
+   "angle_sigma_deg": 0.00035959905054564276,
+   "position_sigma_m": 0.023246998200224085
+  },
+  {
+   "range_nm": 0.6,
+   "received_dbm": -23.132757748566654,
+   "snr_db": 77.81152957574201,
+   "angle_sigma_deg": 0.00010787971516369285,
+   "position_sigma_m": 0.002092229838020168
+  }
+ ],
+ "link_note": "ASSUMED values: transponder reply power, antenna gains, receiver bandwidth and noise figure",
+ "autoland": [
+  {
+   "scenario": "Fault-free, all sensors",
+   "runs": 20.0,
+   "landed_share": 1.0,
+   "touchdown_mean_m": 354.2896407834862,
+   "touchdown_sigma_m": 5.464662440499149,
+   "lateral_p95_m": 0.16083112802814853,
+   "sink_mean_ms": 1.1263937167800908,
+   "sink_max_ms": 1.175297707854305,
+   "in_box_share": 1.0,
+   "excluded_gnss_share": 0.0,
+   "excluded_radar_share": 0.0,
+   "excluded_baro_share": 0.0,
+   "excluded_radalt_share": 0.0
+  },
+  {
+   "scenario": "GNSS spoof, solution-separation FDE",
+   "runs": 20.0,
+   "landed_share": 1.0,
+   "touchdown_mean_m": 354.2164059600241,
+   "touchdown_sigma_m": 5.757688843987409,
+   "lateral_p95_m": 0.27939190824589727,
+   "sink_mean_ms": 1.1270809614896375,
+   "sink_max_ms": 1.1718042696430417,
+   "in_box_share": 1.0,
+   "excluded_gnss_share": 1.0,
+   "excluded_radar_share": 0.0,
+   "excluded_baro_share": 0.0,
+   "excluded_radalt_share": 0.0
+  },
+  {
+   "scenario": "GNSS spoof, innovation FDE",
+   "runs": 20.0,
+   "landed_share": 0.1,
+   "touchdown_mean_m": 356.78124682649354,
+   "touchdown_sigma_m": 1.2156996760038323,
+   "lateral_p95_m": 0.07665553530725701,
+   "sink_mean_ms": 1.1441524748990197,
+   "sink_max_ms": 1.1687208484490956,
+   "in_box_share": 0.1,
+   "excluded_gnss_share": 0.1,
+   "excluded_radar_share": 0.9,
+   "excluded_baro_share": 0.9,
+   "excluded_radalt_share": 0.9
+  },
+  {
+   "scenario": "No GNSS, cold baro",
+   "runs": 20.0,
+   "landed_share": 1.0,
+   "touchdown_mean_m": 356.05367431462304,
+   "touchdown_sigma_m": 6.074380354034789,
+   "lateral_p95_m": 0.3636937982227454,
+   "sink_mean_ms": 1.1326263069284699,
+   "sink_max_ms": 1.1843199531321589,
+   "in_box_share": 1.0,
+   "excluded_gnss_share": 0.0,
+   "excluded_radar_share": 0.0,
+   "excluded_baro_share": 0.0,
+   "excluded_radalt_share": 0.0
+  }
+ ]
+}

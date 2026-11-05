@@ -1,0 +1,7 @@
+figür denetimi: 0 HATA · 0 UYARI · 3 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] dogrudan-etiket    eksen 0: 4 çizgi serisi lejantla adlandırılmış
+          → çizgi sonlarına doğrudan etiket: datawiz.etiket.cizgi_sonu(ax)  [Franconeri2021 (Lohse1993); Sweller2019 bölünmüş dikkat; IEEEGraphics; Wilke2019 W4]
+  [BİLGİ] banking-45         eksen 0: çizim alanı y/g = 0.57; 45° için ≈ 1.20
+          → eğim karşılaştırması amaçsa oranı yaklaştır (ax.set_box_aspect)  [ClevelandMcGillMcGill1988 (VS); Kosara2013b; TalbotGerthHanrahan2011 — başlangıç sezgisi]
+  [BİLGİ] lejant-sirasi      eksen 0: lejant sırası çizgilerin sağ uçtaki dikey sırasıyla aynı değil
+          → lejantı uç değerlerine göre sırala ya da doğrudan etiket (dw.etiket.cizgi_sonu)  [06 T8: Kosslyn2012 corollary 3; UrbanStyle (Legend, Line charts)]

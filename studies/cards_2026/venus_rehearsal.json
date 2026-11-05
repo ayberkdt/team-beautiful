@@ -1,0 +1,96 @@
+{
+ "name": "LuGus rehearsal: which Venus drone, at which altitude, on which power",
+ "note": "Rehearsal card. Masses, areas, efficiencies and figures of merit are ASSUMPTIONS for a 10 kg class daughter drone; replace with the challenge's own numbers.",
+ "operating_altitude_km": 55.0,
+ "altitude_range_km": [
+  45.0,
+  70.0
+ ],
+ "solar": {
+  "panel_area_m2": 1.0,
+  "efficiency": 0.2,
+  "upward_ratio": 0.9,
+  "note": "bifacial: underside collects cloud-reflected light (~0.9 of the downward flux at 60 km, Landis 2002 via the research agent); day-average factor 1/pi"
+ },
+ "station_keeping": {
+  "envelope_m3": 12.0,
+  "drag_coefficient": 0.3,
+  "airspeeds_ms": [
+   5,
+   100
+  ]
+ },
+ "concepts": [
+  {
+   "name": "Battery quadrotor",
+   "kind": "rotor",
+   "mass_kg": 10.0,
+   "rotor_area_m2": 1.13,
+   "figure_of_merit": 0.65,
+   "electrical_efficiency": 0.7,
+   "gas_volume_m3": 0.0
+  },
+  {
+   "name": "Helium-assisted quad",
+   "kind": "rotor",
+   "mass_kg": 10.0,
+   "rotor_area_m2": 1.13,
+   "figure_of_merit": 0.65,
+   "electrical_efficiency": 0.7,
+   "gas_volume_m3": 9.0,
+   "gas": "He"
+  },
+  {
+   "name": "Solar aeroplane",
+   "kind": "wing",
+   "mass_kg": 10.0,
+   "wing_area_m2": 2.0,
+   "CL": 0.8,
+   "LD": 15.0,
+   "electrical_efficiency": 0.6
+  }
+ ],
+ "mission": {
+  "note": "dive to the lower cloud deck to sample, climb back; vehicle numbers are ASSUMPTIONS (10 kg, 9 m3 He, 500 Wh)",
+  "vehicle": {
+   "mass_kg": 10.0,
+   "gas_volume_m3": 9.0,
+   "rotor_area_m2": 1.13,
+   "figure_of_merit": 0.65,
+   "electrical_efficiency": 0.7,
+   "max_power_W": 1500.0,
+   "drag_area_m2": 1.5,
+   "avionics_W": 15.0,
+   "battery_Wh": 500.0,
+   "solar_area_m2": 1.0,
+   "solar_efficiency": 0.2,
+   "upward_ratio": 0.9,
+   "thermal_tau_s": 600.0,
+   "temp_limit_C": 70.0
+  },
+  "start_km": 55.0,
+  "steps": [
+   {
+    "hold": 55,
+    "for_s": 600
+   },
+   {
+    "goto": 48,
+    "rate": 3
+   },
+   {
+    "hold": 48,
+    "for_s": 1800
+   },
+   {
+    "goto": 55,
+    "rate": 3
+   },
+   {
+    "hold": 55,
+    "for_s": 3600
+   }
+  ],
+  "replay_every_s": 1.0
+ }
+}

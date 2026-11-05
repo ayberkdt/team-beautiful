@@ -1,0 +1,675 @@
+{
+ "calls": [
+  {
+   "t": 0.1,
+   "range_nm": 8.15,
+   "el_dev_m": 3.8,
+   "az_dev_m": 143.0,
+   "phrase": "beetle one two three slightly right of course turn left heading two four five on glidepath",
+   "heard": true
+  },
+  {
+   "t": 5.1,
+   "range_nm": 7.96,
+   "el_dev_m": 0.9,
+   "az_dev_m": 130.8,
+   "phrase": "beetle one two three slightly right of course turn left heading two four five on glidepath eight miles from touchdown",
+   "heard": true
+  },
+  {
+   "t": 10.1,
+   "range_nm": 7.78,
+   "el_dev_m": -21.2,
+   "az_dev_m": 74.9,
+   "phrase": "beetle one two three slightly right of course turn left heading two four seven on glidepath",
+   "heard": true
+  },
+  {
+   "t": 15.1,
+   "range_nm": 7.59,
+   "el_dev_m": -8.7,
+   "az_dev_m": 2.4,
+   "phrase": "beetle one two three on course on glidepath",
+   "heard": true
+  },
+  {
+   "t": 20.1,
+   "range_nm": 7.4,
+   "el_dev_m": -2.1,
+   "az_dev_m": 2.7,
+   "phrase": "beetle one two three on course on glidepath",
+   "heard": true
+  },
+  {
+   "t": 25.1,
+   "range_nm": 7.21,
+   "el_dev_m": 33.7,
+   "az_dev_m": -23.3,
+   "phrase": "beetle one two three on course slightly above glidepath going up slowly",
+   "heard": true
+  },
+  {
+   "t": 30.1,
+   "range_nm": 7.02,
+   "el_dev_m": -6.7,
+   "az_dev_m": -48.5,
+   "phrase": "beetle one two three slightly left of course turn right heading two five two on glidepath",
+   "heard": true
+  },
+  {
+   "t": 35.1,
+   "range_nm": 6.83,
+   "el_dev_m": 30.3,
+   "az_dev_m": -53.3,
+   "phrase": "beetle one two three slightly left of course turn right heading two five two slightly above glidepath going up slowly seven miles from touchdown",
+   "heard": true
+  },
+  {
+   "t": 40.1,
+   "range_nm": 6.64,
+   "el_dev_m": 21.1,
+   "az_dev_m": -39.7,
+   "phrase": "beetle one two three on course on glidepath",
+   "heard": true
+  },
+  {
+   "t": 45.1,
+   "range_nm": 6.45,
+   "el_dev_m": -0.6,
+   "az_dev_m": -9.5,
+   "phrase": "beetle one two three on course on glidepath",
+   "heard": true
+  },
+  {
+   "t": 50.1,
+   "range_nm": 6.26,
+   "el_dev_m": 6.9,
+   "az_dev_m": -45.2,
+   "phrase": "beetle one two three slightly left of course turn right heading two five two on glidepath",
+   "heard": true
+  },
+  {
+   "t": 55.1,
+   "range_nm": 6.07,
+   "el_dev_m": -1.1,
+   "az_dev_m": -49.9,
+   "phrase": "beetle one two three slightly left of course turn right heading two five three on glidepath",
+   "heard": true
+  },
+  {
+   "t": 60.1,
+   "range_nm": 5.89,
+   "el_dev_m": 29.7,
+   "az_dev_m": -26.7,
+   "phrase": "beetle one two three on course slightly above glidepath going up slowly six miles from touchdown",
+   "heard": true
+  },
+  {
+   "t": 65.1,
+   "range_nm": 5.7,
+   "el_dev_m": 0.4,
+   "az_dev_m": -61.4,
+   "phrase": "beetle one two three slightly left of course turn right heading two five three on glidepath",
+   "heard": true
+  },
+  {
+   "t": 70.1,
+   "range_nm": 5.51,
+   "el_dev_m": 13.7,
+   "az_dev_m": -9.3,
+   "phrase": "beetle one two three on course on glidepath",
+   "heard": true
+  },
+  {
+   "t": 75.1,
+   "range_nm": 5.32,
+   "el_dev_m": 6.2,
+   "az_dev_m": -36.8,
+   "phrase": "beetle one two three slightly left of course turn right heading two five two on glidepath",
+   "heard": true
+  },
+  {
+   "t": 80.1,
+   "range_nm": 5.13,
+   "el_dev_m": 11.3,
+   "az_dev_m": -72.4,
+   "phrase": "beetle one two three slightly left of course turn right heading two five four on glidepath",
+   "heard": true
+  },
+  {
+   "t": 85.1,
+   "range_nm": 4.94,
+   "el_dev_m": 32.6,
+   "az_dev_m": -46.7,
+   "phrase": "beetle one two three slightly left of course turn right heading two five three slightly above glidepath going up slowly five miles from touchdown",
+   "heard": true
+  },
+  {
+   "t": 90.1,
+   "range_nm": 4.75,
+   "el_dev_m": 9.6,
+   "az_dev_m": -41.5,
+   "phrase": "beetle one two three slightly left of course turn right heading two five three on glidepath",
+   "heard": true
+  },
+  {
+   "t": 95.1,
+   "range_nm": 4.57,
+   "el_dev_m": 11.0,
+   "az_dev_m": -39.9,
+   "phrase": "beetle one two three slightly left of course turn right heading two five three on glidepath",
+   "heard": true
+  },
+  {
+   "t": 100.1,
+   "range_nm": 4.38,
+   "el_dev_m": 12.9,
+   "az_dev_m": -32.6,
+   "phrase": "beetle one two three slightly left of course turn right heading two five two on glidepath",
+   "heard": false
+  },
+  {
+   "t": 105.1,
+   "range_nm": 4.19,
+   "el_dev_m": 15.8,
+   "az_dev_m": -23.9,
+   "phrase": "beetle one two three on course slightly above glidepath",
+   "heard": false
+  },
+  {
+   "t": 110.1,
+   "range_nm": 4.0,
+   "el_dev_m": 13.5,
+   "az_dev_m": -29.5,
+   "phrase": "beetle one two three slightly left of course turn right heading two five two slightly above glidepath four miles from touchdown",
+   "heard": false
+  },
+  {
+   "t": 115.1,
+   "range_nm": 3.81,
+   "el_dev_m": 16.3,
+   "az_dev_m": -40.7,
+   "phrase": "beetle one two three slightly left of course turn right heading two five three slightly above glidepath",
+   "heard": false
+  },
+  {
+   "t": 120.1,
+   "range_nm": 3.62,
+   "el_dev_m": 10.2,
+   "az_dev_m": -46.2,
+   "phrase": "beetle one two three slightly left of course turn right heading two five four on glidepath",
+   "heard": false
+  },
+  {
+   "t": 125.1,
+   "range_nm": 3.43,
+   "el_dev_m": 27.3,
+   "az_dev_m": -30.7,
+   "phrase": "beetle one two three slightly left of course turn right heading two five three slightly above glidepath going up slowly",
+   "heard": false
+  },
+  {
+   "t": 130.1,
+   "range_nm": 3.25,
+   "el_dev_m": 21.1,
+   "az_dev_m": -23.2,
+   "phrase": "beetle one two three slightly left of course turn right heading two five two slightly above glidepath",
+   "heard": false
+  },
+  {
+   "t": 135.1,
+   "range_nm": 3.06,
+   "el_dev_m": 21.4,
+   "az_dev_m": -25.0,
+   "phrase": "beetle one two three slightly left of course turn right heading two five two slightly above glidepath",
+   "heard": false
+  },
+  {
+   "t": 140.1,
+   "range_nm": 2.87,
+   "el_dev_m": 16.7,
+   "az_dev_m": -28.6,
+   "phrase": "beetle one two three slightly left of course turn right heading two five three slightly above glidepath three miles from touchdown",
+   "heard": false
+  },
+  {
+   "t": 145.1,
+   "range_nm": 2.68,
+   "el_dev_m": 9.4,
+   "az_dev_m": -31.3,
+   "phrase": "beetle one two three slightly left of course turn right heading two five four slightly above glidepath",
+   "heard": false
+  },
+  {
+   "t": 150.1,
+   "range_nm": 2.49,
+   "el_dev_m": 21.7,
+   "az_dev_m": -14.6,
+   "phrase": "beetle one two three on course slightly above glidepath going up slowly",
+   "heard": false
+  },
+  {
+   "t": 155.1,
+   "range_nm": 2.3,
+   "el_dev_m": 24.1,
+   "az_dev_m": -38.6,
+   "phrase": "beetle one two three slightly left of course turn right heading two five five well above glidepath",
+   "heard": false
+  },
+  {
+   "t": 160.1,
+   "range_nm": 2.12,
+   "el_dev_m": 24.9,
+   "az_dev_m": -31.1,
+   "phrase": "beetle one two three slightly left of course turn right heading two five four well above glidepath",
+   "heard": false
+  },
+  {
+   "t": 165.1,
+   "range_nm": 1.93,
+   "el_dev_m": 24.2,
+   "az_dev_m": -35.6,
+   "phrase": "beetle one two three slightly left of course turn right heading two five six well above glidepath two miles from touchdown",
+   "heard": false
+  },
+  {
+   "t": 170.1,
+   "range_nm": 1.74,
+   "el_dev_m": 25.5,
+   "az_dev_m": -40.2,
+   "phrase": "beetle one two three well left of course turn right heading two five seven well above glidepath",
+   "heard": false
+  },
+  {
+   "t": 175.1,
+   "range_nm": 1.56,
+   "el_dev_m": 24.7,
+   "az_dev_m": -31.7,
+   "phrase": "beetle one two three slightly left of course turn right heading two five six well above glidepath",
+   "heard": false
+  },
+  {
+   "t": 180.1,
+   "range_nm": 1.37,
+   "el_dev_m": 23.0,
+   "az_dev_m": -30.6,
+   "phrase": "beetle one two three well left of course turn right heading two five six well above glidepath",
+   "heard": false
+  },
+  {
+   "t": 185.1,
+   "range_nm": 1.19,
+   "el_dev_m": 22.5,
+   "az_dev_m": -36.3,
+   "phrase": "beetle one two three well left of course turn right heading two five niner well above glidepath",
+   "heard": false
+  },
+  {
+   "t": 190.1,
+   "range_nm": 1.0,
+   "el_dev_m": 22.3,
+   "az_dev_m": -30.0,
+   "phrase": "beetle one two three well left of course turn right heading two five niner well above glidepath one mile from touchdown",
+   "heard": false
+  },
+  {
+   "t": 195.1,
+   "range_nm": 0.81,
+   "el_dev_m": 20.0,
+   "az_dev_m": -33.0,
+   "phrase": "beetle one two three well left of course turn right heading two six two well above glidepath",
+   "heard": false
+  },
+  {
+   "t": 200.1,
+   "range_nm": 0.62,
+   "el_dev_m": 25.2,
+   "az_dev_m": -31.9,
+   "phrase": "beetle one two three well left of course turn right heading two six four well above glidepath going up rapidly",
+   "heard": false
+  },
+  {
+   "t": 205.1,
+   "range_nm": 0.42,
+   "el_dev_m": 22.3,
+   "az_dev_m": -26.2,
+   "phrase": "beetle one two three well left of course turn right heading two six five well above glidepath going up slowly",
+   "heard": false
+  },
+  {
+   "t": 206.7,
+   "range_nm": 0.36,
+   "el_dev_m": 23.0,
+   "az_dev_m": -31.0,
+   "phrase": "beetle one two three at decision height",
+   "heard": false
+  }
+ ],
+ "views": [
+  {
+   "t": 90.0,
+   "status": "PAR GUIDANCE"
+  },
+  {
+   "t": 92.0,
+   "status": "PAR GUIDANCE"
+  },
+  {
+   "t": 94.0,
+   "status": "PAR GUIDANCE"
+  },
+  {
+   "t": 96.0,
+   "status": "PAR GUIDANCE"
+  },
+  {
+   "t": 98.0,
+   "status": "PAR GUIDANCE"
+  },
+  {
+   "t": 100.0,
+   "status": "PAR GUIDANCE"
+  },
+  {
+   "t": 102.0,
+   "status": "PAR GUIDANCE LOST (7 s) - apply the lost-communication instruction given before final"
+  },
+  {
+   "t": 104.0,
+   "status": "PAR GUIDANCE LOST (9 s) - apply the lost-communication instruction given before final"
+  },
+  {
+   "t": 106.0,
+   "status": "PAR GUIDANCE LOST (11 s) - apply the lost-communication instruction given before final"
+  },
+  {
+   "t": 108.0,
+   "status": "PAR GUIDANCE LOST (13 s) - apply the lost-communication instruction given before final"
+  },
+  {
+   "t": 110.0,
+   "status": "PAR GUIDANCE LOST (15 s) - apply the lost-communication instruction given before final"
+  }
+ ],
+ "voice_lost_at_s": 100.0,
+ "dh_reached_s": 206.7,
+ "asr": {
+  "raw": {
+   "phrases": [
+    "beetle one two three slightly right of course turn left heading two four five on glidepath",
+    "beetle one two three slightly right of course turn left heading two four five on glidepath eight miles from touchdown",
+    "beetle one two three slightly right of course turn left heading two four seven on glidepath",
+    "beetle one two three on course on glidepath",
+    "beetle one two three on course on glidepath",
+    "beetle one two three on course slightly above glidepath going up slowly",
+    "beetle one two three slightly left of course turn right heading two five two on glidepath",
+    "beetle one two three slightly left of course turn right heading two five two slightly above glidepath going up slowly seven miles from touchdown",
+    "beetle one two three on course on glidepath",
+    "beetle one two three on course on glidepath",
+    "beetle one two three slightly left of course turn right heading two five two on glidepath",
+    "beetle one two three slightly left of course turn right heading two five three on glidepath",
+    "beetle one two three at decision height"
+   ],
+   "rows": [
+    {
+     "phrase": 0,
+     "snr_db": 30,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 0,
+     "snr_db": 15,
+     "text": "beetle one two three slightly right of course turn left heading two four five on glidepath",
+     "conf": 0.8840345740318298
+    },
+    {
+     "phrase": 0,
+     "snr_db": 10,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 1,
+     "snr_db": 30,
+     "text": "beetle one two three slightly right of course turn left heading two four five on glidepath eight miles from touchdown",
+     "conf": 0.938958466053009
+    },
+    {
+     "phrase": 1,
+     "snr_db": 15,
+     "text": "beetle one two three slightly right of course turn left heading two four five on glidepath eight mile from touchdown",
+     "conf": 0.8954588174819946
+    },
+    {
+     "phrase": 1,
+     "snr_db": 10,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 2,
+     "snr_db": 30,
+     "text": "beetle one two three slightly right of course turn left heading two four seven on glidepath",
+     "conf": 0.9157254099845886
+    },
+    {
+     "phrase": 2,
+     "snr_db": 15,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 2,
+     "snr_db": 10,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 3,
+     "snr_db": 30,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 3,
+     "snr_db": 15,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 3,
+     "snr_db": 10,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 4,
+     "snr_db": 30,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 4,
+     "snr_db": 15,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 4,
+     "snr_db": 10,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 5,
+     "snr_db": 30,
+     "text": "beetle one two three on course slightly above glidepath going up slowly",
+     "conf": 0.9065157175064087
+    },
+    {
+     "phrase": 5,
+     "snr_db": 15,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 5,
+     "snr_db": 10,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 6,
+     "snr_db": 30,
+     "text": "beetle one two three slightly left of course turn right heading two five two on glidepath",
+     "conf": 0.9399006366729736
+    },
+    {
+     "phrase": 6,
+     "snr_db": 15,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 6,
+     "snr_db": 10,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 7,
+     "snr_db": 30,
+     "text": "beetle one two three slightly left of course turn right heading two five two slightly above glidepath going up slowly seven miles from touchdown",
+     "conf": 0.9448308944702148
+    },
+    {
+     "phrase": 7,
+     "snr_db": 15,
+     "text": "beetle one two three slightly left of course turn right heading two five two slightly above glidepath going up slowly seven mile from touchdown",
+     "conf": 0.8934100866317749
+    },
+    {
+     "phrase": 7,
+     "snr_db": 10,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 8,
+     "snr_db": 30,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 8,
+     "snr_db": 15,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 8,
+     "snr_db": 10,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 9,
+     "snr_db": 30,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 9,
+     "snr_db": 15,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 9,
+     "snr_db": 10,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 10,
+     "snr_db": 30,
+     "text": "beetle one two three slightly left of course turn right heading two five two on glidepath",
+     "conf": 0.9351568222045898
+    },
+    {
+     "phrase": 10,
+     "snr_db": 15,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 10,
+     "snr_db": 10,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 11,
+     "snr_db": 30,
+     "text": "beetle one two three slightly left of course turn right heading two five three on glidepath",
+     "conf": 0.9392028450965881
+    },
+    {
+     "phrase": 11,
+     "snr_db": 15,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 11,
+     "snr_db": 10,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 12,
+     "snr_db": 30,
+     "text": "beetle one two three at decision height",
+     "conf": 0.9559549689292908
+    },
+    {
+     "phrase": 12,
+     "snr_db": 15,
+     "text": null,
+     "conf": 0
+    },
+    {
+     "phrase": 12,
+     "snr_db": 10,
+     "text": null,
+     "conf": 0
+    }
+   ]
+  },
+  "by_snr": [
+   {
+    "snr_db": 30,
+    "n": 24,
+    "right": 14,
+    "wrong": 0,
+    "withheld": 10
+   },
+   {
+    "snr_db": 15,
+    "n": 24,
+    "right": 6,
+    "wrong": 0,
+    "withheld": 18
+   },
+   {
+    "snr_db": 10,
+    "n": 24,
+    "right": 0,
+    "wrong": 0,
+    "withheld": 24
+   }
+  ],
+  "conf_gate": 0.7
+ }
+}

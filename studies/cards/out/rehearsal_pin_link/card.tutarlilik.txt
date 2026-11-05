@@ -1,0 +1,3 @@
+set tutarlılığı (3 figür): 0 HATA · 1 UYARI · 0 BİLGİ · SET TUTARLI
+  [UYARI] tik-yonu           tik yonu figürden figüre değişiyor — 3: S1_mass_deflection, S2_life_co2 · None: S3_designs
+          → aynı tema her figürde: Seti.figur(...)  [06 T6: AIAAFig; ElsevierSizing; Kosslyn2012 (anlamsız görsel değişim)]

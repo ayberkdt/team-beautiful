@@ -1,0 +1,12 @@
+metric,unit,ours,ansys,description
+mass_kg,kg,1.99636,1.99636,"FAKE ANSYS DATA (rehearsal 'wrong_support'): part mass (geometry × density) (tolerance ±2 %) [initial design, baseline material, ours = T10 conforming mesh]"
+volume_mm3,mm3,254313,254313,"FAKE ANSYS DATA (rehearsal 'wrong_support'): part volume (tolerance ±2 %) [initial design, baseline material, ours = T10 conforming mesh]"
+max_deformation_mm,mm,0.157916,0.363207,"FAKE ANSYS DATA (rehearsal 'wrong_support'): maximum total deformation (worst load case) (tolerance ±10 %) [initial design, baseline material, ours = T10 conforming mesh]"
+load_point_deformation_mm,mm,0.0871277,0.200394,"FAKE ANSYS DATA (rehearsal 'wrong_support'): mean deformation of the loaded bore (probe: average over the bore face) (tolerance ±10 %) [initial design, baseline material, ours = T10 conforming mesh]"
+strain_energy_J,J,0.108424,0.249375,"FAKE ANSYS DATA (rehearsal 'wrong_support'): strain energy = compliance / 2 (worst load case) (tolerance ±10 %) [initial design, baseline material, ours = T10 conforming mesh]"
+compliance_J,J,0.216848,0.49875,"FAKE ANSYS DATA (rehearsal 'wrong_support'): compliance F·u (worst load case) (tolerance ±10 %) [initial design, baseline material, ours = T10 conforming mesh]"
+max_von_mises_MPa,MPa,162.194,275.73,"FAKE ANSYS DATA (rehearsal 'wrong_support'): maximum equivalent stress anywhere (singular at supports: loose) (tolerance ±25 %) [initial design, baseline material, ours = T10 conforming mesh]"
+von_mises_outside_MPa,MPa,102.78,174.726,"FAKE ANSYS DATA (rehearsal 'wrong_support'): maximum equivalent stress outside the support/load zones (tolerance ±15 %) [initial design, baseline material, ours = T10 conforming mesh]"
+min_safety_factor,-,1.58363,0.931547,"FAKE ANSYS DATA (rehearsal 'wrong_support'): minimum safety factor (yield at temperature / von Mises) (tolerance ±15 %) [initial design, baseline material, ours = T10 conforming mesh]"
+retained_volume_fraction,-,1,1,"FAKE ANSYS DATA (rehearsal 'wrong_support'): topology: retained volume / design-space volume (tolerance ±5 %) [initial design, baseline material, ours = T10 conforming mesh]"
+reaction_force_N,N,2490.4,2490.4,"FAKE ANSYS DATA (rehearsal 'wrong_support'): sum of support reactions (equals the applied load) (tolerance ±1 %) [initial design, baseline material, ours = T10 conforming mesh]"

@@ -1,0 +1,231 @@
+{
+ "surum": 1,
+ "ad": "G4_ashby_strength_rho",
+ "boyut_pt": [
+  510.2,
+  316.3
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  498.2,
+  310.1
+ ],
+ "hedef": "genel-cift",
+ "ortam": "makale",
+ "boyut_mm": [
+  180.0,
+  111.6
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   8.1
+  ],
+  "eksen_adi": [
+   9.0
+  ],
+  "baslik": [],
+  "lejant": [
+   8.1
+  ],
+  "panel": [],
+  "metin": [
+   8.0,
+   8.1
+  ]
+ },
+ "punto_tepe": {
+  "tik": 8.1,
+  "eksen_adi": 9.0,
+  "lejant": 8.1,
+  "metin": 8.0
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    35.6,
+    27.5,
+    507.2,
+    293.4
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "σ/ρ",
+     "tur": "cizgi",
+     "renk": "#8c8c8c",
+     "isaret": null,
+     "cizgi": "--",
+     "kalinlik": 0.8,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "σ^(2/3)/ρ",
+     "tur": "cizgi",
+     "renk": "#8c8c8c",
+     "isaret": null,
+     "cizgi": "--",
+     "kalinlik": 0.8,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cizgi",
+     "renk": "#8c8c8c",
+     "isaret": null,
+     "cizgi": "--",
+     "kalinlik": 0.8,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Aluminium",
+     "tur": "sacilim",
+     "renk": "#7f5708",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 5.29
+    },
+    {
+     "etiket": "Titanium",
+     "tur": "sacilim",
+     "renk": "#07648e",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 4.75
+    },
+    {
+     "etiket": "Steel / nickel",
+     "tur": "sacilim",
+     "renk": "#009e73",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 7.89
+    },
+    {
+     "etiket": "Magnesium",
+     "tur": "sacilim",
+     "renk": "#877f0f",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 8.44
+    },
+    {
+     "etiket": "Polymer",
+     "tur": "sacilim",
+     "renk": "#d55e00",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 6.26
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Density (kg/m³)",
+    "nicelik": "Density",
+    "birim": "kg/m³",
+    "bicim": "parantez",
+    "anahtar": "density",
+    "harf": "tek",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     844.2511283657449,
+     12383.329614539576
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "1000",
+     "2000",
+     "5000",
+     "10000"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     242.3,
+     3.0,
+     300.6,
+     12.1
+    ]
+   },
+   "y": {
+    "ham": "Yield strength (MPa)",
+    "nicelik": "Yield strength",
+    "birim": "MPa",
+    "bicim": "parantez",
+    "anahtar": "yieldstrength",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     35.0,
+     4758.0
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "mathdefault10^2",
+     "mathdefault10^3"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "mathdefault10^2",
+     "mathdefault10^3"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     3.0,
+     122.8,
+     11.3,
+     198.1
+    ]
+   },
+   "lejant": [
+    "Aluminium",
+    "Titanium",
+    "Steel / nickel",
+    "Magnesium",
+    "Polymer"
+   ],
+   "dogrudan_etiket": [
+    "σ/ρ",
+    "σ^(2/3)/ρ"
+   ],
+   "izgara": {
+    "x": true,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

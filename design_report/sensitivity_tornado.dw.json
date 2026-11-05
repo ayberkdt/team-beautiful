@@ -1,0 +1,296 @@
+{
+ "surum": 1,
+ "ad": "sensitivity_tornado",
+ "boyut_pt": [
+  479.9,
+  345.5
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  448.8,
+  339.5
+ ],
+ "hedef": "web-640",
+ "ortam": "web",
+ "boyut_mm": [
+  169.3,
+  121.9
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   9.0
+  ],
+  "eksen_adi": [
+   10.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   9.0,
+   10.0
+  ]
+ },
+ "punto_tepe": {
+  "tik": 9.0,
+  "eksen_adi": 10.0,
+  "metin": 10.0
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    152.5,
+    32.3,
+    476.9,
+    323.6
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#a7d6f4",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#f3cb91",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#f3cb91",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#a7d6f4",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#a7d6f4",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#f3cb91",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#f3cb91",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#a7d6f4",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#a7d6f4",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#f3cb91",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#a7d6f4",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#f3cb91",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#f3cb91",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#a7d6f4",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#a7d6f4",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#f3cb91",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Change of installed power (kW); base 1755 kW",
+    "nicelik": "Change of installed power (kW); base 1755 kW",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "changeofinstalledpower(kw);base1755kw",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -926.556770417745,
+     926.556770417745
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "-500",
+     "0",
+     "500"
+    ],
+    "eksi": "unicode",
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     219.3,
+     3.0,
+     410.1,
+     13.2
+    ]
+   },
+   "y": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.6910000000000001,
+     7.691
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "K_LD (L/D factor) 9.9–12.1",
+     "Empty-weight factor (× Raymer) 1–1.12",
+     "Propeller efficiency 0.75–0.85",
+     "Swet/Sref 4.95–6.05",
+     "Aspect ratio 8.1–9.9",
+     "CLmax landing 1.8–2.2",
+     "PSFC cruise 0.45–0.55 lb/(hp·h)",
+     "CLmax clean 1.35–1.65"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": ".",
+    "tikler": [
+     "K_LD (L/D factor) 9.9–12.1",
+     "Empty-weight factor (× Raymer) 1–1.12",
+     "Propeller efficiency 0.75–0.85",
+     "Swet/Sref 4.95–6.05",
+     "Aspect ratio 8.1–9.9",
+     "CLmax landing 1.8–2.2",
+     "PSFC cruise 0.45–0.55 lb/(hp·h)",
+     "CLmax clean 1.35–1.65"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": false
+   },
+   "cerceve": [
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

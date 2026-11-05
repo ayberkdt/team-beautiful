@@ -1,0 +1,5 @@
+set tutarlılığı (4 figür): 0 HATA · 2 UYARI · 0 BİLGİ · SET TUTARLI
+  [UYARI] harf-bicimi        eksen adlarında harf düzeni karışık — Cümle düzeni: f1_convergence, f3_eco · Tek sözcük: f2_materials, f3_eco · karışık: f1_convergence
+          → tek düzen: cümle düzeni ('Elapsed time'); Nature: ilk harf büyük, gerisi küçük  [06 T3/T16: AIAAFig; APSStyleGuide; Kosslyn2012]
+  [UYARI] izgara             izgara figürden figüre değişiyor — değer: f1_convergence, f3_eco · kategori: f2_materials
+          → aynı tema her figürde: Seti.figur(...)  [06 T6: AIAAFig; ElsevierSizing; Kosslyn2012 (anlamsız görsel değişim)]

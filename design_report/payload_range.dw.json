@@ -1,0 +1,158 @@
+{
+ "surum": 1,
+ "ad": "payload_range",
+ "boyut_pt": [
+  479.9,
+  263.9
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  469.9,
+  234.9
+ ],
+ "hedef": "web-640",
+ "ortam": "web",
+ "boyut_mm": [
+  169.3,
+  93.1
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   9.0
+  ],
+  "eksen_adi": [
+   10.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   9.0
+  ]
+ },
+ "punto_tepe": {
+  "tik": 9.0,
+  "eksen_adi": 10.0,
+  "metin": 9.0
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    42.6,
+    34.8,
+    476.9,
+    260.9
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "",
+     "tur": "cizgi",
+     "renk": "#e69f00",
+     "isaret": "o",
+     "cizgi": "-",
+     "kalinlik": 1.8,
+     "isaret_boyu": 4.0
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Range (km)",
+    "nicelik": "Range",
+    "birim": "km",
+    "bicim": "parantez",
+    "anahtar": "range",
+    "harf": "tek",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     3116.376682691696
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "500",
+     "1000",
+     "1500",
+     "2000",
+     "2500",
+     "3000"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     236.0,
+     3.0,
+     283.6,
+     13.2
+    ]
+   },
+   "y": {
+    "ham": "Payload (kg)",
+    "nicelik": "Payload",
+    "birim": "kg",
+    "bicim": "parantez",
+    "anahtar": "payload",
+    "harf": "tek",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     1916.2
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "500",
+     "1000",
+     "1500"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     3.0,
+     121.9,
+     13.2,
+     173.9
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

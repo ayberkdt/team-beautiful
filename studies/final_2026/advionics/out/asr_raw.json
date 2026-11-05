@@ -1,0 +1,10357 @@
+{
+ "snr_db": [
+  30,
+  20,
+  15,
+  10,
+  6,
+  3,
+  0
+ ],
+ "phrases": [
+  "beetle one two three turn left heading two seven zero descend and maintain three thousand feet",
+  "beetle one two three turn right heading three four zero",
+  "beetle one two three descend and maintain four thousand feet reduce speed one eight zero knots",
+  "beetle one two three climb flight level one two zero",
+  "beetle one two three squawk four six two one",
+  "beetle one two three contact approach one one eight decimal five zero five",
+  "beetle one two three cleared ils approach runway two five right qnh one zero one three",
+  "beetle one two three turn left heading two zero zero"
+ ],
+ "modes": {
+  "grammar": {
+   "seconds": 282.4,
+   "rows": [
+    {
+     "phrase": 0,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "beetle one two three turn left heading two seven zero descend and maintain three thousand feet",
+     "conf": 0.9938472509384155,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "seven",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9990000128746033
+      ],
+      [
+       "and",
+       0.9580509662628174
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9563872814178467
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn left heading two seven zero descend and maintain three thousand feet",
+       0.9938472509384155
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle one two three turn left heading two seven zero descend and maintain three thousand feet",
+     "conf": 0.9977019429206848,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "seven",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9990000128746033
+      ],
+      [
+       "and",
+       0.9577407836914062
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn left heading two seven zero descend and maintain three thousand feet",
+       0.9977019429206848
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 20,
+     "seed": 1,
+     "text": "beetle one two three turn left heading two seven zero descend and maintain three thousand feet",
+     "conf": 0.9989998936653137,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "seven",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9990000128746033
+      ],
+      [
+       "and",
+       0.9990000128746033
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn left heading two seven zero descend and maintain three thousand feet",
+       0.9989998936653137
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 20,
+     "seed": 2,
+     "text": "beetle one two three turn left heading two seven zero descend and maintain three thousand feet",
+     "conf": 0.9943863749504089,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "seven",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9990000128746033
+      ],
+      [
+       "and",
+       0.9574664831161499
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9572257399559021
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn left heading two seven zero descend and maintain three thousand feet",
+       0.9943863749504089
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 15,
+     "seed": 1,
+     "text": "beetle one two three turn left heading two seven zero descend and maintain three thousand feet",
+     "conf": 0.9989998936653137,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "seven",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9990000128746033
+      ],
+      [
+       "and",
+       0.9990000128746033
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn left heading two seven zero descend and maintain three thousand feet",
+       0.9989998936653137
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 15,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 0,
+     "snr_db": 10,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 0,
+     "snr_db": 10,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 0,
+     "snr_db": 6,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 0,
+     "snr_db": 6,
+     "seed": 2,
+     "text": "beetle one three zero descend and maintain three thousand",
+     "conf": 0.8703666925430298,
+     "words": [
+      [
+       "beetle",
+       0.11573103070259094
+      ],
+      [
+       "one",
+       0.9130178093910217
+      ],
+      [
+       "three",
+       0.8098337054252625
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9158633351325989
+      ],
+      [
+       "and",
+       0.9539881348609924
+      ],
+      [
+       "maintain",
+       0.9252526164054871
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.949793815612793
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one three zero descend and maintain three thousand",
+       0.8703666925430298
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 3,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 0,
+     "snr_db": 3,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 0,
+     "snr_db": 0,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 0,
+     "snr_db": 0,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 1,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "beetle one two three turn right heading three four zero",
+     "conf": 0.9834831953048706,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9500151872634888
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn right heading three four zero",
+       0.9834831953048706
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle one two three turn right heading three four zero",
+     "conf": 0.983835756778717,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.951128363609314
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn right heading three four zero",
+       0.983835756778717
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 20,
+     "seed": 1,
+     "text": "beetle one two three turn right heading three four zero",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn right heading three four zero",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 20,
+     "seed": 2,
+     "text": "beetle one two three turn right heading three four zero",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn right heading three four zero",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 15,
+     "seed": 1,
+     "text": "beetle one two three turn right heading three four zero",
+     "conf": 0.9989999532699585,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn right heading three four zero",
+       0.9989999532699585
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 15,
+     "seed": 2,
+     "text": "beetle one two three turn right heading three four zero",
+     "conf": 0.9989999532699585,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn right heading three four zero",
+       0.9989999532699585
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 10,
+     "seed": 1,
+     "text": "beetle one three turn right heading three four zero",
+     "conf": 0.9989999532699585,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one three turn right heading three four zero",
+       0.9989999532699585
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 10,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 1,
+     "snr_db": 6,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 1,
+     "snr_db": 6,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 1,
+     "snr_db": 3,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 1,
+     "snr_db": 3,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 1,
+     "snr_db": 0,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 1,
+     "snr_db": 0,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 2,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "beetle one two three descend and maintain four thousand feet reduce speed one eight zero knots",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9990000128746033
+      ],
+      [
+       "and",
+       0.9990000128746033
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ],
+      [
+       "reduce",
+       0.9990000128746033
+      ],
+      [
+       "speed",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "knots",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three descend and maintain four thousand feet reduce speed one eight zero knots",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 2,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle one two three descend and maintain four thousand feet reduce speed one eight zero knots",
+     "conf": 0.9915339946746826,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9990000128746033
+      ],
+      [
+       "and",
+       0.9990000128746033
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ],
+      [
+       "reduce",
+       0.9990000128746033
+      ],
+      [
+       "speed",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "knots",
+       0.947405993938446
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three descend and maintain four thousand feet reduce speed one eight zero knots",
+       0.9915339946746826
+      ]
+     ]
+    },
+    {
+     "phrase": 2,
+     "snr_db": 20,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 2,
+     "snr_db": 20,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 2,
+     "snr_db": 15,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 2,
+     "snr_db": 15,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 2,
+     "snr_db": 10,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 2,
+     "snr_db": 10,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 2,
+     "snr_db": 6,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 2,
+     "snr_db": 6,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 2,
+     "snr_db": 3,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 2,
+     "snr_db": 3,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 2,
+     "snr_db": 0,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 2,
+     "snr_db": 0,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 3,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "beetle one two three climb to flight level one two zero",
+     "conf": 0.9721329212188721,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "climb",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.4258174002170563
+      ],
+      [
+       "flight",
+       0.9990000128746033
+      ],
+      [
+       "level",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.950222909450531
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three climb to flight level one two zero",
+       0.9721329212188721
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle one two three climb to flight level one two zero",
+     "conf": 0.9681116342544556,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "climb",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.21383674442768097
+      ],
+      [
+       "flight",
+       0.9990000128746033
+      ],
+      [
+       "level",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9504448771476746
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three climb to flight level one two zero",
+       0.9681116342544556
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 20,
+     "seed": 1,
+     "text": "beetle one two three climb to flight level one two zero",
+     "conf": 0.9914436936378479,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "climb",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.6010334491729736
+      ],
+      [
+       "flight",
+       0.9990000128746033
+      ],
+      [
+       "level",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three climb to flight level one two zero",
+       0.9914436936378479
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 20,
+     "seed": 2,
+     "text": "beetle one two three climb to flight level one two zero",
+     "conf": 0.9803337454795837,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "climb",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.01590581052005291
+      ],
+      [
+       "flight",
+       0.9990000128746033
+      ],
+      [
+       "level",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three climb to flight level one two zero",
+       0.9803337454795837
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 15,
+     "seed": 1,
+     "text": "beetle one two three climb to flight level one two zero",
+     "conf": 0.9800917506217957,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "climb",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.0031651367899030447
+      ],
+      [
+       "flight",
+       0.9990000128746033
+      ],
+      [
+       "level",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three climb to flight level one two zero",
+       0.9800917506217957
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 15,
+     "seed": 2,
+     "text": "beetle one two three climb to flight level one two zero",
+     "conf": 0.9800695776939392,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "climb",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.0020003465469926596
+      ],
+      [
+       "flight",
+       0.9990000128746033
+      ],
+      [
+       "level",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three climb to flight level one two zero",
+       0.9800695776939392
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 10,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 3,
+     "snr_db": 10,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 3,
+     "snr_db": 6,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 3,
+     "snr_db": 6,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 3,
+     "snr_db": 3,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 3,
+     "snr_db": 3,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 3,
+     "snr_db": 0,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 3,
+     "snr_db": 0,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 4,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "beetle one two three squawk four six two one",
+     "conf": 0.9865134954452515,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "squawk",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "six",
+       0.9538761377334595
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9548279643058777
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three squawk four six two one",
+       0.9865134954452515
+      ]
+     ]
+    },
+    {
+     "phrase": 4,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle one two three squawk four six two one",
+     "conf": 0.9929364919662476,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "squawk",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "six",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9574735760688782
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three squawk four six two one",
+       0.9929364919662476
+      ]
+     ]
+    },
+    {
+     "phrase": 4,
+     "snr_db": 20,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 4,
+     "snr_db": 20,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 4,
+     "snr_db": 15,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 4,
+     "snr_db": 15,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 4,
+     "snr_db": 10,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 4,
+     "snr_db": 10,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 4,
+     "snr_db": 6,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 4,
+     "snr_db": 6,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 4,
+     "snr_db": 3,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 4,
+     "snr_db": 3,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 4,
+     "snr_db": 0,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 4,
+     "snr_db": 0,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 5,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "beetle one two three contact approach one one eight decimal five zero fife",
+     "conf": 0.9874674677848816,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "contact",
+       0.9990000128746033
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "decimal",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "fife",
+       0.9475741982460022
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three contact approach one one eight decimal five zero fife",
+       0.9874674677848816
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle one two three contact approach one one eight decimal five zero fife",
+     "conf": 0.987120509147644,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "contact",
+       0.9990000128746033
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "decimal",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "fife",
+       0.9460272192955017
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three contact approach one one eight decimal five zero fife",
+       0.987120509147644
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 20,
+     "seed": 1,
+     "text": "beetle one two three contact approach one one eight decimal five zero fife",
+     "conf": 0.9892613291740417,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "contact",
+       0.9990000128746033
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "decimal",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "fife",
+       0.9560117125511169
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three contact approach one one eight decimal five zero fife",
+       0.9892613291740417
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 20,
+     "seed": 2,
+     "text": "beetle one two three contact approach one one eight decimal five zero fife",
+     "conf": 0.9888920187950134,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "contact",
+       0.9990000128746033
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "decimal",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "fife",
+       0.9539267420768738
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three contact approach one one eight decimal five zero fife",
+       0.9888920187950134
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 15,
+     "seed": 1,
+     "text": "beetle one two three contact approach one one eight decimal five zero fife",
+     "conf": 0.9893466830253601,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "contact",
+       0.9990000128746033
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "decimal",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "fife",
+       0.9563889503479004
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three contact approach one one eight decimal five zero fife",
+       0.9893466830253601
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 15,
+     "seed": 2,
+     "text": "beetle one two three contact approach one one eight decimal five zero fife",
+     "conf": 0.9845991730690002,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "contact",
+       0.9574825167655945
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "decimal",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "fife",
+       0.9551427364349365
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three contact approach one one eight decimal five zero fife",
+       0.9845991730690002
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 10,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 5,
+     "snr_db": 10,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 5,
+     "snr_db": 6,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 5,
+     "snr_db": 6,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 5,
+     "snr_db": 3,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 5,
+     "snr_db": 3,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 5,
+     "snr_db": 0,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 5,
+     "snr_db": 0,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 6,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "beetle one two three cleared ils approach runway three five right qnh one zero one three",
+     "conf": 0.9878617525100708,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "cleared",
+       0.9990000128746033
+      ],
+      [
+       "ils",
+       0.954436719417572
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "runway",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9129746556282043
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "qnh",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9582175612449646
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three cleared ils approach runway three five right qnh one zero one three",
+       0.9878617525100708
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle one two three cleared ils approach runway three five right qnh one zero one three",
+     "conf": 0.9840725064277649,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "cleared",
+       0.9990000128746033
+      ],
+      [
+       "ils",
+       0.9547845721244812
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "runway",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.7429553866386414
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "qnh",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three cleared ils approach runway three five right qnh one zero one three",
+       0.9840725064277649
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 20,
+     "seed": 1,
+     "text": "beetle one two three cleared ils approach runway three five right qnh one zero one three",
+     "conf": 0.9497156143188477,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "cleared",
+       0.9990000128746033
+      ],
+      [
+       "ils",
+       0.9530357122421265
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "runway",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.2188434600830078
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9500434994697571
+      ],
+      [
+       "qnh",
+       0.9518319964408875
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9454726576805115
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three cleared ils approach runway three five right qnh one zero one three",
+       0.9497156143188477
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 20,
+     "seed": 2,
+     "text": "beetle one two three cleared ils approach runway three five right qnh one zero one three",
+     "conf": 0.9450312256813049,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "cleared",
+       0.9990000128746033
+      ],
+      [
+       "ils",
+       0.9523822069168091
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "runway",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.07810390740633011
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9505650401115417
+      ],
+      [
+       "qnh",
+       0.9500075578689575
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9389981627464294
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three cleared ils approach runway three five right qnh one zero one three",
+       0.9450312256813049
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 15,
+     "seed": 1,
+     "text": "beetle one two three cleared ils approach runway three five right qnh one zero one three",
+     "conf": 0.9316946268081665,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "cleared",
+       0.943024218082428
+      ],
+      [
+       "ils",
+       0.9476380944252014
+      ],
+      [
+       "approach",
+       0.9570484161376953
+      ],
+      [
+       "runway",
+       0.9563875198364258
+      ],
+      [
+       "three",
+       0.08154407888650894
+      ],
+      [
+       "five",
+       0.9577835202217102
+      ],
+      [
+       "right",
+       0.9243983626365662
+      ],
+      [
+       "qnh",
+       0.9482032060623169
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9535272121429443
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three cleared ils approach runway three five right qnh one zero one three",
+       0.9316946268081665
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 15,
+     "seed": 2,
+     "text": "beetle one two three cleared ils approach runway three five right qnh one zero one three",
+     "conf": 0.9323796629905701,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "cleared",
+       0.9536925554275513
+      ],
+      [
+       "ils",
+       0.9450539350509644
+      ],
+      [
+       "approach",
+       0.955575704574585
+      ],
+      [
+       "runway",
+       0.9558402895927429
+      ],
+      [
+       "three",
+       0.010734985582530499
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9489124417304993
+      ],
+      [
+       "qnh",
+       0.94307941198349
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9526461362838745
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three cleared ils approach runway three five right qnh one zero one three",
+       0.9323796629905701
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 10,
+     "seed": 1,
+     "text": "beetle one three cleared ils approach runway two five right qnh one zero one three",
+     "conf": 0.7854267954826355,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9428458213806152
+      ],
+      [
+       "cleared",
+       0.2999764084815979
+      ],
+      [
+       "ils",
+       0.9306800365447998
+      ],
+      [
+       "approach",
+       0.9500243663787842
+      ],
+      [
+       "runway",
+       0.9494561553001404
+      ],
+      [
+       "two",
+       0.18958520889282227
+      ],
+      [
+       "five",
+       0.9070364832878113
+      ],
+      [
+       "right",
+       0.7168139219284058
+      ],
+      [
+       "qnh",
+       0.25603970885276794
+      ],
+      [
+       "one",
+       0.8842189908027649
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9286397099494934
+      ],
+      [
+       "three",
+       0.9452734589576721
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one three cleared ils approach runway two five right qnh one zero one three",
+       0.7854267954826355
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 10,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 6,
+     "snr_db": 6,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 6,
+     "snr_db": 6,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 6,
+     "snr_db": 3,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 6,
+     "snr_db": 3,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 6,
+     "snr_db": 0,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 6,
+     "snr_db": 0,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 7,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "beetle one two three turn left heading two zero zero",
+     "conf": 0.9788714051246643,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9459102749824524
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9459894299507141
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn left heading two zero zero",
+       0.9788714051246643
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle one two three turn left heading two zero zero",
+     "conf": 0.9817943572998047,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9464094042778015
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn left heading two zero zero",
+       0.9817943572998047
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 20,
+     "seed": 1,
+     "text": "beetle one two three turn left heading two zero zero",
+     "conf": 0.999000072479248,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn left heading two zero zero",
+       0.999000072479248
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 20,
+     "seed": 2,
+     "text": "beetle one two three turn left heading two zero zero",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn left heading two zero zero",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 15,
+     "seed": 1,
+     "text": "beetle one two three turn left heading two zero zero",
+     "conf": 0.999000072479248,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn left heading two zero zero",
+       0.999000072479248
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 15,
+     "seed": 2,
+     "text": "beetle one two three turn left heading two zero zero",
+     "conf": 0.999000072479248,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn left heading two zero zero",
+       0.999000072479248
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 10,
+     "seed": 1,
+     "text": "beetle one two three turn left heading two zero zero",
+     "conf": 0.9823513627052307,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9547361135482788
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9543766975402832
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9566290378570557
+      ],
+      [
+       "zero",
+       0.9252445101737976
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle one two three turn left heading two zero zero",
+       0.9823513627052307
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 10,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 7,
+     "snr_db": 6,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 7,
+     "snr_db": 6,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 7,
+     "snr_db": 3,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 7,
+     "snr_db": 3,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 7,
+     "snr_db": 0,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 7,
+     "snr_db": 0,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    }
+   ]
+  },
+  "dictation": {
+   "seconds": 250.9,
+   "rows": [
+    {
+     "phrase": 0,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "Beetle 1 to 3 turn left heading 270 descend and maintain 3000 feet",
+     "conf": 0.9989998936653137,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "seven",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9990000128746033
+      ],
+      [
+       "and",
+       0.9990000128746033
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "Beetle 1 to 3 turn left heading 270 descend and maintain 3000 feet",
+       0.9989998936653137
+      ],
+      [
+       "beetle one to three turn left heading two seven zero descend and maintain three thousand feet",
+       0.9989998936653137
+      ],
+      [
+       "Beatle one to three turn left heading two seven zero descend and maintain three thousand feet",
+       0.9989998936653137
+      ],
+      [
+       "beetle one two three turn left heading two seven zero descend and maintain three thousand feet",
+       0.9989998936653137
+      ],
+      [
+       "Beatle one two three turn left heading two seven zero descend and maintain three thousand feet",
+       0.9989998936653137
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle 1 to 3 turn left heading 270 descend and maintain 3000 feet",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "seven",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9990000128746033
+      ],
+      [
+       "and",
+       0.9990000128746033
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1 to 3 turn left heading 270 descend and maintain 3000 feet",
+       0.9990000128746033
+      ],
+      [
+       "beetle one to three turn left heading two seven zero descend and maintain three thousand feet",
+       0.9990000128746033
+      ],
+      [
+       "beetle one two three turn left heading two seven zero descend and maintain three thousand feet",
+       0.9990000128746033
+      ],
+      [
+       "Beatle one to three turn left heading two seven zero descend and maintain three thousand feet",
+       0.9990000128746033
+      ],
+      [
+       "betel one to three turn left heading two seven zero descend and maintain three thousand feet",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 20,
+     "seed": 1,
+     "text": "beetle 123 turn left heading 270 descend and maintain 3000 feet off",
+     "conf": 0.9750937223434448,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "seven",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9990000128746033
+      ],
+      [
+       "and",
+       0.9990000128746033
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ],
+      [
+       "off",
+       0.784278929233551
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 turn left heading 270 descend and maintain 3000 feet off",
+       0.9750937223434448
+      ],
+      [
+       "beetle one two three turn left heading two seven zero descend and maintain three thousand feet off",
+       0.9750937223434448
+      ],
+      [
+       "Beatle one two three turn left heading two seven zero descend and maintain three thousand feet off",
+       0.9750937223434448
+      ],
+      [
+       "betel one two three turn left heading two seven zero descend and maintain three thousand feet off",
+       0.9750937223434448
+      ],
+      [
+       "beetle won two three turn left heading two seven zero descend and maintain three thousand feet off",
+       0.9750937223434448
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 20,
+     "seed": 2,
+     "text": "beetle 123 turn left heading 270 descend and maintain 3000 feet oh",
+     "conf": 0.9594224095344543,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "seven",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9990000128746033
+      ],
+      [
+       "and",
+       0.8462862372398376
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.6545687913894653
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 turn left heading 270 descend and maintain 3000 feet oh",
+       0.9594224095344543
+      ],
+      [
+       "beetle one two three turn left heading two seven zero descend and maintain three thousand feet oh",
+       0.9594224095344543
+      ],
+      [
+       "Beatle one two three turn left heading two seven zero descend and maintain three thousand feet oh",
+       0.9594224095344543
+      ],
+      [
+       "beetle won two three turn left heading two seven zero descend and maintain three thousand feet oh",
+       0.9594224095344543
+      ],
+      [
+       "betel one two three turn left heading two seven zero descend and maintain three thousand feet oh",
+       0.9594224095344543
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 15,
+     "seed": 1,
+     "text": "beetle 123 turn left heading 270 descend and maintain 3000 feet oh",
+     "conf": 0.9137210845947266,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "seven",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.07514658570289612
+      ],
+      [
+       "and",
+       0.9990000128746033
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.8144694566726685
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 turn left heading 270 descend and maintain 3000 feet oh",
+       0.9137210845947266
+      ],
+      [
+       "beetle one two three turn left heading two seven zero descend and maintain three thousand feet oh",
+       0.9137210845947266
+      ],
+      [
+       "Beatle one two three turn left heading two seven zero descend and maintain three thousand feet oh",
+       0.9137210845947266
+      ],
+      [
+       "beetle won two three turn left heading two seven zero descend and maintain three thousand feet oh",
+       0.9137210845947266
+      ],
+      [
+       "betel one two three turn left heading two seven zero descend and maintain three thousand feet oh",
+       0.9137210845947266
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 15,
+     "seed": 2,
+     "text": "beetle 123 turn left heading 270 descend and maintain 3000 feet oh",
+     "conf": 0.9140855073928833,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "seven",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.07866063714027405
+      ],
+      [
+       "and",
+       0.9990000128746033
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9499381184577942
+      ],
+      [
+       "oh",
+       0.829671323299408
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 turn left heading 270 descend and maintain 3000 feet oh",
+       0.9140855073928833
+      ],
+      [
+       "beetle one two three turn left heading two seven zero descend and maintain three thousand feet oh",
+       0.9140855073928833
+      ],
+      [
+       "Beatle one two three turn left heading two seven zero descend and maintain three thousand feet oh",
+       0.9140855073928833
+      ],
+      [
+       "beetle won two three turn left heading two seven zero descend and maintain three thousand feet oh",
+       0.9140855073928833
+      ],
+      [
+       "betel one two three turn left heading two seven zero descend and maintain three thousand feet oh",
+       0.9140855073928833
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 10,
+     "seed": 1,
+     "text": "123 turn left heading 270 cent and maintain 3000 feet oh",
+     "conf": 0.8850856423377991,
+     "words": [
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.49033018946647644
+      ],
+      [
+       "seven",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "cent",
+       0.0020045519340783358
+      ],
+      [
+       "and",
+       0.9990000128746033
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9396564364433289
+      ],
+      [
+       "oh",
+       0.8748059868812561
+      ]
+     ],
+     "alternates": [
+      [
+       "123 turn left heading 270 cent and maintain 3000 feet oh",
+       0.8850856423377991
+      ],
+      [
+       "one two three turn left heading two seven zero cent and maintain three thousand feet oh",
+       0.8850856423377991
+      ],
+      [
+       "one two three turn left heading two seven zero cents and maintain three thousand feet oh",
+       0.8807029128074646
+      ],
+      [
+       "one two three turn left heading two seven zero descend and maintain three thousand feet oh",
+       0.8914214968681335
+      ],
+      [
+       "one two three turn left heading two seven zero dissent and maintain three thousand feet oh",
+       0.8927723169326782
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 10,
+     "seed": 2,
+     "text": "three turn left heading 270 descend and maintain 3000 feet oh",
+     "conf": 0.8855400681495667,
+     "words": [
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.5838555693626404
+      ],
+      [
+       "seven",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.10032596439123154
+      ],
+      [
+       "and",
+       0.7489316463470459
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.8924543857574463
+      ],
+      [
+       "oh",
+       0.9333267211914062
+      ]
+     ],
+     "alternates": [
+      [
+       "three turn left heading 270 descend and maintain 3000 feet oh",
+       0.8855400681495667
+      ],
+      [
+       "three turn left heading two seven zero descend and maintain three thousand feet oh",
+       0.8855400681495667
+      ],
+      [
+       "three turn left heading two seven zero descend and maintain three thousand feet so",
+       0.8799998760223389
+      ],
+      [
+       "three turn left heading two seven zero descend and maintain three thousand oh",
+       0.7712303400039673
+      ],
+      [
+       "three turn left heading two seven zero seven maintain three thousand feet oh",
+       0.8217167854309082
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 6,
+     "seed": 1,
+     "text": "3007030000",
+     "conf": 0.44122475385665894,
+     "words": [
+      [
+       "three",
+       0.0020000042859464884
+      ],
+      [
+       "oh",
+       0.0020075528882443905
+      ],
+      [
+       "oh",
+       0.002000365639105439
+      ],
+      [
+       "seven",
+       0.29903528094291687
+      ],
+      [
+       "zero",
+       0.899129331111908
+      ],
+      [
+       "three",
+       0.020210830494761467
+      ],
+      [
+       "thousand",
+       0.9509491324424744
+      ],
+      [
+       "oh",
+       0.9289297461509705
+      ]
+     ],
+     "alternates": [
+      [
+       "3007030000",
+       0.44122475385665894
+      ],
+      [
+       "three oh oh seven zero three thousand oh",
+       0.44122475385665894
+      ],
+      [
+       "oh oh oh seven zero three thousand oh",
+       0.4547138512134552
+      ],
+      [
+       "three oh oh seven zero and three thousand oh",
+       0.46928656101226807
+      ],
+      [
+       "three oh oh seven zero three thousand eau",
+       0.44175705313682556
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 6,
+     "seed": 2,
+     "text": "3007030000",
+     "conf": 0.5057018995285034,
+     "words": [
+      [
+       "three",
+       0.0020000040531158447
+      ],
+      [
+       "oh",
+       0.012459589168429375
+      ],
+      [
+       "oh",
+       0.0020006694830954075
+      ],
+      [
+       "seven",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.002012282842770219
+      ],
+      [
+       "thousand",
+       0.917148232460022
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "3007030000",
+       0.5057018995285034
+      ],
+      [
+       "three oh oh seven zero three thousand oh",
+       0.5057018995285034
+      ],
+      [
+       "three oh oh seven zero and three thousand oh",
+       0.49954932928085327
+      ],
+      [
+       "three oh seven zero three thousand oh",
+       0.4736238420009613
+      ],
+      [
+       "three oh oh oh seven zero three thousand oh",
+       0.5049939751625061
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 3,
+     "seed": 1,
+     "text": "30000",
+     "conf": 0.7663670778274536,
+     "words": [
+      [
+       "three",
+       0.5710559487342834
+      ],
+      [
+       "thousand",
+       0.8112455606460571
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "30000",
+       0.7663670778274536
+      ],
+      [
+       "three thousand oh",
+       0.7663670778274536
+      ],
+      [
+       "three thousand eau",
+       0.7663670778274536
+      ],
+      [
+       "three thousand owe",
+       0.7663670778274536
+      ],
+      [
+       "three thousand au",
+       0.7663670778274536
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 3,
+     "seed": 2,
+     "text": "3000",
+     "conf": 0.5083258152008057,
+     "words": [
+      [
+       "three",
+       0.18665997684001923
+      ],
+      [
+       "thousand",
+       0.7717189192771912
+      ]
+     ],
+     "alternates": [
+      [
+       "3000",
+       0.5083258152008057
+      ],
+      [
+       "three thousand",
+       0.5083258152008057
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 0,
+     "seed": 1,
+     "text": "oh",
+     "conf": 0.8767094612121582,
+     "words": [
+      [
+       "oh",
+       0.8767094612121582
+      ]
+     ],
+     "alternates": [
+      [
+       "oh",
+       0.8767094612121582
+      ],
+      [
+       "oh oh",
+       0.8506562113761902
+      ],
+      [
+       "three oh",
+       0.7928704023361206
+      ],
+      [
+       "eau",
+       0.9039795994758606
+      ],
+      [
+       "owe",
+       0.9068921804428101
+      ]
+     ]
+    },
+    {
+     "phrase": 0,
+     "snr_db": 0,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 1,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "beetle 1 to 3 turn right heading 340",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1 to 3 turn right heading 340",
+       0.9990000128746033
+      ],
+      [
+       "beetle one to three turn right heading three four zero",
+       0.9990000128746033
+      ],
+      [
+       "beetle one two three turn right heading three four zero",
+       0.9990000128746033
+      ],
+      [
+       "Beatle one to three turn right heading three four zero",
+       0.9990000128746033
+      ],
+      [
+       "Beatle one two three turn right heading three four zero",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle 1 to 3 turn right heading 340",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1 to 3 turn right heading 340",
+       0.9990000128746033
+      ],
+      [
+       "beetle one to three turn right heading three four zero",
+       0.9990000128746033
+      ],
+      [
+       "beetle one two three turn right heading three four zero",
+       0.9990000128746033
+      ],
+      [
+       "Beatle one to three turn right heading three four zero",
+       0.9990000128746033
+      ],
+      [
+       "Beatle one two three turn right heading three four zero",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 20,
+     "seed": 1,
+     "text": "beetle 123 turn right heading 340",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 turn right heading 340",
+       0.9990000128746033
+      ],
+      [
+       "beetle one two three turn right heading three four zero",
+       0.9990000128746033
+      ],
+      [
+       "Beatle one two three turn right heading three four zero",
+       0.9990000128746033
+      ],
+      [
+       "beetle won two three turn right heading three four zero",
+       0.9990000128746033
+      ],
+      [
+       "beetle one two three turn write heading three four zero",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 20,
+     "seed": 2,
+     "text": "beetle 123 turn right heading 340",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 turn right heading 340",
+       0.9990000128746033
+      ],
+      [
+       "beetle one two three turn right heading three four zero",
+       0.9990000128746033
+      ],
+      [
+       "Beatle one two three turn right heading three four zero",
+       0.9990000128746033
+      ],
+      [
+       "beetle won two three turn right heading three four zero",
+       0.9990000128746033
+      ],
+      [
+       "beetle one two three turn write heading three four zero",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 15,
+     "seed": 1,
+     "text": "beetle 123 turn right heading 340",
+     "conf": 0.9989999532699585,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 turn right heading 340",
+       0.9989999532699585
+      ],
+      [
+       "beetle one two three turn right heading three four zero",
+       0.9989999532699585
+      ],
+      [
+       "Beatle one two three turn right heading three four zero",
+       0.9989999532699585
+      ],
+      [
+       "beetle won two three turn right heading three four zero",
+       0.9989999532699585
+      ],
+      [
+       "beetle one two three turn write heading three four zero",
+       0.9989999532699585
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 15,
+     "seed": 2,
+     "text": "beetle 123 turn right heading 340",
+     "conf": 0.9989999532699585,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 turn right heading 340",
+       0.9989999532699585
+      ],
+      [
+       "beetle one two three turn right heading three four zero",
+       0.9989999532699585
+      ],
+      [
+       "Beatle one two three turn right heading three four zero",
+       0.9989999532699585
+      ],
+      [
+       "beetle won two three turn right heading three four zero",
+       0.9989999532699585
+      ],
+      [
+       "beetle one two three turn write heading three four zero",
+       0.9989999532699585
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 10,
+     "seed": 1,
+     "text": "beetle 123 turn right heading 340",
+     "conf": 0.9857635498046875,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.7872173190116882
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 turn right heading 340",
+       0.9857635498046875
+      ],
+      [
+       "beetle one two three turn right heading three four zero",
+       0.9857635498046875
+      ],
+      [
+       "beetle one three turn right heading three four zero",
+       0.9989999532699585
+      ],
+      [
+       "Beatle one two three turn right heading three four zero",
+       0.9857635498046875
+      ],
+      [
+       "Beatle one three turn right heading three four zero",
+       0.9989999532699585
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 10,
+     "seed": 2,
+     "text": "three turn right heading 340",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "right",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "three turn right heading 340",
+       0.9990000128746033
+      ],
+      [
+       "three turn right heading three four zero",
+       0.9990000128746033
+      ],
+      [
+       "three turn write heading three four zero",
+       0.9990000128746033
+      ],
+      [
+       "three turn Wright heading three four zero",
+       0.9990000128746033
+      ],
+      [
+       "three turn REIT heading three four zero",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 6,
+     "seed": 1,
+     "text": "35340",
+     "conf": 0.5552284121513367,
+     "words": [
+      [
+       "three",
+       0.0020000289659947157
+      ],
+      [
+       "five",
+       0.0020005444530397654
+      ],
+      [
+       "three",
+       0.009492785669863224
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "35340",
+       0.5552284121513367
+      ],
+      [
+       "three five three four zero",
+       0.5552284121513367
+      ],
+      [
+       "three five seven three four zero",
+       0.6725487112998962
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 6,
+     "seed": 2,
+     "text": "turn 1340",
+     "conf": 0.6934897899627686,
+     "words": [
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.0020007998682558537
+      ],
+      [
+       "three",
+       0.014161181636154652
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "turn 1340",
+       0.6934897899627686
+      ],
+      [
+       "turn one three four zero",
+       0.6934897899627686
+      ],
+      [
+       "turn right three four zero",
+       0.774692177772522
+      ],
+      [
+       "turn write three four zero",
+       0.7098168730735779
+      ],
+      [
+       "turn right and three four zero",
+       0.8131698369979858
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 3,
+     "seed": 1,
+     "text": "340",
+     "conf": 0.5628148317337036,
+     "words": [
+      [
+       "three",
+       0.0020053558982908726
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "340",
+       0.5628148317337036
+      ],
+      [
+       "three four zero",
+       0.5628148317337036
+      ],
+      [
+       "three five three four zero",
+       0.6811753511428833
+      ],
+      [
+       "three three four zero",
+       0.5628730058670044
+      ],
+      [
+       "three four oh",
+       0.5628148317337036
+      ]
+     ]
+    },
+    {
+     "phrase": 1,
+     "snr_db": 3,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 1,
+     "snr_db": 0,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 1,
+     "snr_db": 0,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 2,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "beetle 1 to 3 descend and maintain 4000 feet reduce speed 180 Knopf",
+     "conf": 0.9813634157180786,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9990000128746033
+      ],
+      [
+       "and",
+       0.9990000128746033
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ],
+      [
+       "reduce",
+       0.9990000128746033
+      ],
+      [
+       "speed",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "knopf",
+       0.8991976380348206
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1 to 3 descend and maintain 4000 feet reduce speed 180 Knopf",
+       0.9813634157180786
+      ],
+      [
+       "beetle one to three descend and maintain four thousand feet reduce speed one eight zero knopf",
+       0.9813634157180786
+      ],
+      [
+       "beetle one two three descend and maintain four thousand feet reduce speed one eight zero knopf",
+       0.9813634157180786
+      ],
+      [
+       "Beatle one to three descend and maintain four thousand feet reduce speed one eight zero knopf",
+       0.9813634157180786
+      ],
+      [
+       "Beatle one two three descend and maintain four thousand feet reduce speed one eight zero knopf",
+       0.9813634157180786
+      ]
+     ]
+    },
+    {
+     "phrase": 2,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle 1 to 3 descend and maintain 4000 feet reduce speed 180 Knopf",
+     "conf": 0.9793522357940674,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9990000128746033
+      ],
+      [
+       "and",
+       0.9990000128746033
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ],
+      [
+       "reduce",
+       0.9990000128746033
+      ],
+      [
+       "speed",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "knopf",
+       0.8888810873031616
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1 to 3 descend and maintain 4000 feet reduce speed 180 Knopf",
+       0.9793522357940674
+      ],
+      [
+       "beetle one to three descend and maintain four thousand feet reduce speed one eight zero knopf",
+       0.9793522357940674
+      ],
+      [
+       "beetle one two three descend and maintain four thousand feet reduce speed one eight zero knopf",
+       0.9793522357940674
+      ],
+      [
+       "Beatle one to three descend and maintain four thousand feet reduce speed one eight zero knopf",
+       0.9793522357940674
+      ],
+      [
+       "Beatle one two three descend and maintain four thousand feet reduce speed one eight zero knopf",
+       0.9793522357940674
+      ]
+     ]
+    },
+    {
+     "phrase": 2,
+     "snr_db": 20,
+     "seed": 1,
+     "text": "beetle 123 descend and maintain 4000 feet reduce speed 180 Knopf",
+     "conf": 0.999000072479248,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9990000128746033
+      ],
+      [
+       "and",
+       0.9990000128746033
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ],
+      [
+       "reduce",
+       0.9990000128746033
+      ],
+      [
+       "speed",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "knopf",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 descend and maintain 4000 feet reduce speed 180 Knopf",
+       0.999000072479248
+      ],
+      [
+       "beetle one two three descend and maintain four thousand feet reduce speed one eight zero knopf",
+       0.999000072479248
+      ],
+      [
+       "Beatle one two three descend and maintain four thousand feet reduce speed one eight zero knopf",
+       0.999000072479248
+      ],
+      [
+       "beetle won two three descend and maintain four thousand feet reduce speed one eight zero knopf",
+       0.999000072479248
+      ],
+      [
+       "beetle one two three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.909805178642273
+      ]
+     ]
+    },
+    {
+     "phrase": 2,
+     "snr_db": 20,
+     "seed": 2,
+     "text": "beetle 123 descend and maintain 4000 feet reduce speed 180 Knopf",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "descend",
+       0.9990000128746033
+      ],
+      [
+       "and",
+       0.9990000128746033
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ],
+      [
+       "reduce",
+       0.9990000128746033
+      ],
+      [
+       "speed",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "knopf",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 descend and maintain 4000 feet reduce speed 180 Knopf",
+       0.9990000128746033
+      ],
+      [
+       "beetle one two three descend and maintain four thousand feet reduce speed one eight zero knopf",
+       0.9990000128746033
+      ],
+      [
+       "beetle one two three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.9098051190376282
+      ],
+      [
+       "Beatle one two three descend and maintain four thousand feet reduce speed one eight zero knopf",
+       0.9990000128746033
+      ],
+      [
+       "Beatle one two three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.9098051190376282
+      ]
+     ]
+    },
+    {
+     "phrase": 2,
+     "snr_db": 15,
+     "seed": 1,
+     "text": "beetle 1237 maintain 4000 feet reduce speed 180 Knopf",
+     "conf": 0.9098116755485535,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "seven",
+       0.0020733182318508625
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ],
+      [
+       "reduce",
+       0.9990000128746033
+      ],
+      [
+       "speed",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "knopf",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1237 maintain 4000 feet reduce speed 180 Knopf",
+       0.9098116755485535
+      ],
+      [
+       "beetle one two three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.9098116755485535
+      ],
+      [
+       "Beatle one two three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.9098116755485535
+      ],
+      [
+       "beetle won two three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.9098116755485535
+      ],
+      [
+       "beetle one two three seven maintain for thousand feet reduce speed one eight zero knopf",
+       0.9098116755485535
+      ]
+     ]
+    },
+    {
+     "phrase": 2,
+     "snr_db": 15,
+     "seed": 2,
+     "text": "beetle 1237 maintain 4000 feet reduce speed 180 Knopf",
+     "conf": 0.9033662676811218,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "seven",
+       0.0023262056056410074
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.9990000128746033
+      ],
+      [
+       "reduce",
+       0.9990000128746033
+      ],
+      [
+       "speed",
+       0.8915333151817322
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "knopf",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1237 maintain 4000 feet reduce speed 180 Knopf",
+       0.9033662676811218
+      ],
+      [
+       "beetle one two three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.9033662676811218
+      ],
+      [
+       "Beatle one two three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.9033662676811218
+      ],
+      [
+       "beetle won two three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.9033662676811218
+      ],
+      [
+       "beetle one two three seven maintain for thousand feet reduce speed one eight zero knopf",
+       0.9033662676811218
+      ]
+     ]
+    },
+    {
+     "phrase": 2,
+     "snr_db": 10,
+     "seed": 1,
+     "text": "beetle 1237 maintain 4000 feet reduce speed 180 Knopf",
+     "conf": 0.7571955323219299,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.5366486310958862
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "seven",
+       0.0031543842051178217
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.6857180595397949
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.7095503807067871
+      ],
+      [
+       "reduce",
+       0.0036300108768045902
+      ],
+      [
+       "speed",
+       0.1178845763206482
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "knopf",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1237 maintain 4000 feet reduce speed 180 Knopf",
+       0.7571955323219299
+      ],
+      [
+       "beetle one two three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.7571955323219299
+      ],
+      [
+       "beetle one three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.7728710174560547
+      ],
+      [
+       "Beatle one two three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.7571955323219299
+      ],
+      [
+       "Beatle one three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.7728710174560547
+      ]
+     ]
+    },
+    {
+     "phrase": 2,
+     "snr_db": 10,
+     "seed": 2,
+     "text": "beetle 137 maintain 4000 feet reduce speed 180 Knopf",
+     "conf": 0.8335481882095337,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "seven",
+       0.0023269944358617067
+      ],
+      [
+       "maintain",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "thousand",
+       0.9990000128746033
+      ],
+      [
+       "feet",
+       0.8789995312690735
+      ],
+      [
+       "reduce",
+       0.19324657320976257
+      ],
+      [
+       "speed",
+       0.6282657384872437
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "knopf",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 137 maintain 4000 feet reduce speed 180 Knopf",
+       0.8335481882095337
+      ],
+      [
+       "beetle one three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.8335481882095337
+      ],
+      [
+       "Beatle one three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.8335481882095337
+      ],
+      [
+       "beetle won three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.8335481882095337
+      ],
+      [
+       "beetle one two three seven maintain four thousand feet reduce speed one eight zero knopf",
+       0.827781617641449
+      ]
+     ]
+    },
+    {
+     "phrase": 2,
+     "snr_db": 6,
+     "seed": 1,
+     "text": "3000180",
+     "conf": 0.42421165108680725,
+     "words": [
+      [
+       "three",
+       0.5318446755409241
+      ],
+      [
+       "thousand",
+       0.042610034346580505
+      ],
+      [
+       "one",
+       0.6555832624435425
+      ],
+      [
+       "eight",
+       0.7385501265525818
+      ],
+      [
+       "zero",
+       0.5933214426040649
+      ]
+     ],
+     "alternates": [
+      [
+       "3000180",
+       0.42421165108680725
+      ],
+      [
+       "three thousand one eight zero",
+       0.42421165108680725
+      ],
+      [
+       "three thousand oh one eight zero",
+       0.5658937692642212
+      ],
+      [
+       "three thousand one eight zero knopf",
+       0.5604469776153564
+      ],
+      [
+       "three thousand oh one eight zero knopf",
+       0.7028102874755859
+      ]
+     ]
+    },
+    {
+     "phrase": 2,
+     "snr_db": 6,
+     "seed": 2,
+     "text": "33000180",
+     "conf": 0.2824673056602478,
+     "words": [
+      [
+       "three",
+       0.1640041172504425
+      ],
+      [
+       "three",
+       0.17464540898799896
+      ],
+      [
+       "thousand",
+       0.00343599752523005
+      ],
+      [
+       "one",
+       0.5345648527145386
+      ],
+      [
+       "eight",
+       0.7192572355270386
+      ],
+      [
+       "zero",
+       0.5967616438865662
+      ]
+     ],
+     "alternates": [
+      [
+       "33000180",
+       0.2824673056602478
+      ],
+      [
+       "three three thousand one eight zero",
+       0.2824673056602478
+      ],
+      [
+       "three three thousand oh one eight zero",
+       0.3520796000957489
+      ],
+      [
+       "three three thousand feet oh one eight zero",
+       0.4173615276813507
+      ],
+      [
+       "three three thousand one eight zero no",
+       0.371994286775589
+      ]
+     ]
+    },
+    {
+     "phrase": 2,
+     "snr_db": 3,
+     "seed": 1,
+     "text": "30",
+     "conf": 0.8428380489349365,
+     "words": [
+      [
+       "three",
+       0.7427150011062622
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "30",
+       0.8428380489349365
+      ],
+      [
+       "three zero",
+       0.8428380489349365
+      ]
+     ]
+    },
+    {
+     "phrase": 2,
+     "snr_db": 3,
+     "seed": 2,
+     "text": "three",
+     "conf": 0.7112442255020142,
+     "words": [
+      [
+       "three",
+       0.7112442255020142
+      ]
+     ],
+     "alternates": [
+      [
+       "three",
+       0.7112442255020142
+      ],
+      [
+       "sri",
+       0.7112442255020142
+      ],
+      [
+       "free",
+       0.7112442255020142
+      ],
+      [
+       "tree",
+       0.7112442255020142
+      ],
+      [
+       "III",
+       0.7112442255020142
+      ]
+     ]
+    },
+    {
+     "phrase": 2,
+     "snr_db": 0,
+     "seed": 1,
+     "text": "oh",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "oh",
+       0.9990000128746033
+      ],
+      [
+       "oh oh",
+       0.9056310057640076
+      ],
+      [
+       "oh oh oh",
+       0.9501072764396667
+      ],
+      [
+       "owe",
+       0.9990000128746033
+      ],
+      [
+       "a",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 2,
+     "snr_db": 0,
+     "seed": 2,
+     "text": "oh",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "oh",
+       0.9990000128746033
+      ],
+      [
+       "oh oh",
+       0.8966977596282959
+      ],
+      [
+       "oh oh oh",
+       0.9294399619102478
+      ],
+      [
+       "owe",
+       0.9990000128746033
+      ],
+      [
+       "a",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "beetle 1 to 3 climb flight level 120",
+     "conf": 0.9989999532699585,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "climb",
+       0.9990000128746033
+      ],
+      [
+       "flight",
+       0.9990000128746033
+      ],
+      [
+       "level",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1 to 3 climb flight level 120",
+       0.9989999532699585
+      ],
+      [
+       "beetle one to three climb flight level one two zero",
+       0.9989999532699585
+      ],
+      [
+       "beetle one two three climb flight level one two zero",
+       0.9989999532699585
+      ],
+      [
+       "Beatle one to three climb flight level one two zero",
+       0.9989999532699585
+      ],
+      [
+       "Beatle one two three climb flight level one two zero",
+       0.9989999532699585
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle 1 to 3 climb flight level 120",
+     "conf": 0.999000072479248,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "climb",
+       0.9990000128746033
+      ],
+      [
+       "flight",
+       0.9990000128746033
+      ],
+      [
+       "level",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1 to 3 climb flight level 120",
+       0.999000072479248
+      ],
+      [
+       "beetle one to three climb flight level one two zero",
+       0.999000072479248
+      ],
+      [
+       "beetle one two three climb flight level one two zero",
+       0.999000072479248
+      ],
+      [
+       "Beatle one to three climb flight level one two zero",
+       0.999000072479248
+      ],
+      [
+       "Beatle one two three climb flight level one two zero",
+       0.999000072479248
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 20,
+     "seed": 1,
+     "text": "beetle 123 climbed flight level 120",
+     "conf": 0.9989999532699585,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "climbed",
+       0.9990000128746033
+      ],
+      [
+       "flight",
+       0.9990000128746033
+      ],
+      [
+       "level",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 climbed flight level 120",
+       0.9989999532699585
+      ],
+      [
+       "beetle one two three climbed flight level one two zero",
+       0.9989999532699585
+      ],
+      [
+       "Beatle one two three climbed flight level one two zero",
+       0.9989999532699585
+      ],
+      [
+       "beetle won two three climbed flight level one two zero",
+       0.9989999532699585
+      ],
+      [
+       "betel one two three climbed flight level one two zero",
+       0.9989999532699585
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 20,
+     "seed": 2,
+     "text": "beetle 123 climb flight level 120",
+     "conf": 0.999000072479248,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "climb",
+       0.9990000128746033
+      ],
+      [
+       "flight",
+       0.9990000128746033
+      ],
+      [
+       "level",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 climb flight level 120",
+       0.999000072479248
+      ],
+      [
+       "beetle one two three climb flight level one two zero",
+       0.999000072479248
+      ],
+      [
+       "Beatle one two three climb flight level one two zero",
+       0.999000072479248
+      ],
+      [
+       "beetle won two three climb flight level one two zero",
+       0.999000072479248
+      ],
+      [
+       "beetle one two three clime flight level one two zero",
+       0.999000072479248
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 15,
+     "seed": 1,
+     "text": "beetle 1235 flight level 120",
+     "conf": 0.8948829770088196,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.002001544227823615
+      ],
+      [
+       "flight",
+       0.9990000128746033
+      ],
+      [
+       "level",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1235 flight level 120",
+       0.8948829770088196
+      ],
+      [
+       "beetle one two three five flight level one two zero",
+       0.8948829770088196
+      ],
+      [
+       "Beatle one two three five flight level one two zero",
+       0.8948829770088196
+      ],
+      [
+       "beetle won two three five flight level one two zero",
+       0.8948829770088196
+      ],
+      [
+       "betel one two three five flight level one two zero",
+       0.8948829770088196
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 15,
+     "seed": 2,
+     "text": "beetle 1235 flight level 120",
+     "conf": 0.9011931419372559,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.002001163549721241
+      ],
+      [
+       "flight",
+       0.9990000128746033
+      ],
+      [
+       "level",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1235 flight level 120",
+       0.9011931419372559
+      ],
+      [
+       "beetle one two three five flight level one two zero",
+       0.9011931419372559
+      ],
+      [
+       "Beatle one two three five flight level one two zero",
+       0.9011931419372559
+      ],
+      [
+       "beetle won two three five flight level one two zero",
+       0.9011931419372559
+      ],
+      [
+       "betel one two three five flight level one two zero",
+       0.9011931419372559
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 10,
+     "seed": 1,
+     "text": "35 flight level 120",
+     "conf": 0.8202741146087646,
+     "words": [
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "flight",
+       0.0101543590426445
+      ],
+      [
+       "level",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.06482979655265808
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "35 flight level 120",
+       0.8202741146087646
+      ],
+      [
+       "three five flight level one two zero",
+       0.8202741146087646
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 10,
+     "seed": 2,
+     "text": "beetle 135 flight level 120",
+     "conf": 0.956159770488739,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "flight",
+       0.9990000128746033
+      ],
+      [
+       "level",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.28649938106536865
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 135 flight level 120",
+       0.956159770488739
+      ],
+      [
+       "beetle one three five flight level one two zero",
+       0.956159770488739
+      ],
+      [
+       "Beatle one three five flight level one two zero",
+       0.956159770488739
+      ],
+      [
+       "beetle one two three five flight level one two zero",
+       0.9158491492271423
+      ],
+      [
+       "beetle won three five flight level one two zero",
+       0.956159770488739
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 6,
+     "seed": 1,
+     "text": "0100",
+     "conf": 0.5179885029792786,
+     "words": [
+      [
+       "oh",
+       0.3731080889701843
+      ],
+      [
+       "one",
+       0.0020000040531158447
+      ],
+      [
+       "oh",
+       0.00200001522898674
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "0100",
+       0.5179885029792786
+      ],
+      [
+       "oh one oh zero",
+       0.5179885029792786
+      ],
+      [
+       "oh one oh oh zero",
+       0.5233232378959656
+      ],
+      [
+       "oh one oh one oh zero",
+       0.5617161393165588
+      ],
+      [
+       "oh five oh zero",
+       0.49549204111099243
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 6,
+     "seed": 2,
+     "text": "00",
+     "conf": 0.9874202609062195,
+     "words": [
+      [
+       "oh",
+       0.9473049640655518
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "00",
+       0.9874202609062195
+      ],
+      [
+       "oh zero",
+       0.9874202609062195
+      ],
+      [
+       "oh",
+       0.8108157515525818
+      ],
+      [
+       "oh oh zero",
+       0.9818086624145508
+      ],
+      [
+       "ostrow",
+       0.9874202609062195
+      ]
+     ]
+    },
+    {
+     "phrase": 3,
+     "snr_db": 3,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 3,
+     "snr_db": 3,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 3,
+     "snr_db": 0,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 3,
+     "snr_db": 0,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 4,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "beetle 1 to 3 squawk 46210",
+     "conf": 0.8341895341873169,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "squawk",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "six",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.3209225833415985
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1 to 3 squawk 46210",
+       0.8341895341873169
+      ],
+      [
+       "beetle one to three squawk four six two one oh",
+       0.8341895341873169
+      ],
+      [
+       "beetle one to three squawk for six two one oh",
+       0.8341895341873169
+      ],
+      [
+       "beetle one two three squawk four six two one oh",
+       0.8341895341873169
+      ],
+      [
+       "beetle one two three squawk for six two one oh",
+       0.8341895341873169
+      ]
+     ]
+    },
+    {
+     "phrase": 4,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle 1 to 3 squawk 46210",
+     "conf": 0.8504495620727539,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "squawk",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "six",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.3964291512966156
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1 to 3 squawk 46210",
+       0.8504495620727539
+      ],
+      [
+       "beetle one to three squawk four six two one oh",
+       0.8504495620727539
+      ],
+      [
+       "beetle one to three squawk for six two one oh",
+       0.8504495620727539
+      ],
+      [
+       "beetle one two three squawk four six two one oh",
+       0.8504495620727539
+      ],
+      [
+       "beetle one two three squawk for six two one oh",
+       0.8504495620727539
+      ]
+     ]
+    },
+    {
+     "phrase": 4,
+     "snr_db": 20,
+     "seed": 1,
+     "text": "beetle 123446210",
+     "conf": 0.9329733848571777,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "six",
+       0.5147536993026733
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.8899021744728088
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123446210",
+       0.9329733848571777
+      ],
+      [
+       "beetle one two three four four six two one oh",
+       0.9329733848571777
+      ],
+      [
+       "Beatle one two three four four six two one oh",
+       0.9329733848571777
+      ],
+      [
+       "beetle won two three four four six two one oh",
+       0.9329733848571777
+      ],
+      [
+       "beetle one two three for four six two one oh",
+       0.9329733848571777
+      ]
+     ]
+    },
+    {
+     "phrase": 4,
+     "snr_db": 20,
+     "seed": 2,
+     "text": "beetle 123446210",
+     "conf": 0.8017677664756775,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.002005866263061762
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "six",
+       0.0029611224308609962
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123446210",
+       0.8017677664756775
+      ],
+      [
+       "beetle one two three four four six two one oh",
+       0.8017677664756775
+      ],
+      [
+       "Beatle one two three four four six two one oh",
+       0.8017677664756775
+      ],
+      [
+       "beetle won two three four four six two one oh",
+       0.8017677664756775
+      ],
+      [
+       "beetle one two three for four six two one oh",
+       0.8017733693122864
+      ]
+     ]
+    },
+    {
+     "phrase": 4,
+     "snr_db": 15,
+     "seed": 1,
+     "text": "beetle 123446210",
+     "conf": 0.8964790105819702,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "six",
+       0.408686101436615
+      ],
+      [
+       "two",
+       0.038172733038663864
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123446210",
+       0.8964790105819702
+      ],
+      [
+       "beetle one two three four four six two one oh",
+       0.8964790105819702
+      ],
+      [
+       "Beatle one two three four four six two one oh",
+       0.8964790105819702
+      ],
+      [
+       "beetle won two three four four six two one oh",
+       0.8964790105819702
+      ],
+      [
+       "beetle one two three for four six two one oh",
+       0.8964790105819702
+      ]
+     ]
+    },
+    {
+     "phrase": 4,
+     "snr_db": 15,
+     "seed": 2,
+     "text": "beetle 123446210",
+     "conf": 0.863051176071167,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "six",
+       0.002069929614663124
+      ],
+      [
+       "two",
+       0.0020017577335238457
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123446210",
+       0.863051176071167
+      ],
+      [
+       "beetle one two three four four six two one oh",
+       0.863051176071167
+      ],
+      [
+       "Beatle one two three four four six two one oh",
+       0.863051176071167
+      ],
+      [
+       "beetle won two three four four six two one oh",
+       0.863051176071167
+      ],
+      [
+       "beetle one two three for four six two one oh",
+       0.863051176071167
+      ]
+     ]
+    },
+    {
+     "phrase": 4,
+     "snr_db": 10,
+     "seed": 1,
+     "text": "344210",
+     "conf": 0.5211725831031799,
+     "words": [
+      [
+       "three",
+       0.0020000129006803036
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.0022447877563536167
+      ],
+      [
+       "two",
+       0.0023297134321182966
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "344210",
+       0.5211725831031799
+      ],
+      [
+       "three four four two one oh",
+       0.5211725831031799
+      ],
+      [
+       "three for four two one oh",
+       0.5211614370346069
+      ],
+      [
+       "oh two three four four two one oh",
+       0.6035487055778503
+      ],
+      [
+       "three four four six two one oh",
+       0.636454701423645
+      ]
+     ]
+    },
+    {
+     "phrase": 4,
+     "snr_db": 10,
+     "seed": 2,
+     "text": "12344210",
+     "conf": 0.6522702574729919,
+     "words": [
+      [
+       "one",
+       0.0020000040531158447
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.0020970518235117197
+      ],
+      [
+       "two",
+       0.002489246893674135
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "12344210",
+       0.6522702574729919
+      ],
+      [
+       "one two three four four two one oh",
+       0.6522702574729919
+      ],
+      [
+       "oh one two three four four two one oh",
+       0.7153097987174988
+      ],
+      [
+       "one two three for four two one oh",
+       0.6522659063339233
+      ],
+      [
+       "one two three four four eight two one oh",
+       0.7916436195373535
+      ]
+     ]
+    },
+    {
+     "phrase": 4,
+     "snr_db": 6,
+     "seed": 1,
+     "text": "34400",
+     "conf": 0.8157800436019897,
+     "words": [
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.003782621817663312
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "34400",
+       0.8157800436019897
+      ],
+      [
+       "three four four oh oh",
+       0.8157800436019897
+      ],
+      [
+       "three for four oh oh",
+       0.8157800436019897
+      ],
+      [
+       "three four four oh",
+       0.4810565710067749
+      ],
+      [
+       "three for four oh",
+       0.4810565710067749
+      ]
+     ]
+    },
+    {
+     "phrase": 4,
+     "snr_db": 6,
+     "seed": 2,
+     "text": "00",
+     "conf": 0.944844126701355,
+     "words": [
+      [
+       "oh",
+       0.774639904499054
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "00",
+       0.944844126701355
+      ],
+      [
+       "oh oh",
+       0.944844126701355
+      ],
+      [
+       "oh oh oh",
+       0.9018268585205078
+      ],
+      [
+       "no",
+       0.944844126701355
+      ],
+      [
+       "oh",
+       0.944844126701355
+      ]
+     ]
+    },
+    {
+     "phrase": 4,
+     "snr_db": 3,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 4,
+     "snr_db": 3,
+     "seed": 2,
+     "text": "oh",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "oh",
+       0.9990000128746033
+      ],
+      [
+       "owe",
+       0.9990000128746033
+      ],
+      [
+       "a",
+       0.9990000128746033
+      ],
+      [
+       "au",
+       0.9990000128746033
+      ],
+      [
+       "ooh",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 4,
+     "snr_db": 0,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 4,
+     "snr_db": 0,
+     "seed": 2,
+     "text": "oh",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "oh",
+       0.9990000128746033
+      ],
+      [
+       "owe",
+       0.9990000128746033
+      ],
+      [
+       "a",
+       0.9990000128746033
+      ],
+      [
+       "au",
+       0.9990000128746033
+      ],
+      [
+       "ooh",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "beetle 1 to 3 contact approach 118.5050",
+     "conf": 0.9217726588249207,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "contact",
+       0.9990000128746033
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "decimal",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.47409534454345703
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1 to 3 contact approach 118.5050",
+       0.9217726588249207
+      ],
+      [
+       "beetle one to three contact approach one one eight decimal five zero five oh",
+       0.9217726588249207
+      ],
+      [
+       "beetle one two three contact approach one one eight decimal five zero five oh",
+       0.9217726588249207
+      ],
+      [
+       "Beatle one to three contact approach one one eight decimal five zero five oh",
+       0.9217726588249207
+      ],
+      [
+       "Beatle one two three contact approach one one eight decimal five zero five oh",
+       0.9217726588249207
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle 1 to 3 contact approach 118.5050",
+     "conf": 0.919204592704773,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "contact",
+       0.9990000128746033
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "decimal",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.4785434305667877
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1 to 3 contact approach 118.5050",
+       0.919204592704773
+      ],
+      [
+       "beetle one to three contact approach one one eight decimal five zero five oh",
+       0.919204592704773
+      ],
+      [
+       "beetle one two three contact approach one one eight decimal five zero five oh",
+       0.919204592704773
+      ],
+      [
+       "Beatle one to three contact approach one one eight decimal five zero five oh",
+       0.919204592704773
+      ],
+      [
+       "Beatle one two three contact approach one one eight decimal five zero five oh",
+       0.919204592704773
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 20,
+     "seed": 1,
+     "text": "beetle 123 contact approach 118.5050",
+     "conf": 0.9764116406440735,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "contact",
+       0.9990000128746033
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "decimal",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.8523444533348083
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 contact approach 118.5050",
+       0.9764116406440735
+      ],
+      [
+       "beetle one two three contact approach one one eight decimal five zero five oh",
+       0.9764116406440735
+      ],
+      [
+       "Beatle one two three contact approach one one eight decimal five zero five oh",
+       0.9764116406440735
+      ],
+      [
+       "beetle won two three contact approach one one eight decimal five zero five oh",
+       0.9764116406440735
+      ],
+      [
+       "betel one two three contact approach one one eight decimal five zero five oh",
+       0.9764116406440735
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 20,
+     "seed": 2,
+     "text": "beetle 123 contact approach 118.5050",
+     "conf": 0.9677531719207764,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "contact",
+       0.9990000128746033
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "decimal",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.7930548787117004
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 contact approach 118.5050",
+       0.9677531719207764
+      ],
+      [
+       "beetle one two three contact approach one one eight decimal five zero five oh",
+       0.9677531719207764
+      ],
+      [
+       "Beatle one two three contact approach one one eight decimal five zero five oh",
+       0.9677531719207764
+      ],
+      [
+       "beetle won two three contact approach one one eight decimal five zero five oh",
+       0.9677531719207764
+      ],
+      [
+       "betel one two three contact approach one one eight decimal five zero five oh",
+       0.9677531719207764
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 15,
+     "seed": 1,
+     "text": "beetle 123 contact approach 118.5050",
+     "conf": 0.9402509331703186,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "contact",
+       0.9990000128746033
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "decimal",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.1177627220749855
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 contact approach 118.5050",
+       0.9402509331703186
+      ],
+      [
+       "beetle one two three contact approach one one eight decimal five zero five oh",
+       0.9402509331703186
+      ],
+      [
+       "Beatle one two three contact approach one one eight decimal five zero five oh",
+       0.9402509331703186
+      ],
+      [
+       "beetle won two three contact approach one one eight decimal five zero five oh",
+       0.9402509331703186
+      ],
+      [
+       "betel one two three contact approach one one eight decimal five zero five oh",
+       0.9402509331703186
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 15,
+     "seed": 2,
+     "text": "beetle 123 contact approach 118.5050",
+     "conf": 0.9821408987045288,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "contact",
+       0.9990000128746033
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "decimal",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.8878831267356873
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 contact approach 118.5050",
+       0.9821408987045288
+      ],
+      [
+       "beetle one two three contact approach one one eight decimal five zero five oh",
+       0.9821408987045288
+      ],
+      [
+       "Beatle one two three contact approach one one eight decimal five zero five oh",
+       0.9821408987045288
+      ],
+      [
+       "beetle won two three contact approach one one eight decimal five zero five oh",
+       0.9821408987045288
+      ],
+      [
+       "betel one two three contact approach one one eight decimal five zero five oh",
+       0.9821408987045288
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 10,
+     "seed": 1,
+     "text": "three contact approach 118.5050",
+     "conf": 0.8418758511543274,
+     "words": [
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "contact",
+       0.9990000128746033
+      ],
+      [
+       "approach",
+       0.6314043402671814
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "decimal",
+       0.30845287442207336
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.38142138719558716
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "three contact approach 118.5050",
+       0.8418758511543274
+      ],
+      [
+       "three contact approach one one eight decimal five zero five oh",
+       0.8418758511543274
+      ],
+      [
+       "three contact approached one one eight decimal five zero five oh",
+       0.7843211889266968
+      ],
+      [
+       "three contact approach one one eight decimal five zero five oh oh",
+       0.8370537161827087
+      ],
+      [
+       "three contact approached one one eight decimal five zero five oh oh",
+       0.7791783809661865
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 10,
+     "seed": 2,
+     "text": "contact approach 118.5050",
+     "conf": 0.7726073265075684,
+     "words": [
+      [
+       "contact",
+       0.14431996643543243
+      ],
+      [
+       "approach",
+       0.7977819442749023
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.9990000128746033
+      ],
+      [
+       "decimal",
+       0.39314472675323486
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "contact approach 118.5050",
+       0.7726073265075684
+      ],
+      [
+       "contact approach one one eight decimal five zero five oh",
+       0.7726073265075684
+      ],
+      [
+       "contact approach one one eight decimal five zero five oh oh",
+       0.7640572190284729
+      ],
+      [
+       "contact approached one one eight decimal five zero five oh",
+       0.6902638077735901
+      ],
+      [
+       "contact approached one one eight decimal five zero five oh oh",
+       0.6812350153923035
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 6,
+     "seed": 1,
+     "text": "0011805050",
+     "conf": 0.5756239891052246,
+     "words": [
+      [
+       "oh",
+       0.035496462136507034
+      ],
+      [
+       "oh",
+       0.005222043953835964
+      ],
+      [
+       "one",
+       0.017345203086733818
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "eight",
+       0.7107300162315369
+      ],
+      [
+       "zero",
+       0.0020000587683171034
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.9001679420471191
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "0011805050",
+       0.5756239891052246
+      ],
+      [
+       "oh oh one one eight zero five zero five oh",
+       0.5756239891052246
+      ],
+      [
+       "oh oh one one eight oh five zero five oh",
+       0.5660781860351562
+      ],
+      [
+       "oh one one eight zero five zero five oh",
+       0.5701951384544373
+      ],
+      [
+       "oh oh one one eight to oh five zero five oh",
+       0.5741427540779114
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 6,
+     "seed": 2,
+     "text": "00418050",
+     "conf": 0.5127149820327759,
+     "words": [
+      [
+       "oh",
+       0.00202125939540565
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ],
+      [
+       "four",
+       0.9455440044403076
+      ],
+      [
+       "one",
+       0.017140915617346764
+      ],
+      [
+       "eight",
+       0.6042188405990601
+      ],
+      [
+       "zero",
+       0.0020000040531158447
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.6468871235847473
+      ]
+     ],
+     "alternates": [
+      [
+       "00418050",
+       0.5127149820327759
+      ],
+      [
+       "oh oh four one eight zero five zero",
+       0.5127149820327759
+      ],
+      [
+       "oh four one eight zero five zero",
+       0.4588319957256317
+      ],
+      [
+       "oh oh for one eight zero five zero",
+       0.5128528475761414
+      ],
+      [
+       "oh for one eight zero five zero",
+       0.4589689075946808
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 3,
+     "seed": 1,
+     "text": "30",
+     "conf": 0.7790421843528748,
+     "words": [
+      [
+       "three",
+       0.6494780778884888
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "30",
+       0.7790421843528748
+      ],
+      [
+       "three zero",
+       0.7790421843528748
+      ],
+      [
+       "three zero oh",
+       0.7777708172798157
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 3,
+     "seed": 2,
+     "text": "oh",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "oh",
+       0.9990000128746033
+      ],
+      [
+       "oh oh",
+       0.9403529167175293
+      ],
+      [
+       "zero",
+       0.21564581990242004
+      ],
+      [
+       "owe",
+       0.9990000128746033
+      ],
+      [
+       "a",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 0,
+     "seed": 1,
+     "text": "30",
+     "conf": 0.9989999532699585,
+     "words": [
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "30",
+       0.9989999532699585
+      ],
+      [
+       "three oh",
+       0.9989999532699585
+      ],
+      [
+       "trio",
+       0.9989999532699585
+      ],
+      [
+       "three",
+       0.9989999532699585
+      ],
+      [
+       "frio",
+       0.9989999532699585
+      ]
+     ]
+    },
+    {
+     "phrase": 5,
+     "snr_db": 0,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 6,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "beetle 1 to 3 cleared aisles approach runway 35 write QNH 1013 oh",
+     "conf": 0.8903127908706665,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "cleared",
+       0.9990000128746033
+      ],
+      [
+       "aisles",
+       0.9990000128746033
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "runway",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.6719409823417664
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "write",
+       0.9990000128746033
+      ],
+      [
+       "Q.",
+       0.9990000128746033
+      ],
+      [
+       "N.",
+       0.9990000128746033
+      ],
+      [
+       "H.",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.1388920098543167
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1 to 3 cleared aisles approach runway 35 write QNH 1013 oh",
+       0.8903127908706665
+      ],
+      [
+       "beetle one to three cleared aisles approach runway three five write Q. N. H. one zero one three oh",
+       0.8903127908706665
+      ],
+      [
+       "beetle one two three cleared aisles approach runway three five write Q. N. H. one zero one three oh",
+       0.8903127908706665
+      ],
+      [
+       "beetle one to three cleared isles approach runway three five write Q. N. H. one zero one three oh",
+       0.8903127908706665
+      ],
+      [
+       "beetle one two three cleared isles approach runway three five write Q. N. H. one zero one three oh",
+       0.8903127908706665
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle 1 to 3 cleared aisles approach runway 35 write QNH 1013 oh",
+     "conf": 0.8938609957695007,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "cleared",
+       0.9990000128746033
+      ],
+      [
+       "aisles",
+       0.9990000128746033
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "runway",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.6482766270637512
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "write",
+       0.9990000128746033
+      ],
+      [
+       "Q.",
+       0.9990000128746033
+      ],
+      [
+       "N.",
+       0.9990000128746033
+      ],
+      [
+       "H.",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.1725734919309616
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1 to 3 cleared aisles approach runway 35 write QNH 1013 oh",
+       0.8938609957695007
+      ],
+      [
+       "beetle one to three cleared aisles approach runway three five write Q. N. H. one zero one three oh",
+       0.8938609957695007
+      ],
+      [
+       "beetle one two three cleared aisles approach runway three five write Q. N. H. one zero one three oh",
+       0.8938609957695007
+      ],
+      [
+       "beetle one to three cleared isles approach runway three five write Q. N. H. one zero one three oh",
+       0.8938609957695007
+      ],
+      [
+       "beetle one two three cleared isles approach runway three five write Q. N. H. one zero one three oh",
+       0.8938609957695007
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 20,
+     "seed": 1,
+     "text": "beetle 123 cleared aisles approach runway 35 write UNH 1013 oh",
+     "conf": 0.9408113360404968,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "cleared",
+       0.9990000128746033
+      ],
+      [
+       "aisles",
+       0.7533533573150635
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "runway",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.804240345954895
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "write",
+       0.9990000128746033
+      ],
+      [
+       "U.",
+       0.9990000128746033
+      ],
+      [
+       "N.",
+       0.9990000128746033
+      ],
+      [
+       "H.",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.755770206451416
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 cleared aisles approach runway 35 write UNH 1013 oh",
+       0.9408113360404968
+      ],
+      [
+       "beetle one two three cleared aisles approach runway three five write U. N. H. one zero one three oh",
+       0.9408113360404968
+      ],
+      [
+       "beetle one two three cleared isles approach runway three five write U. N. H. one zero one three oh",
+       0.938250720500946
+      ],
+      [
+       "Beatle one two three cleared aisles approach runway three five write U. N. H. one zero one three oh",
+       0.9408113360404968
+      ],
+      [
+       "beetle one two three cleared isle's approach runway three five write U. N. H. one zero one three oh",
+       0.9263310432434082
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 20,
+     "seed": 2,
+     "text": "beetle 123 cleared aisles approach runway 35 write UNH 1013 oh",
+     "conf": 0.943288266658783,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "cleared",
+       0.9990000128746033
+      ],
+      [
+       "aisles",
+       0.7387174367904663
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "runway",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.7414002418518066
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "write",
+       0.9990000128746033
+      ],
+      [
+       "U.",
+       0.9990000128746033
+      ],
+      [
+       "N.",
+       0.9990000128746033
+      ],
+      [
+       "H.",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.8160555362701416
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 cleared aisles approach runway 35 write UNH 1013 oh",
+       0.943288266658783
+      ],
+      [
+       "beetle one two three cleared aisles approach runway three five write U. N. H. one zero one three oh",
+       0.943288266658783
+      ],
+      [
+       "beetle one two three cleared isles approach runway three five write U. N. H. one zero one three oh",
+       0.9409351944923401
+      ],
+      [
+       "Beatle one two three cleared aisles approach runway three five write U. N. H. one zero one three oh",
+       0.943288266658783
+      ],
+      [
+       "beetle one two three cleared isle's approach runway three five write U. N. H. one zero one three oh",
+       0.9297258853912354
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 15,
+     "seed": 1,
+     "text": "beetle 123 cleared aisles of approach runway 35 write UNH 1013 oh",
+     "conf": 0.892123818397522,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "cleared",
+       0.9990000128746033
+      ],
+      [
+       "aisles",
+       0.9990000128746033
+      ],
+      [
+       "of",
+       0.0020000040531158447
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "runway",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.5162398815155029
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "write",
+       0.6697536706924438
+      ],
+      [
+       "U.",
+       0.002001002198085189
+      ],
+      [
+       "N.",
+       0.9527333974838257
+      ],
+      [
+       "H.",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.8588734269142151
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 cleared aisles of approach runway 35 write UNH 1013 oh",
+       0.892123818397522
+      ],
+      [
+       "beetle one two three cleared aisles of approach runway three five write U. N. H. one zero one three oh",
+       0.892123818397522
+      ],
+      [
+       "beetle one two three cleared aisles of approach runway three five five zero eight one zero one three oh",
+       0.7909992337226868
+      ],
+      [
+       "Beatle one two three cleared aisles of approach runway three five write U. N. H. one zero one three oh",
+       0.892123818397522
+      ],
+      [
+       "beetle won two three cleared aisles of approach runway three five write U. N. H. one zero one three oh",
+       0.892123818397522
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 15,
+     "seed": 2,
+     "text": "beetle 123 cleared aisles of approach runway 3550810130",
+     "conf": 0.7904259562492371,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "cleared",
+       0.9990000128746033
+      ],
+      [
+       "aisles",
+       0.9990000128746033
+      ],
+      [
+       "of",
+       0.0020000040531158447
+      ],
+      [
+       "approach",
+       0.9990000128746033
+      ],
+      [
+       "runway",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.005937582813203335
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.0020000040531158447
+      ],
+      [
+       "zero",
+       0.0020000040531158447
+      ],
+      [
+       "eight",
+       0.0020659605506807566
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 cleared aisles of approach runway 3550810130",
+       0.7904259562492371
+      ],
+      [
+       "beetle one two three cleared aisles of approach runway three five five zero eight one zero one three oh",
+       0.7904259562492371
+      ],
+      [
+       "beetle one two three cleared aisles approach runway three five five zero eight one zero one three oh",
+       0.7256801128387451
+      ],
+      [
+       "beetle one two three cleared isles approach runway three five five zero eight one zero one three oh",
+       0.7257592678070068
+      ],
+      [
+       "Beatle one two three cleared aisles of approach runway three five five zero eight one zero one three oh",
+       0.7904259562492371
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 10,
+     "seed": 1,
+     "text": "beetle 123 cleared aisles of approach 132552840130",
+     "conf": 0.5544353723526001,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.24865585565567017
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "cleared",
+       0.11886561661958694
+      ],
+      [
+       "aisles",
+       0.6054426431655884
+      ],
+      [
+       "of",
+       0.0020000040531158447
+      ],
+      [
+       "approach",
+       0.561448872089386
+      ],
+      [
+       "one",
+       0.012863891199231148
+      ],
+      [
+       "three",
+       0.0020020862575620413
+      ],
+      [
+       "two",
+       0.0033915541134774685
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.0022214807104319334
+      ],
+      [
+       "two",
+       0.00200028158724308
+      ],
+      [
+       "eight",
+       0.2636299729347229
+      ],
+      [
+       "four",
+       0.050723813474178314
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.6218308806419373
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 cleared aisles of approach 132552840130",
+       0.5544353723526001
+      ],
+      [
+       "beetle one two three cleared aisles of approach one three two five five two eight four zero one three oh",
+       0.5544353723526001
+      ],
+      [
+       "beetle one two three cleared aisles of approach one three two five five two eight one zero one three oh",
+       0.5893125534057617
+      ],
+      [
+       "beetle one two three cleared aisles of approach one three two five five zero eight one zero one three oh",
+       0.5811116695404053
+      ],
+      [
+       "Beatle one two three cleared aisles of approach one three two five five two eight four zero one three oh",
+       0.5544353723526001
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 10,
+     "seed": 2,
+     "text": "three cleared aisles of approach runway (355)-281-0130",
+     "conf": 0.620055615901947,
+     "words": [
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "cleared",
+       0.11378544569015503
+      ],
+      [
+       "aisles",
+       0.7070891857147217
+      ],
+      [
+       "of",
+       0.0020000040531158447
+      ],
+      [
+       "approach",
+       0.4029604196548462
+      ],
+      [
+       "runway",
+       0.7423530220985413
+      ],
+      [
+       "three",
+       0.0020000040531158447
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.0020000061485916376
+      ],
+      [
+       "two",
+       0.002000663196668029
+      ],
+      [
+       "eight",
+       0.2539445459842682
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.7701506018638611
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "three cleared aisles of approach runway (355)-281-0130",
+       0.620055615901947
+      ],
+      [
+       "three cleared aisles of approach runway three five five two eight one zero one three oh",
+       0.620055615901947
+      ],
+      [
+       "three cleared aisles of approach runway three five five zero eight one zero one three oh",
+       0.6079079508781433
+      ],
+      [
+       "three cleared aisles and conway three five five two eight one zero one three oh",
+       0.5863333940505981
+      ],
+      [
+       "three cleared aisles of approach runway three five five two eight four zero one three oh",
+       0.5765494108200073
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 6,
+     "seed": 1,
+     "text": "005500840130",
+     "conf": 0.3998441994190216,
+     "words": [
+      [
+       "oh",
+       0.002000609412789345
+      ],
+      [
+       "oh",
+       0.002395711839199066
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.01268284022808075
+      ],
+      [
+       "oh",
+       0.8761298656463623
+      ],
+      [
+       "oh",
+       0.0010000000474974513
+      ],
+      [
+       "eight",
+       0.05266570672392845
+      ],
+      [
+       "four",
+       0.8289452791213989
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.0020030883606523275
+      ],
+      [
+       "three",
+       0.07788444310426712
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "005500840130",
+       0.3998441994190216
+      ],
+      [
+       "oh oh five five oh oh eight four zero one three oh",
+       0.3998441994190216
+      ],
+      [
+       "oh oh five five oh eight four zero one three oh",
+       0.38618481159210205
+      ],
+      [
+       "oh oh five one oh eight four zero one three oh",
+       0.4017334282398224
+      ],
+      [
+       "oh oh five oh eight four zero one three oh",
+       0.3369024693965912
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 6,
+     "seed": 2,
+     "text": "000500810130",
+     "conf": 0.39533090591430664,
+     "words": [
+      [
+       "oh",
+       0.0020001139491796494
+      ],
+      [
+       "oh",
+       0.5767896175384521
+      ],
+      [
+       "oh",
+       0.0020000094082206488
+      ],
+      [
+       "five",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.002409324049949646
+      ],
+      [
+       "oh",
+       0.0020000040531158447
+      ],
+      [
+       "eight",
+       0.010257086716592312
+      ],
+      [
+       "one",
+       0.22518709301948547
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.01583886332809925
+      ],
+      [
+       "three",
+       0.7880451679229736
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "000500810130",
+       0.39533090591430664
+      ],
+      [
+       "oh oh oh five oh oh eight one zero one three oh",
+       0.39533090591430664
+      ],
+      [
+       "oh oh oh five oh eight one zero one three oh",
+       0.371025413274765
+      ],
+      [
+       "oh oh oh five five oh eight one zero one three oh",
+       0.3953174352645874
+      ],
+      [
+       "oh three five oh eight one zero one three oh",
+       0.36392390727996826
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 3,
+     "seed": 1,
+     "text": "0050",
+     "conf": 0.3037365972995758,
+     "words": [
+      [
+       "oh",
+       0.020424889400601387
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ],
+      [
+       "five",
+       0.8513548374176025
+      ],
+      [
+       "oh",
+       0.1871442347764969
+      ]
+     ],
+     "alternates": [
+      [
+       "0050",
+       0.3037365972995758
+      ],
+      [
+       "oh oh five oh",
+       0.3037365972995758
+      ],
+      [
+       "oh oh five oh oh",
+       0.4594215750694275
+      ],
+      [
+       "oh five oh",
+       0.1745719313621521
+      ],
+      [
+       "oh five oh oh",
+       0.3288971781730652
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 3,
+     "seed": 2,
+     "text": "050",
+     "conf": 0.3107738494873047,
+     "words": [
+      [
+       "oh",
+       0.00448631914332509
+      ],
+      [
+       "five",
+       0.8926150798797607
+      ],
+      [
+       "oh",
+       0.4530065953731537
+      ]
+     ],
+     "alternates": [
+      [
+       "050",
+       0.3107738494873047
+      ],
+      [
+       "oh five oh",
+       0.3107738494873047
+      ],
+      [
+       "oh five oh oh",
+       0.5382392406463623
+      ],
+      [
+       "oh oh five oh",
+       0.36748775839805603
+      ],
+      [
+       "oh oh five oh oh",
+       0.5963063836097717
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 0,
+     "seed": 1,
+     "text": "00",
+     "conf": 0.999000072479248,
+     "words": [
+      [
+       "oh",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "00",
+       0.999000072479248
+      ],
+      [
+       "oh oh",
+       0.999000072479248
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ],
+      [
+       "oh oh oh",
+       0.9990000128746033
+      ],
+      [
+       "no",
+       0.999000072479248
+      ]
+     ]
+    },
+    {
+     "phrase": 6,
+     "snr_db": 0,
+     "seed": 2,
+     "text": "00",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "oh",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "00",
+       0.9990000128746033
+      ],
+      [
+       "oh oh",
+       0.9990000128746033
+      ],
+      [
+       "oh oh oh",
+       0.9872588515281677
+      ],
+      [
+       "no",
+       0.9990000128746033
+      ],
+      [
+       "oh",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 30,
+     "seed": 1,
+     "text": "beetle 1 to 3 turn left heading 200",
+     "conf": 0.9180514216423035,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.7515723705291748
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1 to 3 turn left heading 200",
+       0.9180514216423035
+      ],
+      [
+       "beetle one to three turn left heading two zero zero",
+       0.9180514216423035
+      ],
+      [
+       "beetle one to three turn left heading to zero zero",
+       0.9180514216423035
+      ],
+      [
+       "beetle one two three turn left heading two zero zero",
+       0.9180514216423035
+      ],
+      [
+       "beetle one two three turn left heading to zero zero",
+       0.9180514216423035
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 30,
+     "seed": 2,
+     "text": "beetle 1 to 3 turn left heading 200",
+     "conf": 0.9124256372451782,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "to",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.7343767881393433
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 1 to 3 turn left heading 200",
+       0.9124256372451782
+      ],
+      [
+       "beetle one to three turn left heading two zero zero",
+       0.9124256372451782
+      ],
+      [
+       "beetle one two three turn left heading two zero zero",
+       0.9124256372451782
+      ],
+      [
+       "beetle one to three turn left heading to zero zero",
+       0.8649178147315979
+      ],
+      [
+       "beetle one two three turn left heading to zero zero",
+       0.8649178147315979
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 20,
+     "seed": 1,
+     "text": "beetle 123 turn left heading 200",
+     "conf": 0.999000072479248,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 turn left heading 200",
+       0.999000072479248
+      ],
+      [
+       "beetle one two three turn left heading two zero zero",
+       0.999000072479248
+      ],
+      [
+       "Beatle one two three turn left heading two zero zero",
+       0.999000072479248
+      ],
+      [
+       "beetle won two three turn left heading two zero zero",
+       0.999000072479248
+      ],
+      [
+       "betel one two three turn left heading two zero zero",
+       0.999000072479248
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 20,
+     "seed": 2,
+     "text": "beetle 123 turn left heading 200",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 turn left heading 200",
+       0.9990000128746033
+      ],
+      [
+       "beetle one two three turn left heading two zero zero",
+       0.9990000128746033
+      ],
+      [
+       "Beatle one two three turn left heading two zero zero",
+       0.9990000128746033
+      ],
+      [
+       "beetle won two three turn left heading two zero zero",
+       0.9990000128746033
+      ],
+      [
+       "betel one two three turn left heading two zero zero",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 15,
+     "seed": 1,
+     "text": "beetle 123 turn left heading 200",
+     "conf": 0.999000072479248,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 turn left heading 200",
+       0.999000072479248
+      ],
+      [
+       "beetle one two three turn left heading two zero zero",
+       0.999000072479248
+      ],
+      [
+       "Beatle one two three turn left heading two zero zero",
+       0.999000072479248
+      ],
+      [
+       "beetle won two three turn left heading two zero zero",
+       0.999000072479248
+      ],
+      [
+       "betel one two three turn left heading two zero zero",
+       0.999000072479248
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 15,
+     "seed": 2,
+     "text": "beetle 123 turn left heading 200",
+     "conf": 0.9990000128746033,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 turn left heading 200",
+       0.9990000128746033
+      ],
+      [
+       "beetle one two three turn left heading two zero zero",
+       0.9990000128746033
+      ],
+      [
+       "Beatle one two three turn left heading two zero zero",
+       0.9990000128746033
+      ],
+      [
+       "beetle won two three turn left heading two zero zero",
+       0.9990000128746033
+      ],
+      [
+       "betel one two three turn left heading two zero zero",
+       0.9990000128746033
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 10,
+     "seed": 1,
+     "text": "beetle 123 turn left heading 200",
+     "conf": 0.9735695123672485,
+     "words": [
+      [
+       "beetle",
+       0.9990000128746033
+      ],
+      [
+       "one",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.6578066945075989
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "beetle 123 turn left heading 200",
+       0.9735695123672485
+      ],
+      [
+       "beetle one two three turn left heading two zero zero",
+       0.9735695123672485
+      ],
+      [
+       "Beatle one two three turn left heading two zero zero",
+       0.9735695123672485
+      ],
+      [
+       "beetle won two three turn left heading two zero zero",
+       0.9735695123672485
+      ],
+      [
+       "betel one two three turn left heading two zero zero",
+       0.9735695123672485
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 10,
+     "seed": 2,
+     "text": "three turn left heading 200",
+     "conf": 0.9850809574127197,
+     "words": [
+      [
+       "three",
+       0.9990000128746033
+      ],
+      [
+       "turn",
+       0.9990000128746033
+      ],
+      [
+       "left",
+       0.9990000128746033
+      ],
+      [
+       "heading",
+       0.9990000128746033
+      ],
+      [
+       "two",
+       0.7902146577835083
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "three turn left heading 200",
+       0.9850809574127197
+      ],
+      [
+       "three turn left heading two zero zero",
+       0.9850809574127197
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 6,
+     "seed": 1,
+     "text": "zero and 00",
+     "conf": 0.5761661529541016,
+     "words": [
+      [
+       "zero",
+       0.002000004518777132
+      ],
+      [
+       "and",
+       0.0020047712605446577
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "zero and 00",
+       0.5761661529541016
+      ],
+      [
+       "zero and zero zero",
+       0.5761661529541016
+      ],
+      [
+       "zero seven two zero zero",
+       0.5990716218948364
+      ],
+      [
+       "zero and two zero zero",
+       0.6001434922218323
+      ],
+      [
+       "three oh and zero zero",
+       0.5744871497154236
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 6,
+     "seed": 2,
+     "text": "0000",
+     "conf": 0.5666728019714355,
+     "words": [
+      [
+       "oh",
+       0.002000707434490323
+      ],
+      [
+       "oh",
+       0.0020002671517431736
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "0000",
+       0.5666728019714355
+      ],
+      [
+       "oh oh zero zero",
+       0.5666728019714355
+      ],
+      [
+       "zero and zero zero",
+       0.5666933059692383
+      ],
+      [
+       "zero zero zero",
+       0.5617192387580872
+      ],
+      [
+       "oh and zero zero",
+       0.5667043924331665
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 3,
+     "seed": 1,
+     "text": "zero and zero",
+     "conf": 0.745378315448761,
+     "words": [
+      [
+       "zero",
+       0.0020000215154141188
+      ],
+      [
+       "and",
+       0.8551889061927795
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "zero and zero",
+       0.745378315448761
+      ],
+      [
+       "oh and zero",
+       0.7435805201530457
+      ],
+      [
+       "three oh and zero",
+       0.8074454069137573
+      ],
+      [
+       "oh oh and zero",
+       0.741523802280426
+      ],
+      [
+       "zero zero",
+       0.5704649090766907
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 3,
+     "seed": 2,
+     "text": "000",
+     "conf": 0.5749366879463196,
+     "words": [
+      [
+       "zero",
+       0.0020000527147203684
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ],
+      [
+       "zero",
+       0.9990000128746033
+      ]
+     ],
+     "alternates": [
+      [
+       "000",
+       0.5749366879463196
+      ],
+      [
+       "zero zero zero",
+       0.5749366879463196
+      ],
+      [
+       "oh zero zero",
+       0.5749512910842896
+      ],
+      [
+       "oh oh zero zero",
+       0.671517014503479
+      ],
+      [
+       "oh oh oh zero zero",
+       0.6856485605239868
+      ]
+     ]
+    },
+    {
+     "phrase": 7,
+     "snr_db": 0,
+     "seed": 1,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    },
+    {
+     "phrase": 7,
+     "snr_db": 0,
+     "seed": 2,
+     "text": null,
+     "conf": 0,
+     "words": [],
+     "alternates": []
+    }
+   ]
+  }
+ }
+}

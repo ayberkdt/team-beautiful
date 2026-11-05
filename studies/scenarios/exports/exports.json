@@ -1,0 +1,33 @@
+{
+ "ge": [
+  {
+   "file": "ge_bracket_0p67kg.stl",
+   "iso_level": 0.463,
+   "triangles": 2592,
+   "open": 0,
+   "non_manifold": 5,
+   "edges": 3883,
+   "mass_from_stl_kg": 0.6655443212258862,
+   "mass_topology_kg": 0.66720710931875
+  },
+  {
+   "file": "ge_bracket_0p35kg.stl",
+   "iso_level": 0.382,
+   "triangles": 1912,
+   "open": 0,
+   "non_manifold": 8,
+   "edges": 2860,
+   "mass_from_stl_kg": 0.34046763751724185,
+   "mass_topology_kg": 0.34900064179750007
+  }
+ ],
+ "l_bracket": {
+  "path": "D:\\Masaustu\\Ideathon 2026\\studies\\scenarios\\exports\\l_bracket_35pct.dxf",
+  "regions": 1,
+  "holes": 3,
+  "area_mm2": 5137.923729289229,
+  "mass_from_dxf_g": 137.18256357202245,
+  "mass_thresholded_g": 138.62640000000002,
+  "note": "extrude 10 mm in Discovery; the bolted top edge and the load point are at the design-space edges as in studies/cards/rehearsal_l_bracket.json"
+ }
+}

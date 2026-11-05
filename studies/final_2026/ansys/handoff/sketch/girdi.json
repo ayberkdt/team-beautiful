@@ -1,0 +1,26 @@
+{
+ "_not": "aerokit.bracket hand-off of 'Sketch-type mounting bracket (rehearsal, invented dimensions)'; every number from the files in this folder.",
+ "parca_adi": "Sketch-type mounting bracket (rehearsal, invented dimensions)",
+ "sonuc": "result.json",
+ "yukler": "yukler.json",
+ "geometri": {
+  "dosya": "parca.stl",
+  "birim": "mm",
+  "hizala": "yok",
+  "yukari": "z"
+ },
+ "yogunluk": {
+  "dosya": "yogunluk.json",
+  "anahtar": "runs",
+  "kok_mm": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "yukari": "z",
+  "voksel_mm": 1.7
+ },
+ "malzeme": "ti64_lpbf",
+ "kaynak": "aerokit.bracket pipeline · studies/final_2026/ansys/inputs/sketch_bracket.json",
+ "gerilme_csv": "gerilme.txt"
+}

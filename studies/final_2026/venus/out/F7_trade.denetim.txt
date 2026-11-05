@@ -1,0 +1,5 @@
+figür denetimi: 0 HATA · 1 UYARI · 1 BİLGİ · TESLİM EDİLEBİLİR
+  [UYARI] paylasimsiz-eksen  'rotordiameter' 2 panelde farklı x aralığında: 1.37…2.93, 2…2.92
+          → karşılaştırılan panellerde sharex=True ya da ortak set_xlim; bilinçli fark (yakınlaştırma) ise altyazıda söyle  [06 T5 + §7a: Wilke2019Ch21 §21.1; UrbanStyle; Qu2018 C1.1; mekanizma (tek grafik, dolaylı): Correll2020, Witt2019 — dar aralık aynı etkiyi büyük gösterir; serbest/ortak ölçek deneyi yok]
+  [BİLGİ] dogrudan-etiket    eksen 0: 3 çizgi serisi lejantla adlandırılmış
+          → çizgi sonlarına doğrudan etiket: datawiz.etiket.cizgi_sonu(ax)  [Mayer2017 mekânsal bitişiklik d=0.79; Sweller2019]

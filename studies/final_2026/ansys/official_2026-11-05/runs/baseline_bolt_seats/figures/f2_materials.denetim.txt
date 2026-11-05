@@ -1,0 +1,3 @@
+figür denetimi: 0 HATA · 0 UYARI · 1 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] birim              eksen 0: y etiketi birim içermiyor: 'Material'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [APSStyleGuide (nicelik (birim)); NatureFigGuide; Wilke2019 W6]

@@ -1,0 +1,294 @@
+{
+ "surum": 1,
+ "ad": "G3_eco_audit_panel_cabin_stiffness",
+ "boyut_pt": [
+  510.2,
+  280.6
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  501.7,
+  275.8
+ ],
+ "hedef": "genel-cift",
+ "ortam": "makale",
+ "boyut_mm": [
+  180.0,
+  99.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   8.1
+  ],
+  "eksen_adi": [
+   9.0
+  ],
+  "baslik": [
+   9.0
+  ],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   8.1
+  ]
+ },
+ "punto_tepe": {
+  "tik": 8.1,
+  "eksen_adi": 9.0,
+  "baslik": 9.0,
+  "metin": 8.1
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    109.2,
+    29.6,
+    305.2,
+    242.8
+   ],
+   "baslik": "(a) Whole life",
+   "seriler": [
+    {
+     "etiket": "Material",
+     "tur": "cubuk",
+     "renk": "#f3cb91",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Manufacture",
+     "tur": "cubuk",
+     "renk": "#a7d6f4",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Use (fuel)",
+     "tur": "cubuk",
+     "renk": "#bebebe",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Life CO₂ (t)",
+    "nicelik": "Life CO₂",
+    "birim": "t",
+    "bicim": "parantez",
+    "anahtar": "lifeco₂",
+    "harf": "tek",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     55.74870865439999
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "20",
+     "40"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     187.1,
+     3.1,
+     227.4,
+     11.3
+    ]
+   },
+   "y": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.58,
+     5.58
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "CFRP QI IM7/8552 autoclave",
+     "CF/PEEK 5HS press",
+     "Flax/epoxy autoclave",
+     "Al-Li 2050-T84 sheet",
+     "Glass/phenolic 7781 autoclave",
+     "2024-T3 sheet"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "CFRP QI IM7/8552 autoclave",
+     "CF/PEEK 5HS press",
+     "Flax/epoxy autoclave",
+     "Al-Li 2050-T84 sheet",
+     "Glass/phenolic 7781 autoclave",
+     "2024-T3 sheet"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": false
+   },
+   "cerceve": [
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  },
+  {
+   "konum_pt": [
+    311.2,
+    29.6,
+    507.2,
+    242.8
+   ],
+   "baslik": "(b) Production, end of life apart",
+   "seriler": [
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#f3cb91",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#a7d6f4",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "End-of-life potential",
+     "tur": "cubuk",
+     "renk": "#ffffff",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Production CO₂ and end-of-life potential (kg)",
+    "nicelik": "Production CO₂ and end-of-life potential",
+    "birim": "kg",
+    "bicim": "parantez",
+    "anahtar": "productionco₂andendoflifepotential",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -32.57997022608104,
+     85.97848153013332
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "-20",
+     "0",
+     "20",
+     "40",
+     "60",
+     "80"
+    ],
+    "eksi": "unicode",
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     325.1,
+     3.0,
+     493.4,
+     11.3
+    ]
+   },
+   "y": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.58,
+     5.58
+    ],
+    "gorunur": false,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": false
+   },
+   "cerceve": [
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

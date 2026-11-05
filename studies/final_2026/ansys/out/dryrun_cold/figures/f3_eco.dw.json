@@ -1,0 +1,176 @@
+{
+ "surum": 1,
+ "ad": "f3_eco",
+ "boyut_pt": [
+  249.4,
+  149.7
+ ],
+ "metin_kutusu_pt": [
+  14.4,
+  7.8,
+  193.6,
+  129.5
+ ],
+ "hedef": "genel-tek",
+ "ortam": "makale",
+ "boyut_mm": [
+  88.0,
+  52.8
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   8.1
+  ],
+  "eksen_adi": [
+   9.0
+  ],
+  "baslik": [],
+  "lejant": [
+   8.1
+  ],
+  "panel": [],
+  "metin": [
+   8.1
+  ]
+ },
+ "punto_tepe": {
+  "tik": 8.1,
+  "eksen_adi": 9.0,
+  "lejant": 8.1,
+  "metin": 8.1
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    73.7,
+    31.5,
+    209.2,
+    134.4
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "baseline",
+     "tur": "sacilim",
+     "renk": "#919191",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 4.0
+    },
+    {
+     "etiket": "redesign",
+     "tur": "sacilim",
+     "renk": "#009e73",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 6.38
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "CO₂e (kg)",
+    "nicelik": "CO₂e",
+    "birim": "kg",
+    "bicim": "parantez",
+    "anahtar": "co₂e",
+    "harf": "tek",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.001,
+     21835.83832962493
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0,
+     1,
+     3
+    ],
+    "ondalik_isareti": ".",
+    "tikler": [
+     "0.001",
+     "0.1",
+     "10",
+     "1,000"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     123.9,
+     7.8,
+     159.0,
+     16.1
+    ]
+   },
+   "y": {
+    "ham": "Life phase",
+    "nicelik": "Life phase",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "lifephase",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.315,
+     3.315
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "material",
+     "manufacture",
+     "transport",
+     "use"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "material",
+     "manufacture",
+     "transport",
+     "use"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     14.4,
+     63.8,
+     22.5,
+     102.1
+    ]
+   },
+   "lejant": [
+    "baseline",
+    "redesign"
+   ],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": false
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

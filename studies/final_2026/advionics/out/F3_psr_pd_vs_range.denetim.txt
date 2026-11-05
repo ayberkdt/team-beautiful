@@ -1,0 +1,5 @@
+figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] birim              eksen 0: y etiketi birim içermiyor: 'Probability of detection per scan'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [Kosslyn2012; TufteNotebookPP (birimler kaybolmasın)]
+  [BİLGİ] banking-45         eksen 0: çizim alanı y/g = 0.46; 45° için ≈ 0.99
+          → eğim karşılaştırması amaçsa oranı yaklaştır (ax.set_box_aspect)  [Kosara2013b]

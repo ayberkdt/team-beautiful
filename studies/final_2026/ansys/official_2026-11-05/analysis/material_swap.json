@@ -1,0 +1,74 @@
+[
+ {
+  "material": "Structural steel, S275N, normalized",
+  "mass_kg": 152.28691079669323,
+  "disp_mm_23C": 0.17788742777920735,
+  "disp_ok": true,
+  "util_23C": 0.42365853658536584,
+  "Fy_min_MPa": 205,
+  "util_300C": 0.5431519699812383,
+  "disp_mm_300C": 0.22235928472400918,
+  "Tmax_C": [
+   471,
+   501
+  ],
+  "K1c": [
+   26.4,
+   38.1
+  ],
+  "cost_USD": 192.0989371439624,
+  "co2_total_first_life": 52713.90623714359,
+  "co2_material": 461.6629881944621,
+  "co2_manufacture": 911.8311517401892,
+  "co2_use": 51314.59746205375,
+  "co2_with_eol": 52376.89731815693
+ },
+ {
+  "material": "Aluminum, 2618, T6",
+  "mass_kg": 53.34682536009055,
+  "disp_mm_23C": 0.5055723866857365,
+  "disp_ok": true,
+  "util_23C": 0.27140624999999996,
+  "Fy_min_MPa": 320,
+  "util_300C": null,
+  "disp_mm_300C": null,
+  "Tmax_C": [
+   250,
+   300
+  ],
+  "K1c": [
+   31,
+   34
+  ],
+  "cost_USD": 175.7824441925234,
+  "co2_total_first_life": 18895.433899328033,
+  "co2_material": 671.4074695134095,
+  "co2_manufacture": 239.2371676480659,
+  "co2_use": 17975.74627333611,
+  "co2_with_eol": 18378.551842721856
+ },
+ {
+  "material": "Titanium, near-alpha alloy, Ti-8Al-1Mo-1V, single annealed",
+  "mass_kg": 84.87361427440216,
+  "disp_mm_23C": 0.3016906455921392,
+  "disp_ok": true,
+  "util_23C": 0.11457783641160948,
+  "Fy_min_MPa": 758,
+  "util_300C": 0.16775671509752485,
+  "disp_mm_300C": 0.3471699028678242,
+  "Tmax_C": [
+   407,
+   455
+  ],
+  "K1c": [
+   65,
+   75
+  ],
+  "cost_USD": 2087.4423438648555,
+  "co2_total_first_life": 32181.263137836515,
+  "co2_material": 2996.60355326226,
+  "co2_manufacture": 571.2593242941074,
+  "co2_use": 28599.013065902553,
+  "co2_with_eol": 30055.15011860481
+ }
+]

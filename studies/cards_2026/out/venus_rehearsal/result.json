@@ -1,0 +1,141 @@
+{
+ "card": "LuGus rehearsal: which Venus drone, at which altitude, on which power",
+ "note": "Rehearsal card. Masses, areas, efficiencies and figures of merit are ASSUMPTIONS for a 10 kg class daughter drone; replace with the challenge's own numbers.",
+ "altitude_km": 55.0,
+ "T_C": 27.0,
+ "p_bar": 0.5313999999999999,
+ "rho": 0.9251990215667779,
+ "g": 8.710946772383345,
+ "wind_ms": 72.5,
+ "solar_avg_W": 172.9695921522719,
+ "solar_peak_W": 543.4000000000001,
+ "solar_note": "bifacial: underside collects cloud-reflected light (~0.9 of the downward flux at 60 km, Landis 2002 via the research agent); day-average factor 1/pi",
+ "panel_m2": 1.0,
+ "concepts": [
+  {
+   "concept": "Battery quadrotor",
+   "power_W": 1235.705106530583,
+   "specific_power_W_kg": 123.57051065305829,
+   "buoyancy_share": 0.0,
+   "panel_m2_for_day_average": 7.144059780419343
+  },
+  {
+   "concept": "Helium-assisted quad",
+   "power_W": 148.96132003858585,
+   "specific_power_W_kg": 14.896132003858586,
+   "buoyancy_share": 0.7559723071745339,
+   "panel_m2_for_day_average": 0.8611994639349636
+  },
+  {
+   "concept": "Solar aeroplane",
+   "power_W": 105.00088382821531,
+   "specific_power_W_kg": 10.50008838282153,
+   "buoyancy_share": 0.0,
+   "panel_m2_for_day_average": 0.6070482246138322,
+   "airspeed_ms": 10.848510261248908
+  }
+ ],
+ "simulator": [
+  {
+   "name": "Battery quadrotor",
+   "kind": "rotor",
+   "mass_kg": 10.0,
+   "weight_N": 87.10946772383345,
+   "buoyant_force_N": 0.0,
+   "rotor_disk_area_m2": 1.13,
+   "wing_area_m2": null,
+   "power_to_stay_aloft_W": 1235.705106530583,
+   "air_density_kg_m3": 0.9251990215667779,
+   "gravity_m_s2": 8.710946772383345,
+   "altitude_m": 55000.0,
+   "zonal_wind_m_s": 72.5
+  },
+  {
+   "name": "Helium-assisted quad",
+   "kind": "rotor",
+   "mass_kg": 10.0,
+   "weight_N": 87.10946772383345,
+   "buoyant_force_N": 65.85234529193197,
+   "rotor_disk_area_m2": 1.13,
+   "wing_area_m2": null,
+   "power_to_stay_aloft_W": 148.96132003858585,
+   "air_density_kg_m3": 0.9251990215667779,
+   "gravity_m_s2": 8.710946772383345,
+   "altitude_m": 55000.0,
+   "zonal_wind_m_s": 72.5
+  },
+  {
+   "name": "Solar aeroplane",
+   "kind": "wing",
+   "mass_kg": 10.0,
+   "weight_N": 87.10946772383345,
+   "buoyant_force_N": 0.0,
+   "rotor_disk_area_m2": null,
+   "wing_area_m2": 2.0,
+   "power_to_stay_aloft_W": 105.00088382821531,
+   "air_density_kg_m3": 0.9251990215667779,
+   "gravity_m_s2": 8.710946772383345,
+   "altitude_m": 55000.0,
+   "zonal_wind_m_s": 72.5
+  }
+ ],
+ "station_keeping_W": 335134.1934435409,
+ "envelope_m3": 12.0,
+ "mission": {
+  "float_altitude_km": 52.42158833901331,
+  "duration_h": 3.3497222222222223,
+  "drift_km": 768.8586204213207,
+  "battery_min_Wh": 135.22486627529847,
+  "battery_end_Wh": 180.6514610248955,
+  "battery_Wh": 500.0,
+  "power_max_W": 484.94067615902753,
+  "hull_max_C": 88.53400528794833,
+  "temp_limit_C": 70.0,
+  "time_over_temp_min": 65.75833333333334,
+  "brownout": false,
+  "events": [
+   {
+    "t_s": 600.5,
+    "event": "held 55.0 km for 600 s"
+   },
+   {
+    "t_s": 3629.5,
+    "event": "reached 48.0 km"
+   },
+   {
+    "t_s": 5430.0,
+    "event": "held 48.0 km for 1800 s"
+   },
+   {
+    "t_s": 8458.5,
+    "event": "reached 55.0 km"
+   },
+   {
+    "t_s": 12059.0,
+    "event": "held 55.0 km for 3600 s"
+   }
+  ],
+  "steps": [
+   {
+    "hold": 55,
+    "for_s": 600
+   },
+   {
+    "goto": 48,
+    "rate": 3
+   },
+   {
+    "hold": 48,
+    "for_s": 1800
+   },
+   {
+    "goto": 55,
+    "rate": 3
+   },
+   {
+    "hold": 55,
+    "for_s": 3600
+   }
+  ]
+ }
+}

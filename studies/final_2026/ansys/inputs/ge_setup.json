@@ -1,0 +1,211 @@
+{
+ "_about": "GE-type bracket rehearsal set-up: roles from aerokit.bracket.features, loads from Carter et al. 2014 Fig. 2 (read by sub-agent), LC4 axis as in scripts/ge_bracket_preview.py [Y].",
+ "name": "GE-type engine bracket (envelope approximation)",
+ "units": {
+  "length": "mm",
+  "force": "N",
+  "moment": "N m"
+ },
+ "voxel_mm": 3.0,
+ "origin_mm": [
+  -163.34,
+  -74.6,
+  -15.24
+ ],
+ "bbox_mm": [
+  [
+   -163.34,
+   -74.6,
+   -0.24
+  ],
+  [
+   16.66,
+   33.4,
+   62.76
+  ]
+ ],
+ "temperature_C": 300.0,
+ "holes": [
+  {
+   "id": "H1",
+   "axis": "x",
+   "center_mm": [
+    -74.016,
+    -56.8,
+    44.6
+   ],
+   "diameter_mm": 19.05,
+   "segments_mm": [
+    [
+     -92.005,
+     -84.561
+    ],
+    [
+     -63.471,
+     -56.028
+    ]
+   ],
+   "roundness": 0.0,
+   "role": "load"
+  },
+  {
+   "id": "H2",
+   "axis": "z",
+   "center_mm": [
+    -148.1,
+    -33.6,
+    7.5
+   ],
+   "diameter_mm": 14.17,
+   "segments_mm": [
+    [
+     0.023,
+     14.977
+    ]
+   ],
+   "roundness": 0.0,
+   "role": "support"
+  },
+  {
+   "id": "H3",
+   "axis": "z",
+   "center_mm": [
+    -148.1,
+    18.5,
+    7.5
+   ],
+   "diameter_mm": 14.17,
+   "segments_mm": [
+    [
+     0.023,
+     14.977
+    ]
+   ],
+   "roundness": 0.0,
+   "role": "support"
+  },
+  {
+   "id": "H4",
+   "axis": "z",
+   "center_mm": [
+    0.0,
+    -38.1,
+    7.5
+   ],
+   "diameter_mm": 14.17,
+   "segments_mm": [
+    [
+     0.023,
+     14.977
+    ]
+   ],
+   "roundness": 0.0,
+   "role": "support"
+  },
+  {
+   "id": "H5",
+   "axis": "z",
+   "center_mm": [
+    0.0,
+    0.0,
+    7.5
+   ],
+   "diameter_mm": 14.17,
+   "segments_mm": [
+    [
+     0.023,
+     14.977
+    ]
+   ],
+   "roundness": 0.0,
+   "role": "support"
+  }
+ ],
+ "supports": [
+  {
+   "hole": "H2",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H3",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H4",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H5",
+   "type": "fixed_bore"
+  }
+ ],
+ "load_cases": [
+  {
+   "name": "LC1 vertical 8000 lbf",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "bearing",
+     "force_N": [
+      0,
+      0,
+      35585.776000000005
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LC2 horizontal 8500 lbf",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "bearing",
+     "force_N": [
+      0,
+      -37809.887,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LC3 42 deg 9500 lbf",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "bearing",
+     "force_N": [
+      0,
+      -28276.19409874873,
+      31403.895037809707
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LC4 torsion 5000 lbf in",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "moment",
+     "moment_Nm": [
+      0,
+      0,
+      -564.924
+     ]
+    }
+   ]
+  }
+ ],
+ "non_design": {
+  "ring_factor": 0.75,
+  "ring_min_voxels": 2,
+  "boxes_mm": []
+ },
+ "build_direction": "+z",
+ "load_case_weights": null,
+ "design_criteria": {
+  "limit_to_ultimate": 1.0,
+  "_about": "GE challenge criterion: no yield under each load case (Carter et al. 2014) - loads treated as ultimate design loads, factor 1.0 [Y reading]"
+ }
+}

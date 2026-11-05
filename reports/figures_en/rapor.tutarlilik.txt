@@ -1,0 +1,9 @@
+set tutarlılığı (6 figür): 0 HATA · 1 UYARI · 3 BİLGİ · SET TUTARLI
+  [UYARI] tik-yonu           tik yonu figürden figüre değişiyor — 3: F1_evre_paylari, F2_kutle_co2, F3_tornado, F4_btf_kirilma … · None: F5_hacim_taramasi
+          → aynı tema her figürde: Seti.figur(...)  [06 T6: AIAAFig; ElsevierSizing; Kosslyn2012 (anlamsız görsel değişim)]
+  [BİLGİ] nicelik-aralik     'lifecycleco₂' (x) aralığı figürden figüre farklı — 5…28.29: F2_kutle_co2 · 0…29.13: F1_evre_paylari
+          → figürler karşılaştırılacaksa ortak sınır: Seti.nicelik(ad, sinir=(a, b))  [06 T5 + §7a: Wilke2019Ch21 §21.1; UrbanStyle; Qu2018 C1.1; mekanizma (tek grafik, dolaylı): Correll2020, Witt2019 — dar aralık aynı etkiyi büyük gösterir; serbest/ortak ölçek deneyi yok]
+  [BİLGİ] nicelik-aralik     'partmass' (y) aralığı figürden figüre farklı — 0.45…1.4: F2_kutle_co2 · 0.1…0.3375: F6_prova_kutle_sapma
+          → figürler karşılaştırılacaksa ortak sınır: Seti.nicelik(ad, sinir=(a, b))  [06 T5 + §7a: Wilke2019Ch21 §21.1; UrbanStyle; Qu2018 C1.1; mekanizma (tek grafik, dolaylı): Correll2020, Witt2019 — dar aralık aynı etkiyi büyük gösterir; serbest/ortak ölçek deneyi yok]
+  [BİLGİ] adlandirma-yontemi seri adlandırma yöntemi karışık — lejant: F1_evre_paylari, F2_kutle_co2, F6_prova_kutle_sapma · doğrudan etiket: F4_btf_kirilma
+          → mümkünse hep doğrudan etiket; lejant gerekiyorsa her figürde aynı konum  [06 T1/T2: Qu2018 C1.4, C2.4; UrbanStyle; DatawrapperColors2018; TableauBlueprint; Few2008Color; Kosslyn2012 — işaret/çizgi tipi datawiz-secimi]

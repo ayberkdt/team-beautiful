@@ -1,0 +1,5 @@
+set tutarlılığı (4 figür): 0 HATA · 1 UYARI · 1 BİLGİ · SET TUTARLI
+  [UYARI] izgara             izgara figürden figüre değişiyor — değer: A2_spoof_monitor, A3_angle_error_range, A4_autoland_fde · kategori: A1_gate_accuracy
+          → aynı tema her figürde: Seti.figur(...)  [06 T6: AIAAFig; ElsevierSizing; Kosslyn2012 (anlamsız görsel değişim)]
+  [BİLGİ] adlandirma-yontemi seri adlandırma yöntemi karışık — doğrudan etiket: A2_spoof_monitor, A3_angle_error_range, A4_autoland_fde · lejant: A1_gate_accuracy
+          → mümkünse hep doğrudan etiket; lejant gerekiyorsa her figürde aynı konum  [06 T1/T2: Qu2018 C1.4, C2.4; UrbanStyle; DatawrapperColors2018; TableauBlueprint; Few2008Color; Kosslyn2012 — işaret/çizgi tipi datawiz-secimi]

@@ -1,0 +1,16 @@
+{
+  "name": "Ansys 2023 crisis-response aircraft",
+  "source": "references/competition/Ansys-challenge.pdf, p. 2 (Description)",
+  "range": "1300 km",
+  "loiter": "30 min",
+  "stall_speed": "150 km/h",
+  "max_speed": "500 km/h",
+  "max_speed_altitude": "0 m",
+  "service_ceiling": "10000 m",
+  "rate_of_climb": "10 m/s",
+  "takeoff_ground_roll": "800 m",
+  "crew": 4,
+  "passengers": 10,
+  "person_mass": "91 kg",
+  "cargo_mass": "200 kg"
+}

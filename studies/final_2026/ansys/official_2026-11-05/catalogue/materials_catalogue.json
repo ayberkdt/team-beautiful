@@ -1,0 +1,1092 @@
+{
+ "meta": {
+  "created": "2026-11-05",
+  "tags": {
+   "D": "read in a primary/authoritative source this session",
+   "D-org": "organisers' file",
+   "S": "secondary source",
+   "Y": "judgement / arithmetic on tagged inputs (method in condition/note)",
+   "-": "NOT FOUND"
+  },
+  "conversions": {
+   "ksi->MPa": 6.894757,
+   "lb/in3->kg/m3": 27679.9,
+   "Btu/(hr ft F)->W/(m K)": 1.730735,
+   "Btu/(lb F)->J/(kg K)": 4186.8,
+   "1e-6/F->1e-6/K": 1.8
+  },
+  "figure_reading": "PyMuPDF renders at 300-450 dpi, gridline detection + column scan of curve pixels (script D:/tmp_ideathon/ansys/figread.py)"
+ },
+ "materials": {
+  "S275N": {
+   "name": "Structural steel, S275N, normalized (reference)",
+   "granta_record": "GRUID X056199dd-0bb1-4276-9a2f-c980b9b32ed0, identity 2378",
+   "product_basis": "hot-rolled normalized plate, nominal thickness 70 mm (EN 10025-3 band >63 to <=80 mm)",
+   "properties": [
+    {
+     "property": "density",
+     "value": 7850,
+     "unit": "kg/m3",
+     "temperature_C": 23,
+     "condition": "as supplied",
+     "tag": "D-org",
+     "source": "organisers' Discovery material card in files/Eurovia Challenge 2026 CAD file.dsco (read by caller), 23 C, no T-dependence"
+    },
+    {
+     "property": "density",
+     "value": 7850,
+     "unit": "kg/m3",
+     "temperature_C": 300,
+     "condition": "EN 1993-1-2 cl. 3.2.2: may be taken independent of temperature",
+     "tag": "D",
+     "source": "DSTU-N B EN 1993-1-2:2010 (identical bilingual national adoption of EN 1993-1-2:2005), Table 3.1 and cl. 3.2.2, 3.4.1.2, 3.4.1.3, 3.4.2; https://dnaop.com/html/62813_6.html (read via WebFetch, OCR'd HTML)"
+    },
+    {
+     "property": "youngs_modulus",
+     "value": 210.0,
+     "unit": "GPa",
+     "temperature_C": 23,
+     "condition": "",
+     "tag": "D-org",
+     "source": "organisers' Discovery material card in files/Eurovia Challenge 2026 CAD file.dsco (read by caller), 23 C, no T-dependence"
+    },
+    {
+     "property": "youngs_modulus",
+     "value": 168.0,
+     "unit": "GPa",
+     "temperature_C": 300,
+     "condition": "E_20 x k_E,300 = 0.800",
+     "tag": "Y",
+     "source": "DSTU-N B EN 1993-1-2:2010 (identical bilingual national adoption of EN 1993-1-2:2005), Table 3.1 and cl. 3.2.2, 3.4.1.2, 3.4.1.3, 3.4.2; https://dnaop.com/html/62813_6.html (read via WebFetch, OCR'd HTML)",
+     "note": "210 GPa [D-org] x k_E,theta 0.800 [D]"
+    },
+    {
+     "property": "youngs_modulus",
+     "value": 157.5,
+     "unit": "GPa",
+     "temperature_C": 350,
+     "condition": "k_E linear interpolation 300-400 C (0.800/0.700) = 0.750",
+     "tag": "Y",
+     "source": "DSTU-N B EN 1993-1-2:2010 (identical bilingual national adoption of EN 1993-1-2:2005), Table 3.1 and cl. 3.2.2, 3.4.1.2, 3.4.1.3, 3.4.2; https://dnaop.com/html/62813_6.html (read via WebFetch, OCR'd HTML)"
+    },
+    {
+     "property": "poisson_ratio",
+     "value": 0.3046,
+     "unit": "-",
+     "temperature_C": 23,
+     "condition": "",
+     "tag": "D-org",
+     "source": "organisers' Discovery material card in files/Eurovia Challenge 2026 CAD file.dsco (read by caller), 23 C, no T-dependence"
+    },
+    {
+     "property": "poisson_ratio",
+     "value": "NOT FOUND",
+     "unit": "-",
+     "temperature_C": 300,
+     "condition": "",
+     "tag": "-",
+     "source": "not given in EN 1993-1-2 Table 3.1 or the organisers' card"
+    },
+    {
+     "property": "yield_strength_0p2",
+     "value": 237.4,
+     "unit": "MPa",
+     "temperature_C": 23,
+     "condition": "organisers' value",
+     "tag": "D-org",
+     "source": "organisers' Discovery material card in files/Eurovia Challenge 2026 CAD file.dsco (read by caller), 23 C, no T-dependence",
+     "note": "Below the EN 10025-3 minimum ReH for 63-80 mm (245 MPa [S]) and nominal 275 MPa (<=16 mm)."
+    },
+    {
+     "property": "yield_strength_min_ReH",
+     "value": 245.0,
+     "unit": "MPa",
+     "temperature_C": 23,
+     "condition": "EN 10025-3 S275N minimum ReH, 63 < t <= 80 mm (70 mm plate)",
+     "tag": "S",
+     "source": "EN 10025-3 S275N row as reproduced by https://roymech.org/Useful_Tables/Matter/Steel_Data/Steel-10025.html and manufacturer DoPs https://spartan.metinvestholding.com/upload/spartan/content/56/DOP%20S275N-signed.pdf, https://libertysteelgroup.com/uk/wp-content/uploads/sites/2/2020/12/liberty-dop_s275n-10490.pdf (search snippets)",
+     "note": "bands: <=16:275, 16-40:265, 40-63:255, 63-80:245, 80-100:235, 100-150:225 MPa"
+    },
+    {
+     "property": "yield_strength_0p2",
+     "value": 185.2,
+     "unit": "MPa",
+     "temperature_C": 300,
+     "condition": "0.2% proof: f_y x k_p0.2,300 = 0.78 (Annex E)",
+     "tag": "Y",
+     "source": "DSTU-N B EN 1993-1-2:2010, Annex E Table E.1 (k_p0.2,theta, hot-rolled class 4); https://dnaop.com/html/62813_17.html (read via WebFetch)",
+     "note": "237.4 [D-org] x 0.78 [D]; with 245 MPa EN minimum: 191.1 MPa"
+    },
+    {
+     "property": "yield_strength_0p2",
+     "value": 169.7,
+     "unit": "MPa",
+     "temperature_C": 350,
+     "condition": "k_p0.2 interpolated 300-400 C (0.78/0.65) = 0.715",
+     "tag": "Y",
+     "source": "DSTU-N B EN 1993-1-2:2010, Annex E Table E.1 (k_p0.2,theta, hot-rolled class 4); https://dnaop.com/html/62813_17.html (read via WebFetch)",
+     "note": "with 245 MPa: 175.2 MPa"
+    },
+    {
+     "property": "effective_yield_2pct_strain",
+     "value": 237.4,
+     "unit": "MPa",
+     "temperature_C": 300,
+     "condition": "k_y,300 = 1.000 (strength at 2 % total strain, fire-design curve)",
+     "tag": "Y",
+     "source": "DSTU-N B EN 1993-1-2:2010 (identical bilingual national adoption of EN 1993-1-2:2005), Table 3.1 and cl. 3.2.2, 3.4.1.2, 3.4.1.3, 3.4.2; https://dnaop.com/html/62813_6.html (read via WebFetch, OCR'd HTML)"
+    },
+    {
+     "property": "proportional_limit",
+     "value": 145.5,
+     "unit": "MPa",
+     "temperature_C": 300,
+     "condition": "k_p,300 = 0.613",
+     "tag": "Y",
+     "source": "DSTU-N B EN 1993-1-2:2010 (identical bilingual national adoption of EN 1993-1-2:2005), Table 3.1 and cl. 3.2.2, 3.4.1.2, 3.4.1.3, 3.4.2; https://dnaop.com/html/62813_6.html (read via WebFetch, OCR'd HTML)"
+    },
+    {
+     "property": "proportional_limit",
+     "value": 122.6,
+     "unit": "MPa",
+     "temperature_C": 350,
+     "condition": "k_p interpolated 0.5165",
+     "tag": "Y",
+     "source": "DSTU-N B EN 1993-1-2:2010 (identical bilingual national adoption of EN 1993-1-2:2005), Table 3.1 and cl. 3.2.2, 3.4.1.2, 3.4.1.3, 3.4.2; https://dnaop.com/html/62813_6.html (read via WebFetch, OCR'd HTML)"
+    },
+    {
+     "property": "tensile_strength",
+     "value": 422.5,
+     "unit": "MPa",
+     "temperature_C": 23,
+     "condition": "organisers' value",
+     "tag": "D-org",
+     "source": "organisers' Discovery material card in files/Eurovia Challenge 2026 CAD file.dsco (read by caller), 23 C, no T-dependence"
+    },
+    {
+     "property": "tensile_strength_range_EN",
+     "value": [
+      370,
+      510
+     ],
+     "unit": "MPa",
+     "temperature_C": 23,
+     "condition": "EN 10025-3 S275N Rm, t <= 100 mm",
+     "tag": "S",
+     "source": "EN 10025-3 S275N row as reproduced by https://roymech.org/Useful_Tables/Matter/Steel_Data/Steel-10025.html and manufacturer DoPs https://spartan.metinvestholding.com/upload/spartan/content/56/DOP%20S275N-signed.pdf, https://libertysteelgroup.com/uk/wp-content/uploads/sites/2/2020/12/liberty-dop_s275n-10490.pdf (search snippets)"
+    },
+    {
+     "property": "tensile_strength",
+     "value": "NOT FOUND",
+     "unit": "MPa",
+     "temperature_C": 300,
+     "condition": "",
+     "tag": "-",
+     "source": "EN 1993-1-2 Annex A not read this session"
+    },
+    {
+     "property": "elongation",
+     "value": 23,
+     "unit": "%",
+     "temperature_C": 23,
+     "condition": "EN 10025-3 minimum A, 63-80 mm band",
+     "tag": "S",
+     "source": "EN 10025-3 S275N row as reproduced by https://roymech.org/Useful_Tables/Matter/Steel_Data/Steel-10025.html and manufacturer DoPs https://spartan.metinvestholding.com/upload/spartan/content/56/DOP%20S275N-signed.pdf, https://libertysteelgroup.com/uk/wp-content/uploads/sites/2/2020/12/liberty-dop_s275n-10490.pdf (search snippets)"
+    },
+    {
+     "property": "elongation",
+     "value": "NOT FOUND",
+     "unit": "%",
+     "temperature_C": 300,
+     "condition": "",
+     "tag": "-",
+     "source": ""
+    },
+    {
+     "property": "fracture_toughness_K1c",
+     "value": "NOT FOUND",
+     "unit": "MPa m^0.5",
+     "temperature_C": 23,
+     "condition": "EN 10025-3 specifies Charpy energy, not K1c; Charpy value not read",
+     "tag": "-",
+     "source": ""
+    },
+    {
+     "property": "max_service_temperature",
+     "value": "NOT FOUND",
+     "unit": "C",
+     "temperature_C": null,
+     "condition": "EN 1993-1-2 k_y = 1.0 up to 400 C is a short-time fire-design value, not a service limit",
+     "tag": "-",
+     "source": "DSTU-N B EN 1993-1-2:2010 (identical bilingual national adoption of EN 1993-1-2:2005), Table 3.1 and cl. 3.2.2, 3.4.1.2, 3.4.1.3, 3.4.2; https://dnaop.com/html/62813_6.html (read via WebFetch, OCR'd HTML)"
+    },
+    {
+     "property": "cte_mean",
+     "value": 11.96,
+     "unit": "1e-6/K",
+     "temperature_C": 23,
+     "condition": "",
+     "tag": "D-org",
+     "source": "organisers' Discovery material card in files/Eurovia Challenge 2026 CAD file.dsco (read by caller), 23 C, no T-dependence"
+    },
+    {
+     "property": "cte_mean",
+     "value": 13.28,
+     "unit": "1e-6/K",
+     "temperature_C": 300,
+     "condition": "mean 20->300 C from EN thermal-elongation formula",
+     "tag": "Y",
+     "source": "DSTU-N B EN 1993-1-2:2010 (identical bilingual national adoption of EN 1993-1-2:2005), Table 3.1 and cl. 3.2.2, 3.4.1.2, 3.4.1.3, 3.4.2; https://dnaop.com/html/62813_6.html (read via WebFetch, OCR'd HTML)",
+     "note": "dl/l(300) = 0.003718 [computed from D formula]"
+    },
+    {
+     "property": "cte_mean",
+     "value": 13.48,
+     "unit": "1e-6/K",
+     "temperature_C": 350,
+     "condition": "mean 20->350 C",
+     "tag": "Y",
+     "source": "DSTU-N B EN 1993-1-2:2010 (identical bilingual national adoption of EN 1993-1-2:2005), Table 3.1 and cl. 3.2.2, 3.4.1.2, 3.4.1.3, 3.4.2; https://dnaop.com/html/62813_6.html (read via WebFetch, OCR'd HTML)"
+    },
+    {
+     "property": "thermal_conductivity",
+     "value": 50.44,
+     "unit": "W/(m K)",
+     "temperature_C": 23,
+     "condition": "",
+     "tag": "D-org",
+     "source": "organisers' Discovery material card in files/Eurovia Challenge 2026 CAD file.dsco (read by caller), 23 C, no T-dependence"
+    },
+    {
+     "property": "thermal_conductivity",
+     "value": 44.0,
+     "unit": "W/(m K)",
+     "temperature_C": 300,
+     "condition": "lambda = 54 - 0.0333 T",
+     "tag": "Y",
+     "source": "DSTU-N B EN 1993-1-2:2010 (identical bilingual national adoption of EN 1993-1-2:2005), Table 3.1 and cl. 3.2.2, 3.4.1.2, 3.4.1.3, 3.4.2; https://dnaop.com/html/62813_6.html (read via WebFetch, OCR'd HTML)"
+    },
+    {
+     "property": "thermal_conductivity",
+     "value": 42.3,
+     "unit": "W/(m K)",
+     "temperature_C": 350,
+     "condition": "lambda = 54 - 0.0333 T",
+     "tag": "Y",
+     "source": "DSTU-N B EN 1993-1-2:2010 (identical bilingual national adoption of EN 1993-1-2:2005), Table 3.1 and cl. 3.2.2, 3.4.1.2, 3.4.1.3, 3.4.2; https://dnaop.com/html/62813_6.html (read via WebFetch, OCR'd HTML)"
+    },
+    {
+     "property": "specific_heat",
+     "value": 479.4,
+     "unit": "J/(kg K)",
+     "temperature_C": 23,
+     "condition": "",
+     "tag": "D-org",
+     "source": "organisers' Discovery material card in files/Eurovia Challenge 2026 CAD file.dsco (read by caller), 23 C, no T-dependence"
+    },
+    {
+     "property": "specific_heat",
+     "value": 564.7,
+     "unit": "J/(kg K)",
+     "temperature_C": 300,
+     "condition": "EN cubic for 20-600 C",
+     "tag": "Y",
+     "source": "DSTU-N B EN 1993-1-2:2010 (identical bilingual national adoption of EN 1993-1-2:2005), Table 3.1 and cl. 3.2.2, 3.4.1.2, 3.4.1.3, 3.4.2; https://dnaop.com/html/62813_6.html (read via WebFetch, OCR'd HTML)"
+    },
+    {
+     "property": "co2_virgin",
+     "value": 2.031,
+     "unit": "kg CO2e/kg",
+     "temperature_C": null,
+     "condition": "Granta value on organisers' card",
+     "tag": "D-org",
+     "source": "organisers' Discovery material card in files/Eurovia Challenge 2026 CAD file.dsco (read by caller), 23 C, no T-dependence"
+    },
+    {
+     "property": "co2_crude_steel_global_2023",
+     "value": 1.92,
+     "unit": "t CO2/t crude steel",
+     "temperature_C": null,
+     "condition": "worldsteel global average (BF-BOF 2.33 restated, 2.32 orig.)",
+     "tag": "S",
+     "source": "https://worldsteel.org/wider-sustainability/sustainability-indicators-2024-report/ (search snippet)"
+    },
+    {
+     "property": "co2_recycled_route",
+     "value": [
+      0.69,
+      0.7
+     ],
+     "unit": "t CO2/t crude steel",
+     "temperature_C": null,
+     "condition": "worldsteel scrap-EAF 2023 (two editions)",
+     "tag": "S",
+     "source": "https://worldsteel.org/wider-sustainability/sustainability-indicators-2024-report/ (search snippet)"
+    },
+    {
+     "property": "embodied_energy_virgin",
+     "value": 20.17,
+     "unit": "MJ/kg",
+     "temperature_C": null,
+     "condition": "",
+     "tag": "D-org",
+     "source": "organisers' Discovery material card in files/Eurovia Challenge 2026 CAD file.dsco (read by caller), 23 C, no T-dependence"
+    },
+    {
+     "property": "price",
+     "value": [
+      0.6,
+      0.7
+     ],
+     "unit": "EUR/kg",
+     "temperature_C": null,
+     "condition": "S275 heavy plate, Europe, ex-works, 2025 (Fastmarkets/Platts weekly assessments as reported)",
+     "tag": "S",
+     "source": "https://eurometal.net/blechexpo-plate-prices-seen-increasing-demand-improves/ ; https://eurometal.net/2025/06/16/ (search snippets)"
+    },
+    {
+     "property": "castable",
+     "value": "no (as this grade)",
+     "unit": "-",
+     "temperature_C": null,
+     "condition": "S275N is an EN 10025-3 hot-rolled normalized product grade; cast steels are a different standard family",
+     "tag": "Y",
+     "source": "judgement"
+    },
+    {
+     "property": "am_printable",
+     "value": "NOT FOUND",
+     "unit": "-",
+     "temperature_C": null,
+     "condition": "no L-PBF/powder-forming study of S275N looked up",
+     "tag": "-",
+     "source": ""
+    },
+    {
+     "property": "eco_audit_process",
+     "value": "Metal powder forming; grade Virgin; EoL Recycle; mass 152; 1 yr life; long-haul kerosene, 4000 km/day x 180 d",
+     "unit": "-",
+     "temperature_C": null,
+     "condition": "organisers' reference eco audit",
+     "tag": "D-org",
+     "source": "files/Reference steel bracket eco assessment.prd (read this session)"
+    }
+   ]
+  },
+  "Al2618": {
+   "name": "Aluminum, 2618, T6 (organisers) -- MIL-HDBK-5J covers only 2618-T61",
+   "granta_record": "1690",
+   "product_basis": "MIL-HDBK-5J 2618-T61 hand forging, thickness 2.000-3.000 in (70 mm = 2.76 in), S-basis",
+   "properties": [
+    {
+     "property": "density",
+     "value": 2768.0,
+     "unit": "kg/m3",
+     "temperature_C": 23,
+     "condition": "",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 3.2.13.0(c) hand forging, p. 3-211 (PDF p. 513)",
+     "original_value": "0.100 lb/in3"
+    },
+    {
+     "property": "density",
+     "value": "NOT FOUND",
+     "unit": "kg/m3",
+     "temperature_C": 300,
+     "condition": "",
+     "tag": "-",
+     "source": ""
+    },
+    {
+     "property": "youngs_modulus",
+     "value": 73.8,
+     "unit": "GPa",
+     "temperature_C": 23,
+     "condition": "tension",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 3.2.13.0(c) hand forging, p. 3-211 (PDF p. 513)",
+     "original_value": "10.7 x 10^3 ksi"
+    },
+    {
+     "property": "youngs_modulus",
+     "value": 69.3,
+     "unit": "GPa",
+     "temperature_C": 204,
+     "condition": "94 % of RT at 400 F, exposure <= 0.5 h, typical",
+     "tag": "Y",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.1.4-1.5, p. 3-215 (PDF p. 517)",
+     "note": "ratio read +/-1 %; label 'E' sits at the flat curve ending at ~94 % (other curve, ~88.6 %, taken as Ec)"
+    },
+    {
+     "property": "youngs_modulus",
+     "value": "NOT FOUND",
+     "unit": "GPa",
+     "temperature_C": 300,
+     "condition": "curve ends at 400 F (204 C)",
+     "tag": "-",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.1.4-1.5, p. 3-215 (PDF p. 517)"
+    },
+    {
+     "property": "poisson_ratio",
+     "value": 0.33,
+     "unit": "-",
+     "temperature_C": 23,
+     "condition": "",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 3.2.13.0(c) hand forging, p. 3-211 (PDF p. 513)"
+    },
+    {
+     "property": "poisson_ratio",
+     "value": "NOT FOUND",
+     "unit": "-",
+     "temperature_C": 300,
+     "condition": "",
+     "tag": "-",
+     "source": ""
+    },
+    {
+     "property": "yield_strength_0p2",
+     "value": 290.0,
+     "unit": "MPa",
+     "temperature_C": 23,
+     "condition": "LT and ST (min. direction), 2-3 in hand forging",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 3.2.13.0(c) hand forging, p. 3-211 (PDF p. 513)",
+     "original_value": "42 ksi (L = 46 ksi = 317 MPa)"
+    },
+    {
+     "property": "yield_strength_0p2",
+     "value": 245.0,
+     "unit": "MPa",
+     "temperature_C": 204,
+     "condition": "strength at 400 F after 0.5 h exposure: 84.5 % of RT",
+     "tag": "Y",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.1.1(a)-(b), p. 3-212 (PDF p. 514), strength at temperature",
+     "note": "ratio read off curve end at 400 F, +/-1 %; x 289.6 MPa [D]"
+    },
+    {
+     "property": "yield_strength_0p2",
+     "value": 239.0,
+     "unit": "MPa",
+     "temperature_C": 204,
+     "condition": "strength at 400 F after 10 h exposure: 82.4 % of RT",
+     "tag": "Y",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.1.1(a)-(b), p. 3-212 (PDF p. 514), strength at temperature",
+     "note": "ratio read off curve end at 400 F, +/-1 %; x 289.6 MPa [D]"
+    },
+    {
+     "property": "yield_strength_0p2",
+     "value": 227.0,
+     "unit": "MPa",
+     "temperature_C": 204,
+     "condition": "strength at 400 F after 100 h exposure: 78.3 % of RT",
+     "tag": "Y",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.1.1(a)-(b), p. 3-212 (PDF p. 514), strength at temperature",
+     "note": "ratio read off curve end at 400 F, +/-1 %; x 289.6 MPa [D]"
+    },
+    {
+     "property": "yield_strength_0p2",
+     "value": 211.0,
+     "unit": "MPa",
+     "temperature_C": 204,
+     "condition": "strength at 400 F after 1000 h exposure: 72.7 % of RT",
+     "tag": "Y",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.1.1(a)-(b), p. 3-212 (PDF p. 514), strength at temperature",
+     "note": "ratio read off curve end at 400 F, +/-1 %; x 289.6 MPa [D]"
+    },
+    {
+     "property": "yield_strength_0p2",
+     "value": "NOT FOUND",
+     "unit": "MPa",
+     "temperature_C": 300,
+     "condition": "MIL-HDBK-5J curves stop at 400 F (204 C); no 10 000 h curve exists",
+     "tag": "-",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.1.1(a)-(b), p. 3-212 (PDF p. 514), strength at temperature"
+    },
+    {
+     "property": "tensile_strength",
+     "value": 359.0,
+     "unit": "MPa",
+     "temperature_C": 23,
+     "condition": "ST (min.), 2-3 in hand forging",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 3.2.13.0(c) hand forging, p. 3-211 (PDF p. 513)",
+     "original_value": "52 ksi (L 57 = 393 MPa, LT 55 = 379 MPa)"
+    },
+    {
+     "property": "tensile_strength",
+     "value": 273.0,
+     "unit": "MPa",
+     "temperature_C": 204,
+     "condition": "strength at 400 F after 0.5 h & 10 h exposure: 76.2 % of RT",
+     "tag": "Y",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.1.1(a)-(b), p. 3-212 (PDF p. 514), strength at temperature",
+     "note": "ratio +/-1 %"
+    },
+    {
+     "property": "tensile_strength",
+     "value": 255.0,
+     "unit": "MPa",
+     "temperature_C": 204,
+     "condition": "strength at 400 F after 100 h exposure: 71.1 % of RT",
+     "tag": "Y",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.1.1(a)-(b), p. 3-212 (PDF p. 514), strength at temperature",
+     "note": "ratio +/-1 %"
+    },
+    {
+     "property": "tensile_strength",
+     "value": 215.0,
+     "unit": "MPa",
+     "temperature_C": 204,
+     "condition": "strength at 400 F after 1000 h exposure: 60.0 % of RT",
+     "tag": "Y",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.1.1(a)-(b), p. 3-212 (PDF p. 514), strength at temperature",
+     "note": "ratio +/-1 %"
+    },
+    {
+     "property": "tensile_strength",
+     "value": "NOT FOUND",
+     "unit": "MPa",
+     "temperature_C": 300,
+     "condition": "curves stop at 400 F",
+     "tag": "-",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.1.1(a)-(b), p. 3-212 (PDF p. 514), strength at temperature"
+    },
+    {
+     "property": "rt_yield_after_exposure_at_204C",
+     "value": {
+      "10 h": 97,
+      "100 h": 90,
+      "1000 h": 77
+     },
+     "unit": "% of as-aged RT Fty",
+     "temperature_C": 23,
+     "condition": "residual RT strength after exposure at 400 F",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.1.1(c)-(d), p. 3-213 (PDF p. 515), RT strength after exposure",
+     "note": "read +/-1.5 %; no exposure data above 400 F"
+    },
+    {
+     "property": "rt_tensile_after_exposure_at_204C",
+     "value": {
+      "10 h": 95,
+      "100 h": 89,
+      "1000 h": 80
+     },
+     "unit": "% of as-aged RT Ftu",
+     "temperature_C": 23,
+     "condition": "residual RT strength after exposure at 400 F",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.1.1(c)-(d), p. 3-213 (PDF p. 515), RT strength after exposure",
+     "note": "read +/-1.5 %"
+    },
+    {
+     "property": "elongation",
+     "value": 4,
+     "unit": "%",
+     "temperature_C": 23,
+     "condition": "ST (L 7, LT 5)",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 3.2.13.0(c) hand forging, p. 3-211 (PDF p. 513)"
+    },
+    {
+     "property": "elongation",
+     "value": {
+      "0.5 h & 100 h": 13.8,
+      "10 h": 16.5,
+      "1000 h": 18.6
+     },
+     "unit": "%",
+     "temperature_C": 204,
+     "condition": "typical, at 400 F",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.1.4-1.5, p. 3-215 (PDF p. 517)",
+     "note": "read +/-1 % elongation"
+    },
+    {
+     "property": "elongation",
+     "value": "NOT FOUND",
+     "unit": "%",
+     "temperature_C": 300,
+     "condition": "",
+     "tag": "-",
+     "source": ""
+    },
+    {
+     "property": "fracture_toughness_K1c",
+     "value": "NOT FOUND",
+     "unit": "MPa m^0.5",
+     "temperature_C": 23,
+     "condition": "2618 absent from MIL-HDBK-5J Table 3.1.2.1.6; only a generic '2000-series typical 22-35' web value seen",
+     "tag": "-",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 3.1.2.1.6, p. 3-11..3-14 ; https://www.mfgrobots.com/Article/material/metal/40150.html [S, generic]"
+    },
+    {
+     "property": "max_service_temperature",
+     "value": 316.0,
+     "unit": "C",
+     "temperature_C": null,
+     "condition": "'excellent properties over -452 to 600 F'",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, sec. 3.2.13.0, p. 3-209",
+     "original_value": "600 F"
+    },
+    {
+     "property": "cte_mean",
+     "value": 20.8,
+     "unit": "1e-6/K",
+     "temperature_C": 96,
+     "condition": "mean 70 F -> 205 F (curve starts at 200 F; no RT point)",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.0, p. 3-209 (PDF p. 511)",
+     "original_value": "11.58e-6 /F +/-0.03"
+    },
+    {
+     "property": "cte_mean",
+     "value": 24.2,
+     "unit": "1e-6/K",
+     "temperature_C": 300,
+     "condition": "mean 70 F -> 572 F",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.0, p. 3-209 (PDF p. 511)",
+     "original_value": "13.42e-6 /F +/-0.03"
+    },
+    {
+     "property": "cte_mean",
+     "value": 24.7,
+     "unit": "1e-6/K",
+     "temperature_C": 350,
+     "condition": "mean 70 F -> 662 F",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 3.2.13.0, p. 3-209 (PDF p. 511)",
+     "original_value": "13.71e-6 /F +/-0.03"
+    },
+    {
+     "property": "thermal_conductivity",
+     "value": 155.8,
+     "unit": "W/(m K)",
+     "temperature_C": 25,
+     "condition": "at 77 F",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 3.2.13.0(c) hand forging, p. 3-211 (PDF p. 513)",
+     "original_value": "90 Btu/[(hr)(ft2)(F)/ft]"
+    },
+    {
+     "property": "thermal_conductivity",
+     "value": "NOT FOUND",
+     "unit": "W/(m K)",
+     "temperature_C": 300,
+     "condition": "",
+     "tag": "-",
+     "source": ""
+    },
+    {
+     "property": "specific_heat",
+     "value": 963.0,
+     "unit": "J/(kg K)",
+     "temperature_C": 100,
+     "condition": "at 212 F",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 3.2.13.0(c) hand forging, p. 3-211 (PDF p. 513)",
+     "original_value": "0.23 Btu/(lb)(F)"
+    },
+    {
+     "property": "co2_virgin_primary_aluminium_global_2023",
+     "value": 14.8,
+     "unit": "kg CO2e/kg",
+     "temperature_C": null,
+     "condition": "IAI primary aluminium, bauxite->ingot incl. indirect; not alloy-specific",
+     "tag": "D",
+     "source": "https://international-aluminium.org/global-aluminium-industry-greenhouse-gas-emissions-intensity-reduction-continues-with-total-emissions-below-2020-peak"
+    },
+    {
+     "property": "co2_virgin_primary_aluminium_Europe_2023",
+     "value": 6.3,
+     "unit": "kg CO2/kg",
+     "temperature_C": null,
+     "condition": "European Aluminium Environmental Profile Report 2024 press release",
+     "tag": "S",
+     "source": "https://european-aluminium.eu/wp-content/uploads/2024/11/06-11-24-European-Aluminium-Environmental-Profile-Report-launch-PR.pdf (search snippet)"
+    },
+    {
+     "property": "co2_primary_plus_recycled_global_2023",
+     "value": 10.04,
+     "unit": "kg CO2e/kg",
+     "temperature_C": null,
+     "condition": "IAI combined primary + recycling average",
+     "tag": "D",
+     "source": "https://international-aluminium.org/global-aluminium-industry-greenhouse-gas-emissions-intensity-reduction-continues-with-total-emissions-below-2020-peak"
+    },
+    {
+     "property": "co2_recycled_content",
+     "value": "NOT FOUND",
+     "unit": "kg CO2e/kg",
+     "temperature_C": null,
+     "condition": "no authoritative recycled-only figure read; unverified snippets: ~0.26 remelt (greencalculus), 2.3 Hydro Circal 75R",
+     "tag": "-",
+     "source": "https://greencalculus.com/standards/european-aluminium-environmental-profile-report/ ; https://www.sapabuildingsystem.com/globalassets/sapamigration/north/common/sustainability/sapa-circal_en_2302.pdf"
+    },
+    {
+     "property": "embodied_energy_virgin",
+     "value": "NOT FOUND",
+     "unit": "MJ/kg",
+     "temperature_C": null,
+     "condition": "",
+     "tag": "-",
+     "source": ""
+    },
+    {
+     "property": "price",
+     "value": "NOT FOUND",
+     "unit": "USD/kg",
+     "temperature_C": null,
+     "condition": "only undated generic Alibaba listing (2.8-3.8 USD/kg extruded bar) and 'ingot + processing fee' quote basis (Chalco) found",
+     "tag": "-",
+     "source": "https://www.chalcoaluminum.com/application/aluminum-aerospace/2618-forging"
+    },
+    {
+     "property": "castable",
+     "value": "no evidence",
+     "unit": "-",
+     "temperature_C": null,
+     "condition": "MIL-HDBK-5J: 'available as hand and die forgings'; specs AMS 4132, AMS-QQ-A-367, AMS-A-22771 are forgings",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, p. 3-209"
+    },
+    {
+     "property": "am_printable_LPBF",
+     "value": "only after alloy modification",
+     "unit": "-",
+     "temperature_C": null,
+     "condition": "published crack-free L-PBF results use Ti+B (TiB2) or Zr-modified 2618; 'only few medium- and high-strength Al alloys can be processed by L-PBF without solidification cracks'; modified 2618-T6: YS 370, UTS 468 MPa, density >99.7 %",
+     "tag": "S",
+     "source": "Belelli, Casati, Vedani, 'Investigation on two Ti-B-reinforced Al alloys for L-PBF' https://re.public.polimi.it/handle/11311/1168676 ; Metals 2021, 11(1), 35 https://mdpi.com/2075-4701/11/1/35 ; Schuster et al. 2022 (Zr-modified 2618) https://infoscience.epfl.ch/record/294666 (search snippets)"
+    },
+    {
+     "property": "weldability",
+     "value": "fusion welding not recommended",
+     "unit": "-",
+     "temperature_C": null,
+     "condition": "resistance welding only",
+     "tag": "S",
+     "source": "https://www.azom.com/article.aspx?ArticleID=6617"
+    }
+   ]
+  },
+  "Ti811": {
+   "name": "Titanium, near-alpha alloy, Ti-8Al-1Mo-1V, single annealed",
+   "granta_record": "8042",
+   "product_basis": "MIL-HDBK-5J single-annealed plate 2.501-4.000 in (70 mm = 2.76 in), S-basis (AMS 4915, AMS-T-9046)",
+   "properties": [
+    {
+     "property": "density",
+     "value": 4373.0,
+     "unit": "kg/m3",
+     "temperature_C": 23,
+     "condition": "",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 5.3.2.0(b1) single-annealed sheet/plate, p. 5-29 (PDF p. 921)",
+     "original_value": "0.158 lb/in3"
+    },
+    {
+     "property": "density",
+     "value": "NOT FOUND",
+     "unit": "kg/m3",
+     "temperature_C": 300,
+     "condition": "",
+     "tag": "-",
+     "source": ""
+    },
+    {
+     "property": "youngs_modulus",
+     "value": 120.7,
+     "unit": "GPa",
+     "temperature_C": 23,
+     "condition": "average, may vary with direction",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 5.3.2.0(b1) single-annealed sheet/plate, p. 5-29 (PDF p. 921)",
+     "original_value": "17.5 x 10^3 ksi"
+    },
+    {
+     "property": "youngs_modulus",
+     "value": 104.9,
+     "unit": "GPa",
+     "temperature_C": 300,
+     "condition": "86.9 % of RT, exposure <= 0.5 h",
+     "tag": "Y",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 5.3.2.1.4, p. 5-33 (PDF p. 925): E & Ec, exposure up to 1/2 hr, typical",
+     "note": "ratio read by pixel scan +/-1 %; x 120.7 GPa [D]"
+    },
+    {
+     "property": "youngs_modulus",
+     "value": 102.6,
+     "unit": "GPa",
+     "temperature_C": 350,
+     "condition": "85.0 % of RT, exposure <= 0.5 h",
+     "tag": "Y",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 5.3.2.1.4, p. 5-33 (PDF p. 925): E & Ec, exposure up to 1/2 hr, typical",
+     "note": "ratio read by pixel scan +/-1 %; x 120.7 GPa [D]"
+    },
+    {
+     "property": "poisson_ratio",
+     "value": 0.32,
+     "unit": "-",
+     "temperature_C": 23,
+     "condition": "",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 5.3.2.0(b1) single-annealed sheet/plate, p. 5-29 (PDF p. 921)"
+    },
+    {
+     "property": "poisson_ratio",
+     "value": "NOT FOUND",
+     "unit": "-",
+     "temperature_C": 300,
+     "condition": "",
+     "tag": "-",
+     "source": ""
+    },
+    {
+     "property": "yield_strength_0p2",
+     "value": 758.0,
+     "unit": "MPa",
+     "temperature_C": 23,
+     "condition": "L/LT/ST, plate 2.501-4.000 in",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 5.3.2.0(b1) single-annealed sheet/plate, p. 5-29 (PDF p. 921)",
+     "original_value": "110 ksi (sheet < 0.1875 in: 135 ksi = 931 MPa)"
+    },
+    {
+     "property": "yield_strength_0p2",
+     "value": 518.0,
+     "unit": "MPa",
+     "temperature_C": 300,
+     "condition": "68.3 % of RT (curve for sheet, exposure up to 5000 h)",
+     "tag": "Y",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 5.3.2.1.1, p. 5-32 (PDF p. 924): single curve, strength at temperature, exposure up to 5000 hr, sheet",
+     "note": "ratio read by pixel scan +/-1.5 %; sheet ratio applied to plate RT value"
+    },
+    {
+     "property": "yield_strength_0p2",
+     "value": 488.0,
+     "unit": "MPa",
+     "temperature_C": 350,
+     "condition": "64.3 % of RT (curve for sheet, exposure up to 5000 h)",
+     "tag": "Y",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 5.3.2.1.1, p. 5-32 (PDF p. 924): single curve, strength at temperature, exposure up to 5000 hr, sheet",
+     "note": "ratio read by pixel scan +/-1.5 %; sheet ratio applied to plate RT value"
+    },
+    {
+     "property": "tensile_strength",
+     "value": 827.0,
+     "unit": "MPa",
+     "temperature_C": 23,
+     "condition": "plate 2.501-4.000 in",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 5.3.2.0(b1) single-annealed sheet/plate, p. 5-29 (PDF p. 921)",
+     "original_value": "120 ksi (sheet: 145 ksi = 1000 MPa)"
+    },
+    {
+     "property": "tensile_strength",
+     "value": 637.0,
+     "unit": "MPa",
+     "temperature_C": 300,
+     "condition": "77.0 % of RT (sheet curve, exposure up to 5000 h)",
+     "tag": "Y",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 5.3.2.1.1, p. 5-32 (PDF p. 924): single curve, strength at temperature, exposure up to 5000 hr, sheet",
+     "note": "ratio +/-1.5 %"
+    },
+    {
+     "property": "tensile_strength",
+     "value": 607.0,
+     "unit": "MPa",
+     "temperature_C": 350,
+     "condition": "73.4 % of RT (sheet curve, exposure up to 5000 h)",
+     "tag": "Y",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 5.3.2.1.1, p. 5-32 (PDF p. 924): single curve, strength at temperature, exposure up to 5000 hr, sheet",
+     "note": "ratio +/-1.5 %"
+    },
+    {
+     "property": "elongation",
+     "value": 8,
+     "unit": "%",
+     "temperature_C": 23,
+     "condition": "plate 2.501-4.000 in (10 % for 0.5-2.5 in)",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 5.3.2.0(b1) single-annealed sheet/plate, p. 5-29 (PDF p. 921)"
+    },
+    {
+     "property": "elongation",
+     "value": "NOT FOUND",
+     "unit": "%",
+     "temperature_C": 300,
+     "condition": "",
+     "tag": "-",
+     "source": ""
+    },
+    {
+     "property": "fracture_toughness_K1c",
+     "value": 82,
+     "unit": "MPa m^0.5",
+     "temperature_C": 23,
+     "condition": "K(IC), condition not stated ('Information provided by Allvac'); duplex-anneal sheet of same publisher: 176 MPa m^0.5 (980 C/4 h + 540 C/24 h, not the MIL duplex anneal)",
+     "tag": "S",
+     "source": "https://www.aerospacemetals.com/wp-content/uploads/2023/07/Titanium-Ti-8Al-1Mo-1V-Ti-8-1-1-Data-Sheet-.pdf",
+     "original_value": "74.6 ksi-in^0.5",
+     "note": "MIL-HDBK-5J Table 5.1.2.1.1 lists only Ti-6Al-4V [D]; MIL: single anneal = highest RT strength, duplex anneal = highest fracture toughness [D p. 5-27]"
+    },
+    {
+     "property": "max_service_temperature",
+     "value": 454.0,
+     "unit": "C",
+     "temperature_C": null,
+     "condition": "'improved creep resistance and thermal stability up to about 850 F'",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, sec. 5.3.2.0, p. 5-27",
+     "original_value": "850 F"
+    },
+    {
+     "property": "cte_mean",
+     "value": 8.7,
+     "unit": "1e-6/K",
+     "temperature_C": 93,
+     "condition": "mean 70 F -> 200 F (curve starts at 200 F)",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 5.3.2.0, p. 5-28 (PDF p. 920)",
+     "original_value": "4.85e-6 /F +/-0.05"
+    },
+    {
+     "property": "cte_mean",
+     "value": 9.4,
+     "unit": "1e-6/K",
+     "temperature_C": 300,
+     "condition": "mean 70 F -> 572 F",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 5.3.2.0, p. 5-28 (PDF p. 920)",
+     "original_value": "5.23e-6 /F +/-0.05"
+    },
+    {
+     "property": "cte_mean",
+     "value": 9.6,
+     "unit": "1e-6/K",
+     "temperature_C": 350,
+     "condition": "mean 70 F -> 662 F",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 5.3.2.0, p. 5-28 (PDF p. 920)",
+     "original_value": "5.32e-6 /F +/-0.05"
+    },
+    {
+     "property": "thermal_conductivity",
+     "value": 6.1,
+     "unit": "W/(m K)",
+     "temperature_C": 24,
+     "condition": "at 75 F",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 5.3.2.0, p. 5-28 (PDF p. 920)",
+     "original_value": "3.52 Btu/[(hr)(ft2)(F)/ft] +/-0.05"
+    },
+    {
+     "property": "thermal_conductivity",
+     "value": 9.7,
+     "unit": "W/(m K)",
+     "temperature_C": 300,
+     "condition": "at 572 F",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 5.3.2.0, p. 5-28 (PDF p. 920)",
+     "original_value": "5.63 +/-0.05"
+    },
+    {
+     "property": "thermal_conductivity",
+     "value": 10.4,
+     "unit": "W/(m K)",
+     "temperature_C": 350,
+     "condition": "at 662 F",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Fig. 5.3.2.0, p. 5-28 (PDF p. 920)",
+     "original_value": "6.00 +/-0.05"
+    },
+    {
+     "property": "specific_heat",
+     "value": 502.0,
+     "unit": "J/(kg K)",
+     "temperature_C": 23,
+     "condition": "",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, Table 5.3.2.0(b1) single-annealed sheet/plate, p. 5-29 (PDF p. 921)",
+     "original_value": "0.12 Btu/(lb)(F)"
+    },
+    {
+     "property": "co2_virgin",
+     "value": "NOT FOUND",
+     "unit": "kg CO2e/kg",
+     "temperature_C": null,
+     "condition": "alloy/ingot value not found; Kroll sponge only (below)",
+     "tag": "-",
+     "source": ""
+    },
+    {
+     "property": "co2_titanium_sponge_Kroll_China",
+     "value": 51,
+     "unit": "kg CO2e/kg sponge",
+     "temperature_C": null,
+     "condition": "global-average GHG intensity of sponge production (Gao et al. 2018, J. Clean. Prod. 174), excludes melting/alloying/mill product",
+     "tag": "S",
+     "source": "https://www.researchgate.net/publication/320653955_Environmental_impacts_analysis_of_titanium_sponge_production_using_Kroll_process_in_China (search snippet)"
+    },
+    {
+     "property": "co2_recycled_content",
+     "value": 7.8,
+     "unit": "kg CO2e/kg",
+     "temperature_C": null,
+     "condition": "company LCA claim for recycled-scrap Ti powder (IperionX), not Ti-8-1-1",
+     "tag": "S",
+     "source": "https://iperionx.com/sustainability/lca/ (search snippet)"
+    },
+    {
+     "property": "embodied_energy_virgin",
+     "value": "NOT FOUND",
+     "unit": "MJ/kg",
+     "temperature_C": null,
+     "condition": "",
+     "tag": "-",
+     "source": ""
+    },
+    {
+     "property": "price",
+     "value": "NOT FOUND",
+     "unit": "USD/kg",
+     "temperature_C": null,
+     "condition": "no Ti-8-1-1 price found; Ti-6Al-4V aerospace plate proxy 22-42 USD/kg (2025-26, low-reliability web guides)",
+     "tag": "-",
+     "source": "https://titaniumsaller-astro.pages.dev/resources/titanium-price-guide (proxy, [S])"
+    },
+    {
+     "property": "castable",
+     "value": "no evidence",
+     "unit": "-",
+     "temperature_C": null,
+     "condition": "MIL-HDBK-5J product forms: billet, bar, plate, sheet, strip, extrusions, forgings (no castings); single anneal is 1450 F 8 h furnace cool of mill product",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, p. 5-27"
+    },
+    {
+     "property": "am_printable",
+     "value": "NOT FOUND",
+     "unit": "-",
+     "temperature_C": null,
+     "condition": "no peer-reviewed L-PBF/EBM/DED study of Ti-8Al-1Mo-1V found; only supplier listing of spherical Ti-8-1-1 powder for AM; MIL: 'can be fusion welded readily with inert-gas protection' (weldability only suggests printability)",
+     "tag": "-",
+     "source": "https://powder.samaterials.com/ti-8-1-1-titanium-alloy-spherical-powder.html [S, commercial] ; references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, p. 5-27 [D]"
+    },
+    {
+     "property": "environmental_notes",
+     "value": "susceptible to hot-salt and aqueous chloride SCC; >600 F extended exposure degrades RT spot-weld strength",
+     "unit": "-",
+     "temperature_C": null,
+     "condition": "",
+     "tag": "D",
+     "source": "references/materials/mil-hdbk-5j/MIL-HDBK-5J.pdf, p. 5-27"
+    }
+   ]
+  }
+ }
+}

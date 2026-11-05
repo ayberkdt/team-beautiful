@@ -1,0 +1,26 @@
+{
+ "_not": "aerokit.bracket hand-off of 'dryrun_bracket'; every number from the files in this folder.",
+ "parca_adi": "dryrun_bracket",
+ "sonuc": "result.json",
+ "yukler": "yukler.json",
+ "geometri": {
+  "dosya": "parca.stl",
+  "birim": "mm",
+  "hizala": "yok",
+  "yukari": "z"
+ },
+ "yogunluk": {
+  "dosya": "yogunluk.json",
+  "anahtar": "runs",
+  "kok_mm": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "yukari": "z",
+  "voksel_mm": 1.3
+ },
+ "malzeme": "ti64_lpbf",
+ "kaynak": "aerokit.bracket pipeline · studies/final_2026/ansys/inputs/dryrun_bracket.step",
+ "gerilme_csv": "gerilme.txt"
+}

@@ -1,0 +1,19 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "genel",
+ "hedef": "genel-tek",
+ "ortam": "makale",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {},
+ "nicelikler": {},
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "preview": "preview.dw.json"
+ }
+}

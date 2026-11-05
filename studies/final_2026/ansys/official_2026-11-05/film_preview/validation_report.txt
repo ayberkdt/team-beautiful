@@ -1,0 +1,104 @@
+1. baslangic.stl
+  PASS  baslangic.stl: binary STL, 129088 triangles, size 6454484 = 84 + 50·n
+  PASS  triangle payload identical to visuals/initial_exact.stl
+  PASS  degenerate triangles: 0
+  PASS  closed 2-manifold: 193632 edges, open 0, >2 faces 0
+  PASS  consistent orientation: directed edges used twice 0
+        vertices 64534, Euler characteristic -10 (genus 6: 4 bolt bores + 2 pin bores -> 6 expected)
+  PASS  topology: genus 6 (six through-holes)
+  PASS  outward normals: signed volume 0.019397 m³
+  PASS  volume × 7850 kg/m³ = 152.269 kg vs manifest baseline.mass_kg 152.265 kg (organiser monitor), diff +0.002 %
+  PASS  bbox [170.00, 30.00, 30.00] – [831.01, 371.12, 321.37] mm vs boundary_conditions.md §1
+  PASS  yukler.json tasarim_alani = STL bbox
+2. holes (setup vs features.json vs STL)
+  PASS  H1 load: setup centre [500.0, 65.0, 260.0] Ø60.0 ~ features face 77 Ø59.96 (Δ 0.014 mm)
+  PASS  H1: axis point outside the solid (bore), point 35 mm off-axis inside (material)
+  PASS  H2 load: setup centre [500.0, 335.56, 260.0] Ø60.0 ~ features face 56 Ø59.96 (Δ 0.000 mm)
+  PASS  H2: axis point outside the solid (bore), point 35 mm off-axis inside (material)
+  PASS  H3 support: setup centre [245.0, 95.0, 65.0] Ø60.0 ~ features face 110 Ø59.96 (Δ 0.014 mm)
+  PASS  H3: axis point outside the solid (bore), point 35 mm off-axis inside (material)
+  PASS  H4 support: setup centre [245.0, 305.0, 65.0] Ø60.0 ~ features face 113 Ø59.96 (Δ 0.010 mm)
+  PASS  H4: axis point outside the solid (bore), point 35 mm off-axis inside (material)
+  PASS  H5 support: setup centre [755.0, 95.0, 65.0] Ø60.0 ~ features face 116 Ø59.96 (Δ 0.014 mm)
+  PASS  H5: axis point outside the solid (bore), point 35 mm off-axis inside (material)
+  PASS  H6 support: setup centre [755.0, 305.0, 65.0] Ø60.0 ~ features face 119 Ø59.96 (Δ 0.010 mm)
+  PASS  H6: axis point outside the solid (bore), point 35 mm off-axis inside (material)
+3. yukler.json (fields hazirla.mjs reads + recomputation from the set-up)
+  PASS  birim mm
+  PASS  destek H3 fixed (fixed_bore): silindir fields numeric
+  PASS  destek H4 fixed (fixed_bore): silindir fields numeric
+  PASS  destek H5 fixed (fixed_bore): silindir fields numeric
+  PASS  destek H6 fixed (fixed_bore): silindir fields numeric
+  PASS  4 fixed bores (H3, H4, H5, H6)
+  PASS  8 load entries = set-up (8)
+  PASS  LC1a @ [500.0, 65.0, 260.0]: F [0.0, 24000.0, 97000.0] N
+  PASS  LC1a @ [500.0, 335.56, 260.0]: F [0.0, 24000.0, 97000.0] N
+  PASS  LC1b @ [500.0, 65.0, 260.0]: F [0.0, -24000.0, 97000.0] N
+  PASS  LC1b @ [500.0, 335.56, 260.0]: F [0.0, -24000.0, 97000.0] N
+  PASS  LC1c @ [500.0, 65.0, 260.0]: F [0.0, 24000.0, 97000.0] N
+  PASS  LC1c @ [500.0, 335.56, 260.0]: F [0.0, -24000.0, 97000.0] N
+  PASS  LC2 @ [500.0, 65.0, 260.0]: M [0.0, 1000.0, 0.0] N·m (panel only, no arrow)
+  PASS  LC2 @ [500.0, 335.56, 260.0]: M [0.0, 1000.0, 0.0] N·m (panel only, no arrow)
+4. film.json / girdi.json
+  PASS  schema ansys-film/1
+  PASS  status 'preview' (not final -> PROVISIONAL on screen)
+  PASS  PREVIEW tag in film.json card, girdi.json, yukler.json
+  PASS  PREVIEW tag in baslangic.stl header
+  PASS  redesign: every field null
+  PASS  density: null
+  PASS  print: null
+  PASS  stress: null
+  PASS  eco_audit: null
+  PASS  convergence: null
+  PASS  crosscheck: null
+  PASS  materials: names (+ catalogue key) only (Structural steel, S275N -> S275N, Aluminum 2618-T6 -> Al2618, Ti-8Al-1Mo-1V (single annealed) -> Ti811)
+  PASS  every catalogue_key exists in catalogue materials ['Al2618', 'S275N', 'Ti811']
+        numbers in film.json outside _kaynak/_missing: 26
+          temperature_C = 300.0
+          baseline.mass_kg = 152.26533757522702
+          cad_setup.holes[0].center_mm[0] = 500.0
+          cad_setup.holes[0].center_mm[1] = 65.0
+          cad_setup.holes[0].center_mm[2] = 260.0
+          cad_setup.holes[0].diameter_mm = 60.0
+          cad_setup.holes[1].center_mm[0] = 500.0
+          cad_setup.holes[1].center_mm[1] = 335.56
+          cad_setup.holes[1].center_mm[2] = 260.0
+          cad_setup.holes[1].diameter_mm = 60.0
+          cad_setup.holes[2].center_mm[0] = 245.0
+          cad_setup.holes[2].center_mm[1] = 95.0
+          cad_setup.holes[2].center_mm[2] = 65.0
+          cad_setup.holes[2].diameter_mm = 60.0
+          cad_setup.holes[3].center_mm[0] = 245.0
+          cad_setup.holes[3].center_mm[1] = 305.0
+          cad_setup.holes[3].center_mm[2] = 65.0
+          cad_setup.holes[3].diameter_mm = 60.0
+          cad_setup.holes[4].center_mm[0] = 755.0
+          cad_setup.holes[4].center_mm[1] = 95.0
+          cad_setup.holes[4].center_mm[2] = 65.0
+          cad_setup.holes[4].diameter_mm = 60.0
+          cad_setup.holes[5].center_mm[0] = 755.0
+          cad_setup.holes[5].center_mm[1] = 305.0
+          cad_setup.holes[5].center_mm[2] = 65.0
+          cad_setup.holes[5].diameter_mm = 60.0
+  PASS  every number is temperature, baseline mass or CAD hole geometry
+  PASS  girdi.json ansys -> film.json exists
+  PASS  girdi.json yukler -> yukler.json exists
+  PASS  girdi.json geometri -> baslangic.stl, z up, no re-alignment (same frame as yukler.json)
+        catalogue catalogue/materials_catalogue.json: present; manifest link: catalogue/materials_catalogue.json
+  PASS  catalogue link matches what exists now
+5. hazirla.mjs output (copy) -> shots the film will build or skip (rules of film/src/ana.mjs gerekVar)
+        01 Baseline: always built
+        03 Optimisation: always built (no 'gerek' rule) -> see README: illustrative removal from the BASELINE STL
+        02 300 °C (egri): skipped
+        04 Printability (baski): skipped
+        05 Stress (gerilme): skipped
+        06 Materials (malzeme): skipped
+        07 Eco Audit (eko): skipped
+        08 Cross-check (capraz): skipped
+  PASS  every analysis shot (02, 04–08) is skipped by the film itself
+  PASS  film-veri ansys.durum 'preview' -> PROVISIONAL source line
+  PASS  film-veri: no stress field, no density field, no result
+        hazirla notes:   CAD kurulumu: 6 delik (H1 load, H2 load, H3 support, H4 support, H5 support, H6 support) | çapraz denetim: yok (çekim atlanır) | manifest film_preview/film.json (preview): 3 malzeme, seçilen —, 300 °C, Eco Audit yok | yükler: 4 destek, 8 kuvvet, tasarım alanı 1 kutu | geometri: baslangic.stl (6.5 MB), birim mm, hizalama yok | CSV yok: çekim 3 renk haritasız; tepe gerilme sonuç dosyasından yazılır.
+        hazirla warnings: manifest durumu "preview": ekranda PROVISIONAL yazar.
+
+ALL PASS

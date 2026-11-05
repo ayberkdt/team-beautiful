@@ -1,0 +1,12 @@
+metric,unit,ours,ansys,description
+mass_kg,kg,152.271,,"part mass (geometry × density) (tolerance ±2 %) [initial design, baseline material, ours = T10 conforming mesh]"
+volume_mm3,mm3,1.93975e+07,,"part volume (tolerance ±2 %) [initial design, baseline material, ours = T10 conforming mesh]"
+max_deformation_mm,mm,0.191807,,"maximum total deformation (worst load case) (tolerance ±10 %) [initial design, baseline material, ours = T10 conforming mesh]"
+load_point_deformation_mm,mm,0.101584,,"mean deformation of the loaded bore (probe: average over the bore face) (tolerance ±10 %) [initial design, baseline material, ours = T10 conforming mesh]"
+strain_energy_J,J,8.96069,,"strain energy = compliance / 2 (worst load case) (tolerance ±10 %) [initial design, baseline material, ours = T10 conforming mesh]"
+compliance_J,J,17.9214,,"compliance F·u (worst load case) (tolerance ±10 %) [initial design, baseline material, ours = T10 conforming mesh]"
+max_von_mises_MPa,MPa,295.955,,"maximum equivalent stress anywhere (singular at supports: loose) (tolerance ±25 %) [initial design, baseline material, ours = T10 conforming mesh]"
+von_mises_outside_MPa,MPa,295.955,,"maximum equivalent stress outside the support/load zones (tolerance ±15 %) [initial design, baseline material, ours = T10 conforming mesh]"
+min_safety_factor,-,0.549968,,"minimum safety factor (yield at temperature / von Mises) (tolerance ±15 %) [initial design, baseline material, ours = T10 conforming mesh]"
+retained_volume_fraction,-,1,,"topology: retained volume / design-space volume (tolerance ±5 %) [initial design, baseline material, ours = T10 conforming mesh]"
+reaction_force_N,N,199850,,"sum of support reactions (equals the applied load) (tolerance ±1 %) [initial design, baseline material, ours = T10 conforming mesh]"

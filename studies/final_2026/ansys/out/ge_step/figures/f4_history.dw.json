@@ -1,0 +1,168 @@
+{
+ "surum": 1,
+ "ad": "f4_history",
+ "boyut_pt": [
+  249.4,
+  162.1
+ ],
+ "metin_kutusu_pt": [
+  50.2,
+  2.4,
+  247.2,
+  135.6
+ ],
+ "hedef": "genel-tek",
+ "ortam": "makale",
+ "boyut_mm": [
+  88.0,
+  57.2
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   8.1
+  ],
+  "eksen_adi": [
+   9.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   8.1
+  ]
+ },
+ "punto_tepe": {
+  "tik": 8.1,
+  "eksen_adi": 9.0,
+  "metin": 8.1
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    73.7,
+    31.5,
+    209.2,
+    146.8
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "topo 40 %",
+     "tur": "cizgi",
+     "renk": "#cc79a7",
+     "isaret": null,
+     "cizgi": ":",
+     "kalinlik": 1.2,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "topo 25 %",
+     "tur": "cizgi",
+     "renk": "#e69f00",
+     "isaret": null,
+     "cizgi": "--",
+     "kalinlik": 1.2,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Iteration",
+    "nicelik": "Iteration",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "iteration",
+    "harf": "tek",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     30.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "10",
+     "20",
+     "30"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     125.1,
+     2.4,
+     157.8,
+     10.6
+    ]
+   },
+   "y": {
+    "ham": "Relative compliance",
+    "nicelik": "Relative compliance",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "relativecompliance",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     1.7675020128287677,
+     28.211134235938413
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "2",
+     "5",
+     "10",
+     "20"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     50.2,
+     51.0,
+     58.4,
+     127.3
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [
+    "topo 25 %",
+    "topo 40 %"
+   ],
+   "izgara": {
+    "x": true,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

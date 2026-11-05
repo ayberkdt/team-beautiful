@@ -1,0 +1,287 @@
+{
+  "name": "A320 cabin panel, stiffness-limited, only materials that pass the cabin fire tests (OSU 65/65, 14 CFR 25.853)",
+  "case": "panel_stiff",
+  "reference_material": "2024-T3",
+  "reference_mass": {
+    "value": 3.0,
+    "low": 2.0,
+    "high": 5.0,
+    "unit": "kg",
+    "tag": "Y",
+    "source": "assumed panel mass; results scale with it"
+  },
+  "lifecycle": {
+    "fuel_per_kg_per_flight": {
+      "value": 0.12,
+      "low": 0.07,
+      "high": 0.16,
+      "unit": "kg fuel / kg carried / flight",
+      "tag": "A",
+      "source": "Steinegger 2017 (ZHAW), Fig. 15, A320-200 marginal fuel at 2000/4000/5000 km; full text read by a sub-agent 2026-11-01; not peer-reviewed"
+    },
+    "flights": {
+      "value": 48000,
+      "low": 30000,
+      "high": 60000,
+      "unit": "flights over life",
+      "tag": "D",
+      "source": "A320 original approved validity 48,000 FC; ESA I 60,000 FC (Emerald AEAT 2008, doi 10.1108/aeat.2008.12780caf.005, fetch summary 2026-11-01); low 30,000 = assumption (early retirement)"
+    },
+    "co2_per_kg_fuel": {
+      "value": 3.16,
+      "unit": "kg CO2 / kg Jet-A",
+      "tag": "D",
+      "source": "ICAO CEC methodology v8 / UK CORSIA Order 2021 art. 28(5); read 2026-10-25 (aerokit.design.sustainability)"
+    },
+    "grid_co2_per_MJ": {
+      "value": 0.0587,
+      "low": 0.0112,
+      "high": 0.1543,
+      "unit": "kg CO2 / MJ electricity",
+      "tag": "D",
+      "source": "OWID/Ember carbon intensity of electricity, CSV read 2026-11-01: EU-27 2024 211.2, France 2024 40.5, China 2024 555.4 g/kWh, divided by 3600"
+    }
+  },
+  "materials": {
+    "2024-T3": {
+      "E": 73100000000.0,
+      "Fty": 345000000.0,
+      "rho": 2780,
+      "co2_per_kg": {
+        "value": 12.79,
+        "low": 6.6,
+        "high": 15.1,
+        "unit": "kg CO2 / kg",
+        "tag": "D",
+        "source": "ICE v2.0 p1 primary Al 12.79 CO2e; EU-made 6.6 (European Aluminium EPR 2024 p5); global 15.1 (IAI factsheet 2022); research_notes/Üç sapma alanı/B_malzeme_dongusellik.md §2",
+        "group": "primary_al"
+      },
+      "eol_credit_per_kg": {
+        "value": 10.1,
+        "low": 4.07,
+        "high": 12.49,
+        "unit": "kg CO2 / kg",
+        "tag": "H",
+        "source": "f_rec x (primary - recycled 1.81 ICE); f_rec 0.85-0.94 (PAMELA, Airbus 2022); own formula; research_notes/Üç sapma alanı/B_malzeme_dongusellik.md §3",
+        "group": "primary_al"
+      },
+      "flags": [
+        "fst_cabin"
+      ],
+      "properties_source": "AA typical via aerospacemetals.com 2023 [S]; metal panels pass the cabin fire tests (non-combustible) [Y]; research_notes/Üç sapma alanı/B_malzeme_dongusellik.md §1b"
+    },
+    "Al-Li 2050-T84": {
+      "E": 76500000000.0,
+      "Fty": 476000000.0,
+      "rho": 2700,
+      "co2_per_kg": {
+        "value": 12.79,
+        "low": 6.6,
+        "high": 15.1,
+        "unit": "kg CO2 / kg",
+        "tag": "Y",
+        "source": "Al-Li footprint NOT FOUND; aluminium values used (ICE / EA / IAI)",
+        "group": "primary_al"
+      },
+      "eol_credit_per_kg": {
+        "value": 10.1,
+        "low": 4.07,
+        "high": 12.49,
+        "unit": "kg CO2 / kg",
+        "tag": "Y",
+        "source": "f_rec x (primary - recycled 1.81 ICE); f_rec 0.85-0.94 (PAMELA, Airbus 2022); own formula; research_notes/Üç sapma alanı/B_malzeme_dongusellik.md §3",
+        "group": "primary_al"
+      },
+      "flags": [
+        "fst_cabin"
+      ],
+      "properties_source": "Smiths HP distributor sheet 2025 (same E printed for 2198) [S]; research_notes/Üç sapma alanı/B_malzeme_dongusellik.md §1b"
+    },
+    "CFRP QI IM7/8552": {
+      "E": 57800000000.0,
+      "Fty": 722000000.0,
+      "rho": 1570,
+      "co2_per_kg": {
+        "value": 23.4,
+        "low": 14.9,
+        "high": 46.2,
+        "unit": "kg CO2 / kg",
+        "tag": "H",
+        "source": "0.65 x carbon fibre (19.85-33-68) + 0.35 x epoxy 5.70; research_notes/Üç sapma alanı/B_malzeme_dongusellik.md §2",
+        "group": "carbon_fibre"
+      },
+      "eol_credit_per_kg": {
+        "value": 0.0,
+        "low": 0.0,
+        "high": 23.0,
+        "unit": "kg CO2 / kg",
+        "tag": "S",
+        "source": "Granta Eco Design WP p12: continuous-fibre composites 'cannot be re-separated economically' (value 0); Meng 2018 net recycling benefit 19-27 kg CO2e per kg CFRP (abstract) as the high end; research_notes/Üç sapma alanı/B_malzeme_dongusellik.md §3"
+      },
+      "properties_source": "NCAMP NCP-RP-2009-028 Rev B Tables 5-1/5-2, [25/50/25] RTD [D]; rho 1.57 Hexcel 8552 EU PDS p2 [D]; epoxy panels need FR or phenolic for OSU 65/65 [S]; research_notes/Üç sapma alanı/B_malzeme_dongusellik.md §1a, §4"
+    },
+    "Glass/phenolic 7781": {
+      "E": 22000000000.0,
+      "Fty": 450000000.0,
+      "rho": 1830,
+      "co2_per_kg": {
+        "value": 8.1,
+        "low": 7.47,
+        "high": 8.26,
+        "unit": "kg CO2 / kg",
+        "tag": "D",
+        "source": "GFRP: ICE v2.0 p4 8.10 [D]; Ashby 2013 7.47-8.26 via compilation [S]; research_notes/Üç sapma alanı/B_malzeme_dongusellik.md §2"
+      },
+      "flags": [
+        "fst_cabin"
+      ],
+      "properties_source": "stiffness of 7781 glass on HexPly 913 epoxy as a proxy (phenolic 260 sheet gives fire data only) [D]; HexPly 260/7781 on Nomex OSU 44/44 [D]; research_notes/Üç sapma alanı/B_malzeme_dongusellik.md §1a, §4"
+    },
+    "Flax/epoxy": {
+      "E": 11700000000.0,
+      "Fty": 120000000.0,
+      "rho": 1300,
+      "co2_per_kg": {
+        "value": 3.66,
+        "low": 3.4,
+        "high": 4.0,
+        "unit": "kg CO2 / kg",
+        "tag": "H",
+        "source": "0.51 x flax 1.70 + 0.49 x epoxy 5.70 (ICE v2.0 p4-5); research_notes/Üç sapma alanı/B_malzeme_dongusellik.md §2"
+      },
+      "properties_source": "QI estimated as 1/3 of the UD FlaxPreg values E1 35 GPa, 365 MPa [Y]; rho 1.3 theoretical [D]; fails OSU peak heat release even with FR (Thulo et al. 2025) [S]; research_notes/Üç sapma alanı/B_malzeme_dongusellik.md §1a, §4"
+    },
+    "CF/PEEK 5HS": {
+      "E": 40800000000.0,
+      "Fty": 578000000.0,
+      "rho": 1530,
+      "co2_per_kg": {
+        "value": 23.3,
+        "low": 14.7,
+        "high": 44.9,
+        "unit": "kg CO2 / kg",
+        "tag": "H",
+        "source": "0.58 x carbon fibre (19.85-33-68) + 0.42 x PEEK 7.5-13 (weak web value); research_notes/Üç sapma alanı/B_malzeme_dongusellik.md §2",
+        "group": "carbon_fibre"
+      },
+      "eol_credit_per_kg": {
+        "value": 0.0,
+        "low": 0.0,
+        "high": 23.0,
+        "unit": "kg CO2 / kg",
+        "tag": "Y",
+        "source": "thermoplastic, remeltable; same range as CFRP, no source for a higher value"
+      },
+      "properties_source": "Toray Cetex TC1200 PDS v4.0 p3 'plain tensile' (lay-up not printed, QI likely) and p2 density [D]; research_notes/Üç sapma alanı/B_malzeme_dongusellik.md §1a"
+    }
+  },
+  "routes": {
+    "sheet_formed": {
+      "buy_to_fly": {
+        "value": 1.3,
+        "low": 1.1,
+        "high": 1.6,
+        "unit": "-",
+        "tag": "Y",
+        "source": "assumed sheet trim and nesting loss"
+      },
+      "process_MJ_per_kg": {
+        "value": 4.0,
+        "low": 3.0,
+        "high": 5.0,
+        "unit": "MJ/kg",
+        "tag": "S",
+        "source": "rolling 3-5 MJ/kg, Ashby 2013 p. 133 via the compilation"
+      },
+      "mass_factor": {
+        "value": 1.0,
+        "unit": "-",
+        "tag": "Y",
+        "source": "no topology"
+      }
+    },
+    "autoclave_layup": {
+      "buy_to_fly": {
+        "value": 1.3,
+        "low": 1.1,
+        "high": 1.5,
+        "unit": "-",
+        "tag": "Y",
+        "source": "assumed prepreg cutting scrap"
+      },
+      "process_MJ_per_kg": {
+        "value": 200.0,
+        "low": 100.0,
+        "high": 300.0,
+        "unit": "MJ/kg",
+        "tag": "S",
+        "source": "autoclave moulding 100-300 MJ/kg, Ashby 2013 p. 133 via the compilation"
+      },
+      "mass_factor": {
+        "value": 1.0,
+        "unit": "-",
+        "tag": "Y",
+        "source": "no topology"
+      }
+    },
+    "thermoplastic_press": {
+      "buy_to_fly": {
+        "value": 1.2,
+        "low": 1.1,
+        "high": 1.4,
+        "unit": "-",
+        "tag": "Y",
+        "source": "assumed blank trim"
+      },
+      "process_MJ_per_kg": {
+        "value": 13.5,
+        "low": 11.0,
+        "high": 16.0,
+        "unit": "MJ/kg",
+        "tag": "S",
+        "source": "compression moulding 11-16 MJ/kg, Ashby 2013 p. 133 via the compilation"
+      },
+      "mass_factor": {
+        "value": 1.0,
+        "unit": "-",
+        "tag": "Y",
+        "source": "no topology"
+      }
+    }
+  },
+  "options": [
+    {
+      "material": "2024-T3",
+      "route": "sheet_formed"
+    },
+    {
+      "material": "Al-Li 2050-T84",
+      "route": "sheet_formed"
+    },
+    {
+      "material": "CFRP QI IM7/8552",
+      "route": "autoclave_layup"
+    },
+    {
+      "material": "Glass/phenolic 7781",
+      "route": "autoclave_layup"
+    },
+    {
+      "material": "Flax/epoxy",
+      "route": "autoclave_layup"
+    },
+    {
+      "material": "CF/PEEK 5HS",
+      "route": "thermoplastic_press"
+    }
+  ],
+  "objectives": [
+    "mass_kg",
+    "co2_total_kg"
+  ],
+  "constraints": {
+    "require": [
+      "fst_cabin"
+    ]
+  }
+}

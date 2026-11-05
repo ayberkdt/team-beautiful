@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aerokit"
+version = "0.2.0"
+description = "Aerospace structures, FEM and conceptual-design toolkit (Ideathon 2026)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "scipy>=1.11"]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.8"]
+cad = ["pyvista>=0.43"]
+dev = ["pytest>=8", "pytest-timeout", "hypothesis>=6", "mypy>=1.10", "ruff>=0.5"]
+
+[project.scripts]
+aerokit = "aerokit.cli.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+aerokit = ["data/**/*", "materials/data/*.md", "materials/data/figures/*", "materials/data/curves/*.md", "materials/data/composites/*.md", "py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "--import-mode=importlib -ra"
+timeout = 900
+markers = ["slow: long-running benchmark (deselect with -m 'not slow')"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "S", "UP", "PIE", "RET", "SIM"]
+ignore = ["E741", "E731", "S101", "RET504", "SIM108"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S", "B", "E501"]
+# copied verbatim from Sidera (see src/aerokit/comms/SOURCES.md); kept as written there
+"src/aerokit/comms/**" = ["E501"]
+"src/aerokit/orbits/{kepler_j2,two_body,gmst}.py" = ["E501"]
+"tests/comms/**" = ["SIM300"]
+
+[tool.mypy]
+python_version = "3.12"
+mypy_path = "src"
+packages = ["aerokit"]
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+no_implicit_optional = true
+check_untyped_defs = true

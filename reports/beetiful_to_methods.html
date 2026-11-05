@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Topology optimisation methods</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1f2328;
+  --ink-2: #4d4d4d;
+  --line: #d0d4d9;
+  --paper: #ffffff;
+  --tint: #f6f7f8;
+  --accent: #c98a00;
+  --accent-soft: #fbf1d9;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #e8eaed; --ink-2: #b8bcc2; --line: #3a3f45; --paper: #15181b; --tint: #1d2125;
+    --accent: #f0b429; --accent-soft: #2b2416;
+  }
+}
+:root[data-theme="dark"] {
+  --ink: #e8eaed; --ink-2: #b8bcc2; --line: #3a3f45; --paper: #15181b; --tint: #1d2125;
+  --accent: #f0b429; --accent-soft: #2b2416;
+}
+@page { size: A4; margin: 15mm 15mm 16mm 15mm; }
+* { box-sizing: border-box; }
+html { font-size: 10.5pt; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif; line-height: 1.45;
+}
+main { max-width: 180mm; margin: 0 auto; padding: 0 16px; }
+h1 { font-size: 18pt; line-height: 1.2; margin: 0 0 10pt; padding-top: 4pt; border-top: 3pt solid var(--accent); }
+h2 { font-size: 13pt; margin: 14pt 0 6pt; }
+p { margin: 0 0 7pt; }
+section { margin-bottom: 14pt; }
+.chapter { break-before: page; }
+.small, figcaption, .src, td, th { font-size: 8.5pt; }
+table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; }
+caption { caption-side: top; text-align: left; font-size: 8.5pt; font-weight: 600; padding-bottom: 3pt; }
+th, td { text-align: left; vertical-align: top; padding: 3pt 5pt; border-bottom: 0.5pt solid var(--line); }
+th { border-bottom: 1pt solid var(--ink); font-weight: 600; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+tr { break-inside: avoid; }
+#katalog td:first-child { white-space: nowrap; }
+figure { margin: 8pt 0 12pt; break-inside: avoid; }
+figure img { width: 100%; height: auto; display: block; }
+figcaption { color: var(--ink-2); margin-top: 3pt; }
+ul, ol { margin: 0 0 7pt; padding-left: 16pt; }
+li { margin-bottom: 2pt; }
+code { font-family: Consolas, "Courier New", monospace; font-size: 8.5pt; }
+.note { background: var(--tint); padding: 6pt 8pt; margin: 6pt 0 10pt; }
+/* cover */
+.cover { height: 265mm; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
+.cover svg.comb { position: absolute; right: 0; top: 0; width: 95mm; height: auto; }
+.cover .top { font-size: 10.5pt; color: var(--ink-2); letter-spacing: 0.04em; text-transform: uppercase; }
+.cover .title { margin-top: 70mm; max-width: 140mm; }
+.cover h1.cover-title { font-size: 34pt; border: 0; padding: 0; margin: 0 0 8pt; }
+.cover .sub { font-size: 14pt; color: var(--ink-2); margin: 0; }
+.cover .meta { font-size: 10.5pt; color: var(--ink-2); }
+.cover .team { display: flex; align-items: center; gap: 8pt; border-top: 1pt solid var(--line); padding-top: 8pt; font-size: 14pt; font-weight: 600; }
+.toc ol { padding-left: 14pt; }
+.toc li { margin-bottom: 3pt; }
+@media screen {
+  body { padding: 24px 0; }
+  main > * { margin-left: auto; margin-right: auto; }
+  .cover { height: auto; min-height: 92vh; }
+  .cover .title { margin-top: 40vh; }
+}
+@media (max-width: 640px) {
+  .cover svg.comb { width: 55%; }
+  .cover h1.cover-title { font-size: 18pt; }
+  table { display: block; overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+<main>
+
+<section class="cover" aria-label="Cover">
+  <svg class="comb" viewBox="0 0 300 260" aria-hidden="true">
+    <g fill="none" stroke="var(--accent)" stroke-width="2">
+      <polygon points="150,10 190,33 190,79 150,102 110,79 110,33"/>
+      <polygon points="230,10 270,33 270,79 230,102 190,79 190,33"/>
+      <polygon points="190,79 230,102 230,148 190,171 150,148 150,102"/>
+      <polygon points="110,79 150,102 150,148 110,171 70,148 70,102"/>
+      <polygon points="270,79 300,96 300,148 270,171 230,148 230,102"/>
+      <polygon points="150,148 190,171 190,217 150,240 110,217 110,171"/>
+    </g>
+    <polygon points="190,79 230,102 230,148 190,171 150,148 150,102" fill="var(--accent-soft)"/>
+  </svg>
+  <div class="top">EUROAVIA Ideathon 2026 · Ansys challenge</div>
+  <div class="title">
+    <h1 class="cover-title">Topology optimisation methods</h1>
+    <p class="sub">Settings, formulas, pitfalls and validated runs for Ansys Mechanical/Discovery and our code</p>
+  </div>
+  <div>
+    <p class="meta">3 November 2026 · team Beetiful · ahead of Bruges, 5–7 November 2026</p>
+    <div class="team">
+      <svg width="22" height="24" viewBox="0 0 22 24" aria-hidden="true"><polygon points="11,1 21,6.5 21,17.5 11,23 1,17.5 1,6.5" fill="var(--accent)"/></svg>
+      Team Beetiful
+    </div>
+  </div>
+</section>
+
+
+<section class="chapter" id="intro">
+<p>Team Beetiful, EUROAVIA Ideathon 2026 (Ansys challenge). Written 3 Nov 2026. Covers what to set, what to expect and how to check a topology result in Ansys Mechanical/Discovery and in our own code (<code>src/aerokit/optimization/</code>).</p>
+<p><strong>Tags.</strong></p>
+<ul>
+<li><strong>[D]</strong>: read in the primary source on 2–3 Nov 2026. The page or equation number is given.</li>
+<li><strong>[S]</strong>: read in a secondary source, which is named.</li>
+<li><strong>[Y]</strong>: our own judgement or arithmetic.</li>
+<li><strong>[R]</strong>: computed in this repository. The script or test is named.</li>
+</ul>
+<p>Source pack with the access log: <code>research_notes/Optimizasyon kaynakları/TO_kaynak_paketi.md</code>.</p>
+<p>The Ansys defaults below are from the <strong>Structural Optimization Guide 2025 R1</strong>. Discovery's help was not found. Check every default on screen on 5 Nov.</p>
+</section>
+<section class="chapter" id="s1">
+<h1>1. Which method for which task</h1>
+<table>
+<thead>
+<tr>
+  <th>Task wording on the day</th>
+  <th>Method</th>
+  <th>Ansys</th>
+  <th>Our code (preview)</th>
+  <th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>&quot;minimise mass / keep X % / stiffest part&quot;</td>
+  <td>SIMP compliance with a volume or mass target</td>
+  <td>Topology Density or Mixable Density; Response Constraint Mass, Percent to Retain</td>
+  <td><code>topology.topopt</code>, <code>topo_mapped.topopt_mapped</code></td>
+  <td>§3.1</td>
+</tr>
+<tr>
+  <td>&quot;crisp, printable, minimum wall/strut size&quot;</td>
+  <td>projection plus robust (eroded/dilated) design</td>
+  <td>Member Size (Minimum = 2.5 × element by default)</td>
+  <td><code>projection.topopt_projected(robust=0.25)</code></td>
+  <td>§3.2–3.3</td>
+</tr>
+<tr>
+  <td>&quot;must not exceed yield / stress limit&quot;</td>
+  <td>minimum mass under clustered P-norm stress</td>
+  <td>Local von Mises Stress constraint (density-based only), Convergence Accuracy 0.05 %</td>
+  <td><code>stress_topo.topopt_stress</code></td>
+  <td>§3.4</td>
+</tr>
+<tr>
+  <td>&quot;printed without supports / build direction&quot;</td>
+  <td>AM overhang filter</td>
+  <td>AM Overhang Constraint, 45° default, 27–60°</td>
+  <td><code>am_filter.AMFilter2D</code> in <code>topopt_mapped(am=...)</code></td>
+  <td>§3.5</td>
+</tr>
+<tr>
+  <td>&quot;avoid resonance / f₁ ≥ ... Hz&quot;</td>
+  <td>eigenfrequency objective or constraint</td>
+  <td>Natural Frequency response (no OC solver for modal)</td>
+  <td>not implemented (check f₁ with <code>design.card_physics.modal</code>)</td>
+  <td>§3.6</td>
+</tr>
+<tr>
+  <td>&quot;symmetric part / machined with one pull&quot;</td>
+  <td>design-variable maps</td>
+  <td>Symmetry tool, Pull-out / Extrusion constraint</td>
+  <td><code>topo_mapped.group_map(mirror=, extrude=)</code></td>
+  <td>§3.7</td>
+</tr>
+<tr>
+  <td>&quot;give us the CAD&quot;</td>
+  <td>iso-surface → STL/DXF, then re-analyse</td>
+  <td>Smoothing object (STL), Design Validation system</td>
+  <td><code>extract.surface_nets</code>, <code>extract.to_dxf</code></td>
+  <td>§5</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="chapter" id="s2">
+<h1>2. Settings card: Ansys default, paper default, our default</h1>
+<table>
+<thead>
+<tr>
+  <th>Setting</th>
+  <th>Ansys Mechanical 2025 R1 [D]</th>
+  <th>Paper</th>
+  <th>Our code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Optimisation type</td>
+  <td><strong>Mixable Density</strong> (default); Density Based listed separately</td>
+  <td>—</td>
+  <td>density-based SIMP</td>
+</tr>
+<tr>
+  <td>Stiffness penalty p</td>
+  <td>3 (&quot;Pseudo Density^Penalty&quot;)</td>
+  <td>3 (top88, Holmberg q = 3) [D]</td>
+  <td class="n">3</td>
+</tr>
+<tr>
+  <td>Minimum normalised density</td>
+  <td class="n">0.001</td>
+  <td>E_min = 1e-9·E₀ (top88) [D]</td>
+  <td>E_min = 1e-9·E₀</td>
+</tr>
+<tr>
+  <td>Filter</td>
+  <td>Non-linear (Program Controlled) or Linear; density-based only</td>
+  <td>density filter, cone weights (top88 Eq. 8–9) [D]</td>
+  <td>density filter (<code>ft=2</code>)</td>
+</tr>
+<tr>
+  <td>Minimum member size</td>
+  <td>Program Controlled = 2.5 × element size (density-based)</td>
+  <td>b = R at η_e = 0.75 (Qian &amp; Sigmund Eq. 29) [D]</td>
+  <td><code>projection.radius_for_member</code></td>
+</tr>
+<tr>
+  <td>Optimiser</td>
+  <td>SCP (MMA-type); OC only for compliance + volume/mass</td>
+  <td>OC (top88), MMA (Holmberg) [D]</td>
+  <td>OC; MMA with m constraints (<code>stress_topo.mma_multi</code>)</td>
+</tr>
+<tr>
+  <td>Maximum iterations</td>
+  <td class="n">500</td>
+  <td>2500 (top99neo Table 2) [D]</td>
+  <td>1000 (<code>topopt</code>)</td>
+</tr>
+<tr>
+  <td>Convergence</td>
+  <td>relative objective change ≤ 0.1 % on 3 successive iterations; 0.05 % advised with stress constraints</td>
+  <td>max|Δx| ≤ 0.01 (top88); ‖Δx̂‖/√m ≤ 1e-6 (top99neo) [D]</td>
+  <td>max|Δx| ≤ 0.01</td>
+</tr>
+<tr>
+  <td>Mass target</td>
+  <td>Percent to Retain 50 % (equality for density-based)</td>
+  <td>V* = 0.5 (MBB tests)</td>
+  <td><code>volume=</code> argument</td>
+</tr>
+<tr>
+  <td>Retained threshold (result)</td>
+  <td>0.5 (0.01–0.99); bands Remove 0–0.4, Marginal 0.4–0.6, Keep &gt; 0.6</td>
+  <td>—</td>
+  <td>0.5 in <code>extract.mass_preserving_level</code></td>
+</tr>
+<tr>
+  <td>AM overhang</td>
+  <td>build +Z, 45°, keep 27–60° (density-based)</td>
+  <td>ε = 1e-4, P = 40, ξ₀ = 0.5, OC move 0.05 (Langelaar 2017 p. 875) [D]</td>
+  <td>P = 40, ε = 1e-4 since 3 Nov (was 80 / 1e-3)</td>
+</tr>
+<tr>
+  <td>Stress P-norm</td>
+  <td>clusters; current release uses Le's adaptive factor c_i</td>
+  <td>p = 8, η_S = ρ^½, 10 clusters (Holmberg) [D]</td>
+  <td>p = 8, ρ^½, 10 clusters, stress-level reclustering every iteration</td>
+</tr>
+</tbody>
+</table>
+<p>Le's update formula for c_i was not found, so our code uses Holmberg's fixed 1/N_i form. Expect Ansys's reported maximum stress to sit closer to the limit than ours does [Y].</p>
+</section>
+<section class="chapter" id="s3">
+<h1>3. Methods</h1>
+</section>
+<section aria-label="3.1 SIMP with a density filter (top88)">
+<h3>3.1 SIMP with a density filter (top88)</h3>
+<ul>
+<li><strong>Model [D]:</strong><ul>
+<li>Modulus: E_e = E_min + x̃_e^p (E₀ − E_min).</li>
+<li>Filtered density: x̃ = Hx / Hs, with H_ei = max(0, r_min − Δ(e,i)).</li>
+<li>Update: OC with damping ½ and move 0.2. The volume is evaluated on x̃.</li>
+</ul>
+</li>
+<li><strong>Reproduced [R]:</strong> <code>tests/optimization/test_topology.py</code> matches the top88 printed compliances to ±0.005 on the MBB 60 × 20 at V = 0.5:<ul>
+<li>Sensitivity filter: 216.81.</li>
+<li>Density filter: 233.71.</li>
+<li>Heaviside, r_min 1.8: 189.14.</li>
+</ul>
+</li>
+<li><strong>Paper typos to ignore [D]:</strong><ul>
+<li>The second OC condition in Eq. (3) prints &quot;x_e − m&quot;; the code uses x_e + m.</li>
+<li>§3.4 prints r_min &quot;2.4, 6 and 16&quot;, but 0.04 × 300 = 12.</li>
+</ul>
+</li>
+<li><strong>Pitfalls:</strong><ul>
+<li>Report x̃, never x [D].</li>
+<li>With the density filter, dv is not uniform, so it must stay in the OC update [D].</li>
+<li>The sensitivity filter's gradient is not the true gradient [D].</li>
+</ul>
+</li>
+</ul>
+</section>
+<section aria-label="3.2 Threshold projection and the volume-preserving threshold (top99neo)">
+<h3>3.2 Threshold projection and the volume-preserving threshold (top99neo)</h3>
+<ul>
+<li><strong>Projection [D]:</strong> x̂ = (tanh βη + tanh β(x̃ − η)) / (tanh βη + tanh β(1 − η)), with ∂x̂/∂x̃ from Eq. (9).<ul>
+<li>η = 0.5 alone gives <strong>no</strong> length scale on either phase (Qian &amp; Sigmund, Fig. 2) [D].</li>
+</ul>
+</li>
+<li><strong>Volume-preserving threshold [D]:</strong><ul>
+<li>η* solves V(x̂(η*)) = V(x̃) (Eq. 17), by Newton from the previous η.</li>
+<li>The paper finds η* ∈ [0.4, 0.52].</li>
+<li>Our code adds ∂η*/∂x̃ to the gradient. That derivation is ours, and the finite-difference test passes [R].</li>
+</ul>
+</li>
+<li><strong>Continuation:</strong><ul>
+<li>top99neo's default call has none. With penal = 3 and β = 2 as inputs, maxPar is already reached [D, read from the listing logic].</li>
+<li>To get continuation, start p at 1 and β at 1 (Table 2, T3).</li>
+</ul>
+</li>
+<li><strong>Filter boundary [D]:</strong><ul>
+<li>The zero-Neumann (mirrored) filter gave c = 3993.7 on the 3-D cantilever; zero-Dirichlet gave 4074.3.</li>
+<li>Our filter is the Dirichlet type, like top88, so expect a slightly worse local minimum near the edges.</li>
+</ul>
+</li>
+<li><strong>Our call:</strong> <code>projection.topopt_projected(problem, V, rmin, eta=0.5, volume_preserving=True)</code>.</li>
+</ul>
+</section>
+<section aria-label="3.3 Robust design and the minimum member size">
+<h3>3.3 Robust design and the minimum member size</h3>
+<ul>
+<li><strong>Realisations [D, Qian &amp; Sigmund p. 8]:</strong> eroded, blueprint and dilated thresholds 1 − η, 0.5 and η, with η ∈ [0, 0.5].<ul>
+<li>β starts at 1 and doubles every 50 iterations up to 128.</li>
+<li>The volume constraint is on the dilated design.</li>
+<li>The objective is max{J_e, J_d} (Lazarov et al. 2016, Eq. 37) [D].</li>
+</ul>
+</li>
+<li><strong>Size rule [D, Eq. 29]:</strong> b/R = 2√(η_e − ½) for η_e ∈ [0.5, 0.75], and 2 − 2√(1 − η_e) for η_e ∈ [0.75, 1].<ul>
+<li>Assumptions: 1-D, a hat filter, and the same topology in every realisation.</li>
+<li>The prediction matched computed widths within 1–1.6 % (their Tables 1–2).</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+  <th>Dilated η</th>
+  <th>η_e = 1 − η</th>
+  <th>b/R</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td class="n">0.40</td>
+  <td class="n">0.60</td>
+  <td class="n">0.63</td>
+</tr>
+<tr>
+  <td class="n">0.30</td>
+  <td class="n">0.70</td>
+  <td class="n">0.89</td>
+</tr>
+<tr>
+  <td><strong>0.25</strong></td>
+  <td><strong>0.75</strong></td>
+  <td><strong>1.00</strong></td>
+</tr>
+<tr>
+  <td class="n">0.20</td>
+  <td class="n">0.80</td>
+  <td class="n">1.11</td>
+</tr>
+<tr>
+  <td class="n">0.10</td>
+  <td class="n">0.90</td>
+  <td class="n">1.37</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Day-of recipe [Y]:</strong><ol>
+<li>Choose the minimum strut b from the process. Example: the AM minimum thickness in docs/12 is ≥ 1.27 mm and ≥ 3 voxels.</li>
+<li>With η = 0.25, set r_min = b / h elements. <code>projection.radius_for_member(b, h)</code> returns it.</li>
+<li>Keep r_min at least 3 elements, so the mesh is h ≤ b/3.</li>
+<li>In Ansys, the Program Controlled minimum member size is 2.5 elements. To force b, set Member Size → Minimum = b manually.</li>
+</ol>
+</li>
+</ul>
+</section>
+<section aria-label="3.4 Stress-constrained topology (Holmberg et al. 2013)">
+<h3>3.4 Stress-constrained topology (Holmberg et al. 2013)</h3>
+<ul>
+<li><strong>Problem (P1) [D]:</strong> minimum mass subject to σ_i^PN = ((1/N_i) Σ_{a∈Ω_i} (σ_a^vM/σ̄)^p)^{1/p} ≤ 1 for each cluster i.</li>
+<li><strong>Settings [D]:</strong><ul>
+<li>Stress σ_a = ρ^½ σ̂_a at the element centroid; p = 8; stiffness ρ³; filter radius 1.5 elements; initial ρ = 0.5.</li>
+<li>The elements under the load are not design variables.</li>
+<li>&quot;Stress level&quot; clustering (sort, consecutive blocks), re-clustered every iteration.</li>
+</ul>
+</li>
+<li><strong>Bound [D]:</strong> the true maximum is below N_i^{1/p} σ̄. Tight clusters (stress level) bring it close to σ̄.</li>
+<li><strong>Ansys [D]:</strong><ul>
+<li>Local von Mises is density-based only.</li>
+<li>Use Convergence Accuracy 0.05 % for mass minimisation with stress constraints.</li>
+<li>Exclude load faces. The level-set note on p. 118 warns that a void design minimises stress, so keep a stiffness or mass constraint alongside.</li>
+</ul>
+</li>
+<li><strong>Our code [R]:</strong><ul>
+<li><code>stress_topo.topopt_stress</code> with m-constraint MMA.</li>
+<li>Gradient = finite differences (relative error &lt; 1e-5), and the MMA optimum = SLSQP on a 2-constraint test (<code>tests/test_projection_stress.py</code>).</li>
+<li>Benchmark against Holmberg's L-beam: §6.</li>
+</ul>
+</li>
+</ul>
+</section>
+<section aria-label="3.5 AM overhang filter (Langelaar 2017)">
+<h3>3.5 AM overhang filter (Langelaar 2017)</h3>
+<ul>
+<li><strong>Model [D]:</strong> ξ = smin(x, smax(three supports below)).<ul>
+<li>smin(x, Ξ) = ½(x + Ξ − √((x − Ξ)² + ε) + √ε).</li>
+<li>smax = (Σ ξ_k^P)^{1/Q}, with Q = P + ln n_S / ln ξ₀.</li>
+<li>Defaults: ε = 1e-4, P = 40, ξ₀ = 0.5. With P = 40, Q = 38.415 [Y].</li>
+</ul>
+</li>
+<li><strong>Recipe [D]:</strong> put the AM filter last in the chain, lower the OC move to 0.05, and prefer MMA.</li>
+<li><strong>Corrections to our earlier notes [D]:</strong><ul>
+<li>The 2-D filter is SMO 2017. Additive Manufacturing 2016 is the 3-D paper, and it was not read.</li>
+<li>Ansys's density-based overhang constraint is built on the 3-D 2016 paper.</li>
+</ul>
+</li>
+<li><strong>Side effect [Y]:</strong> with Q &lt; P, a fully dense support row gives Ξ = 3^{1/Q} ≈ 1.03, so printed densities can reach about 1.005. This is the paper's operator, not a bug.</li>
+<li><strong>Results at both parameter sets:</strong> §6.</li>
+</ul>
+</section>
+<section aria-label="3.6 Frequency topology (Ansys only on the day)">
+<h3>3.6 Frequency topology (Ansys only on the day)</h3>
+<ul>
+<li><strong>Ansys [D, guide p. 111–112]:</strong> frequency can be the objective or a constraint with bounds. Repeated frequencies are optimised together, and there is no mode tracking. Do not use OC for a modal analysis.</li>
+<li><strong>Spurious local modes [D, Olhoff &amp; Du 2016]:</strong> they appear in low-density regions. The usual fix is a modified mass interpolation. The form below 0.1 differs between two secondary sources [S], so it is not coded.</li>
+<li><strong>Day-of check [Y]:</strong><ul>
+<li>Maximise the lowest frequency with a bound formulation, not ω₁ alone, because modes switch.</li>
+<li>Check that the final first mode is global, not confined to grey regions.</li>
+<li>Our <code>design.card_physics.modal</code> drops islands before computing f₁.</li>
+</ul>
+</li>
+</ul>
+</section>
+<section aria-label="3.7 Symmetry, pull direction, extrusion, minimum volume (existing)">
+<h3>3.7 Symmetry, pull direction, extrusion, minimum volume (existing)</h3>
+<ul>
+<li><strong>Maps:</strong> <code>topo_mapped.group_map</code> builds x = P z for mirror and extrusion. The filtered field is group-averaged, so the constraint survives the filter [R, <code>tests/test_topo_mapped.py</code>].</li>
+<li><strong>Minimum volume:</strong> <code>min_volume</code> bisects the retained fraction for a stiffness target.</li>
+<li><strong>Ansys restriction [D, docs/14]:</strong> one manufacturing object per analysis. AM overhang cannot be combined with max member size, extrusion or pull-out.</li>
+</ul>
+</section>
+<section aria-label="3.8 BESO and level set (concepts only)">
+<h3>3.8 BESO and level set (concepts only)</h3>
+<ul>
+<li><strong>BESO [S]:</strong> discrete 0/1, history-averaged sensitivity numbers, V_{k+1} = V_k(1 ± ER).<ul>
+<li>Not in Ansys's method list [D]. We do not use it.</li>
+</ul>
+</li>
+<li><strong>Level set in Ansys [D]:</strong><ul>
+<li>3-D elements only.</li>
+<li>Retained threshold not relevant.</li>
+<li>Member size ≥ 4 × average element size.</li>
+</ul>
+</li>
+<li><strong>When to pick it [Y]:</strong> for a crisp boundary on a solid mesh. Use density or mixable density for stress and frequency work and for quick concepts.</li>
+</ul>
+</section>
+<section class="chapter" id="s4">
+<h1>4. Convergence and greyness</h1>
+<table>
+<thead>
+<tr>
+  <th>Code</th>
+  <th>Criterion</th>
+  <th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>top88</td>
+  <td>max|x_new − x| ≤ 0.01</td>
+  <td>0.01 [D]</td>
+</tr>
+<tr>
+  <td>top99neo</td>
+  <td>‖x̂<em>k − x̂</em>{k−1}‖₂/√m ≤ 1e-6 or maxit</td>
+  <td>1e-6 [D]</td>
+</tr>
+<tr>
+  <td>Robust (Qian &amp; Sigmund)</td>
+  <td>max change &lt; 0.01 and β ≥ 128</td>
+  <td>[D]</td>
+</tr>
+<tr>
+  <td>Ansys density-based</td>
+  <td>|Δf/f| ≤ 0.1 % on 3 successive iterations; constraints within 0.1 %</td>
+  <td>0.1 %, 500 iterations [D]</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Greyness:</strong> M_nd = 100 · Σ 4x̂(1 − x̂)/n (%) [S, Lazarov 2016 Eq. 30], implemented as <code>topology.gray_measure</code>. top99neo Table 2 reaches 0.1–2.5 %.</li>
+<li><strong>Stopping [D, Ansys p. 113]:</strong> the relaxed criterion &quot;might terminate too early … rerun with a smaller tolerance&quot;. If the mass is still falling at the stop, halve Convergence Accuracy and rerun.</li>
+<li><strong>Iteration counts:</strong> do not compare them across codes; the criteria differ [D].</li>
+</ul>
+</section>
+<section class="chapter" id="s5">
+<h1>5. Reading the result and rebuilding the CAD</h1>
+<ol>
+<li><strong>Check greyness first.</strong> Look at M_nd or the Marginal 0.4–0.6 band before you threshold.<ul>
+<li>Percent to Retain is an equality for density-based optimisation.</li>
+<li>Moving the Retained Threshold slider changes the reported Final Mass [D, p. 42, 63].</li>
+</ul>
+</li>
+<li><strong>Smooth.</strong> The Smoothing object writes an STL. The Design Validation system needs Export Model = Yes and passes a .pmdb downstream [D, p. 62, 82–88].<ul>
+<li>Offline: <code>extract.mass_preserving_level</code> picks the iso-level that keeps the thresholded mass. On the GE preview this kept mass within 2.4 % [R, <code>scripts/export_cad.py</code>].</li>
+</ul>
+</li>
+<li><strong>Re-analyse the smoothed part</strong> with the real loads, and compare stiffness and peak stress against the TO result.<ul>
+<li>Grey hinges or one-element members mean the mesh is too coarse or r_min is too small [Y].</li>
+<li>A stress hot spot at a re-entrant corner means a stress constraint is needed (§3.4, §6).</li>
+</ul>
+</li>
+</ol>
+</section>
+<section class="chapter" id="s6">
+<h1>6. Results computed here</h1>
+<p>Sources: <code>studies/scenarios/to_methods_study.json</code> from <code>scripts/to_methods_study.py</code>, run on 3 Nov 2026. Figures from <code>scripts/to_methods_figures.py</code>; both passed the datawiz audit with 0 HATA and an eye check.</p>
+</section>
+<section aria-label="6.1 Stress-constrained L-beam against Holmberg et al. (2013) [R vs D]">
+<h3>6.1 Stress-constrained L-beam against Holmberg et al. (2013) [R vs D]</h3>
+<p><strong>Set-up, as published:</strong></p>
+<ul>
+<li>L = 200 mm, 100 × 100 grid (6400 elements in the L, h = 2 mm), 1 mm thick.</li>
+<li>Aluminium: E 71 000 MPa, ν 0.33, σ̄ 350 MPa.</li>
+<li>1500 N at the arm tip; the 3 × 2 elements under the load fixed solid.</li>
+<li>r₀ = 1.5 elements, 10 stress-level clusters re-clustered every iteration, p = 8.</li>
+<li>Our run: 1000 MMA iterations, 597 s.</li>
+</ul>
+<table>
+<thead>
+<tr>
+  <th>Quantity</th>
+  <th>Holmberg Table 1 [D]</th>
+  <th>aerokit [R]</th>
+  <th>Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Mass</td>
+  <td>24.76 g</td>
+  <td>24.84 g</td>
+  <td>+0.3 %</td>
+</tr>
+<tr>
+  <td>Compliance</td>
+  <td>10 330 N·mm</td>
+  <td>10 216 N·mm</td>
+  <td>−1.1 %</td>
+</tr>
+<tr>
+  <td>Largest cluster P-norm</td>
+  <td>≤ 1</td>
+  <td class="n">1.0005</td>
+  <td>on the limit</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Same mass, compliance objective instead (<code>topology.topopt</code>, density filter, r_min 1.5):</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Design</th>
+  <th>Compliance</th>
+  <th>Peak relaxed σ_vM / σ̄</th>
+  <th>Solid points over σ̄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Stiffest (compliance)</td>
+  <td>8 473 N·mm</td>
+  <td class="n">2.66</td>
+  <td>11.9 %</td>
+</tr>
+<tr>
+  <td>Stress-constrained</td>
+  <td>10 216 N·mm (+21 %)</td>
+  <td class="n">1.34</td>
+  <td>8.6 %</td>
+</tr>
+</tbody>
+</table>
+<p><img style="max-width:100%;height:auto;display:block" src="figures_en/G5_stress_l_beam.png" alt="Stiffest vs stress-constrained L-beam at 24.8 g: the stress constraint rounds the re-entrant corner and halves the peak stress" /></p>
+<p>What this means for the day [Y]:</p>
+<ul>
+<li><strong>Moving to stress halves the peak.</strong> A compliance-only topology on a part with a re-entrant corner puts about 2.7 × the limit at the corner. The stress constraint cuts the peak in half and rounds the corner (<code>reports/figures_en/G5_stress_l_beam.png</code>). It costs about a fifth of the stiffness at equal mass.</li>
+<li><strong>The peak still overshoots.</strong> The 10-cluster P-norm leaves the single highest point 34 % above σ̄. That is inside Holmberg's bound N_i^{1/p} and the reason Ansys uses an adaptive factor. On the slide, quote the validated maximum from the smoothed re-analysis, not the TO plot.</li>
+<li><strong>Greyness is high at stop.</strong> M_nd is 16 % in the free region. Threshold with the mass-preserving level before re-analysis.</li>
+</ul>
+</section>
+<section aria-label="6.2 Density filter vs projection vs robust (half MBB 120 × 40, V* = 0.5, r_min = 4) [R]">
+<h3>6.2 Density filter vs projection vs robust (half MBB 120 × 40, V* = 0.5, r_min = 4) [R]</h3>
+<table>
+<thead>
+<tr>
+  <th>Run</th>
+  <th>Volume (blueprint)</th>
+  <th>Grey M_nd</th>
+  <th>Compliance</th>
+  <th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Density filter (top88, OC)</td>
+  <td class="n">0.50</td>
+  <td>28.1 %</td>
+  <td class="n">225.4</td>
+  <td>reference</td>
+</tr>
+<tr>
+  <td>Projection η = 0.5, β 1 → 128</td>
+  <td class="n">0.50</td>
+  <td>0.4 %</td>
+  <td>191.5 (0.85×)</td>
+  <td>crisp, no length scale</td>
+</tr>
+<tr>
+  <td>Robust η = 0.25 (eroded 0.75 / dilated 0.25)</td>
+  <td>0.42 (dilated 0.50)</td>
+  <td>0.6 %</td>
+  <td>225.8 (1.00×)</td>
+  <td>minimum member ≈ R = 4 elements by Eq. 29</td>
+</tr>
+</tbody>
+</table>
+<p><img style="max-width:100%;height:auto;display:block" src="figures_en/G6_projection_mbb.png" alt="Density filter, projection and robust projection on the half MBB beam: projection removes grey, robust adds a minimum member size" /></p>
+<ul>
+<li><strong>Robust buys size control.</strong> It reaches the density-filter stiffness with 16 % less blueprint material and a guaranteed minimum width (<code>reports/figures_en/G6_projection_mbb.png</code>). The eroded design has compliance 279.3 and the dilated one 197.2.</li>
+<li><strong>A pitfall found in this run.</strong> With top88's OC move 0.2, the eroded design lost a member at the β 64 → 128 step: compliance jumped from about 320 to 32 316, and the blueprint ended at 5 155. With move 0.1 the largest jump was 2.3× and the run recovered. The default is now 0.1.</li>
+<li><strong>The Ansys counterpart:</strong> watch the convergence plot after each continuation step. Halve the move or the convergence accuracy if the objective jumps by orders of magnitude [Y].</li>
+</ul>
+</section>
+<section aria-label="6.3 AM overhang filter: earlier parameters vs Langelaar's (half MBB 60 × 20, V 0.5, r_min 2) [R]">
+<h3>6.3 AM overhang filter: earlier parameters vs Langelaar's (half MBB 60 × 20, V 0.5, r_min 2) [R]</h3>
+<table>
+<thead>
+<tr>
+  <th>Parameters</th>
+  <th>OC move</th>
+  <th>Overhang violations</th>
+  <th>Compliance</th>
+  <th>Iterations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>P 80, ε 1e-3 (earlier, CILAMCE)</td>
+  <td class="n">0.1</td>
+  <td class="n">1</td>
+  <td class="n">251.6</td>
+  <td class="n">221</td>
+</tr>
+<tr>
+  <td><strong>P 40, ε 1e-4 (Langelaar, now default)</strong></td>
+  <td class="n">0.1</td>
+  <td><strong>0</strong></td>
+  <td class="n">251.7</td>
+  <td>300 (limit)</td>
+</tr>
+<tr>
+  <td>P 40, ε 1e-4</td>
+  <td>0.05 (paper recipe)</td>
+  <td class="n">0</td>
+  <td class="n">257.0</td>
+  <td>300 (limit)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Why the switch.</strong> The paper's parameters remove the last violation at the same compliance, so they are the default now.</li>
+<li><strong>Move 0.05 did not help.</strong> At 300 iterations it gave a 2 % higher compliance, which points to slower convergence, not a better optimum [Y].</li>
+<li><strong>The free-design reference</strong> in G2 (no AM filter) has 31 violations at compliance 219.9. The AM penalty is therefore +14 % compliance.</li>
+<li><strong>Greyness stays high</strong> (37 %) because the filter itself makes intermediate densities. Threshold before the overhang count on real CAD.</li>
+</ul>
+</section>
+<section aria-label="6.4 Regression against the published MBB values [R vs D]">
+<h3>6.4 Regression against the published MBB values [R vs D]</h3>
+<table>
+<thead>
+<tr>
+  <th>Case</th>
+  <th>Published</th>
+  <th>aerokit</th>
+  <th>Test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>top88 MBB 60 × 20, sensitivity filter</td>
+  <td class="n">216.81</td>
+  <td>216.81 (±0.005)</td>
+  <td><code>tests/optimization/test_topology.py</code></td>
+</tr>
+<tr>
+  <td>top88 MBB 60 × 20, density filter</td>
+  <td class="n">233.71</td>
+  <td>233.71 (±0.005)</td>
+  <td>same</td>
+</tr>
+<tr>
+  <td>top88 Heaviside, r_min 1.8</td>
+  <td class="n">189.14</td>
+  <td>189.14 (±0.005)</td>
+  <td>same</td>
+</tr>
+<tr>
+  <td>top99neo T1, 300 × 100, 2500 iterations</td>
+  <td class="n">252.7</td>
+  <td><strong>223.4 (−11.6 %)</strong>, grey 24.8 %, 5041 s</td>
+  <td><code>scripts/benchmark_top99neo.py</code> → <code>studies/scenarios/benchmark_top99neo.json</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>The top99neo gap is not explained.</strong></p>
+<ul>
+<li>The set-up text says supports and loads are &quot;defined as in the top88&quot; (half MBB, |q| = 1 at the first node, E₁ = 1, E₀ = 1e-9, ν = 0.3) [D, arXiv §2, step PRE.3 and the test set-up paragraph]. Our top88 port reproduces top88's own printed values exactly, so the SIMP core is not the suspect.</li>
+<li><strong>Known difference: the filter boundary.</strong> top99neo filters with a mirrored (Neumann) boundary, ours with the normalised top88 kernel. The paper's 3-D test shows a 2 % effect from this alone [D], far below 11.6 %.</li>
+<li><strong>A clue we cannot resolve.</strong> Table 2 prints m_ND = 0.025 for T1. Our density-filter run ends at 24.8 % grey, which is typical for r_min = 8.75. A pure density filter at 0.025 % grey is not plausible [Y]. So the T1 row may not be what its caption suggests, or the column is scaled differently.</li>
+<li><strong>Rule for the slides:</strong> quote the top88 agreement (exact) and do not quote the top99neo comparison as a validation.</li>
+</ul>
+</section>
+<section class="chapter" id="s7">
+<h1>7. Not found (do not quote these numbers)</h1>
+<ul>
+<li><strong>Paywalled or blocked:</strong> Le et al. 2010 (adaptive c_i), Duysinx &amp; Bendsøe 1998 (ε-relaxation), Guest 2004 and Wang 2011 primaries, Langelaar 2016 (3-D), Gaynor &amp; Guest 2016, Du &amp; Olhoff 2007, Pedersen 2000, and the Allaire 2004 JCP paper.</li>
+<li><strong>Ansys:</strong> the Discovery topology help (defaults, member size, smoothing). Read these on screen on 5 Nov.</li>
+</ul>
+</section>
+<section class="chapter" id="s8">
+<h1>Sources</h1>
+<table>
+<thead>
+<tr>
+  <th>Source</th>
+  <th>Read</th>
+  <th>Tag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Andreassen et al. 2011, SMO 43:1–16 (top88), author preprint</td>
+  <td>Eq. 1–23, Fig. 3, 4, 8</td>
+  <td>[D]</td>
+</tr>
+<tr>
+  <td>Ferrari &amp; Sigmund 2020, arXiv 2005.05436v2 (top99neo)</td>
+  <td>Eq. 1–19, Table 2</td>
+  <td>[D]</td>
+</tr>
+<tr>
+  <td>Qian &amp; Sigmund 2013, CMAME, author preprint</td>
+  <td>Eq. 25, 27–30, p. 8</td>
+  <td>[D]</td>
+</tr>
+<tr>
+  <td>Lazarov, Wang &amp; Sigmund 2016, Arch Appl Mech 86:189–218</td>
+  <td>Eq. 23, 30, 37</td>
+  <td>[D]</td>
+</tr>
+<tr>
+  <td>Holmberg, Torstenfelt &amp; Klarbring 2013, SMO 48:33–47, LiU post-print</td>
+  <td>Eq. 3–6, §6–9, Table 1, Fig. 3–4</td>
+  <td>[D]</td>
+</tr>
+<tr>
+  <td>Langelaar 2017, SMO 55:871–883</td>
+  <td>Eq. 1–16, p. 875, appendix</td>
+  <td>[D]</td>
+</tr>
+<tr>
+  <td>Olhoff &amp; Du 2016, SMO 54:1113–1141</td>
+  <td>§2.1–2.2</td>
+  <td>[D]</td>
+</tr>
+<tr>
+  <td>Ansys Structural Optimization Guide 2025 R1 (public PDF)</td>
+  <td>p. 8–12, 42, 53–64, 82–88, 109–121, 193</td>
+  <td>[D]</td>
+</tr>
+<tr>
+  <td>Yaghoobi &amp; Hassani 2017; pymoto docs; Wang, Liu &amp; Wen arXiv 1908.07157; Deng et al. arXiv 2104.01210</td>
+  <td>as cited</td>
+  <td>[S]</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+</main>
+</body>
+</html>

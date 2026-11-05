@@ -1,0 +1,188 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "sunum",
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {
+  "Vertical": {
+   "renk": "#0072b2",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 0
+  },
+  "Lateral": {
+   "renk": "#d55e00",
+   "baglam": false,
+   "isaret": "s",
+   "cizgi": "--",
+   "sira": 1
+  },
+  "No monitor": {
+   "renk": "#009e73",
+   "baglam": false,
+   "isaret": "^",
+   "cizgi": "-.",
+   "sira": 2
+  },
+  "Monitored": {
+   "renk": "#cc79a7",
+   "baglam": false,
+   "isaret": "D",
+   "cizgi": ":",
+   "sira": 3
+  },
+  "Separation FDE": {
+   "renk": "#e69f00",
+   "baglam": false,
+   "isaret": "v",
+   "cizgi": [
+    0,
+    [
+     5,
+     1
+    ]
+   ],
+   "sira": 4
+  },
+  "Innovation FDE": {
+   "renk": "#56b4e9",
+   "baglam": false,
+   "isaret": "P",
+   "cizgi": [
+    0,
+    [
+     3,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   ],
+   "sira": 5
+  },
+  "3° path": {
+   "renk": "#919191",
+   "baglam": true,
+   "isaret": null,
+   "cizgi": "-",
+   "sira": 6
+  },
+  "0.05°": {
+   "renk": "#919191",
+   "baglam": true,
+   "isaret": null,
+   "cizgi": "-",
+   "sira": 7
+  },
+  "0.1°": {
+   "renk": "#000000",
+   "baglam": false,
+   "isaret": "X",
+   "cizgi": [
+    0,
+    [
+     1,
+     1
+    ]
+   ],
+   "sira": 8
+  },
+  "0.3°": {
+   "renk": "#919191",
+   "baglam": true,
+   "isaret": null,
+   "cizgi": "-",
+   "sira": 9
+  }
+ },
+ "nicelikler": {
+  "dev95": {
+   "etiket": "Deviation at the gate, P95",
+   "birim": "m",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "source": {
+   "etiket": "Navigation source",
+   "birim": null,
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "t": {
+   "etiket": "Time on approach",
+   "birim": "s",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "vdev": {
+   "etiket": "Vertical deviation from the path",
+   "birim": "m",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "range": {
+   "etiket": "Distance from the ground sensor",
+   "birim": "NM",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "poserr": {
+   "etiket": "Position error for the angle error",
+   "birim": "m",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "dist": {
+   "etiket": "Distance to the threshold",
+   "birim": "km",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "hgt": {
+   "etiket": "True height above the threshold",
+   "birim": "m",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "A1_gate_accuracy": "A1_gate_accuracy.dw.json",
+  "A2_spoof_monitor": "A2_spoof_monitor.dw.json",
+  "A3_angle_error_range": "A3_angle_error_range.dw.json",
+  "A4_autoland_fde": "A4_autoland_fde.dw.json"
+ },
+ "kenar_mm": {
+  "tam": [
+   73.2,
+   25.8,
+   58.0,
+   12.2
+  ]
+ }
+}

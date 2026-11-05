@@ -1,0 +1,182 @@
+{
+ "surum": 1,
+ "ad": "C4_ercs_barriers",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  743.9,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   20.4,
+   24.0
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 24.0
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    246.3,
+    73.2,
+    861.6,
+    379.5
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Held",
+     "tur": "cizgi",
+     "renk": "#009e73",
+     "isaret": "o",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 9.0
+    },
+    {
+     "etiket": "Failed",
+     "tur": "cizgi",
+     "renk": "#d55e00",
+     "isaret": "Path(array([[-1.  , -0.68],\n       [-1.  , -1.  ],\n       [-0.68, -1.  ],\n       [ 0.68, -1.  ],\n       [ 1.  , -1.  ],\n       [ 1.  , -0.68],\n       [ 1.  ,  0.68],\n       [ 1.  ,  1.  ],\n       [ 0.68,  1.  ],\n       [-0.68,  1.  ],\n       [-1.  ,  1.  ],\n       [-1.  ,  0.68],\n       [-1.  , -0.68]]), array([ 1,  3,  3,  2,  3,  3,  2,  3,  3,  2,  3,  3, 79], dtype=uint8))",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 8.08
+    },
+    {
+     "etiket": "Added by the retrofit",
+     "tur": "cizgi",
+     "renk": "#0072b2",
+     "isaret": "Path(array([[ 1.55884573e-01,  7.30000000e-01],\n       [ 1.75185684e-16,  1.00000000e+00],\n       [-1.55884573e-01,  7.30000000e-01],\n       [-7.10140831e-01, -2.30000000e-01],\n       [-8.66025404e-01, -5.00000000e-01],\n       [-5.54256258e-01, -5.00000000e-01],\n       [ 5.54256258e-01, -5.00000000e-01],\n       [ 8.66025404e-01, -5.00000000e-01],\n       [ 7.10140831e-01, -2.30000000e-01],\n       [ 1.55884573e-01,  7.30000000e-01]]), array([ 1,  3,  3,  2,  3,  3,  2,  3,  3, 79], dtype=uint8))",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 14.35
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Barrier weight",
+    "nicelik": "Barrier weight",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "barrierweight",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     7.5
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "2",
+     "4",
+     "6"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     482.9,
+     3.0,
+     625.0,
+     25.3
+    ]
+   },
+   "y": {
+    "ham": "ERCS barrier",
+    "nicelik": "ERCS barrier",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "ercsbarrier",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.25,
+     5.25
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "design",
+     "regulations and procedures",
+     "situational awareness",
+     "warning systems",
+     "late recovery",
+     "protections"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "design",
+     "regulations and procedures",
+     "situational awareness",
+     "warning systems",
+     "late recovery",
+     "protections"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     246.3,
+     388.7,
+     372.2,
+     411.0
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

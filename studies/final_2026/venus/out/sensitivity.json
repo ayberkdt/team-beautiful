@@ -1,0 +1,414 @@
+{
+ "generated_by": "python scripts/venus_sensitivity.py",
+ "D_m": 2.6,
+ "V_tip_m_s": 70.0,
+ "rows": [
+  {
+   "label": "baseline",
+   "gross_kg": 43.65523224330557,
+   "mu0_loiter": 0.595305187345561,
+   "loiter_W": 1336.5290937313735,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 49.18333333333333,
+   "sustained_h": 44.833333333333336,
+   "release_hour_angle_deg": -51.29540910000183,
+   "case": "baseline"
+  },
+  {
+   "label": "battery cell energy 180 / 280 Wh/kg [bad]",
+   "gross_kg": 52.53411918507846,
+   "mu0_loiter": 0.6856487266213112,
+   "loiter_W": 1649.5623916436132,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 43.75,
+   "sustained_h": 38.95,
+   "release_hour_angle_deg": -44.303610085215475,
+   "case": "battery cell energy 180 / 280 Wh/kg",
+   "side": "bad",
+   "value": "Battery(name='Li-ion NCR18650B-class (energy cell)', cell_specific_energy=180.0, pack_factor=0.75, usable_dod=0.85, charge_C=(0.0, 45.0), discharge_C=(-20.0, 60.0), max_C_rate=2.0)"
+  },
+  {
+   "label": "battery cell energy 180 / 280 Wh/kg [good]",
+   "gross_kg": 41.284683170225414,
+   "mu0_loiter": 0.5705752698674731,
+   "loiter_W": 1255.904618730107,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 50.56666666666667,
+   "sustained_h": 46.35,
+   "release_hour_angle_deg": -53.088890565166174,
+   "case": "battery cell energy 180 / 280 Wh/kg",
+   "side": "good",
+   "value": "Battery(name='Li-ion NCR18650B-class (energy cell)', cell_specific_energy=280.0, pack_factor=0.75, usable_dod=0.85, charge_C=(0.0, 45.0), discharge_C=(-20.0, 60.0), max_C_rate=2.0)"
+  },
+  {
+   "label": "solar array efficiency 0.25 / 0.32 [bad]",
+   "gross_kg": 43.65523224330557,
+   "mu0_loiter": 0.6579137824985857,
+   "loiter_W": 1336.5290937313735,
+   "solar_overhead_W": 2556.111778703794,
+   "flight_h": 45.46666666666667,
+   "sustained_h": 40.833333333333336,
+   "release_hour_angle_deg": -46.53480728639849,
+   "case": "solar array efficiency 0.25 / 0.32",
+   "side": "bad",
+   "value": 0.25
+  },
+  {
+   "label": "solar array efficiency 0.25 / 0.32 [good]",
+   "gross_kg": 43.65523224330557,
+   "mu0_loiter": 0.556576228327029,
+   "loiter_W": 1336.5290937313735,
+   "solar_overhead_W": 3271.823076740857,
+   "flight_h": 51.35,
+   "sustained_h": 47.2,
+   "release_hour_angle_deg": -54.08557846222767,
+   "case": "solar array efficiency 0.25 / 0.32",
+   "side": "good",
+   "value": 0.32
+  },
+  {
+   "label": "mass contingency 30 % / 10 % [bad]",
+   "gross_kg": 51.46616279394444,
+   "mu0_loiter": 0.6749541381600626,
+   "loiter_W": 1610.991058329859,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 44.416666666666664,
+   "sustained_h": 39.68333333333333,
+   "release_hour_angle_deg": -45.17416093904676,
+   "case": "mass contingency 30 % / 10 %",
+   "side": "bad",
+   "value": 0.3
+  },
+  {
+   "label": "mass contingency 30 % / 10 % [good]",
+   "gross_kg": 37.298687675665,
+   "mu0_loiter": 0.528343231034138,
+   "loiter_W": 1123.2507863636465,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 52.88333333333333,
+   "sustained_h": 48.86666666666667,
+   "release_hour_angle_deg": -56.05870160683067,
+   "case": "mass contingency 30 % / 10 %",
+   "side": "good",
+   "value": 0.1
+  },
+  {
+   "label": "atmosphere thin / dense (PV envelope) [bad]",
+   "gross_kg": 44.02085972834232,
+   "mu0_loiter": 0.6017150675354168,
+   "loiter_W": 1357.7816879764373,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 48.983333333333334,
+   "sustained_h": 44.6,
+   "release_hour_angle_deg": -50.823229239382464,
+   "case": "atmosphere thin / dense (PV envelope)",
+   "side": "bad",
+   "value": "thin"
+  },
+  {
+   "label": "atmosphere thin / dense (PV envelope) [good]",
+   "gross_kg": 43.38549692625965,
+   "mu0_loiter": 0.5905572155110059,
+   "loiter_W": 1320.8809708896138,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 49.31666666666667,
+   "sustained_h": 45.016666666666666,
+   "release_hour_angle_deg": -51.64316327098406,
+   "case": "atmosphere thin / dense (PV envelope)",
+   "side": "good",
+   "value": "dense"
+  },
+  {
+   "label": "payload 5 kg / 1.5 kg [bad]",
+   "gross_kg": 48.62374179302385,
+   "mu0_loiter": 0.6462821618831542,
+   "loiter_W": 1509.5901391773816,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 46.18333333333333,
+   "sustained_h": 41.6,
+   "release_hour_angle_deg": -47.44620324605484,
+   "case": "payload 5 kg / 1.5 kg",
+   "side": "bad",
+   "value": 5.0
+  },
+  {
+   "label": "payload 5 kg / 1.5 kg [good]",
+   "gross_kg": 40.0425546743765,
+   "mu0_loiter": 0.5575037094201107,
+   "loiter_W": 1214.1677921152152,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 51.3,
+   "sustained_h": 47.13333333333333,
+   "release_hour_angle_deg": -54.01993676272891,
+   "case": "payload 5 kg / 1.5 kg",
+   "side": "good",
+   "value": 1.5
+  },
+  {
+   "label": "cruise altitude 53 / 58 km [bad]",
+   "gross_kg": 41.05929918482336,
+   "mu0_loiter": 0.6259180400832758,
+   "loiter_W": 1191.664060556169,
+   "solar_overhead_W": 2454.8564934796855,
+   "flight_h": 48.38333333333333,
+   "sustained_h": 44.416666666666664,
+   "release_hour_angle_deg": -49.01070267795116,
+   "case": "cruise altitude 53 / 58 km",
+   "side": "bad",
+   "value": 53000.0
+  },
+  {
+   "label": "cruise altitude 53 / 58 km [good]",
+   "gross_kg": 51.39774575484587,
+   "mu0_loiter": 0.6326243821681663,
+   "loiter_W": 1779.530681141832,
+   "solar_overhead_W": 3608.2935091274626,
+   "flight_h": 41.166666666666664,
+   "sustained_h": 36.65,
+   "release_hour_angle_deg": -48.49966844793152,
+   "case": "cruise altitude 53 / 58 km",
+   "side": "good",
+   "value": 58000.0
+  },
+  {
+   "label": "battery reserve 1.0 / 0.25 h hover [bad]",
+   "error": "mass closure diverges: growth factor above 1",
+   "case": "battery reserve 1.0 / 0.25 h hover",
+   "side": "bad",
+   "value": 1.0
+  },
+  {
+   "label": "battery reserve 1.0 / 0.25 h hover [good]",
+   "gross_kg": 36.18054492482418,
+   "mu0_loiter": 0.5163320179905906,
+   "loiter_W": 1086.6818154581194,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 52.28333333333333,
+   "sustained_h": 49.56666666666667,
+   "release_hour_angle_deg": -56.88426384204508,
+   "case": "battery reserve 1.0 / 0.25 h hover",
+   "side": "good",
+   "value": 0.25
+  },
+  {
+   "label": "blade areal mass 3.3 / 1.5 kg/m\u00b2 [bad]",
+   "gross_kg": 46.0146468341894,
+   "mu0_loiter": 0.6196497803968652,
+   "loiter_W": 1418.022767839087,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 47.766666666666666,
+   "sustained_h": 43.31666666666667,
+   "release_hour_angle_deg": -49.484797981026276,
+   "case": "blade areal mass 3.3 / 1.5 kg/m\u00b2",
+   "side": "bad",
+   "value": 3.3
+  },
+  {
+   "label": "blade areal mass 3.3 / 1.5 kg/m\u00b2 [good]",
+   "gross_kg": 42.29362301736388,
+   "mu0_loiter": 0.5811337421530309,
+   "loiter_W": 1290.061151533268,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 49.96666666666667,
+   "sustained_h": 45.71666666666667,
+   "release_hour_angle_deg": -52.328474875128265,
+   "case": "blade areal mass 3.3 / 1.5 kg/m\u00b2",
+   "side": "good",
+   "value": 1.5
+  },
+  {
+   "label": "motor specific torque 5 / 10 N\u00b7m/kg [bad]",
+   "gross_kg": 45.07186691349181,
+   "mu0_loiter": 0.6099590120885274,
+   "loiter_W": 1385.3302238941656,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 48.31666666666667,
+   "sustained_h": 43.93333333333333,
+   "release_hour_angle_deg": -50.21123679775788,
+   "case": "motor specific torque 5 / 10 N\u00b7m/kg",
+   "side": "bad",
+   "value": 5.0
+  },
+  {
+   "label": "motor specific torque 5 / 10 N\u00b7m/kg [good]",
+   "gross_kg": 42.67390569087265,
+   "mu0_loiter": 0.5851052616751939,
+   "loiter_W": 1303.0116324924502,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 49.75,
+   "sustained_h": 45.46666666666667,
+   "release_hour_angle_deg": -52.040430812341214,
+   "case": "motor specific torque 5 / 10 N\u00b7m/kg",
+   "side": "good",
+   "value": 10.0
+  },
+  {
+   "label": "gearbox torque density 12 / 40 N\u00b7m/kg [bad]",
+   "gross_kg": 49.89525737719196,
+   "mu0_loiter": 0.6591536222177705,
+   "loiter_W": 1554.7493534162109,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 45.4,
+   "sustained_h": 40.75,
+   "release_hour_angle_deg": -46.436851977931084,
+   "case": "gearbox torque density 12 / 40 N\u00b7m/kg",
+   "side": "bad",
+   "value": 12.0
+  },
+  {
+   "label": "gearbox torque density 12 / 40 N\u00b7m/kg [good]",
+   "gross_kg": 41.97819093210259,
+   "mu0_loiter": 0.5778409989402453,
+   "loiter_W": 1279.3666038313609,
+   "solar_overhead_W": 2965.0896632964004,
+   "flight_h": 50.15,
+   "sustained_h": 45.916666666666664,
+   "release_hour_angle_deg": -52.566443681791384,
+   "case": "gearbox torque density 12 / 40 N\u00b7m/kg",
+   "side": "good",
+   "value": 40.0
+  }
+ ],
+ "robustness": [
+  {
+   "D_m": 2.6,
+   "gear_ratio": 5.0,
+   "case": "nominal",
+   "gross_kg": 43.65523224330557,
+   "flight_h": 49.166666666666664,
+   "span_m": 8.0
+  },
+  {
+   "D_m": 2.6,
+   "gear_ratio": 5.0,
+   "case": "cells 180 Wh/kg",
+   "gross_kg": 52.53411918507846,
+   "flight_h": 43.766666666666666,
+   "span_m": 8.0
+  },
+  {
+   "D_m": 2.6,
+   "gear_ratio": 5.0,
+   "case": "contingency 30 %",
+   "gross_kg": 51.46616279394444,
+   "flight_h": 44.43333333333333,
+   "span_m": 8.0
+  },
+  {
+   "D_m": 2.6,
+   "gear_ratio": 5.0,
+   "case": "motors 5 N\u00b7m/kg",
+   "gross_kg": 45.07186691349181,
+   "flight_h": 48.333333333333336,
+   "span_m": 8.0
+  },
+  {
+   "D_m": 2.6,
+   "gear_ratio": 5.0,
+   "case": "payload 5 kg",
+   "gross_kg": 48.62374179302385,
+   "flight_h": 46.2,
+   "span_m": 8.0
+  },
+  {
+   "D_m": 2.6,
+   "gear_ratio": 5.0,
+   "case": "thin atmosphere",
+   "gross_kg": 44.02085972834232,
+   "flight_h": 48.96666666666667,
+   "span_m": 8.0
+  },
+  {
+   "D_m": 2.6,
+   "gear_ratio": 1.0,
+   "case": "nominal",
+   "gross_kg": 54.578699460479314,
+   "flight_h": 43.93333333333333,
+   "span_m": 8.0
+  },
+  {
+   "D_m": 2.6,
+   "gear_ratio": 1.0,
+   "case": "cells 180 Wh/kg",
+   "error": "mass closure diverges: growth factor above 1"
+  },
+  {
+   "D_m": 2.6,
+   "gear_ratio": 1.0,
+   "case": "contingency 30 %",
+   "gross_kg": 75.26026005510921,
+   "flight_h": 29.433333333333334,
+   "span_m": 8.0
+  },
+  {
+   "D_m": 2.6,
+   "gear_ratio": 1.0,
+   "case": "motors 5 N\u00b7m/kg",
+   "error": "mass closure diverges: growth factor above 1"
+  },
+  {
+   "D_m": 2.6,
+   "gear_ratio": 1.0,
+   "case": "payload 5 kg",
+   "gross_kg": 62.23290711409896,
+   "flight_h": 39.1,
+   "span_m": 8.0
+  },
+  {
+   "D_m": 2.6,
+   "gear_ratio": 1.0,
+   "case": "thin atmosphere",
+   "gross_kg": 55.490137439198094,
+   "flight_h": 43.4,
+   "span_m": 8.0
+  },
+  {
+   "D_m": 2.3,
+   "gear_ratio": 5.0,
+   "case": "nominal",
+   "gross_kg": 41.09913769231388,
+   "flight_h": 42.233333333333334,
+   "span_m": 7.1
+  },
+  {
+   "D_m": 2.3,
+   "gear_ratio": 5.0,
+   "case": "cells 180 Wh/kg",
+   "gross_kg": 50.77245633087711,
+   "flight_h": 33.233333333333334,
+   "span_m": 7.1
+  },
+  {
+   "D_m": 2.3,
+   "gear_ratio": 5.0,
+   "case": "contingency 30 %",
+   "gross_kg": 48.8199545968145,
+   "flight_h": 35.2,
+   "span_m": 7.1
+  },
+  {
+   "D_m": 2.3,
+   "gear_ratio": 5.0,
+   "case": "motors 5 N\u00b7m/kg",
+   "gross_kg": 42.401566316543075,
+   "flight_h": 41.13333333333333,
+   "span_m": 7.1
+  },
+  {
+   "D_m": 2.3,
+   "gear_ratio": 5.0,
+   "case": "payload 5 kg",
+   "gross_kg": 46.27263100221542,
+   "flight_h": 37.63333333333333,
+   "span_m": 7.1
+  },
+  {
+   "D_m": 2.3,
+   "gear_ratio": 5.0,
+   "case": "thin atmosphere",
+   "gross_kg": 41.47396639618997,
+   "flight_h": 41.93333333333333,
+   "span_m": 7.1
+  }
+ ]
+}

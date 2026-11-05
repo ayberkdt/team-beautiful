@@ -1,0 +1,246 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "sunum",
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {
+  "Naive parser": {
+   "renk": "#0072b2",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 0
+  },
+  "Conservative parser": {
+   "renk": "#d55e00",
+   "baglam": false,
+   "isaret": "s",
+   "cizgi": "--",
+   "sira": 1
+  },
+  "Swerling 1, 2 m²": {
+   "renk": "#009e73",
+   "baglam": false,
+   "isaret": "^",
+   "cizgi": "-.",
+   "sira": 2
+  },
+  "Swerling 1, 10 m²": {
+   "renk": "#cc79a7",
+   "baglam": false,
+   "isaret": "D",
+   "cizgi": ":",
+   "sira": 3
+  },
+  "State": {
+   "renk": "#3b3b3b",
+   "baglam": false,
+   "isaret": "v",
+   "cizgi": [
+    0,
+    [
+     5,
+     1
+    ]
+   ],
+   "sira": 5
+  },
+  "Correct value shown": {
+   "renk": "#e69f00",
+   "baglam": false,
+   "isaret": "*",
+   "cizgi": [
+    0,
+    [
+     8,
+     2
+    ]
+   ],
+   "sira": 8
+  },
+  "Withheld (say again)": {
+   "renk": "#6b5a00",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 9
+  },
+  "Wrong value shown": {
+   "renk": "#9e1b32",
+   "baglam": false,
+   "isaret": "*",
+   "cizgi": [
+    0,
+    [
+     8,
+     2
+    ]
+   ],
+   "sira": 7
+  },
+  "Jitter -40 dB": {
+   "renk": "#56b4e9",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 8
+  },
+  "Jitter -50 dB": {
+   "renk": "#000000",
+   "baglam": false,
+   "isaret": "s",
+   "cizgi": "--",
+   "sira": 9
+  },
+  "Jitter -60 dB": {
+   "renk": "#f0e442",
+   "baglam": false,
+   "isaret": "^",
+   "cizgi": "-.",
+   "sira": 10
+  },
+  "Panel needle": {
+   "renk": "#1f3a93",
+   "baglam": false,
+   "isaret": "D",
+   "cizgi": ":",
+   "sira": 11
+  },
+  "True deviation": {
+   "renk": "#919191",
+   "baglam": true,
+   "isaret": null,
+   "cizgi": "-",
+   "sira": 12
+  }
+ },
+ "nicelikler": {
+  "snr": {
+   "etiket": "Signal-to-noise ratio of the voice channel",
+   "birim": "dB",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "wrong": {
+   "etiket": "Wrong values shown as confirmed",
+   "birim": "per 1000 instructions",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "withheld": {
+   "etiket": "Values withheld (say again)",
+   "birim": "%",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "rng": {
+   "etiket": "Range from the radar",
+   "birim": "NM",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "pd": {
+   "etiket": "Probability of detection per scan",
+   "birim": null,
+   "eksen": "y",
+   "sinir": [
+    0,
+    1.02
+   ],
+   "olcek": null,
+   "bicim": null
+  },
+  "t": {
+   "etiket": "Time on approach",
+   "birim": "s",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "state": {
+   "etiket": "Communication state",
+   "birim": null,
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "thr": {
+   "etiket": "Word-confidence threshold for CONFIRMED",
+   "birim": null,
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "share": {
+   "etiket": "Share of instructions (SAPI grammar, SNR 10-30 dB)",
+   "birim": "%",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "fps": {
+   "etiket": "False plots per scan",
+   "birim": null,
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "chain": {
+   "etiket": "PSR processing chain",
+   "birim": null,
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "tg": {
+   "etiket": "Time on final",
+   "birim": "s",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "vdots": {
+   "etiket": "Vertical deviation shown to the pilot",
+   "birim": "dots",
+   "eksen": "y",
+   "sinir": [
+    -2.2,
+    2.2
+   ],
+   "olcek": null,
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "F1_wrong_values_vs_snr": "F1_wrong_values_vs_snr.dw.json",
+  "F2_withheld_vs_snr": "F2_withheld_vs_snr.dw.json",
+  "F3_psr_pd_vs_range": "F3_psr_pd_vs_range.dw.json",
+  "F4_comm_state_timeline": "F4_comm_state_timeline.dw.json",
+  "F5_real_asr_threshold": "F5_real_asr_threshold.dw.json",
+  "F6_psr_false_plots": "F6_psr_false_plots.dw.json",
+  "F7_guidance_needle": "F7_guidance_needle.dw.json"
+ }
+}

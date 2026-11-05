@@ -1,0 +1,178 @@
+{
+ "surum": 1,
+ "ad": "C3_cry_wolf",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  850.2,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   20.4,
+   24.0
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    49.3,
+    74.0,
+    700.4,
+    379.5
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Pilot always acts",
+     "tur": "cizgi",
+     "renk": "#07648e",
+     "isaret": null,
+     "cizgi": "--",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Pilot matches reliability",
+     "tur": "cizgi",
+     "renk": "#5f5f5f",
+     "isaret": null,
+     "cizgi": "--",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "False-alarm probability per flight",
+    "nicelik": "False-alarm probability per flight",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "falsealarmprobabilityperflight",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     7.943282347242822e-07,
+     0.12589254117941673
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "10⁻⁶",
+     "10⁻⁵",
+     "10⁻⁴",
+     "10⁻³",
+     "10⁻²",
+     "10⁻¹"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "10⁻⁶",
+     "10⁻⁵",
+     "10⁻⁴",
+     "10⁻³",
+     "10⁻²",
+     "10⁻¹"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     210.4,
+     3.0,
+     539.3,
+     26.0
+    ]
+   },
+   "y": {
+    "ham": "Risk reduction factor",
+    "nicelik": "Risk reduction factor",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "riskreductionfactor",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.6898591724121853,
+     2771.529988520724
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "1",
+     "10",
+     "10²",
+     "10³"
+    ],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "1",
+     "10",
+     "10²",
+     "10³"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     49.3,
+     388.7,
+     257.5,
+     411.0
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

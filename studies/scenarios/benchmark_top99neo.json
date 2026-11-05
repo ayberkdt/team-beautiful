@@ -1,0 +1,10 @@
+{
+ "published_c": 252.7,
+ "aerokit_c": 223.44317929419967,
+ "relative_difference": -0.11577689238543853,
+ "iterations": 2500,
+ "grey_percent": 24.823539091393542,
+ "seconds": 5041,
+ "setup": "mbb_half(300, 100), V 0.5, rmin 8.75, ft 2, OC move 0.2, p 3, max 2500 iterations",
+ "source": "Ferrari and Sigmund 2020, SMO, arXiv 2005.05436, Table 2, T1 (via research_notes R3 \u00a77)"
+}

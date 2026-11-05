@@ -1,0 +1,147 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "sunum",
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {
+  "Battery quadrotor": {
+   "renk": "#0072b2",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 0
+  },
+  "Helium-assisted quad": {
+   "renk": "#d55e00",
+   "baglam": false,
+   "isaret": "s",
+   "cizgi": "--",
+   "sira": 1
+  },
+  "Solar aeroplane": {
+   "renk": "#009e73",
+   "baglam": false,
+   "isaret": "^",
+   "cizgi": "-.",
+   "sira": 2
+  },
+  "Solar, day average": {
+   "renk": "#919191",
+   "baglam": true,
+   "isaret": null,
+   "cizgi": "-",
+   "sira": 3
+  },
+  "Venus": {
+   "renk": "#000000",
+   "baglam": false,
+   "isaret": "D",
+   "cizgi": "-",
+   "sira": 4
+  }
+ },
+ "nicelikler": {
+  "alt": {
+   "etiket": "Altitude",
+   "birim": "km",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "pw": {
+   "etiket": "Electrical power to stay aloft",
+   "birim": "W",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "temp": {
+   "etiket": "Temperature",
+   "birim": "°C",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "rho": {
+   "etiket": "Density, log scale",
+   "birim": "kg/m³",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "wind": {
+   "etiket": "Zonal wind",
+   "birim": "m/s",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "speed": {
+   "etiket": "Airspeed through the air mass",
+   "birim": "m/s",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "drag": {
+   "etiket": "Power to push the envelope, log scale",
+   "birim": "W",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": "log",
+   "bicim": null
+  },
+  "hours": {
+   "etiket": "Mission time",
+   "birim": "h",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "hull": {
+   "etiket": "Hull temperature",
+   "birim": "°C",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "batt": {
+   "etiket": "Battery",
+   "birim": "Wh",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "V1_power_altitude": "V1_power_altitude.dw.json",
+  "V2_environment": "V2_environment.dw.json",
+  "V3_station_keeping": "V3_station_keeping.dw.json",
+  "V4_mission": "V4_mission.dw.json"
+ },
+ "kenar_mm": {
+  "tam": [
+   17.4,
+   26.1,
+   20.3,
+   12.2
+  ]
+ }
+}

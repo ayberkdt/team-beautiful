@@ -1,0 +1,149 @@
+[
+ {
+  "benchmark": "patch test, uniform tension (H8)",
+  "reference": "exact σz = 100 MPa",
+  "ours": "max |σz/σ − 1| = 2.9e-14",
+  "pass": true,
+  "source": "exact solution"
+ },
+ {
+  "benchmark": "patch test, uniform tension (H8IM)",
+  "reference": "exact σz = 100 MPa",
+  "ours": "max |σz/σ − 1| = 7.0e-14",
+  "pass": true,
+  "source": "exact solution"
+ },
+ {
+  "benchmark": "cantilever tip deflection, H8, 1 voxel(s) thick",
+  "reference": "Timoshenko beam 2.0156 mm",
+  "ours": "ratio 0.6428",
+  "pass": null,
+  "source": "Timoshenko & Gere (shear coefficient 5/6) [textbook formula]"
+ },
+ {
+  "benchmark": "cantilever tip deflection, H8, 2 voxel(s) thick",
+  "reference": "Timoshenko beam 2.0156 mm",
+  "ours": "ratio 0.8690",
+  "pass": null,
+  "source": "Timoshenko & Gere (shear coefficient 5/6) [textbook formula]"
+ },
+ {
+  "benchmark": "cantilever tip deflection, H8, 4 voxel(s) thick",
+  "reference": "Timoshenko beam 2.0156 mm",
+  "ours": "ratio 0.9574",
+  "pass": null,
+  "source": "Timoshenko & Gere (shear coefficient 5/6) [textbook formula]"
+ },
+ {
+  "benchmark": "cantilever tip deflection, H8IM, 1 voxel(s) thick",
+  "reference": "Timoshenko beam 2.0156 mm",
+  "ours": "ratio 0.9855",
+  "pass": true,
+  "source": "Timoshenko & Gere (shear coefficient 5/6) [textbook formula]"
+ },
+ {
+  "benchmark": "cantilever tip deflection, H8IM, 2 voxel(s) thick",
+  "reference": "Timoshenko beam 2.0156 mm",
+  "ours": "ratio 0.9867",
+  "pass": true,
+  "source": "Timoshenko & Gere (shear coefficient 5/6) [textbook formula]"
+ },
+ {
+  "benchmark": "cantilever tip deflection, H8IM, 4 voxel(s) thick",
+  "reference": "Timoshenko beam 2.0156 mm",
+  "ours": "ratio 0.9904",
+  "pass": true,
+  "source": "Timoshenko & Gere (shear coefficient 5/6) [textbook formula]"
+ },
+ {
+  "benchmark": "plate with hole, Kt_net (voxel 1.00 mm, 9440 el.)",
+  "reference": "Heywood Kt_net = 2.422 (d/W = 0.25)",
+  "ours": "1.884 (-22.2 %)",
+  "pass": null,
+  "source": "Heywood 1952 via aerokit.structures.fatigue.kt_hole_heywood"
+ },
+ {
+  "benchmark": "plate with hole, Kt_net (voxel 0.67 mm, 31884 el.)",
+  "reference": "Heywood Kt_net = 2.422 (d/W = 0.25)",
+  "ours": "1.936 (-20.1 %)",
+  "pass": null,
+  "source": "Heywood 1952 via aerokit.structures.fatigue.kt_hole_heywood"
+ },
+ {
+  "benchmark": "plate with hole, Kt_net (voxel 0.50 mm, 75536 el.)",
+  "reference": "Heywood Kt_net = 2.422 (d/W = 0.25)",
+  "ours": "1.970 (-18.7 %)",
+  "pass": null,
+  "source": "Heywood 1952 via aerokit.structures.fatigue.kt_hole_heywood"
+ },
+ {
+  "benchmark": "3-D SIMP vs repository topology.topopt (24×8×4, V 0.3, density filter, 30 it.)",
+  "reference": "c = 160.3096 (aerokit.optimization.topology, top88 family)",
+  "ours": "c = 160.3007 (-0.006 %)",
+  "pass": true,
+  "source": "Andreassen et al. 2011 code family; top88 MBB exact in tests/optimization"
+ },
+ {
+  "benchmark": "3-D AM overhang filter adjoint vs central differences",
+  "reference": "finite differences",
+  "ours": "max rel. error 6.9e-10",
+  "pass": true,
+  "source": "Langelaar 2017 Eq. (10)-(14)"
+ },
+ {
+  "benchmark": "MatML write → parse (all candidates); parser on a real Workbench 23.1 export",
+  "reference": "values written; Ansys export: rho 7850, E 2e11, Fty 2.5e8",
+  "ours": "5 materials parsed; real export read: rho 7850.0, E 200000000000.0, Fty 250000000.0",
+  "pass": true,
+  "source": "pymaterials-manager test data"
+ },
+ {
+  "benchmark": "drawing → STEP (OCC) → gmsh surface → voxels (2 mm)",
+  "reference": "exact B-rep volume 108475 mm³",
+  "ours": "108480 mm³ (+0.00 %)",
+  "pass": true,
+  "source": "gmsh 4.15.2 / OCC"
+ },
+ {
+  "benchmark": "drawing → STEP (OCC) → gmsh surface → voxels (1 mm)",
+  "reference": "exact B-rep volume 108475 mm³",
+  "ours": "108739 mm³ (+0.24 %)",
+  "pass": true,
+  "source": "gmsh 4.15.2 / OCC"
+ },
+ {
+  "benchmark": "cantilever tip deflection, T10 (gmsh), size 5 mm, 434 el.",
+  "reference": "Timoshenko beam 2.0156 mm",
+  "ours": "ratio 0.9905",
+  "pass": true,
+  "source": "Timoshenko & Gere (shear coefficient 5/6)"
+ },
+ {
+  "benchmark": "cantilever tip deflection, T10 (gmsh), size 2.5 mm, 3617 el.",
+  "reference": "Timoshenko beam 2.0156 mm",
+  "ours": "ratio 0.9921",
+  "pass": true,
+  "source": "Timoshenko & Gere (shear coefficient 5/6)"
+ },
+ {
+  "benchmark": "plate with hole, Kt_net, T10 (gmsh), size 2 mm, 10881 el.",
+  "reference": "Heywood Kt_net = 2.422",
+  "ours": "2.512 (+3.7 %)",
+  "pass": true,
+  "source": "Heywood 1952 via aerokit.structures.fatigue.kt_hole_heywood"
+ },
+ {
+  "benchmark": "plate with hole, Kt_net, T10 (gmsh), size 1 mm, 54132 el.",
+  "reference": "Heywood Kt_net = 2.422",
+  "ours": "2.479 (+2.4 %)",
+  "pass": true,
+  "source": "Heywood 1952 via aerokit.structures.fatigue.kt_hole_heywood"
+ },
+ {
+  "benchmark": "3-D cantilever 48×24×24, V 0.12, rmin √3, projection, 100 it. (orientation only)",
+  "reference": "Ferrari & Sigmund 2020 top3D125: c = 3993.7 (Neumann) / 4074.3 (Dirichlet); their load line, penalty and continuation schedule not confirmed here",
+  "ours": "c = 12.31 with a unit TOTAL load on the 25-node edge; 7695 if each node carried a unit load (c ∝ load²); 100 it., 465 s — NOT reproduced (load convention, penalty and continuation of top3D125 unconfirmed)",
+  "pass": null,
+  "source": "arXiv 2005.05436 Sec. 4, Fig. 8 (read by sub-agent)"
+ }
+]

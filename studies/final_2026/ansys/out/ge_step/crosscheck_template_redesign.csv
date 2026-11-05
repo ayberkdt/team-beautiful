@@ -1,0 +1,12 @@
+metric,unit,ours,ansys,description
+mass_kg,kg,0.443022,,"part mass (geometry × density) (tolerance ±2 %) topo 40 %, ti64_lpbf"
+volume_mm3,mm3,100459,,"part volume (tolerance ±2 %) topo 40 %, ti64_lpbf"
+max_deformation_mm,mm,0.49941,,"maximum total deformation (worst load case) (tolerance ±10 %) topo 40 %, ti64_lpbf"
+load_point_deformation_mm,mm,,,"mean deformation of the loaded bore (probe: average over the bore face) (tolerance ±10 %) topo 40 %, ti64_lpbf"
+strain_energy_J,J,0.297662,,"strain energy = compliance / 2 (worst load case) (tolerance ±10 %) topo 40 %, ti64_lpbf"
+compliance_J,J,0.595323,,"compliance F·u (worst load case) (tolerance ±10 %) topo 40 %, ti64_lpbf"
+max_von_mises_MPa,MPa,148.928,,"maximum equivalent stress anywhere (singular at supports: loose) (tolerance ±25 %) topo 40 %, ti64_lpbf"
+von_mises_outside_MPa,MPa,148.928,,"maximum equivalent stress outside the support/load zones (tolerance ±15 %) topo 40 %, ti64_lpbf"
+min_safety_factor,-,3.9626,,"minimum safety factor (yield at temperature / von Mises) (tolerance ±15 %) topo 40 %, ti64_lpbf"
+retained_volume_fraction,-,0.398875,,"topology: retained volume / design-space volume (tolerance ±5 %) topo 40 %, ti64_lpbf"
+reaction_force_N,N,,,"sum of support reactions (equals the applied load) (tolerance ±1 %) topo 40 %, ti64_lpbf"

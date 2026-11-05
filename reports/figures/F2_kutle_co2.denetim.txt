@@ -1,0 +1,5 @@
+figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] belirsizlik-tanimi eksen 0: hata çubuğu/bant var
+          → altyazıda ne gösterdiğini yaz: SD mi, SE mi, %95 GA mı; n kaç  [Belia2005; Cumming2007 kural 1–3; NatureFormatting]
+  [BİLGİ] belirsizlik-tanimi eksen 1: hata çubuğu/bant var
+          → altyazıda ne gösterdiğini yaz: SD mi, SE mi, %95 GA mı; n kaç  [Belia2005; Cumming2007 kural 1–3; NatureFormatting]

@@ -1,0 +1,198 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "sunum",
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {
+  "Held": {
+   "renk": "#009e73",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 0
+  },
+  "Failed": {
+   "renk": "#d55e00",
+   "baglam": false,
+   "isaret": "s",
+   "cizgi": "--",
+   "sira": 1
+  },
+  "Added by the retrofit": {
+   "renk": "#0072b2",
+   "baglam": false,
+   "isaret": "^",
+   "cizgi": "-.",
+   "sira": 2
+  },
+  "Partial lock": {
+   "renk": "#000000",
+   "baglam": false,
+   "isaret": "D",
+   "cizgi": ":",
+   "sira": 3
+  },
+  "One bolt out": {
+   "renk": "#7f3360",
+   "baglam": false,
+   "isaret": "v",
+   "cizgi": [
+    0,
+    [
+     5,
+     1
+    ]
+   ],
+   "sira": 4
+  },
+  "Full lock": {
+   "renk": "#7f5708",
+   "baglam": false,
+   "isaret": "P",
+   "cizgi": [
+    0,
+    [
+     3,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   ],
+   "sira": 5
+  },
+  "Pilot always acts": {
+   "renk": "#07648e",
+   "baglam": false,
+   "isaret": "X",
+   "cizgi": [
+    0,
+    [
+     1,
+     1
+    ]
+   ],
+   "sira": 6
+  },
+  "Pilot matches reliability": {
+   "renk": "#5f5f5f",
+   "baglam": false,
+   "isaret": "*",
+   "cizgi": [
+    0,
+    [
+     8,
+     2
+    ]
+   ],
+   "sira": 7
+  }
+ },
+ "nicelikler": {
+  "pmiss": {
+   "etiket": "Missed-alert probability",
+   "birim": null,
+   "eksen": "x",
+   "sinir": null,
+   "olcek": "log",
+   "bicim": null
+  },
+  "arch": {
+   "etiket": "Sensor architecture",
+   "birim": null,
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "trip": {
+   "etiket": "Lock-sensor trip point (handle gap)",
+   "birim": "mm",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "perr": {
+   "etiket": "Probability per check",
+   "birim": null,
+   "eksen": "y",
+   "sinir": null,
+   "olcek": "log",
+   "bicim": null
+  },
+  "pfa": {
+   "etiket": "False-alarm probability per flight",
+   "birim": null,
+   "eksen": "x",
+   "sinir": null,
+   "olcek": "log",
+   "bicim": null
+  },
+  "rrf": {
+   "etiket": "Risk reduction factor",
+   "birim": null,
+   "eksen": "y",
+   "sinir": null,
+   "olcek": "log",
+   "bicim": null
+  },
+  "barrier": {
+   "etiket": "ERCS barrier",
+   "birim": null,
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "weight": {
+   "etiket": "Barrier weight",
+   "birim": null,
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "count": {
+   "etiket": "Investigated lock-related openings",
+   "birim": null,
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "phase": {
+   "etiket": "Flight phase",
+   "birim": null,
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "family": {
+   "etiket": "Type family",
+   "birim": null,
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "C1_missed_alert_by_architecture": "C1_missed_alert_by_architecture.dw.json",
+  "C2_trip_point_window": "C2_trip_point_window.dw.json",
+  "C3_cry_wolf": "C3_cry_wolf.dw.json",
+  "C4_ercs_barriers": "C4_ercs_barriers.dw.json",
+  "C5_lock_related_by_phase": "C5_lock_related_by_phase.dw.json",
+  "C6_lock_related_by_type": "C6_lock_related_by_type.dw.json"
+ }
+}

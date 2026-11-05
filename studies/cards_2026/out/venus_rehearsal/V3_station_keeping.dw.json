@@ -1,0 +1,164 @@
+{
+ "surum": 1,
+ "ad": "V3_station_keeping",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  2.3,
+  3.0,
+  822.5,
+  408.6
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    49.3,
+    74.0,
+    807.0,
+    376.4
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Venus",
+     "tur": "cizgi",
+     "renk": "#000000",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Airspeed through the air mass (m/s)",
+    "nicelik": "Airspeed through the air mass",
+    "birim": "m/s",
+    "bicim": "parantez",
+    "anahtar": "airspeedthroughtheairmass",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     3.0999999999999996,
+     100.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "20",
+     "40",
+     "60",
+     "80",
+     "100"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     249.6,
+     3.0,
+     606.8,
+     26.1
+    ]
+   },
+   "y": {
+    "ham": "Power to push the envelope, log scale (W)",
+    "nicelik": "Power to push the envelope, log scale",
+    "birim": "W",
+    "bicim": "parantez",
+    "anahtar": "powertopushtheenvelope,logscale",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     10.0,
+     1000000.0
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "mathdefault10^1",
+     "mathdefault10^2",
+     "mathdefault10^3",
+     "mathdefault10^4",
+     "mathdefault10^5",
+     "mathdefault10^6"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "mathdefault10^1",
+     "mathdefault10^2",
+     "mathdefault10^3",
+     "mathdefault10^4",
+     "mathdefault10^5",
+     "mathdefault10^6"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     49.3,
+     385.5,
+     464.8,
+     408.6
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

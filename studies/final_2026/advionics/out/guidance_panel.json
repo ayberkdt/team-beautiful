@@ -1,0 +1,3892 @@
+{
+ "views": [
+  {
+   "t": 0.1,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.36631535975428714,
+   "vert_dots": -0.21282109089914567,
+   "dist_nm": 7.996206449619665,
+   "height_m": 771.6624142229618,
+   "gp_height_m": 791.3454588650279,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 31 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 8.376043575831956e-06
+  },
+  {
+   "t": 1.0999999999999999,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.4746540126318036,
+   "vert_dots": 0.5436605499779532,
+   "dist_nm": 7.958464401521396,
+   "height_m": 837.7429446961123,
+   "gp_height_m": 787.6822455972906,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 106 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.0004971759817719142
+  },
+  {
+   "t": 2.1000000000000005,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.3675850933691553,
+   "vert_dots": -0.5345772835637556,
+   "dist_nm": 7.9205267161374895,
+   "height_m": 735.0227649485489,
+   "gp_height_m": 784.0000439297044,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 46 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.001569950455282053
+  },
+  {
+   "t": 3.1000000000000014,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.36449044232624433,
+   "vert_dots": -0.20060246049023794,
+   "dist_nm": 7.882550507486817,
+   "height_m": 762.0196732848317,
+   "gp_height_m": 780.3141032243857,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 48 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.003071772610944069
+  },
+  {
+   "t": 4.100000000000001,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.3470950862862007,
+   "vert_dots": -0.5206568094358599,
+   "dist_nm": 7.84488976162422,
+   "height_m": 729.4033497174091,
+   "gp_height_m": 776.658781087189,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 57 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.004908549020158883
+  },
+  {
+   "t": 5.099999999999998,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.48885280331591074,
+   "vert_dots": 0.08392372387188826,
+   "dist_nm": 7.807849997225297,
+   "height_m": 780.6469323649527,
+   "gp_height_m": 773.0637309185623,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 122 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.00699002746062347
+  },
+  {
+   "t": 6.099999999999994,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.3123661395843534,
+   "vert_dots": 0.11281594470255644,
+   "dist_nm": 7.770974927803539,
+   "height_m": 779.6314180273988,
+   "gp_height_m": 769.4846659138544,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 73 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.009285962955098521
+  },
+  {
+   "t": 7.099999999999991,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.49789022528838645,
+   "vert_dots": -0.4766803837750275,
+   "dist_nm": 7.733840548664659,
+   "height_m": 723.2161886515065,
+   "gp_height_m": 765.8804325135751,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 149 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.011784826360322305
+  },
+  {
+   "t": 8.099999999999987,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.3125023779589882,
+   "vert_dots": -0.6125322124649263,
+   "dist_nm": 7.696773676515493,
+   "height_m": 707.7191862020037,
+   "gp_height_m": 762.2827512882,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 97 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.01444114756658069
+  },
+  {
+   "t": 9.099999999999984,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.029107045706901986,
+   "vert_dots": -0.09076607439067665,
+   "dist_nm": 7.65962564530225,
+   "height_m": 750.6288058768419,
+   "gp_height_m": 758.677192828406,
+   "annunciations": [
+    "NO APPROACH CLEARANCE"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.017237000534689368
+  },
+  {
+   "t": 10.09999999999998,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.022226626278848666,
+   "vert_dots": -0.1947822583960182,
+   "dist_nm": 7.622025077346217,
+   "height_m": 737.839675507058,
+   "gp_height_m": 755.0277115111132,
+   "annunciations": [
+    "NO APPROACH CLEARANCE"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.020173749473160328
+  },
+  {
+   "t": 11.099999999999977,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.05896193706043566,
+   "vert_dots": 0.14773260569592378,
+   "dist_nm": 7.584811435031487,
+   "height_m": 764.3911077296241,
+   "gp_height_m": 751.415784889823,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 50 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.023164457164378868
+  },
+  {
+   "t": 12.099999999999973,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.17561521623268667,
+   "vert_dots": 0.5121422503965394,
+   "dist_nm": 7.547562844543567,
+   "height_m": 792.5707459556658,
+   "gp_height_m": 747.800466226549,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 78 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.026213624902567054
+  },
+  {
+   "t": 13.09999999999997,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.09034125177350624,
+   "vert_dots": 0.02827616624813239,
+   "dist_nm": 7.51028614092269,
+   "height_m": 746.6419069355895,
+   "gp_height_m": 744.1824189248773,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 25 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.029286617804126305
+  },
+  {
+   "t": 14.099999999999966,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.25903533932959927,
+   "vert_dots": 0.28696295882901324,
+   "dist_nm": 7.47298614813804,
+   "height_m": 765.4030792970216,
+   "gp_height_m": 740.5621111954327,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 69 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.032404083547344996
+  },
+  {
+   "t": 15.099999999999962,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.008305200959158996,
+   "vert_dots": -0.07727623141511743,
+   "dist_nm": 7.4357107589328715,
+   "height_m": 730.2882320613968,
+   "gp_height_m": 736.9441914699077,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 51 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.03555512467275412
+  },
+  {
+   "t": 16.09999999999996,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.06425357966822,
+   "vert_dots": -0.4488057188042206,
+   "dist_nm": 7.398143985353291,
+   "height_m": 694.8371815383064,
+   "gp_height_m": 733.2979902080023,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 84 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.03875868850993825
+  },
+  {
+   "t": 17.099999999999973,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.05004688431297548,
+   "vert_dots": 0.10071053346443498,
+   "dist_nm": 7.360390074797955,
+   "height_m": 738.2224680284303,
+   "gp_height_m": 729.6336255795862,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 89 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.04198673681456722
+  },
+  {
+   "t": 18.099999999999987,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.20423672903009482,
+   "vert_dots": 0.36055309347985376,
+   "dist_nm": 7.3227232101576725,
+   "height_m": 756.5750859689748,
+   "gp_height_m": 725.9777095586782,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 52 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.04524354564167183
+  },
+  {
+   "t": 19.1,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.12344997897974126,
+   "vert_dots": -0.21383775106811928,
+   "dist_nm": 7.284901958138179,
+   "height_m": 704.2551363118255,
+   "gp_height_m": 722.3068088211371,
+   "annunciations": [
+    "NO APPROACH CLEARANCE",
+    "SOURCES DISAGREE 31 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": null,
+   "clearance_tag": null,
+   "advisory_only": true,
+   "true_vert_dots": 0.048601167287159866
+  },
+  {
+   "t": 20.100000000000016,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.005868999267395818,
+   "vert_dots": 0.29817622042930775,
+   "dist_nm": 7.2469340327608425,
+   "height_m": 743.6686940865523,
+   "gp_height_m": 718.6216720837618,
+   "annunciations": [
+    "SOURCES DISAGREE 89 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.05204321152714935
+  },
+  {
+   "t": 21.10000000000003,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.19217345082131312,
+   "vert_dots": -0.17810335960902485,
+   "dist_nm": 7.2085397389953165,
+   "height_m": 700.0142003879614,
+   "gp_height_m": 714.89515236864,
+   "annunciations": [],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.055596112299032656
+  },
+  {
+   "t": 22.100000000000044,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.1964163839988371,
+   "vert_dots": -0.20365828560870675,
+   "dist_nm": 7.170144760489283,
+   "height_m": 694.2412780400208,
+   "gp_height_m": 711.1685661931473,
+   "annunciations": [],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.05921111206858156
+  },
+  {
+   "t": 23.10000000000006,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.14655837016344508,
+   "vert_dots": -0.015614843880300842,
+   "dist_nm": 7.132011640729254,
+   "height_m": 706.1762278362347,
+   "gp_height_m": 707.4673958199486,
+   "annunciations": [
+    "SOURCES DISAGREE 39 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.06281505052218996
+  },
+  {
+   "t": 24.100000000000072,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.19665192475593035,
+   "vert_dots": 0.7450677279658824,
+   "dist_nm": 7.093934708109239,
+   "height_m": 765.0737268619841,
+   "gp_height_m": 703.7716789260163,
+   "annunciations": [
+    "SOURCES DISAGREE 83 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.06642353888383094
+  },
+  {
+   "t": 25.100000000000087,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.08135800462309717,
+   "vert_dots": -0.025227691790818157,
+   "dist_nm": 7.055860419215162,
+   "height_m": 698.0119786771111,
+   "gp_height_m": 700.0762186300278,
+   "annunciations": [
+    "SOURCES DISAGREE 62 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.07005298146666213
+  },
+  {
+   "t": 26.1000000000001,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.1848710798446054,
+   "vert_dots": -0.2410220771975088,
+   "dist_nm": 7.017653086054854,
+   "height_m": 676.7521736211285,
+   "gp_height_m": 696.3678451630321,
+   "annunciations": [
+    "SOURCES DISAGREE 24 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.0736923985816195
+  },
+  {
+   "t": 27.100000000000115,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.04590173055924087,
+   "vert_dots": 0.08178135836238604,
+   "dist_nm": 6.978979996641793,
+   "height_m": 699.2348756920805,
+   "gp_height_m": 692.6142657633806,
+   "annunciations": [
+    "SOURCES DISAGREE 77 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.07738146580793429
+  },
+  {
+   "t": 28.10000000000013,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.026836541414619393,
+   "vert_dots": -0.3539993586675158,
+   "dist_nm": 6.940233358306891,
+   "height_m": 660.3550690194031,
+   "gp_height_m": 688.8535477636826,
+   "annunciations": [
+    "SOURCES DISAGREE 98 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.08106106424400614
+  },
+  {
+   "t": 29.100000000000144,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.12026481933617643,
+   "vert_dots": -0.031888458101719926,
+   "dist_nm": 6.901601720855045,
+   "height_m": 682.5505471035036,
+   "gp_height_m": 685.103991658525,
+   "annunciations": [
+    "SOURCES DISAGREE 50 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.08468197921617497
+  },
+  {
+   "t": 30.100000000000158,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.059501712623646195,
+   "vert_dots": 0.368517564067313,
+   "dist_nm": 6.863266098952272,
+   "height_m": 710.7354848460806,
+   "gp_height_m": 681.3831665878887,
+   "annunciations": [
+    "SOURCES DISAGREE 82 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.08824083837332583
+  },
+  {
+   "t": 31.100000000000172,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.11801254152430503,
+   "vert_dots": 0.4424150649992191,
+   "dist_nm": 6.82498924726383,
+   "height_m": 712.7150038525361,
+   "gp_height_m": 677.6680457076643,
+   "annunciations": [
+    "SOURCES DISAGREE 71 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.09176841999174193
+  },
+  {
+   "t": 32.100000000000186,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.09917431402226244,
+   "vert_dots": 0.0887779861311886,
+   "dist_nm": 6.786741493176947,
+   "height_m": 680.949173658984,
+   "gp_height_m": 673.9557490175797,
+   "annunciations": [
+    "SOURCES DISAGREE 58 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.09527494759900222
+  },
+  {
+   "t": 33.1000000000002,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.011600492979537929,
+   "vert_dots": -0.23130596932898187,
+   "dist_nm": 6.748474647212166,
+   "height_m": 652.1228926810644,
+   "gp_height_m": 670.2415992849616,
+   "annunciations": [
+    "SOURCES DISAGREE 89 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.09873220416285827
+  },
+  {
+   "t": 34.100000000000215,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.287942287538446,
+   "vert_dots": -0.1550049516130513,
+   "dist_nm": 6.710224474773953,
+   "height_m": 654.4541527377794,
+   "gp_height_m": 666.529067871614,
+   "annunciations": [],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.10212848454052008
+  },
+  {
+   "t": 35.10000000000023,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.14993739687158567,
+   "vert_dots": 0.7876036766373804,
+   "dist_nm": 6.671648669876244,
+   "height_m": 723.8136243604708,
+   "gp_height_m": 662.7849308298986,
+   "annunciations": [
+    "SOURCES DISAGREE 85 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.10552143586431334
+  },
+  {
+   "t": 36.10000000000024,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.09237232855494251,
+   "vert_dots": -0.2825589836470231,
+   "dist_nm": 6.633015124489303,
+   "height_m": 637.2721418562335,
+   "gp_height_m": 659.0351895420732,
+   "annunciations": [
+    "SOURCES DISAGREE 114 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.10887488347357009
+  },
+  {
+   "t": 37.10000000000026,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.002514031437772753,
+   "vert_dots": 0.002729801000523279,
+   "dist_nm": 6.594436701709285,
+   "height_m": 655.4998754203676,
+   "gp_height_m": 655.2907984107763,
+   "annunciations": [
+    "SOURCES DISAGREE 84 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.11222970043315188
+  },
+  {
+   "t": 38.10000000000027,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.16017271124784746,
+   "vert_dots": -0.16000353811318724,
+   "dist_nm": 6.556127053511793,
+   "height_m": 639.3879003072764,
+   "gp_height_m": 651.5724943273837,
+   "annunciations": [
+    "SOURCES DISAGREE 30 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.11563063612981751
+  },
+  {
+   "t": 39.100000000000286,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.35971994360290227,
+   "vert_dots": -0.4423571565849409,
+   "dist_nm": 6.517938571765844,
+   "height_m": 614.374140981058,
+   "gp_height_m": 647.8659505637207,
+   "annunciations": [
+    "SOURCES DISAGREE 39 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.11907074652005085
+  },
+  {
+   "t": 40.1000000000003,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.13792726515824114,
+   "vert_dots": -0.20222498439596823,
+   "dist_nm": 6.479545669040839,
+   "height_m": 628.9156023578423,
+   "gp_height_m": 644.1395658618891,
+   "annunciations": [
+    "SOURCES DISAGREE 37 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.12258143249006544
+  },
+  {
+   "t": 41.100000000000314,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.1643065618268878,
+   "vert_dots": 0.3917164329378312,
+   "dist_nm": 6.441388842910971,
+   "height_m": 669.7614799669883,
+   "gp_height_m": 640.4360945672275,
+   "annunciations": [
+    "SOURCES DISAGREE 141 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.12617810702393217
+  },
+  {
+   "t": 42.10000000000033,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.006235064555155453,
+   "vert_dots": -0.21374928159944764,
+   "dist_nm": 6.4034429003517435,
+   "height_m": 620.8461348347367,
+   "gp_height_m": 636.7530914647505,
+   "annunciations": [
+    "SOURCES DISAGREE 79 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.1298717575625935
+  },
+  {
+   "t": 43.10000000000034,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.14575565356405512,
+   "vert_dots": -0.0677225111174944,
+   "dist_nm": 6.365785383528198,
+   "height_m": 628.0869546621201,
+   "gp_height_m": 633.0980827355243,
+   "annunciations": [
+    "SOURCES DISAGREE 36 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.13363334734114168
+  },
+  {
+   "t": 44.10000000000036,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.304808455068574,
+   "vert_dots": -0.3563599642346585,
+   "dist_nm": 6.328264493682183,
+   "height_m": 603.2415378866887,
+   "gp_height_m": 629.4563349124236,
+   "annunciations": [],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.13747636692407805
+  },
+  {
+   "t": 45.10000000000037,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.2701750181914219,
+   "vert_dots": -0.11830301042990249,
+   "dist_nm": 6.291052598417845,
+   "height_m": 617.1911782480829,
+   "gp_height_m": 625.8445778584596,
+   "annunciations": [],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.14137122514644024
+  },
+  {
+   "t": 46.100000000000385,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.2113492415686095,
+   "vert_dots": 0.1441251290959389,
+   "dist_nm": 6.25393605710298,
+   "height_m": 632.724460071447,
+   "gp_height_m": 622.2420757832379,
+   "annunciations": [],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.1453113799623711
+  },
+  {
+   "t": 47.1000000000004,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.10922451732873477,
+   "vert_dots": 0.5669020998890437,
+   "dist_nm": 6.216616778087591,
+   "height_m": 659.6170166493757,
+   "gp_height_m": 618.6198961475272,
+   "annunciations": [
+    "SOURCES DISAGREE 72 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.14930093728027868
+  },
+  {
+   "t": 48.10000000000041,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.00790404952700106,
+   "vert_dots": 0.20848899492900183,
+   "dist_nm": 6.179462571711473,
+   "height_m": 630.0015427817099,
+   "gp_height_m": 615.0137383313199,
+   "annunciations": [
+    "SOURCES DISAGREE 87 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.153277493302209
+  },
+  {
+   "t": 49.10000000000043,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.1335930666118073,
+   "vert_dots": 0.33049561148972384,
+   "dist_nm": 6.142338852720931,
+   "height_m": 635.0308718917319,
+   "gp_height_m": 611.4105395965872,
+   "annunciations": [
+    "SOURCES DISAGREE 54 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.1572807699048524
+  },
+  {
+   "t": 50.10000000000044,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.14466010602341467,
+   "vert_dots": 0.1309815540093178,
+   "dist_nm": 6.105009966559677,
+   "height_m": 617.0925264756776,
+   "gp_height_m": 607.7874274989151,
+   "annunciations": [
+    "SOURCES DISAGREE 42 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.1613324323236147
+  },
+  {
+   "t": 51.100000000000456,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.03787422909335263,
+   "vert_dots": 0.5257886367892305,
+   "dist_nm": 6.067542391624122,
+   "height_m": 641.2848801971725,
+   "gp_height_m": 604.1508543787575,
+   "annunciations": [
+    "SOURCES DISAGREE 85 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.16540683182234547
+  },
+  {
+   "t": 52.10000000000047,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.03747280819240473,
+   "vert_dots": 0.29202641500232845,
+   "dist_nm": 6.030185001068603,
+   "height_m": 621.0240909521092,
+   "gp_height_m": 600.5249756671755,
+   "annunciations": [
+    "SOURCES DISAGREE 77 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.16946899444973776
+  },
+  {
+   "t": 53.100000000000485,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.07338260924805864,
+   "vert_dots": -0.008999307859831019,
+   "dist_nm": 5.992827833480631,
+   "height_m": 596.2712776477282,
+   "gp_height_m": 596.8991185966468,
+   "annunciations": [
+    "SOURCES DISAGREE 60 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.17350967051338986
+  },
+  {
+   "t": 54.1000000000005,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.024922161496036384,
+   "vert_dots": -0.296143544664626,
+   "dist_nm": 5.955262949802217,
+   "height_m": 572.7205724543632,
+   "gp_height_m": 593.2531007670502,
+   "annunciations": [
+    "SOURCES DISAGREE 89 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.17755057708852628
+  },
+  {
+   "t": 55.10000000000051,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.11543728018084606,
+   "vert_dots": 0.2118365045185552,
+   "dist_nm": 5.917229470346182,
+   "height_m": 604.1598424209858,
+   "gp_height_m": 589.5616014027657,
+   "annunciations": [
+    "SOURCES DISAGREE 54 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.1816211256346294
+  },
+  {
+   "t": 56.10000000000053,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.13993728210569667,
+   "vert_dots": 0.38691699782452516,
+   "dist_nm": 5.879079647442466,
+   "height_m": 612.3563905421634,
+   "gp_height_m": 585.8588098356825,
+   "annunciations": [
+    "SOURCES DISAGREE 55 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.1856859156147897
+  },
+  {
+   "t": 57.10000000000054,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.0015574986522677097,
+   "vert_dots": 0.10433383726052245,
+   "dist_nm": 5.841325598173771,
+   "height_m": 589.2942729421791,
+   "gp_height_m": 582.1944317438578,
+   "annunciations": [
+    "SOURCES DISAGREE 84 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.18970432035755597
+  },
+  {
+   "t": 58.100000000000556,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.2508217245273455,
+   "vert_dots": 0.23258673516347375,
+   "dist_nm": 5.803829394040795,
+   "height_m": 594.284152855862,
+   "gp_height_m": 578.5550798964947,
+   "annunciations": [
+    "SOURCES DISAGREE 29 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.19367764315134228
+  },
+  {
+   "t": 59.10000000000057,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.34623030488753187,
+   "vert_dots": 0.34543681997184456,
+   "dist_nm": 5.766602340462032,
+   "height_m": 598.1575667946175,
+   "gp_height_m": 574.9418515885496,
+   "annunciations": [
+    "SOURCES DISAGREE 40 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.19760045224676176
+  },
+  {
+   "t": 60.100000000000584,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.16498871821515199,
+   "vert_dots": 0.7586409594699146,
+   "dist_nm": 5.729019318730231,
+   "height_m": 621.9634367033944,
+   "gp_height_m": 571.2940732938707,
+   "annunciations": [
+    "SOURCES DISAGREE 71 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.20158273988626763
+  },
+  {
+   "t": 61.1000000000006,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.12257620945409572,
+   "vert_dots": 0.22112171229953326,
+   "dist_nm": 5.690955166987437,
+   "height_m": 582.270110493174,
+   "gp_height_m": 567.5995969017494,
+   "annunciations": [
+    "SOURCES DISAGREE 121 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.2056705403985063
+  },
+  {
+   "t": 62.10000000000061,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.1335675834666337,
+   "vert_dots": 0.9347351358234114,
+   "dist_nm": 5.65273644245641,
+   "height_m": 625.515353787812,
+   "gp_height_m": 563.8901177973423,
+   "annunciations": [
+    "SOURCES DISAGREE 85 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.2098700720307189
+  },
+  {
+   "t": 63.10000000000063,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.01914188331259757,
+   "vert_dots": 0.42477441841107777,
+   "dist_nm": 5.614763675519227,
+   "height_m": 588.0212257751332,
+   "gp_height_m": 560.2045111420065,
+   "annunciations": [
+    "SOURCES DISAGREE 86 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.2141048760985631
+  },
+  {
+   "t": 64.10000000000063,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.16562582360935346,
+   "vert_dots": 0.7856653306751941,
+   "dist_nm": 5.577090606259505,
+   "height_m": 607.6683214783268,
+   "gp_height_m": 556.5479929056545,
+   "annunciations": [
+    "SOURCES DISAGREE 71 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.21830029377986823
+  },
+  {
+   "t": 65.10000000000058,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.006291717143588846,
+   "vert_dots": 0.2680585633507185,
+   "dist_nm": 5.539755552077495,
+   "height_m": 570.2493063422585,
+   "gp_height_m": 552.9242821447776,
+   "annunciations": [
+    "SOURCES DISAGREE 86 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.2223981491155947
+  },
+  {
+   "t": 66.10000000000052,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.0637138603452795,
+   "vert_dots": 0.3175218001597395,
+   "dist_nm": 5.502447225309352,
+   "height_m": 569.6910040651939,
+   "gp_height_m": 549.303165525502,
+   "annunciations": [
+    "SOURCES DISAGREE 72 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.22647512415075857
+  },
+  {
+   "t": 67.10000000000046,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.28927857827823206,
+   "vert_dots": 0.43670157494647005,
+   "dist_nm": 5.4651236322671695,
+   "height_m": 573.5370216727139,
+   "gp_height_m": 545.6805671737708,
+   "annunciations": [
+    "SOURCES DISAGREE 38 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.23059075781651162
+  },
+  {
+   "t": 68.1000000000004,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.4690533458407127,
+   "vert_dots": -0.055779646248078345,
+   "dist_nm": 5.427744059874407,
+   "height_m": 538.5186681937927,
+   "gp_height_m": 542.0525355106511,
+   "annunciations": [
+    "SOURCES DISAGREE 48 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.23473637894309754
+  },
+  {
+   "t": 69.10000000000035,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.0011473016732751386,
+   "vert_dots": 0.15084926366503706,
+   "dist_nm": 5.3904625184224555,
+   "height_m": 547.9277650094849,
+   "gp_height_m": 538.4340186529304,
+   "annunciations": [
+    "SOURCES DISAGREE 86 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.23887663731666678
+  },
+  {
+   "t": 70.10000000000029,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.012437150895042368,
+   "vert_dots": -0.13260664235168157,
+   "dist_nm": 5.353363966667954,
+   "height_m": 526.5441853558945,
+   "gp_height_m": 534.8332626301761,
+   "annunciations": [
+    "SOURCES DISAGREE 80 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.24302361714836118
+  },
+  {
+   "t": 71.10000000000024,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.1657662181599015,
+   "vert_dots": 0.5858945882446651,
+   "dist_nm": 5.315909171026296,
+   "height_m": 567.5810570642648,
+   "gp_height_m": 531.197929858153,
+   "annunciations": [
+    "SOURCES DISAGREE 60 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.2472689219781611
+  },
+  {
+   "t": 72.10000000000018,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.15020784564397777,
+   "vert_dots": 0.24899070553069352,
+   "dist_nm": 5.2781126028487035,
+   "height_m": 542.8828622812414,
+   "gp_height_m": 527.5294249147383,
+   "annunciations": [
+    "SOURCES DISAGREE 49 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.251571297368021
+  },
+  {
+   "t": 73.10000000000012,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.19374161306412005,
+   "vert_dots": -0.03624740988384039,
+   "dist_nm": 5.240012920449516,
+   "height_m": 521.612259294985,
+   "gp_height_m": 523.8314999452749,
+   "annunciations": [
+    "SOURCES DISAGREE 32 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.2559019242699569
+  },
+  {
+   "t": 74.10000000000007,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.08871208480635337,
+   "vert_dots": 0.24441199560511434,
+   "dist_nm": 5.201725878131711,
+   "height_m": 534.974656391911,
+   "gp_height_m": 520.1153899706433,
+   "annunciations": [
+    "SOURCES DISAGREE 64 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.26021890424353783
+  },
+  {
+   "t": 75.10000000000001,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.24841799128475706,
+   "vert_dots": 0.5333659669901852,
+   "dist_nm": 5.163766368659799,
+   "height_m": 548.630946555057,
+   "gp_height_m": 516.4310700743766,
+   "annunciations": [
+    "SOURCES DISAGREE 44 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.2644333713226869
+  },
+  {
+   "t": 76.09999999999995,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.25249837171064865,
+   "vert_dots": 0.5491268866914698,
+   "dist_nm": 5.125866891898167,
+   "height_m": 545.6679957692687,
+   "gp_height_m": 512.7525769053777,
+   "annunciations": [
+    "SOURCES DISAGREE 45 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.26851376523766024
+  },
+  {
+   "t": 77.0999999999999,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.11763776739469792,
+   "vert_dots": 0.2150716392387635,
+   "dist_nm": 5.087545390352009,
+   "height_m": 521.829887006438,
+   "gp_height_m": 509.0331223453604,
+   "annunciations": [
+    "SOURCES DISAGREE 56 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.272516921439811
+  },
+  {
+   "t": 78.09999999999984,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.17574280176225937,
+   "vert_dots": 0.26876459777118344,
+   "dist_nm": 5.0491843358104544,
+   "height_m": 521.1846341727577,
+   "gp_height_m": 505.3098288029663,
+   "annunciations": [
+    "SOURCES DISAGREE 44 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.27647291929032747
+  },
+  {
+   "t": 79.09999999999978,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.2254779203842173,
+   "vert_dots": 0.3721459717875878,
+   "dist_nm": 5.010442068652776,
+   "height_m": 523.3678139845567,
+   "gp_height_m": 501.5495350662642,
+   "annunciations": [
+    "SOURCES DISAGREE 38 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.28041278519511237
+  },
+  {
+   "t": 80.09999999999972,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.18476078991565995,
+   "vert_dots": 0.061941528722514634,
+   "dist_nm": 4.971710233148974,
+   "height_m": 501.39419574070564,
+   "gp_height_m": 497.79025381761744,
+   "annunciations": [
+    "SOURCES DISAGREE 36 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.2842954577654354
+  },
+  {
+   "t": 81.09999999999967,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.1731018956220069,
+   "vert_dots": 0.6157241225980121,
+   "dist_nm": 4.933436338940768,
+   "height_m": 529.6392006674344,
+   "gp_height_m": 494.0754199880803,
+   "annunciations": [
+    "SOURCES DISAGREE 57 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.28811022294827027
+  },
+  {
+   "t": 82.09999999999961,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.1367655242301827,
+   "vert_dots": 0.9412771195398997,
+   "dist_nm": 4.895369184632865,
+   "height_m": 544.3475369305494,
+   "gp_height_m": 490.3806521693696,
+   "annunciations": [
+    "SOURCES DISAGREE 78 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.29190336809604767
+  },
+  {
+   "t": 83.09999999999955,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.2134454554543074,
+   "vert_dots": -0.7195442749661379,
+   "dist_nm": 4.857428507104165,
+   "height_m": 445.7757847763525,
+   "gp_height_m": 486.6981600865818,
+   "annunciations": [
+    "SOURCES DISAGREE 42 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.2957389522122203
+  },
+  {
+   "t": 84.0999999999995,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.16217961812187218,
+   "vert_dots": 0.8679377627313396,
+   "dist_nm": 4.819842864688665,
+   "height_m": 532.0670891955209,
+   "gp_height_m": 483.0501274304206,
+   "annunciations": [
+    "SOURCES DISAGREE 70 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.2995695533880971
+  },
+  {
+   "t": 85.09999999999944,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.26517041464496804,
+   "vert_dots": 0.15377419722444438,
+   "dist_nm": 4.782399759579541,
+   "height_m": 488.0329727030709,
+   "gp_height_m": 479.4159293322174,
+   "annunciations": [
+    "SOURCES DISAGREE 22 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.30334954446561646
+  },
+  {
+   "t": 86.09999999999938,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.04840066220467,
+   "vert_dots": 0.7594770903733641,
+   "dist_nm": 4.745103245546878,
+   "height_m": 518.0419007200614,
+   "gp_height_m": 475.79595924768284,
+   "annunciations": [
+    "SOURCES DISAGREE 86 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.3070789938161626
+  },
+  {
+   "t": 87.09999999999933,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.11593182982518165,
+   "vert_dots": 0.5406069707886851,
+   "dist_nm": 4.708473527528372,
+   "height_m": 502.0850942111409,
+   "gp_height_m": 472.2407078556678,
+   "annunciations": [
+    "SOURCES DISAGREE 65 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.3108021323196447
+  },
+  {
+   "t": 88.09999999999927,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.07107728348616152,
+   "vert_dots": 0.807585022870327,
+   "dist_nm": 4.671702788455977,
+   "height_m": 512.9218137705675,
+   "gp_height_m": 468.6717690719594,
+   "annunciations": [
+    "SOURCES DISAGREE 82 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.3146313641880988
+  },
+  {
+   "t": 89.09999999999921,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.0775741035915122,
+   "vert_dots": -0.10251470918654045,
+   "dist_nm": 4.634860189693872,
+   "height_m": 459.5232886350526,
+   "gp_height_m": 465.0958556437357,
+   "annunciations": [
+    "SOURCES DISAGREE 62 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.3185869560438487
+  },
+  {
+   "t": 90.09999999999916,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.17887896257773586,
+   "vert_dots": 0.3808443530940105,
+   "dist_nm": 4.5974872534265785,
+   "height_m": 482.0124266898482,
+   "gp_height_m": 461.468468077693,
+   "annunciations": [
+    "SOURCES DISAGREE 46 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.32273590064637814
+  },
+  {
+   "t": 91.0999999999991,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.16225570509524334,
+   "vert_dots": 0.5887497254971269,
+   "dist_nm": 4.559828234315966,
+   "height_m": 489.32297341717833,
+   "gp_height_m": 457.81331353767496,
+   "annunciations": [
+    "SOURCES DISAGREE 56 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.3270903136220252
+  },
+  {
+   "t": 92.09999999999904,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.014233883825812366,
+   "vert_dots": -0.6749572167775364,
+   "dist_nm": 4.522224877344179,
+   "height_m": 418.3425370984154,
+   "gp_height_m": 454.1635615207242,
+   "annunciations": [
+    "SOURCES DISAGREE 88 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.3316244447343521
+  },
+  {
+   "t": 93.09999999999899,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.17775379463803478,
+   "vert_dots": 0.6925276018479545,
+   "dist_nm": 4.484954109752409,
+   "height_m": 487.0228324905085,
+   "gp_height_m": 450.54609036533174,
+   "annunciations": [
+    "SOURCES DISAGREE 57 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.33637024964620693
+  },
+  {
+   "t": 94.09999999999893,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.13690901866253652,
+   "vert_dots": 0.213480122383216,
+   "dist_nm": 4.447386255166969,
+   "height_m": 458.0514143613799,
+   "gp_height_m": 446.8997841818546,
+   "annunciations": [
+    "SOURCES DISAGREE 50 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.34140498593985424
+  },
+  {
+   "t": 95.09999999999887,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.12719178483425284,
+   "vert_dots": -0.09489887501111172,
+   "dist_nm": 4.409571971217216,
+   "height_m": 438.31349633695913,
+   "gp_height_m": 443.2295597596385,
+   "annunciations": [
+    "SOURCES DISAGREE 48 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.3466966978723415
+  },
+  {
+   "t": 96.09999999999881,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.20186021814499364,
+   "vert_dots": 0.27304737892607994,
+   "dist_nm": 4.3717176020084185,
+   "height_m": 453.5845794093607,
+   "gp_height_m": 439.555444693958,
+   "annunciations": [
+    "SOURCES DISAGREE 37 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.352247115109944
+  },
+  {
+   "t": 97.09999999999876,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.23856524757502623,
+   "vert_dots": 0.04010482478865148,
+   "dist_nm": 4.334170789358339,
+   "height_m": 437.95452280851066,
+   "gp_height_m": 435.91118082404563,
+   "annunciations": [
+    "SOURCES DISAGREE 23 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.35799451996884807
+  },
+  {
+   "t": 98.0999999999987,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.00983109079769116,
+   "vert_dots": 0.7451731869046876,
+   "dist_nm": 4.29667720765586,
+   "height_m": 469.9304839373938,
+   "gp_height_m": 432.2720835077076,
+   "annunciations": [
+    "SOURCES DISAGREE 88 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.3639638789214285
+  },
+  {
+   "t": 99.09999999999864,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.16660736491477318,
+   "vert_dots": 0.5435957411956187,
+   "dist_nm": 4.259041116601133,
+   "height_m": 455.8565541012105,
+   "gp_height_m": 428.61915434661717,
+   "annunciations": [
+    "SOURCES DISAGREE 51 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.37015972635258687
+  },
+  {
+   "t": 100.09999999999859,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.08051461751742325,
+   "vert_dots": 0.07343008134536205,
+   "dist_nm": 4.221019455066274,
+   "height_m": 428.5758481695269,
+   "gp_height_m": 424.928802020393,
+   "annunciations": [
+    "SOURCES DISAGREE 60 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.3765590884533744
+  },
+  {
+   "t": 101.09999999999853,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.34448749456926564,
+   "vert_dots": 0.9396219907520696,
+   "dist_nm": 4.182923006879553,
+   "height_m": 467.506568170134,
+   "gp_height_m": 421.2311909610275,
+   "annunciations": [
+    "SOURCES DISAGREE 52 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.38302875863551017
+  },
+  {
+   "t": 102.09999999999847,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.4070106539655268,
+   "vert_dots": 0.7956554401404561,
+   "dist_nm": 4.144984132529287,
+   "height_m": 456.3895923213365,
+   "gp_height_m": 417.548873893309,
+   "annunciations": [
+    "SOURCES DISAGREE 48 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.38953668611401143
+  },
+  {
+   "t": 103.09999999999842,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.12050658816333441,
+   "vert_dots": 0.27825273658053995,
+   "dist_nm": 4.107245892840349,
+   "height_m": 427.3477381220175,
+   "gp_height_m": 413.8860302667622,
+   "annunciations": [
+    "SOURCES DISAGREE 53 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.39597501287916603
+  },
+  {
+   "t": 104.09999999999836,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.3353926887371834,
+   "vert_dots": -0.07066255600550986,
+   "dist_nm": 4.0692493226462325,
+   "height_m": 406.8103422894753,
+   "gp_height_m": 410.1981132861789,
+   "annunciations": [],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.40243463577451777
+  },
+  {
+   "t": 105.0999999999983,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.06786579120240696,
+   "vert_dots": 0.4733078744133927,
+   "dist_nm": 4.031321340051277,
+   "height_m": 429.0089607847721,
+   "gp_height_m": 406.5168533635961,
+   "annunciations": [
+    "SOURCES DISAGREE 68 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.40890596455497247
+  },
+  {
+   "t": 106.09999999999825,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.01709023877896051,
+   "vert_dots": 0.25026170310086654,
+   "dist_nm": 3.993681201628798,
+   "height_m": 414.6484972078167,
+   "gp_height_m": 402.86353136820037,
+   "annunciations": [
+    "SOURCES DISAGREE 75 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.415339962243672
+  },
+  {
+   "t": 107.09999999999819,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.027036074307281027,
+   "vert_dots": 0.15068348355629785,
+   "dist_nm": 3.955999313527973,
+   "height_m": 406.23728184881696,
+   "gp_height_m": 399.2061571821221,
+   "annunciations": [
+    "SOURCES DISAGREE 84 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.4217316029559634
+  },
+  {
+   "t": 108.09999999999813,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.14479111301717407,
+   "vert_dots": 0.4700441269966781,
+   "dist_nm": 3.9179304231508696,
+   "height_m": 417.2434779137336,
+   "gp_height_m": 395.5112208619112,
+   "annunciations": [
+    "SOURCES DISAGREE 53 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.42816530626261184
+  },
+  {
+   "t": 109.09999999999808,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.137303280508584,
+   "vert_dots": 0.6487055712157603,
+   "dist_nm": 3.8796463937009427,
+   "height_m": 421.50797771890336,
+   "gp_height_m": 391.7954033138474,
+   "annunciations": [
+    "SOURCES DISAGREE 59 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.4346354491087883
+  },
+  {
+   "t": 110.09999999999802,
+   "source": "GND PAR uplink",
+   "lat_dots": 0.0705942425322713,
+   "vert_dots": 1.0842611297501448,
+   "dist_nm": 3.841146834500066,
+   "height_m": 437.2546048694114,
+   "gp_height_m": 388.0586666190215,
+   "annunciations": [
+    "SOURCES DISAGREE 108 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.4412044789216386
+  },
+  {
+   "t": 111.09999999999796,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.19606264354995,
+   "vert_dots": 0.6383429122612871,
+   "dist_nm": 3.8029585573169173,
+   "height_m": 413.0345205228798,
+   "gp_height_m": 384.3521427100618,
+   "annunciations": [
+    "SOURCES DISAGREE 49 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.4478684011954457
+  },
+  {
+   "t": 112.0999999999979,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.2634555363676596,
+   "vert_dots": 0.04401077784228995,
+   "dist_nm": 3.7651206152318686,
+   "height_m": 382.6378608209184,
+   "gp_height_m": 380.67962204798937,
+   "annunciations": [
+    "SOURCES DISAGREE 23 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.4546920841458656
+  },
+  {
+   "t": 113.09999999999785,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.19235582712121252,
+   "vert_dots": 0.46481918832633284,
+   "dist_nm": 3.7276377105583687,
+   "height_m": 397.5286339559766,
+   "gp_height_m": 377.0415610356196,
+   "annunciations": [
+    "SOURCES DISAGREE 45 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.4615870939522152
+  },
+  {
+   "t": 114.09999999999779,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.18162079503485926,
+   "vert_dots": 0.4532396815744545,
+   "dist_nm": 3.6903257066085113,
+   "height_m": 393.2048378786259,
+   "gp_height_m": 373.4200875120021,
+   "annunciations": [
+    "SOURCES DISAGREE 47 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.46851806585856964
+  },
+  {
+   "t": 115.09999999999773,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.3321410537184405,
+   "vert_dots": 0.6489678023966711,
+   "dist_nm": 3.6532913455088645,
+   "height_m": 397.8833499822338,
+   "gp_height_m": 369.82556178331964,
+   "annunciations": [
+    "SOURCES DISAGREE 34 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.4754527090584137
+  },
+  {
+   "t": 116.09999999999768,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.059199088566210575,
+   "vert_dots": 0.12294645192117527,
+   "dist_nm": 3.616018418215944,
+   "height_m": 371.470497281705,
+   "gp_height_m": 366.20788100904565,
+   "annunciations": [
+    "SOURCES DISAGREE 66 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.4824415530745766
+  },
+  {
+   "t": 117.09999999999762,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.24181166313537714,
+   "vert_dots": 0.783582960885751,
+   "dist_nm": 3.578081187359995,
+   "height_m": 395.73633942387323,
+   "gp_height_m": 362.5257234575825,
+   "annunciations": [
+    "SOURCES DISAGREE 47 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.4894788425110211
+  },
+  {
+   "t": 118.09999999999756,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.2567547048618084,
+   "vert_dots": 0.9515323180023563,
+   "dist_nm": 3.5398694941284234,
+   "height_m": 398.73545468599025,
+   "gp_height_m": 358.81692680552646,
+   "annunciations": [
+    "SOURCES DISAGREE 51 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.4966447449753074
+  },
+  {
+   "t": 119.09999999999751,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.38188215798672154,
+   "vert_dots": 0.41547527796280564,
+   "dist_nm": 3.5020365737949737,
+   "height_m": 372.3933527538156,
+   "gp_height_m": 355.14489355068315,
+   "annunciations": [
+    "SOURCES DISAGREE 21 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.5040068501391957
+  },
+  {
+   "t": 120.09999999999745,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.38188215798672154,
+   "vert_dots": 0.41547527796280564,
+   "dist_nm": 3.5020365737949737,
+   "height_m": 372.3933527538156,
+   "gp_height_m": 355.14489355068315,
+   "annunciations": [
+    "SOURCES DISAGREE 74 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.5115679995174741
+  },
+  {
+   "t": 121.0999999999974,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.38188215798672154,
+   "vert_dots": 0.41547527796280564,
+   "dist_nm": 3.5020365737949737,
+   "height_m": 372.3933527538156,
+   "gp_height_m": 355.14489355068315,
+   "annunciations": [
+    "SOURCES DISAGREE 142 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.5192781164474861
+  },
+  {
+   "t": 122.09999999999734,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.38188215798672154,
+   "vert_dots": 0.41547527796280564,
+   "dist_nm": 3.5020365737949737,
+   "height_m": 372.3933527538156,
+   "gp_height_m": 355.14489355068315,
+   "annunciations": [
+    "SOURCES DISAGREE 212 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.5272710613640557
+  },
+  {
+   "t": 123.09999999999728,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.38188215798672154,
+   "vert_dots": 0.41547527796280564,
+   "dist_nm": 3.5020365737949737,
+   "height_m": 372.3933527538156,
+   "gp_height_m": 355.14489355068315,
+   "annunciations": [
+    "SOURCES DISAGREE 281 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.5354205779501755
+  },
+  {
+   "t": 124.09999999999722,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.38188215798672154,
+   "vert_dots": 0.41547527796280564,
+   "dist_nm": 3.5020365737949737,
+   "height_m": 372.3933527538156,
+   "gp_height_m": 355.14489355068315,
+   "annunciations": [
+    "SOURCES DISAGREE 351 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.5438219001891667
+  },
+  {
+   "t": 125.09999999999717,
+   "source": "ON-BOARD",
+   "lat_dots": -0.3810401703282575,
+   "vert_dots": -0.08918672929467926,
+   "dist_nm": 3.2762008333889123,
+   "height_m": 329.7519589032282,
+   "gp_height_m": 333.2254556221756,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 6 s)"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.5526064996116603
+  },
+  {
+   "t": 126.09999999999711,
+   "source": "ON-BOARD",
+   "lat_dots": -0.3798471559691,
+   "vert_dots": -0.0873119444239144,
+   "dist_nm": 3.2386182997638704,
+   "height_m": 326.21446615170373,
+   "gp_height_m": 329.5777247027518,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 7 s)"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.5615822486305204
+  },
+  {
+   "t": 127.09999999999705,
+   "source": "ON-BOARD",
+   "lat_dots": -0.3780452094023684,
+   "vert_dots": -0.0853884259747706,
+   "dist_nm": 3.201178558533489,
+   "height_m": 322.6909523496128,
+   "gp_height_m": 325.9438530999526,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 8 s)"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.5707377244378496
+  },
+  {
+   "t": 128.099999999997,
+   "source": "ON-BOARD",
+   "lat_dots": -0.37584468212947725,
+   "vert_dots": -0.08340742027230838,
+   "dist_nm": 3.1638314127008593,
+   "height_m": 319.176869932175,
+   "gp_height_m": 322.31896873305254,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 9 s)"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.5800952005086222
+  },
+  {
+   "t": 129.09999999999695,
+   "source": "ON-BOARD",
+   "lat_dots": -0.3734434341365957,
+   "vert_dots": -0.0813934147781967,
+   "dist_nm": 3.1267414366170354,
+   "height_m": 315.68706147040496,
+   "gp_height_m": 318.7190450580956,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 10 s)"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.5896008832763885
+  },
+  {
+   "t": 130.0999999999969,
+   "source": "ON-BOARD",
+   "lat_dots": -0.37107789016182,
+   "vert_dots": -0.07922091330803724,
+   "dist_nm": 3.089288881203911,
+   "height_m": 312.1665298475751,
+   "gp_height_m": 315.08392972087796,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 11 s)"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.5995119022131508
+  },
+  {
+   "t": 131.09999999999684,
+   "source": "ON-BOARD",
+   "lat_dots": -0.36898460847157083,
+   "vert_dots": -0.07706560695661123,
+   "dist_nm": 3.0518112595232982,
+   "height_m": 308.6411154466483,
+   "gp_height_m": 311.4463814716097,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 12 s)"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.6095916951143765
+  },
+  {
+   "t": 132.09999999999678,
+   "source": "ON-BOARD",
+   "lat_dots": -0.367432563817235,
+   "vert_dots": -0.07476966663585118,
+   "dist_nm": 3.014186583072708,
+   "height_m": 305.10477957726494,
+   "gp_height_m": 307.79456020294765,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 13 s)"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.6200315180967625
+  },
+  {
+   "t": 133.09999999999673,
+   "source": "ON-BOARD",
+   "lat_dots": -0.3665606937828392,
+   "vert_dots": -0.07246045096473752,
+   "dist_nm": 2.976511007119214,
+   "height_m": 301.562057457334,
+   "gp_height_m": 304.1377986688853,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 14 s)"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.6306915466670779
+  },
+  {
+   "t": 134.09999999999667,
+   "source": "ON-BOARD",
+   "lat_dots": -0.3664250908150835,
+   "vert_dots": -0.07016033288093579,
+   "dist_nm": 2.93882548927163,
+   "height_m": 298.01608508283755,
+   "gp_height_m": 300.48007218246414,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 15 s)"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.6415479695430147
+  },
+  {
+   "t": 135.0999999999966,
+   "source": null,
+   "lat_dots": null,
+   "vert_dots": null,
+   "dist_nm": null,
+   "height_m": null,
+   "gp_height_m": null,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 16 s)",
+    "NAV INTEGRITY (PL 80 m > AL 35 m)",
+    "V FLAG",
+    "L FLAG"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.6526464745211025
+  },
+  {
+   "t": 136.09999999999656,
+   "source": null,
+   "lat_dots": null,
+   "vert_dots": null,
+   "dist_nm": null,
+   "height_m": null,
+   "gp_height_m": null,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 17 s)",
+    "NAV INTEGRITY (PL 80 m > AL 35 m)",
+    "V FLAG",
+    "L FLAG"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.6638613813298329
+  },
+  {
+   "t": 137.0999999999965,
+   "source": null,
+   "lat_dots": null,
+   "vert_dots": null,
+   "dist_nm": null,
+   "height_m": null,
+   "gp_height_m": null,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 18 s)",
+    "NAV INTEGRITY (PL 80 m > AL 35 m)",
+    "V FLAG",
+    "L FLAG"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.6750536870046915
+  },
+  {
+   "t": 138.09999999999644,
+   "source": null,
+   "lat_dots": null,
+   "vert_dots": null,
+   "dist_nm": null,
+   "height_m": null,
+   "gp_height_m": null,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 19 s)",
+    "NAV INTEGRITY (PL 80 m > AL 35 m)",
+    "V FLAG",
+    "L FLAG"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.68611135298464
+  },
+  {
+   "t": 139.09999999999638,
+   "source": null,
+   "lat_dots": null,
+   "vert_dots": null,
+   "dist_nm": null,
+   "height_m": null,
+   "gp_height_m": null,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 20 s)",
+    "NAV INTEGRITY (PL 80 m > AL 35 m)",
+    "V FLAG",
+    "L FLAG"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "CONFIRMED",
+   "advisory_only": true,
+   "true_vert_dots": 0.6972535813051293
+  },
+  {
+   "t": 140.09999999999633,
+   "source": null,
+   "lat_dots": null,
+   "vert_dots": null,
+   "dist_nm": null,
+   "height_m": null,
+   "gp_height_m": null,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 21 s)",
+    "NAV INTEGRITY (PL 80 m > AL 35 m)",
+    "V FLAG",
+    "L FLAG"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 120 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.708428195379981
+  },
+  {
+   "t": 141.09999999999627,
+   "source": null,
+   "lat_dots": null,
+   "vert_dots": null,
+   "dist_nm": null,
+   "height_m": null,
+   "gp_height_m": null,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 22 s)",
+    "NAV INTEGRITY (PL 80 m > AL 35 m)",
+    "V FLAG",
+    "L FLAG"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 121 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.7195533321784596
+  },
+  {
+   "t": 142.09999999999621,
+   "source": null,
+   "lat_dots": null,
+   "vert_dots": null,
+   "dist_nm": null,
+   "height_m": null,
+   "gp_height_m": null,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 23 s)",
+    "NAV INTEGRITY (PL 80 m > AL 35 m)",
+    "V FLAG",
+    "L FLAG"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 122 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.730432919409489
+  },
+  {
+   "t": 143.09999999999616,
+   "source": null,
+   "lat_dots": null,
+   "vert_dots": null,
+   "dist_nm": null,
+   "height_m": null,
+   "gp_height_m": null,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 24 s)",
+    "NAV INTEGRITY (PL 80 m > AL 35 m)",
+    "V FLAG",
+    "L FLAG"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 123 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.7411935456974201
+  },
+  {
+   "t": 144.0999999999961,
+   "source": null,
+   "lat_dots": null,
+   "vert_dots": null,
+   "dist_nm": null,
+   "height_m": null,
+   "gp_height_m": null,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 25 s)",
+    "NAV INTEGRITY (PL 80 m > AL 35 m)",
+    "V FLAG",
+    "L FLAG"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 124 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.7521502066964824
+  },
+  {
+   "t": 145.09999999999604,
+   "source": "ON-BOARD",
+   "lat_dots": -0.3939742964337966,
+   "vert_dots": -0.05976905735269759,
+   "dist_nm": 2.5206511064434753,
+   "height_m": 258.0768718434536,
+   "gp_height_m": 259.8923981003521,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 26 s)"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 125 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.763051013988228
+  },
+  {
+   "t": 146.099999999996,
+   "source": "ON-BOARD",
+   "lat_dots": -0.3971288092022523,
+   "vert_dots": -0.06057280873143599,
+   "dist_nm": 2.483288228822756,
+   "height_m": 254.45172015747556,
+   "gp_height_m": 256.26598681857166,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 27 s)"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 126 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.773888119659264
+  },
+  {
+   "t": 147.09999999999593,
+   "source": "ON-BOARD",
+   "lat_dots": -0.400646241326442,
+   "vert_dots": -0.06155080321108595,
+   "dist_nm": 2.445663167516909,
+   "height_m": 250.79684058656363,
+   "gp_height_m": 252.61412819616353,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 28 s)"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 127 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.784970412412423
+  },
+  {
+   "t": 148.09999999999587,
+   "source": "ON-BOARD",
+   "lat_dots": -0.4046542605584634,
+   "vert_dots": -0.06254421705151224,
+   "dist_nm": 2.4075687617535046,
+   "height_m": 247.097126010787,
+   "gp_height_m": 248.9167153727861,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 29 s)"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 128 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.796548145270749
+  },
+  {
+   "t": 149.09999999999582,
+   "source": "ON-BOARD",
+   "lat_dots": -0.4092399733526645,
+   "vert_dots": -0.06352694269257227,
+   "dist_nm": 2.36934620570974,
+   "height_m": 243.3862305473969,
+   "gp_height_m": 245.20686438479024,
+   "annunciations": [
+    "GND GUIDANCE LOST (stale 30 s)"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 129 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.8085597617361031
+  },
+  {
+   "t": 150.09999999999576,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.1576092921363388,
+   "vert_dots": 1.132007473230683,
+   "dist_nm": 2.3313021793316264,
+   "height_m": 273.48101174584707,
+   "gp_height_m": 241.51434134460993,
+   "annunciations": [
+    "SOURCES DISAGREE 52 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 130 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.820844152837712
+  },
+  {
+   "t": 151.0999999999957,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.09135564704156415,
+   "vert_dots": 1.226895620011489,
+   "dist_nm": 2.293479772245515,
+   "height_m": 271.96404813183096,
+   "gp_height_m": 237.84332849721872,
+   "annunciations": [
+    "SOURCES DISAGREE 62 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 131 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.8332942548578532
+  },
+  {
+   "t": 152.09999999999565,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.14743761726541185,
+   "vert_dots": 0.8825304029277512,
+   "dist_nm": 2.2558272145022618,
+   "height_m": 258.35250858372996,
+   "gp_height_m": 234.18880109239421,
+   "annunciations": [
+    "SOURCES DISAGREE 50 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 132 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.845865519949671
+  },
+  {
+   "t": 153.0999999999956,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.18250657765767206,
+   "vert_dots": 1.302669698033395,
+   "dist_nm": 2.218351043912435,
+   "height_m": 265.66967316005446,
+   "gp_height_m": 230.55139368484723,
+   "annunciations": [
+    "SOURCES DISAGREE 53 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 133 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.8588755407248434
+  },
+  {
+   "t": 154.09999999999553,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.1648858881725924,
+   "vert_dots": 0.8197609430054086,
+   "dist_nm": 2.181073560431587,
+   "height_m": 248.68249934670897,
+   "gp_height_m": 226.93327069058495,
+   "annunciations": [
+    "SOURCES DISAGREE 47 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 134 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.8723940779815124
+  },
+  {
+   "t": 155.09999999999548,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.08833034253402615,
+   "vert_dots": 1.1896001830261096,
+   "dist_nm": 2.14418314961152,
+   "height_m": 254.4202075201127,
+   "gp_height_m": 223.35271666191935,
+   "annunciations": [
+    "SOURCES DISAGREE 63 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 135 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.8862015926798844
+  },
+  {
+   "t": 156.09999999999542,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.18919762834521897,
+   "vert_dots": 1.618467412819883,
+   "dist_nm": 2.107591464606027,
+   "height_m": 261.40313812682706,
+   "gp_height_m": 219.80115672399614,
+   "annunciations": [
+    "SOURCES DISAGREE 59 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 136 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.9003501313927806
+  },
+  {
+   "t": 157.09999999999536,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.2491981340844891,
+   "vert_dots": 1.3945841687375145,
+   "dist_nm": 2.070763532994948,
+   "height_m": 251.48804464189044,
+   "gp_height_m": 216.2266668778234,
+   "annunciations": [
+    "SOURCES DISAGREE 49 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 137 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.9152855806852834
+  },
+  {
+   "t": 158.0999999999953,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.18102244179077925,
+   "vert_dots": 1.167659021946755,
+   "dist_nm": 2.0337887745032406,
+   "height_m": 241.66928428091686,
+   "gp_height_m": 212.63792613101648,
+   "annunciations": [
+    "SOURCES DISAGREE 52 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 138 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.9309230906406487
+  },
+  {
+   "t": 159.09999999999525,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.141377327185821,
+   "vert_dots": 1.6093439154208502,
+   "dist_nm": 1.9969871010967988,
+   "height_m": 248.4129187324803,
+   "gp_height_m": 209.0659848853692,
+   "annunciations": [
+    "SOURCES DISAGREE 64 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 139 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.9474184041689113
+  },
+  {
+   "t": 160.0999999999952,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.15052270755395347,
+   "vert_dots": 0.8120873019169556,
+   "dist_nm": 1.960173850981213,
+   "height_m": 225.00290396854527,
+   "gp_height_m": 205.49292001351003,
+   "annunciations": [
+    "SOURCES DISAGREE 53 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 140 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.9646889764938295
+  },
+  {
+   "t": 161.09999999999513,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.24069704023116562,
+   "vert_dots": 1.1286964067410945,
+   "dist_nm": 1.9230325319516872,
+   "height_m": 228.5315795864089,
+   "gp_height_m": 201.8880130329463,
+   "annunciations": [
+    "SOURCES DISAGREE 46 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 141 s",
+   "advisory_only": true,
+   "true_vert_dots": 0.982358745603871
+  },
+  {
+   "t": 162.09999999999508,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.30493987721237725,
+   "vert_dots": 0.9069036439050346,
+   "dist_nm": 1.8857835603481925,
+   "height_m": 219.29569030732492,
+   "gp_height_m": 198.2726573788967,
+   "annunciations": [
+    "SOURCES DISAGREE 36 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 142 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.0006267230808255
+  },
+  {
+   "t": 163.09999999999502,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.2093667907416234,
+   "vert_dots": 2.0,
+   "dist_nm": 1.8484528967576066,
+   "height_m": 241.9381111949198,
+   "gp_height_m": 194.64937276534275,
+   "annunciations": [
+    "SOURCES DISAGREE 65 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 143 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.0195744828510869
+  },
+  {
+   "t": 164.09999999999496,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.3360524379387282,
+   "vert_dots": 1.4260883275425824,
+   "dist_nm": 1.811075406384395,
+   "height_m": 222.87664003621896,
+   "gp_height_m": 191.02154318138994,
+   "annunciations": [
+    "SOURCES DISAGREE 43 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 144 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.0393487002682138
+  },
+  {
+   "t": 165.0999999999949,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.247484307165344,
+   "vert_dots": 0.6661872513401702,
+   "dist_nm": 1.773806524160168,
+   "height_m": 201.99950837416526,
+   "gp_height_m": 187.4042550182765,
+   "annunciations": [
+    "SOURCES DISAGREE 42 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 145 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.0594478391352524
+  },
+  {
+   "t": 166.09999999999485,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.16510680032804964,
+   "vert_dots": 1.0421399304244732,
+   "dist_nm": 1.7362072854473127,
+   "height_m": 206.14503199471153,
+   "gp_height_m": 183.75490271627282,
+   "annunciations": [
+    "SOURCES DISAGREE 56 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 146 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.0798876157188289
+  },
+  {
+   "t": 167.0999999999948,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.19582446497716322,
+   "vert_dots": 0.7369246964545779,
+   "dist_nm": 1.6988142613402892,
+   "height_m": 195.64388587772032,
+   "gp_height_m": 180.12556544043088,
+   "annunciations": [
+    "SOURCES DISAGREE 50 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 147 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.1006009660973686
+  },
+  {
+   "t": 168.09999999999474,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.33591923796622614,
+   "vert_dots": 1.7201798094598502,
+   "dist_nm": 1.6612404790564232,
+   "height_m": 211.98144826962738,
+   "gp_height_m": 176.47868391924385,
+   "annunciations": [
+    "SOURCES DISAGREE 48 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 148 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.1217632937606168
+  },
+  {
+   "t": 169.09999999999468,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.34671352014080525,
+   "vert_dots": 1.5109738686110226,
+   "dist_nm": 1.6236309194101382,
+   "height_m": 203.36595065010232,
+   "gp_height_m": 172.82832987562355,
+   "annunciations": [
+    "SOURCES DISAGREE 44 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 149 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.1428106738694481
+  },
+  {
+   "t": 170.09999999999462,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.23298011970189325,
+   "vert_dots": 1.316935156796842,
+   "dist_nm": 1.5861497461098486,
+   "height_m": 195.24438585130397,
+   "gp_height_m": 169.19043690896504,
+   "annunciations": [
+    "SOURCES DISAGREE 53 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 150 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.1643350597601143
+  },
+  {
+   "t": 171.09999999999457,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.33502722804254875,
+   "vert_dots": 1.8764059713199495,
+   "dist_nm": 1.5487939368512864,
+   "height_m": 201.8988966370144,
+   "gp_height_m": 165.564711676812,
+   "annunciations": [
+    "SOURCES DISAGREE 50 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 151 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.1870708288982617
+  },
+  {
+   "t": 172.0999999999945,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.18444998126891837,
+   "vert_dots": 1.296063309207613,
+   "dist_nm": 1.5113156646640995,
+   "height_m": 186.46717672711873,
+   "gp_height_m": 161.9271002898913,
+   "annunciations": [
+    "SOURCES DISAGREE 58 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 152 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.2112746559146503
+  },
+  {
+   "t": 173.09999999999445,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.2843337196395948,
+   "vert_dots": 0.8011280117738098,
+   "dist_nm": 1.4739940018691267,
+   "height_m": 173.13162506114764,
+   "gp_height_m": 158.30468928642404,
+   "annunciations": [
+    "SOURCES DISAGREE 44 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 153 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.2362507821581568
+  },
+  {
+   "t": 174.0999999999944,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.3504801691945507,
+   "vert_dots": 0.942943944545899,
+   "dist_nm": 1.4366154895620198,
+   "height_m": 171.72924694841925,
+   "gp_height_m": 154.67676051437752,
+   "annunciations": [
+    "SOURCES DISAGREE 38 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 154 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.2619732824597945
+  },
+  {
+   "t": 175.09999999999434,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.23037259952942377,
+   "vert_dots": 1.5746321413641113,
+   "dist_nm": 1.3995024948912371,
+   "height_m": 178.89374911541861,
+   "gp_height_m": 151.07460267361878,
+   "annunciations": [
+    "SOURCES DISAGREE 56 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 155 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.2885594320270821
+  },
+  {
+   "t": 176.09999999999428,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.17548480170870917,
+   "vert_dots": 2.0,
+   "dist_nm": 1.3625199487666841,
+   "height_m": 187.97276672377177,
+   "gp_height_m": 147.48510606534165,
+   "annunciations": [
+    "SOURCES DISAGREE 69 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 156 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.316924809574614
+  },
+  {
+   "t": 177.09999999999422,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.31458979056080594,
+   "vert_dots": 1.8748087898615984,
+   "dist_nm": 1.3256286715930483,
+   "height_m": 175.45828067906098,
+   "gp_height_m": 143.9044679490855,
+   "annunciations": [
+    "SOURCES DISAGREE 52 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 157 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.3477800294302353
+  },
+  {
+   "t": 178.09999999999417,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.29177537508188595,
+   "vert_dots": 1.2821604242361195,
+   "dist_nm": 1.288869029965858,
+   "height_m": 161.37639459458117,
+   "gp_height_m": 140.33660627461092,
+   "annunciations": [
+    "SOURCES DISAGREE 48 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 158 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.3813339962518734
+  },
+  {
+   "t": 179.0999999999941,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.16490584453158813,
+   "vert_dots": 0.5334733088192541,
+   "dist_nm": 1.2524238135594892,
+   "height_m": 145.33051914526217,
+   "gp_height_m": 136.79926246280306,
+   "annunciations": [
+    "SOURCES DISAGREE 57 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 159 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.4178792800421078
+  },
+  {
+   "t": 180.09999999999405,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.3995523421516208,
+   "vert_dots": 1.2078137351785156,
+   "dist_nm": 1.2158893447060461,
+   "height_m": 152.07216653195613,
+   "gp_height_m": 133.25325587923865,
+   "annunciations": [
+    "SOURCES DISAGREE 37 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 160 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.4570556411206592
+  },
+  {
+   "t": 181.099999999994,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.23790410490945396,
+   "vert_dots": 1.3317497622685481,
+   "dist_nm": 1.179184836179541,
+   "height_m": 149.8868327613037,
+   "gp_height_m": 129.69074537980882,
+   "annunciations": [
+    "SOURCES DISAGREE 53 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 161 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.4980763297603699
+  },
+  {
+   "t": 182.09999999999394,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.3442029626348779,
+   "vert_dots": 2.0,
+   "dist_nm": 1.142290764690566,
+   "height_m": 156.45168596647295,
+   "gp_height_m": 126.10983604952108,
+   "annunciations": [
+    "SOURCES DISAGREE 49 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 162 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.539784554171536
+  },
+  {
+   "t": 183.09999999999388,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.31894374923072905,
+   "vert_dots": 1.7743473902337232,
+   "dist_nm": 1.105085001670034,
+   "height_m": 147.918622717137,
+   "gp_height_m": 122.49867418627942,
+   "annunciations": [
+    "SOURCES DISAGREE 49 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 163 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.5826730245920584
+  },
+  {
+   "t": 184.09999999999383,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.30170305613748744,
+   "vert_dots": 1.235265798252893,
+   "dist_nm": 1.0679660567299896,
+   "height_m": 136.0690232527232,
+   "gp_height_m": 118.89593881710331,
+   "annunciations": [
+    "SOURCES DISAGREE 46 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 164 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.6273595579463822
+  },
+  {
+   "t": 185.09999999999377,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.43995069699949,
+   "vert_dots": 1.6989135718902983,
+   "dist_nm": 1.0310872704310818,
+   "height_m": 138.22811753648946,
+   "gp_height_m": 115.3165130552459,
+   "annunciations": [
+    "SOURCES DISAGREE 37 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 165 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.6746801522458448
+  },
+  {
+   "t": 186.0999999999937,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.44246184622093454,
+   "vert_dots": 2.0,
+   "dist_nm": 0.9940606807476974,
+   "height_m": 140.3688760407705,
+   "gp_height_m": 111.72274161406493,
+   "annunciations": [
+    "SOURCES DISAGREE 42 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 166 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.7262548387112142
+  },
+  {
+   "t": 187.09999999999366,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.40201980834516143,
+   "vert_dots": 1.8903031495774594,
+   "dist_nm": 0.9564339410530391,
+   "height_m": 131.96327312657138,
+   "gp_height_m": 108.07072008856935,
+   "annunciations": [
+    "SOURCES DISAGREE 41 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 167 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.7818451683832877
+  },
+  {
+   "t": 188.0999999999936,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.37694481690580267,
+   "vert_dots": 1.5114543453302438,
+   "dist_nm": 0.9186021533595332,
+   "height_m": 122.85124146291582,
+   "gp_height_m": 104.39879676686104,
+   "annunciations": [
+    "SOURCES DISAGREE 41 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 168 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.8411049331154727
+  },
+  {
+   "t": 189.09999999999354,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.42186024927118637,
+   "vert_dots": 2.0,
+   "dist_nm": 0.8805211169167559,
+   "height_m": 126.7697487249832,
+   "gp_height_m": 100.70268155914485,
+   "annunciations": [
+    "SOURCES DISAGREE 42 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 169 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.905792539619944
+  },
+  {
+   "t": 190.09999999999349,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.21454376723813562,
+   "vert_dots": 1.9059769590313804,
+   "dist_nm": 0.8424005053127714,
+   "height_m": 118.6262824304425,
+   "gp_height_m": 97.00272521765581,
+   "annunciations": [
+    "SOURCES DISAGREE 57 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 170 s",
+   "advisory_only": true,
+   "true_vert_dots": 1.977223786639123
+  },
+  {
+   "t": 191.09999999999343,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.3387480108332966,
+   "vert_dots": 1.7686753344698727,
+   "dist_nm": 0.8039535733665932,
+   "height_m": 112.56405943542751,
+   "gp_height_m": 93.27109648244969,
+   "annunciations": [
+    "SOURCES DISAGREE 46 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 171 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 192.09999999999337,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.3846840815759773,
+   "vert_dots": 2.0,
+   "dist_nm": 0.7658185314033585,
+   "height_m": 115.18261904766103,
+   "gp_height_m": 89.56973954173175,
+   "annunciations": [
+    "SOURCES DISAGREE 46 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 172 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 193.09999999999332,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.39520783310840174,
+   "vert_dots": 2.0,
+   "dist_nm": 0.7278400795791894,
+   "height_m": 110.65563609953071,
+   "gp_height_m": 85.88358111577189,
+   "annunciations": [
+    "SOURCES DISAGREE 45 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 173 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 194.09999999999326,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.34861601753803645,
+   "vert_dots": 2.0,
+   "dist_nm": 0.6895192280478861,
+   "height_m": 107.95550499031256,
+   "gp_height_m": 82.16418964568105,
+   "annunciations": [
+    "SOURCES DISAGREE 49 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 174 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 195.0999999999932,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.2605966073016057,
+   "vert_dots": 2.0,
+   "dist_nm": 0.6508774185287997,
+   "height_m": 97.52028401456047,
+   "gp_height_m": 78.41364624774114,
+   "annunciations": [
+    "SOURCES DISAGREE 53 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 175 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 196.09999999999314,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.3827820054327002,
+   "vert_dots": 2.0,
+   "dist_nm": 0.6122675945611405,
+   "height_m": 97.50604086242066,
+   "gp_height_m": 74.66620734206565,
+   "annunciations": [
+    "SOURCES DISAGREE 46 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 176 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 197.0999999999931,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.4008670053677726,
+   "vert_dots": 2.0,
+   "dist_nm": 0.5738789111790807,
+   "height_m": 90.84672762854137,
+   "gp_height_m": 70.9402321663153,
+   "annunciations": [
+    "SOURCES DISAGREE 43 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 177 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 198.09999999999303,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.36457734224389904,
+   "vert_dots": 2.0,
+   "dist_nm": 0.5355832416663596,
+   "height_m": 90.6379576372482,
+   "gp_height_m": 67.22328484298454,
+   "annunciations": [
+    "SOURCES DISAGREE 48 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 178 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 199.09999999999297,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.46686466430035434,
+   "vert_dots": 2.0,
+   "dist_nm": 0.49689391103390274,
+   "height_m": 91.50760928983857,
+   "gp_height_m": 63.4681290834541,
+   "annunciations": [
+    "SOURCES DISAGREE 44 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 179 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 200.09999999999292,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.3151491760648242,
+   "vert_dots": 2.0,
+   "dist_nm": 0.45828156964991734,
+   "height_m": 82.84161353344447,
+   "gp_height_m": 59.72044583934571,
+   "annunciations": [
+    "SOURCES DISAGREE 52 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 180 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 201.09999999999286,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.3726875516940685,
+   "vert_dots": 2.0,
+   "dist_nm": 0.41954607534852684,
+   "height_m": 81.19305878748625,
+   "gp_height_m": 55.96080947070564,
+   "annunciations": [
+    "SOURCES DISAGREE 49 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 181 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 202.0999999999928,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.38593696562723256,
+   "vert_dots": 2.0,
+   "dist_nm": 0.3809009189340964,
+   "height_m": 82.24314418068184,
+   "gp_height_m": 52.20994122575695,
+   "annunciations": [
+    "SOURCES DISAGREE 51 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 182 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 203.09999999999275,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.4178898531328404,
+   "vert_dots": 2.0,
+   "dist_nm": 0.3421309063546177,
+   "height_m": 74.99920936180509,
+   "gp_height_m": 48.44695454041062,
+   "annunciations": [
+    "SOURCES DISAGREE 48 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 183 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 204.0999999999927,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.3614351321024885,
+   "vert_dots": 2.0,
+   "dist_nm": 0.30411080236459925,
+   "height_m": 75.3223228898668,
+   "gp_height_m": 44.75675338825392,
+   "annunciations": [
+    "SOURCES DISAGREE 54 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 184 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 205.09999999999263,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.40289322114636067,
+   "vert_dots": 2.0,
+   "dist_nm": 0.2667537328306162,
+   "height_m": 64.30752089882972,
+   "gp_height_m": 41.130905834767646,
+   "annunciations": [
+    "SOURCES DISAGREE 48 m - using GND PAR uplink"
+   ],
+   "minimums": false,
+   "clearance": "25R",
+   "clearance_tag": "STALE 185 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 206.09999999999258,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.379770105732511,
+   "vert_dots": 2.0,
+   "dist_nm": 0.2299480633653666,
+   "height_m": 59.477461728638666,
+   "gp_height_m": 37.558576734820406,
+   "annunciations": [
+    "SOURCES DISAGREE 50 m - using GND PAR uplink",
+    "MINIMUMS"
+   ],
+   "minimums": true,
+   "clearance": "25R",
+   "clearance_tag": "STALE 186 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 207.09999999999252,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.4722958481810401,
+   "vert_dots": 2.0,
+   "dist_nm": 0.19330688098954835,
+   "height_m": 61.36457444578243,
+   "gp_height_m": 34.00221262137331,
+   "annunciations": [
+    "SOURCES DISAGREE 48 m - using GND PAR uplink",
+    "MINIMUMS"
+   ],
+   "minimums": true,
+   "clearance": "25R",
+   "clearance_tag": "STALE 187 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 208.09999999999246,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.5948794253723425,
+   "vert_dots": 2.0,
+   "dist_nm": 0.15640407901278935,
+   "height_m": 54.5388882450027,
+   "gp_height_m": 30.420455916862505,
+   "annunciations": [
+    "SOURCES DISAGREE 40 m - using GND PAR uplink",
+    "MINIMUMS"
+   ],
+   "minimums": true,
+   "clearance": "25R",
+   "clearance_tag": "STALE 188 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 209.0999999999924,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.49671335778352627,
+   "vert_dots": 2.0,
+   "dist_nm": 0.11928870335831233,
+   "height_m": 54.436644809913105,
+   "gp_height_m": 26.818066979713954,
+   "annunciations": [
+    "SOURCES DISAGREE 48 m - using GND PAR uplink",
+    "MINIMUMS"
+   ],
+   "minimums": true,
+   "clearance": "25R",
+   "clearance_tag": "STALE 189 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 210.09999999999235,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.452211084247309,
+   "vert_dots": 2.0,
+   "dist_nm": 0.08218474176316184,
+   "height_m": 47.65059015286752,
+   "gp_height_m": 23.216785882114937,
+   "annunciations": [
+    "SOURCES DISAGREE 50 m - using GND PAR uplink",
+    "MINIMUMS"
+   ],
+   "minimums": true,
+   "clearance": "25R",
+   "clearance_tag": "STALE 190 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 211.0999999999923,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.5594123625442917,
+   "vert_dots": 2.0,
+   "dist_nm": 0.04511233069762487,
+   "height_m": 43.10871896966897,
+   "gp_height_m": 19.618567053907963,
+   "annunciations": [
+    "SOURCES DISAGREE 44 m - using GND PAR uplink",
+    "MINIMUMS"
+   ],
+   "minimums": true,
+   "clearance": "25R",
+   "clearance_tag": "STALE 191 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 212.09999999999224,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.6324167168656848,
+   "vert_dots": 2.0,
+   "dist_nm": 0.007810351136185811,
+   "height_m": 39.634517346229075,
+   "gp_height_m": 15.998066489483248,
+   "annunciations": [
+    "SOURCES DISAGREE 41 m - using GND PAR uplink",
+    "MINIMUMS"
+   ],
+   "minimums": true,
+   "clearance": "25R",
+   "clearance_tag": "STALE 192 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 213.09999999999218,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.5645688040704747,
+   "vert_dots": 2.0,
+   "dist_nm": -0.029662836265264912,
+   "height_m": 45.56583125489157,
+   "gp_height_m": 12.360948627835063,
+   "annunciations": [
+    "SOURCES DISAGREE 51 m - using GND PAR uplink",
+    "MINIMUMS"
+   ],
+   "minimums": true,
+   "clearance": "25R",
+   "clearance_tag": "STALE 193 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 214.09999999999212,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.4978871484399642,
+   "vert_dots": 2.0,
+   "dist_nm": -0.06694711151243528,
+   "height_m": 33.83356964778881,
+   "gp_height_m": 8.742166430117855,
+   "annunciations": [
+    "SOURCES DISAGREE 50 m - using GND PAR uplink",
+    "MINIMUMS"
+   ],
+   "minimums": true,
+   "clearance": "25R",
+   "clearance_tag": "STALE 194 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 215.09999999999206,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.58792003836534,
+   "vert_dots": 2.0,
+   "dist_nm": -0.10395900638442405,
+   "height_m": 21.58811855896115,
+   "gp_height_m": 5.149821255681381,
+   "annunciations": [
+    "SOURCES DISAGREE 43 m - using GND PAR uplink",
+    "MINIMUMS"
+   ],
+   "minimums": true,
+   "clearance": "25R",
+   "clearance_tag": "STALE 195 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  },
+  {
+   "t": 216.099999999992,
+   "source": "GND PAR uplink",
+   "lat_dots": -0.6833288893471436,
+   "vert_dots": 2.0,
+   "dist_nm": -0.14088652195390086,
+   "height_m": 26.715452284624554,
+   "gp_height_m": 1.5656658694535235,
+   "annunciations": [
+    "SOURCES DISAGREE 44 m - using GND PAR uplink",
+    "MINIMUMS"
+   ],
+   "minimums": true,
+   "clearance": "25R",
+   "clearance_tag": "STALE 196 s",
+   "advisory_only": true,
+   "true_vert_dots": 2.0
+  }
+ ],
+ "spans": {
+  "NO APPROACH CLEARANCE": [
+   [
+    0.1,
+    19.1
+   ]
+  ],
+  "SOURCES DISAGREE": [
+   [
+    0.1,
+    8.099999999999987
+   ],
+   [
+    11.099999999999977,
+    20.100000000000016
+   ],
+   [
+    23.10000000000006,
+    33.1000000000002
+   ],
+   [
+    35.10000000000023,
+    43.10000000000034
+   ],
+   [
+    47.1000000000004,
+    103.09999999999842
+   ],
+   [
+    105.0999999999983,
+    124.09999999999722
+   ],
+   [
+    150.09999999999576,
+    216.099999999992
+   ]
+  ],
+  "GND GUIDANCE LOST": [
+   [
+    125.09999999999717,
+    149.09999999999582
+   ]
+  ],
+  "NAV INTEGRITY": [
+   [
+    135.0999999999966,
+    144.0999999999961
+   ]
+  ],
+  "V FLAG": [
+   [
+    135.0999999999966,
+    144.0999999999961
+   ]
+  ],
+  "L FLAG": [
+   [
+    135.0999999999966,
+    144.0999999999961
+   ]
+  ],
+  "MINIMUMS": [
+   [
+    206.09999999999258,
+    216.099999999992
+   ]
+  ]
+ },
+ "summary": {
+  "n": 217,
+  "needles_removed": 10,
+  "annunciation_counts": {
+   "NO APPROACH CLEARANCE": 20,
+   "SOURCES DISAGREE 31 m - using GND PAR uplink": 2,
+   "SOURCES DISAGREE 106 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 46 m - using GND PAR uplink": 7,
+   "SOURCES DISAGREE 48 m - using GND PAR uplink": 11,
+   "SOURCES DISAGREE 57 m - using GND PAR uplink": 5,
+   "SOURCES DISAGREE 122 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 73 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 149 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 97 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 50 m - using GND PAR uplink": 9,
+   "SOURCES DISAGREE 78 m - using GND PAR uplink": 2,
+   "SOURCES DISAGREE 25 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 69 m - using GND PAR uplink": 2,
+   "SOURCES DISAGREE 51 m - using GND PAR uplink": 5,
+   "SOURCES DISAGREE 84 m - using GND PAR uplink": 4,
+   "SOURCES DISAGREE 89 m - using GND PAR uplink": 4,
+   "SOURCES DISAGREE 52 m - using GND PAR uplink": 6,
+   "SOURCES DISAGREE 39 m - using GND PAR uplink": 2,
+   "SOURCES DISAGREE 83 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 62 m - using GND PAR uplink": 3,
+   "SOURCES DISAGREE 24 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 77 m - using GND PAR uplink": 2,
+   "SOURCES DISAGREE 98 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 82 m - using GND PAR uplink": 2,
+   "SOURCES DISAGREE 71 m - using GND PAR uplink": 3,
+   "SOURCES DISAGREE 58 m - using GND PAR uplink": 2,
+   "SOURCES DISAGREE 85 m - using GND PAR uplink": 3,
+   "SOURCES DISAGREE 114 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 30 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 37 m - using GND PAR uplink": 4,
+   "SOURCES DISAGREE 141 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 79 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 36 m - using GND PAR uplink": 3,
+   "SOURCES DISAGREE 72 m - using GND PAR uplink": 2,
+   "SOURCES DISAGREE 87 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 54 m - using GND PAR uplink": 3,
+   "SOURCES DISAGREE 42 m - using GND PAR uplink": 5,
+   "SOURCES DISAGREE 60 m - using GND PAR uplink": 3,
+   "SOURCES DISAGREE 55 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 29 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 40 m - using GND PAR uplink": 2,
+   "SOURCES DISAGREE 121 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 86 m - using GND PAR uplink": 4,
+   "SOURCES DISAGREE 38 m - using GND PAR uplink": 3,
+   "SOURCES DISAGREE 80 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 49 m - using GND PAR uplink": 7,
+   "SOURCES DISAGREE 32 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 64 m - using GND PAR uplink": 2,
+   "SOURCES DISAGREE 44 m - using GND PAR uplink": 7,
+   "SOURCES DISAGREE 45 m - using GND PAR uplink": 3,
+   "SOURCES DISAGREE 56 m - using GND PAR uplink": 4,
+   "SOURCES DISAGREE 70 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 22 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 65 m - using GND PAR uplink": 2,
+   "SOURCES DISAGREE 88 m - using GND PAR uplink": 2,
+   "SOURCES DISAGREE 23 m - using GND PAR uplink": 2,
+   "SOURCES DISAGREE 53 m - using GND PAR uplink": 7,
+   "SOURCES DISAGREE 68 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 75 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 59 m - using GND PAR uplink": 2,
+   "SOURCES DISAGREE 108 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 47 m - using GND PAR uplink": 3,
+   "SOURCES DISAGREE 34 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 66 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 21 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 74 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 142 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 212 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 281 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 351 m - using GND PAR uplink": 1,
+   "GND GUIDANCE LOST": 25,
+   "NAV INTEGRITY": 10,
+   "V FLAG": 10,
+   "L FLAG": 10,
+   "SOURCES DISAGREE 63 m - using GND PAR uplink": 1,
+   "SOURCES DISAGREE 43 m - using GND PAR uplink": 3,
+   "SOURCES DISAGREE 41 m - using GND PAR uplink": 3,
+   "MINIMUMS": 11
+  },
+  "max_abs_vert_dots": 2.0
+ }
+}

@@ -1,0 +1,2137 @@
+{
+ "aircraft": "Extra NG",
+ "latch": {
+  "name": "Extra NG",
+  "bolts": 3,
+  "bolt_side": "left",
+  "hinge_side": "right",
+  "gap_locked_mm": 70.0,
+  "gap_partial_mm": 60.0,
+  "ramp_length_mm": 15.0,
+  "ramp_rise_mm": 5.0,
+  "force_open_locked_n": 136.0,
+  "force_partial_to_locked_n": 60.0,
+  "force_open_partial_n": 90.0,
+  "force_drive_open_partial_n": 270.0,
+  "visible_difference_at_frame": false,
+  "open_and_released_reads_locked": true
+ },
+ "inputs": {
+  "rates": {
+   "stuck_active_per_h": {
+    "value": 1.7334e-07,
+    "source": "dangerous rate; exida FMEDA report P+F 03/11-10 R015 v1 r1.1 (2004) Table 2 p.3: inductive NAMUR sensor NJ 5-30GK-S1N 15.4 FIT safe / 9.63 FIT dangerous, SN 29500 basis [D, read by main session]; x18 = MIL-HDBK-217F N2 switch pi_E AIF/GB (p.14-2) [D-ag, R4_sensor_failure_rates.md] as an airborne-environment factor [Y]",
+    "tag": "D+Y"
+   },
+   "stuck_inactive_per_h": {
+    "value": 1.3859999999999998e-07,
+    "source": "half of the safe rate (split [Y]); exida FMEDA report P+F 03/11-10 R015 v1 r1.1 (2004) Table 2 p.3: inductive NAMUR sensor NJ 5-30GK-S1N 15.4 FIT safe / 9.63 FIT dangerous, SN 29500 basis [D, read by main session]; x18 = MIL-HDBK-217F N2 switch pi_E AIF/GB (p.14-2) [D-ag, R4_sensor_failure_rates.md] as an airborne-environment factor [Y]",
+    "tag": "D+Y"
+   },
+   "open_per_h": {
+    "value": 1.3859999999999998e-07,
+    "source": "other half of the safe rate: output < 1.2 mA = detected by the line-monitoring input; exida FMEDA report P+F 03/11-10 R015 v1 r1.1 (2004) Table 2 p.3: inductive NAMUR sensor NJ 5-30GK-S1N 15.4 FIT safe / 9.63 FIT dangerous, SN 29500 basis [D, read by main session]; x18 = MIL-HDBK-217F N2 switch pi_E AIF/GB (p.14-2) [D-ag, R4_sensor_failure_rates.md] as an airborne-environment factor [Y]",
+    "tag": "D+Y"
+   },
+   "short_per_h": {
+    "value": 0.0,
+    "source": "included in the safe/dangerous totals above",
+    "tag": "Y"
+   },
+   "flight_h": {
+    "value": 1.0,
+    "source": "G-MIIL accident flight 1037-1058 UTC = 0.35 h (AAIB p. 5); 1 h taken as a round typical sortie",
+    "tag": "Y"
+   },
+   "latent_interval_h": {
+    "value": 100.0,
+    "source": "functional check at the 100 h / annual inspection (ICA proposal); the open-canopy plausibility check usually finds a stuck bolt sensor much sooner",
+    "tag": "Y"
+   }
+  },
+  "tolerance": {
+   "trip_mm": {
+    "value": 68.0,
+    "source": "chosen inside the trip window computed in this study (C2)",
+    "tag": "Y"
+   },
+   "sigma_trip_mm": {
+    "value": 0.3,
+    "source": "rigging + wear + switch differential; to be measured at the bench test (step 8)",
+    "tag": "Y"
+   },
+   "sigma_full_mm": {
+    "value": 0.3,
+    "source": "scatter of the fully-locked handle position; to be measured",
+    "tag": "Y"
+   },
+   "hazard_below_mm": {
+    "value": 67.0,
+    "source": "bolts < 70 % of the 60->70 mm travel counted as hazardous; AAIB gives only the two end states 60/70 mm (p. 9)",
+    "tag": "Y"
+   },
+   "p_misrig_common": {
+    "value": 0.001,
+    "source": "per flight: all bolt sensors set up wrong together (wrong gauge, bracket set-up error), latent until the next functional check; no data, swept",
+    "tag": "Y"
+   },
+   "misrig_shift_mm": {
+    "value": -5.0,
+    "source": "trip point 5 mm early = halfway between partial (60) and full (70) lock: partial locks read LOCKED",
+    "tag": "Y"
+   }
+  },
+  "exposure": {
+   "p_hazard": {
+    "partial": {
+     "value": 0.001,
+     "source": "per flight = omission of the step 'pull aft handle fully rearward': NUREG/CR-1278 Table 20-7 per-item omission HEP 0.001 (short list, checkoff used) ... 0.01 (long list, no checkoff), 0.05 (procedure not used) [D, R0_NUREG_CR-1278_omission_HEPs.md]; central 1e-3, swept 1e-4..5e-2",
+     "tag": "D+Y"
+    },
+    "one_bolt": {
+     "value": 0.0001,
+     "source": "per flight; SP-HMM loose rear fitting (AAIB p. 23) shows it exists; rate unknown",
+     "tag": "Y"
+    },
+    "unseated": {
+     "value": 0.0001,
+     "source": "per flight; rate unknown",
+     "tag": "Y"
+    }
+   },
+   "p_pilot_miss": {
+    "partial": {
+     "value": 0.5,
+     "source": "AAIB p. 20: no observable visual difference at the frame; only the handle position (green marking, POH rev. 1.11) shows it",
+     "tag": "Y"
+    },
+    "one_bolt": {
+     "value": 0.9,
+     "source": "bolts hidden from view (AAIB p. 10); handle may still be at the end stop",
+     "tag": "Y"
+    },
+    "unseated": {
+     "value": 0.05,
+     "source": "an unseated canopy is visible and noisy",
+     "tag": "Y"
+    }
+   },
+   "p_nuisance": {
+    "value": 0.0003,
+    "source": "per flight, nuisance alerts outside the channel model (intermittent connector, contamination, sensor knocked late); AC 25.1322-1 App. 5 separates false and nuisance alerts [D-ag, R4]; value no data, swept in C3",
+    "tag": "Y"
+   }
+  },
+  "compliance_floor": {
+   "value": 0.0,
+   "source": "probability matching without floor (worst case)",
+   "tag": "Y"
+  }
+ },
+ "mode_probabilities": {
+  "stuck_active": 8.666924883762033e-06,
+  "stuck_inactive": 1.3859999037357795e-07,
+  "open": 1.3859999037357795e-07,
+  "short": 0.0
+ },
+ "architectures": {
+  "A0": {
+   "label": "No system (pilot check only)",
+   "channels": 0,
+   "miss": {
+    "partial": 1.0,
+    "one_bolt": 1.0,
+    "unseated": 1.0
+   },
+   "miss_ci": {
+    "partial": [
+     0.9999807930745066,
+     1.0
+    ],
+    "one_bolt": [
+     0.9999807930745066,
+     1.0
+    ],
+    "unseated": [
+     0.9999807930745066,
+     1.0
+    ]
+   },
+   "miss_k": {
+    "partial": 200000,
+    "one_bolt": 200000,
+    "unseated": 200000
+   },
+   "false_alarm": 0.0,
+   "false_alarm_ci": [
+    0.0,
+    1.9206925493407404e-05
+   ],
+   "fault_caution": 0.0,
+   "risk_full": {
+    "risk": 0.000595,
+    "baseline": 0.000595,
+    "reduction_factor": 1.0,
+    "ppv": 1.0,
+    "compliance": 1.0,
+    "false_alarm_per_flight": 0.0,
+    "fault_caution_per_flight": 0.0
+   },
+   "risk_matching": {
+    "risk": 0.000595,
+    "baseline": 0.000595,
+    "reduction_factor": 1.0,
+    "ppv": 1.0,
+    "compliance": 1.0,
+    "false_alarm_per_flight": 0.0,
+    "fault_caution_per_flight": 0.0
+   },
+   "reduction_lower_bound_full": 1.0
+  },
+  "A1": {
+   "label": "Seated switch only, plain contact",
+   "channels": 1,
+   "miss": {
+    "partial": 1.0,
+    "one_bolt": 1.0,
+    "unseated": 5e-06
+   },
+   "miss_ci": {
+    "partial": [
+     0.9999807930745066,
+     1.0
+    ],
+    "one_bolt": [
+     0.9999807930745066,
+     1.0
+    ],
+    "unseated": [
+     8.826233101860303e-07,
+     2.8324110113966443e-05
+    ]
+   },
+   "miss_k": {
+    "partial": 200000,
+    "one_bolt": 200000,
+    "unseated": 1
+   },
+   "false_alarm": 0.0,
+   "false_alarm_ci": [
+    0.0,
+    1.9206925493407404e-05
+   ],
+   "fault_caution": 0.0,
+   "risk_full": {
+    "risk": 0.000590000025,
+    "baseline": 0.000595,
+    "reduction_factor": 1.0084745335392147,
+    "ppv": 0.016412734408870668,
+    "compliance": 1.0,
+    "false_alarm_per_flight": 0.00029964,
+    "fault_caution_per_flight": 0.0
+   },
+   "risk_matching": {
+    "risk": 0.000594917936738274,
+    "baseline": 0.000595,
+    "reduction_factor": 1.000137940473229,
+    "ppv": 0.016412734408870668,
+    "compliance": 0.016412734408870668,
+    "false_alarm_per_flight": 0.00029964,
+    "fault_caution_per_flight": 0.0
+   },
+   "reduction_lower_bound_full": 1.0084743198794104
+  },
+  "A2": {
+   "label": "Seated + rear bolt, self-checking",
+   "channels": 2,
+   "miss": {
+    "partial": 0.000735,
+    "one_bolt": 0.666425,
+    "unseated": 0.0
+   },
+   "miss_ci": {
+    "partial": [
+     0.0006254311746128949,
+     0.000863747516700037
+    ],
+    "one_bolt": [
+     0.6643554632478441,
+     0.6684881437270054
+    ],
+    "unseated": [
+     0.0,
+     1.9206925493407404e-05
+    ]
+   },
+   "miss_k": {
+    "partial": 147,
+    "one_bolt": 133285,
+    "unseated": 0
+   },
+   "false_alarm": 1e-05,
+   "false_alarm_ci": [
+    2.7423649501198834e-06,
+    3.6464176404777655e-05
+   ],
+   "fault_caution": 0.0,
+   "risk_full": {
+    "risk": 6.0345750000000004e-05,
+    "baseline": 0.000595,
+    "reduction_factor": 9.859849285160927,
+    "ppv": 0.6332648234639542,
+    "compliance": 1.0,
+    "false_alarm_per_flight": 0.000309628,
+    "fault_caution_per_flight": 0.0
+   },
+   "risk_matching": {
+    "risk": 0.00025642227075949714,
+    "baseline": 0.000595,
+    "reduction_factor": 2.3203912758344645,
+    "ppv": 0.6332648234639542,
+    "compliance": 0.6332648234639542,
+    "false_alarm_per_flight": 0.000309628,
+    "fault_caution_per_flight": 0.0
+   },
+   "reduction_lower_bound_full": 9.819016547105699
+  },
+  "A3": {
+   "label": "Seated + all three bolts, self-checking",
+   "channels": 4,
+   "miss": {
+    "partial": 0.00051,
+    "one_bolt": 0.000645,
+    "unseated": 0.0
+   },
+   "miss_ci": {
+    "partial": [
+     0.00042018252734122815,
+     0.000619004807088176
+    ],
+    "one_bolt": [
+     0.0005429108831628516,
+     0.0007662712653966691
+    ],
+    "unseated": [
+     0.0,
+     1.9206925493407404e-05
+    ]
+   },
+   "miss_k": {
+    "partial": 102,
+    "one_bolt": 129,
+    "unseated": 0
+   },
+   "false_alarm": 0.0,
+   "false_alarm_ci": [
+    0.0,
+    1.9206925493407404e-05
+   ],
+   "fault_caution": 0.0,
+   "risk_full": {
+    "risk": 3.1305000000000007e-07,
+    "baseline": 0.000595,
+    "reduction_factor": 1900.6548474684553,
+    "ppv": 0.6649547461361865,
+    "compliance": 1.0,
+    "false_alarm_per_flight": 0.00029964,
+    "fault_caution_per_flight": 0.0
+   },
+   "risk_matching": {
+    "risk": 0.00019956009013224693,
+    "baseline": 0.000595,
+    "reduction_factor": 2.9815580841124003,
+    "ppv": 0.6649547461361865,
+    "compliance": 0.6649547461361865,
+    "false_alarm_per_flight": 0.00029964,
+    "fault_caution_per_flight": 0.0
+   },
+   "reduction_lower_bound_full": 1568.2656826568266
+  },
+  "A4": {
+   "label": "Dual seated + dual channel per bolt",
+   "channels": 8,
+   "miss": {
+    "partial": 0.000445,
+    "one_bolt": 0.000545,
+    "unseated": 0.0
+   },
+   "miss_ci": {
+    "partial": [
+     0.00036166838124243903,
+     0.0005475214500872791
+    ],
+    "one_bolt": [
+     0.0004518598697915721,
+     0.0006573261201530474
+    ],
+    "unseated": [
+     0.0,
+     1.9206925493407404e-05
+    ]
+   },
+   "miss_k": {
+    "partial": 89,
+    "one_bolt": 109,
+    "unseated": 0
+   },
+   "false_alarm": 0.0,
+   "false_alarm_ci": [
+    0.0,
+    1.9206925493407404e-05
+   ],
+   "fault_caution": 0.0,
+   "risk_full": {
+    "risk": 2.7154999999999997e-07,
+    "baseline": 0.000595,
+    "reduction_factor": 2191.1250230160194,
+    "ppv": 0.6649702927244359,
+    "compliance": 1.0,
+    "false_alarm_per_flight": 0.00029964,
+    "fault_caution_per_flight": 0.0
+   },
+   "risk_matching": {
+    "risk": 0.00019952324851194999,
+    "baseline": 0.000595,
+    "reduction_factor": 2.9821086236191863,
+    "ppv": 0.6649702927244359,
+    "compliance": 0.6649702927244359,
+    "false_alarm_per_flight": 0.00029964,
+    "fault_caution_per_flight": 0.0
+   },
+   "reduction_lower_bound_full": 1778.7742899850523
+  }
+ },
+ "trip_windows": {
+  "0.2": [
+   67.29,
+   68.88
+  ],
+  "0.3": [
+   67.48,
+   68.68
+  ],
+  "0.5": [
+   67.91,
+   68.19
+  ]
+ },
+ "unalerted_hazard_per_flight_no_system": 0.000595,
+ "fault_tree": {
+  "tree": "AND\n    - partial_lock\n    - pilot_check_misses\n    OR\n        - alert_ignored\n        - misrig_common\n        AND\n            OR\n                - tol_front\n                - stuck_front\n            OR\n                - tol_centre\n                - stuck_centre\n            OR\n                - tol_rear\n                - stuck_rear\n",
+  "probs": {
+   "partial_lock": 0.001,
+   "pilot_check_misses": 0.5,
+   "alert_ignored": 0.33504525386381345,
+   "misrig_common": 0.001,
+   "tol_front": 4.803337955784884e-06,
+   "tol_centre": 4.803337955784884e-06,
+   "tol_rear": 4.803337955784884e-06,
+   "stuck_front": 8.666924883762033e-06,
+   "stuck_centre": 8.666924883762033e-06,
+   "stuck_rear": 8.666924883762033e-06
+  },
+  "top_exact": 0.00016785510430497564,
+  "top_rare_event": 0.00016802262693190796,
+  "cut_sets": [
+   [
+    "alert_ignored",
+    "partial_lock",
+    "pilot_check_misses"
+   ],
+   [
+    "misrig_common",
+    "partial_lock",
+    "pilot_check_misses"
+   ],
+   [
+    "partial_lock",
+    "pilot_check_misses",
+    "stuck_centre",
+    "stuck_front",
+    "stuck_rear"
+   ],
+   [
+    "partial_lock",
+    "pilot_check_misses",
+    "stuck_centre",
+    "stuck_front",
+    "tol_rear"
+   ],
+   [
+    "partial_lock",
+    "pilot_check_misses",
+    "stuck_centre",
+    "stuck_rear",
+    "tol_front"
+   ],
+   [
+    "partial_lock",
+    "pilot_check_misses",
+    "stuck_centre",
+    "tol_front",
+    "tol_rear"
+   ],
+   [
+    "partial_lock",
+    "pilot_check_misses",
+    "stuck_front",
+    "stuck_rear",
+    "tol_centre"
+   ],
+   [
+    "partial_lock",
+    "pilot_check_misses",
+    "stuck_front",
+    "tol_centre",
+    "tol_rear"
+   ],
+   [
+    "partial_lock",
+    "pilot_check_misses",
+    "stuck_rear",
+    "tol_centre",
+    "tol_front"
+   ],
+   [
+    "partial_lock",
+    "pilot_check_misses",
+    "tol_centre",
+    "tol_front",
+    "tol_rear"
+   ]
+  ],
+  "importance": {
+   "partial_lock": {
+    "fussell_vesely": 1.0,
+    "rrw": Infinity,
+    "raw": 999.9999999999998,
+    "birnbaum": 0.1678551043049755
+   },
+   "pilot_check_misses": {
+    "fussell_vesely": 1.0,
+    "rrw": Infinity,
+    "raw": 2.0,
+    "birnbaum": 0.00033571020860995106
+   },
+   "alert_ignored": {
+    "fussell_vesely": 0.9970242103154127,
+    "rrw": 335.71020860913114,
+    "raw": 2.9787595799979454,
+    "birnbaum": 0.000499499999999999
+   },
+   "misrig_common": {
+    "fussell_vesely": 0.0029757896845799678,
+    "rrw": 1.0019846714390603,
+    "raw": 2.978759579997941,
+    "birnbaum": 0.00033247737306809207
+   },
+   "tol_front": {
+    "fussell_vesely": 2.5935672768942678e-15,
+    "rrw": 1.0000000000000016,
+    "raw": 1.000000000359035,
+    "birnbaum": 6.02661366991275e-14
+   },
+   "stuck_front": {
+    "fussell_vesely": 4.679715018335166e-15,
+    "rrw": 1.0000000000000029,
+    "raw": 1.0000000003590352,
+    "birnbaum": 6.026638064461631e-14
+   },
+   "tol_centre": {
+    "fussell_vesely": 2.5935672768942678e-15,
+    "rrw": 1.0000000000000016,
+    "raw": 1.000000000359035,
+    "birnbaum": 6.02661366991275e-14
+   },
+   "stuck_centre": {
+    "fussell_vesely": 4.679715018335166e-15,
+    "rrw": 1.0000000000000027,
+    "raw": 1.0000000003590355,
+    "birnbaum": 6.026638064461631e-14
+   },
+   "tol_rear": {
+    "fussell_vesely": 2.5935672768942678e-15,
+    "rrw": 1.0000000000000016,
+    "raw": 1.000000000359035,
+    "birnbaum": 6.02661366991275e-14
+   },
+   "stuck_rear": {
+    "fussell_vesely": 4.679715018335166e-15,
+    "rrw": 1.0000000000000027,
+    "raw": 1.0000000003590355,
+    "birnbaum": 6.026638064461631e-14
+   }
+  },
+  "alert_ignored_from": "1 - compliance of A3 under probability matching (PPV), from the Monte Carlo",
+  "sensor_part_independent": 2.4441519953235727e-15,
+  "sensor_part_mc_no_misrig": 0.0,
+  "sensor_part_mc_no_misrig_ci": [
+   0.0,
+   1.9206925493407404e-05
+  ],
+  "sensor_part_mc": 0.00051,
+  "tol_miss_single": 4.803337955784884e-06
+ },
+ "ercs": {
+  "takeoff_partial_lock": {
+   "text": "Take-off with the canopy partially locked; canopy opens or departs in flight; loss of vision or control",
+   "severity_reason": "two-seat aeroplane; G-MIIL shows canopy loss can end in aircraft destruction (AAIB p. 1)",
+   "states": {
+    "design": "failed",
+    "regulations and procedures": "failed",
+    "situational awareness": "failed",
+    "late recovery": "remaining",
+    "protections": "remaining"
+   },
+   "without": {
+    "code": "M1",
+    "colour": "RED",
+    "sum": 2,
+    "value": 10000.0
+   },
+   "with": {
+    "code": "M3",
+    "colour": "YELLOW",
+    "sum": 5,
+    "value": 100.0
+   }
+  },
+  "inflight_unlock": {
+   "text": "Canopy locked at take-off, a bolt backs out in flight (loose fitting / loss of stiffness, cf. SP-HMM)",
+   "severity_reason": "as above; SP-HMM canopy detached in flight (AAIB p. 23)",
+   "states": {
+    "design": "failed",
+    "regulations and procedures": "remaining",
+    "late recovery": "remaining",
+    "protections": "remaining"
+   },
+   "without": {
+    "code": "M3",
+    "colour": "YELLOW",
+    "sum": 5,
+    "value": 100.0
+   },
+   "with": {
+    "code": "M4",
+    "colour": "GREEN",
+    "sum": 8,
+    "value": 10.0
+   }
+  }
+ },
+ "sensitivity_rates": {
+  "microswitch_mil_aif": {
+   "miss": {
+    "partial": 0.00045,
+    "one_bolt": 0.00086,
+    "unseated": 0.0
+   },
+   "false_alarm": 1e-05,
+   "fault_caution": 5e-06,
+   "rf_full": 1967.5925925925926,
+   "rf_full_lb": 1618.60718171926,
+   "rf_matching": 2.9178359026517877,
+   "source": "MIL-HDBK-217F N2 sec. 14.1 snap-action lambda_b 0.49e-6/h x pi_E AIF 18 x pi_Q 1 (pi_L, pi_C = 1 assumed); 50/50 mode split [Y]"
+  },
+  "limit_switch_mil_aif": {
+   "miss": {
+    "partial": 0.00045,
+    "one_bolt": 0.002515,
+    "unseated": 0.0
+   },
+   "false_alarm": 3.5e-05,
+   "fault_caution": 0.00011,
+   "rf_full": 1318.2674199623352,
+   "rf_full_lb": 1134.0893929286192,
+   "rf_matching": 2.773166399159047,
+   "source": "MIL-HDBK-217F N2 sec. 14.1 limit switch lambda_b 4.3e-6/h x pi_E AIF 18; 50/50 split [Y]"
+  },
+  "worst_case_x100": {
+   "miss": {
+    "partial": 0.00045,
+    "one_bolt": 0.001535,
+    "unseated": 0.0
+   },
+   "false_alarm": 4.5e-05,
+   "fault_caution": 9.5e-05,
+   "rf_full": 1638.4414153930886,
+   "rf_full_lb": 1376.040703052729,
+   "rf_matching": 2.7227881370007014,
+   "source": "base x100 (stress test)"
+  }
+ },
+ "targets_per_fh": {
+  "minor": 0.001,
+  "major": 0.0001,
+  "hazardous": 1e-05,
+  "catastrophic": 1e-06
+ },
+ "residual": {
+  "A0": {
+   "risk_per_fh_full": 0.000595,
+   "risk_per_fh_matching": 0.000595
+  },
+  "A1": {
+   "risk_per_fh_full": 0.000590000025,
+   "risk_per_fh_matching": 0.000594917936738274
+  },
+  "A2": {
+   "risk_per_fh_full": 6.0345750000000004e-05,
+   "risk_per_fh_matching": 0.00025642227075949714
+  },
+  "A3": {
+   "risk_per_fh_full": 3.1305000000000007e-07,
+   "risk_per_fh_matching": 0.00019956009013224693
+  },
+  "A4": {
+   "risk_per_fh_full": 2.7154999999999997e-07,
+   "risk_per_fh_matching": 0.00019952324851194999
+  }
+ },
+ "exposure_grid": {
+  "p_partial": [
+   0.0001,
+   0.001,
+   0.01,
+   0.05
+  ],
+  "p_nuisance": [
+   1e-05,
+   0.0001,
+   0.001
+  ],
+  "rf_matching": [
+   [
+    15.36763270157861,
+    2.4475550125948,
+    1.1448643109962715
+   ],
+   [
+    58.701260402845456,
+    6.932298116424269,
+    1.5949018108516557
+   ],
+   [
+    408.0292879919634,
+    51.10286272177437,
+    6.128729137146206
+   ],
+   [
+    1125.2124634211063,
+    233.59453073560206,
+    27.043373190854204
+   ]
+  ]
+ },
+ "options": {
+  "A3": {
+   "label": "LOCK-SENSE (A3, baseline)",
+   "risk_full": 3.1305000000000007e-07,
+   "risk_matching": 0.00019956009013224693,
+   "rf_full_vs_A0": 1900.6548474684553,
+   "rf_matching_vs_A0": 2.9815580841124003,
+   "miss_partial": 0.00051,
+   "false_alarm": 0.0
+  },
+  "PLUS": {
+   "label": "LOCK-SENSE Plus: dual channel per bolt, one analog self-calibrating",
+   "risk_full": 3.5400000000000006e-08,
+   "risk_matching": 0.00020795606395635334,
+   "rf_full_vs_A0": 16807.909604519773,
+   "rf_matching_vs_A0": 2.8611812932027845,
+   "miss_partial": 6e-05,
+   "false_alarm": 2e-05
+  },
+  "POWER": {
+   "label": "Powered over-centre lock + A3 sensing",
+   "risk_full": 8.355e-08,
+   "risk_matching": 9.778882926003501e-05,
+   "rf_full_vs_A0": 7121.484141232795,
+   "rf_matching_vs_A0": 6.084539558376415,
+   "miss_partial": 0.00051,
+   "false_alarm": 0.0
+  },
+  "_factors": {
+   "plus_misrig_factor": 0.1,
+   "powerlock_partial_factor": 0.1
+  }
+ },
+ "complacency": {
+  "full": {
+   "risk_no_complacency": 3.1305000000000007e-07,
+   "risk_complacent": 5.22855e-07,
+   "rf_vs_A0": 1137.9828059404615
+  },
+  "matching": {
+   "risk_no_complacency": 0.00019956009013224693,
+   "risk_complacent": 0.00023204741477484455,
+   "rf_vs_A0": 2.5641311306024597
+  },
+  "p_pilot_miss_with_system": {
+   "partial": 0.9,
+   "one_bolt": 0.99,
+   "unseated": 0.2
+  }
+ },
+ "fmea_markdown": "| Item | Failure mode | Effect | Detection | Severity [Y] | Mitigation | P per flight |\n|---|---|---|---|---|---|---|\n| Seated sensor | stuck ACTIVE (reads seated) | open canopy shown as CANOPY UNLOCKED instead of OPEN; lock protection unchanged (bolt sensors) | functional test (ICA) | no safety effect | lock needs seated AND all bolts | 8.7e-06 |\n| Seated sensor | stuck INACTIVE | bolts sensed while 'not seated' -> CANOPY SENS caution (nuisance) | immediate (self-revealing) | minor | MEL/placard: system INOP, pilot handle check | 1.4e-07 |\n| Any sensor | open circuit / short | invalid complementary code -> CANOPY SENS, green off | immediate | minor | complementary outputs; fuselage-side harness only | 1.4e-07 |\n| Bolt sensor | stuck ACTIVE | that bolt unmonitored: a single-bolt hazard there is missed; a partial lock is still caught by the other two bolts (common linkage tube) | next powered opening (bolt sensed, canopy not seated) or functional test | major (latent) | three bolt sensors; plausibility check on every opening | 8.7e-06 |\n| Bolt sensor | stuck INACTIVE | false CANOPY UNLOCKED (nuisance) | immediate | minor | dispatch rule; fix before next flight | 1.4e-07 |\n| Bolt sensor | rigged to trip too early | partial lock read as locked (missed alert) | installation and annual go/no-go spacer test | major (latent) | rigging gauge in ICA; trip point set from tolerance study | — |\n| Bolt sensor | rigged to trip too late | full lock read as unlocked (false alarm) | immediate | minor | tolerance study; re-rig | — |\n| Alert unit | loss of power / CB open | panel dark, green LOCKED off, no alert | pilot checklist item 'CANOPY - LOCKED, green ON' | minor | positive-indication design | — |\n| Alert unit | logic error shows LOCKED | missed alert | functional test (ICA) | major (latent) | simple hardware AND for the green lamp; no software needed | — |\n| Red lamp / LED | fails dark | warning not seen (voice still works) | power-up lamp test | minor | two LEDs per legend; voice channel independent | — |\n| Voice / tone | no audio (headset unplugged) | warning only visual | power-up tone test | minor | flashing red in primary field of view | — |\n| Installation | part bridges canopy and fuselage | could obstruct emergency opening / jettison | ground test of emergency opening after installation | catastrophic if it occurred | nothing mounted across the split line; magnets passive in the frame | — |\n| Installation | magnet near the standby compass | compass deviation | compass swing | minor | magnet position and size; DO-160 magnetic-effect test | — |\n| Pilot | relies on the light, skips the handle check | the old barrier weakens | training / line checks | major | AFM supplement: handle check stays primary; system is supplementary | — |\n| Pilot | ignores alerts after nuisance alarms (cry wolf) | true alert not acted on | false-alarm monitoring in the event log | major | false-alarm budget; persistence filter | — |\n",
+ "traces": {
+  "partial_lock_before_takeoff": {
+   "rows": [
+    {
+     "t_s": 0,
+     "what": "master ON after closing canopy (handle released, not pulled)",
+     "phase": "self-test",
+     "state": "closed, not locked",
+     "alert": "WARNING",
+     "message": "TEST",
+     "voice": true,
+     "green": true
+    },
+    {
+     "t_s": 5,
+     "what": "pre-start checks",
+     "phase": "parked",
+     "state": "closed, not locked",
+     "alert": "ADVISORY",
+     "message": "CANOPY UNLOCKED",
+     "voice": false,
+     "green": false
+    },
+    {
+     "t_s": 60,
+     "what": "engine running, taxi",
+     "phase": "taxi",
+     "state": "closed, not locked",
+     "alert": "CAUTION",
+     "message": "CANOPY UNLOCKED",
+     "voice": true,
+     "green": false
+    },
+    {
+     "t_s": 240,
+     "what": "power checks at the holding point",
+     "phase": "taxi",
+     "state": "closed, not locked",
+     "alert": "CAUTION",
+     "message": "CANOPY UNLOCKED",
+     "voice": false,
+     "green": false
+    },
+    {
+     "t_s": 300,
+     "what": "take-off power applied",
+     "phase": "take-off",
+     "state": "closed, not locked",
+     "alert": "WARNING",
+     "message": "CANOPY UNLOCKED",
+     "voice": true,
+     "green": false
+    },
+    {
+     "t_s": 302,
+     "what": "pilot rejects, throttle closed",
+     "phase": "taxi",
+     "state": "closed, not locked",
+     "alert": "CAUTION",
+     "message": "CANOPY UNLOCKED",
+     "voice": true,
+     "green": false
+    },
+    {
+     "t_s": 330,
+     "what": "handle pulled fully rearward",
+     "phase": "taxi",
+     "state": "closed, not locked",
+     "alert": "CAUTION",
+     "message": "CANOPY UNLOCKED",
+     "voice": false,
+     "green": false
+    },
+    {
+     "t_s": 330.6,
+     "what": "0.6 s later (persistence 0.5 s): green",
+     "phase": "taxi",
+     "state": "locked",
+     "alert": "NONE",
+     "message": "",
+     "voice": false,
+     "green": true
+    },
+    {
+     "t_s": 360,
+     "what": "take-off",
+     "phase": "take-off",
+     "state": "locked",
+     "alert": "NONE",
+     "message": "",
+     "voice": false,
+     "green": true
+    }
+   ],
+   "events": [
+    [
+     0.0,
+     "power on: lamp and voice test"
+    ],
+    [
+     0.0,
+     "phase off -> self-test"
+    ],
+    [
+     5.0,
+     "phase self-test -> parked"
+    ],
+    [
+     60.0,
+     "phase parked -> taxi"
+    ],
+    [
+     60.0,
+     "CAUTION CANOPY UNLOCKED (taxi)"
+    ],
+    [
+     300.0,
+     "phase taxi -> take-off"
+    ],
+    [
+     300.0,
+     "WARNING CANOPY UNLOCKED (take-off)"
+    ],
+    [
+     302.0,
+     "phase take-off -> taxi"
+    ],
+    [
+     302.0,
+     "CAUTION CANOPY UNLOCKED (taxi)"
+    ],
+    [
+     330.6,
+     "canopy closed, not locked -> locked"
+    ],
+    [
+     360.0,
+     "phase taxi -> take-off"
+    ]
+   ]
+  },
+  "inflight_unlock": {
+   "rows": [
+    {
+     "t_s": 0,
+     "what": "master ON, locked",
+     "phase": "self-test",
+     "state": "locked",
+     "alert": "WARNING",
+     "message": "TEST",
+     "voice": true,
+     "green": true
+    },
+    {
+     "t_s": 5,
+     "what": "taxi",
+     "phase": "taxi",
+     "state": "locked",
+     "alert": "NONE",
+     "message": "",
+     "voice": false,
+     "green": true
+    },
+    {
+     "t_s": 100,
+     "what": "take-off roll",
+     "phase": "take-off",
+     "state": "locked",
+     "alert": "NONE",
+     "message": "",
+     "voice": false,
+     "green": true
+    },
+    {
+     "t_s": 900,
+     "what": "cruise 180 KIAS",
+     "phase": "airborne",
+     "state": "locked",
+     "alert": "NONE",
+     "message": "",
+     "voice": false,
+     "green": true
+    },
+    {
+     "t_s": 900.2,
+     "what": "rear bolt backs out",
+     "phase": "airborne",
+     "state": "locked",
+     "alert": "NONE",
+     "message": "",
+     "voice": false,
+     "green": true
+    },
+    {
+     "t_s": 900.4,
+     "what": "persistence 0.2 s",
+     "phase": "airborne",
+     "state": "locked",
+     "alert": "NONE",
+     "message": "",
+     "voice": false,
+     "green": true
+    },
+    {
+     "t_s": 900.8,
+     "what": "persistence 0.6 s",
+     "phase": "airborne",
+     "state": "closed, not locked",
+     "alert": "WARNING",
+     "message": "CANOPY UNLOCKED",
+     "voice": true,
+     "green": false
+    },
+    {
+     "t_s": 903,
+     "what": "pilot acknowledges, slows down, lands as soon as possible",
+     "phase": "airborne",
+     "state": "closed, not locked",
+     "alert": "WARNING",
+     "message": "CANOPY UNLOCKED",
+     "voice": false,
+     "green": false
+    }
+   ],
+   "events": [
+    [
+     0.0,
+     "power on: lamp and voice test"
+    ],
+    [
+     0.0,
+     "phase off -> self-test"
+    ],
+    [
+     5.0,
+     "phase self-test -> taxi"
+    ],
+    [
+     100.0,
+     "phase taxi -> take-off"
+    ],
+    [
+     104.0,
+     "phase take-off -> airborne"
+    ],
+    [
+     900.8,
+     "canopy locked -> closed, not locked"
+    ],
+    [
+     900.8,
+     "IN-FLIGHT LOSS OF LOCK recorded"
+    ],
+    [
+     900.8,
+     "WARNING CANOPY UNLOCKED (airborne)"
+    ],
+    [
+     903.0,
+     "CANOPY UNLOCKED acknowledged"
+    ]
+   ]
+  }
+ },
+ "occurrences": {
+  "n": 241,
+  "by_source": {
+   "R2_occurrences.csv": 146,
+   "R5_occurrences_add.csv": 95
+  },
+  "by_cause": {
+   "unknown": 83,
+   "structural": 9,
+   "partially_latched": 50,
+   "not_locked": 76,
+   "mechanism_failure": 18,
+   "handle_knocked": 5
+  },
+  "by_phase": {
+   "cruise": 49,
+   "aerobatics": 5,
+   "initial_climb": 141,
+   "takeoff_roll": 24,
+   "unknown": 2,
+   "approach": 20
+  },
+  "by_outcome": {
+   "minor": 38,
+   "no_injury": 113,
+   "serious": 38,
+   "unknown": 13,
+   "fatal": 39
+  },
+  "by_investigator": {
+   "AAIB (UK)": 35,
+   "PKBWL (Poland) via AAIB": 1,
+   "AAIB (UK) - table entry": 6,
+   "BEA": 19,
+   "BEA - as summarised in BEA2024-0375": 2,
+   "DSB (Netherlands) - as summarised in BEA2024-0375": 1,
+   "Austrian safety investigation authority (BEA notification page)": 1,
+   "SUST (Switzerland)": 4,
+   "NTSB": 150,
+   "BFU (Germany)": 1,
+   "BFU (Germany) - open-data table entry": 13,
+   "PKBWL (Poland)": 8
+  },
+  "by_category": {
+   "aeroplane": 167,
+   "microlight": 10,
+   "glider": 52,
+   "helicopter": 3,
+   "motorglider": 9
+  },
+  "lock_related": 126,
+  "lock_related_fatal": 16,
+  "lock_related_by_phase": {
+   "initial_climb": 76,
+   "takeoff_roll": 17,
+   "cruise": 24,
+   "approach": 7,
+   "unknown": 1,
+   "aerobatics": 1
+  },
+  "warning_fitted_yes": 14,
+  "fatal": 39,
+  "by_family": {
+   "Slingsby": {
+    "rows": 5,
+    "lock": 2,
+    "lock_climb": 2,
+    "fatal": 0
+   },
+   "Europa": {
+    "rows": 9,
+    "lock": 5,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Other": {
+    "rows": 39,
+    "lock": 20,
+    "lock_climb": 9,
+    "fatal": 4
+   },
+   "Rutan-type canards": {
+    "rows": 14,
+    "lock": 9,
+    "lock_climb": 8,
+    "fatal": 3
+   },
+   "Pitts": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Zenith / Zenair CH": {
+    "rows": 18,
+    "lock": 9,
+    "lock_climb": 6,
+    "fatal": 3
+   },
+   "Extra": {
+    "rows": 6,
+    "lock": 5,
+    "lock_climb": 2,
+    "fatal": 0
+   },
+   "Cap / Mudry": {
+    "rows": 5,
+    "lock": 4,
+    "lock_climb": 3,
+    "fatal": 0
+   },
+   "Piper": {
+    "rows": 3,
+    "lock": 2,
+    "lock_climb": 1,
+    "fatal": 2
+   },
+   "Diamond DA": {
+    "rows": 5,
+    "lock": 2,
+    "lock_climb": 1,
+    "fatal": 0
+   },
+   "SportCruiser": {
+    "rows": 11,
+    "lock": 8,
+    "lock_climb": 6,
+    "fatal": 0
+   },
+   "Cessna": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Robin": {
+    "rows": 2,
+    "lock": 2,
+    "lock_climb": 1,
+    "fatal": 0
+   },
+   "Evektor": {
+    "rows": 8,
+    "lock": 6,
+    "lock_climb": 4,
+    "fatal": 2
+   },
+   "Dynamic WT9": {
+    "rows": 3,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 1
+   },
+   "Schempp-Hirth": {
+    "rows": 7,
+    "lock": 1,
+    "lock_climb": 1,
+    "fatal": 1
+   },
+   "Schleicher": {
+    "rows": 6,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 1
+   },
+   "Schweizer": {
+    "rows": 8,
+    "lock": 5,
+    "lock_climb": 3,
+    "fatal": 0
+   },
+   "Grob": {
+    "rows": 23,
+    "lock": 10,
+    "lock_climb": 9,
+    "fatal": 3
+   },
+   "Glasair": {
+    "rows": 2,
+    "lock": 1,
+    "lock_climb": 1,
+    "fatal": 1
+   },
+   "Other glider": {
+    "rows": 4,
+    "lock": 2,
+    "lock_climb": 1,
+    "fatal": 2
+   },
+   "Vans RV": {
+    "rows": 15,
+    "lock": 10,
+    "lock_climb": 7,
+    "fatal": 7
+   },
+   "Lancair": {
+    "rows": 5,
+    "lock": 3,
+    "lock_climb": 1,
+    "fatal": 2
+   },
+   "Grumman": {
+    "rows": 2,
+    "lock": 1,
+    "lock_climb": 0,
+    "fatal": 1
+   },
+   "Globe Swift": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 1,
+    "fatal": 0
+   },
+   "Taylor Coot": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "PIK-20": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Wing Derringer": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Bede BD-5": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 1,
+    "fatal": 1
+   },
+   "Eagle DW-1": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Cassutt": {
+    "rows": 2,
+    "lock": 1,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Moni": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 1,
+    "fatal": 0
+   },
+   "Bushby Mustang": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Sonerai": {
+    "rows": 2,
+    "lock": 1,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Rand KR": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 1
+   },
+   "Bede BD-10": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Rominger Eyas": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Homebuilt (Burns)": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 1,
+    "fatal": 0
+   },
+   "EAA Biplane": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Gifford TR-4": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 1,
+    "fatal": 0
+   },
+   "Aero L-39": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 1
+   },
+   "Interavia": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 1
+   },
+   "Giles": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 1
+   },
+   "Cirrus": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 1,
+    "fatal": 0
+   },
+   "Liberty XL-2": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Ackland SH-3R": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Homebuilt (One Easy)": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 1
+   },
+   "Thorp T-18": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Homebuilt (JSX-2)": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 1,
+    "fatal": 0
+   },
+   "Homebuilt (Gleim MG-1)": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "SZD": {
+    "rows": 5,
+    "lock": 1,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Microlight (other)": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 1,
+    "fatal": 0
+   },
+   "LET Blanik": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Ikarus C42": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 0
+   },
+   "Letov L-33": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 1,
+    "fatal": 0
+   },
+   "Pipistrel": {
+    "rows": 1,
+    "lock": 1,
+    "lock_climb": 1,
+    "fatal": 0
+   },
+   "XtremeAir": {
+    "rows": 1,
+    "lock": 0,
+    "lock_climb": 0,
+    "fatal": 0
+   }
+  },
+  "lock_phase_outcome": {
+   "takeoff_roll": {
+    "no_injury": 14,
+    "minor": 1,
+    "serious": 0,
+    "fatal": 0,
+    "unknown": 2
+   },
+   "initial_climb": {
+    "no_injury": 35,
+    "minor": 13,
+    "serious": 17,
+    "fatal": 9,
+    "unknown": 2
+   },
+   "cruise": {
+    "no_injury": 12,
+    "minor": 2,
+    "serious": 1,
+    "fatal": 4,
+    "unknown": 5
+   },
+   "aerobatics": {
+    "no_injury": 1,
+    "minor": 0,
+    "serious": 0,
+    "fatal": 0,
+    "unknown": 0
+   },
+   "approach": {
+    "no_injury": 3,
+    "minor": 1,
+    "serious": 0,
+    "fatal": 3,
+    "unknown": 0
+   },
+   "landing": {
+    "no_injury": 0,
+    "minor": 0,
+    "serious": 0,
+    "fatal": 0,
+    "unknown": 0
+   },
+   "unknown": {
+    "no_injury": 1,
+    "minor": 0,
+    "serious": 0,
+    "fatal": 0,
+    "unknown": 0
+   }
+  }
+ },
+ "fault_demo": [
+  {
+   "key": "ok_locked",
+   "title": "Locked, no fault",
+   "locked": true,
+   "taxi": {
+    "phase": "taxi",
+    "level": "NONE",
+    "message": "",
+    "green": true,
+    "voice": false,
+    "flashing": false
+   },
+   "takeoff": {
+    "phase": "take-off",
+    "level": "NONE",
+    "message": "",
+    "green": true,
+    "voice": false,
+    "flashing": false
+   },
+   "verdict": "correct",
+   "found_by": "—",
+   "events": [
+    [
+     0.0,
+     "power on: lamp and voice test"
+    ],
+    [
+     0.0,
+     "phase off -> self-test"
+    ],
+    [
+     4.0,
+     "phase self-test -> parked"
+    ],
+    [
+     10.0,
+     "phase parked -> taxi"
+    ],
+    [
+     20.0,
+     "phase taxi -> take-off"
+    ]
+   ]
+  },
+  {
+   "key": "ok_partial",
+   "title": "Partial lock (handle released, not pulled aft)",
+   "locked": false,
+   "taxi": {
+    "phase": "taxi",
+    "level": "CAUTION",
+    "message": "CANOPY UNLOCKED",
+    "green": false,
+    "voice": false,
+    "flashing": false
+   },
+   "takeoff": {
+    "phase": "take-off",
+    "level": "WARNING",
+    "message": "CANOPY UNLOCKED",
+    "green": false,
+    "voice": true,
+    "flashing": true
+   },
+   "verdict": "correct",
+   "found_by": "the alert",
+   "events": [
+    [
+     0.0,
+     "power on: lamp and voice test"
+    ],
+    [
+     0.0,
+     "phase off -> self-test"
+    ],
+    [
+     4.0,
+     "phase self-test -> parked"
+    ],
+    [
+     10.0,
+     "phase parked -> taxi"
+    ],
+    [
+     10.0,
+     "CAUTION CANOPY UNLOCKED (taxi)"
+    ],
+    [
+     20.0,
+     "phase taxi -> take-off"
+    ],
+    [
+     20.0,
+     "WARNING CANOPY UNLOCKED (take-off)"
+    ]
+   ]
+  },
+  {
+   "key": "rear_out",
+   "title": "Rear bolt not engaged (loose fitting)",
+   "locked": false,
+   "taxi": {
+    "phase": "taxi",
+    "level": "CAUTION",
+    "message": "CANOPY UNLOCKED",
+    "green": false,
+    "voice": false,
+    "flashing": false
+   },
+   "takeoff": {
+    "phase": "take-off",
+    "level": "WARNING",
+    "message": "CANOPY UNLOCKED",
+    "green": false,
+    "voice": true,
+    "flashing": true
+   },
+   "verdict": "correct",
+   "found_by": "the alert",
+   "events": [
+    [
+     0.0,
+     "power on: lamp and voice test"
+    ],
+    [
+     0.0,
+     "phase off -> self-test"
+    ],
+    [
+     4.0,
+     "phase self-test -> parked"
+    ],
+    [
+     10.0,
+     "phase parked -> taxi"
+    ],
+    [
+     10.0,
+     "CAUTION CANOPY UNLOCKED (taxi)"
+    ],
+    [
+     20.0,
+     "phase taxi -> take-off"
+    ],
+    [
+     20.0,
+     "WARNING CANOPY UNLOCKED (take-off)"
+    ]
+   ]
+  },
+  {
+   "key": "stuck_one",
+   "title": "Partial lock + front bolt sensor stuck ACTIVE",
+   "locked": false,
+   "taxi": {
+    "phase": "taxi",
+    "level": "CAUTION",
+    "message": "CANOPY UNLOCKED",
+    "green": false,
+    "voice": false,
+    "flashing": false
+   },
+   "takeoff": {
+    "phase": "take-off",
+    "level": "WARNING",
+    "message": "CANOPY UNLOCKED",
+    "green": false,
+    "voice": true,
+    "flashing": true
+   },
+   "verdict": "correct",
+   "found_by": "the alert (two other bolts); stuck sensor found at the next powered opening",
+   "events": [
+    [
+     0.0,
+     "power on: lamp and voice test"
+    ],
+    [
+     0.0,
+     "phase off -> self-test"
+    ],
+    [
+     4.0,
+     "phase self-test -> parked"
+    ],
+    [
+     10.0,
+     "phase parked -> taxi"
+    ],
+    [
+     10.0,
+     "CAUTION CANOPY UNLOCKED (taxi)"
+    ],
+    [
+     20.0,
+     "phase taxi -> take-off"
+    ],
+    [
+     20.0,
+     "WARNING CANOPY UNLOCKED (take-off)"
+    ]
+   ]
+  },
+  {
+   "key": "stuck_seat",
+   "title": "Partial lock + seated sensor stuck ACTIVE",
+   "locked": false,
+   "taxi": {
+    "phase": "taxi",
+    "level": "CAUTION",
+    "message": "CANOPY UNLOCKED",
+    "green": false,
+    "voice": false,
+    "flashing": false
+   },
+   "takeoff": {
+    "phase": "take-off",
+    "level": "WARNING",
+    "message": "CANOPY UNLOCKED",
+    "green": false,
+    "voice": true,
+    "flashing": true
+   },
+   "verdict": "correct",
+   "found_by": "the alert (bolt sensors)",
+   "events": [
+    [
+     0.0,
+     "power on: lamp and voice test"
+    ],
+    [
+     0.0,
+     "phase off -> self-test"
+    ],
+    [
+     4.0,
+     "phase self-test -> parked"
+    ],
+    [
+     10.0,
+     "phase parked -> taxi"
+    ],
+    [
+     10.0,
+     "CAUTION CANOPY UNLOCKED (taxi)"
+    ],
+    [
+     20.0,
+     "phase taxi -> take-off"
+    ],
+    [
+     20.0,
+     "WARNING CANOPY UNLOCKED (take-off)"
+    ]
+   ]
+  },
+  {
+   "key": "wire_break",
+   "title": "Locked + wire break on the centre bolt sensor",
+   "locked": true,
+   "taxi": {
+    "phase": "taxi",
+    "level": "CAUTION",
+    "message": "CANOPY SENS",
+    "green": false,
+    "voice": false,
+    "flashing": false
+   },
+   "takeoff": {
+    "phase": "take-off",
+    "level": "WARNING",
+    "message": "CANOPY SENS",
+    "green": false,
+    "voice": true,
+    "flashing": true
+   },
+   "verdict": "fault shown",
+   "found_by": "self-check: amber SENS, defer INOP (ML.A.403)",
+   "events": [
+    [
+     0.0,
+     "power on: lamp and voice test"
+    ],
+    [
+     0.0,
+     "phase off -> self-test"
+    ],
+    [
+     4.0,
+     "phase self-test -> parked"
+    ],
+    [
+     4.0,
+     "CAUTION CANOPY SENS (parked)"
+    ],
+    [
+     10.0,
+     "phase parked -> taxi"
+    ],
+    [
+     20.0,
+     "phase taxi -> take-off"
+    ],
+    [
+     20.0,
+     "WARNING CANOPY SENS (take-off)"
+    ]
+   ]
+  },
+  {
+   "key": "short",
+   "title": "Locked + short circuit on the seated sensor",
+   "locked": true,
+   "taxi": {
+    "phase": "taxi",
+    "level": "CAUTION",
+    "message": "CANOPY SENS",
+    "green": false,
+    "voice": false,
+    "flashing": false
+   },
+   "takeoff": {
+    "phase": "take-off",
+    "level": "WARNING",
+    "message": "CANOPY SENS",
+    "green": false,
+    "voice": true,
+    "flashing": true
+   },
+   "verdict": "fault shown",
+   "found_by": "self-check: amber SENS",
+   "events": [
+    [
+     0.0,
+     "power on: lamp and voice test"
+    ],
+    [
+     0.0,
+     "phase off -> self-test"
+    ],
+    [
+     4.0,
+     "phase self-test -> parked"
+    ],
+    [
+     4.0,
+     "CAUTION CANOPY SENS (parked)"
+    ],
+    [
+     10.0,
+     "phase parked -> taxi"
+    ],
+    [
+     20.0,
+     "phase taxi -> take-off"
+    ],
+    [
+     20.0,
+     "WARNING CANOPY SENS (take-off)"
+    ]
+   ]
+  },
+  {
+   "key": "stuck_inactive",
+   "title": "Locked + rear bolt sensor stuck INACTIVE",
+   "locked": true,
+   "taxi": {
+    "phase": "taxi",
+    "level": "CAUTION",
+    "message": "CANOPY UNLOCKED",
+    "green": false,
+    "voice": false,
+    "flashing": false
+   },
+   "takeoff": {
+    "phase": "take-off",
+    "level": "WARNING",
+    "message": "CANOPY UNLOCKED",
+    "green": false,
+    "voice": true,
+    "flashing": true
+   },
+   "verdict": "nuisance",
+   "found_by": "pilot sees handle at LOCK legend; maintenance",
+   "events": [
+    [
+     0.0,
+     "power on: lamp and voice test"
+    ],
+    [
+     0.0,
+     "phase off -> self-test"
+    ],
+    [
+     4.0,
+     "phase self-test -> parked"
+    ],
+    [
+     10.0,
+     "phase parked -> taxi"
+    ],
+    [
+     10.0,
+     "CAUTION CANOPY UNLOCKED (taxi)"
+    ],
+    [
+     20.0,
+     "phase taxi -> take-off"
+    ],
+    [
+     20.0,
+     "WARNING CANOPY UNLOCKED (take-off)"
+    ]
+   ]
+  },
+  {
+   "key": "late_rig",
+   "title": "Locked + rear bolt sensor rigged 3 mm too late",
+   "locked": true,
+   "taxi": {
+    "phase": "taxi",
+    "level": "CAUTION",
+    "message": "CANOPY UNLOCKED",
+    "green": false,
+    "voice": false,
+    "flashing": false
+   },
+   "takeoff": {
+    "phase": "take-off",
+    "level": "WARNING",
+    "message": "CANOPY UNLOCKED",
+    "green": false,
+    "voice": true,
+    "flashing": true
+   },
+   "verdict": "nuisance",
+   "found_by": "nuisance → ICA gauge test",
+   "events": [
+    [
+     0.0,
+     "power on: lamp and voice test"
+    ],
+    [
+     0.0,
+     "phase off -> self-test"
+    ],
+    [
+     4.0,
+     "phase self-test -> parked"
+    ],
+    [
+     10.0,
+     "phase parked -> taxi"
+    ],
+    [
+     10.0,
+     "CAUTION CANOPY UNLOCKED (taxi)"
+    ],
+    [
+     20.0,
+     "phase taxi -> take-off"
+    ],
+    [
+     20.0,
+     "WARNING CANOPY UNLOCKED (take-off)"
+    ]
+   ]
+  },
+  {
+   "key": "open_stuck",
+   "title": "Canopy open + centre bolt sensor stuck ACTIVE",
+   "locked": false,
+   "taxi": {
+    "phase": "taxi",
+    "level": "CAUTION",
+    "message": "CANOPY SENS",
+    "green": false,
+    "voice": false,
+    "flashing": false
+   },
+   "takeoff": {
+    "phase": "take-off",
+    "level": "WARNING",
+    "message": "CANOPY SENS",
+    "green": false,
+    "voice": true,
+    "flashing": true
+   },
+   "verdict": "fault shown",
+   "found_by": "open-canopy plausibility check: SENS",
+   "events": [
+    [
+     0.0,
+     "power on: lamp and voice test"
+    ],
+    [
+     0.0,
+     "phase off -> self-test"
+    ],
+    [
+     4.0,
+     "phase self-test -> parked"
+    ],
+    [
+     4.0,
+     "CAUTION CANOPY SENS (parked)"
+    ],
+    [
+     10.0,
+     "phase parked -> taxi"
+    ],
+    [
+     20.0,
+     "phase taxi -> take-off"
+    ],
+    [
+     20.0,
+     "WARNING CANOPY SENS (take-off)"
+    ]
+   ]
+  },
+  {
+   "key": "power_lost",
+   "title": "Locked + alert unit unpowered (CB out)",
+   "locked": true,
+   "taxi": {
+    "phase": "off",
+    "level": "NONE",
+    "message": "",
+    "green": false,
+    "voice": false,
+    "flashing": false
+   },
+   "takeoff": {
+    "phase": "off",
+    "level": "NONE",
+    "message": "",
+    "green": false,
+    "voice": false,
+    "flashing": false
+   },
+   "verdict": "dark",
+   "found_by": "checklist 'green ON' fails",
+   "events": []
+  },
+  {
+   "key": "misrig_all",
+   "title": "Partial lock + all three bolt sensors rigged 6 mm early (one wrong gauge)",
+   "locked": false,
+   "taxi": {
+    "phase": "taxi",
+    "level": "NONE",
+    "message": "",
+    "green": true,
+    "voice": false,
+    "flashing": false
+   },
+   "takeoff": {
+    "phase": "take-off",
+    "level": "NONE",
+    "message": "",
+    "green": true,
+    "voice": false,
+    "flashing": false
+   },
+   "verdict": "MISSED",
+   "found_by": "only the pilot's handle check and the ICA gauge test",
+   "events": [
+    [
+     0.0,
+     "power on: lamp and voice test"
+    ],
+    [
+     0.0,
+     "phase off -> self-test"
+    ],
+    [
+     4.0,
+     "phase self-test -> parked"
+    ],
+    [
+     10.0,
+     "phase parked -> taxi"
+    ],
+    [
+     20.0,
+     "phase taxi -> take-off"
+    ]
+   ]
+  },
+  {
+   "key": "one_bolt_stuck",
+   "title": "Rear bolt not engaged + rear bolt sensor stuck ACTIVE",
+   "locked": false,
+   "taxi": {
+    "phase": "taxi",
+    "level": "NONE",
+    "message": "",
+    "green": true,
+    "voice": false,
+    "flashing": false
+   },
+   "takeoff": {
+    "phase": "take-off",
+    "level": "NONE",
+    "message": "",
+    "green": true,
+    "voice": false,
+    "flashing": false
+   },
+   "verdict": "MISSED",
+   "found_by": "only the pilot's handle check; ICA functional test",
+   "events": [
+    [
+     0.0,
+     "power on: lamp and voice test"
+    ],
+    [
+     0.0,
+     "phase off -> self-test"
+    ],
+    [
+     4.0,
+     "phase self-test -> parked"
+    ],
+    [
+     10.0,
+     "phase parked -> taxi"
+    ],
+    [
+     20.0,
+     "phase taxi -> take-off"
+    ]
+   ]
+  }
+ ]
+}

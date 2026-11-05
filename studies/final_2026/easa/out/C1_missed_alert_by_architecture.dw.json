@@ -1,0 +1,191 @@
+{
+ "surum": 1,
+ "ad": "C1_missed_alert_by_architecture",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  842.6,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [
+   20.4
+  ],
+  "panel": [],
+  "metin": [
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "lejant": 20.4,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    358.1,
+    73.2,
+    861.6,
+    379.5
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Partial lock",
+     "tur": "hata",
+     "renk": "#000000",
+     "isaret": "Path(array([[-0.126, -1.075],\n       [ 0.   , -1.25 ],\n       [ 0.126, -1.075],\n       [ 0.774, -0.175],\n       [ 0.9  ,  0.   ],\n       [ 0.774,  0.175],\n       [ 0.126,  1.075],\n       [ 0.   ,  1.25 ],\n       [-0.126,  1.075],\n       [-0.774,  0.175],\n       [-0.9  ,  0.   ],\n       [-0.774, -0.175],\n       [-0.126, -1.075]]), array([ 1,  3,  3,  2,  3,  3,  2,  3,  3,  2,  3,  3, 79], dtype=uint8))",
+     "cizgi": null,
+     "kalinlik": 3.0,
+     "isaret_boyu": 13.43,
+     "kap": 0.0
+    },
+    {
+     "etiket": "One bolt out",
+     "tur": "hata",
+     "renk": "#7f3360",
+     "isaret": "Path(array([[-1.55884573e-01, -7.30000000e-01],\n       [-2.97650364e-16, -1.00000000e+00],\n       [ 1.55884573e-01, -7.30000000e-01],\n       [ 7.10140831e-01,  2.30000000e-01],\n       [ 8.66025404e-01,  5.00000000e-01],\n       [ 5.54256258e-01,  5.00000000e-01],\n       [-5.54256258e-01,  5.00000000e-01],\n       [-8.66025404e-01,  5.00000000e-01],\n       [-7.10140831e-01,  2.30000000e-01],\n       [-1.55884573e-01, -7.30000000e-01]]), array([ 1,  3,  3,  2,  3,  3,  2,  3,  3, 79], dtype=uint8))",
+     "cizgi": null,
+     "kalinlik": 3.0,
+     "isaret_boyu": 14.35,
+     "kap": 0.0
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Missed-alert probability",
+    "nicelik": "Missed-alert probability",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "missedalertprobability",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     1e-06,
+     2.0
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "10⁻⁷",
+     "10⁻⁶",
+     "10⁻⁵",
+     "10⁻⁴",
+     "10⁻³",
+     "10⁻²",
+     "10⁻¹",
+     "1"
+    ],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "10⁻⁷",
+     "10⁻⁶",
+     "10⁻⁵",
+     "10⁻⁴",
+     "10⁻³",
+     "10⁻²",
+     "10⁻¹",
+     "1"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     490.6,
+     3.0,
+     729.0,
+     25.3
+    ]
+   },
+   "y": {
+    "ham": "Sensor architecture",
+    "nicelik": "Sensor architecture",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "sensorarchitecture",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.332,
+     4.332
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "A0 No system (pilot check only)",
+     "A1 Seated switch only, plain contact",
+     "A2 Seated + rear bolt, self-checking",
+     "A3 Seated + all three bolts, self-checking",
+     "A4 Dual seated + dual channel per bolt"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "A0 No system (pilot check only)",
+     "A1 Seated switch only, plain contact",
+     "A2 Seated + rear bolt, self-checking",
+     "A3 Seated + all three bolts, self-checking",
+     "A4 Dual seated + dual channel per bolt"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     358.1,
+     388.7,
+     554.7,
+     411.0
+    ]
+   },
+   "lejant": [
+    "Partial lock",
+    "One bolt out"
+   ],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

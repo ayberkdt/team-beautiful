@@ -1,0 +1,303 @@
+{
+ "surum": 1,
+ "ad": "F11_entry_validation",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  838.0,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [
+   20.4
+  ],
+  "panel": [],
+  "metin": []
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "lejant": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    41.9,
+    64.7,
+    433.0,
+    377.9
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "",
+     "tur": "cizgi",
+     "renk": "#7a7a7a",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 0.8,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Pioneer Venus probes",
+     "tur": "sacilim",
+     "renk": "#56b4e9",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 10.65
+    },
+    {
+     "etiket": "Venera and Vega",
+     "tur": "sacilim",
+     "renk": "#e69f00",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 10.09
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Published peak deceleration (g)",
+    "nicelik": "Published peak deceleration",
+    "birim": "g",
+    "bicim": "parantez",
+    "anahtar": "publishedpeakdeceleration",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     110.0,
+     560.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "150",
+     "200",
+     "300",
+     "500"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     78.9,
+     3.7,
+     396.1,
+     26.8
+    ]
+   },
+   "y": {
+    "ham": "Model peak deceleration (g)",
+    "nicelik": "Model peak deceleration",
+    "birim": "g",
+    "bicim": "parantez",
+    "anahtar": "modelpeakdeceleration",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     110.0,
+     560.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "150",
+     "200",
+     "300",
+     "500"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     41.9,
+     387.3,
+     320.6,
+     410.3
+    ]
+   },
+   "lejant": [
+    "Pioneer Venus probes",
+    "Venera and Vega"
+   ],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  },
+  {
+   "konum_pt": [
+    470.4,
+    64.7,
+    861.6,
+    377.9
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "",
+     "tur": "cizgi",
+     "renk": "#7a7a7a",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 0.8,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Pioneer Venus probes",
+     "tur": "sacilim",
+     "renk": "#56b4e9",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 10.65
+    },
+    {
+     "etiket": "Venera and Vega",
+     "tur": "sacilim",
+     "renk": "#e69f00",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 10.09
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Published peak heat flux (kW/cm²)",
+    "nicelik": "Published peak heat flux",
+    "birim": "kW/cm²",
+    "bicim": "parantez",
+    "anahtar": "publishedpeakheatflux",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     2.5,
+     36.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "5",
+     "10",
+     "20"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     494.0,
+     3.0,
+     838.0,
+     26.8
+    ]
+   },
+   "y": {
+    "ham": "Model peak heat flux (kW/cm²)",
+    "nicelik": "Model peak heat flux",
+    "birim": "kW/cm²",
+    "bicim": "parantez",
+    "anahtar": "modelpeakheatflux",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     2.5,
+     36.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "5",
+     "10",
+     "20"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     470.4,
+     387.3,
+     775.9,
+     411.0
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

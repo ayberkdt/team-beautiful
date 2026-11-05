@@ -1,0 +1,176 @@
+{
+ "surum": 1,
+ "ad": "A4_autoland_fde",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  165.1,
+  2.9,
+  826.2,
+  408.6
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    207.5,
+    73.1,
+    700.2,
+    376.4
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "3° path",
+     "tur": "cizgi",
+     "renk": "#919191",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Separation FDE",
+     "tur": "cizgi",
+     "renk": "#e69f00",
+     "isaret": null,
+     "cizgi": "--",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Innovation FDE",
+     "tur": "cizgi",
+     "renk": "#56b4e9",
+     "isaret": null,
+     "cizgi": "--",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Distance to the threshold (km)",
+    "nicelik": "Distance to the threshold",
+    "birim": "km",
+    "bicim": "parantez",
+    "anahtar": "distancetothethreshold",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": true,
+    "sinir": [
+     6.120909868791932,
+     -0.4889958873200637
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "2",
+     "4",
+     "6"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     302.0,
+     2.9,
+     605.6,
+     25.2
+    ]
+   },
+   "y": {
+    "ham": "True height above the threshold (m)",
+    "nicelik": "True height above the threshold",
+    "birim": "m",
+    "bicim": "parantez",
+    "anahtar": "trueheightabovethethreshold",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     345.83170437009136
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "100",
+     "200",
+     "300"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     207.5,
+     385.5,
+     567.6,
+     408.6
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [
+    "Innovation FDE",
+    "Separation FDE"
+   ],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

@@ -1,0 +1,28 @@
+{
+  "description": "1 m × 0.1 m düzlem gerilme konsol levha (t = 1 cm), ucunda 10 kN kesme; Q8 ağ",
+  "mesh": {
+    "kind": "Q8",
+    "Lx": 1.0,
+    "Ly": 0.1,
+    "nx": 20,
+    "ny": 2,
+    "format": "stress",
+    "t": 0.01,
+    "material": "6061-T6"
+  },
+  "edge_fixed": {
+    "left": [
+      0,
+      1
+    ]
+  },
+  "edge_load": {
+    "right": {
+      "traction": [
+        0,
+        -10000000.0
+      ]
+    }
+  },
+  "analysis": "static"
+}

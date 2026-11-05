@@ -1,0 +1,7 @@
+figür denetimi: 0 HATA · 1 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR
+  [UYARI] kontrast           eksen 0: 1 işaret rengi zemine (#fafaf7) karşı düşük kontrastlı; en kötü #cc79a7 2.93:1 (< 3.0:1)
+          → koyu ton (dw.renk.koyu_ton), zemine ≥ 3:1 kenar (edgecolors=…, path_effects) ya da doğrudan etiket  [WCAG22 SC 1.4.11 (grafik nesneleri 3:1); HATA eşiği 1.5:1 datawiz-secimi (zeminden ayırt edilemeyen işaret); kenar (edgecolor/path_effects) ya da doğrudan etiket varsa 3:1 şartı sağlanmış sayılır]
+  [BİLGİ] dogrudan-etiket    eksen 0: 4 çizgi serisi lejantla adlandırılmış
+          → çizgi sonlarına doğrudan etiket: datawiz.etiket.cizgi_sonu(ax)  [Mayer2017 mekânsal bitişiklik d=0.79; Sweller2019]
+  [BİLGİ] banking-45         eksen 0: çizim alanı y/g = 0.37; 45° için ≈ 0.93
+          → eğim karşılaştırması amaçsa oranı yaklaştır (ax.set_box_aspect)  [Kosara2013b]

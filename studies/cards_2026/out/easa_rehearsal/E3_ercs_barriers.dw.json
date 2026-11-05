@@ -1,0 +1,177 @@
+{
+ "surum": 1,
+ "ad": "E3_ercs_barriers",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  2.2,
+  2.3,
+  636.0,
+  407.9
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   20.4,
+   24.0
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 24.0
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    245.5,
+    72.6,
+    662.7,
+    376.4
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Held",
+     "tur": "cubuk",
+     "renk": "#009e73",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Failed",
+     "tur": "cubuk",
+     "renk": "#d55e00",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Barrier weight",
+    "nicelik": "Barrier weight",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "barrierweight",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     6.5
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "2",
+     "4",
+     "6"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     383.1,
+     2.3,
+     525.2,
+     24.6
+    ]
+   },
+   "y": {
+    "ham": "ERCS barrier",
+    "nicelik": "ERCS barrier",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "ercsbarrier",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.5975,
+     7.5975
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "design",
+     "tactical planning",
+     "regulations and procedures",
+     "situational awareness",
+     "warning systems",
+     "late recovery",
+     "protections",
+     "low energy"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "design",
+     "tactical planning",
+     "regulations and procedures",
+     "situational awareness",
+     "warning systems",
+     "late recovery",
+     "protections",
+     "low energy"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     245.5,
+     385.6,
+     371.4,
+     407.9
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

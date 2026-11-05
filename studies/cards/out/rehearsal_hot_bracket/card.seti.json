@@ -1,0 +1,112 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "sunum",
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {
+  "AlSi10Mg TO + AM": {
+   "renk": "#0072b2",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 0
+  },
+  "2618-T61 TO + machined": {
+   "renk": "#d55e00",
+   "baglam": false,
+   "isaret": "s",
+   "cizgi": "--",
+   "sira": 1
+  },
+  "7075-T6 TO + machined": {
+   "renk": "#009e73",
+   "baglam": false,
+   "isaret": "^",
+   "cizgi": "-.",
+   "sira": 2
+  },
+  "Ti-6Al-4V TO + AM": {
+   "renk": "#cc79a7",
+   "baglam": false,
+   "isaret": "D",
+   "cizgi": ":",
+   "sira": 3
+  },
+  "Inconel 718 TO + AM": {
+   "renk": "#e69f00",
+   "baglam": false,
+   "isaret": "v",
+   "cizgi": [
+    0,
+    [
+     5,
+     1
+    ]
+   ],
+   "sira": 4
+  }
+ },
+ "nicelikler": {
+  "defl": {
+   "etiket": "Tip deflection at limit load",
+   "birim": "mm",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "util": {
+   "etiket": "Utilisation of the governing check",
+   "birim": "–",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "mass": {
+   "etiket": "Part mass",
+   "birim": "g",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "co2": {
+   "etiket": "Life-cycle CO₂",
+   "birim": "t",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "material": {
+   "etiket": "Material",
+   "birim": "–",
+   "eksen": "serbest",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "S1_mass_utilisation": "S1_mass_utilisation.dw.json",
+  "S2_life_co2": "S2_life_co2.dw.json",
+  "S3_designs": "S3_designs.dw.json"
+ },
+ "kenar_mm": {
+  "tam": [
+   77.9,
+   25.8,
+   93.9,
+   20.4
+  ]
+ }
+}

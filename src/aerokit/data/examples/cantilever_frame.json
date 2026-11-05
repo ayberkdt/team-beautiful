@@ -1,0 +1,86 @@
+{
+  "description": "2 m konsol kiriş, uç yükü 1 kN; beklenen uç çökmesi PL³/3EI",
+  "ndof": 3,
+  "nodes": [
+    [
+      0,
+      0
+    ],
+    [
+      0.5,
+      0
+    ],
+    [
+      1.0,
+      0
+    ],
+    [
+      1.5,
+      0
+    ],
+    [
+      2.0,
+      0
+    ]
+  ],
+  "elements": [
+    {
+      "kind": "Frame2D",
+      "nodes": [
+        0,
+        1
+      ],
+      "material": "7075-T6",
+      "A": 0.001,
+      "I": 2e-06
+    },
+    {
+      "kind": "Frame2D",
+      "nodes": [
+        1,
+        2
+      ],
+      "material": "7075-T6",
+      "A": 0.001,
+      "I": 2e-06
+    },
+    {
+      "kind": "Frame2D",
+      "nodes": [
+        2,
+        3
+      ],
+      "material": "7075-T6",
+      "A": 0.001,
+      "I": 2e-06
+    },
+    {
+      "kind": "Frame2D",
+      "nodes": [
+        3,
+        4
+      ],
+      "material": "7075-T6",
+      "A": 0.001,
+      "I": 2e-06
+    }
+  ],
+  "fixed": [
+    {
+      "node": 0,
+      "dof": [
+        0,
+        1,
+        2
+      ]
+    }
+  ],
+  "loads": [
+    {
+      "node": 4,
+      "dof": 1,
+      "value": -1000
+    }
+  ],
+  "analysis": "static"
+}

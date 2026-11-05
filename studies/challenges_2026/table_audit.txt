@@ -1,0 +1,13 @@
+[venus_atmosphere] [UYARI] 'Pressure': değerler 3 mertebeye yayılıyor; tek ondalıkla ya küçükler ezilir ya büyükler gereksiz basamak taşır. Birimi ayır (ms / s), bilimsel gösterime geç ya da ayrı sütun yap (Ehrenberg1977 kural 1); [UYARI] 'Pressure': sütunda farklı ondalık sayıları [1, 2, 3] (Wilke2019 W7; APA2020); [UYARI] 'Density': 3 ondalık var; etkin basamak önerisi 0 (Ehrenberg1977 kural 1); [UYARI] 'Density': sütunda farklı ondalık sayıları [1, 2, 3] (Wilke2019 W7; APA2020); [UYARI] 'Gravity': sütunda farklı ondalık sayıları [1, 2] (Wilke2019 W7; APA2020); [UYARI] 'Density vs Earth SL': 2 ondalık var; etkin basamak önerisi 0 (Ehrenberg1977 kural 1); [UYARI] 'Density vs Earth SL': sütunda farklı ondalık sayıları [1, 2] (Wilke2019 W7; APA2020)
+[venus_buoyancy] no findings
+[venus_hover] [UYARI] 'Density': 3 ondalık var; etkin basamak önerisi 0 (Ehrenberg1977 kural 1); [UYARI] 'Density': sütunda farklı ondalık sayıları [2, 3] (Wilke2019 W7; APA2020)
+[venus_multirotor] no findings
+[venus_aeroplane] no findings
+[approach_descent] no findings
+[approach_cold] no findings
+[approach_radar_angle] [UYARI] 'Angle error': sütunda farklı ondalık sayıları [1, 2] (Wilke2019 W7; APA2020)
+[approach_montecarlo] no findings
+[approach_cda] no findings
+[debris] [UYARI] 'Ballistic coefficient': değerler 4 mertebeye yayılıyor; tek ondalıkla ya küçükler ezilir ya büyükler gereksiz basamak taşır. Birimi ayır (ms / s), bilimsel gösterime geç ya da ayrı sütun yap (Ehrenberg1977 kural 1)
+[search_radius] [UYARI] 'Radius': sütunda farklı ondalık sayıları [1, 2] (Wilke2019 W7; APA2020); [UYARI] 'Area': değerler 4 mertebeye yayılıyor; tek ondalıkla ya küçükler ezilir ya büyükler gereksiz basamak taşır. Birimi ayır (ms / s), bilimsel gösterime geç ya da ayrı sütun yap (Ehrenberg1977 kural 1)
+[glide] no findings

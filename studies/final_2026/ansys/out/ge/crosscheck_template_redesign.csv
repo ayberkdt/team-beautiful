@@ -1,0 +1,12 @@
+metric,unit,ours,ansys,description
+mass_kg,kg,2.07265,,"part mass (geometry × density) (tolerance ±2 %) initial, in718_lpbf"
+volume_mm3,mm3,254313,,"part volume (tolerance ±2 %) initial, in718_lpbf"
+max_deformation_mm,mm,0.68321,,"maximum total deformation (worst load case) (tolerance ±10 %) initial, in718_lpbf"
+load_point_deformation_mm,mm,0.48184,,"mean deformation of the loaded bore (probe: average over the bore face) (tolerance ±10 %) initial, in718_lpbf"
+strain_energy_J,J,8.23595,,"strain energy = compliance / 2 (worst load case) (tolerance ±10 %) initial, in718_lpbf"
+compliance_J,J,16.4719,,"compliance F·u (worst load case) (tolerance ±10 %) initial, in718_lpbf"
+max_von_mises_MPa,MPa,1070.16,,"maximum equivalent stress anywhere (singular at supports: loose) (tolerance ±25 %) initial, in718_lpbf"
+von_mises_outside_MPa,MPa,1070.16,,"maximum equivalent stress outside the support/load zones (tolerance ±15 %) initial, in718_lpbf"
+min_safety_factor,-,1.02399,,"minimum safety factor (yield at temperature / von Mises) (tolerance ±15 %) initial, in718_lpbf"
+retained_volume_fraction,-,1,,"topology: retained volume / design-space volume (tolerance ±5 %) initial, in718_lpbf"
+reaction_force_N,N,42258.1,,"sum of support reactions (equals the applied load) (tolerance ±1 %) initial, in718_lpbf"

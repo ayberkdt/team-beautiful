@@ -1,0 +1,5 @@
+set tutarlılığı (4 figür): 0 HATA · 1 UYARI · 1 BİLGİ · SET TUTARLI
+  [UYARI] izgara             izgara figürden figüre değişiyor — değer: V1_power_altitude, V2_environment, V4_mission · kategori: V3_station_keeping
+          → aynı tema her figürde: Seti.figur(...)  [06 T6: AIAAFig; ElsevierSizing; Kosslyn2012 (anlamsız görsel değişim)]
+  [BİLGİ] nicelik-aralik     'altitude' (y) aralığı figürden figüre farklı — 45…70: V1_power_altitude · 0…80: V2_environment · 47…56: V4_mission
+          → figürler karşılaştırılacaksa ortak sınır: Seti.nicelik(ad, sinir=(a, b))  [06 T5 + §7a: Wilke2019Ch21 §21.1; UrbanStyle; Qu2018 C1.1; mekanizma (tek grafik, dolaylı): Correll2020, Witt2019 — dar aralık aynı etkiyi büyük gösterir; serbest/ortak ölçek deneyi yok]

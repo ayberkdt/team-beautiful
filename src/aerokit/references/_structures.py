@@ -1,0 +1,98 @@
+"""References specific to aerokit.structures (owned by that sub-package).
+
+Only bibliographic details the author was confident of are recorded; uncertain page ranges, DOIs
+and URLs are deliberately left out. Shared works (Timoshenko, Shigley, Bruhn, Dowling, Tada-Paris-Irwin,
+NASA SP-8007, Ramberg-Osgood, ...) live in :mod:`aerokit.references._core`.
+"""
+from aerokit.references import Reference
+
+REFERENCES: tuple[Reference, ...] = (
+    # --- plate stability, crippling, thin-walled beams -----------------------------------------
+    Reference("gerard_becker_1957", "G. Gerard, H. Becker", 1957,
+              "Handbook of Structural Stability, Part I: Buckling of Flat Plates", "NACA TN 3781",
+              note="plate buckling coefficients (Table 7), plasticity factors (Table 2), interaction (Table 5)"),
+    Reference("gerard_1957", "G. Gerard", 1957,
+              "Handbook of Structural Stability, Part IV: Failure of Plates and Composite Elements", "NACA TN 3784",
+              note="crippling of angles, Z/channel and multi-corner sections, Eqs. (67)-(75)"),
+    Reference("vlasov_1961", "V. Z. Vlasov", 1961, "Thin-Walled Elastic Beams",
+              "Israel Program for Scientific Translations, Jerusalem", "2nd ed.",
+              note="sectorial coordinates, shear centre, warping constant"),
+    Reference("megson_2007", "T. H. G. Megson", 2007, "Aircraft Structures for Engineering Students",
+              "Butterworth-Heinemann, Oxford", "4th ed.",
+              note="boom idealisation and shear flow, Examples 20.1-20.3 and 21.2"),
+    Reference("bredt_1896", "R. Bredt", 1896, "Kritische Bemerkungen zur Drehungselastizität",
+              "Zeitschrift des Vereines Deutscher Ingenieure 40", note="closed thin-walled section, q = T/(2A)"),
+    Reference("sutherland_hodgman_1974", "I. E. Sutherland, G. W. Hodgman", 1974, "Reentrant polygon clipping",
+              "Communications of the ACM 17(1):32-42", note="half-plane clipping for the plastic modulus"),
+    # --- contact ---------------------------------------------------------------------------------
+    Reference("hertz_1882", "H. Hertz", 1882, "Über die Berührung fester elastischer Körper",
+              "Journal für die reine und angewandte Mathematik 92:156-171"),
+    Reference("johnson_1985", "K. L. Johnson", 1985, "Contact Mechanics", "Cambridge University Press, Cambridge",
+              note="Hertz contact, Ch. 4; elliptical contact, Sec. 3.4"),
+    # --- pressure vessels, rotating parts --------------------------------------------------------
+    Reference("hill_1950", "R. Hill", 1950, "The Mathematical Theory of Plasticity", "Clarendon Press, Oxford",
+              note="elastic-perfectly plastic thick cylinder (autofrettage), Ch. V"),
+    Reference("timoshenko_1956", "S. Timoshenko", 1956,
+              "Strength of Materials, Part II: Advanced Theory and Problems",
+              "Van Nostrand, Princeton NJ", "3rd ed.", note="thick cylinders, rotating rings and disks"),
+    Reference("robinson_1944", "E. Robinson", 1944, "Bursting tests of steam-turbine disk wheels",
+              "Transactions of the ASME 66", note="average hoop stress burst criterion"),
+    Reference("nafems_nbc08_2017", "NAFEMS", 2017, "NBC08: Calculation of the Hoop Burst Speed for Rotating Discs",
+              "NAFEMS benchmark challenge", note="average-hoop-stress burst speed benchmark"),
+    # --- fatigue ---------------------------------------------------------------------------------
+    Reference("basquin_1910", "O. H. Basquin", 1910, "The exponential law of endurance tests",
+              "Proceedings of the ASTM 10"),
+    Reference("coffin_1954", "L. F. Coffin Jr.", 1954,
+              "A study of the effects of cyclic thermal stresses on a ductile metal", "Transactions of the ASME 76"),
+    Reference("manson_1953", "S. S. Manson", 1953, "Behavior of materials under conditions of thermal stress",
+              "NACA TN 2933"),
+    Reference("morrow_1968", "J. Morrow", 1968, "Fatigue properties of metals",
+              "Sec. 3.2 of Fatigue Design Handbook, Society of Automotive Engineers",
+              note="mean-stress correction of the elastic strain-life term"),
+    Reference("smith_watson_topper_1970", "K. N. Smith, P. Watson, T. H. Topper", 1970,
+              "A stress-strain function for the fatigue of metals", "Journal of Materials 5(4)"),
+    Reference("walker_1970", "K. Walker", 1970,
+              "The effect of stress ratio during crack propagation and fatigue for 2024-T3 and 7075-T6 aluminum",
+              "ASTM STP 462, ASTM, Philadelphia", note="equivalent stress / effective ΔK with exponent γ"),
+    Reference("astm_e1049_1985", "ASTM", 1985,
+              "ASTM E1049-85: Standard Practices for Cycle Counting in Fatigue Analysis",
+              "ASTM, Philadelphia", note="rainflow counting, Sec. 5.4.4"),
+    Reference("palmgren_1924", "A. Palmgren", 1924, "Die Lebensdauer von Kugellagern",
+              "Zeitschrift des Vereines Deutscher Ingenieure 68"),
+    Reference("miner_1945", "M. A. Miner", 1945, "Cumulative damage in fatigue", "Journal of Applied Mechanics 12(3)"),
+    Reference("neuber_1961", "H. Neuber", 1961, "Theory of stress concentration for shear-strained prismatical bodies "
+              "with arbitrary nonlinear stress-strain law", "Journal of Applied Mechanics 28(4)"),
+    Reference("inglis_1913", "C. E. Inglis", 1913,
+              "Stresses in a plate due to the presence of cracks and sharp corners",
+              "Transactions of the Institution of Naval Architects 55"),
+    Reference("heywood_1952", "R. B. Heywood", 1952, "Designing by Photoelasticity", "Chapman & Hall, London"),
+    Reference("howland_1930", "R. C. J. Howland", 1930,
+              "On the stresses in the neighbourhood of a circular hole in a strip under tension",
+              "Philosophical Transactions of the Royal Society of London A 229"),
+    # --- fracture --------------------------------------------------------------------------------
+    Reference("paris_erdogan_1963", "P. Paris, F. Erdogan", 1963, "A critical analysis of crack propagation laws",
+              "Journal of Basic Engineering 85(4)"),
+    Reference("forman_kearney_1967", "R. G. Forman, V. E. Kearney, R. M. Engle", 1967,
+              "Numerical analysis of crack propagation in cyclic-loaded structures",
+              "Journal of Basic Engineering 89(3)"),
+    Reference("gross_srawley_1964", "B. Gross, J. E. Srawley, W. F. Brown Jr.", 1964,
+              "Stress-intensity factors for a single-edge-notch tension specimen by boundary collocation of a "
+              "stress function", "NASA TN D-2395"),
+    Reference("brown_srawley_1966", "W. F. Brown Jr., J. E. Srawley", 1966,
+              "Plane Strain Crack Toughness Testing of High Strength Metallic Materials",
+              "ASTM STP 410, ASTM, Philadelphia",
+              note="polynomial fit to Isida's centre-crack solution"),
+    Reference("feddersen_1966", "C. E. Feddersen", 1966, "Discussion (finite-width secant correction)",
+              "in ASTM STP 410, ASTM, Philadelphia", note="Y = √sec(πa/W) for a centre crack"),
+    # --- joints ----------------------------------------------------------------------------------
+    Reference("nasa_std5020b_2021", "NASA", 2021,
+              "NASA-STD-5020B: Requirements for Threaded Fastening Systems in Spaceflight Hardware",
+              "NASA, Washington DC",
+              note="preload, joint stiffness factor, separation and tension-shear interaction"),
+    Reference("huth_1986", "H. Huth", 1986, "Influence of fastener flexibility on the prediction of load transfer and "
+              "fatigue life for multiple-row joints", "ASTM STP 927, ASTM, Philadelphia"),
+    Reference("swift_1971", "T. Swift", 1971, "Development of the fail-safe design features of the DC-10",
+              "ASTM STP 486, ASTM, Philadelphia", note="fastener flexibility formula"),
+    Reference("wileman_choudhury_1991", "J. Wileman, M. Choudhury, I. Green", 1991,
+              "Computation of member stiffness in bolted connections", "Journal of Mechanical Design 113(4)"),
+)

@@ -1,0 +1,5 @@
+figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] birim              eksen 0: x etiketi birim içermiyor: 'Barrier weight'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [Kosslyn2012; TufteNotebookPP (birimler kaybolmasın)]
+  [BİLGİ] birim              eksen 0: y etiketi birim içermiyor: 'ERCS barrier'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [Kosslyn2012; TufteNotebookPP (birimler kaybolmasın)]

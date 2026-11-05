@@ -1,0 +1,212 @@
+{
+  "description": "Warren kafes köprü, 4 göz × 2 m, yükseklik 1.5 m; alt düğümlerde 10 kN",
+  "ndof": 2,
+  "nodes": [
+    [
+      0,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      6,
+      0
+    ],
+    [
+      8,
+      0
+    ],
+    [
+      1,
+      1.5
+    ],
+    [
+      3,
+      1.5
+    ],
+    [
+      5,
+      1.5
+    ],
+    [
+      7,
+      1.5
+    ]
+  ],
+  "elements": [
+    {
+      "kind": "Bar",
+      "nodes": [
+        0,
+        1
+      ],
+      "material": "6061-T6",
+      "A": 0.0008
+    },
+    {
+      "kind": "Bar",
+      "nodes": [
+        1,
+        2
+      ],
+      "material": "6061-T6",
+      "A": 0.0008
+    },
+    {
+      "kind": "Bar",
+      "nodes": [
+        2,
+        3
+      ],
+      "material": "6061-T6",
+      "A": 0.0008
+    },
+    {
+      "kind": "Bar",
+      "nodes": [
+        3,
+        4
+      ],
+      "material": "6061-T6",
+      "A": 0.0008
+    },
+    {
+      "kind": "Bar",
+      "nodes": [
+        5,
+        6
+      ],
+      "material": "6061-T6",
+      "A": 0.0008
+    },
+    {
+      "kind": "Bar",
+      "nodes": [
+        6,
+        7
+      ],
+      "material": "6061-T6",
+      "A": 0.0008
+    },
+    {
+      "kind": "Bar",
+      "nodes": [
+        7,
+        8
+      ],
+      "material": "6061-T6",
+      "A": 0.0008
+    },
+    {
+      "kind": "Bar",
+      "nodes": [
+        0,
+        5
+      ],
+      "material": "6061-T6",
+      "A": 0.0008
+    },
+    {
+      "kind": "Bar",
+      "nodes": [
+        5,
+        1
+      ],
+      "material": "6061-T6",
+      "A": 0.0008
+    },
+    {
+      "kind": "Bar",
+      "nodes": [
+        1,
+        6
+      ],
+      "material": "6061-T6",
+      "A": 0.0008
+    },
+    {
+      "kind": "Bar",
+      "nodes": [
+        6,
+        2
+      ],
+      "material": "6061-T6",
+      "A": 0.0008
+    },
+    {
+      "kind": "Bar",
+      "nodes": [
+        2,
+        7
+      ],
+      "material": "6061-T6",
+      "A": 0.0008
+    },
+    {
+      "kind": "Bar",
+      "nodes": [
+        7,
+        3
+      ],
+      "material": "6061-T6",
+      "A": 0.0008
+    },
+    {
+      "kind": "Bar",
+      "nodes": [
+        3,
+        8
+      ],
+      "material": "6061-T6",
+      "A": 0.0008
+    },
+    {
+      "kind": "Bar",
+      "nodes": [
+        8,
+        4
+      ],
+      "material": "6061-T6",
+      "A": 0.0008
+    }
+  ],
+  "fixed": [
+    {
+      "node": 0,
+      "dof": [
+        0,
+        1
+      ]
+    },
+    {
+      "node": 4,
+      "dof": [
+        1
+      ]
+    }
+  ],
+  "loads": [
+    {
+      "node": 1,
+      "dof": 1,
+      "value": -10000.0
+    },
+    {
+      "node": 2,
+      "dof": 1,
+      "value": -10000.0
+    },
+    {
+      "node": 3,
+      "dof": 1,
+      "value": -10000.0
+    }
+  ],
+  "analysis": "static"
+}

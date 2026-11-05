@@ -1,0 +1,227 @@
+{
+  "_about": "Inputs of scripts/canopy_day.py. Every number carries its source and tag: [D] read by the main session, [D-ag] read by a subagent (note file named), [Y] our assumption (swept in the study). Edit here, not in the script.",
+  "aircraft": {
+    "value": "Extra NG",
+    "source": "AAIB-28120 pp. 7-10",
+    "tag": "D"
+  },
+  "n_samples": 200000,
+  "seed": 2026,
+  "rates": {
+    "stuck_active_per_h": {
+      "value": 1.7334e-07,
+      "source": "dangerous rate; exida FMEDA report P+F 03/11-10 R015 v1 r1.1 (2004) Table 2 p.3: inductive NAMUR sensor NJ 5-30GK-S1N 15.4 FIT safe / 9.63 FIT dangerous, SN 29500 basis [D, read by main session]; x18 = MIL-HDBK-217F N2 switch pi_E AIF/GB (p.14-2) [D-ag, R4_sensor_failure_rates.md] as an airborne-environment factor [Y]",
+      "tag": "D+Y"
+    },
+    "stuck_inactive_per_h": {
+      "value": 1.3859999999999998e-07,
+      "source": "half of the safe rate (split [Y]); exida FMEDA report P+F 03/11-10 R015 v1 r1.1 (2004) Table 2 p.3: inductive NAMUR sensor NJ 5-30GK-S1N 15.4 FIT safe / 9.63 FIT dangerous, SN 29500 basis [D, read by main session]; x18 = MIL-HDBK-217F N2 switch pi_E AIF/GB (p.14-2) [D-ag, R4_sensor_failure_rates.md] as an airborne-environment factor [Y]",
+      "tag": "D+Y"
+    },
+    "open_per_h": {
+      "value": 1.3859999999999998e-07,
+      "source": "other half of the safe rate: output < 1.2 mA = detected by the line-monitoring input; exida FMEDA report P+F 03/11-10 R015 v1 r1.1 (2004) Table 2 p.3: inductive NAMUR sensor NJ 5-30GK-S1N 15.4 FIT safe / 9.63 FIT dangerous, SN 29500 basis [D, read by main session]; x18 = MIL-HDBK-217F N2 switch pi_E AIF/GB (p.14-2) [D-ag, R4_sensor_failure_rates.md] as an airborne-environment factor [Y]",
+      "tag": "D+Y"
+    },
+    "short_per_h": {
+      "value": 0.0,
+      "source": "included in the safe/dangerous totals above",
+      "tag": "Y"
+    },
+    "flight_h": {
+      "value": 1.0,
+      "source": "G-MIIL accident flight 1037-1058 UTC = 0.35 h (AAIB p. 5); 1 h taken as a round typical sortie",
+      "tag": "Y"
+    },
+    "latent_interval_h": {
+      "value": 100.0,
+      "source": "functional check at the 100 h / annual inspection (ICA proposal); the open-canopy plausibility check usually finds a stuck bolt sensor much sooner",
+      "tag": "Y"
+    }
+  },
+  "tolerance": {
+    "trip_mm": {
+      "value": 68.0,
+      "source": "chosen inside the trip window computed in this study (C2)",
+      "tag": "Y"
+    },
+    "sigma_trip_mm": {
+      "value": 0.3,
+      "source": "rigging + wear + switch differential; to be measured at the bench test (step 8)",
+      "tag": "Y"
+    },
+    "sigma_full_mm": {
+      "value": 0.3,
+      "source": "scatter of the fully-locked handle position; to be measured",
+      "tag": "Y"
+    },
+    "hazard_below_mm": {
+      "value": 67.0,
+      "source": "bolts < 70 % of the 60->70 mm travel counted as hazardous; AAIB gives only the two end states 60/70 mm (p. 9)",
+      "tag": "Y"
+    },
+    "p_misrig_common": {
+      "value": 0.001,
+      "source": "per flight: all bolt sensors set up wrong together (wrong gauge, bracket set-up error), latent until the next functional check; no data, swept",
+      "tag": "Y"
+    },
+    "misrig_shift_mm": {
+      "value": -5.0,
+      "source": "trip point 5 mm early = halfway between partial (60) and full (70) lock: partial locks read LOCKED",
+      "tag": "Y"
+    }
+  },
+  "exposure": {
+    "p_hazard": {
+      "partial": {
+        "value": 0.001,
+        "source": "per flight = omission of the step 'pull aft handle fully rearward': NUREG/CR-1278 Table 20-7 per-item omission HEP 0.001 (short list, checkoff used) ... 0.01 (long list, no checkoff), 0.05 (procedure not used) [D, R0_NUREG_CR-1278_omission_HEPs.md]; central 1e-3, swept 1e-4..5e-2",
+        "tag": "D+Y"
+      },
+      "one_bolt": {
+        "value": 0.0001,
+        "source": "per flight; SP-HMM loose rear fitting (AAIB p. 23) shows it exists; rate unknown",
+        "tag": "Y"
+      },
+      "unseated": {
+        "value": 0.0001,
+        "source": "per flight; rate unknown",
+        "tag": "Y"
+      }
+    },
+    "p_pilot_miss": {
+      "partial": {
+        "value": 0.5,
+        "source": "AAIB p. 20: no observable visual difference at the frame; only the handle position (green marking, POH rev. 1.11) shows it",
+        "tag": "Y"
+      },
+      "one_bolt": {
+        "value": 0.9,
+        "source": "bolts hidden from view (AAIB p. 10); handle may still be at the end stop",
+        "tag": "Y"
+      },
+      "unseated": {
+        "value": 0.05,
+        "source": "an unseated canopy is visible and noisy",
+        "tag": "Y"
+      }
+    },
+    "p_nuisance": {
+      "value": 0.0003,
+      "source": "per flight, nuisance alerts outside the channel model (intermittent connector, contamination, sensor knocked late); AC 25.1322-1 App. 5 separates false and nuisance alerts [D-ag, R4]; value no data, swept in C3",
+      "tag": "Y"
+    }
+  },
+  "compliance_floor": {
+    "value": 0.0,
+    "source": "probability matching without floor (worst case)",
+    "tag": "Y"
+  },
+  "rate_sets": {
+    "_about": "Sensitivity: same study with other per-channel rates (A3 only).",
+    "microswitch_mil_aif": {
+      "stuck_active_per_h": {
+        "value": 4.41e-06,
+        "source": "MIL-HDBK-217F N2 sec. 14.1 snap-action lambda_b 0.49e-6/h x pi_E AIF 18 x pi_Q 1 (pi_L, pi_C = 1 assumed); 50/50 mode split [Y]",
+        "tag": "D-ag+Y"
+      },
+      "stuck_inactive_per_h": {
+        "value": 2.205e-06,
+        "source": "as above, 25 %",
+        "tag": "D-ag+Y"
+      },
+      "open_per_h": {
+        "value": 2.205e-06,
+        "source": "as above, 25 % (wire/contact open, detected by SPDT complementary coding)",
+        "tag": "D-ag+Y"
+      },
+      "short_per_h": {
+        "value": 0.0,
+        "source": "-",
+        "tag": "Y"
+      }
+    },
+    "limit_switch_mil_aif": {
+      "stuck_active_per_h": {
+        "value": 3.8700000000000006e-05,
+        "source": "MIL-HDBK-217F N2 sec. 14.1 limit switch lambda_b 4.3e-6/h x pi_E AIF 18; 50/50 split [Y]",
+        "tag": "D-ag+Y"
+      },
+      "stuck_inactive_per_h": {
+        "value": 1.9350000000000003e-05,
+        "source": "as above, 25 %",
+        "tag": "D-ag+Y"
+      },
+      "open_per_h": {
+        "value": 1.9350000000000003e-05,
+        "source": "as above, 25 %",
+        "tag": "D-ag+Y"
+      },
+      "short_per_h": {
+        "value": 0.0,
+        "source": "-",
+        "tag": "Y"
+      }
+    },
+    "worst_case_x100": {
+      "stuck_active_per_h": {
+        "value": 1.7334e-05,
+        "source": "base x100 (stress test)",
+        "tag": "Y"
+      },
+      "stuck_inactive_per_h": {
+        "value": 1.386e-05,
+        "source": "base x100",
+        "tag": "Y"
+      },
+      "open_per_h": {
+        "value": 1.386e-05,
+        "source": "base x100",
+        "tag": "Y"
+      },
+      "short_per_h": {
+        "value": 0.0,
+        "source": "-",
+        "tag": "Y"
+      }
+    }
+  },
+  "targets": {
+    "_about": "AC 23.1309-1E Fig. 2 p.23, Class I, per flight hour [D-ag, R4]: probability ceilings by failure-condition class",
+    "minor": 0.001,
+    "major": 0.0001,
+    "hazardous": 1e-05,
+    "catastrophic": 1e-06
+  },
+  "options": {
+    "plus_misrig_factor": {
+      "value": 0.1,
+      "source": "LOCK-SENSE Plus: an independent analog channel learns the full-lock position every flight and flags disagreement with the switching channel, so a common gauge error must also fool the self-calibration; factor is our assumption, swept qualitatively",
+      "tag": "Y"
+    },
+    "powerlock_partial_factor": {
+      "value": 0.1,
+      "source": "Powered over-centre lock: the omission 'handle not pulled fully aft' (NUREG/CR-1278 0.001/step) is replaced by actuator failure to complete the stroke; factor is our assumption",
+      "tag": "Y"
+    }
+  },
+  "complacency": {
+    "p_pilot_miss_with_system": {
+      "partial": {
+        "value": 0.9,
+        "source": "jury question Q2: after many flights of 'green', pilots stop pulling to the end stop; Dismukes & Berman 2010 found 14 % of checklist deviations caught [D-ag]; value is our assumption",
+        "tag": "Y"
+      },
+      "one_bolt": {
+        "value": 0.99,
+        "source": "as above",
+        "tag": "Y"
+      },
+      "unseated": {
+        "value": 0.2,
+        "source": "an unseated canopy stays visible and noisy",
+        "tag": "Y"
+      }
+    }
+  }
+}

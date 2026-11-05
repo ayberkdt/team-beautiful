@@ -1,0 +1,20 @@
+{
+ "meta": {
+  "voxel_mm": 6.2,
+  "origin_mm": [
+   170.0,
+   30.0,
+   30.0
+  ],
+  "grid": [
+   107,
+   56,
+   47
+  ],
+  "order": "[x][y][z], z up, origin = corner of voxel (0,0,0)",
+  "outside_part": 0.0,
+  "case": "initial_exact",
+  "snapshots": "chosen run only: runs[i].snapshots = [{iteration, density}] (raw physical density, before the connectivity clean-up of the final layout)"
+ },
+ "runs": []
+}

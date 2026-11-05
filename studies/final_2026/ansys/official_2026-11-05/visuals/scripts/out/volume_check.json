@@ -1,0 +1,53 @@
+{
+ "exact_brep_volume_mm3": 19397542.3376211,
+ "exact_brep_volume_m3": 0.0193975423376211,
+ "exact_mass_kg_at_7850": 152.27070735032564,
+ "reference_m3_boundary_conditions_md": 0.0194,
+ "facet_stl_volume_mm3_recomputed": 19399664.0,
+ "facet_stl_triangles": 2098,
+ "diff_vs_0.019400_pct": -0.012668362777833779,
+ "diff_vs_facet_stl_recomputed_pct": -0.010936593432235492,
+ "display_stl_volume_mm3": 19397378.0,
+ "display_stl_triangles": 129088,
+ "display_stl_vs_brep_pct": -0.0008472084671340954,
+ "bbox_brep_mm": [
+  [
+   169.99999985,
+   29.99999985,
+   29.99999985
+  ],
+  [
+   831.01000015,
+   371.12000015,
+   321.37000015
+  ]
+ ],
+ "bbox_facet_stl_mm": [
+  [
+   170.0,
+   30.0,
+   30.0
+  ],
+  [
+   831.0051879882812,
+   371.1222839355469,
+   321.3727111816406
+  ]
+ ],
+ "n_brep_faces": 28,
+ "flank_angle_deg_right": 80.18101156858972,
+ "flank_angle_deg_left": 80.14965594207983,
+ "flank_normal_right": [
+  0.9853514351289646,
+  0.1705360644828238
+ ],
+ "flank_offset_right_mm": 613.8380074487014,
+ "flank_normal_left": [
+  -0.9852579601982828,
+  0.17107528128259503
+ ],
+ "flank_offset_left_mm": -371.33653945596143,
+ "accept_le_0.5pct": true,
+ "step": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\official_2026-11-05\\visuals\\initial_exact.step",
+ "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\official_2026-11-05\\visuals\\initial_exact.stl"
+}

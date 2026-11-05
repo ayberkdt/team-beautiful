@@ -1,0 +1,175 @@
+{
+ "surum": 1,
+ "ad": "fig_relative_mass",
+ "boyut_pt": [
+  249.4,
+  149.7
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  241.6,
+  141.8
+ ],
+ "hedef": "genel-tek",
+ "ortam": "makale",
+ "boyut_mm": [
+  88.0,
+  52.8
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   8.1
+  ],
+  "eksen_adi": [
+   9.0
+  ],
+  "baslik": [],
+  "lejant": [
+   8.1
+  ],
+  "panel": [],
+  "metin": [
+   8.1
+  ]
+ },
+ "punto_tepe": {
+  "tik": 8.1,
+  "eksen_adi": 9.0,
+  "lejant": 8.1,
+  "metin": 8.1
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    76.3,
+    29.5,
+    246.4,
+    146.7
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "20 °C",
+     "tur": "sacilim",
+     "renk": "#919191",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 4.0
+    },
+    {
+     "etiket": "300 °C",
+     "tur": "sacilim",
+     "renk": "#0072b2",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 4.0
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Mass relative to the best at 300 °C",
+    "nicelik": "Mass relative to the best at 300 °C",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "massrelativetothebestat300°c",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.6168168624724008,
+     4.411128995470954
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     98.5,
+     3.0,
+     224.3,
+     11.2
+    ]
+   },
+   "y": {
+    "ham": "Material",
+    "nicelik": "Material",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "material",
+    "harf": "tek",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.332,
+     4.332
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "Structural Steel",
+     "Scalmalloy (fails)",
+     "17-4PH H1025",
+     "Inconel 718",
+     "Ti-6Al-4V"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "Structural Steel",
+     "Scalmalloy (fails)",
+     "17-4PH H1025",
+     "Inconel 718",
+     "Ti-6Al-4V"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     3.0,
+     72.7,
+     11.2,
+     103.5
+    ]
+   },
+   "lejant": [
+    "20 °C",
+    "300 °C"
+   ],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": false
+   },
+   "cerceve": [
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

@@ -1,0 +1,106 @@
+{
+ "generated_by": "python scripts/venus_crosscheck.py",
+ "hover_power": {
+  "bemt_W": 2088.279178143591,
+  "momentum_range_W": [
+   1675.8374954351202,
+   2315.3792484234145
+  ],
+  "rows": [
+   {
+    "case": "thin",
+    "FM": 0.55,
+    "electric_W": 2315.3792484234145,
+    "ideal_W": 997.7494832880825
+   },
+   {
+    "case": "thin",
+    "FM": 0.65,
+    "electric_W": 1967.6285948198122,
+    "ideal_W": 997.7494832880825
+   },
+   {
+    "case": "thin",
+    "FM": 0.75,
+    "electric_W": 1712.6114488438373,
+    "ideal_W": 997.7494832880825
+   },
+   {
+    "case": "mean",
+    "FM": 0.55,
+    "electric_W": 2286.850997524956,
+    "ideal_W": 985.1568851154957
+   },
+   {
+    "case": "mean",
+    "FM": 0.65,
+    "electric_W": 1943.4893055980397,
+    "ideal_W": 985.1568851154957
+   },
+   {
+    "case": "mean",
+    "FM": 0.75,
+    "electric_W": 1691.6907315183012,
+    "ideal_W": 985.1568851154957
+   },
+   {
+    "case": "dense",
+    "FM": 0.55,
+    "electric_W": 2265.2329483206186,
+    "ideal_W": 975.6145052523076
+   },
+   {
+    "case": "dense",
+    "FM": 0.65,
+    "electric_W": 1925.1971101174468,
+    "ideal_W": 975.6145052523076
+   },
+   {
+    "case": "dense",
+    "FM": 0.75,
+    "electric_W": 1675.8374954351202,
+    "ideal_W": 975.6145052523076
+   }
+  ],
+  "bemt_FM": 0.6037134793371017,
+  "drive_efficiency": 0.8025599999999999
+ },
+ "mass": {
+  "vesper_kg": 43.65523224330557,
+  "venus_only_items_kg": 5.569,
+  "rows": [
+   {
+    "reference": "MSH baseline (payload 11.4 %)",
+    "payload_fraction": 0.11418880723572639,
+    "mars_like_kg": 26.272277227722775,
+    "plus_venus_items_kg": 32.955077227722775
+   },
+   {
+    "reference": "MSH max capability (payload 16.0 %)",
+    "payload_fraction": 0.16025641025641027,
+    "mars_like_kg": 18.72,
+    "plus_venus_items_kg": 25.4028
+   }
+  ],
+  "battery_fraction_vesper": 0.15439157355607847,
+  "battery_fraction_msh": 0.13058224985867722,
+  "battery_fraction_ingenuity": 0.15166666666666667,
+  "payload_fraction_vesper": 0.06872028496561355
+ },
+ "solar": {
+  "P0_W": 2965.0896632964004,
+  "loiter_W": 1336.5290937313735,
+  "mu_star_hand": 0.5953051873455606,
+  "mu_star_code": 0.595305187345561,
+  "window_h_hand": 45.76024843424057,
+  "battery_tail_h": 0.7812321227065722,
+  "flight_h_hand": 46.54148055694714,
+  "flight_h_sim": 49.18333333333333,
+  "energy_window_solar_kWh": 108.30269364908087,
+  "energy_window_need_kWh": 61.15990336873805,
+  "energy_margin_window": 1.7708120465154282,
+  "daylight_solar_kWh": 126.68102773412213,
+  "full_cycle_need_kWh": 205.90399825416554,
+  "air_mass_day_h": 154.05874755731267
+ }
+}

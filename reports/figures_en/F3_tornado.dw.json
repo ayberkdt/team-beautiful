@@ -1,0 +1,171 @@
+{
+ "surum": 1,
+ "ad": "F3_tornado",
+ "boyut_pt": [
+  510.2,
+  229.6
+ ],
+ "metin_kutusu_pt": [
+  2.4,
+  4.8,
+  412.6,
+  210.6
+ ],
+ "hedef": "genel-cift",
+ "ortam": "makale",
+ "boyut_mm": [
+  180.0,
+  81.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   8.1
+  ],
+  "eksen_adi": [
+   9.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   8.1
+  ]
+ },
+ "punto_tepe": {
+  "tik": 8.1,
+  "eksen_adi": 9.0,
+  "metin": 8.1
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    105.4,
+    31.5,
+    421.5,
+    212.6
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#f3cb91",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#a7d6f4",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "CO₂ gap between winner and runner-up (t)",
+    "nicelik": "CO₂ gap between winner and runner-up",
+    "birim": "t",
+    "bicim": "parantez",
+    "anahtar": "co₂gapbetweenwinnerandrunnerup",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     2.3835885738024287
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     1
+    ],
+    "ondalik_isareti": ".",
+    "tikler": [
+     "0.0",
+     "0.5",
+     "1.0",
+     "1.5",
+     "2.0"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     183.7,
+     4.8,
+     343.2,
+     13.1
+    ]
+   },
+   "y": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.6799999999999999,
+     9.0176
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "AM process energy [A]",
+     "Grid CO₂ intensity [D]",
+     "Ti-6Al-4V embodied CO₂ [D]",
+     "AM buy-to-fly [A]",
+     "Scalmalloy embodied CO₂ [H]",
+     "AM mass factor [A]",
+     "Lifetime flights [D]",
+     "Marginal fuel per flight [A]"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "AM process energy [A]",
+     "Grid CO₂ intensity [D]",
+     "Ti-6Al-4V embodied CO₂ [D]",
+     "AM buy-to-fly [A]",
+     "Scalmalloy embodied CO₂ [H]",
+     "AM mass factor [A]",
+     "Lifetime flights [D]",
+     "Marginal fuel per flight [A]"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": false
+   },
+   "cerceve": [
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

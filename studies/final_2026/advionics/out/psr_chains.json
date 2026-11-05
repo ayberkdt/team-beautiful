@@ -1,0 +1,246 @@
+{
+ "targets": [
+  "radial 120 m/s",
+  "tangential 0 m/s",
+  "blind speed 53.5 m/s",
+  "over terrain 90 m/s",
+  "over terrain 0.5 m/s"
+ ],
+ "sweep": [
+  {
+   "jitter": 0.01,
+   "chain": "fixed",
+   "false_plots_per_scan": 450.0,
+   "hits": [
+    3,
+    5,
+    5,
+    2,
+    2
+   ],
+   "scans": 8
+  },
+  {
+   "jitter": 0.01,
+   "chain": "mti",
+   "false_plots_per_scan": 502.375,
+   "hits": [
+    1,
+    0,
+    0,
+    4,
+    4
+   ],
+   "scans": 8
+  },
+  {
+   "jitter": 0.01,
+   "chain": "mtd",
+   "false_plots_per_scan": 425.5,
+   "hits": [
+    2,
+    0,
+    0,
+    5,
+    2
+   ],
+   "scans": 8
+  },
+  {
+   "jitter": 0.01,
+   "chain": "mtd_cmap",
+   "false_plots_per_scan": 11.5,
+   "hits": [
+    1,
+    2,
+    2,
+    4,
+    0
+   ],
+   "scans": 8
+  },
+  {
+   "jitter": 0.003,
+   "chain": "fixed",
+   "false_plots_per_scan": 450.0,
+   "hits": [
+    3,
+    5,
+    5,
+    2,
+    2
+   ],
+   "scans": 8
+  },
+  {
+   "jitter": 0.003,
+   "chain": "mti",
+   "false_plots_per_scan": 55.0,
+   "hits": [
+    1,
+    0,
+    0,
+    5,
+    1
+   ],
+   "scans": 8
+  },
+  {
+   "jitter": 0.003,
+   "chain": "mtd",
+   "false_plots_per_scan": 39.25,
+   "hits": [
+    2,
+    0,
+    0,
+    6,
+    0
+   ],
+   "scans": 8
+  },
+  {
+   "jitter": 0.003,
+   "chain": "mtd_cmap",
+   "false_plots_per_scan": 3.125,
+   "hits": [
+    1,
+    2,
+    2,
+    6,
+    0
+   ],
+   "scans": 8
+  },
+  {
+   "jitter": 0.001,
+   "chain": "fixed",
+   "false_plots_per_scan": 450.0,
+   "hits": [
+    3,
+    5,
+    5,
+    2,
+    2
+   ],
+   "scans": 8
+  },
+  {
+   "jitter": 0.001,
+   "chain": "mti",
+   "false_plots_per_scan": 1.0,
+   "hits": [
+    1,
+    0,
+    0,
+    6,
+    0
+   ],
+   "scans": 8
+  },
+  {
+   "jitter": 0.001,
+   "chain": "mtd",
+   "false_plots_per_scan": 2.875,
+   "hits": [
+    2,
+    0,
+    0,
+    7,
+    0
+   ],
+   "scans": 8
+  },
+  {
+   "jitter": 0.001,
+   "chain": "mtd_cmap",
+   "false_plots_per_scan": 1.25,
+   "hits": [
+    1,
+    2,
+    2,
+    7,
+    0
+   ],
+   "scans": 8
+  }
+ ],
+ "runs": [
+  {
+   "label": "baseline: random clutter plots",
+   "kw": {},
+   "false_plots_per_scan": 3.026315789473684,
+   "pd_psr": 0.9342105263157895,
+   "false_track_scans": 7,
+   "psr_only_aircraft_tracked_scans": 36,
+   "scans": 38
+  },
+  {
+   "label": "MTI + CFAR",
+   "kw": {
+    "psr_chain": "mti"
+   },
+   "false_plots_per_scan": 56.973684210526315,
+   "pd_psr": 0.4473684210526316,
+   "false_track_scans": 2953,
+   "psr_only_aircraft_tracked_scans": 0,
+   "scans": 38
+  },
+  {
+   "label": "MTD + CFAR",
+   "kw": {
+    "psr_chain": "mtd"
+   },
+   "false_plots_per_scan": 40.39473684210526,
+   "pd_psr": 0.5131578947368421,
+   "false_track_scans": 2072,
+   "psr_only_aircraft_tracked_scans": 0,
+   "scans": 38
+  },
+  {
+   "label": "MTD + CFAR + clutter map",
+   "kw": {
+    "psr_chain": "mtd_cmap"
+   },
+   "false_plots_per_scan": 2.6315789473684212,
+   "pd_psr": 0.8201754385964912,
+   "false_track_scans": 49,
+   "psr_only_aircraft_tracked_scans": 37,
+   "scans": 38
+  },
+  {
+   "label": "MTD + CFAR + clutter map, PSR-only 3-of-4 and >= 40 kt",
+   "kw": {
+    "psr_chain": "mtd_cmap",
+    "psr_min_speed_kt": 40,
+    "psr_m": 3,
+    "psr_n": 4
+   },
+   "false_plots_per_scan": 2.6315789473684212,
+   "pd_psr": 0.8201754385964912,
+   "false_track_scans": 3,
+   "psr_only_aircraft_tracked_scans": 36,
+   "scans": 38
+  },
+  {
+   "label": "baseline + PSR-only 3-of-4 and >= 40 kt",
+   "kw": {
+    "psr_min_speed_kt": 40,
+    "psr_m": 3,
+    "psr_n": 4
+   },
+   "false_plots_per_scan": 3.026315789473684,
+   "pd_psr": 0.9342105263157895,
+   "false_track_scans": 0,
+   "psr_only_aircraft_tracked_scans": 35,
+   "scans": 38
+  }
+ ],
+ "blind_speed_mps": 53.5343675,
+ "grid": {
+  "range_bin_m": 185.20000000000002,
+  "n_range": 600,
+  "n_az": 300,
+  "n_pulses": 16,
+  "prf_hz": 1000.0
+ }
+}
