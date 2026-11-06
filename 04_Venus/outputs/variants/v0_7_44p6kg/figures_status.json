@@ -1,0 +1,86 @@
+{
+ "F1_altitude_justification": {
+  "regenerated": true,
+  "audit": "figür denetimi: 0 HATA · 0 UYARI · 1 BİLGİ · TESLİM EDİLEBİLİR",
+  "hata": 0,
+  "same_pixels_as_baseline": true
+ },
+ "F2_power_vs_altitude": {
+  "regenerated": true,
+  "audit": "figür denetimi: 0 HATA · 1 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR",
+  "hata": 0,
+  "same_pixels_as_baseline": false
+ },
+ "F3_entry": {
+  "regenerated": true,
+  "audit": "figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR",
+  "hata": 0,
+  "same_pixels_as_baseline": false
+ },
+ "F4_mass_budget": {
+  "regenerated": true,
+  "audit": "figür denetimi: 0 HATA · 0 UYARI · 1 BİLGİ · TESLİM EDİLEBİLİR",
+  "hata": 0,
+  "same_pixels_as_baseline": false
+ },
+ "F5_risk_matrix": {
+  "regenerated": true,
+  "audit": "figür denetimi: 0 HATA · 0 UYARI · 0 BİLGİ · TESLİM EDİLEBİLİR",
+  "hata": 0,
+  "same_pixels_as_baseline": true
+ },
+ "F6_mission": {
+  "regenerated": true,
+  "audit": "figür denetimi: 0 HATA · 0 UYARI · 1 BİLGİ · TESLİM EDİLEBİLİR",
+  "hata": 0,
+  "same_pixels_as_baseline": false
+ },
+ "F7_trade": {
+  "regenerated": true,
+  "audit": "figür denetimi: 0 HATA · 1 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR",
+  "hata": 0,
+  "same_pixels_as_baseline": false
+ },
+ "F8_bemt_validation": {
+  "regenerated": true,
+  "audit": "figür denetimi: 0 HATA · 0 UYARI · 1 BİLGİ · TESLİM EDİLEBİLİR",
+  "hata": 0,
+  "same_pixels_as_baseline": true
+ },
+ "F9_sensitivity": {
+  "regenerated": false
+ },
+ "F10_robustness": {
+  "regenerated": false
+ },
+ "F11_entry_validation": {
+  "regenerated": true,
+  "audit": "figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR",
+  "hata": 0,
+  "same_pixels_as_baseline": true
+ },
+ "F12_deployment_monte_carlo": {
+  "regenerated": true,
+  "audit": "figür denetimi: 0 HATA · 0 UYARI · 1 BİLGİ · TESLİM EDİLEBİLİR",
+  "hata": 0,
+  "same_pixels_as_baseline": false
+ },
+ "F13_day_and_station_keeping": {
+  "regenerated": true,
+  "audit": "figür denetimi: 0 HATA · 1 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR",
+  "hata": 0,
+  "same_pixels_as_baseline": false
+ },
+ "F14_end_of_mission": {
+  "regenerated": true,
+  "audit": "figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR",
+  "hata": 0,
+  "same_pixels_as_baseline": false
+ },
+ "F15_margins": {
+  "regenerated": true,
+  "audit": "figür denetimi: 0 HATA · 0 UYARI · 0 BİLGİ · TESLİM EDİLEBİLİR",
+  "hata": 0,
+  "same_pixels_as_baseline": false
+ }
+}

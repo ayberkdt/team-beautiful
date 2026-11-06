@@ -1,6 +1,6 @@
 # 25 · LuGus Studios — "Fly on Venus": VESPER, a solar-electric rotorcraft for the cloud deck
 
-Prepared 4 Nov 2026 for the Friday 6-hour LuGus slot (EUROAVIA Ideathon 2026, 5–6 Nov). Brief: the handwritten notes
+Prepared 4 Nov 2026, numbers updated 6 Nov (§0), for the Friday 6-hour LuGus slot (EUROAVIA Ideathon 2026, 5–6 Nov). Brief: the handwritten notes
 in `00_Common/organiser_notes/04_LuGus_Venus_Rotorcraft.md` (a transcription, **not** the official text):
 *"Design a rotorcraft that can fly on Venus"* — (1) where should it fly (T, p, ρ, wind), (2) rotors, propulsion,
 material, power, thermal, what does it look like, (3) how does it get there; deliverables: visual design with main
@@ -12,44 +12,152 @@ agent (notes in `04_Venus/research/`, one file per source; index `README.md`) ·
 **[Y]** our judgement/assumption. Every [K] number comes from `python 04_Venus/scripts/venus_day.py --final`
 (`04_Venus/outputs/result.json`) unless another command is named.
 
-**Friday morning checklist** (state on 4 Nov, 23:15; details in §9–§11):
+**Friday morning checklist** (state on 4 Nov, 23:15; pitch numbers updated 6 Nov, §0; details in §9–§11):
 1. `python 04_Venus/scripts/venus_day.py --final` (~5 min tonight): it must end with "15 figures + set consistency, 0 errors".
 2. Venus tests: `python -m pytest -q -p no:cacheprovider tests/test_venus_*.py tests/test_planetary.py tests/typing`.
 3. Ask the mentor first: is a pure rotorcraft required, or is the helium hybrid (§8) allowed? Their payload/altitude → `--payload-kg … --cruise-km …` (§11).
-4. The pitch in four numbers: 43.7 kg, hover 2.1 kW / loiter 1.34 kW at 55 km, ~49 h of flight, 56 g entry.
-5. Say the limits out loud: no night (1.04 vs ~103 kWh), no station keeping (24–119 kW), no landing (§6.3).
-6. Visual: `design.json` v0.6 (final, 13 components = 43.65 kg) → venus-visual session; F1–F15 for the slides.
-7. Simulator: give LuGus `sim_params.json` + `sim_params_README.md`; scenarios in §6.1.
+4. The pitch in four numbers: 44.6 kg, hover 2.2 kW / loiter 1.62 kW at 8.9 m/s at 55 km, ~44 h of flight (42–46 h over the interaction range), 56 g entry.
+5. Say the limits out loud: no night (1.11 vs ~125 kWh), no station keeping (24–119 kW), no landing (§6.3).
+6. Visual: `design.json` v0.6 (13 components = 43.65 kg; the 44.6 kg re-closure is not in it) → venus-visual session; F1–F15 for the slides, B1–B3 for the new numbers.
+7. Simulator: give LuGus `sim_params.json` + `sim_params_README.md` (its 80 s gust correlation is superseded by §4.7); scenarios in §6.1.
 8. Evidence: tags [D]/[D-ag]/[K]/[Y]; random audit 15/15 sourced, fixes applied (`R_audit_2026-11-04.md`).
 9. Cross-checks (§7.1): power −20…+11 %, mass explained (vessel + arms), sun threshold exact, flight time −5 %.
-10. Known soft spots (§7.2): bifacial deck (one-sided cells → 27 h window), spin-up needs −16° collective, motor-out yaw untested, BEMT factor 1.05 unmeasured.
+10. Known soft spots (§7.2): bifacial deck (one-sided cells → 27 h window on the 4 Nov numbers), spin-up needs −16° collective, motor-out peak tilt 66°, interaction model at 0.04 D gap (§0), BEMT factor 1.05 unmeasured.
 
 > **Özet (TR).** VESPER, 55 km'de (26 °C, 0,51 bar, ρ 0,89 kg/m³ — Pioneer Venus sondalarının ham verisinden)
-> süper rotasyonla birlikte sürüklenerek uçan, **6 × 2,6 m rotorlu, 5:1 dişli motorlu, katlanır, 43,7 kg'lık
+> süper rotasyonla birlikte sürüklenerek uçan, **6 × 2,6 m rotorlu, 5:1 dişli motorlu, katlanır, 44,6 kg'lık
 > güneş-elektrikli bir heksakopter**. Rotorlar BEMT ile tasarlandı ve iki NACA test veri setine karşı doğrulandı
-> (tork, 27 nokta, rms %6). Hover 2,1 kW, en ekonomik ileri uçuş (7,8 m/s) 1,3 kW; 4,45 m²'lik çift yüzlü güneş
-> güvertesi tepedeki güneşte 3,0 kW veriyor → güneş zenitten ~53° içindeyken **güneşle süresiz uçar**. Görev: hava
-> kütlesinde bir gündüz boyunca **~49 saat uçuş (44 saati güneşle)**, 51 km'ye bilim dalışları, gün batımında 47 km'ye
+> (tork, 27 nokta, rms %6). Rotorlar arası etkileşimle hover 2,2 kW, en ekonomik ileri uçuş (8,9 m/s) 1,62 kW; 4,45 m²'lik çift yüzlü güneş
+> güvertesi tepedeki güneşte 3,0 kW veriyor → güneş zenitten ~47° içindeyken **güneşle süresiz uçar**. Görev: hava
+> kütlesinde bir gündüz boyunca **~44 saat uçuş (39 saati güneşle)**, 52 km'ye bilim dalışları, gün batımında 50 km'ye
 > son dalış. Venüs'e 3,7 m'lik düşük-β (25 kg/m²) bir giriş kapsülüyle −9,5°'de giriyor (tepe 56 g; Pioneer Venus
-> 280 g), 79 km'de paraşüt, rotorlar paraşüt altında asılıyken dönmeye başlıyor, 61 km'de bırakılıyor (26 m irtifa
-> kaybı; dönmeden bırakılsa 559 m). Saf rotorcraft **geceyi (~3 Dünya günü) geçiremez** — bu dürüstçe söyleniyor;
+> 280 g), 79 km'de paraşüt, rotorlar paraşüt altında asılıyken dönmeye başlıyor, 61 km'de 668 d/dk'ya kadar devirle bırakılıyor (26 m irtifa
+> kaybı; dönmeden bırakılsa 559 m), 55 km'ye 1,5 m/s alçalma ve 3,5 m/s ileri hızla iniyor. Saf rotorcraft **geceyi (~3 Dünya günü) geçiremez** — bu dürüstçe söyleniyor;
 > geceyi geçen helyum-hücreli hibrit (5,7 m küre) yalnız mentor onayıyla alternatif. Dişli tahrik, doğrudan
-> tahrikte "kapanmayan" (kütlesi ıraksayan) kötü senaryoları kapatıyor: her olumsuz varsayımda ≥ 43,8 saat uçuş.
+> tahrikte "kapanmayan" (kütlesi ıraksayan) kötü senaryoları kapatıyor (4 Kasım sayıları: her olumsuz varsayımda ≥ 43,8 saat uçuş).
 > Giriş modeli 12 tarihî Venüs girişinde (Venera 4–14, Vega, Pioneer Venus) tepe yavaşlamayı %3,5 rms hatayla
 > veriyor. Açılma Monte Carlo'su (ölçülmüş rüzgâr profilleri): ileri uçuşla toparlanmada p99 irtifa kaybı 41 m.
+> Etkileşim düşük/yüksek durumda uçuş 46/42 saat; 6 Kasım değişiklikleri §0'da.
 > **Yüzeye inmiyor**: gün batımı dalışından sonra dönen rotorlarla ~12 saatte düşer, elektronik ~34 km'de 125 °C'yi
 > aşar; yüzeye soğuk konsa bile ~26 dakikada ölür (Venera 13: 127 dk, ~750 kg iniş aracı).
 
+## 0. What changed on 6 Nov [K unless tagged]
+
+Three things we learned on 5–6 Nov change the numbers: rotors interfere with each other, vertical gusts are slow, and a
+3 m/s descent cannot be flown. All new numbers come from `python 04_Venus/scripts/venus_budget_update.py`
+(→ `04_Venus/outputs/variants/budget_update/result.json`, `result.md`, B1–B3; simulator logs in `sim_runs/`). The
+previous text is anchored at `docs/versions/25_lugus_venus_rotorcraft_2026-11-06_before_budget_update.md`.
+
+**Result.** The design still closes on energy in every interaction case. As built (43.66 kg) it misses one of its own
+rules: the battery covers 0.484 h of hover, not 0.5 h. Closing the mass budget again fixes that for
++1.0 kg. The pitch numbers below are for this design. With the true power, the flight falls
+from 49 h to 44 h.
+
+| Quantity | 4 Nov | 6 Nov, nominal (low … high) | Source |
+|---|---|---|---|
+| Gross mass | 43.7 kg | 44.6 kg (as built 43.7 kg misses the reserve rule) | `sizing.close` with hover +3.42 % [K] |
+| Battery | 1.04 kWh | 1.11 kWh | same [K] |
+| Hover | 2.09 kW | 2.22 kW (all interaction cases: only the wake term varies) | `guc_egrisi.json`, +3.4 % at V = 0 [K on Y] |
+| Loiter power | 1.34 kW | 1.62 kW (1.52 … 1.72) | `guc_egrisi.json` ratio on aerokit [K] |
+| Loiter speed | 7.8 m/s | 8.9 m/s (8.5 … 9.2) | same [K] |
+| Sun threshold, cos z | 0.595 | 0.678 (0.650 … 0.704) | closed form [K] |
+| Sun within, from zenith | 53° | 47° (49° … 45°) | same [K] |
+| Energy margin in the sun window | 1.77× | 1.53× (1.60 … 1.47) | same [K] |
+| Flight on sunlight | 44.2 h | 38.7 h (40.7 … 36.6) | `fly()` [K] |
+| Total flight | 49.2 h | 43.8 h (45.9 … 41.5) | `fly()` [K] |
+| Drift | 11 500 km | 10 328 km | `fly()` [K] |
+| Release hour angle | −51° | −45° (cos z threshold + 0.03) | `fly()` [K] |
+| Descent 61 → 55 km | 3 m/s, 33 min | 1.5 m/s with 3.5 m/s forward, 67 min, on sunlight | simulator [K on Y] |
+| Science-dive floor | 51 km | 52 km; abort 50 → 52 °C; battery peak 57.5 °C | §4.6 [K] |
+| Sunset dive ends | 47.3 km | 50.4 km, at the 60 °C limit | `fly()` [K] |
+| Gust: altitude RMS / peak | 4 m / 11 m | 5.9 m / 27 m | §4.7 [K on D, Y] |
+| Gust: thrust peak | 14 % W | 33 % W (margin 4.3× → 1.8×) | §4.7 [K on D, Y] |
+| Release rotor speed | 514 rpm | schedule up to 668 rpm; 514 rpm stalls at 0.93 W | aerokit BEMT, simulator [K] |
+| Canopy clearance after release | not modelled | 0.33 m | simulator (`DOGRULAMA.md`) [K on Y] |
+| Pull-out battery current | not modelled | 56.7 A at cos z 0.63 → 50.1 A at the new release; limit 53.6 A | simulator [K on Y] |
+| Entry mass, β | 284 kg, 25.1 kg/m² | 290 kg, 25.7 kg/m², still 56 g | `entry.fly_entry` [K] |
+| Motor out | thrust only (1.33 W) | five rotors at 591 rpm, four carry the weight, 13 % margin; 24.5 m lost, 66° peak tilt | simulator (`DOGRULAMA.md`) [K on Y] |
+
+**The battery alarm in the simulator was not a mission result.** The 5 Nov report said the science dive ended at about
+1 % and the sunset descent at 0 %. Both runs started from a state the mission never reaches:
+
+| Run (nominal, 51 km) | Simulator end SoC | This budget |
+|---|---:|---:|
+| Dive at cos z 0.70 in the afternoon (breaks the §7.2-7 rule), old wake model | ~1 % | — |
+| Same dive, refitted wake model | 17 % | 16 % |
+| Dive at cos z 0.80 | 42 % | 43 % |
+| Dive near noon | 68 % | 68 % |
+| Sunset, forced to 35 % at cos z 0.12 | 0 % | 0 % |
+| Sunset from the mission state, at 60 °C | 14 %, 48.9 km | 22 %, 50.0 km |
+
+The budget is calm-air and slightly pessimistic: against the simulator's calm runs it ends 16 % vs 21 % and 53 % vs 56 %.
+The 3 m/s climb-back is the main cost. A gust matters more than the model: over three turbulence seeds, the lowest SoC on
+the 52 km dive is 35–70 % in the simulator (nominal, full at the start), against 65 % in calm air here, and the worst seed stays above the
+20 % floor. At sunset the heat limit ends the flight, not the battery. Attitude is not a limit: dive tilt is 8–11° to 51 km
+and at most 12° to 52 km (three seeds), sunset 10° (`DOGRULAMA.md`), against a 25° limit.
+
+**What closure means here [Y].** Sun carries loiter; state of charge ≥ 20 % until the sun is lost; both dives reach the
+floor with the battery below 60 °C and the array covering hover; battery ≥ 0.5 h of hover; battery can charge at cruise.
+
+| Closed design, nominal | Gross kg | Flight h | High case h | Closes | Why not, or the cost |
+|---|---:|---:|---:|---|---|
+| As built | 43.7 | 44.5 | 42.2 | no | reserve 0.484 h |
+| **Re-closed, 0.10 m gap (recommended)** | **44.6** | **43.8** | 41.5 | **yes** | +1.0 kg, same geometry |
+| Gap 0.26 m | 46.7 | 45.9 | 43.9 | yes | span 8.3 m; stowage not rechecked |
+| Gap 0.52 m | 50.3 | 48.6 | 46.8 | yes | span 8.8 m; dive hold cut to 3 min; stowage not rechecked |
+| Gap 0.78 m | 60.9 | 47.5 | 45.8 | no | dive aborts above the floor; mass growth takes the gain back |
+| Halo deck 0.15 m | 60.1 | 50.6 | 48.9 | no | dive aborts above the floor; +15 kg for +7 h |
+| Battery 0.75 h hover | 62.1 | 29.7 | 25.0 | no | dive aborts; array covers hover too late; a heavier vehicle needs more sun than it stores |
+| Battery 1.0 h hover | — | — | — | no | mass does not converge |
+| Cruise 54 km | 43.1 | 41.8 | 39.7 | no | interior 46.5 °C: above the 45 °C charge limit |
+| Cruise 56 km | 46.6 | 45.5 | 43.0 | yes | +2.0 kg; cooler battery |
+
+**Recommendation.** Re-close at 44.6 kg: same geometry, one more kilogram, and the simulator and visual stay
+within about 2 % in mass. If the mentor wants more hours, cruise at 56 km or a 0.26 m gap buys about 2 h for 2 kg. A lower cruise
+altitude does not help: the array loses more than the rotors save, and the battery cannot charge. Keeping 43.7 kg is
+also possible if we accept a 0.48 h reserve; that is a decision for the team, not a physics limit.
+
+**Pull-out current: a design finding.** The pull-out draws 56.7 A at cos z 0.63, above the 53.6 A 2C limit of the 14S8P
+pack. Bus power peaks at about 5.3 kW, 3.8 s after release, and the array supplies part of it, so the release sun height sets
+the battery current. The later release that interaction forces already fixes this: 50.1 A at cos z 0.71. Rule:
+**no release below cos z 0.68** (52.7 A). If that rule cannot be held, the fallback is a slower thrust ramp
+(costs altitude, and only 0.33 m of canopy clearance is left) or a 9P pack (limit 60.3 A). The 2C value is an aerokit
+input, not a measured limit for this pack. The simulator ran these at 43.66 kg.
+
+**Uncertainty carried by these numbers.** The wake model is fitted to NASA Multirotor Test Bed wind-tunnel thrust ratios
+(Russell & Conley 2020 [D-ag, read by the simulator session]; kw 0.50, low/high 0.30/0.70, rms 0.041; forward-flight interaction
+about +20 %). That rig has a 0.47 D tip gap; VESPER has 0.04 D. The fit covers V ≥ 3.5 m/s and may under-predict below
+that (simulator session's note); the 3.5 m/s descent sits at that edge. `guc_egrisi.json` predates a later yaw-shed change; level trim
+agrees (1578 W at 7.8 m/s in the validation run). Low … high is a bracket, not a confidence interval. Earlier
+interaction figures (+31 % at 7.8 m/s) are withdrawn. Hover +3.4 % is extrapolated from 0.3 D to 0.04 D [Y].
+Upside not counted: the simulator shows 76 W less at a 45° heading at 9 m/s (43.66 kg).
+
+**Not changed.** aerokit has no interaction term; the script applies it. `sim_params.json`, `design.json`, `result.json`
+and F1–F15 are the 4 Nov baseline (isolated rotors, 43.66 kg, 80 s gust); §2, §3, §4.1–§4.3, §4.8–§4.11, §5.1, §5.3 and
+§7.1 keep those numbers.
+
+**Variant files for 44.6 kg, not confirmed:** `outputs/variants/v0_7_44p6kg/` (`design.json`, `sim_params.json`, F1–F15; start with `CHANGES.md`).
+
+![B1](../outputs/variants/budget_update/B1_power_curve.png)
+
+**B1.** *Interaction lifts the minimum power at 55 km and moves it from 8 to 9 m/s.* Simulator level flight, 43.66 kg,
+`trim_ok` rows only.
+
+![B3](../outputs/variants/budget_update/B3_options.png)
+
+**B3.** *Small changes buy hours for about 1 kg per hour; a bigger deck costs far more.* Closed designs, nominal case.
+Off the scale: battery 0.75 h (62 kg, 30 h), halo 0.30 m (81 kg).
+
 ## 1. The answer in one paragraph [K unless tagged]
 
-**VESPER** (*Venus Solar-Electric Powered Exploration Rotorcraft* [Y]) is a 43.7 kg folding hexacopter with six
+**VESPER** (*Venus Solar-Electric Powered Exploration Rotorcraft* [Y]) is a 44.6 kg folding hexacopter with six
 2.6 m two-blade rotors at 514 rpm (tip Mach 0.26, Reynolds 1.7×10⁵) driven through sealed 5:1 planetary gearboxes, a
-4.45 m² bifacial solar deck, a 1.04 kWh Li-ion battery and a sealed titanium vessel. It flies at **55 km** in the
-air-mass frame, drifting west with the 65 m/s super-rotation; at its 7.8 m/s minimum-power airspeed it needs 1.34 kW,
-which the array supplies whenever the Sun is within ~53° of the zenith (an overhead Sun even covers hover). Delivered
-by a 3.7 m, 284 kg entry capsule (β 25 kg/m², −9.5°, 56 g peak), it is spun up under the parachute, released at 61 km,
-and flies **~49 h** (44 h on sunlight, 11 500 km of drift) through one air-mass day, ending in a sunset dive below the
-middle cloud. It cannot survive the ~3-Earth-day night — the honest limit of a pure rotorcraft on Venus; a
+4.45 m² bifacial solar deck, a 1.11 kWh Li-ion battery and a sealed titanium vessel. It flies at **55 km** in the
+air-mass frame, drifting west with the 65 m/s super-rotation; with rotor–rotor interaction, its 8.9 m/s minimum-power airspeed needs 1.62 kW,
+which the array supplies whenever the Sun is within ~47° of the zenith (an overhead Sun even covers hover). Delivered
+by a 3.7 m, 290 kg entry capsule (β 26 kg/m², −9.5°, 56 g peak), it is spun up under the parachute, released at 61 km,
+and flies **~44 h** (39 h on sunlight, 10300 km of drift; 42–46 h over the interaction range) through one air-mass day, ending in a sunset dive to the
+base of the middle cloud. It cannot survive the ~3-Earth-day night — the honest limit of a pure rotorcraft on Venus; a
 helium-assisted variant that can is offered as an alternative needing mentor approval (§8).
 
 ## 2. What was verified, by whom
@@ -182,18 +290,20 @@ because of its low flap frequency [D-ag]. Winding
 temperature at hover ≈ ambient + 18 K (`thermal.motor_temperature`, motor conductance assumed).
 
 ### 4.4 Power [K]
+Updated 6 Nov: every power below this line is isolated-rotor unless it says otherwise. With interaction: hover 2.22 kW, loiter 1.62 kW at 8.9 m/s, descent 1.49 kW, at 44.6 kg (§0). Pack resistance (I²R, 35 mΩ cells [Y]) and a 0.5 C charge limit [Y] are now in the mission budget.
+
 - **Solar deck**: 4.45 m² hexagon between the rotors (corners 5 cm inside every disk edge: no wake download), bifacial
   triple-junction cells (29 % AM0 array), Parylene + FEP cover (Parylene alone tested: −5 % [D-ag]; FEP cover loss not quantified). The cloud deck reflects 84–89 % of the
   downward light back up at 50–62 km (Pioneer Venus radiometer [D]) — the underside earns ~73 % of the topside
   [Y bifaciality 0.85]; the vessel shades ~6 % of the underside, not modelled (≈ −2.7 % array power). Output 2.97 kW
   with the Sun overhead at 55 km. Sun-angle law: in-cloud Eddington-type
   μ₀(μ₀+⅔)/(5/3) [Y]; consistent with the probe radiometer within its in-band share (`power.py` docstring).
-- **Battery**: 1.04 kWh Li-ion (18650 energy cells 243 Wh/kg [D-ag], pack 75 %, DoD 85 % [Y]) = 0.5 h of hover with no
-  sun. A 1 h reserve does not close (mass growth factor > 1).
+- **Battery**: 1.11 kWh Li-ion (18650 energy cells 243 Wh/kg [D-ag], pack 75 %, DoD 85 % [Y]) = 0.5 h of hover with no
+  sun. A 1 h reserve does not close (mass growth factor > 1); 0.75 h closes at 62 kg and flies only 30 h.
 - **Day cycle**: drifting at 65 m/s the Sun circles the air mass in ~6.5 Earth days (the Sun's own slow motion included; a pure circumnavigation at 65 m/s takes 6.8 days) → ~3.2 days
   (77 h) of light, ~3.2 of
   night. Release is targeted (entry time and site) at the morning hour angle where the array first covers loiter
-  (−51°).
+  (−45°; never below cos z 0.68, §0).
 
 ### 4.5 Materials vs sulfuric acid (`aerokit.venus.materials`) [D-ag rows]
 FEP keeps 95 % strength after 168 h in concentrated H₂SO₄ at 120 °C, 0 % weight gain; the JPL aerobot FEP/Kapton
@@ -205,20 +315,28 @@ strip, and that wrap is a qualification item.
 ### 4.6 Thermal [K]
 Two-node vessel (interior / Ti shell), aerogel blanket (1.75 W/K) in parallel with a **variable-conductance heat pipe
 used as a diode** to shell fins (up to 12 W/K), silvered-FEP skin (α 0.08, ε 0.52 [D-ag]), Churchill–Bernstein
-convection in CO₂. Interior 37 °C at 55 km. A science dive to 51 km (5 min at the bottom) heats the battery to 57 °C —
-the peak comes during the climb back because of thermal lag — below the 60 °C discharge limit, with charging paused
-above 45 °C; any dive to 48 km passes 60 °C. The mission logic also aborts a dive if the interior passes 50 °C at depth. Without the diode the heat pipe would *import* heat during a
+convection in CO₂. Interior 37 °C at 55 km. The 1.5 m/s descent doubles the time at depth, so the science-dive floor moves
+from 51 to **52 km**. At the bottom (5 min) the battery peaks at 57.5 °C — the peak comes during the climb back because of
+thermal lag — below the 60 °C discharge limit, with charging paused above 45 °C. The two-node model gives 64 °C for a
+51 km dive and 60.6 °C for 51.5 km; the simulator's one-node model gives 58 °C at 51 km. We size on the two-node model until a
+chamber test decides. The mission logic aborts a dive if the interior passes 52 °C at depth (50 °C before 6 Nov; the 5 min hold
+needs it; in the high interaction case the abort still cuts the hold to 3 min). Without the diode the heat pipe would *import* heat during a
 dive — found by the transient model and fixed.
 
 ### 4.7 Control and navigation [K]
 - **Air-mass frame**: maximum airspeed ~23 m/s vs 49–84 m/s wind — VESPER cannot hold a ground position and does not
   try; it controls altitude and position *relative to the air*. Ground track is a planning output.
-- **Vertical gusts**: the rotors' own heave damping (BEMT ∂T/∂w = −32 N per m/s) makes the vehicle follow vertical air
-  motion within ~1.4 s. With altitude hold in VEGA-like turbulence (σ 0.7 m/s [D-ag statistics]; 80 s correlation [Y], inside the 30–130 s fluctuation periods [D-ag]) the
-  altitude error is 4 m RMS (11 m peak) and thrust excursions peak at 14 % of weight — well inside the 60 % margin
-  (`control.gust_response`, gains [Y]).
+- **Vertical gusts** (re-run 6 Nov): the rotors' own heave damping (BEMT ∂T/∂w = −32 N per m/s) makes the vehicle follow vertical air
+  motion within ~1.4 s. The 4 Nov result (4.1 m RMS, 11 m peak, 14 % of weight) used an 80 s correlation [Y]; the VEGA record gives 1/e ≈ 1500 s [K on D]
+  (data book §2.5). Same loop and gains [Y], data-book model: cells σ 0.7 m/s, 1/τ = 1/1500 s + V/5000 m (τ 412 s in loiter), plus Dryden σ_w 0.5 m/s, L 533 m [Y]:
+  altitude error **5.9 m RMS**, peak 23 m (median of 32 × 49 h runs; worst 27 m), thrust peak **28 % of weight** (worst 33 %). Cells alone in hover,
+  τ 1500 s: 5.1 m RMS, 24 % worst. Part of the rise is the longer record (peaks over 49 h, not 2 h) and part is the Dryden term,
+  which is an assumption. Still inside the 60 % margin, but the margin falls from 4.3× to 1.8×.
+  The bigger change is energy, not altitude: the loop is quasi-static at these time scales, so a cell is a sustained load, not a gust. Holding altitude against 0.7 m/s costs
+  332 W and 138 Wh per 1500 s cell. Mission with cells held (40 seeds, as built): 43.1 / 44.4 / 45.0 h (p5 / median / p95), lowest SoC 62 % before sun loss;
+  3 of 40 runs empty the battery in the sunset dive.
 - **Downdrafts** (VEGA-2: −2…−3.3 m/s over ~2 h, ~2.9 km down [D-ag]): holding altitude in a 3 m/s downdraft costs +1.4 kW (as much as
-  loiter); riding it 3 km down and climbing back costs ~0.4 kWh → policy: ride it within 51–58 km.
+  loiter); at the −3.5 m/s data-book extreme, +1.7 kW and 29 % of weight. Riding it 3 km down and climbing back costs ~0.4 kWh → policy: ride it within 52–58 km.
 - **Navigation without GNSS**: barometric altitude ±0.19 km (probe-to-probe pressure spread at 55 km); no magnetic field
   (VAPS [D-ag]); gyrocompassing on Venus' 2.99×10⁻⁷ rad/s rotation (from the 243.0-day sidereal period [K]) gives ~9° heading error with a 0.01 °/h gyro
   (ratio 6) and is impossible with MEMS gyros; a Sun fix better than 10° inside the clouds "may be impractical" (VAPS [D-ag]) → IMU +
@@ -266,12 +384,12 @@ deployment replay).
 |---|---|---|---|
 | Air density / rotor Reynolds | ~0.015 kg/m³; Re ~1×10⁴ (MSH Table 1) | 0.89 kg/m³; Re 1.7×10⁵ | 60× denser air: Earth-like airfoils and figure of merit, slow rotors (514 vs 2400–2700 rpm) |
 | Power per kg in hover | ~350 W for 1.8 kg ≈ 195 W/kg | 2.09 kW for 43.7 kg ≈ 48 W/kg | hover is ~4× cheaper per kg than on Mars |
-| Thrust margin rule | ≥ 40 % above hover before stall (Grip 2018) | 60 % motor/thrust margin; gust peaks use 14 % | same rule, more margin for downdrafts |
+| Thrust margin rule | ≥ 40 % above hover before stall (Grip 2018) | 60 % motor/thrust margin; gust peaks use 33 % (§4.7) | same rule, more margin for downdrafts |
 | Control loop | 500 Hz GNC triggered by the IMU; four open-loop unstable hover modes (stiff rotors) (Grip 2018) | same architecture; collective pitch per rotor for attitude (large rotors respond to rpm in 0.3–1 s) | big slow rotors cannot steer by rpm alone |
 | Wind design case | 9 m/s horizontal, 2 m/s vertical, 3.5 m/s gusts (Grip 2018) | 65 m/s mean wind (ignored: air-mass frame), vertical σ 0.7 m/s, downdrafts −3.3 m/s (VEGA) | the mean wind is a frame, not a disturbance |
 | Navigation | IMU + inclinometer (ground only) + lidar altimeter + downward camera feature tracking (Balaram 2018) | IMU + airspeed + barometric altitude + relay Doppler; no ground in view, no magnetic field | camera ground tracking impossible inside clouds |
 | Thermal | heaters keep the battery above −15 °C in −100 °C nights; flights only at +10…+25 °C (JPL battery note) | heat pipe *cools* the battery to 37 °C at 55 km; dives limited by the 60 °C discharge limit | Venus' problem is heat, not cold |
-| Flight profile | 72 flights, 128.8 min in total, max 24 m altitude, 10 m/s (JPL) | one 49 h flight, 51–55 km, loiter 7.8 m/s | sunlight sustains flight instead of recharging between hops |
+| Flight profile | 72 flights, 128.8 min in total, max 24 m altitude, 10 m/s (JPL) | one 44 h flight, 52–55 km, loiter 8.9 m/s | sunlight sustains flight instead of recharging between hops |
 | Getting there | dropped from the rover belly on the ground (rover-carried) | spun up under a parachute and released at 61 km (Dragonfly practice) | no surface to start from |
 | End | stranded on the ground with a damaged blade (Jan 2024) | sunset dive, then an unpowered fall | — |
 
@@ -282,13 +400,13 @@ deployment replay).
 | Launch, Earth → Venus | Hohmann v∞ 2.71 km/s (floor), transfer ~146 days [K]; design v∞ 3.5 km/s [Y] | K/Y |
 | Carrier = relay orbiter | releases the probe ~5 days out; capture into the 1000 km relay orbit would need ~3.4 km/s if propulsive [K] — aerobraking or an elliptical relay orbit is cheaper (open item) | K/Y |
 | Entry interface | 200 km, 10.78 km/s, γ −9.5° (corridor −8…−11°, skip-out at −7°) | K |
-| Entry capsule | 3.7 m 45° sphere-cone; 284 kg (vehicle 20 %, Landis fractions + 30 % [D-ag]); β 25.1 kg/m² | K |
+| Entry capsule | 3.7 m 45° sphere-cone; 290 kg (vehicle 20 %, Landis fractions + 30 % [D-ag]); β 25.7 kg/m² (284 kg, 25.1 before the re-closure) | K |
 | Peak deceleration / heating | 56 g at 92 km; 228 W/cm² convective (Sutton–Graves, k = 1.897×10⁻⁴ derived by the agent from Table II [D-ag]) + 18 W/cm² radiative (Tauber 2012 [D-ag]; fit extrapolated from r_N 0.36 m to our 0.93 m nose); 3.9 kJ/cm² — vs Pioneer Venus large probe 288 g and ~4 800 W/cm² in our model (280 g in SP-461 [D-ag]) | K |
 | Parachute | pilot (mortar), then 12 m main at ~200 m/s, 79 km (Mach ~0.9); heat shield off; 716 s to release; 12.8 m/s at 61 km | K/Y |
 | Unfold under the chute | rotorcraft lowered 10 m on a bridle; arms, blades, solar petals spring out (~69 km) | Y |
 | Spin-up while hanging | rotors to hover rpm under the chute (~63 km) — Dragonfly practice: rotors spun under the main chute, release below 2.9 m/s [D-ag] | Y/D-ag |
-| Release and pull-out | 61 km, 12.8 m/s descent; arrested in 3.4 s, **26 m lost** (vs **559 m** if dropped unspun with a MAHD-like 3 s free fall + 12 s spin-up [D-ag]); crosses the vortex-ring band in forward flight | K |
-| Descent to cruise | 3 m/s to 55 km (~33 min) | K |
+| Release and pull-out | 61 km, 12.8 m/s descent; **rotors on an rpm schedule up to 668 rpm** (1.30 × hover rpm, back-EMF cap): at 514 rpm the rotor stalls at 0.93 W at 61 km, so it could not arrest [K, BEMT]. Arrested in 3.4 s, **26 m lost** in the 1-D model, 20 m in the simulator (vs **559 m** if dropped unspun with a MAHD-like 3 s free fall + 12 s spin-up [D-ag]); closest canopy approach **0.33 m** (the canopy keeps coming down at ~11 m/s: lateral escape or cut-away needed); crosses the vortex-ring band while decelerating | K |
+| Descent to cruise | **1.5 m/s down with 3.5 m/s forward**, 61 → 55 km in 67 min, on sunlight (lowest SoC 100 % in the simulator). Straight down at 3 m/s lies inside the vortex-ring band (1.17–3.89 m/s); at 3 m/s with loiter speed, yaw by collective reverses | K on Y |
 
 ![F3](../outputs/F3_entry.png)
 
@@ -366,9 +484,9 @@ peak g rms 3.53 → 3.51 %, worst unchanged 7.5 %; heat-flux rms (excl. Venera 8
 | 149 / 78 | heat-shield jettison | separation shock | — | accelerometer step + range sensor | stuck: stay on the chute as a **descent probe** (payload sensors, ~1 h of data, DAVINCI-like) |
 | ~360 / 69 | lower 10 m on a bridle; arms (Z-fold), blades, petals spring out | < 1 g | hangs vertical, pendulum period 6.7 s | 12 latch sensors | ≥ 2 arms unlatched → descent probe |
 | ~640 / 63 | rotors spun up at the zero-lift collective (≈ −16° at 0.75 R: the 12.8 m/s descent sets a 13.7° inflow; at flat pitch they would pull ~1.2 W on the bridle, §7.2-5) | ~2.3 s per rotor; alternating spins cancel torque | swing < 0.3° (Monte Carlo) | rpm + current on 6 motors | ≤ 4 healthy → descent probe (5 of 6 flies: hex motor-out tolerance) |
-| ~770 / 61 | release, collective to 1.6 W, pitch forward to 2 v_h | +0.6 g net | nose-down ~10–15° [Y] | window 63–60 km, descent < 16 m/s, battery > 90 % | window missed → stay on the chute to 58 km, then descent probe |
+| ~770 / 61 | release at 668 rpm, collective to 1.6 W, pitch forward to 2 v_h | +0.6 g net; battery 50 A at cos z 0.71 | nose-down ~10–15° [Y] | window 63–60 km, descent < 16 m/s, battery > 90 %, cos z ≥ 0.68 | window missed → stay on the chute to 58 km, then descent probe |
 | +3.4 s | descent arrested, 26 m lost (p99 41 m) | 0.6 g | level | loss < 300 m | loss > 300 m → full collective + forward flight |
-| ~2770 / 55 | cruise reached (3 m/s descent from 61 km) | 1 g | loiter 7.8 m/s | — | — |
+| ~4800 / 55 | cruise reached (1.5 m/s down, 3.5 m/s forward from 61 km; rpm falls from 668 to 514) | 1 g | loiter 8.9 m/s | — | — |
 
 ### 5.3 Deployment Monte Carlo over the measured winds (F12) [K with D inputs]
 
@@ -392,13 +510,16 @@ state.* Distribution of altitude lost over 300 Monte Carlo runs per procedure.
 
 ![F6](../outputs/F6_mission.png)
 
-**F6.** *VESPER flies 49 h, 44 h of it on sunlight, and ends in a sunset dive.* Altitude, electrical demand vs array
-output, battery energy; release at hour angle −51° (`aerokit.venus_flight.simulate_rotorcraft_day`).
+**F6 (4 Nov baseline, isolated rotors).** *VESPER flies 49 h, 44 h of it on sunlight, and ends in a sunset dive.* Altitude, electrical demand vs array
+output, battery energy; release at hour angle −51° (`aerokit.venus_flight.simulate_rotorcraft_day`). Current mission: B2.
 
-Timeline [K]: release at 55 km → science dives to 51 km at 6 h and 20 h (5 min at the bottom; battery peaks at 57 °C
-during the climb back) → the array carries loiter until the Sun falls below cos z ≈ 0.6 (48.5 h) → sunset dive measuring
-through the middle cloud to 47.3 km, where the battery passes 60 °C (49.2 h). Drift: 11 500 km (about 30 % of the way
-round Venus — comparable to VEGA's ~11 600 km [A] in ~46 h [D-ag]). Science [Y]: aerosol size/composition through the cloud
+![B2](../outputs/variants/budget_update/B2_mission.png)
+
+**B2.** *In every interaction case the battery stays above 65 % until the sun is lost; more interaction only shortens the day.* Recommended design, 6 Nov profile (`venus_budget_update.fly`).
+
+Timeline, nominal [K]: release at 61 km → cruise at 55 km after 1.12 h (SoC 100 %) → science dives to 52 km at 6 h and 20 h, array covering hover (cos z 0.86 and 1.00; 5 min at the bottom; battery peaks at 57 °C
+during the climb back; lowest SoC 65 %, full again before the next dive) → the array carries loiter until the Sun falls below cos z 0.68 (39.5 h, SoC 100 %) → battery tail → sunset dive at 43.0 h (SoC 41 %) measuring
+down through the middle cloud to 50.4 km, where the battery passes 60 °C (43.8 h, SoC 6 %). Drift: 10300 km (comparable to VEGA's ~11 600 km [A] in ~46 h [D-ag]). Science [Y]: aerosol size/composition through the cloud
 layers, H₂SO₄/SO₂/H₂O, turbulence and vertical winds (the vehicle *is* an anemometer in the air frame), up/down
 radiative fluxes (bifacial array = radiometer), imaging of cloud structure.
 
@@ -411,11 +532,11 @@ every value carries its unit, tag and source. `outputs/vesper_for_simulator.json
 positions and spins, BEMT thrust/torque vs rpm at 55 km (10 N at 206 rpm … 166 N at 823 rpm per rotor; hover 63 N at
 514 rpm), drag area, atmosphere, gust statistics and a 338-frame deployment replay. Training scenarios that exercise the
 real constraints:
-1. **Drop and catch** — release from the parachute at 61 km descending 12.8 m/s; arrest within ~30 m by flying forward
-   through the vortex-ring band (fail if hovering straight down at 0.5–1.5 v_h).
+1. **Drop and catch** — release from the parachute at 61 km descending 12.8 m/s, rotors at 668 rpm; arrest within ~30 m by flying forward
+   through the vortex-ring band (fail if hovering straight down at 0.5–1.5 v_h); clear the canopy (0.33 m in the simulator).
 2. **Ride the downdraft** — a VEGA-2-like 3 m/s, ~2 h downdraft: holding altitude costs +1.4 kW; the right call is to
    ride 3 km down and climb back (0.4 kWh).
-3. **Dive budget** — dive to 51 km for samples while the battery interior climbs toward 57 °C; abort logic at 50 °C.
+3. **Dive budget** — dive to 52 km at 1.5 m/s down, 3.5 m/s forward, while the battery interior climbs toward 57 °C; abort logic at 52 °C.
 4. **Relay windows** — a 13-minute pass every ~1.8 h (1000 km orbit); store-and-forward, no live stick from Earth
    (2.3–14.3 min light time).
 5. **Sunset** — choose when to start the final dive so the last data leave on the last relay pass.
@@ -423,9 +544,9 @@ real constraints:
 ### 6.2 A whole Venus day: where VESPER works, where it fails, and the margins (F13, F15) [K]
 
 Drifting with the 65 m/s super-rotation at 55 km, one air-mass day lasts 154 h (6.4 Earth days). The array follows
-the Sun: zero for the ~77 h night, up to 2.97 kW at local noon. VESPER is released 16.6 h after dawn, when the array
-first carries loiter (1.34 kW), and flies 49 h until the Sun is too low again (F13a). **It fails at night**: a 3-day
-night at loiter power needs ~103 kWh against 1.04 kWh stored (ratio 0.01).
+the Sun: zero for the ~77 h night, up to 2.97 kW at local noon. VESPER is released 19.3 h after dawn, when the array
+first carries loiter (1.62 kW), and flies 44 h until the Sun is too low again (F13a shows the 4 Nov case). **It fails at night**: a 3-day
+night at loiter power needs ~125 kWh against 1.11 kWh stored (ratio 0.009).
 
 **Station-keeping vs drifting**: holding a ground position means flying at the wind speed, 49–84 m/s at 55 km. The
 rotors would run at an advance ratio of 0.7–1.2 (outside any rotor's envelope; the momentum model stops at ~30 m/s,
@@ -440,26 +561,28 @@ hold an airspeed (model to 30 m/s) and the airframe-drag lower bound at the meas
 
 | Limit | Value | Margin |
 |---|---|---|
-| Noon solar / loiter power | 2.97 / 1.34 kW | 2.2× |
-| Thrust margin / gust thrust peak | 60 % / 14 % of weight | 4.3× |
+| Noon solar / loiter power | 2.97 / 1.62 kW | 1.8× |
+| Thrust margin / gust thrust peak | 60 % / 33 % of weight (§4.7) | 1.8× |
+| Pull-out battery current: limit / peak at cos z 0.71 | 53.6 / 50.1 A | 1.07× — **0.95× at cos z 0.63** |
+| Motor-out thrust: 591 rpm capacity / weight + interaction | 444 / 394 N | 1.13× |
 | Arm stress allowable / actual | 300 / 68 MPa | 4.4× |
 | Entry-g qualification / peak | 100 / 56 g | 1.8× |
-| Tested acid exposure / mission | FEP 168 h at 120 °C / 49 h (FEP skin only; CFRP, hinges, seals untested) | 3.4× |
+| Tested acid exposure / mission | FEP 168 h at 120 °C / 44 h (FEP skin only; CFRP, hinges, seals untested) | 3.8× |
 | Tip-Mach cap / hover | 0.7 / 0.26 | 2.7× |
 | Release altitude margin / p99 pull-out loss | 6000 / 41 m | ~150× |
 | Battery charge headroom: (45 °C − air) / (interior − air) at 55 km | 19 / 10.6 K | 1.8× |
-| Dive headroom: (60 °C − cruise) / (dive peak − cruise) | 23.4 / 20.6 K | 1.13× — **thinnest above 1** |
-| Night energy stored / needed | 1.04 / ~103 kWh | **0.01 — fails** |
+| Dive headroom: (60 °C − cruise) / (dive peak − cruise), 52 km floor | 21.4 / 18.9 K | 1.13× — **thinnest above 1** |
+| Night energy stored / needed | 1.11 / ~125 kWh | **0.009 — fails** |
 
 ![F15](../outputs/F15_margins.png)
 
-**F15.** *Every margin is above 1 except the night; the battery temperature in dives is the thinnest.* Margin
+**F15 (4 Nov baseline; table above is current).** *Every margin is above 1 except the night; the battery temperature in dives is the thinnest.* Margin
 ratios (log scale; 1 = at the limit).
 
 ### 6.3 Does it land? No — end of mission and why (F14) [K]
 
 VESPER **never lands on the surface (≈ 460 °C, 92 bar) and is not designed to**. The mission ends at sunset: a
-measuring dive through the middle cloud until the battery passes its 60 °C discharge limit at ~47 km (49 h). After
+measuring dive through the middle cloud until the battery passes its 60 °C discharge limit at ~50 km (44 h). The fall below that depth is the 4 Nov calculation from 47 km. After
 that it falls unpowered:
 - **Rotors windmilling** (they act as a rotary-wing decelerator, the idea NASA Ames proposed for Venus probes,
   Young et al. 2004 [D-ag]; drag area C_D 1.2 × 32 m² [Y]): ~12.4 h to the surface, touching down at < 1 m/s. The
@@ -494,8 +617,8 @@ two of them.* Flight hours of three variants.
 **Honest feasibility [K/Y].**
 - *Physics is favourable*: at 55 km Venus is Earth-like for a rotor (ρ 0.89, Re 1.7×10⁵, tip Mach 0.26); hover costs
   ~48 W/kg, like an Earth drone — not Mars' ~160–200 W/kg (MSH/Ingenuity [D-ag]).
-- *Energy is the limit*: a pure rotorcraft cannot store a 3-day night (≈ 1.34 kW × 77 h ≈ 103 kWh). It lives for one
-  air-mass day (~49 h). This is the main result to say out loud.
+- *Energy is the limit*: a pure rotorcraft cannot store a 3-day night (≈ 1.62 kW × 77 h ≈ 125 kWh). It lives for one
+  air-mass day (~44 h). This is the main result to say out loud.
 - *Mass growth is the design driver*: each kg added asks for most of a kg more. With direct drive the design does not
   close below ~185 Wh/kg cells or ~5.2 N·m/kg motors (Ingenuity's 163 Wh/kg cells would not close); the 5:1 geared
   drive removes that cliff — 180 Wh/kg cells: 52.5 kg and 43.8 h; 30 % contingency: 51.5 kg and 44.4 h. A 1 h no-sun
@@ -516,10 +639,10 @@ and after (label); register in `aerokit.venus.risk`.
 | ID | Risk | L×C → after | Mitigation (evidence in `risk.py`) |
 |---|---|---|---|
 | R1 | mid-air deployment fails | 15 → 10 | spin up on the bridle; spring hinges with latches; Earth balloon-drop tests at 1–2 km (density match, Izraelevitz 2025 [D-ag]) |
-| R2 | night falls before goals are met | 12 → 9 | release at the morning hour angle where the array first covers loiter (−51°); science early; sunset dive; hybrid option |
+| R2 | night falls before goals are met | 12 → 9 | release at the morning hour angle where the array first covers loiter (−45°); science early; sunset dive; hybrid option |
 | R3 | acid degradation | 12 → 6 | FEP/PFA on every wetted surface, Parylene cells, sealed motor-gearbox cans; acid qualification of wrapped CFRP |
 | R6 | slow large rotors, flap dynamics | 12 → 6 | collective actuators for attitude, stiff blades (1.7/rev), simulator control tests |
-| R4 | battery overheats in dives | 9 → 6 | diode heat pipe, 51 km floor for dives (57 °C peak), abort at 50 °C at depth, PCM option |
+| R4 | battery overheats in dives | 9 → 6 | diode heat pipe, 52 km floor for dives (57 °C peak), abort at 52 °C at depth, PCM option |
 | R9 | entry loads on the folded structure | 8 → 4 | shallow corridor, locked arms, 100 g qualification |
 | R5, R7, R8, R10 | downdrafts, comms gaps, nav drift, atmosphere uncertainty | ≤ 8 → ≤ 4 | ride downdrafts; store-and-forward; air-frame nav + Doppler; size on the thin case |
 
@@ -541,6 +664,8 @@ the 55 → 51 → 55 km dive profile; (5) *flight software* — the whole CONOPS
 `outputs/vesper_for_simulator.json` — the part LuGus already does for Mars.
 
 ### 7.1 Independent cross-checks of the headline numbers [K]
+
+These check the 4 Nov isolated-rotor numbers. The 6 Nov budget has its own checks: `off` at 55 km reproduces this table, and the end states follow the 6-DOF simulator (§0).
 
 `python 04_Venus/scripts/venus_crosscheck.py` re-derives the three headline numbers without BEMT, without the mass closure
 and without the simulator (→ `outputs/crosscheck.json`, `.md`):
@@ -586,10 +711,10 @@ answer is "we have not done it", we say so.
    - Landis & Haag exclude the up-welling light [D-ag]. I have not checked whether bifacial III-V flight cells exist.
    - Answer: with single-sided cells VESPER still flies a ~27 h sunlit window. The bifacial deck is a technology bet,
      listed in the soft spots and not counted in the baseline claims.
-2. **"Balloons already stay up for months between 52 and 62 km. Why a 49 h rotorcraft?"** — The rehearsed line
+2. **"Balloons already stay up for months between 52 and 62 km. Why a 44 h rotorcraft?"** — The rehearsed line
    "balloons cannot control altitude" was wrong. The JPL/Aerostar variable-altitude aerobot design covers 52–62 km with
    a 117-day goal [D-ag]. On duration, a balloon beats a pure rotorcraft.
-   - What a rotorcraft adds is *fast* control: a 51 km dive and back in 0.45 h, station on a cloud feature in the
+   - What a rotorcraft adds is *fast* control: a 52 km dive and back in about 1 h, station on a cloud feature in the
      air-mass frame, and climbing out of a downdraft on demand.
    - The 3 kg payload (nephelometer, aerosol mass spectrometer, T/p/wind/turbulence sensors, camera; `design.json`
      [Y]) is chosen for that kind of sampling.
@@ -619,14 +744,14 @@ answer is "we have not done it", we say so.
    H₂SO₄ at 120 °C, 0 % weight gain [D-ag]. Parylene-coated cells: no loss after 96 h in 96 % acid [D-ag].
    - Wrapped CFRP, PFA-coated Ti hinges and the PTFE shaft seal have **no Venus-acid data** (open challenges 3–4).
    - The 3.4× margin covers the FEP skin only; the margin table now says so.
-7. **"A downdraft hits during your 51 km dive."** — We had treated the two hazards separately.
-   - Riding a VEGA-2 downdraft (~2.9 km [D-ag]) from 51 km would take the vehicle near 48 km, where the battery
+7. **"A downdraft hits during your 52 km dive."** — We had treated the two hazards separately.
+   - Riding a VEGA-2 downdraft (~2.9 km [D-ag]) from 52 km would take the vehicle near 49 km, where the battery
      passes 60 °C (§4.6).
-   - Holding against it costs +1.4 kW (§4.7) on top of the higher demand at 51 km. Most of that comes from the 1.04
+   - Holding against it costs +1.4 kW (§4.7) on top of the higher demand at depth. Most of that comes from the 1.11
      kWh battery unless the Sun is high.
-   - Rule: **dive only when the array covers hover (cos z ≥ 0.80), and abort the dive and climb at once when a
+   - Rule: **dive only when the array covers hover (cos z ≥ 0.83 with interaction), and abort the dive and climb at once when a
      downdraft is detected.**
-   - We have not run the combination in the simulator; it is §6.1 scenarios 2 and 3 together.
+   - The simulator's turbulence seeds now give part of this: the worst of three seeds on the 52 km dive reaches 35 % SoC. A slower climb helps: 2 m/s keeps 71 % and 1.5 m/s 78 % in calm air against 65 % at 3 m/s, for +1.2 K [K, budget only]. A full VEGA-size downdraft in a dive is still not run.
 8. **"Where is the mass of the six collective actuators, the blade-fold hinges and the petal mechanisms?"** — They
    are not itemised; they sit in the 20 % contingency (7.3 kg) [Y].
    - If they were extra, growth is steep: +2 kg payload → 48.6 kg and 46.2 h (`sensitivity.json`), i.e. ~2.5 kg of
@@ -636,11 +761,11 @@ answer is "we have not done it", we say so.
    - That needs a near-equatorial orbit matched to the release latitude. The super-rotation is zonal, so VESPER stays
      at its latitude.
    - Polar-orbit geometry and the carrier's capture Δv are not computed; both are open items.
-10. **"One rotor fails. Can an alternating-spin hexacopter still control yaw?"** — We modelled the thrust only:
-    1.6 × 5/6 = 1.33 × weight. Controllability after each single failure is **not analysed**.
+10. **"One rotor fails. Can an alternating-spin hexacopter still control yaw?"** — No, not heading; it keeps altitude and attitude.
+    The 1.6 × 5/6 = 1.33 × weight figure was wrong: roll balance forces the opposite rotor to ~0, so four of the five surviving rotors carry the weight.
+    Simulator (hover, 55 km, `DOGRULAMA.md` [K on Y]): survivors run at 591 rpm, capacity 444 N vs 394 N needed (13 % margin); heading is given up, yaw rate ≤ 24 °/s; **24.5 m lost, peak tilt 66°**, 38.5 A. At 514 rpm the margin is 3.6 %. Each single failure other than rotor 2 is not run.
     - Per-rotor collective, reversible to −16° (answer 5), gives each rotor independent thrust and torque control,
-      which fixed-pitch hexacopters lack. Whether that is enough is a simulator test, using the `motor out` failure
-      mode in `sim_params.json`.
+      which fixed-pitch hexacopters lack.
 
 Smaller points fixed:
 - Risk R2 said "release near noon"; the baseline releases at hour angle −51° (16.6 h after dawn), and the table now
@@ -669,8 +794,8 @@ lift model gives a 3–4 m sphere for VEGA's numbers (test).
 | 5:00–6:00 | Rerun with any mentor numbers — `python 04_Venus/scripts/venus_day.py --final --payload-kg 5 --cruise-km 56 --rotor-d 2.3` (~2 min; writes `out_variant_*/` and `design_variant_*.json`, never touching the baseline hand-off); consistency and units check; rehearse |
 
 One-line answers to rehearse: *why rotors on Venus?* — at 55 km a rotor works as on Earth (Re ~1.7×10⁵, ~48 W/kg), and it
-controls altitude and position *fast* (a 51 km dive and back in 0.45 h); variable-altitude balloons last longer (§7.2-2). *Wind 65 m/s?* — we fly in the air mass; ground position is irrelevant to
-survival. *Night?* — a pure rotorcraft cannot; it lives one 49 h air-mass day; with mentor approval, a helium cell makes
+controls altitude and position *fast* (a 52 km dive and back in about 1 h); variable-altitude balloons last longer (§7.2-2). *Wind 65 m/s?* — we fly in the air mass; ground position is irrelevant to
+survival. *Night?* — a pure rotorcraft cannot; it lives one 44 h air-mass day; with mentor approval, a helium cell makes
 it months. *Acid?* — FEP/PFA on every wetted surface (FEP: 0 % weight gain at 120 °C [D-ag]; PFA by analogy [Y]). *How do you know the rotor
 numbers?* — BEMT validated against two NACA tests (rms 6 %). *Biggest weakness?* — mass growth; the geared drive is
 what makes the design robust, and a 1 h no-sun reserve still does not close.
@@ -697,6 +822,7 @@ python 04_Venus/scripts/venus_day.py --final      # numbers, F1-F15 (datawiz aud
 python 04_Venus/scripts/venus_crosscheck.py       # headline numbers by simpler methods (§7.1)
 python 04_Venus/scripts/venus_sim_params.py       # sim_params.json for the LuGus simulator
 python 04_Venus/scripts/venus_day.py --final --payload-kg 5 --cruise-km 56   # what-if with mentor numbers -> out_variant_*/
+python 04_Venus/scripts/venus_budget_update.py    # 6 Nov budget (§0), reads guc_egrisi.json, ~13 min -> outputs/variants/budget_update/
 python -m pytest -q -p no:cacheprovider tests/test_venus_bemt.py tests/test_venus_entry.py tests/test_venus_atmosphere.py tests/test_venus_system.py
 ```
 

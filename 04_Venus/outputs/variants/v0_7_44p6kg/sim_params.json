@@ -1,0 +1,4305 @@
+{
+ "schema": "vesper_sim_params/1",
+ "version": "0.7",
+ "generated_by": "python 04_Venus/scripts/venus_variant_v07.py",
+ "generated_at": "2026-11-06T12:50+03:00",
+ "units": "SI unless stated; temperatures K in tables, degC in limits",
+ "frame": "body: x forward (between arms 1 and 6), y left, z up; world: x east, z up; wind blows westward (negative x) at the tabulated speed",
+ "atmosphere_and_wind": {
+  "columns": {
+   "altitude_m": {
+    "unit": "m",
+    "tag": "K",
+    "source": "grid"
+   },
+   "temperature_K": {
+    "unit": "K",
+    "tag": "D/D(secondary)",
+    "source": "40-64 km: Pioneer Venus 4-probe mean (PDS raw tables); outside: VIRA-like table via Wikipedia"
+   },
+   "pressure_Pa": {
+    "unit": "Pa",
+    "tag": "D/D(secondary)",
+    "source": "as temperature"
+   },
+   "density_kg_m3": {
+    "unit": "kg/m^3",
+    "tag": "D/D(secondary)",
+    "source": "as temperature"
+   },
+   "density_low": {
+    "unit": "kg/m^3",
+    "tag": "D",
+    "source": "probe envelope minimum (40-64 km only)"
+   },
+   "density_high": {
+    "unit": "kg/m^3",
+    "tag": "D",
+    "source": "probe envelope maximum (40-64 km only)"
+   },
+   "speed_of_sound_m_s": {
+    "unit": "m/s",
+    "tag": "K from D",
+    "source": "ideal gas with NIST Cp of 96.5 % CO2 + 3.5 % N2"
+   },
+   "viscosity_Pa_s": {
+    "unit": "Pa s",
+    "tag": "D",
+    "source": "NIST WebBook CO2 at 0.1 MPa"
+   },
+   "gravity_m_s2": {
+    "unit": "m/s^2",
+    "tag": "K",
+    "source": "8.87 (R/(R+h))^2"
+   },
+   "wind_west_mean_m_s": {
+    "unit": "m/s",
+    "tag": "D/D-ag",
+    "source": "40-64 km: PV DLBI, mean of the probes with a sample within +-0.5 km (2-4 probes; 4-probe interpolation is 0-2.4 m/s lower, R_audit_2026-11-04); outside: Landis anchors, linear [Y]"
+   },
+   "wind_west_low_m_s": {
+    "unit": "m/s",
+    "tag": "D+Y",
+    "source": "probe minimum − 10 m/s"
+   },
+   "wind_west_high_m_s": {
+    "unit": "m/s",
+    "tag": "D+Y",
+    "source": "probe maximum + 10 m/s"
+   },
+   "solar_array_overhead_W_m2": {
+    "unit": "W/m^2",
+    "tag": "D-ag+K",
+    "source": "Landis & Haag 2013 Table 1 (29 % array), LSFR shape above 60 km"
+   },
+   "up_down_ratio": {
+    "unit": "-",
+    "tag": "D",
+    "source": "Pioneer Venus LSFR upward/downward flux (COMBINED channel)"
+   }
+  },
+  "rows": {
+   "altitude_m": [
+    30000.0,
+    30500.0,
+    31000.0,
+    31500.0,
+    32000.0,
+    32500.0,
+    33000.0,
+    33500.0,
+    34000.0,
+    34500.0,
+    35000.0,
+    35500.0,
+    36000.0,
+    36500.0,
+    37000.0,
+    37500.0,
+    38000.0,
+    38500.0,
+    39000.0,
+    39500.0,
+    40000.0,
+    40500.0,
+    41000.0,
+    41500.0,
+    42000.0,
+    42500.0,
+    43000.0,
+    43500.0,
+    44000.0,
+    44500.0,
+    45000.0,
+    45500.0,
+    46000.0,
+    46500.0,
+    47000.0,
+    47500.0,
+    48000.0,
+    48500.0,
+    49000.0,
+    49500.0,
+    50000.0,
+    50500.0,
+    51000.0,
+    51500.0,
+    52000.0,
+    52500.0,
+    53000.0,
+    53500.0,
+    54000.0,
+    54500.0,
+    55000.0,
+    55500.0,
+    56000.0,
+    56500.0,
+    57000.0,
+    57500.0,
+    58000.0,
+    58500.0,
+    59000.0,
+    59500.0,
+    60000.0,
+    60500.0,
+    61000.0,
+    61500.0,
+    62000.0,
+    62500.0,
+    63000.0,
+    63500.0,
+    64000.0,
+    64500.0,
+    65000.0,
+    65500.0,
+    66000.0,
+    66500.0,
+    67000.0,
+    67500.0,
+    68000.0,
+    68500.0,
+    69000.0,
+    69500.0,
+    70000.0,
+    70500.0,
+    71000.0,
+    71500.0,
+    72000.0,
+    72500.0,
+    73000.0,
+    73500.0,
+    74000.0,
+    74500.0,
+    75000.0,
+    75500.0,
+    76000.0,
+    76500.0,
+    77000.0,
+    77500.0,
+    78000.0,
+    78500.0,
+    79000.0,
+    79500.0,
+    80000.0
+   ],
+   "temperature_K": [
+    495.15,
+    490.95,
+    486.75,
+    482.55,
+    478.35,
+    474.15,
+    469.95,
+    465.75,
+    461.55,
+    457.35,
+    453.15,
+    449.45,
+    445.75,
+    442.05,
+    438.35,
+    434.65,
+    430.95,
+    427.25,
+    423.55,
+    419.85,
+    415.787,
+    412.39,
+    408.993,
+    405.626,
+    402.259,
+    399.023,
+    395.786,
+    392.865,
+    389.945,
+    387.105,
+    384.264,
+    381.017,
+    377.769,
+    374.4,
+    371.031,
+    367.634,
+    364.237,
+    360.101,
+    355.965,
+    351.93,
+    347.896,
+    343.433,
+    338.971,
+    334.392,
+    329.812,
+    324.793,
+    319.774,
+    314.62,
+    309.466,
+    304.301,
+    299.137,
+    293.819,
+    288.501,
+    283.694,
+    278.887,
+    274.987,
+    271.088,
+    267.378,
+    263.667,
+    260.711,
+    257.754,
+    254.691,
+    251.627,
+    251.659,
+    251.692,
+    249.431,
+    247.17,
+    245.41,
+    243.65,
+    245.15,
+    243.15,
+    241.85,
+    240.55,
+    239.25,
+    237.95,
+    236.65,
+    235.35,
+    234.05,
+    232.75,
+    231.45,
+    230.15,
+    228.5,
+    226.85,
+    225.2,
+    223.55,
+    221.9,
+    220.25,
+    218.6,
+    216.95,
+    215.3,
+    213.65,
+    212.0,
+    210.35,
+    208.7,
+    207.05,
+    205.4,
+    203.75,
+    202.1,
+    200.45,
+    198.8,
+    197.15
+   ],
+   "pressure_Pa": [
+    985100.0,
+    936144.0,
+    889620.0,
+    845409.0,
+    803394.0,
+    763468.0,
+    725526.0,
+    689470.0,
+    655205.0,
+    622643.0,
+    591700.0,
+    561449.0,
+    532745.0,
+    505509.0,
+    479665.0,
+    455142.0,
+    431873.0,
+    409793.0,
+    388843.0,
+    368963.0,
+    341444.0,
+    323427.0,
+    305411.0,
+    289068.0,
+    272726.0,
+    257896.0,
+    243066.0,
+    229671.0,
+    216276.0,
+    204197.0,
+    192118.0,
+    181231.0,
+    170343.0,
+    160532.0,
+    150720.0,
+    141892.0,
+    133063.0,
+    125135.0,
+    117208.0,
+    110068.0,
+    102928.0,
+    96502.1,
+    90075.7,
+    84326.1,
+    78576.5,
+    73423.2,
+    68270.0,
+    63657.4,
+    59044.8,
+    54938.9,
+    50833.0,
+    47185.2,
+    43537.5,
+    40308.2,
+    37079.0,
+    34250.1,
+    31421.2,
+    28960.5,
+    26499.8,
+    24379.4,
+    22259.0,
+    20441.9,
+    18624.8,
+    17270.4,
+    15916.0,
+    14589.5,
+    13263.0,
+    12145.0,
+    11027.0,
+    10664.5,
+    9765.0,
+    8859.47,
+    8037.91,
+    7292.53,
+    6616.28,
+    6002.74,
+    5446.09,
+    4941.06,
+    4482.86,
+    4067.16,
+    3690.0,
+    3330.85,
+    3006.66,
+    2714.02,
+    2449.87,
+    2211.42,
+    1996.18,
+    1801.9,
+    1626.52,
+    1468.21,
+    1325.31,
+    1196.32,
+    1079.88,
+    974.774,
+    879.899,
+    794.258,
+    716.953,
+    647.172,
+    584.183,
+    527.324,
+    476.0
+   ],
+   "density_kg_m3": [
+    10.3967,
+    9.96454,
+    9.55104,
+    9.15538,
+    8.77678,
+    8.41448,
+    8.06777,
+    7.73596,
+    7.4184,
+    7.11447,
+    6.82357,
+    6.52802,
+    6.24569,
+    5.97598,
+    5.71832,
+    5.47216,
+    5.23698,
+    5.01227,
+    4.79757,
+    4.59241,
+    4.3143,
+    4.11838,
+    3.92247,
+    3.74133,
+    3.5602,
+    3.39209,
+    3.22398,
+    3.06768,
+    2.91139,
+    2.76745,
+    2.62352,
+    2.49461,
+    2.3657,
+    2.24822,
+    2.13073,
+    2.02336,
+    1.91598,
+    1.82096,
+    1.72594,
+    1.63805,
+    1.55015,
+    1.47124,
+    1.39233,
+    1.32012,
+    1.24791,
+    1.18305,
+    1.11819,
+    1.05858,
+    0.998982,
+    0.94417,
+    0.889357,
+    0.83944,
+    0.789523,
+    0.742506,
+    0.69549,
+    0.650902,
+    0.606315,
+    0.566036,
+    0.525758,
+    0.488761,
+    0.451765,
+    0.419396,
+    0.387028,
+    0.35886,
+    0.330693,
+    0.305653,
+    0.280613,
+    0.258623,
+    0.236633,
+    0.227332,
+    0.20987,
+    0.191432,
+    0.174618,
+    0.159286,
+    0.145305,
+    0.132555,
+    0.120927,
+    0.110322,
+    0.100651,
+    0.0918302,
+    0.0837852,
+    0.0761765,
+    0.0692624,
+    0.0629792,
+    0.057269,
+    0.0520794,
+    0.0473627,
+    0.0430756,
+    0.0391788,
+    0.0356365,
+    0.0324165,
+    0.0294891,
+    0.0268277,
+    0.0244081,
+    0.022208,
+    0.0202075,
+    0.0183885,
+    0.0167342,
+    0.0152298,
+    0.0138616,
+    0.0126172
+   ],
+   "density_low": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    4.22343,
+    4.03117,
+    3.83892,
+    3.66031,
+    3.48171,
+    3.3173,
+    3.15288,
+    2.9983,
+    2.84372,
+    2.70096,
+    2.5582,
+    2.42822,
+    2.29824,
+    2.187,
+    2.07575,
+    1.97166,
+    1.86757,
+    1.778,
+    1.68844,
+    1.60191,
+    1.51539,
+    1.43776,
+    1.36014,
+    1.28934,
+    1.21854,
+    1.15471,
+    1.09088,
+    1.03271,
+    0.97454,
+    0.920795,
+    0.86705,
+    0.818245,
+    0.76944,
+    0.72133,
+    0.67322,
+    0.627885,
+    0.58255,
+    0.541495,
+    0.50044,
+    0.464785,
+    0.42913,
+    0.40098,
+    0.37283,
+    0.345585,
+    0.31834,
+    0.294965,
+    0.27159,
+    0.24993,
+    0.22827,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "density_high": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    4.38007,
+    4.17753,
+    3.975,
+    3.78968,
+    3.60436,
+    3.43405,
+    3.26375,
+    3.10817,
+    2.95258,
+    2.80875,
+    2.66492,
+    2.53609,
+    2.40727,
+    2.28548,
+    2.1637,
+    2.05462,
+    1.94555,
+    1.85155,
+    1.75756,
+    1.67096,
+    1.58436,
+    1.503,
+    1.42165,
+    1.34656,
+    1.27147,
+    1.20565,
+    1.13983,
+    1.0795,
+    1.01917,
+    0.963005,
+    0.90684,
+    0.855755,
+    0.80467,
+    0.75757,
+    0.71047,
+    0.66664,
+    0.62281,
+    0.581395,
+    0.53998,
+    0.50208,
+    0.46418,
+    0.430185,
+    0.39619,
+    0.367235,
+    0.33828,
+    0.31277,
+    0.28726,
+    0.2652,
+    0.24314,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "speed_of_sound_m_s": [
+    341.847,
+    340.505,
+    339.158,
+    337.804,
+    336.446,
+    335.081,
+    333.71,
+    332.334,
+    330.952,
+    329.563,
+    328.168,
+    326.934,
+    325.695,
+    324.452,
+    323.203,
+    321.949,
+    320.69,
+    319.425,
+    318.156,
+    316.881,
+    315.474,
+    314.293,
+    313.107,
+    311.928,
+    310.743,
+    309.6,
+    308.452,
+    307.412,
+    306.369,
+    305.351,
+    304.329,
+    303.156,
+    301.979,
+    300.752,
+    299.52,
+    298.273,
+    297.019,
+    295.486,
+    293.944,
+    292.432,
+    290.912,
+    289.22,
+    287.518,
+    285.761,
+    283.992,
+    282.04,
+    280.074,
+    278.04,
+    275.991,
+    273.922,
+    271.836,
+    269.326,
+    267.107,
+    265.08,
+    263.034,
+    261.359,
+    259.666,
+    258.043,
+    256.407,
+    255.093,
+    253.771,
+    252.391,
+    251.002,
+    251.017,
+    251.032,
+    249.998,
+    248.95,
+    248.131,
+    247.308,
+    248.009,
+    247.074,
+    246.463,
+    245.85,
+    245.236,
+    244.619,
+    244.001,
+    243.381,
+    242.758,
+    242.134,
+    241.508,
+    240.88,
+    240.079,
+    239.275,
+    238.468,
+    237.601,
+    236.723,
+    235.841,
+    234.956,
+    234.067,
+    233.176,
+    232.28,
+    231.382,
+    230.479,
+    229.574,
+    228.664,
+    227.751,
+    226.835,
+    225.915,
+    224.99,
+    224.062,
+    223.131
+   ],
+   "viscosity_Pa_s": [
+    2.38733e-05,
+    2.36878e-05,
+    2.35021e-05,
+    2.33163e-05,
+    2.31304e-05,
+    2.29443e-05,
+    2.27581e-05,
+    2.25717e-05,
+    2.23852e-05,
+    2.21986e-05,
+    2.20118e-05,
+    2.18472e-05,
+    2.16824e-05,
+    2.15175e-05,
+    2.13525e-05,
+    2.11873e-05,
+    2.10221e-05,
+    2.08567e-05,
+    2.06912e-05,
+    2.05256e-05,
+    2.03436e-05,
+    2.01913e-05,
+    2.00389e-05,
+    1.98878e-05,
+    1.97366e-05,
+    1.95909e-05,
+    1.9445e-05,
+    1.93134e-05,
+    1.91817e-05,
+    1.90537e-05,
+    1.89256e-05,
+    1.87792e-05,
+    1.86328e-05,
+    1.84804e-05,
+    1.83256e-05,
+    1.81695e-05,
+    1.80134e-05,
+    1.78232e-05,
+    1.76331e-05,
+    1.74477e-05,
+    1.72607e-05,
+    1.70522e-05,
+    1.68437e-05,
+    1.66298e-05,
+    1.64158e-05,
+    1.61812e-05,
+    1.59427e-05,
+    1.56978e-05,
+    1.54528e-05,
+    1.52074e-05,
+    1.49614e-05,
+    1.47053e-05,
+    1.44492e-05,
+    1.42177e-05,
+    1.39862e-05,
+    1.37984e-05,
+    1.36084e-05,
+    1.34276e-05,
+    1.32469e-05,
+    1.31028e-05,
+    1.29588e-05,
+    1.28095e-05,
+    1.26603e-05,
+    1.26618e-05,
+    1.26634e-05,
+    1.2553e-05,
+    1.2442e-05,
+    1.23555e-05,
+    1.22691e-05,
+    1.23428e-05,
+    1.22445e-05,
+    1.21807e-05,
+    1.21168e-05,
+    1.2053e-05,
+    1.19891e-05,
+    1.19252e-05,
+    1.18614e-05,
+    1.17975e-05,
+    1.17337e-05,
+    1.16698e-05,
+    1.1606e-05,
+    1.15249e-05,
+    1.14439e-05,
+    1.13628e-05,
+    1.12817e-05,
+    1.12005e-05,
+    1.11193e-05,
+    1.10381e-05,
+    1.09569e-05,
+    1.08756e-05,
+    1.07944e-05,
+    1.07131e-05,
+    1.06318e-05,
+    1.05505e-05,
+    1.04692e-05,
+    1.03879e-05,
+    1.03065e-05,
+    1.02251e-05,
+    1.01437e-05,
+    1.00623e-05,
+    9.98093e-06
+   ],
+   "gravity_m_s2": [
+    8.78271,
+    8.78126,
+    8.77982,
+    8.77838,
+    8.77694,
+    8.77549,
+    8.77405,
+    8.77261,
+    8.77117,
+    8.76973,
+    8.76829,
+    8.76685,
+    8.76541,
+    8.76397,
+    8.76253,
+    8.76109,
+    8.75965,
+    8.75821,
+    8.75677,
+    8.75534,
+    8.7539,
+    8.75246,
+    8.75102,
+    8.74959,
+    8.74815,
+    8.74672,
+    8.74528,
+    8.74385,
+    8.74241,
+    8.74098,
+    8.73955,
+    8.73811,
+    8.73668,
+    8.73525,
+    8.73381,
+    8.73238,
+    8.73095,
+    8.72952,
+    8.72809,
+    8.72666,
+    8.72523,
+    8.7238,
+    8.72237,
+    8.72094,
+    8.71951,
+    8.71808,
+    8.71666,
+    8.71523,
+    8.7138,
+    8.71237,
+    8.71095,
+    8.70952,
+    8.70809,
+    8.70667,
+    8.70524,
+    8.70382,
+    8.70239,
+    8.70097,
+    8.69955,
+    8.69812,
+    8.6967,
+    8.69528,
+    8.69385,
+    8.69243,
+    8.69101,
+    8.68959,
+    8.68817,
+    8.68675,
+    8.68533,
+    8.68391,
+    8.68249,
+    8.68107,
+    8.67965,
+    8.67823,
+    8.67681,
+    8.6754,
+    8.67398,
+    8.67256,
+    8.67114,
+    8.66973,
+    8.66831,
+    8.6669,
+    8.66548,
+    8.66406,
+    8.66265,
+    8.66124,
+    8.65982,
+    8.65841,
+    8.65699,
+    8.65558,
+    8.65417,
+    8.65276,
+    8.65134,
+    8.64993,
+    8.64852,
+    8.64711,
+    8.6457,
+    8.64429,
+    8.64288,
+    8.64147,
+    8.64006
+   ],
+   "wind_west_mean_m_s": [
+    29.8333,
+    30.3222,
+    30.8111,
+    31.3,
+    31.7889,
+    32.2778,
+    32.7667,
+    33.2556,
+    33.7444,
+    34.2333,
+    34.7222,
+    35.2111,
+    35.7,
+    36.1889,
+    36.6778,
+    37.1667,
+    37.6556,
+    38.1444,
+    38.6333,
+    39.1222,
+    38.395,
+    39.3725,
+    40.35,
+    41.3912,
+    42.4325,
+    43.695,
+    44.9575,
+    46.8687,
+    48.78,
+    50.8287,
+    52.8775,
+    54.4637,
+    56.05,
+    56.625,
+    57.2,
+    57.6813,
+    58.1625,
+    58.71,
+    59.2575,
+    59.5975,
+    59.9375,
+    60.3125,
+    60.6875,
+    60.8163,
+    60.945,
+    61.9758,
+    63.0067,
+    62.9421,
+    62.8775,
+    64.1287,
+    65.38,
+    63.905,
+    62.43,
+    66.9183,
+    71.4067,
+    73.9217,
+    76.4367,
+    78.4933,
+    80.55,
+    82.925,
+    85.3,
+    89.07,
+    92.84,
+    94.56,
+    96.28,
+    99.865,
+    103.45,
+    100.695,
+    97.94,
+    96.7857,
+    96.4286,
+    96.0714,
+    95.7143,
+    95.3571,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0,
+    95.0
+   ],
+   "wind_west_low_m_s": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    25.1,
+    26.25,
+    27.4,
+    28.775,
+    30.15,
+    31.225,
+    32.3,
+    33.15,
+    34.0,
+    36.025,
+    38.05,
+    39.075,
+    40.1,
+    41.225,
+    42.35,
+    44.175,
+    46.0,
+    45.4,
+    44.8,
+    43.9,
+    43.0,
+    42.6,
+    42.2,
+    42.5,
+    42.8,
+    43.85,
+    44.9,
+    46.4,
+    47.9,
+    48.45,
+    49.0,
+    49.7,
+    50.4,
+    50.8,
+    51.2,
+    53.3,
+    55.4,
+    57.4,
+    59.4,
+    64.4,
+    69.4,
+    73.3,
+    77.2,
+    81.74,
+    86.28,
+    87.64,
+    89.0,
+    88.47,
+    87.94,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "wind_west_high_m_s": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    51.93,
+    52.79,
+    53.65,
+    54.84,
+    56.03,
+    57.68,
+    59.33,
+    61.7,
+    64.07,
+    67.065,
+    70.06,
+    72.08,
+    74.1,
+    73.075,
+    72.05,
+    71.2,
+    70.35,
+    71.825,
+    73.3,
+    75.4,
+    77.5,
+    78.65,
+    79.8,
+    80.05,
+    80.3,
+    80.15,
+    80.0,
+    79.85,
+    79.7,
+    81.9,
+    84.1,
+    80.045,
+    75.99,
+    83.195,
+    90.4,
+    93.05,
+    95.7,
+    96.1,
+    96.5,
+    98.85,
+    101.2,
+    104.85,
+    108.5,
+    107.39,
+    106.28,
+    112.09,
+    117.9,
+    112.92,
+    107.94,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "solar_array_overhead_W_m2": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    112.2,
+    117.722,
+    123.516,
+    129.594,
+    135.972,
+    142.664,
+    149.685,
+    157.052,
+    164.781,
+    172.891,
+    181.4,
+    187.758,
+    194.338,
+    201.149,
+    208.199,
+    215.496,
+    223.048,
+    230.866,
+    238.957,
+    247.332,
+    256.0,
+    267.977,
+    280.514,
+    293.637,
+    307.375,
+    321.755,
+    336.808,
+    352.565,
+    369.06,
+    386.326,
+    404.4,
+    417.721,
+    431.482,
+    445.695,
+    460.377,
+    475.542,
+    491.207,
+    507.388,
+    524.102,
+    541.367,
+    559.2,
+    583.192,
+    607.184,
+    622.423,
+    637.661,
+    657.662,
+    677.662,
+    699.938,
+    722.215,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "up_down_ratio": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    0.776278,
+    0.77722,
+    0.778163,
+    0.778643,
+    0.779123,
+    0.780367,
+    0.781611,
+    0.780102,
+    0.778594,
+    0.778336,
+    0.778079,
+    0.780279,
+    0.782478,
+    0.782875,
+    0.783271,
+    0.791677,
+    0.800084,
+    0.811119,
+    0.822154,
+    0.829102,
+    0.83605,
+    0.837832,
+    0.839615,
+    0.841827,
+    0.84404,
+    0.847442,
+    0.850845,
+    0.854804,
+    0.858763,
+    0.860851,
+    0.862939,
+    0.866359,
+    0.869778,
+    0.868867,
+    0.867957,
+    0.867353,
+    0.866749,
+    0.866797,
+    0.866846,
+    0.869605,
+    0.872364,
+    0.870695,
+    0.869026,
+    0.879887,
+    0.890749,
+    0.891141,
+    0.891534,
+    0.89137,
+    0.891205,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "sun_angle_law": {
+   "value": "P(mu0) = P(1) * mu0 (mu0 + 2/3) / (5/3)",
+   "unit": "-",
+   "tag": "Y",
+   "source": "Eddington-type in-cloud law"
+  },
+  "vertical_gust_sigma": {
+   "value": 0.7,
+   "unit": "m/s",
+   "tag": "D-ag",
+   "source": "VEGA balloons at 53-54 km (sd 0.65-0.75), A_vega1985 note"
+  },
+  "vertical_gust_correlation": {
+   "value": 1500.0,
+   "unit": "s",
+   "tag": "K",
+   "source": "VEGA W_a autocorrelation: R(300 s)=0.78, R(600 s)=0.59-0.71, R(1200 s)=0.53-0.56, R(1800 s)=0.28 -> 1/e at ~1500 s (E_04). Sampling is 75.5 s, so periods < ~150 s are not resolved by this record. Tag in venus_turbulence_model.json: K from D. Lagrangian time; flying through the cells at airspeed V the effective time is 1/tau = 1/1500 s + V/5000 m (409 s at 8.9 m/s). [v0.7: was 80.0 in v0.6]"
+  },
+  "horizontal_gust_sigma": {
+   "value": 1.0,
+   "unit": "m/s",
+   "tag": "Y",
+   "source": "VEGA fluctuations up to 1-2 m/s x 1.5 (D-ag)"
+  },
+  "downdraft_episode": {
+   "value": {
+    "speed": [
+     -2.0,
+     -3.3
+    ],
+    "duration_h": 2.0,
+    "altitude_loss_km": 2.9
+   },
+   "unit": "m/s, h, km",
+   "tag": "D-ag",
+   "source": "VEGA-2 event, A_vega1985 note"
+  },
+  "meridional_wind_max": {
+   "value": 7.5,
+   "unit": "m/s",
+   "tag": "D-ag",
+   "source": "PV DLBI |v| <= ~7.5 m/s at 45-62 km, typically 1-5 (A_counselman1980 note)"
+  }
+ },
+ "vehicle": {
+  "mass": {
+   "value": 44.629781,
+   "unit": "kg",
+   "tag": "K",
+   "source": "aerokit.venus.sizing.close with hover +3.42 % (venus_budget_update.close_with_interaction) [v0.7: was 43.655232 in v0.6]"
+  },
+  "cg": {
+   "value": [
+    -0.0,
+    -0.0,
+    0.0394
+   ],
+   "unit": "m",
+   "tag": "K",
+   "source": "component layout of the variant design.json [v0.7: was [-0.0, -0.0, 0.04] in v0.6]"
+  },
+  "inertia": {
+   "value": [
+    [
+     34.196,
+     -0.0,
+     0.0
+    ],
+    [
+     -0.0,
+     34.196,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     67.078
+    ]
+   ],
+   "unit": "kg m^2",
+   "tag": "K",
+   "source": "point masses + rods from the variant design.json [v0.7: was [[33.194, -0.0, 0.0], [-0.0, 33.194, 0.0], [0.0, 0.0, 65.088]] in v0.6]"
+  },
+  "drag_area": {
+   "value": 0.45,
+   "unit": "m^2",
+   "tag": "Y",
+   "source": "airframe C_D A"
+  },
+  "rotors": {
+   "positions": {
+    "value": [
+     [
+      2.3383,
+      1.35,
+      0.14
+     ],
+     [
+      0.0,
+      2.7,
+      0.14
+     ],
+     [
+      -2.3383,
+      1.35,
+      0.14
+     ],
+     [
+      -2.3383,
+      -1.35,
+      0.14
+     ],
+     [
+      -0.0,
+      -2.7,
+      0.14
+     ],
+     [
+      2.3383,
+      -1.35,
+      0.14
+     ]
+    ],
+    "unit": "m",
+    "tag": "K",
+    "source": "arm radius x azimuth 30+60 i deg"
+   },
+   "spin": {
+    "value": [
+     "ccw",
+     "cw",
+     "ccw",
+     "cw",
+     "ccw",
+     "cw"
+    ],
+    "unit": "-",
+    "tag": "Y",
+    "source": "alternating"
+   },
+   "radius": {
+    "value": 1.3,
+    "unit": "m",
+    "tag": "K",
+    "source": "trade + robustness study"
+   },
+   "blades": {
+    "value": 2,
+    "unit": "-",
+    "tag": "Y",
+    "source": "2-blade folding"
+   },
+   "polar_inertia": {
+    "value": 0.1746,
+    "unit": "kg m^2",
+    "tag": "K",
+    "source": "blade rods; aerokit.venus.sizing.close with hover +3.42 % (venus_budget_update.close_with_interaction) [v0.7: was 0.1708 in v0.6]"
+   },
+   "collective_hover": {
+    "value": 7.082503,
+    "unit": "deg",
+    "tag": "K",
+    "source": "BEMT trim at 55 km; aerokit.venus.sizing.close with hover +3.42 % (venus_budget_update.close_with_interaction) [v0.7: was 7.044199 in v0.6]"
+   },
+   "curve_at_55km": {
+    "rows": [
+     {
+      "rpm": 154.26,
+      "thrust_N": 5.759,
+      "torque_Nm": 0.4971,
+      "shaft_W": 8.03
+     },
+     {
+      "rpm": 179.97,
+      "thrust_N": 7.842,
+      "torque_Nm": 0.6701,
+      "shaft_W": 12.63
+     },
+     {
+      "rpm": 205.68,
+      "thrust_N": 10.248,
+      "torque_Nm": 0.8682,
+      "shaft_W": 18.7
+     },
+     {
+      "rpm": 231.39,
+      "thrust_N": 12.978,
+      "torque_Nm": 1.0913,
+      "shaft_W": 26.44
+     },
+     {
+      "rpm": 257.1,
+      "thrust_N": 16.032,
+      "torque_Nm": 1.3394,
+      "shaft_W": 36.06
+     },
+     {
+      "rpm": 282.81,
+      "thrust_N": 19.413,
+      "torque_Nm": 1.6124,
+      "shaft_W": 47.75
+     },
+     {
+      "rpm": 308.52,
+      "thrust_N": 23.122,
+      "torque_Nm": 1.9103,
+      "shaft_W": 61.72
+     },
+     {
+      "rpm": 334.23,
+      "thrust_N": 27.159,
+      "torque_Nm": 2.2331,
+      "shaft_W": 78.16
+     },
+     {
+      "rpm": 359.94,
+      "thrust_N": 31.527,
+      "torque_Nm": 2.5809,
+      "shaft_W": 97.28
+     },
+     {
+      "rpm": 385.64,
+      "thrust_N": 36.228,
+      "torque_Nm": 2.9538,
+      "shaft_W": 119.29
+     },
+     {
+      "rpm": 411.35,
+      "thrust_N": 41.263,
+      "torque_Nm": 3.3518,
+      "shaft_W": 144.39
+     },
+     {
+      "rpm": 437.06,
+      "thrust_N": 46.635,
+      "torque_Nm": 3.7751,
+      "shaft_W": 172.78
+     },
+     {
+      "rpm": 462.77,
+      "thrust_N": 52.346,
+      "torque_Nm": 4.2236,
+      "shaft_W": 204.68
+     },
+     {
+      "rpm": 488.48,
+      "thrust_N": 58.398,
+      "torque_Nm": 4.6977,
+      "shaft_W": 240.31
+     },
+     {
+      "rpm": 514.19,
+      "thrust_N": 64.795,
+      "torque_Nm": 5.1975,
+      "shaft_W": 279.86
+     },
+     {
+      "rpm": 539.9,
+      "thrust_N": 71.538,
+      "torque_Nm": 5.723,
+      "shaft_W": 323.57
+     },
+     {
+      "rpm": 565.61,
+      "thrust_N": 78.631,
+      "torque_Nm": 6.2746,
+      "shaft_W": 371.65
+     },
+     {
+      "rpm": 591.32,
+      "thrust_N": 86.078,
+      "torque_Nm": 6.8524,
+      "shaft_W": 424.32
+     },
+     {
+      "rpm": 617.03,
+      "thrust_N": 93.881,
+      "torque_Nm": 7.4568,
+      "shaft_W": 481.82
+     },
+     {
+      "rpm": 642.74,
+      "thrust_N": 102.044,
+      "torque_Nm": 8.0878,
+      "shaft_W": 544.37
+     },
+     {
+      "rpm": 668.45,
+      "thrust_N": 110.571,
+      "torque_Nm": 8.7459,
+      "shaft_W": 612.21
+     },
+     {
+      "rpm": 694.16,
+      "thrust_N": 119.467,
+      "torque_Nm": 9.4312,
+      "shaft_W": 685.58
+     },
+     {
+      "rpm": 719.87,
+      "thrust_N": 128.735,
+      "torque_Nm": 10.1443,
+      "shaft_W": 764.72
+     },
+     {
+      "rpm": 745.58,
+      "thrust_N": 138.38,
+      "torque_Nm": 10.8853,
+      "shaft_W": 849.89
+     },
+     {
+      "rpm": 771.29,
+      "thrust_N": 148.408,
+      "torque_Nm": 11.6547,
+      "shaft_W": 941.34
+     },
+     {
+      "rpm": 797.0,
+      "thrust_N": 158.822,
+      "torque_Nm": 12.4528,
+      "shaft_W": 1039.33
+     },
+     {
+      "rpm": 822.71,
+      "thrust_N": 169.629,
+      "torque_Nm": 13.2802,
+      "shaft_W": 1144.14
+     }
+    ],
+    "unit": "rpm, N, N m, W",
+    "tag": "K",
+    "source": "BEMT (validated vs Knight & Hefner / Harrington, torque rms 6.3 %)",
+    "density_scaling": "thrust and torque scale with density at fixed rpm and pitch (C_T, C_Q constant): multiply by rho(h)/rho(55 km)"
+   },
+   "heave_derivative": {
+    "value": -32.411342,
+    "unit": "N/(m/s)",
+    "tag": "K",
+    "source": "BEMT dT/dw at fixed rpm, pitch (whole vehicle); aerokit.venus.sizing.close with hover +3.42 % (venus_budget_update.close_with_interaction) [v0.7: was -31.783517 in v0.6]"
+   },
+   "vortex_ring_band": {
+    "value": [
+     0.5,
+     1.5
+    ],
+    "unit": "x v_h descent",
+    "tag": "Y",
+    "source": "helicopter practice; thrust -20 % inside, unless airspeed > v_h"
+   },
+   "v_h_55km": {
+    "value": 2.619377,
+    "unit": "m/s",
+    "tag": "K",
+    "source": "momentum theory per rotor; aerokit.venus.sizing.close with hover +3.42 % (venus_budget_update.close_with_interaction) [v0.7: was 2.59062 in v0.6]"
+   }
+  },
+  "drive": {
+   "gear_ratio": {
+    "value": 5.0,
+    "unit": "-",
+    "tag": "Y",
+    "source": "sealed planetary (robustness study)"
+   },
+   "motor_efficiency": {
+    "value": 0.836,
+    "unit": "-",
+    "tag": "Y",
+    "source": "motor x gearbox"
+   },
+   "esc_efficiency": {
+    "value": 0.96,
+    "unit": "-",
+    "tag": "Y",
+    "source": ""
+   },
+   "max_thrust_ratio": {
+    "value": 1.6,
+    "unit": "x weight",
+    "tag": "D-ag+Y",
+    "source": "MSH >= 1.4 (40 % margin)"
+   },
+   "rpm_response_20pct": {
+    "value": 0.302856,
+    "unit": "s",
+    "tag": "K",
+    "source": "rotor inertia / spare torque; aerokit.venus.sizing.close with hover +3.42 % (venus_budget_update.close_with_interaction) [v0.7: was 0.30479 in v0.6]"
+   },
+   "collective_actuator_tau": {
+    "value": 0.1,
+    "unit": "s",
+    "tag": "Y",
+    "source": "per-rotor pitch actuator"
+   }
+  },
+  "power": {
+   "battery_capacity": {
+    "value": 1109.478759,
+    "unit": "Wh",
+    "tag": "K",
+    "source": "0.5 h of 2219 W hover; aerokit.venus.sizing.close with hover +3.42 % (venus_budget_update.close_with_interaction) [v0.7: was 1044.139461 in v0.6]"
+   },
+   "solar_area": {
+    "value": 4.452251,
+    "unit": "m^2",
+    "tag": "K",
+    "source": "hexagon deck"
+   },
+   "solar_efficiency": {
+    "value": 0.29,
+    "unit": "-",
+    "tag": "D-ag",
+    "source": "29 % AM0 array (Landis & Haag)"
+   },
+   "bifaciality": {
+    "value": 0.85,
+    "unit": "-",
+    "tag": "Y",
+    "source": ""
+   },
+   "coating_loss": {
+    "value": 0.05,
+    "unit": "-",
+    "tag": "D-ag",
+    "source": "Parylene acid test"
+   },
+   "system_load": {
+    "value": 55.0,
+    "unit": "W",
+    "tag": "Y",
+    "source": "payload 30 W + avionics 25 W"
+   },
+   "hover_electric_55km": {
+    "value": 2218.958029,
+    "unit": "W",
+    "tag": "K/Y",
+    "source": "BEMT + hover interaction +3.42 % (guc_egrisi.json, extrapolated to 0.04 D [Y]) [v0.7: was 2088.279178 in v0.6]"
+   },
+   "loiter_electric_55km": {
+    "value": 1621.528029,
+    "unit": "W",
+    "tag": "K/Y",
+    "source": "aerokit level power x nominal interaction ratio (guc_egrisi.json) [v0.7: was 1336.529094 in v0.6]"
+   },
+   "loiter_airspeed": {
+    "value": 8.9,
+    "unit": "m/s",
+    "tag": "K/Y",
+    "source": "minimum-power speed with nominal interaction [v0.7: was 7.8 in v0.6]"
+   }
+  },
+  "thermal": {
+   "vessel_heat_capacity": {
+    "value": 10800.0,
+    "unit": "J/K",
+    "tag": "Y",
+    "source": ""
+   },
+   "insulation_conductance": {
+    "value": 1.753009,
+    "unit": "W/K",
+    "tag": "Y",
+    "source": "10 mm aerogel"
+   },
+   "heat_pipe_conductance_max": {
+    "value": 12.0,
+    "unit": "W/K",
+    "tag": "Y",
+    "source": "diode VCHP"
+   },
+   "interior_at_55km": {
+    "value": 36.58718,
+    "unit": "degC",
+    "tag": "K",
+    "source": "80 W inside"
+   }
+  }
+ },
+ "limits": [
+  {
+   "name": "battery charge window",
+   "value": [
+    0.0,
+    45.0
+   ],
+   "unit": "degC",
+   "tag": "D-ag",
+   "source": "Panasonic NCR18650B datasheet"
+  },
+  {
+   "name": "battery discharge window",
+   "value": [
+    -20.0,
+    60.0
+   ],
+   "unit": "degC",
+   "tag": "D-ag",
+   "source": "Panasonic NCR18650B datasheet"
+  },
+  {
+   "name": "electronics",
+   "value": [
+    -40.0,
+    125.0
+   ],
+   "unit": "degC",
+   "tag": "D-ag",
+   "source": "AEC-Q100 grade 1"
+  },
+  {
+   "name": "magnets (Sm2Co17)",
+   "value": 300.0,
+   "unit": "degC",
+   "tag": "D-ag",
+   "source": "manufacturer data"
+  },
+  {
+   "name": "tip Mach cap",
+   "value": 0.7,
+   "unit": "-",
+   "tag": "D-ag/Y",
+   "source": "Ingenuity-like"
+  },
+  {
+   "name": "advance ratio for the momentum model",
+   "value": 0.43,
+   "unit": "-",
+   "tag": "K",
+   "source": "model valid to ~30 m/s",
+   "note": "station keeping at the wind speed would need mu 0.7-1.2"
+  },
+  {
+   "name": "max airspeed",
+   "value": 22.75,
+   "unit": "m/s",
+   "tag": "K/Y",
+   "source": "level-flight speed whose shaft power stays below 1.6^1.5 x hover shaft power, with nominal interaction (ratio held at its 20 m/s value above the last trimmed curve point)"
+  },
+  {
+   "name": "entry deceleration qualification",
+   "value": 100.0,
+   "unit": "g",
+   "tag": "Y",
+   "source": "peak 56 g, x1.8"
+  },
+  {
+   "name": "acid exposure tested (FEP)",
+   "value": 168.0,
+   "unit": "h",
+   "tag": "D-ag",
+   "source": "manufacturer test, conc. H2SO4 at 120 degC"
+  },
+  {
+   "name": "operating altitude band",
+   "value": [
+    53.0,
+    58.0
+   ],
+   "unit": "km",
+   "tag": "K",
+   "source": "battery charge window + power"
+  },
+  {
+   "name": "science dive floor",
+   "value": 52.0,
+   "unit": "km",
+   "tag": "K",
+   "source": "battery 57.5 degC peak after the 5 min hold at 52 km at 1.5 m/s down (venus_budget_update.fly) [v0.7: was 51.0 in v0.6]"
+  },
+  {
+   "name": "dive abort battery temperature",
+   "value": 52.0,
+   "unit": "degC",
+   "tag": "K/Y",
+   "source": "doc 25 §0: 50 -> 52 degC, the 5 min hold at 52 km at 1.5 m/s needs it; venus_budget_update.Profile [v0.7: new row]"
+  },
+  {
+   "name": "release sun height, minimum cos z",
+   "value": 0.68,
+   "unit": "-",
+   "tag": "K/Y",
+   "source": "doc 25 §0: 52.7 A at cos z 0.68 against the 2C limit; simulator at 43.66 kg, not rerun at 44.63 kg [v0.7: new row]"
+  },
+  {
+   "name": "release rotor speed, maximum",
+   "value": 668.5,
+   "unit": "rpm",
+   "tag": "K",
+   "source": "doc 25 §5.2: 1.30 x hover rpm, back-EMF cap [v0.7: new row]"
+  },
+  {
+   "name": "descent to cruise",
+   "value": {
+    "down_m_s": 1.5,
+    "forward_m_s": 3.5
+   },
+   "unit": "m/s",
+   "tag": "K/Y",
+   "source": "doc 25 §5.2: outside the vortex-ring band; venus_budget_update.Profile [v0.7: new row]"
+  },
+  {
+   "name": "battery discharge current 2C",
+   "value": 53.6,
+   "unit": "A",
+   "tag": "K/Y",
+   "source": "14S8P pack (venus_budget_update.pack at 1109 Wh); 2C is an aerokit input, not a measured limit [v0.7: new row]"
+  }
+ ],
+ "failure_modes": [
+  {
+   "name": "motor out",
+   "trigger": "one motor fails (2 % per deployment in the Monte Carlo [Y])",
+   "effect": "thrust margin 1.6 -> 1.6 x 5/6 = 1.33; yaw trim by the opposite pair",
+   "recovery": "continue on 5 rotors",
+   "tag": "Y/K"
+  },
+  {
+   "name": "vortex ring state",
+   "trigger": "descent 0.5-1.5 v_h with airspeed < v_h",
+   "effect": "thrust -20 %, oscillation",
+   "recovery": "pitch forward to 2 v_h airspeed",
+   "tag": "Y"
+  },
+  {
+   "name": "downdraft",
+   "trigger": "-2..-3.3 m/s for ~2 h (VEGA-2)",
+   "effect": "+1.5 kW to hold altitude",
+   "recovery": "ride it within 52-58 km, climb back (0.4 kWh)",
+   "tag": "D-ag/K"
+  },
+  {
+   "name": "battery hot",
+   "trigger": "interior > 52 degC during a dive",
+   "effect": "charging stops above 45 degC",
+   "recovery": "abort the dive and climb",
+   "tag": "K"
+  },
+  {
+   "name": "battery over discharge limit",
+   "trigger": "interior > 60 degC",
+   "effect": "end of controlled flight",
+   "recovery": "none (end of mission)",
+   "tag": "D-ag/K"
+  },
+  {
+   "name": "sun too low",
+   "trigger": "cos zenith < 0.678 at 55 km",
+   "effect": "battery drains, up to ~376 W before the sunset dive",
+   "recovery": "~3.5 h on battery, then sunset dive",
+   "tag": "K"
+  },
+  {
+   "name": "night",
+   "trigger": "cos zenith <= 0",
+   "effect": "0 W solar; 1.11 kWh vs ~125 kWh needed (loiter power x half the 154 h air-mass day)",
+   "recovery": "none for a pure rotorcraft (helium hybrid only)",
+   "tag": "K"
+  },
+  {
+   "name": "deployment latch failure",
+   "trigger": ">= 2 arms unlatched or <= 4 healthy motors",
+   "effect": "no release",
+   "recovery": "descent-probe mode on the parachute",
+   "tag": "Y"
+  },
+  {
+   "name": "acid degradation",
+   "trigger": "exposure beyond tested 96-168 h",
+   "effect": "cell/coating loss",
+   "recovery": "mission ends at ~44 h anyway",
+   "tag": "D-ag/Y"
+  }
+ ],
+ "deployment_replay": {
+  "rows": [
+   {
+    "t_s": 0.0,
+    "altitude_m": 61000.0,
+    "descent_rate_m_s": 12.956
+   },
+   {
+    "t_s": 0.01,
+    "altitude_m": 60999.87,
+    "descent_rate_m_s": 12.952
+   },
+   {
+    "t_s": 0.02,
+    "altitude_m": 60999.74,
+    "descent_rate_m_s": 12.949
+   },
+   {
+    "t_s": 0.03,
+    "altitude_m": 60999.61,
+    "descent_rate_m_s": 12.945
+   },
+   {
+    "t_s": 0.04,
+    "altitude_m": 60999.48,
+    "descent_rate_m_s": 12.941
+   },
+   {
+    "t_s": 0.05,
+    "altitude_m": 60999.35,
+    "descent_rate_m_s": 12.937
+   },
+   {
+    "t_s": 0.06,
+    "altitude_m": 60999.22,
+    "descent_rate_m_s": 12.932
+   },
+   {
+    "t_s": 0.07,
+    "altitude_m": 60999.09,
+    "descent_rate_m_s": 12.927
+   },
+   {
+    "t_s": 0.08,
+    "altitude_m": 60998.96,
+    "descent_rate_m_s": 12.922
+   },
+   {
+    "t_s": 0.09,
+    "altitude_m": 60998.84,
+    "descent_rate_m_s": 12.917
+   },
+   {
+    "t_s": 0.1,
+    "altitude_m": 60998.71,
+    "descent_rate_m_s": 12.911
+   },
+   {
+    "t_s": 0.11,
+    "altitude_m": 60998.58,
+    "descent_rate_m_s": 12.905
+   },
+   {
+    "t_s": 0.12,
+    "altitude_m": 60998.45,
+    "descent_rate_m_s": 12.899
+   },
+   {
+    "t_s": 0.13,
+    "altitude_m": 60998.32,
+    "descent_rate_m_s": 12.893
+   },
+   {
+    "t_s": 0.14,
+    "altitude_m": 60998.19,
+    "descent_rate_m_s": 12.886
+   },
+   {
+    "t_s": 0.15,
+    "altitude_m": 60998.06,
+    "descent_rate_m_s": 12.879
+   },
+   {
+    "t_s": 0.16,
+    "altitude_m": 60997.93,
+    "descent_rate_m_s": 12.872
+   },
+   {
+    "t_s": 0.17,
+    "altitude_m": 60997.8,
+    "descent_rate_m_s": 12.865
+   },
+   {
+    "t_s": 0.18,
+    "altitude_m": 60997.68,
+    "descent_rate_m_s": 12.857
+   },
+   {
+    "t_s": 0.19,
+    "altitude_m": 60997.55,
+    "descent_rate_m_s": 12.849
+   },
+   {
+    "t_s": 0.2,
+    "altitude_m": 60997.42,
+    "descent_rate_m_s": 12.841
+   },
+   {
+    "t_s": 0.21,
+    "altitude_m": 60997.29,
+    "descent_rate_m_s": 12.833
+   },
+   {
+    "t_s": 0.22,
+    "altitude_m": 60997.16,
+    "descent_rate_m_s": 12.824
+   },
+   {
+    "t_s": 0.23,
+    "altitude_m": 60997.03,
+    "descent_rate_m_s": 12.815
+   },
+   {
+    "t_s": 0.24,
+    "altitude_m": 60996.91,
+    "descent_rate_m_s": 12.806
+   },
+   {
+    "t_s": 0.25,
+    "altitude_m": 60996.78,
+    "descent_rate_m_s": 12.796
+   },
+   {
+    "t_s": 0.26,
+    "altitude_m": 60996.65,
+    "descent_rate_m_s": 12.787
+   },
+   {
+    "t_s": 0.27,
+    "altitude_m": 60996.52,
+    "descent_rate_m_s": 12.777
+   },
+   {
+    "t_s": 0.28,
+    "altitude_m": 60996.4,
+    "descent_rate_m_s": 12.766
+   },
+   {
+    "t_s": 0.29,
+    "altitude_m": 60996.27,
+    "descent_rate_m_s": 12.756
+   },
+   {
+    "t_s": 0.3,
+    "altitude_m": 60996.14,
+    "descent_rate_m_s": 12.745
+   },
+   {
+    "t_s": 0.31,
+    "altitude_m": 60996.01,
+    "descent_rate_m_s": 12.734
+   },
+   {
+    "t_s": 0.32,
+    "altitude_m": 60995.89,
+    "descent_rate_m_s": 12.723
+   },
+   {
+    "t_s": 0.33,
+    "altitude_m": 60995.76,
+    "descent_rate_m_s": 12.711
+   },
+   {
+    "t_s": 0.34,
+    "altitude_m": 60995.63,
+    "descent_rate_m_s": 12.7
+   },
+   {
+    "t_s": 0.35,
+    "altitude_m": 60995.5,
+    "descent_rate_m_s": 12.688
+   },
+   {
+    "t_s": 0.36,
+    "altitude_m": 60995.38,
+    "descent_rate_m_s": 12.675
+   },
+   {
+    "t_s": 0.37,
+    "altitude_m": 60995.25,
+    "descent_rate_m_s": 12.663
+   },
+   {
+    "t_s": 0.38,
+    "altitude_m": 60995.12,
+    "descent_rate_m_s": 12.65
+   },
+   {
+    "t_s": 0.39,
+    "altitude_m": 60995.0,
+    "descent_rate_m_s": 12.637
+   },
+   {
+    "t_s": 0.4,
+    "altitude_m": 60994.87,
+    "descent_rate_m_s": 12.624
+   },
+   {
+    "t_s": 0.41,
+    "altitude_m": 60994.75,
+    "descent_rate_m_s": 12.61
+   },
+   {
+    "t_s": 0.42,
+    "altitude_m": 60994.62,
+    "descent_rate_m_s": 12.596
+   },
+   {
+    "t_s": 0.43,
+    "altitude_m": 60994.49,
+    "descent_rate_m_s": 12.582
+   },
+   {
+    "t_s": 0.44,
+    "altitude_m": 60994.37,
+    "descent_rate_m_s": 12.568
+   },
+   {
+    "t_s": 0.45,
+    "altitude_m": 60994.24,
+    "descent_rate_m_s": 12.554
+   },
+   {
+    "t_s": 0.46,
+    "altitude_m": 60994.12,
+    "descent_rate_m_s": 12.539
+   },
+   {
+    "t_s": 0.47,
+    "altitude_m": 60993.99,
+    "descent_rate_m_s": 12.524
+   },
+   {
+    "t_s": 0.48,
+    "altitude_m": 60993.87,
+    "descent_rate_m_s": 12.508
+   },
+   {
+    "t_s": 0.49,
+    "altitude_m": 60993.74,
+    "descent_rate_m_s": 12.493
+   },
+   {
+    "t_s": 0.5,
+    "altitude_m": 60993.62,
+    "descent_rate_m_s": 12.477
+   },
+   {
+    "t_s": 0.51,
+    "altitude_m": 60993.49,
+    "descent_rate_m_s": 12.461
+   },
+   {
+    "t_s": 0.52,
+    "altitude_m": 60993.37,
+    "descent_rate_m_s": 12.444
+   },
+   {
+    "t_s": 0.53,
+    "altitude_m": 60993.24,
+    "descent_rate_m_s": 12.428
+   },
+   {
+    "t_s": 0.54,
+    "altitude_m": 60993.12,
+    "descent_rate_m_s": 12.411
+   },
+   {
+    "t_s": 0.55,
+    "altitude_m": 60993.0,
+    "descent_rate_m_s": 12.394
+   },
+   {
+    "t_s": 0.56,
+    "altitude_m": 60992.87,
+    "descent_rate_m_s": 12.377
+   },
+   {
+    "t_s": 0.57,
+    "altitude_m": 60992.75,
+    "descent_rate_m_s": 12.359
+   },
+   {
+    "t_s": 0.58,
+    "altitude_m": 60992.63,
+    "descent_rate_m_s": 12.341
+   },
+   {
+    "t_s": 0.59,
+    "altitude_m": 60992.5,
+    "descent_rate_m_s": 12.323
+   },
+   {
+    "t_s": 0.6,
+    "altitude_m": 60992.38,
+    "descent_rate_m_s": 12.305
+   },
+   {
+    "t_s": 0.61,
+    "altitude_m": 60992.26,
+    "descent_rate_m_s": 12.286
+   },
+   {
+    "t_s": 0.62,
+    "altitude_m": 60992.13,
+    "descent_rate_m_s": 12.267
+   },
+   {
+    "t_s": 0.63,
+    "altitude_m": 60992.01,
+    "descent_rate_m_s": 12.248
+   },
+   {
+    "t_s": 0.64,
+    "altitude_m": 60991.89,
+    "descent_rate_m_s": 12.229
+   },
+   {
+    "t_s": 0.65,
+    "altitude_m": 60991.77,
+    "descent_rate_m_s": 12.209
+   },
+   {
+    "t_s": 0.66,
+    "altitude_m": 60991.64,
+    "descent_rate_m_s": 12.189
+   },
+   {
+    "t_s": 0.67,
+    "altitude_m": 60991.52,
+    "descent_rate_m_s": 12.169
+   },
+   {
+    "t_s": 0.68,
+    "altitude_m": 60991.4,
+    "descent_rate_m_s": 12.149
+   },
+   {
+    "t_s": 0.69,
+    "altitude_m": 60991.28,
+    "descent_rate_m_s": 12.128
+   },
+   {
+    "t_s": 0.7,
+    "altitude_m": 60991.16,
+    "descent_rate_m_s": 12.107
+   },
+   {
+    "t_s": 0.71,
+    "altitude_m": 60991.04,
+    "descent_rate_m_s": 12.086
+   },
+   {
+    "t_s": 0.72,
+    "altitude_m": 60990.92,
+    "descent_rate_m_s": 12.065
+   },
+   {
+    "t_s": 0.73,
+    "altitude_m": 60990.8,
+    "descent_rate_m_s": 12.043
+   },
+   {
+    "t_s": 0.74,
+    "altitude_m": 60990.68,
+    "descent_rate_m_s": 12.021
+   },
+   {
+    "t_s": 0.75,
+    "altitude_m": 60990.56,
+    "descent_rate_m_s": 11.999
+   },
+   {
+    "t_s": 0.76,
+    "altitude_m": 60990.44,
+    "descent_rate_m_s": 11.977
+   },
+   {
+    "t_s": 0.77,
+    "altitude_m": 60990.32,
+    "descent_rate_m_s": 11.954
+   },
+   {
+    "t_s": 0.78,
+    "altitude_m": 60990.2,
+    "descent_rate_m_s": 11.931
+   },
+   {
+    "t_s": 0.79,
+    "altitude_m": 60990.08,
+    "descent_rate_m_s": 11.908
+   },
+   {
+    "t_s": 0.8,
+    "altitude_m": 60989.96,
+    "descent_rate_m_s": 11.885
+   },
+   {
+    "t_s": 0.81,
+    "altitude_m": 60989.84,
+    "descent_rate_m_s": 11.861
+   },
+   {
+    "t_s": 0.82,
+    "altitude_m": 60989.72,
+    "descent_rate_m_s": 11.837
+   },
+   {
+    "t_s": 0.83,
+    "altitude_m": 60989.61,
+    "descent_rate_m_s": 11.813
+   },
+   {
+    "t_s": 0.84,
+    "altitude_m": 60989.49,
+    "descent_rate_m_s": 11.789
+   },
+   {
+    "t_s": 0.85,
+    "altitude_m": 60989.37,
+    "descent_rate_m_s": 11.764
+   },
+   {
+    "t_s": 0.86,
+    "altitude_m": 60989.25,
+    "descent_rate_m_s": 11.739
+   },
+   {
+    "t_s": 0.87,
+    "altitude_m": 60989.14,
+    "descent_rate_m_s": 11.714
+   },
+   {
+    "t_s": 0.88,
+    "altitude_m": 60989.02,
+    "descent_rate_m_s": 11.689
+   },
+   {
+    "t_s": 0.89,
+    "altitude_m": 60988.9,
+    "descent_rate_m_s": 11.663
+   },
+   {
+    "t_s": 0.9,
+    "altitude_m": 60988.79,
+    "descent_rate_m_s": 11.637
+   },
+   {
+    "t_s": 0.91,
+    "altitude_m": 60988.67,
+    "descent_rate_m_s": 11.611
+   },
+   {
+    "t_s": 0.92,
+    "altitude_m": 60988.55,
+    "descent_rate_m_s": 11.585
+   },
+   {
+    "t_s": 0.93,
+    "altitude_m": 60988.44,
+    "descent_rate_m_s": 11.558
+   },
+   {
+    "t_s": 0.94,
+    "altitude_m": 60988.32,
+    "descent_rate_m_s": 11.531
+   },
+   {
+    "t_s": 0.95,
+    "altitude_m": 60988.21,
+    "descent_rate_m_s": 11.504
+   },
+   {
+    "t_s": 0.96,
+    "altitude_m": 60988.09,
+    "descent_rate_m_s": 11.477
+   },
+   {
+    "t_s": 0.97,
+    "altitude_m": 60987.98,
+    "descent_rate_m_s": 11.449
+   },
+   {
+    "t_s": 0.98,
+    "altitude_m": 60987.86,
+    "descent_rate_m_s": 11.421
+   },
+   {
+    "t_s": 0.99,
+    "altitude_m": 60987.75,
+    "descent_rate_m_s": 11.393
+   },
+   {
+    "t_s": 1.0,
+    "altitude_m": 60987.64,
+    "descent_rate_m_s": 11.365
+   },
+   {
+    "t_s": 1.01,
+    "altitude_m": 60987.52,
+    "descent_rate_m_s": 11.336
+   },
+   {
+    "t_s": 1.02,
+    "altitude_m": 60987.41,
+    "descent_rate_m_s": 11.307
+   },
+   {
+    "t_s": 1.03,
+    "altitude_m": 60987.3,
+    "descent_rate_m_s": 11.278
+   },
+   {
+    "t_s": 1.04,
+    "altitude_m": 60987.18,
+    "descent_rate_m_s": 11.249
+   },
+   {
+    "t_s": 1.05,
+    "altitude_m": 60987.07,
+    "descent_rate_m_s": 11.219
+   },
+   {
+    "t_s": 1.06,
+    "altitude_m": 60986.96,
+    "descent_rate_m_s": 11.19
+   },
+   {
+    "t_s": 1.07,
+    "altitude_m": 60986.85,
+    "descent_rate_m_s": 11.159
+   },
+   {
+    "t_s": 1.08,
+    "altitude_m": 60986.74,
+    "descent_rate_m_s": 11.129
+   },
+   {
+    "t_s": 1.09,
+    "altitude_m": 60986.63,
+    "descent_rate_m_s": 11.099
+   },
+   {
+    "t_s": 1.1,
+    "altitude_m": 60986.52,
+    "descent_rate_m_s": 11.068
+   },
+   {
+    "t_s": 1.11,
+    "altitude_m": 60986.41,
+    "descent_rate_m_s": 11.037
+   },
+   {
+    "t_s": 1.12,
+    "altitude_m": 60986.3,
+    "descent_rate_m_s": 11.005
+   },
+   {
+    "t_s": 1.13,
+    "altitude_m": 60986.19,
+    "descent_rate_m_s": 10.974
+   },
+   {
+    "t_s": 1.14,
+    "altitude_m": 60986.08,
+    "descent_rate_m_s": 10.942
+   },
+   {
+    "t_s": 1.15,
+    "altitude_m": 60985.97,
+    "descent_rate_m_s": 10.91
+   },
+   {
+    "t_s": 1.16,
+    "altitude_m": 60985.86,
+    "descent_rate_m_s": 10.877
+   },
+   {
+    "t_s": 1.17,
+    "altitude_m": 60985.75,
+    "descent_rate_m_s": 10.845
+   },
+   {
+    "t_s": 1.18,
+    "altitude_m": 60985.64,
+    "descent_rate_m_s": 10.812
+   },
+   {
+    "t_s": 1.19,
+    "altitude_m": 60985.53,
+    "descent_rate_m_s": 10.779
+   },
+   {
+    "t_s": 1.2,
+    "altitude_m": 60985.43,
+    "descent_rate_m_s": 10.746
+   },
+   {
+    "t_s": 1.21,
+    "altitude_m": 60985.32,
+    "descent_rate_m_s": 10.712
+   },
+   {
+    "t_s": 1.22,
+    "altitude_m": 60985.21,
+    "descent_rate_m_s": 10.678
+   },
+   {
+    "t_s": 1.23,
+    "altitude_m": 60985.11,
+    "descent_rate_m_s": 10.644
+   },
+   {
+    "t_s": 1.24,
+    "altitude_m": 60985.0,
+    "descent_rate_m_s": 10.61
+   },
+   {
+    "t_s": 1.25,
+    "altitude_m": 60984.89,
+    "descent_rate_m_s": 10.575
+   },
+   {
+    "t_s": 1.26,
+    "altitude_m": 60984.79,
+    "descent_rate_m_s": 10.541
+   },
+   {
+    "t_s": 1.27,
+    "altitude_m": 60984.68,
+    "descent_rate_m_s": 10.506
+   },
+   {
+    "t_s": 1.28,
+    "altitude_m": 60984.58,
+    "descent_rate_m_s": 10.47
+   },
+   {
+    "t_s": 1.29,
+    "altitude_m": 60984.48,
+    "descent_rate_m_s": 10.435
+   },
+   {
+    "t_s": 1.3,
+    "altitude_m": 60984.37,
+    "descent_rate_m_s": 10.399
+   },
+   {
+    "t_s": 1.31,
+    "altitude_m": 60984.27,
+    "descent_rate_m_s": 10.363
+   },
+   {
+    "t_s": 1.32,
+    "altitude_m": 60984.16,
+    "descent_rate_m_s": 10.327
+   },
+   {
+    "t_s": 1.33,
+    "altitude_m": 60984.06,
+    "descent_rate_m_s": 10.29
+   },
+   {
+    "t_s": 1.34,
+    "altitude_m": 60983.96,
+    "descent_rate_m_s": 10.254
+   },
+   {
+    "t_s": 1.35,
+    "altitude_m": 60983.86,
+    "descent_rate_m_s": 10.216
+   },
+   {
+    "t_s": 1.36,
+    "altitude_m": 60983.75,
+    "descent_rate_m_s": 10.179
+   },
+   {
+    "t_s": 1.37,
+    "altitude_m": 60983.65,
+    "descent_rate_m_s": 10.142
+   },
+   {
+    "t_s": 1.38,
+    "altitude_m": 60983.55,
+    "descent_rate_m_s": 10.104
+   },
+   {
+    "t_s": 1.39,
+    "altitude_m": 60983.45,
+    "descent_rate_m_s": 10.066
+   },
+   {
+    "t_s": 1.4,
+    "altitude_m": 60983.35,
+    "descent_rate_m_s": 10.028
+   },
+   {
+    "t_s": 1.41,
+    "altitude_m": 60983.25,
+    "descent_rate_m_s": 9.989
+   },
+   {
+    "t_s": 1.42,
+    "altitude_m": 60983.15,
+    "descent_rate_m_s": 9.951
+   },
+   {
+    "t_s": 1.43,
+    "altitude_m": 60983.05,
+    "descent_rate_m_s": 9.912
+   },
+   {
+    "t_s": 1.44,
+    "altitude_m": 60982.95,
+    "descent_rate_m_s": 9.872
+   },
+   {
+    "t_s": 1.45,
+    "altitude_m": 60982.86,
+    "descent_rate_m_s": 9.833
+   },
+   {
+    "t_s": 1.46,
+    "altitude_m": 60982.76,
+    "descent_rate_m_s": 9.793
+   },
+   {
+    "t_s": 1.47,
+    "altitude_m": 60982.66,
+    "descent_rate_m_s": 9.753
+   },
+   {
+    "t_s": 1.48,
+    "altitude_m": 60982.56,
+    "descent_rate_m_s": 9.713
+   },
+   {
+    "t_s": 1.49,
+    "altitude_m": 60982.47,
+    "descent_rate_m_s": 9.673
+   },
+   {
+    "t_s": 1.5,
+    "altitude_m": 60982.37,
+    "descent_rate_m_s": 9.632
+   },
+   {
+    "t_s": 1.51,
+    "altitude_m": 60982.27,
+    "descent_rate_m_s": 9.591
+   },
+   {
+    "t_s": 1.52,
+    "altitude_m": 60982.18,
+    "descent_rate_m_s": 9.55
+   },
+   {
+    "t_s": 1.53,
+    "altitude_m": 60982.08,
+    "descent_rate_m_s": 9.508
+   },
+   {
+    "t_s": 1.54,
+    "altitude_m": 60981.99,
+    "descent_rate_m_s": 9.467
+   },
+   {
+    "t_s": 1.55,
+    "altitude_m": 60981.89,
+    "descent_rate_m_s": 9.425
+   },
+   {
+    "t_s": 1.56,
+    "altitude_m": 60981.8,
+    "descent_rate_m_s": 9.383
+   },
+   {
+    "t_s": 1.57,
+    "altitude_m": 60981.71,
+    "descent_rate_m_s": 9.34
+   },
+   {
+    "t_s": 1.58,
+    "altitude_m": 60981.61,
+    "descent_rate_m_s": 9.298
+   },
+   {
+    "t_s": 1.59,
+    "altitude_m": 60981.52,
+    "descent_rate_m_s": 9.255
+   },
+   {
+    "t_s": 1.6,
+    "altitude_m": 60981.43,
+    "descent_rate_m_s": 9.211
+   },
+   {
+    "t_s": 1.61,
+    "altitude_m": 60981.34,
+    "descent_rate_m_s": 9.168
+   },
+   {
+    "t_s": 1.62,
+    "altitude_m": 60981.25,
+    "descent_rate_m_s": 9.124
+   },
+   {
+    "t_s": 1.63,
+    "altitude_m": 60981.16,
+    "descent_rate_m_s": 9.081
+   },
+   {
+    "t_s": 1.64,
+    "altitude_m": 60981.07,
+    "descent_rate_m_s": 9.036
+   },
+   {
+    "t_s": 1.65,
+    "altitude_m": 60980.98,
+    "descent_rate_m_s": 8.992
+   },
+   {
+    "t_s": 1.66,
+    "altitude_m": 60980.89,
+    "descent_rate_m_s": 8.947
+   },
+   {
+    "t_s": 1.67,
+    "altitude_m": 60980.8,
+    "descent_rate_m_s": 8.903
+   },
+   {
+    "t_s": 1.68,
+    "altitude_m": 60980.71,
+    "descent_rate_m_s": 8.857
+   },
+   {
+    "t_s": 1.69,
+    "altitude_m": 60980.62,
+    "descent_rate_m_s": 8.812
+   },
+   {
+    "t_s": 1.7,
+    "altitude_m": 60980.53,
+    "descent_rate_m_s": 8.767
+   },
+   {
+    "t_s": 1.71,
+    "altitude_m": 60980.45,
+    "descent_rate_m_s": 8.721
+   },
+   {
+    "t_s": 1.72,
+    "altitude_m": 60980.36,
+    "descent_rate_m_s": 8.675
+   },
+   {
+    "t_s": 1.73,
+    "altitude_m": 60980.27,
+    "descent_rate_m_s": 8.628
+   },
+   {
+    "t_s": 1.74,
+    "altitude_m": 60980.19,
+    "descent_rate_m_s": 8.582
+   },
+   {
+    "t_s": 1.75,
+    "altitude_m": 60980.1,
+    "descent_rate_m_s": 8.535
+   },
+   {
+    "t_s": 1.76,
+    "altitude_m": 60980.02,
+    "descent_rate_m_s": 8.488
+   },
+   {
+    "t_s": 1.77,
+    "altitude_m": 60979.93,
+    "descent_rate_m_s": 8.44
+   },
+   {
+    "t_s": 1.78,
+    "altitude_m": 60979.85,
+    "descent_rate_m_s": 8.393
+   },
+   {
+    "t_s": 1.79,
+    "altitude_m": 60979.77,
+    "descent_rate_m_s": 8.345
+   },
+   {
+    "t_s": 1.8,
+    "altitude_m": 60979.68,
+    "descent_rate_m_s": 8.297
+   },
+   {
+    "t_s": 1.81,
+    "altitude_m": 60979.6,
+    "descent_rate_m_s": 8.249
+   },
+   {
+    "t_s": 1.82,
+    "altitude_m": 60979.52,
+    "descent_rate_m_s": 8.2
+   },
+   {
+    "t_s": 1.83,
+    "altitude_m": 60979.44,
+    "descent_rate_m_s": 8.151
+   },
+   {
+    "t_s": 1.84,
+    "altitude_m": 60979.36,
+    "descent_rate_m_s": 8.102
+   },
+   {
+    "t_s": 1.85,
+    "altitude_m": 60979.27,
+    "descent_rate_m_s": 8.053
+   },
+   {
+    "t_s": 1.86,
+    "altitude_m": 60979.19,
+    "descent_rate_m_s": 8.004
+   },
+   {
+    "t_s": 1.87,
+    "altitude_m": 60979.12,
+    "descent_rate_m_s": 7.954
+   },
+   {
+    "t_s": 1.88,
+    "altitude_m": 60979.04,
+    "descent_rate_m_s": 7.904
+   },
+   {
+    "t_s": 1.89,
+    "altitude_m": 60978.96,
+    "descent_rate_m_s": 7.854
+   },
+   {
+    "t_s": 1.9,
+    "altitude_m": 60978.88,
+    "descent_rate_m_s": 7.803
+   },
+   {
+    "t_s": 1.91,
+    "altitude_m": 60978.8,
+    "descent_rate_m_s": 7.752
+   },
+   {
+    "t_s": 1.92,
+    "altitude_m": 60978.72,
+    "descent_rate_m_s": 7.701
+   },
+   {
+    "t_s": 1.93,
+    "altitude_m": 60978.65,
+    "descent_rate_m_s": 7.65
+   },
+   {
+    "t_s": 1.94,
+    "altitude_m": 60978.57,
+    "descent_rate_m_s": 7.599
+   },
+   {
+    "t_s": 1.95,
+    "altitude_m": 60978.5,
+    "descent_rate_m_s": 7.547
+   },
+   {
+    "t_s": 1.96,
+    "altitude_m": 60978.42,
+    "descent_rate_m_s": 7.495
+   },
+   {
+    "t_s": 1.97,
+    "altitude_m": 60978.35,
+    "descent_rate_m_s": 7.443
+   },
+   {
+    "t_s": 1.98,
+    "altitude_m": 60978.27,
+    "descent_rate_m_s": 7.39
+   },
+   {
+    "t_s": 1.99,
+    "altitude_m": 60978.2,
+    "descent_rate_m_s": 7.338
+   },
+   {
+    "t_s": 2.0,
+    "altitude_m": 60978.13,
+    "descent_rate_m_s": 7.285
+   },
+   {
+    "t_s": 2.01,
+    "altitude_m": 60978.06,
+    "descent_rate_m_s": 7.231
+   },
+   {
+    "t_s": 2.02,
+    "altitude_m": 60977.98,
+    "descent_rate_m_s": 7.178
+   },
+   {
+    "t_s": 2.03,
+    "altitude_m": 60977.91,
+    "descent_rate_m_s": 7.125
+   },
+   {
+    "t_s": 2.04,
+    "altitude_m": 60977.84,
+    "descent_rate_m_s": 7.072
+   },
+   {
+    "t_s": 2.05,
+    "altitude_m": 60977.77,
+    "descent_rate_m_s": 7.019
+   },
+   {
+    "t_s": 2.06,
+    "altitude_m": 60977.7,
+    "descent_rate_m_s": 6.966
+   },
+   {
+    "t_s": 2.07,
+    "altitude_m": 60977.63,
+    "descent_rate_m_s": 6.912
+   },
+   {
+    "t_s": 2.08,
+    "altitude_m": 60977.56,
+    "descent_rate_m_s": 6.859
+   },
+   {
+    "t_s": 2.09,
+    "altitude_m": 60977.5,
+    "descent_rate_m_s": 6.806
+   },
+   {
+    "t_s": 2.1,
+    "altitude_m": 60977.43,
+    "descent_rate_m_s": 6.753
+   },
+   {
+    "t_s": 2.11,
+    "altitude_m": 60977.36,
+    "descent_rate_m_s": 6.7
+   },
+   {
+    "t_s": 2.12,
+    "altitude_m": 60977.29,
+    "descent_rate_m_s": 6.647
+   },
+   {
+    "t_s": 2.13,
+    "altitude_m": 60977.23,
+    "descent_rate_m_s": 6.594
+   },
+   {
+    "t_s": 2.14,
+    "altitude_m": 60977.16,
+    "descent_rate_m_s": 6.541
+   },
+   {
+    "t_s": 2.15,
+    "altitude_m": 60977.1,
+    "descent_rate_m_s": 6.488
+   },
+   {
+    "t_s": 2.16,
+    "altitude_m": 60977.03,
+    "descent_rate_m_s": 6.435
+   },
+   {
+    "t_s": 2.17,
+    "altitude_m": 60976.97,
+    "descent_rate_m_s": 6.382
+   },
+   {
+    "t_s": 2.18,
+    "altitude_m": 60976.91,
+    "descent_rate_m_s": 6.329
+   },
+   {
+    "t_s": 2.19,
+    "altitude_m": 60976.84,
+    "descent_rate_m_s": 6.276
+   },
+   {
+    "t_s": 2.2,
+    "altitude_m": 60976.78,
+    "descent_rate_m_s": 6.223
+   },
+   {
+    "t_s": 2.21,
+    "altitude_m": 60976.72,
+    "descent_rate_m_s": 6.17
+   },
+   {
+    "t_s": 2.22,
+    "altitude_m": 60976.66,
+    "descent_rate_m_s": 6.117
+   },
+   {
+    "t_s": 2.23,
+    "altitude_m": 60976.6,
+    "descent_rate_m_s": 6.065
+   },
+   {
+    "t_s": 2.24,
+    "altitude_m": 60976.54,
+    "descent_rate_m_s": 6.012
+   },
+   {
+    "t_s": 2.25,
+    "altitude_m": 60976.48,
+    "descent_rate_m_s": 5.959
+   },
+   {
+    "t_s": 2.26,
+    "altitude_m": 60976.42,
+    "descent_rate_m_s": 5.906
+   },
+   {
+    "t_s": 2.27,
+    "altitude_m": 60976.36,
+    "descent_rate_m_s": 5.853
+   },
+   {
+    "t_s": 2.28,
+    "altitude_m": 60976.3,
+    "descent_rate_m_s": 5.8
+   },
+   {
+    "t_s": 2.29,
+    "altitude_m": 60976.25,
+    "descent_rate_m_s": 5.747
+   },
+   {
+    "t_s": 2.3,
+    "altitude_m": 60976.19,
+    "descent_rate_m_s": 5.695
+   },
+   {
+    "t_s": 2.31,
+    "altitude_m": 60976.13,
+    "descent_rate_m_s": 5.642
+   },
+   {
+    "t_s": 2.32,
+    "altitude_m": 60976.08,
+    "descent_rate_m_s": 5.589
+   },
+   {
+    "t_s": 2.33,
+    "altitude_m": 60976.02,
+    "descent_rate_m_s": 5.536
+   },
+   {
+    "t_s": 2.34,
+    "altitude_m": 60975.97,
+    "descent_rate_m_s": 5.483
+   },
+   {
+    "t_s": 2.35,
+    "altitude_m": 60975.91,
+    "descent_rate_m_s": 5.431
+   },
+   {
+    "t_s": 2.36,
+    "altitude_m": 60975.86,
+    "descent_rate_m_s": 5.378
+   },
+   {
+    "t_s": 2.37,
+    "altitude_m": 60975.8,
+    "descent_rate_m_s": 5.325
+   },
+   {
+    "t_s": 2.38,
+    "altitude_m": 60975.75,
+    "descent_rate_m_s": 5.273
+   },
+   {
+    "t_s": 2.39,
+    "altitude_m": 60975.7,
+    "descent_rate_m_s": 5.22
+   },
+   {
+    "t_s": 2.4,
+    "altitude_m": 60975.65,
+    "descent_rate_m_s": 5.167
+   },
+   {
+    "t_s": 2.41,
+    "altitude_m": 60975.6,
+    "descent_rate_m_s": 5.114
+   },
+   {
+    "t_s": 2.42,
+    "altitude_m": 60975.55,
+    "descent_rate_m_s": 5.062
+   },
+   {
+    "t_s": 2.43,
+    "altitude_m": 60975.5,
+    "descent_rate_m_s": 5.009
+   },
+   {
+    "t_s": 2.44,
+    "altitude_m": 60975.45,
+    "descent_rate_m_s": 4.956
+   },
+   {
+    "t_s": 2.45,
+    "altitude_m": 60975.4,
+    "descent_rate_m_s": 4.904
+   },
+   {
+    "t_s": 2.46,
+    "altitude_m": 60975.35,
+    "descent_rate_m_s": 4.851
+   },
+   {
+    "t_s": 2.47,
+    "altitude_m": 60975.3,
+    "descent_rate_m_s": 4.799
+   },
+   {
+    "t_s": 2.48,
+    "altitude_m": 60975.25,
+    "descent_rate_m_s": 4.746
+   },
+   {
+    "t_s": 2.49,
+    "altitude_m": 60975.21,
+    "descent_rate_m_s": 4.693
+   },
+   {
+    "t_s": 2.5,
+    "altitude_m": 60975.16,
+    "descent_rate_m_s": 4.641
+   },
+   {
+    "t_s": 2.51,
+    "altitude_m": 60975.11,
+    "descent_rate_m_s": 4.588
+   },
+   {
+    "t_s": 2.52,
+    "altitude_m": 60975.07,
+    "descent_rate_m_s": 4.536
+   },
+   {
+    "t_s": 2.53,
+    "altitude_m": 60975.02,
+    "descent_rate_m_s": 4.483
+   },
+   {
+    "t_s": 2.54,
+    "altitude_m": 60974.98,
+    "descent_rate_m_s": 4.43
+   },
+   {
+    "t_s": 2.55,
+    "altitude_m": 60974.94,
+    "descent_rate_m_s": 4.378
+   },
+   {
+    "t_s": 2.56,
+    "altitude_m": 60974.89,
+    "descent_rate_m_s": 4.325
+   },
+   {
+    "t_s": 2.57,
+    "altitude_m": 60974.85,
+    "descent_rate_m_s": 4.273
+   },
+   {
+    "t_s": 2.58,
+    "altitude_m": 60974.81,
+    "descent_rate_m_s": 4.22
+   },
+   {
+    "t_s": 2.59,
+    "altitude_m": 60974.77,
+    "descent_rate_m_s": 4.168
+   },
+   {
+    "t_s": 2.6,
+    "altitude_m": 60974.73,
+    "descent_rate_m_s": 4.115
+   },
+   {
+    "t_s": 2.61,
+    "altitude_m": 60974.68,
+    "descent_rate_m_s": 4.063
+   },
+   {
+    "t_s": 2.62,
+    "altitude_m": 60974.64,
+    "descent_rate_m_s": 4.01
+   },
+   {
+    "t_s": 2.63,
+    "altitude_m": 60974.61,
+    "descent_rate_m_s": 3.958
+   },
+   {
+    "t_s": 2.64,
+    "altitude_m": 60974.57,
+    "descent_rate_m_s": 3.905
+   },
+   {
+    "t_s": 2.65,
+    "altitude_m": 60974.53,
+    "descent_rate_m_s": 3.853
+   },
+   {
+    "t_s": 2.66,
+    "altitude_m": 60974.49,
+    "descent_rate_m_s": 3.8
+   },
+   {
+    "t_s": 2.67,
+    "altitude_m": 60974.45,
+    "descent_rate_m_s": 3.748
+   },
+   {
+    "t_s": 2.68,
+    "altitude_m": 60974.42,
+    "descent_rate_m_s": 3.696
+   },
+   {
+    "t_s": 2.69,
+    "altitude_m": 60974.38,
+    "descent_rate_m_s": 3.643
+   },
+   {
+    "t_s": 2.7,
+    "altitude_m": 60974.34,
+    "descent_rate_m_s": 3.591
+   },
+   {
+    "t_s": 2.71,
+    "altitude_m": 60974.31,
+    "descent_rate_m_s": 3.538
+   },
+   {
+    "t_s": 2.72,
+    "altitude_m": 60974.27,
+    "descent_rate_m_s": 3.486
+   },
+   {
+    "t_s": 2.73,
+    "altitude_m": 60974.24,
+    "descent_rate_m_s": 3.433
+   },
+   {
+    "t_s": 2.74,
+    "altitude_m": 60974.2,
+    "descent_rate_m_s": 3.381
+   },
+   {
+    "t_s": 2.75,
+    "altitude_m": 60974.17,
+    "descent_rate_m_s": 3.329
+   },
+   {
+    "t_s": 2.76,
+    "altitude_m": 60974.14,
+    "descent_rate_m_s": 3.276
+   },
+   {
+    "t_s": 2.77,
+    "altitude_m": 60974.11,
+    "descent_rate_m_s": 3.224
+   },
+   {
+    "t_s": 2.78,
+    "altitude_m": 60974.07,
+    "descent_rate_m_s": 3.172
+   },
+   {
+    "t_s": 2.79,
+    "altitude_m": 60974.04,
+    "descent_rate_m_s": 3.119
+   },
+   {
+    "t_s": 2.8,
+    "altitude_m": 60974.01,
+    "descent_rate_m_s": 3.067
+   },
+   {
+    "t_s": 2.81,
+    "altitude_m": 60973.98,
+    "descent_rate_m_s": 3.014
+   },
+   {
+    "t_s": 2.82,
+    "altitude_m": 60973.95,
+    "descent_rate_m_s": 2.962
+   },
+   {
+    "t_s": 2.83,
+    "altitude_m": 60973.92,
+    "descent_rate_m_s": 2.91
+   },
+   {
+    "t_s": 2.84,
+    "altitude_m": 60973.9,
+    "descent_rate_m_s": 2.857
+   },
+   {
+    "t_s": 2.85,
+    "altitude_m": 60973.87,
+    "descent_rate_m_s": 2.805
+   },
+   {
+    "t_s": 2.86,
+    "altitude_m": 60973.84,
+    "descent_rate_m_s": 2.753
+   },
+   {
+    "t_s": 2.87,
+    "altitude_m": 60973.81,
+    "descent_rate_m_s": 2.701
+   },
+   {
+    "t_s": 2.88,
+    "altitude_m": 60973.79,
+    "descent_rate_m_s": 2.648
+   },
+   {
+    "t_s": 2.89,
+    "altitude_m": 60973.76,
+    "descent_rate_m_s": 2.596
+   },
+   {
+    "t_s": 2.9,
+    "altitude_m": 60973.73,
+    "descent_rate_m_s": 2.544
+   },
+   {
+    "t_s": 2.91,
+    "altitude_m": 60973.71,
+    "descent_rate_m_s": 2.491
+   },
+   {
+    "t_s": 2.92,
+    "altitude_m": 60973.69,
+    "descent_rate_m_s": 2.439
+   },
+   {
+    "t_s": 2.93,
+    "altitude_m": 60973.66,
+    "descent_rate_m_s": 2.387
+   },
+   {
+    "t_s": 2.94,
+    "altitude_m": 60973.64,
+    "descent_rate_m_s": 2.334
+   },
+   {
+    "t_s": 2.95,
+    "altitude_m": 60973.62,
+    "descent_rate_m_s": 2.282
+   },
+   {
+    "t_s": 2.96,
+    "altitude_m": 60973.59,
+    "descent_rate_m_s": 2.23
+   },
+   {
+    "t_s": 2.97,
+    "altitude_m": 60973.57,
+    "descent_rate_m_s": 2.178
+   },
+   {
+    "t_s": 2.98,
+    "altitude_m": 60973.55,
+    "descent_rate_m_s": 2.125
+   },
+   {
+    "t_s": 2.99,
+    "altitude_m": 60973.53,
+    "descent_rate_m_s": 2.073
+   },
+   {
+    "t_s": 3.0,
+    "altitude_m": 60973.51,
+    "descent_rate_m_s": 2.021
+   },
+   {
+    "t_s": 3.01,
+    "altitude_m": 60973.49,
+    "descent_rate_m_s": 1.969
+   },
+   {
+    "t_s": 3.02,
+    "altitude_m": 60973.47,
+    "descent_rate_m_s": 1.916
+   },
+   {
+    "t_s": 3.03,
+    "altitude_m": 60973.45,
+    "descent_rate_m_s": 1.864
+   },
+   {
+    "t_s": 3.04,
+    "altitude_m": 60973.43,
+    "descent_rate_m_s": 1.812
+   },
+   {
+    "t_s": 3.05,
+    "altitude_m": 60973.42,
+    "descent_rate_m_s": 1.76
+   },
+   {
+    "t_s": 3.06,
+    "altitude_m": 60973.4,
+    "descent_rate_m_s": 1.708
+   },
+   {
+    "t_s": 3.07,
+    "altitude_m": 60973.38,
+    "descent_rate_m_s": 1.655
+   },
+   {
+    "t_s": 3.08,
+    "altitude_m": 60973.37,
+    "descent_rate_m_s": 1.603
+   },
+   {
+    "t_s": 3.09,
+    "altitude_m": 60973.35,
+    "descent_rate_m_s": 1.551
+   },
+   {
+    "t_s": 3.1,
+    "altitude_m": 60973.34,
+    "descent_rate_m_s": 1.499
+   },
+   {
+    "t_s": 3.11,
+    "altitude_m": 60973.32,
+    "descent_rate_m_s": 1.446
+   },
+   {
+    "t_s": 3.12,
+    "altitude_m": 60973.31,
+    "descent_rate_m_s": 1.394
+   },
+   {
+    "t_s": 3.13,
+    "altitude_m": 60973.29,
+    "descent_rate_m_s": 1.342
+   },
+   {
+    "t_s": 3.14,
+    "altitude_m": 60973.28,
+    "descent_rate_m_s": 1.29
+   },
+   {
+    "t_s": 3.15,
+    "altitude_m": 60973.27,
+    "descent_rate_m_s": 1.238
+   },
+   {
+    "t_s": 3.16,
+    "altitude_m": 60973.26,
+    "descent_rate_m_s": 1.185
+   },
+   {
+    "t_s": 3.17,
+    "altitude_m": 60973.25,
+    "descent_rate_m_s": 1.133
+   },
+   {
+    "t_s": 3.18,
+    "altitude_m": 60973.23,
+    "descent_rate_m_s": 1.081
+   },
+   {
+    "t_s": 3.19,
+    "altitude_m": 60973.22,
+    "descent_rate_m_s": 1.029
+   },
+   {
+    "t_s": 3.2,
+    "altitude_m": 60973.21,
+    "descent_rate_m_s": 0.977
+   },
+   {
+    "t_s": 3.21,
+    "altitude_m": 60973.21,
+    "descent_rate_m_s": 0.925
+   },
+   {
+    "t_s": 3.22,
+    "altitude_m": 60973.2,
+    "descent_rate_m_s": 0.872
+   },
+   {
+    "t_s": 3.23,
+    "altitude_m": 60973.19,
+    "descent_rate_m_s": 0.82
+   },
+   {
+    "t_s": 3.24,
+    "altitude_m": 60973.18,
+    "descent_rate_m_s": 0.768
+   },
+   {
+    "t_s": 3.25,
+    "altitude_m": 60973.17,
+    "descent_rate_m_s": 0.716
+   },
+   {
+    "t_s": 3.26,
+    "altitude_m": 60973.17,
+    "descent_rate_m_s": 0.664
+   },
+   {
+    "t_s": 3.27,
+    "altitude_m": 60973.16,
+    "descent_rate_m_s": 0.611
+   },
+   {
+    "t_s": 3.28,
+    "altitude_m": 60973.16,
+    "descent_rate_m_s": 0.559
+   },
+   {
+    "t_s": 3.29,
+    "altitude_m": 60973.15,
+    "descent_rate_m_s": 0.507
+   },
+   {
+    "t_s": 3.3,
+    "altitude_m": 60973.15,
+    "descent_rate_m_s": 0.455
+   },
+   {
+    "t_s": 3.31,
+    "altitude_m": 60973.14,
+    "descent_rate_m_s": 0.403
+   },
+   {
+    "t_s": 3.32,
+    "altitude_m": 60973.14,
+    "descent_rate_m_s": 0.351
+   },
+   {
+    "t_s": 3.33,
+    "altitude_m": 60973.14,
+    "descent_rate_m_s": 0.298
+   },
+   {
+    "t_s": 3.34,
+    "altitude_m": 60973.13,
+    "descent_rate_m_s": 0.246
+   },
+   {
+    "t_s": 3.35,
+    "altitude_m": 60973.13,
+    "descent_rate_m_s": 0.194
+   },
+   {
+    "t_s": 3.36,
+    "altitude_m": 60973.13,
+    "descent_rate_m_s": 0.142
+   },
+   {
+    "t_s": 3.37,
+    "altitude_m": 60973.13,
+    "descent_rate_m_s": 0.09
+   },
+   {
+    "t_s": 3.38,
+    "altitude_m": 60973.13,
+    "descent_rate_m_s": 0.038
+   },
+   {
+    "t_s": 3.39,
+    "altitude_m": 60973.13,
+    "descent_rate_m_s": -0.015
+   }
+  ],
+  "unit": "s, m, m/s (descent positive)",
+  "tag": "K"
+ },
+ "mission_series": {
+  "rows": [
+   {
+    "t_h": 0.0,
+    "altitude_km": 61.0,
+    "battery_Wh": 1107.4,
+    "solar_W": 2607.0,
+    "demand_W": 2729.0,
+    "cos_zenith": 0.708,
+    "interior_C": 25.2
+   },
+   {
+    "t_h": 1.0,
+    "altitude_km": 55.6,
+    "battery_Wh": 1109.5,
+    "solar_W": 1914.0,
+    "demand_W": 1569.0,
+    "cos_zenith": 0.736,
+    "interior_C": 30.0
+   },
+   {
+    "t_h": 2.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 1941.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.763,
+    "interior_C": 37.8
+   },
+   {
+    "t_h": 3.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2042.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.789,
+    "interior_C": 38.5
+   },
+   {
+    "t_h": 4.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2141.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.813,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 5.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2236.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.836,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 6.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2327.0,
+    "demand_W": 1492.0,
+    "cos_zenith": 0.858,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 7.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 724.6,
+    "solar_W": 2413.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.878,
+    "interior_C": 52.0
+   },
+   {
+    "t_h": 8.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2495.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.897,
+    "interior_C": 39.8
+   },
+   {
+    "t_h": 9.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2571.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.914,
+    "interior_C": 38.7
+   },
+   {
+    "t_h": 10.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2642.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.93,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 11.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2706.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.944,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 12.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2764.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.957,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 13.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2815.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.968,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 14.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2858.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.977,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 15.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2895.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.985,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 16.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2924.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.991,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 17.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2946.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.996,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 18.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2959.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.999,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 19.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2965.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 1.0,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 20.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2963.0,
+    "demand_W": 1492.0,
+    "cos_zenith": 1.0,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 21.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 867.5,
+    "solar_W": 2953.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.997,
+    "interior_C": 52.0
+   },
+   {
+    "t_h": 22.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2935.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.994,
+    "interior_C": 39.8
+   },
+   {
+    "t_h": 23.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2909.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.988,
+    "interior_C": 38.7
+   },
+   {
+    "t_h": 24.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2876.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.981,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 25.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2836.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.972,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 26.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2788.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.962,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 27.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2733.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.95,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 28.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2672.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.937,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 29.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2604.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.922,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 30.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2531.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.905,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 31.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2452.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.887,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 32.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2367.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.867,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 33.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2278.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.846,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 34.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2185.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.824,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 35.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 2088.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.8,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 36.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 1988.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.775,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 37.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 1885.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.749,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 38.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 1780.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.721,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 39.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1109.5,
+    "solar_W": 1673.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.692,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 40.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 1094.5,
+    "solar_W": 1565.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.662,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 41.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 983.0,
+    "solar_W": 1457.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.631,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 42.0,
+    "altitude_km": 55.0,
+    "battery_Wh": 762.3,
+    "solar_W": 1348.0,
+    "demand_W": 1622.0,
+    "cos_zenith": 0.599,
+    "interior_C": 38.6
+   },
+   {
+    "t_h": 43.0,
+    "altitude_km": 54.82,
+    "battery_Wh": 438.1,
+    "solar_W": 1220.0,
+    "demand_W": 1483.0,
+    "cos_zenith": 0.566,
+    "interior_C": 38.6
+   }
+  ],
+  "unit": "h, km, Wh, W, -, degC",
+  "tag": "K"
+ }
+}

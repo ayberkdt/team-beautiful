@@ -15,7 +15,6 @@ from aerokit.venus import atmosphere as A
 from aerokit.venus import bemt as B
 from aerokit.venus import control as CT
 from aerokit.venus import design as DES
-from aerokit.venus import power as PW
 from aerokit.venus import sizing as S
 from aerokit.verification import check, check_true, expect_error
 
@@ -40,7 +39,7 @@ POINTS = {"descent_credit": dict.fromkeys(U.CASES, 0.5), "climb_k": dict.fromkey
 
 def _rows(ratio: float, bad_from: float = 99.0) -> list[dict]:
     return [{"V": v, "shaft_W": 1000.0 * ratio, "electric_W": 1300.0 * ratio, "trim_ok": v < bad_from}
-            for v in range(0, 21)]
+            for v in range(21)]
 
 
 def _curves(ratio_nominal: float = 1.2) -> dict:
@@ -192,3 +191,33 @@ class TestWrittenResult:
     def test_recommended_option_exists_and_closes(self):
         rec = next(o for o in self.r["options"] if o["option"] == self.r["recommended"])
         check_true("recommended design closes", rec["closes"])
+
+    def test_recommended_design_closes_in_every_interaction_case(self):
+        for k in U.CASES:
+            check_true(f"{k} closes", self.r["recommended_cases"][k]["closes"], self.r["recommended_cases"][k]["checks"])
+
+    def test_as_built_misses_only_the_reserve_rule_with_interaction(self):
+        for k in ("low", "nominal", "high"):
+            failed = [n for n, ok in self.r["cases"][k]["checks"].items() if not ok]
+            check_true(f"{k}: only the reserve rule fails", failed == ["hover_reserve"], failed)
+
+    def test_cruise_below_the_charge_window_is_rejected(self):
+        row = next(o for o in self.r["options"] if o["option"] == "cruise 54 km")
+        check_true("54 km cannot charge", not row["checks"]["charges_at_cruise"])
+
+    def test_new_release_keeps_pull_out_current_inside_the_limit(self):
+        pts = {round(x["mu0"], 2): x["Ipeak"] for x in self.r["simulator_points"]["release_current"]}
+        mu = math.cos(math.radians(self.r["recommended_cases"]["nominal"]["release_hour_angle_deg"]))
+        check_true("old release over the limit", pts[0.63] > 53.6)
+        check_true("new release under the limit", pts[round(mu, 2)] < 53.6, mu)
+
+    def test_budget_agrees_with_the_simulator_in_calm_air(self):
+        for row in self.r["sim_crosscheck"]:
+            if row["air"] == "calm":
+                check(row["name"], row["budget_end_soc"], row["sim_end_soc"], atol=0.05)
+
+
+def test_doc25_is_anchored_before_the_update():
+    old = ROOT / "04_Venus" / "docs" / "versions" / "25_lugus_venus_rotorcraft_2026-11-06_before_budget_update.md"
+    check_true("anchor exists", old.is_file())
+    check_true("anchor is the 4 Nov text", "~49 h of flight" in old.read_text(encoding="utf-8"))

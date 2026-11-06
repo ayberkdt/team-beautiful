@@ -102,3 +102,11 @@ Results log: appended below when each agent finishes.
   is the unfitted SUI 5 m/s point (+12.5 %), left failing on purpose. 55 km minimum electric power: off 1325 W, low 1475,
   nominal 1572, high 1664 W. Motor-out 24.5 m, tilt 66°; deployment peak 56.7 A > 53.6 A limit; canopy 0.33 m; dive
   8.1–10.8°. Data-book "−28 %" corrected (misquote; −17.7 % at 10 m/s). Sim work since e279882 is uncommitted.
+- **Budget update — done 6 Nov ~12:30.** `04_Venus/scripts/venus_budget_update.py` → `outputs/variants/budget_update/`
+  (B1–B3, result.md). As built 43.66 kg: energy closes, but hover reserve 0.484 h < 0.5 h rule with interaction on.
+  Recommended 44.63 kg / 1109 Wh closes all four cases: nominal loiter 1622 W at 8.9 m/s, hover 2.22 kW, 43.8 h flight
+  (38.7 h on sunlight), sun within 47°. Doc 25 updated (new §0, old copy in `docs/versions/`). Gust re-run: 5.9 m RMS,
+  27 m peak, 33 % W. New rules: dive floor 52 km, no release below cos z 0.68 (pull-out 50.1 A vs 56.7 A). Battery
+  1 % / 0 % sim runs were scenario starts outside mission rules, not mission results. Main session: read result.md and
+  doc 25 head, reran `test_venus_budget_update.py` → 23 passed. design.json, sim_params.json, F1–F15 remain 43.66 kg.
+  All 8 sim frames re-rendered with the latest sim code (`D:\tmp_ideathon\visual\sim\final\`).

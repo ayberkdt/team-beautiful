@@ -1,0 +1,285 @@
+[
+ {
+  "path": "atmosphere_and_wind.vertical_gust_correlation",
+  "old": 80.0,
+  "new": 1500.0,
+  "unit": "s",
+  "tag": "K",
+  "source": "VEGA W_a autocorrelation: R(300 s)=0.78, R(600 s)=0.59-0.71, R(1200 s)=0.53-0.56, R(1800 s)=0.28 -> 1/e at ~1500 s (E_04). Sampling is 75.5 s, so periods < ~150 s are not resolved by this record. Tag in venus_turbulence_model.json: K from D. Lagrangian time; flying through the cells at airspeed V the effective time is 1/tau = 1/1500 s + V/5000 m (409 s at 8.9 m/s). [v0.7: was 80.0 in v0.6]"
+ },
+ {
+  "path": "vehicle.mass",
+  "old": 43.655232,
+  "new": 44.629781,
+  "unit": "kg",
+  "tag": "K",
+  "source": "aerokit.venus.sizing.close with hover +3.42 % (venus_budget_update.close_with_interaction) [v0.7: was 43.655232 in v0.6]"
+ },
+ {
+  "path": "vehicle.cg",
+  "old": [
+   -0.0,
+   -0.0,
+   0.04
+  ],
+  "new": [
+   -0.0,
+   -0.0,
+   0.0394
+  ],
+  "unit": "m",
+  "tag": "K",
+  "source": "component layout of the variant design.json [v0.7: was [-0.0, -0.0, 0.04] in v0.6]"
+ },
+ {
+  "path": "vehicle.inertia",
+  "old": [
+   [
+    33.194,
+    -0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    33.194,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    65.088
+   ]
+  ],
+  "new": [
+   [
+    34.196,
+    -0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    34.196,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    67.078
+   ]
+  ],
+  "unit": "kg m^2",
+  "tag": "K",
+  "source": "point masses + rods from the variant design.json [v0.7: was [[33.194, -0.0, 0.0], [-0.0, 33.194, 0.0], [0.0, 0.0, 65.088]] in v0.6]"
+ },
+ {
+  "path": "vehicle.rotors.polar_inertia",
+  "old": 0.1708,
+  "new": 0.1746,
+  "unit": "kg m^2",
+  "tag": "K",
+  "source": "blade rods; aerokit.venus.sizing.close with hover +3.42 % (venus_budget_update.close_with_interaction) [v0.7: was 0.1708 in v0.6]"
+ },
+ {
+  "path": "vehicle.rotors.collective_hover",
+  "old": 7.044199,
+  "new": 7.082503,
+  "unit": "deg",
+  "tag": "K",
+  "source": "BEMT trim at 55 km; aerokit.venus.sizing.close with hover +3.42 % (venus_budget_update.close_with_interaction) [v0.7: was 7.044199 in v0.6]"
+ },
+ {
+  "path": "vehicle.rotors.curve_at_55km.rows",
+  "old": "27 rows",
+  "new": "27 rows",
+  "unit": "table",
+  "tag": "K",
+  "source": "rebuilt for the variant; rows in sim_params.json"
+ },
+ {
+  "path": "vehicle.rotors.heave_derivative",
+  "old": -31.783517,
+  "new": -32.411342,
+  "unit": "N/(m/s)",
+  "tag": "K",
+  "source": "BEMT dT/dw at fixed rpm, pitch (whole vehicle); aerokit.venus.sizing.close with hover +3.42 % (venus_budget_update.close_with_interaction) [v0.7: was -31.783517 in v0.6]"
+ },
+ {
+  "path": "vehicle.rotors.v_h_55km",
+  "old": 2.59062,
+  "new": 2.619377,
+  "unit": "m/s",
+  "tag": "K",
+  "source": "momentum theory per rotor; aerokit.venus.sizing.close with hover +3.42 % (venus_budget_update.close_with_interaction) [v0.7: was 2.59062 in v0.6]"
+ },
+ {
+  "path": "vehicle.drive.rpm_response_20pct",
+  "old": 0.30479,
+  "new": 0.302856,
+  "unit": "s",
+  "tag": "K",
+  "source": "rotor inertia / spare torque; aerokit.venus.sizing.close with hover +3.42 % (venus_budget_update.close_with_interaction) [v0.7: was 0.30479 in v0.6]"
+ },
+ {
+  "path": "vehicle.power.battery_capacity",
+  "old": 1044.139461,
+  "new": 1109.478759,
+  "unit": "Wh",
+  "tag": "K",
+  "source": "0.5 h of 2219 W hover; aerokit.venus.sizing.close with hover +3.42 % (venus_budget_update.close_with_interaction) [v0.7: was 1044.139461 in v0.6]"
+ },
+ {
+  "path": "vehicle.power.hover_electric_55km",
+  "old": 2088.279178,
+  "new": 2218.958029,
+  "unit": "W",
+  "tag": "K/Y",
+  "source": "BEMT + hover interaction +3.42 % (guc_egrisi.json, extrapolated to 0.04 D [Y]) [v0.7: was 2088.279178 in v0.6]"
+ },
+ {
+  "path": "vehicle.power.loiter_electric_55km",
+  "old": 1336.529094,
+  "new": 1621.528029,
+  "unit": "W",
+  "tag": "K/Y",
+  "source": "aerokit level power x nominal interaction ratio (guc_egrisi.json) [v0.7: was 1336.529094 in v0.6]"
+ },
+ {
+  "path": "vehicle.power.loiter_airspeed",
+  "old": 7.8,
+  "new": 8.9,
+  "unit": "m/s",
+  "tag": "K/Y",
+  "source": "minimum-power speed with nominal interaction [v0.7: was 7.8 in v0.6]"
+ },
+ {
+  "path": "limits[science dive floor]",
+  "old": 51.0,
+  "new": 52.0,
+  "unit": "km",
+  "tag": "K",
+  "source": "battery 57.5 degC peak after the 5 min hold at 52 km at 1.5 m/s down (venus_budget_update.fly) [v0.7: was 51.0 in v0.6]"
+ },
+ {
+  "path": "limits[dive abort battery temperature]",
+  "old": null,
+  "new": 52.0,
+  "unit": "degC",
+  "tag": "K/Y",
+  "source": "doc 25 §0: 50 -> 52 degC, the 5 min hold at 52 km at 1.5 m/s needs it; venus_budget_update.Profile [v0.7: new row]"
+ },
+ {
+  "path": "limits[release sun height, minimum cos z]",
+  "old": null,
+  "new": 0.68,
+  "unit": "-",
+  "tag": "K/Y",
+  "source": "doc 25 §0: 52.7 A at cos z 0.68 against the 2C limit; simulator at 43.66 kg, not rerun at 44.63 kg [v0.7: new row]"
+ },
+ {
+  "path": "limits[release rotor speed, maximum]",
+  "old": null,
+  "new": 668.5,
+  "unit": "rpm",
+  "tag": "K",
+  "source": "doc 25 §5.2: 1.30 x hover rpm, back-EMF cap [v0.7: new row]"
+ },
+ {
+  "path": "limits[descent to cruise]",
+  "old": null,
+  "new": {
+   "down_m_s": 1.5,
+   "forward_m_s": 3.5
+  },
+  "unit": "m/s",
+  "tag": "K/Y",
+  "source": "doc 25 §5.2: outside the vortex-ring band; venus_budget_update.Profile [v0.7: new row]"
+ },
+ {
+  "path": "limits[battery discharge current 2C]",
+  "old": null,
+  "new": 53.6,
+  "unit": "A",
+  "tag": "K/Y",
+  "source": "14S8P pack (venus_budget_update.pack at 1109 Wh); 2C is an aerokit input, not a measured limit [v0.7: new row]"
+ },
+ {
+  "path": "failure_modes[downdraft].effect",
+  "old": "+1.4 kW to hold altitude",
+  "new": "+1.5 kW to hold altitude",
+  "unit": "-",
+  "tag": "K",
+  "source": "recomputed for the variant (python 04_Venus/scripts/venus_variant_v07.py)"
+ },
+ {
+  "path": "failure_modes[downdraft].recovery",
+  "old": "ride it within 51-58 km, climb back (0.4 kWh)",
+  "new": "ride it within 52-58 km, climb back (0.4 kWh)",
+  "unit": "-",
+  "tag": "K",
+  "source": "recomputed for the variant (python 04_Venus/scripts/venus_variant_v07.py)"
+ },
+ {
+  "path": "failure_modes[battery hot].trigger",
+  "old": "interior > 50 degC during a dive",
+  "new": "interior > 52 degC during a dive",
+  "unit": "-",
+  "tag": "K",
+  "source": "recomputed for the variant (python 04_Venus/scripts/venus_variant_v07.py)"
+ },
+ {
+  "path": "failure_modes[sun too low].trigger",
+  "old": "cos zenith < 0.595 at 55 km",
+  "new": "cos zenith < 0.678 at 55 km",
+  "unit": "-",
+  "tag": "K",
+  "source": "recomputed for the variant (python 04_Venus/scripts/venus_variant_v07.py)"
+ },
+ {
+  "path": "failure_modes[sun too low].effect",
+  "old": "battery drains at ~1.3 kW",
+  "new": "battery drains, up to ~376 W before the sunset dive",
+  "unit": "-",
+  "tag": "K",
+  "source": "recomputed for the variant (python 04_Venus/scripts/venus_variant_v07.py)"
+ },
+ {
+  "path": "failure_modes[sun too low].recovery",
+  "old": "~0.8 h on battery, then sunset dive",
+  "new": "~3.5 h on battery, then sunset dive",
+  "unit": "-",
+  "tag": "K",
+  "source": "recomputed for the variant (python 04_Venus/scripts/venus_variant_v07.py)"
+ },
+ {
+  "path": "failure_modes[night].effect",
+  "old": "0 W solar; 1.04 kWh vs ~103 kWh needed (loiter power x half the 154 h air-mass day)",
+  "new": "0 W solar; 1.11 kWh vs ~125 kWh needed (loiter power x half the 154 h air-mass day)",
+  "unit": "-",
+  "tag": "K",
+  "source": "recomputed for the variant (python 04_Venus/scripts/venus_variant_v07.py)"
+ },
+ {
+  "path": "failure_modes[acid degradation].recovery",
+  "old": "mission ends at ~49 h anyway",
+  "new": "mission ends at ~44 h anyway",
+  "unit": "-",
+  "tag": "K",
+  "source": "recomputed for the variant (python 04_Venus/scripts/venus_variant_v07.py)"
+ },
+ {
+  "path": "deployment_replay.rows",
+  "old": "338 rows",
+  "new": "340 rows",
+  "unit": "table",
+  "tag": "K",
+  "source": "rebuilt for the variant; rows in sim_params.json"
+ },
+ {
+  "path": "mission_series.rows",
+  "old": "50 rows",
+  "new": "44 rows",
+  "unit": "table",
+  "tag": "K",
+  "source": "rebuilt for the variant; rows in sim_params.json"
+ }
+]

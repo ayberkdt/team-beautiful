@@ -1,0 +1,122 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "sunum",
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {
+  "No interaction": {
+   "renk": "#0072b2",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 0
+  },
+  "Low": {
+   "renk": "#d55e00",
+   "baglam": false,
+   "isaret": "s",
+   "cizgi": "--",
+   "sira": 1
+  },
+  "Nominal": {
+   "renk": "#009e73",
+   "baglam": false,
+   "isaret": "^",
+   "cizgi": "-.",
+   "sira": 2
+  },
+  "High": {
+   "renk": "#7f3360",
+   "baglam": false,
+   "isaret": "D",
+   "cizgi": "-.",
+   "sira": 3
+  },
+  "Closed design": {
+   "renk": "#000000",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "none",
+   "sira": 4
+  }
+ },
+ "nicelikler": {
+  "speed": {
+   "etiket": "Airspeed",
+   "birim": "m/s",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "pw": {
+   "etiket": "Electric power at 55 km",
+   "birim": "kW",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "hours": {
+   "etiket": "Time from release",
+   "birim": "h",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "alt": {
+   "etiket": "Altitude",
+   "birim": "km",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "soc": {
+   "etiket": "Battery state of charge",
+   "birim": "%",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "gross": {
+   "etiket": "Gross mass",
+   "birim": "kg",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "flight": {
+   "etiket": "Flight time",
+   "birim": "h",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "B1_power_curve": "B1_power_curve.dw.json",
+  "B2_mission": "B2_mission.dw.json",
+  "B3_options": "B3_options.dw.json"
+ },
+ "kenar_mm": {
+  "tam": [
+   15.8,
+   25.8,
+   59.3,
+   17.1
+  ]
+ }
+}

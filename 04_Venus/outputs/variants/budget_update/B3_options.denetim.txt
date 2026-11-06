@@ -1,9 +1,3 @@
-figür denetimi: 2 HATA · 1 UYARI · 1 BİLGİ · TESLİM YOK — DİKKAT: dosyalar HATA'ya rağmen yazıldı, teslim etme: B3_options.pdf, B3_options.png
-  [HATA ] metin-cakisma      'recommended' ile 'cruise 54 km' çakışıyor
-          → etiketleri kaydır (datawiz.etiket.cizgi_sonu çakışma çözer)  [Mayer2017 mekânsal bitişiklik d=0.79; Sweller2019]
-  [HATA ] metin-cakisma      'recommended' ile 'cruise 56 km' çakışıyor
-          → etiketleri kaydır (datawiz.etiket.cizgi_sonu çakışma çözer)  [Mayer2017 mekânsal bitişiklik d=0.79; Sweller2019]
+figür denetimi: 0 HATA · 1 UYARI · 0 BİLGİ · TESLİM EDİLEBİLİR
   [UYARI] zaman-ekseni       eksen 0: zaman y ekseninde ('Flight time (h)'), çizgi verisiyle
           → zamanı x'e al (soldan sağa); dikey profil gibi bilinçli istisnada altyazıda söyle  [06 T4b §7b: Haroz2016 [DD]; Tversky1991 [DD, üretim verisi: zaman yazı yönünde yatay]; Santiago2007, FuhrmanBoroditsky2010 (özet; sol=geçmiş, kültüre bağlı); Wilke2019Ch13/Dir [UG]]
-  [BİLGİ] banking-45         eksen 0: çizim alanı y/g = 0.44; 45° için ≈ 1.11
-          → eğim karşılaştırması amaçsa oranı yaklaştır (ax.set_box_aspect)  [Kosara2013b]

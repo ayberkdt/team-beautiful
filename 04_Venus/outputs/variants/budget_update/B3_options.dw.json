@@ -8,7 +8,7 @@
  "metin_kutusu_pt": [
   12.5,
   2.2,
-  681.8,
+  706.9,
   394.3
  ],
  "hedef": "sunum-tam",
@@ -52,13 +52,13 @@
    "baslik": "",
    "seriler": [
     {
-     "etiket": "Closed design",
+     "etiket": "recommended",
      "tur": "cizgi",
      "renk": "#000000",
-     "isaret": null,
+     "isaret": "o",
      "cizgi": null,
      "kalinlik": null,
-     "isaret_boyu": null
+     "isaret_boyu": 9.0
     }
    ],
    "eksen_turu": "rectilinear",
@@ -75,7 +75,7 @@
     "ters": false,
     "sinir": [
      40.0,
-     66.0
+     65.0
     ],
     "gorunur": true,
     "kategorik": false,
@@ -113,8 +113,8 @@
     "tarih": false,
     "ters": false,
     "sinir": [
-     25.0,
-     55.0
+     40.0,
+     54.0
     ],
     "gorunur": true,
     "kategorik": false,
@@ -124,8 +124,8 @@
     ],
     "ondalik_isareti": null,
     "tikler": [
-     "30",
      "40",
+     "45",
      "50"
     ],
     "eksi": null,
@@ -139,7 +139,9 @@
     ]
    },
    "lejant": [],
-   "dogrudan_etiket": [],
+   "dogrudan_etiket": [
+    "recommended"
+   ],
    "izgara": {
     "x": false,
     "y": true

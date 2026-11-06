@@ -24,12 +24,14 @@
 | Lowest altitude, km | 49.8 | 50.1 | 50.3 | 50.7 |
 | End state of charge | 7 % | 7 % | 5 % | 6 % |
 | Hover reserve, h (rule 0.5) | 0.500 | 0.484 | 0.484 | 0.484 |
+| Hold at the dive floor, min (plan 5) | 5 | 5 | 5 | 3 |
 | Check: sun_carries_loiter | yes | yes | yes | yes |
 | Check: soc_floor | yes | yes | yes | yes |
-| Check: dives_reach_floor | yes | yes | yes | NO |
+| Check: dives_reach_floor | yes | yes | yes | yes |
 | Check: dive_battery_below_60C | yes | yes | yes | yes |
 | Check: dives_at_sun_rule | yes | yes | yes | yes |
 | Check: hover_reserve | yes | NO | NO | NO |
+| Check: charges_at_cruise | yes | yes | yes | yes |
 | **Closes** | yes | NO | NO | NO |
 
 ## Recommended design (44.63 kg, 1109 Wh), 6 Nov profile
@@ -54,13 +56,15 @@
 | Lowest altitude, km | 49.8 | 50.1 | 50.4 | 50.8 |
 | End state of charge | 6 % | 6 % | 6 % | 7 % |
 | Hover reserve, h (rule 0.5) | 0.517 | 0.500 | 0.500 | 0.500 |
+| Hold at the dive floor, min (plan 5) | 5 | 5 | 5 | 3 |
 | Check: sun_carries_loiter | yes | yes | yes | yes |
 | Check: soc_floor | yes | yes | yes | yes |
-| Check: dives_reach_floor | yes | yes | yes | NO |
+| Check: dives_reach_floor | yes | yes | yes | yes |
 | Check: dive_battery_below_60C | yes | yes | yes | yes |
 | Check: dives_at_sun_rule | yes | yes | yes | yes |
 | Check: hover_reserve | yes | yes | yes | yes |
-| **Closes** | yes | yes | yes | NO |
+| Check: charges_at_cruise | yes | yes | yes | yes |
+| **Closes** | yes | yes | yes | yes |
 
 ## Battery at each mission event, recommended design
 
@@ -155,6 +159,10 @@
 | sunset as simulated: forced SoC 35 %, cos z 0.12 | nominal | seed 1 | 0.12 | 35 % | 0 % | -0 % | 48.5 | 38.5 |
 | sunset at mission state, at 60 C | nominal | seed 1 | 0.61 | 50 % | 14 % | 22 % | 60.0 | 60.0 |
 
+Simulator dives to 52 km (cos z 0.87, nominal): seed 1: max tilt 12.2°, lowest SoC 70 %, peak 51.4 °C; seed 2: max tilt 12.3°, lowest SoC 35 %, peak 54.8 °C; seed 3: max tilt 8.1°, lowest SoC 61 %, peak 52.2 °C.
+
+Simulator dives to 51 km (cos z 0.87, nominal): seed 1: max tilt 10.7°, lowest SoC 52 %, peak 55.1 °C; seed 2: max tilt 10.8°, lowest SoC 21 %, peak 59.8 °C; seed 3: max tilt 8.2°, lowest SoC 48 %, peak 56.0 °C.
+
 ## Gust re-run
 
 | Model | z RMS (m) | z peak (m) | Thrust RMS / W | Thrust peak / W |
@@ -172,7 +180,7 @@ A -3.5 m/s downdraft held: thrust 0.293 W, altitude offset 25 m, +1658 W. Holdin
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | re-closed, 0.10 m gap | 44.6 | 4.45 | 1109 | 8.0 | 1622 | 0.678 | 38.7 | 43.8 | 41.5 | 36.6 | yes |
 | gap 0.26 m (0.1 D) | 46.7 | 5.03 | 1171 | 8.3 | 1699 | 0.645 | 41.0 | 45.9 | 43.9 | 36.6 | yes |
-| gap 0.52 m (0.2 D) | 50.3 | 6.04 | 1282 | 8.8 | 1834 | 0.600 | 43.8 | 48.6 | 46.8 | 36.6 | NO |
+| gap 0.52 m (0.2 D) | 50.3 | 6.04 | 1282 | 8.8 | 1834 | 0.600 | 43.8 | 48.6 | 46.8 | 36.6 | yes |
 | gap 0.78 m (0.3 D) | 60.9 | 7.14 | 1634 | 9.4 | 2269 | 0.619 | 42.5 | 47.5 | 45.8 | 36.6 | NO |
 | halo deck 0.15 m | 60.1 | 8.29 | 1627 | 8.0 | 2291 | 0.562 | 46.1 | 50.6 | 48.9 | 36.6 | NO |
 | halo deck 0.30 m | 81.2 | 12.27 | 2428 | 8.0 | 3300 | 0.552 | 46.7 | 50.9 | 49.4 | 36.6 | NO |
@@ -181,4 +189,30 @@ A -3.5 m/s downdraft held: thrust 0.293 W, altitude offset 25 m, +1658 W. Holdin
 | cruise 54 km | 43.1 | 4.45 | 1023 | 8.0 | 1606 | 0.717 | 37.9 | 41.8 | 39.7 | 46.5 | NO |
 | cruise 56 km | 46.6 | 4.45 | 1219 | 8.0 | 1751 | 0.682 | 40.0 | 45.5 | 43.0 | 30.5 | yes |
 
+## Pull-out battery current against the 53.6 A 2C limit (simulator, 43.66 kg, 14S8P)
+
+| Release cos z | Peak A | Bus W | Array W |
+|---:|---:|---:|---:|
+| 0.630 | 56.7 | 5258 | 2187 |
+| 0.635 | 56.3 | 5265 | 2215 |
+| 0.681 | 52.7 | 5325 | 2455 |
+| 0.708 | 50.1 | 5340 | 2605 |
+| 0.734 | 47.3 | 5340 | 2750 |
+
+## Model uncertainty carried by these numbers
+
+Wake model fitted to NASA MTB wind-tunnel thrust ratios (tip gap 0.47 D, kw 0.50; low/high 0.30/0.70, rms 0.041). The fit covers V ≥ 3.5 m/s and may under-predict below that. VESPER's 0.04 D gap is outside the tested range. `guc_egrisi.json` predates a yaw-shed change; level trim agrees (harness 1578 W at 7.8 m/s). Low to high is the bracket on these curves, not a confidence interval.
+
+
 Recommended: **re-closed, 0.10 m gap**. Entry: 284 → 290 kg, β 25.1 → 25.7 kg/m², 56.1 → 56.0 g.
+
+## Figure briefs (written before drawing)
+
+- **B1 power curve.** Message: interaction lifts minimum power at 55 km and moves it from 8 to 9 m/s. Reader: mixed jury.
+  Target: sunum-tam. Data: airspeed vs electric power, four cases, `trim_ok` rows only. Form: lines, direct labels.
+- **B2 mission.** Message: every case stays far above the battery floor; more interaction only shortens the day.
+  Reader: mixed jury. Data: altitude and state of charge vs time, four cases, recommended design. Form: two panels.
+- **B3 options.** Message: small changes buy hours cheaply; a bigger deck or battery costs far more mass.
+  Reader: mixed jury. Data: one point per closed design; battery 0.75 h (62 kg, 30 h), halo 0.30 m (81 kg) and battery
+  1.0 h (no closure) are off this scale and stay in the table. Form: labelled scatter (flight time is the outcome, so
+  it stays on y although it is a duration).

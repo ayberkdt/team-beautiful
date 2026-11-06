@@ -1,146 +1,139 @@
-"""Automated PAR guidance: radar plots -> path state -> target heading and descent -> pilot cue.
+"""Automated PAR guidance: radar plots -> path state -> heading target and glide-path information -> pilot cue.
 
-The Advionics brief (6 Nov 2026): replace the PAR controller; radar data in, heading and glide-slope corrections out.
-The logic is what a talk-down controller does, in four small steps:
+The Advionics brief (6 Nov 2026): replace the PAR controller. The logic follows what the rules ask of that controller.
+Evidence: ``03_Advionics/research/R2_par_deep_research.md`` (PAR), ``R3_...`` (tasks), ``R4_...`` (cue), ``R5_...`` (models).
 
-1. **Filter** (:class:`PathFilter`): an alpha-beta filter per axis. Its rate only predicts the next plot; a plot far
-   from the prediction is rejected (gate from the PAR accuracy model of :func:`aerokit.atc.par.par_measure`).
-2. **Targets** (:meth:`CueLogic._targets`): position only. Heading target = course + a term that removes the offset in
-   ``look_ahead_s`` + a slow trim that learns the wind from the offset that remains (a radar sees no wind and no
-   heading). Descent target = nominal descent for the measured ground speed + a term that removes the height error.
-3. **Cue**: the needles move with every plot. A target changes only in display steps and at most every ``update_s``, so
-   radar noise does not flicker the cue. The pilot holds the last target.
-4. **Validity**: delayed, rejected or missing data changes the state. No valid data means no new target and no
-   extrapolation. LOST, OUTSIDE LIMITS and MINIMUMS are latched.
+* **The two axes are not treated alike** (ICAO Doc 4444 8.9.7.2.4-5). In azimuth the pilot does not correct unless told, so
+  the output is a heading. In elevation the pilot corrects from the information alone, so the output is position, trend
+  and an advisory rate of descent. No turn or descend commands.
+* **Filter** per axis: constant-velocity Kalman (Bar-Shalom), noise from the Annex 10 limits at the antenna range, gate on
+  the normalised innovation. The gate widens after each rejection so noise cannot lock it out.
+* **Heading target** from position only: last known heading + offset term + a slow trim. The controller knows the
+  heading last assigned and builds on it (R2 2.4), so the start heading is an input, and the trim follows the wind as
+  it changes with height. Corrections get smaller with range and change at most every 5 s (RA 3291, JO 7110.65).
+* **Words** use "slightly" and "well" (JO 7110.65 5-12-4). "On" is one third of the limit (Smolensk report p. 253).
+* **Limits** +-0.5 deg and +-2 deg (Smolensk report p. 257; UK limits are per runway). Going outside and staying outside
+  is the trigger (AIM 5-4-11). They stop at DH (JO 7110.65 5-10-14).
+* **Timers:** target lost above 3 s is told to the pilot (RA 3291 para 5); 5 s silence is the pilot's lost-comm point
+  (JO 7110.65 5-10-4). Inside 4 NM a returned target does not restart the approach (RA 3291 para 7b); we latch everywhere.
+* **Each axis has its own validity** (Doc 4444 8.9.7.2.5.4: elevation failure is told at once).
+* **Closure:** position alone misses an aircraft sinking fast towards the path, which is what the Smolensk event showed.
+  A 10 s line fit gives the trend words and a fast-closure flag, with Raytheon patent bands. The fit is not used in the
+  heading or rate targets: a rate from 1 Hz PAR plots is too noisy for control. Three designs that used it failed in
+  closed loop on 6 Nov, including a drift estimate from a 10 s track (2-3 deg of noise at 5 NM).
+* **Limits and alerts use what the radar is sure of:** deviation minus 1 sigma of the radar at that range.
 
-Two earlier laws failed in closed loop on 6 Nov and are recorded so nobody repeats them. A relative correction from
-filtered radar *rate*, continuous: 0 of 100 runs reached minimums. The same as discrete steps: 0 of 100. The derived
-rate is too noisy at 1 Hz PAR accuracy.
-
-All gains and thresholds are design values [Y], not requirements. Educational concept on simulated data only; it is not
-approved or ready for flight use. The cue recommends; the pilot decides and flies.
+Gains and some thresholds are design values [Y]. Educational concept on simulated and recorded data only; it is not
+approved or ready for flight use. The cue informs; the pilot decides and flies.
 """
 from __future__ import annotations
 
 import math
 from collections import deque
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 import numpy as np
 
 from aerokit.approach import Runway, glide_path_height
-from aerokit.atc.par import NM, par_measure
+from aerokit.atc.cue_intensity import CueIntensity, IntensityConfig
+from aerokit.atc.parflight import AIRCRAFT, FT, KT, Aircraft, Atmosphere, PilotModel, wind_at
+from aerokit.atc.parradar import NM, ParRadar, RadarConfig, RadarPlot, error_limits_m
 
-__all__ = ["CueConfig", "Plot", "PathFilter", "CueLogic", "Fault", "PilotModel", "ReplayConfig", "fly_replay",
-           "cue_changes", "VOICE_TEXT", "END_STATES"]
+__all__ = ["CueConfig", "AxisKalman", "CueLogic", "Fault", "ReplayConfig", "fly_replay", "replay_track", "cue_changes",
+           "END_STATES", "PilotModel", "RadarPlot"]
 
 FPM = 196.850394                 # ft/min per m/s
-FT = 3.28083990
 END_STATES = ("LOST", "OUTSIDE LIMITS", "MINIMUMS")
-
-VOICE_TEXT = {"turn_left": "Turn left", "turn_right": "Turn right", "descend_more": "Descend more",
-              "descend_less": "Descend less", "on_path": "On path", "delayed": "Data delayed",
-              "invalid": "Data invalid", "restored": "Guidance restored", "lost": "Guidance lost. Go around.",
-              "limits": "Outside limits. Go around.", "minimums": "Minimums. Guidance ends."}
 
 
 @dataclass(frozen=True)
 class CueConfig:
-    look_ahead_s: float = 20.0        # remove the deviation in about this time
-    min_look_ahead_s: float = 8.0     # near the runway the time shortens to half the time to go, not below this
-    trim_time_s: float = 80.0         # wind trim integrates the remaining offset with this time constant
-    max_track_corr_deg: float = 10.0  # offset term limit
-    max_trim_deg: float = 10.0
-    max_sink_corr_ms: float = 2.5     # about 500 ft/min
-    hdg_step_deg: float = 2.0
-    sink_step_fpm: float = 100.0
-    update_s: float = 5.0             # a target changes at most this often (a talk-down call is about every 5 s)
-    show_s: float = 3.0               # TURN / DESCEND wording stays this long, then HOLD
-    on_path_dots: float = 0.3         # within this the display says ON COURSE / ON GLIDE PATH
-    alpha: float = 0.30               # alpha-beta filter gains (1 Hz plots)
-    beta: float = 0.04
-    gate_sigma: float = 5.0           # reject a plot further than this many sigma from the prediction
-    gate_floor_m: float = 15.0        # the aircraft also moves: the gate never closes below this
-    delayed_after_s: float = 2.0      # plot age above this: DELAYED
-    lost_after_s: float = 5.0         # about 5 s: PAR lost-communication interval, search summaries only [A]
-    reject_to_invalid: int = 2        # consecutive rejected plots
-    recover_plots: int = 3            # consecutive good plots before the cue returns
-    acquire_plots: int = 3
-    lat_full_scale_deg: float = 2.5   # 2 dots
-    vert_full_scale_deg: float = 0.7
-    limit_dots: float = 2.0           # at or beyond full scale: OUTSIDE LIMITS
-    limit_after_range_m: float = 1000.0   # below this range the angle limit is not applied: minimums come first
-    max_range_m: float = 9 * NM       # PAR coverage (research note R_par_enri_soumu)
-    sector_deg: float = 10.0          # half width of the azimuth sector (SKYbrary, about 20 deg in all)
-    decision_height_m: float = 60.96  # 200 ft
-    voice_gap_s: float = 4.0          # at least this long between routine voice calls
-    voice_dots: float = 0.5           # routine voice only when further off the path than this
+    look_ahead_s: float = 20.0        # [Y] remove the offset in about this time
+    min_look_ahead_s: float = 8.0     # [Y] near the runway half the time to go, not below this
+    trim_time_s: float = 80.0         # [Y] chosen by sweep, 6 Nov
+    gs_prior_ms: float = 65.0         # [Y] prior for the range filter; range noise is about 150 m at 5 NM
+    gs_min_ms: float = 40.0
+    gs_max_ms: float = 110.0
+    max_trim_deg: float = 20.0        # [Y] wind at 1000 ft is 1.8 x W20 (R5); 19 kt at 20 ft needs about 15 deg
+    near_nm: float = 3.0              # 2-5 deg corrections inside about 3 NM (R2 2.4)
+    cap_far_deg: float = 10.0         # one historic sample: 10 deg far out (R2 2.4)
+    cap_near_deg: float = 5.0
+    change_far_deg: float = 4.0       # avoid small changes at long range (RA 3291 para 24)
+    change_near_deg: float = 2.0
+    update_s: float = 5.0             # about every 5 s (JO 7110.65 5-12-4a)
+    rod_step_fpm: float = 100.0
+    accel_lat: float = 0.5            # [Y] process noise, m/s^2 rms; half-rate turn peak is about 1.8
+    accel_vert: float = 0.2           # [Y]
+    accel_range: float = 0.05         # [Y]
+    gate_sigma: float = 5.0           # [Y] on the normalised innovation
+    limit_vert_deg: float = 0.5       # Smolensk report p. 257
+    limit_lat_deg: float = 2.0        # same
+    limit_floor_vert_m: float = 18.0  # 60 ft, UK "slightly" band: keeps the limit above radar error near DH [Y]
+    on_fraction: float = 1.0 / 3.0    # Smolensk report p. 253
+    slight_fraction: float = 2.0 / 3.0   # [Y] FAA has two words and no numbers
+    limit_frames: int = 3             # outside and staying outside (AIM 5-4-11) [Y] 3 s
+    latch_limits: bool = True         # False: words and alerts keep working past a limit (replay analysis only)
+    track_lost_s: float = 3.0         # RA 3291 para 5
+    lost_s: float = 5.0               # JO 7110.65 5-10-4a
+    reject_to_invalid: int = 2        # [Y]
+    recover_plots: int = 3            # [Y]
+    acquire_plots: int = 3            # [Y]
+    lat_full_scale_deg: float = 2.5   # needle: 2 dots
+    vert_full_scale_deg: float = 0.7  # ILS glide slope: 1 dot 0.35 deg (NTSB FDR report)
+    max_range_m: float = 9 * NM       # Annex 10 coverage
+    sector_deg: float = 10.0          # Annex 10: 20 deg sector
+    dh_ft: float = 200.0              # set by the pilot (RA 3291 para 1b)
+    max_rod_corr_ms: float = 1.2      # about 1 deg of pitch at approach speed (R2 section 4)
+    trend_window_s: float = 10.0      # [Y] 2 PAR calls; a controller needs 5-6 s (Smolensk report p. 267)
+    trend_slow_dps: float = 0.025     # Raytheon bands; the 0.01 band is below our noise at 3 km
+    trend_fast_dps: float = 0.05
+    predict_s: float = 10.0           # [Y] fast closure looks this far ahead
+    fast_window_s: float = 10.0       # [Y] tuned on 300 real approaches and the Smolensk track, 6 Nov
+    fast_margin: float = 0.3          # [Y] 1/s, slope noise as a share of the radar sigma
+    fast_frames: int = 5              # [Y] frames in a row
+    fast_max_ft: float = 1000.0       # the stabilised approach rule starts at the gate (FSF ALAR 7.1)
+    sink_limit_fpm: float = 1000.0    # stabilised approach limit (FSF ALAR 7.1)
+    gear_nm: float = 3.0              # prompt before 2 NM (RA 3291 para 1d)
+    clearance_nm: float = 2.0         # Doc 4444 8.9.6.1.7
+    not_correcting_s: float = 15.0    # [Y]
 
 
-@dataclass(frozen=True)
-class Plot:
-    """One radar plot as it reaches the cue logic. ``t`` is the time of measurement, not of arrival."""
+class AxisKalman:
+    """Constant-velocity Kalman filter on one axis; discrete white-noise acceleration."""
 
-    t: float
-    range_m: float
-    az_dev_m: float                   # + right of the centreline
-    el_dev_m: float                   # + above the glide path
-    valid: bool = True
+    def __init__(self, value: float, rate: float, var: float, accel_rms: float, t: float, rate_var: float = 25.0):
+        self.x = np.array([value, rate])
+        self.P = np.diag([var, rate_var])
+        self.q = accel_rms ** 2
+        self.t = t
 
+    def predict(self, t: float) -> tuple[np.ndarray, np.ndarray]:
+        dt = t - self.t
+        f = np.array([[1.0, dt], [0.0, 1.0]])
+        g = np.array([dt * dt / 2.0, dt])
+        return f @ self.x, f @ self.P @ f.T + self.q * np.outer(g, g)
 
-def sigma_m(range_m: float) -> tuple[float, float]:
-    """(lateral, vertical) 1-sigma plot noise; the model of :func:`aerokit.atc.par.par_measure` at zero offset."""
-    return 0.5 * max(9.0, 0.006 * range_m), 0.5 * max(6.0, 0.004 * range_m)
+    def nis(self, value: float, var: float, t: float) -> float:
+        """Innovation squared over its variance: one degree of freedom."""
+        x, p = self.predict(t)
+        return float((value - x[0]) ** 2 / (p[0, 0] + var))
 
-
-@dataclass
-class PathFilter:
-    """Alpha-beta filters on lateral deviation, vertical deviation and range."""
-
-    cfg: CueConfig
-    t: float | None = None
-    y: float = 0.0
-    yr: float = 0.0
-    z: float = 0.0
-    zr: float = 0.0
-    r: float = 0.0
-    rr: float = 0.0
-
-    def start(self, plots: list[Plot]) -> None:
-        a, b = plots[0], plots[-1]
-        self.t = b.t
-        self.y, self.z = (float(np.mean([getattr(p, k) for p in plots])) for k in ("az_dev_m", "el_dev_m"))
-        self.r = b.range_m
-        self.yr, self.zr, self.rr = 0.0, 0.0, (b.range_m - a.range_m) / max(b.t - a.t, 1e-6)
-
-    def predict(self, t: float) -> tuple[float, float, float]:
-        dt = t - (self.t if self.t is not None else t)
-        return self.y + self.yr * dt, self.z + self.zr * dt, self.r + self.rr * dt
-
-    def accepts(self, p: Plot, rejects: int = 0) -> bool:
-        """Innovation gate. It widens after each rejected plot: the prediction gets older, and without this two noise
-        rejections in a row could never recover (2 false LOST in 100 clean runs before this change)."""
-        py, pz, _ = self.predict(p.t)
-        sy, sz = sigma_m(p.range_m)
-        k = self.cfg.gate_sigma * (1.0 + 0.5 * rejects)
-        return abs(p.az_dev_m - py) <= max(k * sy, self.cfg.gate_floor_m) and \
-            abs(p.el_dev_m - pz) <= max(k * sz, self.cfg.gate_floor_m)
-
-    def update(self, p: Plot) -> None:
-        dt = p.t - (self.t if self.t is not None else p.t)
-        if dt <= 0:
-            return                    # an old plot arriving late never moves the state backwards
-        a, b = self.cfg.alpha, self.cfg.beta
-        py, pz, pr = self.predict(p.t)
-        ey, ez, er = p.az_dev_m - py, p.el_dev_m - pz, p.range_m - pr
-        self.y, self.yr = py + a * ey, self.yr + b * ey / dt
-        self.z, self.zr = pz + a * ez, self.zr + b * ez / dt
-        self.r, self.rr = pr + 0.5 * er, self.rr + 0.1 * er / dt
-        self.t = p.t
+    def update(self, value: float, var: float, t: float) -> None:
+        x, p = self.predict(t)
+        s = p[0, 0] + var
+        k = p[:, 0] / s
+        self.x = x + k * (value - x[0])
+        self.P = p - np.outer(k, p[0, :])
+        self.t = t
 
 
-def _step(value: float, step: float) -> float:
-    return round(value / step) * step
+def _slope(samples: Sequence[tuple[float, float]]) -> float | None:
+    if len(samples) < 4:
+        return None
+    t = np.array([s[0] for s in samples])
+    v = np.array([s[1] for s in samples])
+    return float(np.polyfit(t - t[0], v, 1)[0])
 
 
 @dataclass
@@ -149,210 +142,257 @@ class CueLogic:
 
     rwy: Runway
     cfg: CueConfig = field(default_factory=CueConfig)
+    radar: RadarConfig = field(default_factory=RadarConfig)
+    intensity: IntensityConfig = field(default_factory=IntensityConfig)
+    clearance: bool = True
+    quiet: bool = False
     state: str = "ACQUIRING"
-    hdg: float | None = None          # shown heading target, degrees relative to the runway course
-    sink: float | None = None         # shown descent target, ft/min
+    hdg: float = 0.0                  # heading target, degrees relative to the runway course
+    rod: float | None = None          # advisory rate of descent, ft/min
 
     def __post_init__(self) -> None:
-        self.f = PathFilter(self.cfg)
-        self.trim = 0.0
-        self._first: list[Plot] = []
-        self._rejects = 0
-        self._good = 0
-        self._bad = False             # in INVALID until recover_plots good plots arrived
-        self._last_good: float | None = None
-        self._last_trim_t: float | None = None
-        self._last_voice = -1e9
-        self._next = [0.0, 0.0]       # earliest next target change per axis
-        self._word = [(0.0, ""), (0.0, "")]  # (command wording ends at, wording) per axis
-        self._said = [0, 0]           # direction of the last spoken call per axis
-        self._said_on_path = True
+        self.ky: AxisKalman | None = None
+        self.kz: AxisKalman | None = None
+        self.kr: AxisKalman | None = None
+        self.trim = self.hdg          # the heading last assigned is known
+        self.alert = CueIntensity(self.intensity, quiet=self.quiet)
+        self._first: list[RadarPlot] = []
+        self._rej = {"az": 0, "el": 0}
+        self._good = {"az": 0, "el": 0}
+        self._bad = {"az": False, "el": False}
+        self._last = {"az": -1e9, "el": -1e9}
+        self._trim_t: float | None = None
+        self._next = [0.0, 0.0]
+        self._out = 0
+        self._hb = 0
+        self._last_hdg_t = -1e9
+        self._hist: deque[tuple[float, float, float, float]] = deque()
+        self._clearance_said = False
+        self._fast_hist: deque[tuple[float, float]] = deque()
+        self._fast_n = 0
 
-    def _take(self, p: Plot) -> None:
-        finite = all(math.isfinite(v) for v in (p.range_m, p.az_dev_m, p.el_dev_m))
-        if not p.valid or not finite:
-            self._rejects += 1
-            self._good = 0
+    def _vars(self, p: RadarPlot) -> tuple[float, float, float]:
+        c = self.radar
+        r_ant = math.hypot(p.range_m + c.setback_m, p.az_dev_m - c.offset_m)
+        l_az, l_el, l_r = error_limits_m(r_ant, p.range_m, p.az_dev_m, p.el_dev_m)
+        s = c.sigma_of_limit
+        return (s * l_az) ** 2, (s * l_el) ** 2, (s * l_r) ** 2
+
+    def _axis(self, key: str, kal: AxisKalman, value: float, valid: bool, var: float, t: float) -> None:
+        if not valid or not math.isfinite(value):
+            self._rej[key] += 1
+            self._good[key] = 0
             return
-        if self.f.t is None:
-            self._first.append(p)
-            if len(self._first) >= self.cfg.acquire_plots:
-                self.f.start(self._first)
-                self._last_good = p.t
-            return
-        if p.t <= self.f.t:
-            return
-        if self.f.accepts(p, self._rejects):
-            self.f.update(p)
-            self._last_good = p.t
-            self._rejects = 0
-            self._good += 1
+        limit = (self.cfg.gate_sigma * (1.0 + 0.5 * self._rej[key])) ** 2
+        if kal.nis(value, var, t) <= limit:
+            kal.update(value, var, t)
+            self._last[key] = t
+            self._rej[key] = 0
+            self._good[key] += 1
         else:
-            self._rejects += 1
-            self._good = 0
+            self._rej[key] += 1
+            self._good[key] = 0
 
-    def _dots(self) -> tuple[float, float]:
+    def _take(self, p: RadarPlot) -> None:
+        if self.kr is None or self.ky is None or self.kz is None:
+            if p.az_valid and p.el_valid and all(map(math.isfinite, (p.range_m, p.az_dev_m, p.el_dev_m))):
+                self._first.append(p)
+            if len(self._first) >= self.cfg.acquire_plots:
+                self._start()
+            return
+        if p.t <= self.kr.t:
+            return                    # an old plot arriving late never moves the state backwards
+        v_az, v_el, v_r = self._vars(p)
+        self._axis("az", self.ky, p.az_dev_m, p.az_valid, v_az, p.t)
+        self._axis("el", self.kz, p.el_dev_m, p.el_valid, v_el, p.t)
+        if math.isfinite(p.range_m):
+            self.kr.update(p.range_m, v_r, p.t)
+        self._hb += 1
+
+    def _start(self) -> None:
         c = self.cfg
-        r = max(self.f.r, 1.0)
-        return (2.0 * math.degrees(math.atan2(self.f.y, r)) / c.lat_full_scale_deg,
-                2.0 * math.degrees(math.atan2(self.f.z, r)) / c.vert_full_scale_deg)
+        b = self._first[-1]
+        v_az, v_el, v_r = self._vars(b)
+        n = len(self._first)
+        y = float(np.mean([p.az_dev_m for p in self._first]))
+        z = float(np.mean([p.el_dev_m for p in self._first]))
+        self.ky = AxisKalman(y, 0.0, v_az / n, c.accel_lat, b.t)
+        self.kz = AxisKalman(z, 0.0, v_el / n, c.accel_vert, b.t)
+        self.kr = AxisKalman(b.range_m, -c.gs_prior_ms, v_r, c.accel_range, b.t, rate_var=15.0 ** 2)
+        self._last = {"az": b.t, "el": b.t}
 
-    def _height_m(self) -> float:
-        return float(glide_path_height(self.rwy, self.f.r + self.rwy.gpip)) + self.f.z
+    def _limits_m(self, r: float) -> tuple[float, float]:
+        c = self.cfg
+        return (r * math.tan(math.radians(c.limit_lat_deg)),
+                max(r * math.tan(math.radians(c.limit_vert_deg)), c.limit_floor_vert_m))
 
-    def _next_state(self, t: float) -> str:
+    def _dots(self, y: float, z: float, r: float) -> tuple[float, float]:
+        c = self.cfg
+        rr = max(r, 1.0)
+        return (2.0 * math.degrees(math.atan2(y, rr)) / c.lat_full_scale_deg,
+                2.0 * math.degrees(math.atan2(z, rr)) / c.vert_full_scale_deg)
+
+    def _word(self, dev: float, limit: float, on: str, plus: str, minus: str) -> str:
+        c = self.cfg
+        share = abs(dev) / limit
+        if share <= c.on_fraction:
+            return on
+        side = plus if dev > 0 else minus
+        return f"{'SLIGHTLY' if share <= c.slight_fraction else 'WELL'} {side}"
+
+    def _trend_word(self, dev: float, rate_dps: float | None, word: str) -> str:
+        c = self.cfg
+        if rate_dps is None or word.startswith("ON "):
+            return ""
+        size = abs(rate_dps)
+        if size < c.trend_slow_dps:
+            return "HOLDING"
+        head = "CORRECTING" if rate_dps * dev < 0 else "GOING"
+        return f"{head} RAPIDLY" if size >= c.trend_fast_dps else head
+
+    def _next_state(self, t: float, y: float, z: float, r: float, height_ft: float) -> str:
         c = self.cfg
         if self.state in END_STATES:
             return self.state
-        if self.f.t is None:
-            return "ACQUIRING" if t < c.lost_after_s + c.acquire_plots else "LOST"
-        age = t - (t if self._last_good is None else self._last_good)   # both are set when the filter starts
-        if age > c.lost_after_s:
+        age = max(t - self._last["az"], t - self._last["el"])
+        if age > c.lost_s:
             return "LOST"
-        if self._rejects >= c.reject_to_invalid:
-            self._bad = True
-        if self._bad and self._good >= c.recover_plots:
-            self._bad = False
-        if self._bad:
+        for k in ("az", "el"):
+            if self._rej[k] >= c.reject_to_invalid:
+                self._bad[k] = True
+            if self._bad[k] and self._good[k] >= c.recover_plots:
+                self._bad[k] = False
+        if self._bad["az"] or self._bad["el"]:
             return "INVALID"
-        if age > c.delayed_after_s:
+        if age > c.track_lost_s:
             return "DELAYED"
-        if self._height_m() <= c.decision_height_m:
+        if height_ft <= c.dh_ft:
             return "MINIMUMS"
-        ld, vd = self._dots()
-        if self.f.r > c.max_range_m or abs(math.degrees(math.atan2(self.f.y, self.f.r))) > c.sector_deg:
-            return "OUTSIDE LIMITS"
-        if self.f.r > c.limit_after_range_m and max(abs(ld), abs(vd)) >= c.limit_dots:
-            return "OUTSIDE LIMITS"
-        return "VALID"
+        lim_y, lim_z = self._limits_m(r)
+        v_az, v_el, _ = self._vars(RadarPlot(t, r, y, z))
+        outside = (abs(y) - math.sqrt(v_az) > lim_y or abs(z) - math.sqrt(v_el) > lim_z or r > c.max_range_m or
+                   abs(math.degrees(math.atan2(y, max(r, 1.0)))) > c.sector_deg)
+        self._out = self._out + 1 if outside else 0
+        return "OUTSIDE LIMITS" if c.latch_limits and self._out >= c.limit_frames else "VALID"
 
-    def _targets(self, t: float) -> tuple[float, float]:
-        """Raw targets from the filter state: heading relative to the course [deg], descent [ft/min]."""
+    def _closing_fast(self, t: float, z: float, r: float, y: float, nominal: float, lim_z: float,
+                      height_ft: float) -> bool:
+        """Heading below the limit, with a sink rate above the stabilised limit by more than the slope noise, for some
+        frames in a row. Tuned on real data: without the margin 43 % of normal approaches raised a false caution."""
         c = self.cfg
-        f = self.f
-        gs = max(-f.rr, 30.0)
-        T = min(c.look_ahead_s, max(0.5 * f.r / gs, c.min_look_ahead_s))
-        dt = 0.0 if self._last_trim_t is None else t - self._last_trim_t
-        self._last_trim_t = t
-        ratio = -f.y / (gs * T)
+        self._fast_hist.append((t, z))
+        while self._fast_hist[0][0] < t - c.fast_window_s:
+            self._fast_hist.popleft()
+        rate = _slope(list(self._fast_hist))
+        hit = False
+        if rate is not None and height_ft <= c.fast_max_ft and t - self._fast_hist[0][0] >= c.fast_window_s - 2.0:
+            noise = c.fast_margin * math.sqrt(self._vars(RadarPlot(t, r, y, z))[1])
+            hit = (rate < 0 and z + rate * c.predict_s < -lim_z and (nominal - rate - noise) * FPM > c.sink_limit_fpm)
+        self._fast_n = self._fast_n + 1 if hit else 0
+        return self._fast_n >= c.fast_frames
+
+    def _update_targets(self, t: float, y: float, z: float, r: float, gs: float) -> tuple[float, float]:
+        c = self.cfg
+        T = min(c.look_ahead_s, max(0.5 * r / gs, c.min_look_ahead_s))
+        dt = 0.0 if self._trim_t is None else t - self._trim_t
+        self._trim_t = t
+        ratio = -y / (gs * T)
         self.trim = max(-c.max_trim_deg, min(c.max_trim_deg, self.trim + math.degrees(ratio) * dt / c.trim_time_s))
-        offset = max(-c.max_track_corr_deg, min(c.max_track_corr_deg, math.degrees(math.atan(ratio))))
+        near = r < c.near_nm * NM
+        cap = c.cap_near_deg if near else c.cap_far_deg
+        raw_h = max(-cap, min(cap, math.degrees(math.atan(ratio)))) + self.trim
         nominal = gs * math.tan(math.radians(self.rwy.glide_path_deg))
-        extra = max(-c.max_sink_corr_ms, min(c.max_sink_corr_ms, f.z / T))
-        return offset + self.trim, (nominal + extra) * FPM
-
-    def _update_targets(self, t: float) -> tuple[float, float]:
-        c = self.cfg
-        raw_h, raw_s = self._targets(t)
-        if self.hdg is None or self.sink is None:
-            self.hdg, self.sink = 0.0, _step(raw_s, c.sink_step_fpm)
+        raw_s = (nominal + max(-c.max_rod_corr_ms, min(c.max_rod_corr_ms, z / T))) * FPM
         new_h = new_s = 0.0
-        ld, vd = self._dots()         # on the path the target needs a bigger reason to change: less flicker
-        need_h = (1.5 if abs(ld) <= c.on_path_dots else 0.75) * c.hdg_step_deg
-        need_s = (1.5 if abs(vd) <= c.on_path_dots else 0.75) * c.sink_step_fpm
-        if t >= self._next[0] and abs(raw_h - self.hdg) >= need_h:
-            value = _step(raw_h, c.hdg_step_deg)
-            new_h = value - self.hdg
-            if new_h:
-                self.hdg = value
-                self._next[0] = t + c.update_s
-                self._word[0] = (t + c.show_s, self._lat_word(new_h))
-        if t >= self._next[1] and abs(raw_s - self.sink) >= need_s:
-            value = _step(raw_s, c.sink_step_fpm)
-            new_s = value - self.sink
-            if new_s:
-                self.sink = value
-                self._next[1] = t + c.update_s
-                self._word[1] = (t + c.show_s, self._vert_word(new_s))
+        ld, vd = self._dots(y, z, r)   # on the path a target needs a bigger reason to change: less flicker
+        need = (c.change_near_deg if near else c.change_far_deg) * (1.5 if abs(ld) < 0.3 else 1.0)
+        if t >= self._next[0] and abs(raw_h - self.hdg) >= need:
+            value = float(round(raw_h))
+            new_h, self.hdg = value - self.hdg, value
+            self._next[0] = t + c.update_s
+            self._last_hdg_t = t
+        step = c.rod_step_fpm
+        if self.rod is None:
+            self.rod = round(raw_s / step) * step
+        elif t >= self._next[1] and abs(raw_s - self.rod) >= (2.5 if abs(vd) < 0.3 else 1.5) * step:
+            value = round(raw_s / step) * step
+            new_s, self.rod = value - self.rod, value
+            self._next[1] = t + c.update_s
         return new_h, new_s
 
-    def _lat_word(self, change: float) -> str:
-        """TURN moves towards the path. EASE ends a turn: the aircraft may still be on that side, and a bare TURN RIGHT
-        beside a needle on the left would contradict it."""
-        side = "RIGHT" if change > 0 else "LEFT"
-        return f"TURN {side}" if change * self.f.y < 0 else f"EASE {side}"
-
-    def _vert_word(self, change: float) -> str:
-        """DESCEND MORE / LESS move towards the path; EASE DESCENT and RESUME DESCENT end a correction."""
-        if change > 0:
-            return "DESCEND MORE" if self.f.z > 0 else "RESUME DESCENT"
-        return "DESCEND LESS" if self.f.z < 0 else "EASE DESCENT"
-
-    def _texts(self, t: float, ld: float | None, vd: float | None) -> tuple[str, str]:
-        """The two command words. Same wording on the display, in the tests and on the slides."""
-        if ld is None or vd is None or self.hdg is None:
-            return "", ""
-        c = self.cfg
-        if t < self._word[0][0]:
-            lat = self._word[0][1]
-        else:
-            lat = "ON COURSE" if abs(ld) <= c.on_path_dots else "HOLD HEADING"
-        if t < self._word[1][0]:
-            vert = self._word[1][1]
-        else:
-            vert = "ON GLIDE PATH" if abs(vd) <= c.on_path_dots else "HOLD DESCENT"
-        return lat, vert
-
-    def _voice(self, t: float, old: str, new_h: float, new_s: float) -> str | None:
-        c = self.cfg
-        s = self.state
-        if s != old:                  # safety calls are not rate limited
-            call = {"DELAYED": "delayed", "INVALID": "invalid", "LOST": "lost", "OUTSIDE LIMITS": "limits",
-                    "MINIMUMS": "minimums"}.get(s)
-            if s == "VALID" and old in ("DELAYED", "INVALID"):
-                call = "restored"
-            if call:
-                self._last_voice = t
-                self._said = [0, 0]
-                return call
-        if s != "VALID" or t - self._last_voice < c.voice_gap_s:
-            return None
-        call = None
-        dh, ds = int(np.sign(new_h)), int(np.sign(new_s))
-        ld, vd = self._dots()         # routine voice: only off the path, and only for moves towards the path
-        if dh and dh != self._said[0] and abs(ld) > c.voice_dots and self._word[0][1].startswith("TURN"):
-            call, self._said[0] = ("turn_right" if dh > 0 else "turn_left"), dh
-        elif (ds and ds != self._said[1] and abs(vd) > c.voice_dots and
-              self._word[1][1] in ("DESCEND MORE", "DESCEND LESS")):
-            call, self._said[1] = ("descend_more" if ds > 0 else "descend_less"), ds
-        if call:
-            self._said_on_path = False
-        elif not self._said_on_path and max(abs(ld), abs(vd)) <= c.on_path_dots:
-            call, self._said_on_path, self._said = "on_path", True, [0, 0]
-        if call:
-            self._last_voice = t
-        return call
-
-    def step(self, t: float, plot: Plot | None) -> dict:
+    def step(self, t: float, plot: RadarPlot | None) -> dict:
         c = self.cfg
         if plot is not None and self.state not in END_STATES:
             self._take(plot)
-        old = self.state
-        self.state = self._next_state(t)
+        if self.ky is None or self.kz is None or self.kr is None:
+            self.state = "ACQUIRING" if t <= c.lost_s + c.acquire_plots else "LOST"
+            return self._frame(t, self.alert.step(t, self.state, None, None, None, None))
+        y, z = float(self.ky.x[0]), float(self.kz.x[0])        # shown values are never extrapolated
+        r = max(float(self.kr.predict(t)[0][0]), 1.0)
+        gs = min(max(-float(self.kr.x[1]), c.gs_min_ms), c.gs_max_ms)
+        height_ft = (float(glide_path_height(self.rwy, r + self.rwy.gpip)) + z) / FT
+        self.state = self._next_state(t, y, z, r, height_ft)
+        self._hist.append((t, math.degrees(math.atan2(y, r)), math.degrees(math.atan2(z, r)), z))
+        while self._hist[0][0] < t - c.trend_window_s:
+            self._hist.popleft()
         new_h = new_s = 0.0
         if self.state == "VALID":
-            new_h, new_s = self._update_targets(t)
+            new_h, new_s = self._update_targets(t, y, z, r, gs)
         else:
-            self._last_trim_t = None                      # no valid data: nothing is learned or changed
+            self._trim_t = None
             self._next = [t + 1.0, t + 1.0]
-            self._word = [(0.0, ""), (0.0, "")]
-        show = self.state in ("VALID", "DELAYED")
-        ld, vd = self._dots() if show else (None, None)
-        lat_word, vert_word = self._texts(t, ld, vd)
+        lim_y, lim_z = self._limits_m(r)
+        lat_word = self._word(y, lim_y, "ON COURSE", "RIGHT", "LEFT")
+        vert_word = self._word(z, lim_z, "ON GLIDE PATH", "ABOVE", "BELOW")
+        rate_lat = _slope([(h[0], h[1]) for h in self._hist])
+        rate_vert = _slope([(h[0], h[2]) for h in self._hist])
+        rate_z = _slope([(h[0], h[3]) for h in self._hist])
+        nominal = gs * math.tan(math.radians(self.rwy.glide_path_deg))
+        sink_fpm = None if rate_z is None else (nominal - rate_z) * FPM
+        fast = self._closing_fast(t, z, r, y, nominal, lim_z, height_ft)
+        not_corr = (self.state == "VALID" and not lat_word.startswith("ON ") and rate_lat is not None and
+                    t - self._last_hdg_t >= c.not_correcting_s and rate_lat * y >= 0)
+        notice = None
+        if self.state == "VALID" and r <= c.clearance_nm * NM and not self.clearance and not self._clearance_said:
+            self._clearance_said = True
+            notice = "no_clearance"
+        v_az, v_el, _ = self._vars(RadarPlot(t, r, y, z))
+        v = self.alert.step(t, self.state, y, z, r, height_ft, closing_fast=fast, notice=notice,
+                            resolve_m=(math.sqrt(v_az), math.sqrt(v_el)))
+        live = self.state in ("VALID", "DELAYED", "INVALID")
+        show_lat, show_vert = live and not self._bad["az"], live and not self._bad["el"]
+        ld, vd = self._dots(y, z, r)
+        note = ""
+        if self.state == "VALID" and c.clearance_nm * NM < r <= c.gear_nm * NM:
+            note = "CHECK GEAR"
+        elif r <= c.clearance_nm * NM and not self.clearance:
+            note = "CLEARANCE NOT CONFIRMED"
+        lat_trend = "NOT CORRECTING" if not_corr else self._trend_word(y, rate_lat, lat_word)
+        return self._frame(t, v, ld if show_lat else None, vd if show_vert else None, lat_word if show_lat else "",
+                           vert_word if show_vert else "", lat_trend if show_lat else "",
+                           self._trend_word(z, rate_vert, vert_word) if show_vert else "", new_h, new_s, r,
+                           height_ft if show_vert else None, gs, sink_fpm, fast, note)
+
+    def _frame(self, t: float, v: dict, ld: float | None = None, vd: float | None = None, lat_word: str = "",
+               vert_word: str = "", lat_trend: str = "", vert_trend: str = "", new_h: float = 0.0, new_s: float = 0.0,
+               r: float | None = None, height_ft: float | None = None, gs: float | None = None,
+               sink_fpm: float | None = None, fast: bool = False, note: str = "") -> dict:
+        ok = self.state == "VALID"
+        ages = [t - a for a in self._last.values() if a > -1e8]
         return {"t": round(t, 1), "state": self.state, "lat_dots": ld, "vert_dots": vd,
-                "hdg_rel_deg": self.hdg if self.state == "VALID" else None,
-                "sink_fpm": self.sink if self.state == "VALID" else None,
-                "hdg_new": new_h, "sink_new": new_s, "lat_word": lat_word, "vert_word": vert_word,
-                "age_s": None if self._last_good is None else t - self._last_good,
-                "voice": self._voice(t, old, new_h, new_s),
-                "range_nm": None if self.f.t is None else self.f.r / NM,
-                "height_ft": self._height_m() * FT if show else None, "trim_deg": self.trim}
+                "hdg_rel_deg": self.hdg if ok else None, "rod_fpm": self.rod if ok else None, "hdg_new": new_h,
+                "rod_new": new_s, "lat_word": lat_word, "vert_word": vert_word, "lat_trend": lat_trend,
+                "vert_trend": vert_trend, "age_s": max(ages) if ages else None, "heartbeat": self._hb,
+                "range_nm": None if r is None else r / NM, "height_ft": height_ft, "gs_ms": gs, "sink_fpm": sink_fpm,
+                "closing_fast": fast, "note": note, "trim_deg": self.trim, "level": v["level"], "voice": v["voice"],
+                "voice_dba": v["voice_dba"], "tone_first": v["tone_first"], "visual": v["visual"], "blink": v["blink"],
+                "intensity": v["intensity"]}
 
 
 @dataclass(frozen=True)
 class Fault:
     """A scripted radar fault between ``t0`` and ``t1``. kind: delay (value = s), jump (value = m on both axes),
-    invalid (valid flag false) or dropout (no plots)."""
+    invalid (both axes), el_invalid, az_invalid, dropout (no plots)."""
 
     kind: str
     t0: float
@@ -361,49 +401,57 @@ class Fault:
 
 
 @dataclass(frozen=True)
-class PilotModel:
-    """A pilot who holds the last shown target: sees it after ``reaction_s``, reaches it in about ``tau_s``."""
-
-    reaction_s: float = 1.5
-    tau_s: float = 3.0
-    heading_error_deg: float = 0.0    # the pilot holds the target with this constant error
-    follows_cue: bool = True          # False: the no-cue baseline, the aircraft keeps its heading and descent
-    go_around_climb_ms: float = 5.0
-
-
-@dataclass(frozen=True)
 class ReplayConfig:
+    aircraft: Aircraft = AIRCRAFT["C-130H"]
     start_range_nm: float = 5.0
     start_offset_m: float = 150.0     # right of the centreline
     start_above_m: float = 30.0
-    crosswind_ms: float = 0.0         # + pushes the aircraft right
-    gs_ms: float = 70.0
-    gust_sigma_ms: float = 0.4
-    gust_tau_s: float = 5.0
+    headwind_ms: float = 0.0          # at 20 ft; wind grows with height
+    crosswind_ms: float = 0.0         # at 20 ft; + pushes the aircraft right
+    start_heading_error_deg: float = 0.0   # the aircraft arrives crabbed for the wind; this is the error in that crab
+    turbulence_w20_kt: float = 15.0   # light
     dt: float = 0.1
     after_end_s: float = 15.0         # keep flying this long after LOST or OUTSIDE LIMITS
 
 
-def fly_replay(rwy: Runway, cfg: CueConfig = CueConfig(), rc: ReplayConfig = ReplayConfig(),
-               pilot: PilotModel = PilotModel(), faults: tuple[Fault, ...] = (), seed: int = 0) -> list[dict]:
-    """Closed loop at 10 Hz with 1 Hz radar: the aircraft flies the targets the pilot saw ``reaction_s`` ago.
+def _apply_faults(faults: Sequence[Fault], p: RadarPlot | None, t: float) -> tuple[RadarPlot | None, float]:
+    delay = 0.0
+    for f in faults:
+        if not f.t0 <= t < f.t1:
+            continue
+        if f.kind == "delay":
+            delay = f.value
+        elif f.kind == "dropout":
+            return None, 0.0
+        elif p is not None and f.kind == "jump":
+            p = RadarPlot(p.t, p.range_m, p.az_dev_m + f.value, p.el_dev_m + f.value)
+        elif p is not None and f.kind in ("invalid", "az_invalid", "el_invalid"):
+            p = RadarPlot(p.t, p.range_m, p.az_dev_m, p.el_dev_m, az_valid=f.kind == "el_invalid",
+                          el_valid=f.kind == "az_invalid")
+    return p, delay
 
-    Returns one frame per second: :meth:`CueLogic.step` plus the truth (``x_m``, ``y_m``, ``z_dev_m``, ``height_m``).
-    """
+
+def fly_replay(rwy: Runway, cfg: CueConfig = CueConfig(), rc: ReplayConfig = ReplayConfig(),
+               pilot: PilotModel = PilotModel(), faults: Sequence[Fault] = (), seed: int = 0,
+               radar: RadarConfig = RadarConfig(), clearance: bool = True) -> list[dict]:
+    """Closed loop at 10 Hz with 1 Hz radar. One frame per second: :meth:`CueLogic.step` plus the truth."""
     rng = np.random.default_rng(seed)
-    logic = CueLogic(rwy, cfg)
+    sensor = ParRadar(rwy, radar, rng)
+    atm = Atmosphere(rc.headwind_ms, rc.crosswind_ms, rc.turbulence_w20_kt, rng)
     tan_g = math.tan(math.radians(rwy.glide_path_deg))
+    tas = rc.aircraft.vat_kt * KT
+    resp = rc.aircraft.response_s
     x = rc.start_range_nm * NM + rwy.gpip
     y = rc.start_offset_m
     z = float(glide_path_height(rwy, x)) + rc.start_above_m
-    psi = 0.0                                    # heading relative to the course, rad
-    sink = rc.gs_ms * tan_g
-    gy = gz = 0.0
-    ag = math.exp(-rc.dt / rc.gust_tau_s)
+    psi = -math.asin(max(-0.5, min(0.5, wind_at(z, rc.crosswind_ms) / tas))) + math.radians(rc.start_heading_error_deg)
+    logic = CueLogic(rwy, cfg, radar, clearance=clearance, hdg=math.degrees(psi))
+    sink = tas * tan_g
+    head_f = cross_f = up_f = None
     per_s = round(1.0 / rc.dt)
-    shown = (0.0, sink * FPM)
+    shown: tuple[float, float | None] = (math.degrees(psi), None)
     lag = deque([shown] * max(1, round(pilot.reaction_s / rc.dt)))
-    in_flight: list[tuple[float, Plot]] = []
+    in_flight: list[tuple[float, RadarPlot]] = []
     frames: list[dict] = []
     t_end = None
     go_around = False
@@ -411,48 +459,66 @@ def fly_replay(rwy: Runway, cfg: CueConfig = CueConfig(), rc: ReplayConfig = Rep
     while True:
         t = n * rc.dt
         if n % per_s == 0:
-            m = par_measure(rwy, t, x, y, z, rng)
-            p = Plot(t, m.range_m, m.az_dev_m, m.el_dev_m)
-            delay, drop = 0.0, False
-            for f in faults:
-                if f.t0 <= t < f.t1:
-                    if f.kind == "delay":
-                        delay = f.value
-                    elif f.kind == "dropout":
-                        drop = True
-                    elif f.kind == "invalid":
-                        p = Plot(p.t, p.range_m, p.az_dev_m, p.el_dev_m, valid=False)
-                    elif f.kind == "jump":
-                        p = Plot(p.t, p.range_m, p.az_dev_m + f.value, p.el_dev_m + f.value)
-            if not drop:
+            p, delay = _apply_faults(faults, sensor.measure(t, x, y, z), t)
+            if p is not None:
                 in_flight.append((t + delay, p))
             due = [q for q in in_flight if q[0] <= t + 1e-9]
             in_flight = [q for q in in_flight if q[0] > t + 1e-9]
             fr = logic.step(t, due[-1][1] if due else None)
             fr.update(x_m=x, y_m=y, z_dev_m=z - float(glide_path_height(rwy, x)), height_m=z)
             frames.append(fr)
-            if fr["hdg_rel_deg"] is not None:
-                shown = (fr["hdg_rel_deg"], fr["sink_fpm"])
+            z_seen = float(logic.kz.x[0]) if logic.kz is not None and fr["vert_dots"] is not None else None
+            shown = (fr["hdg_rel_deg"] if fr["hdg_rel_deg"] is not None else shown[0], z_seen)
             if fr["state"] in END_STATES and t_end is None:
                 t_end = t + (2.0 if fr["state"] == "MINIMUMS" else rc.after_end_s)
                 go_around = fr["state"] != "MINIMUMS"
             if (t_end is not None and t >= t_end) or x <= rwy.gpip + 100.0:
                 return frames
         lag.append(shown)
-        seen_h, seen_s = lag.popleft()
+        seen_h, seen_z = lag.popleft()
+        head, cross, up = atm.step(z, tas, rc.dt)
+        head_f = head if head_f is None else head_f + (head - head_f) * rc.dt / resp
+        cross_f = cross if cross_f is None else cross_f + (cross - cross_f) * rc.dt / resp
+        up_f = up if up_f is None else up_f + (up - up_f) * rc.dt / resp
+        gs = tas * math.cos(psi) - head_f
+        nominal = gs * tan_g
         if go_around:
-            sink += (-pilot.go_around_climb_ms - sink) * rc.dt / pilot.tau_s
+            sink += (-pilot.go_around_climb_ms - sink) * rc.dt / resp
         elif pilot.follows_cue:
-            psi += (math.radians(seen_h + pilot.heading_error_deg) - psi) * rc.dt / pilot.tau_s
-            sink += (seen_s / FPM - sink) * rc.dt / pilot.tau_s
-        gy = ag * gy + math.sqrt(1 - ag ** 2) * rc.gust_sigma_ms * rng.standard_normal()
-        gz = ag * gz + math.sqrt(1 - ag ** 2) * rc.gust_sigma_ms * rng.standard_normal()
-        x -= rc.gs_ms * math.cos(psi) * rc.dt
-        y += (rc.gs_ms * math.sin(psi) + rc.crosswind_ms + gy) * rc.dt
-        z += (gz - sink) * rc.dt
+            max_turn = math.radians(pilot.turn_rate_dps) * rc.dt
+            psi += max(-max_turn, min(max_turn, math.radians(seen_h + pilot.heading_error_deg) - psi))
+            if seen_z is not None:
+                cap = gs * math.tan(math.radians(pilot.max_pitch_change_deg))
+                sink += (nominal + max(-cap, min(cap, pilot.vertical_wc * seen_z)) - sink) * rc.dt / resp
+        x -= gs * rc.dt
+        y += (tas * math.sin(psi) + cross_f) * rc.dt
+        z += (up_f - sink) * rc.dt
         n += 1
 
 
-def cue_changes(frames: list[dict]) -> int:
+def replay_track(rwy: Runway, t: Sequence[float], x: Sequence[float], y: Sequence[float], z: Sequence[float],
+                 cfg: CueConfig = CueConfig(), radar: RadarConfig = RadarConfig(), seed: int = 0, noise: bool = True,
+                 clearance: bool = True, stop_at_end_state: bool = False) -> list[dict]:
+    """Open loop: a recorded track (seconds, runway metres) through the radar model and the cue. The aircraft does not
+    react. With ``noise=False`` the plots are the track itself."""
+    logic = CueLogic(rwy, cfg, radar, clearance=clearance)
+    sensor = ParRadar(rwy, radar, np.random.default_rng(seed))
+    tt, xs, ys, zs = (np.asarray(v, float) for v in (t, x, y, z))
+    frames = []
+    for ti in np.arange(tt[0], tt[-1] + 1e-9, 1.0):
+        xi, yi, zi = (float(np.interp(ti, tt, v)) for v in (xs, ys, zs))
+        if noise:
+            p = sensor.measure(float(ti), xi, yi, zi)
+        else:
+            p = RadarPlot(float(ti), xi - rwy.gpip, yi, zi - float(glide_path_height(rwy, xi)))
+        fr = logic.step(float(ti), p)
+        fr.update(x_m=xi, y_m=yi, z_dev_m=zi - float(glide_path_height(rwy, xi)), height_m=zi)
+        frames.append(fr)
+        if stop_at_end_state and fr["state"] in END_STATES:
+            break
+    return frames
+
+
+def cue_changes(frames: Sequence[dict]) -> int:
     """How many target changes were shown in a run (both axes)."""
-    return sum(bool(f["hdg_new"]) + bool(f["sink_new"]) for f in frames)
+    return sum(bool(f["hdg_new"]) + bool(f["rod_new"]) for f in frames)

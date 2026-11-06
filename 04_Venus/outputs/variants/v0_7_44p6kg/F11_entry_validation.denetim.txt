@@ -1,0 +1,5 @@
+figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] belirsizlik-tanimi eksen 0: hata çubuğu/bant var
+          → altyazıda ne gösterdiğini yaz: SD mi, SE mi, %95 GA mı; n kaç  [Franconeri2021 (genel kitleye hata çubuğu yerine ayrık sonuç)]
+  [BİLGİ] belirsizlik-tanimi eksen 1: hata çubuğu/bant var
+          → altyazıda ne gösterdiğini yaz: SD mi, SE mi, %95 GA mı; n kaç  [Franconeri2021 (genel kitleye hata çubuğu yerine ayrık sonuç)]

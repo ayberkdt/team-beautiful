@@ -1,0 +1,148 @@
+{
+ "surum": 1,
+ "ad": "F5_risk_matrix",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  783.0,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   19.2
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 19.2
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    22.4,
+    63.3,
+    861.6,
+    378.5
+   ],
+   "baslik": "",
+   "seriler": [],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Likelihood (1–5)",
+    "nicelik": "Likelihood",
+    "birim": "1–5",
+    "bicim": "parantez",
+    "anahtar": "likelihood",
+    "harf": "tek",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.5,
+     5.5
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     361.9,
+     3.0,
+     522.1,
+     25.3
+    ]
+   },
+   "y": {
+    "ham": "Consequence (1–5)",
+    "nicelik": "Consequence",
+    "birim": "1–5",
+    "bicim": "parantez",
+    "anahtar": "consequence",
+    "harf": "tek",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.5,
+     5.5
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     22.4,
+     388.0,
+     213.1,
+     411.0
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

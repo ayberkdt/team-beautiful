@@ -1,0 +1,179 @@
+{
+ "surum": 1,
+ "ad": "F8_bemt_validation",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  770.0,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [
+   20.4
+  ],
+  "panel": [],
+  "metin": []
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "lejant": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    36.9,
+    64.7,
+    861.6,
+    377.9
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "",
+     "tur": "cizgi",
+     "renk": "#7a7a7a",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 0.8,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Knight & Hefner 1937",
+     "tur": "sacilim",
+     "renk": "#e69f00",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 14.35
+    },
+    {
+     "etiket": "Harrington 1951",
+     "tur": "sacilim",
+     "renk": null,
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 10.65
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Measured torque coefficient (×10⁻⁴)",
+    "nicelik": "Measured torque coefficient",
+    "birim": "×10⁻⁴",
+    "bicim": "parantez",
+    "anahtar": "measuredtorquecoefficient",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.5065485999026521,
+     15.21354515930161
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "1",
+     "2",
+     "5",
+     "10"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     272.3,
+     3.0,
+     626.1,
+     26.8
+    ]
+   },
+   "y": {
+    "ham": "Predicted torque coefficient (×10⁻⁴)",
+    "nicelik": "Predicted torque coefficient",
+    "birim": "×10⁻⁴",
+    "bicim": "parantez",
+    "anahtar": "predictedtorquecoefficient",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.40915020632458876,
+     18.64678517098795
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0,
+     1
+    ],
+    "ondalik_isareti": ".",
+    "tikler": [
+     "0.5",
+     "1",
+     "2",
+     "5",
+     "10"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     36.9,
+     387.3,
+     389.7,
+     411.0
+    ]
+   },
+   "lejant": [
+    "Knight & Hefner 1937",
+    "Harrington 1951"
+   ],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

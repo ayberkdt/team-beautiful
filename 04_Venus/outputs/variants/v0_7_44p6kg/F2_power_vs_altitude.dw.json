@@ -1,0 +1,190 @@
+{
+ "surum": 1,
+ "ad": "F2_power_vs_altitude",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  850.2,
+  396.6
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [
+   20.4
+  ],
+  "panel": [],
+  "metin": [
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "lejant": 20.4,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    68.4,
+    74.0,
+    850.2,
+    363.9
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Hover",
+     "tur": "cizgi",
+     "renk": "#d55e00",
+     "isaret": null,
+     "cizgi": "--",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Loiter at bucket speed",
+     "tur": "cizgi",
+     "renk": "#009e73",
+     "isaret": null,
+     "cizgi": "-.",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Sun overhead",
+     "tur": "cizgi",
+     "renk": "#cc79a7",
+     "isaret": null,
+     "cizgi": ":",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Sun at cos z 0.7",
+     "tur": "cizgi",
+     "renk": "#cc79a7",
+     "isaret": null,
+     "cizgi": "--",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Electrical power (kW)",
+    "nicelik": "Electrical power",
+    "birim": "kW",
+    "bicim": "parantez",
+    "anahtar": "electricalpower",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     1.0,
+     5.4548331284379925
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     353.4,
+     3.0,
+     565.2,
+     26.0
+    ]
+   },
+   "y": {
+    "ham": "Altitude (km)",
+    "nicelik": "Altitude",
+    "birim": "km",
+    "bicim": "parantez",
+    "anahtar": "altitude",
+    "harf": "tek",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     50.0,
+     64.7
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "50",
+     "55",
+     "60"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     3.0,
+     153.6,
+     25.3,
+     284.3
+    ]
+   },
+   "lejant": [
+    "Hover",
+    "Loiter at bucket speed",
+    "Sun overhead",
+    "Sun at cos z 0.7"
+   ],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

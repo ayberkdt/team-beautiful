@@ -1,0 +1,166 @@
+{
+ "surum": 1,
+ "ad": "F15_margins",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  864.2,
+  400.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": []
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    457.2,
+    74.0,
+    861.6,
+    408.0
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "VESPER",
+     "tur": "sacilim",
+     "renk": "#0072b2",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 9.0
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Margin ratio (above 1 = margin, log scale)",
+    "nicelik": "Margin ratio",
+    "birim": "above 1 = margin, log scale",
+    "bicim": "parantez",
+    "anahtar": "marginratio",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.005,
+     400.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0,
+     1,
+     2
+    ],
+    "ondalik_isareti": ".",
+    "tikler": [
+     "0.01",
+     "0.1",
+     "1",
+     "10",
+     "100"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     454.6,
+     3.0,
+     864.2,
+     26.0
+    ]
+   },
+   "y": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.55,
+     10.45
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "Night energy stored / needed",
+     "Dive headroom: (60 °C - cruise) / (dive peak - cruise)",
+     "Entry g qualification / peak",
+     "Charge headroom: (45 °C - air) / (cruise interior - air)",
+     "Noon solar / loiter power",
+     "Thrust margin / gust peak",
+     "Tip Mach cap / hover tip Mach",
+     "Tested acid exposure / mission (FEP 168 h)",
+     "Arm stress allowable / actual",
+     "Release altitude margin / p99 pull-out loss"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "Night energy stored / needed",
+     "Dive headroom: (60 °C - cruise) / (dive peak - cruise)",
+     "Entry g qualification / peak",
+     "Charge headroom: (45 °C - air) / (cruise interior - air)",
+     "Noon solar / loiter power",
+     "Thrust margin / gust peak",
+     "Tip Mach cap / hover tip Mach",
+     "Tested acid exposure / mission (FEP 168 h)",
+     "Arm stress allowable / actual",
+     "Release altitude margin / p99 pull-out loss"
+    ],
+    "eksi": "unicode",
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}
