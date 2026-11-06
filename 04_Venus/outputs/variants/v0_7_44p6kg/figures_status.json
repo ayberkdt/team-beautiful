@@ -37,7 +37,7 @@
  },
  "F7_trade": {
   "regenerated": true,
-  "audit": "figür denetimi: 0 HATA · 1 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR",
+  "audit": "figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR",
   "hata": 0,
   "same_pixels_as_baseline": false
  },
@@ -48,10 +48,16 @@
   "same_pixels_as_baseline": true
  },
  "F9_sensitivity": {
-  "regenerated": false
+  "regenerated": true,
+  "audit": "figür denetimi: 0 HATA · 0 UYARI · 0 BİLGİ · TESLİM EDİLEBİLİR",
+  "hata": 0,
+  "same_pixels_as_baseline": false
  },
  "F10_robustness": {
-  "regenerated": false
+  "regenerated": true,
+  "audit": "figür denetimi: 0 HATA · 1 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR",
+  "hata": 0,
+  "same_pixels_as_baseline": false
  },
  "F11_entry_validation": {
   "regenerated": true,

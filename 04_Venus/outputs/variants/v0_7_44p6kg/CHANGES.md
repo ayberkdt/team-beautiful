@@ -31,6 +31,22 @@ Nominal interaction: 43.8 h flight, 38.7 h on sunlight, ends at 50.4 km with the
 
 Gust model re-run at 44.63 kg and 8.9 m/s (doc 25 §4.7 is at 43.66 kg and 8.8 m/s): altitude RMS 5.8 m, peak 26.9 m, thrust peak 32.8 % W, margin 1.83×. Mission with component A held, 40 seeds: 42.6 / 43.8 / 44.5 h (p5 / median / p95), 2 runs end empty.
 
+## Numbers that move against doc 25 when the mass is 44.63 kg
+
+Doc 25 quotes these for 43.66 kg, or from the simulator at 43.66 kg. Doc 25 is not edited; update it on promotion.
+
+| Quantity | Doc 25 | This variant |
+|---|---|---|
+| Pull-out loss (1-D model) | 26 m | 26.9 m |
+| Descent rate at release | 12.8 m/s | 13.0 m/s |
+| Time on the parachute | 716 s | 707 s |
+| Pull-out loss p99, Monte Carlo | 41 m | 35.7 m (maximum 41.6 m) |
+| Gust altitude RMS / peak | 5.9 m / 27 m | 5.8 m / 26.9 m |
+| Gust thrust peak, margin | 33 % W, 1.8× | 32.8 % W, 1.83× |
+| Fall to the surface, windmilling | ~12 h | 12.6 h, from 50.4 km |
+
+**Not rerun at 44.63 kg:** the simulator (sunumatik). Pull-out current 52.7 A at cos z 0.68, canopy clearance 0.33 m and the motor-out result stay 43.66 kg numbers. The 2C limit is 53.6 A, so only 0.9 A separates it from the cos z 0.68 case; recheck that case at the new mass before relying on the rule. Planned release is at cos z 0.71.
+
 ## Figures
 
 | Figure | State | Audit |
@@ -41,15 +57,17 @@ Gust model re-run at 44.63 kg and 8.9 m/s (doc 25 §4.7 is at 43.66 kg and 8.8 m
 | F4_mass_budget | regenerated | figür denetimi: 0 HATA · 0 UYARI · 1 BİLGİ · TESLİM EDİLEBİLİR |
 | F5_risk_matrix | numbers unchanged, same PNG bytes as baseline | figür denetimi: 0 HATA · 0 UYARI · 0 BİLGİ · TESLİM EDİLEBİLİR |
 | F6_mission | regenerated | figür denetimi: 0 HATA · 0 UYARI · 1 BİLGİ · TESLİM EDİLEBİLİR |
-| F7_trade | regenerated | figür denetimi: 0 HATA · 1 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR |
+| F7_trade | regenerated | figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR |
 | F8_bemt_validation | numbers unchanged, same PNG bytes as baseline | figür denetimi: 0 HATA · 0 UYARI · 1 BİLGİ · TESLİM EDİLEBİLİR |
-| F9_sensitivity | not regenerated: no variant sensitivity.json | - |
-| F10_robustness | not regenerated: no variant sensitivity.json | - |
+| F9_sensitivity | regenerated | figür denetimi: 0 HATA · 0 UYARI · 0 BİLGİ · TESLİM EDİLEBİLİR |
+| F10_robustness | regenerated | figür denetimi: 0 HATA · 1 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR |
 | F11_entry_validation | numbers unchanged, same PNG bytes as baseline | figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR |
 | F12_deployment_monte_carlo | regenerated | figür denetimi: 0 HATA · 0 UYARI · 1 BİLGİ · TESLİM EDİLEBİLİR |
 | F13_day_and_station_keeping | regenerated | figür denetimi: 0 HATA · 1 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR |
 | F14_end_of_mission | regenerated | figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR |
 | F15_margins | regenerated | figür denetimi: 0 HATA · 0 UYARI · 0 BİLGİ · TESLİM EDİLEBİLİR |
+
+UYARI in F2, F10 and F13: a set colour is under 3:1 on the background (pink 2.93:1, light blue 2.21:1), as in the baseline; it stays for set consistency. Save-time changes against `venus_final.py`: F4 thermal in the other bar, F6 altitude axis, F7 shared x range, F9 cruise row split, F10 notes moved up, F12 label off the dotted curve, F13 note background.
 
 ## Figure briefs (written before drawing)
 
@@ -155,7 +173,7 @@ Target: `sunum-tam`. Each brief gives the message; form and data are the baselin
 | `operations.events` | 7 rows | 11 rows | K | venus_budget_update.fly, nominal, 6 Nov profile |
 | `operations.series_hourly` | 50 rows | 44 rows | K | venus_budget_update.fly, nominal, 6 Nov profile |
 | `generated_by` | python scripts/venus_design.py | python 04_Venus/scripts/venus_variant_v07.py | - | file stamp |
-| `generated_at` | 2026-11-04T23:09+03:00 | 2026-11-06T12:50+03:00 | - | file stamp |
+| `generated_at` | 2026-11-04T23:09+03:00 | 2026-11-06T13:21+03:00 | - | file stamp |
 
 **Event kinds.** The visual's enum has no `other` (`tests/test_venus_system.py`), so `cruise altitude reached` is kind `release` and `array no longer carries loiter` is kind `sunset`.
 
@@ -182,7 +200,7 @@ Target: `sunum-tam`. Each brief gives the message; form and data are the baselin
 | `limits[science dive floor]` | 51 | 52 | km | K | battery 57.5 degC peak after the 5 min hold at 52 km at 1.5 m/s down (venus_budget_upda… |
 | `limits[dive abort battery temperature]` | null | 52 | degC | K/Y | doc 25 §0: 50 -> 52 degC, the 5 min hold at 52 km at 1.5 m/s needs it; venus_budget_upd… |
 | `limits[release sun height, minimum cos z]` | null | 0.68 | - | K/Y | doc 25 §0: 52.7 A at cos z 0.68 against the 2C limit; simulator at 43.66 kg, not rerun … |
-| `limits[release rotor speed, maximum]` | null | 668.5 | rpm | K | doc 25 §5.2: 1.30 x hover rpm, back-EMF cap [v0.7: new row] |
+| `limits[release rotor speed, maximum]` | null | 668 | rpm | K | doc 25 §5.2: 1.30 x hover rpm, back-EMF cap [v0.7: new row] |
 | `limits[descent to cruise]` | null | {"down_m_s": 1.5, "forward_m_s": 3.5} | m/s | K/Y | doc 25 §5.2: outside the vortex-ring band; venus_budget_update.Profile [v0.7: new row] |
 | `limits[battery discharge current 2C]` | null | 53.6 | A | K/Y | 14S8P pack (venus_budget_update.pack at 1109 Wh); 2C is an aerokit input, not a measure… |
 | `failure_modes[downdraft].effect` | +1.4 kW to hold altitude | +1.5 kW to hold altitude | - | K | recomputed for the variant (python 04_Venus/scripts/venus_variant_v07.py) |

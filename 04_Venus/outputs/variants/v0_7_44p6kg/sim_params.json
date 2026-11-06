@@ -2,7 +2,7 @@
  "schema": "vesper_sim_params/1",
  "version": "0.7",
  "generated_by": "python 04_Venus/scripts/venus_variant_v07.py",
- "generated_at": "2026-11-06T12:50+03:00",
+ "generated_at": "2026-11-06T13:21+03:00",
  "units": "SI unless stated; temperatures K in tables, degC in limits",
  "frame": "body: x forward (between arms 1 and 6), y left, z up; world: x east, z up; wind blows westward (negative x) at the tabulated speed",
  "atmosphere_and_wind": {
@@ -2106,7 +2106,7 @@
   },
   {
    "name": "release rotor speed, maximum",
-   "value": 668.5,
+   "value": 668.0,
    "unit": "rpm",
    "tag": "K",
    "source": "doc 25 §5.2: 1.30 x hover rpm, back-EMF cap [v0.7: new row]"

@@ -1,3 +1,5 @@
+> **Superseded 6 Nov 2026** by the official task: radar → correction → pilot cue. See `03_Advionics/`.
+
 # 2. ADVIONICS Challenge — Automated Approach Guidance
 
 **Kaynak görsel:** `images/02_Advionics_original.jpg`  

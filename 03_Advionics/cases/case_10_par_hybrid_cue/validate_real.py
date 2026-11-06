@@ -27,7 +27,8 @@ sys.path.insert(0, str(ROOT / "src"))
 import numpy as np  # noqa: E402
 
 from aerokit.approach import Runway, glide_path_height  # noqa: E402
-from aerokit.atc.parcue import CueConfig, RadarConfig, fly_replay, replay_track  # noqa: E402
+from aerokit.atc.parcue import MISSED_STATES, CueConfig, dh_frame, fly_replay, replay_track  # noqa: E402
+from aerokit.atc.parradar import RadarConfig  # noqa: E402
 
 NM = 1852.0
 OUT = Path(__file__).resolve().parent / "outputs"
@@ -134,7 +135,7 @@ def _replay_all(tr: list[dict], rwy: Runway, radar: RadarConfig) -> dict:
         fr = replay_track(rwy, a["t"], a["x"], a["y"], a["z"], radar=radar, seed=k, stop_at_end_state=True)
         ends[fr[-1]["state"]] += 1
         levels[max(f["level"] for f in fr)] += 1
-        voice.append(sum(1 for f in fr if f["voice"] and f["voice"] != "minimums"))
+        voice.append(sum(1 for f in fr if f["voice"] and f["voice"] != "at_dh"))
         bad += any(f["state"] in ("INVALID", "DELAYED") for f in fr)
         cues += sum(bool(f["hdg_new"]) for f in fr)
     n = len(tr)
@@ -203,7 +204,7 @@ def smolensk() -> dict:
         res[name] = {"timeline": [{"before_strike_s": round(STRIKE_S - (t0 + f["t"]), 1), "range_km": round(f["x_m"] / 1000, 2),
                                    "state": f["state"], "vert": f["vert_word"], "trend": f["vert_trend"], "level": f["level"],
                                    "voice": f["voice"], "fast": f["closing_fast"]}
-                                  for f in fr if f["voice"] or f["closing_fast"] or f["state"] in ("OUTSIDE LIMITS", "MINIMUMS")][:14]}
+                                  for f in fr if f["voice"] or f["closing_fast"] or f["state"] in ("OUTSIDE LIMITS", "ADVISORY")][:14]}
     noisy = []
     for s in range(200):
         fr = replay_track(rwy, t - t0, x, y, z, cfg=cfg, seed=s, stop_at_end_state=True)

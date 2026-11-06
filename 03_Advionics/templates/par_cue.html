@@ -126,15 +126,21 @@ input[type=range] { width: 100%; min-height: 44px; accent-color: var(--accent); 
 const D = window.PAR, $ = id => document.getElementById(id);
 const SPEED = 2, DOT = 55, BANNER = {
   ACQUIRING: ["caution", "ACQUIRING RADAR"], VALID: ["ok", "GUIDANCE VALID"], DELAYED: ["caution", "DATA DELAYED"],
-  INVALID: ["warn", "DATA INVALID"], LOST: ["warn", "GUIDANCE LOST"], "OUTSIDE LIMITS": ["warn", "OUTSIDE LIMITS"],
-  MINIMUMS: ["ok", "MINIMUMS"] };
+  INVALID: ["warn", "DATA INVALID"], "RADAR LOST": ["warn", "RADAR CONTACT LOST"], "RADAR SUSPECT": ["warn", "RADAR SUSPECT"],
+  "OUTSIDE LIMITS": ["warn", "OUTSIDE LIMITS"], "ELEVATION FAILED": ["warn", "NO GLIDEPATH INFORMATION"],
+  "NO CLEARANCE": ["warn", "TOWER CLEARANCE NOT RECEIVED"], "LINK LOST": ["warn", "GUIDANCE LINK LOST"],
+  ADVISORY: ["ok", "BELOW DH: ADVISORY ONLY"], "OVER THRESHOLD": ["ok", "OVER THRESHOLD"], VISUAL: ["ok", "PROCEEDING VISUALLY"] };
 const STOP = {
   ACQUIRING: ["hold", "STAND BY", "", "hold", "", ""],
   DELAYED: ["hold", "HOLD LAST TARGET", "", "hold", "NO NEW CORRECTION", ""],
   INVALID: ["hold", "HOLD LAST TARGET", "", "hold", "NO NEW CORRECTION", ""],
-  LOST: ["stop", "GO AROUND", "", "hold", "MISSED APPROACH", ""],
-  "OUTSIDE LIMITS": ["stop", "GO AROUND", "", "hold", "MISSED APPROACH", ""],
-  MINIMUMS: ["hold", "GUIDANCE ENDS", "", "hold", "PILOT DECIDES", ""] };
+  "RADAR LOST": ["stop", "IF NOT VISUAL", "", "hold", "MISSED APPROACH", ""],
+  "RADAR SUSPECT": ["stop", "IF NOT VISUAL", "", "hold", "MISSED APPROACH", ""],
+  "OUTSIDE LIMITS": ["stop", "IF NOT VISUAL", "", "hold", "MISSED APPROACH", ""],
+  "ELEVATION FAILED": ["stop", "IF NOT VISUAL", "", "hold", "MISSED APPROACH", ""],
+  "NO CLEARANCE": ["stop", "MISSED APPROACH", "", "hold", "", ""],
+  "LINK LOST": ["stop", "LOST COMM", "", "hold", "PROCEDURE", ""],
+  "OVER THRESHOLD": ["hold", "GUIDANCE ENDS", "", "hold", "", ""], VISUAL: ["hold", "GUIDANCE ENDS", "", "hold", "", ""] };
 const ARROW = { "TURN LEFT": "← ", "TURN RIGHT": "→ ", "DESCEND MORE": "↓ ", "DESCEND LESS": "↑ " };
 let sc = D.scenarios[0], i = 0, timer = null, sound = true, audio = null;
 
@@ -177,8 +183,8 @@ function render() {
   const show = f.ld !== null;
   $("inst").classList.toggle("old", old);
   $("nl").toggleAttribute("hidden", !show); $("nv").toggleAttribute("hidden", !show);
-  $("fl").toggleAttribute("hidden", show || f.s === "ACQUIRING" || f.s === "MINIMUMS");
-  $("fv").toggleAttribute("hidden", show || f.s === "ACQUIRING" || f.s === "MINIMUMS");
+  $("fl").toggleAttribute("hidden", show || f.s === "ACQUIRING" || f.s === "ADVISORY" || f.s === "OVER THRESHOLD" || f.s === "VISUAL");
+  $("fv").toggleAttribute("hidden", show || f.s === "ACQUIRING" || f.s === "ADVISORY" || f.s === "OVER THRESHOLD" || f.s === "VISUAL");
   if (show) {
     const c = v => Math.max(-2.2, Math.min(2.2, v)) * DOT;
     $("nl").style.transform = `translateX(${-c(f.ld)}px)`;
@@ -187,7 +193,7 @@ function render() {
   const s = STOP[f.s];
   if (s) { setCue($("lw"), $("lv"), s[0], s[1], s[2]); setCue($("vw"), $("vv"), s[3], s[4], s[5]); }
   else {
-    setCue($("lw"), $("lv"), kind(f.lw), f.lw, `HDG ${String(f.hdg).padStart(3, "0")}`);
+    setCue($("lw"), $("lv"), kind(f.lw), f.lw, f.hdg === null ? "" : `HDG ${String(f.hdg).padStart(3, "0")}`);
     setCue($("vw"), $("vv"), kind(f.vw), f.vw, `${f.sink} ft/min`);
   }
   $("rn").textContent = f.rn === null ? "-" : `${f.rn.toFixed(1)} NM`;

@@ -178,7 +178,7 @@
  {
   "path": "limits[release rotor speed, maximum]",
   "old": null,
-  "new": 668.5,
+  "new": 668.0,
   "unit": "rpm",
   "tag": "K",
   "source": "doc 25 §5.2: 1.30 x hover rpm, back-EMF cap [v0.7: new row]"

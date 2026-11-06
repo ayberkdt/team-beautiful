@@ -1,22 +1,36 @@
 """Automated PAR guidance: radar plots -> path state -> heading target and glide-path information -> pilot cue.
 
 The Advionics brief (6 Nov 2026): replace the PAR controller. The logic follows what the rules ask of that controller.
-Evidence: ``03_Advionics/research/R2_par_deep_research.md`` (PAR), ``R3_...`` (tasks), ``R4_...`` (cue), ``R5_...`` (models).
+Evidence: ``03_Advionics/research/R2_par_deep_research.md`` (PAR), ``R3_...`` (tasks), ``R4_...`` (cue), ``R5_...``
+(models).
 
-* **The two axes are not treated alike** (ICAO Doc 4444 8.9.7.2.4-5). In azimuth the pilot does not correct unless told, so
+* **The two axes are not treated alike** (ICAO Doc 4444 8.9.7.2.4-5). In azimuth the pilot does not correct unless
+  told, so
   the output is a heading. In elevation the pilot corrects from the information alone, so the output is position, trend
   and an advisory rate of descent. No turn or descend commands.
-* **Filter** per axis: constant-velocity Kalman (Bar-Shalom), noise from the Annex 10 limits at the antenna range, gate on
+* **Filter** per axis: constant-velocity Kalman (Bar-Shalom), noise from the Annex 10 limits at the antenna range,
+  gate on
   the normalised innovation. The gate widens after each rejection so noise cannot lock it out.
 * **Heading target** from position only: last known heading + offset term + a slow trim. The controller knows the
   heading last assigned and builds on it (R2 2.4), so the start heading is an input, and the trim follows the wind as
   it changes with height. Corrections get smaller with range and change at most every 5 s (RA 3291, JO 7110.65).
-* **Words** use "slightly" and "well" (JO 7110.65 5-12-4). "On" is one third of the limit (Smolensk report p. 253).
-* **Limits** +-0.5 deg and +-2 deg (Smolensk report p. 257; UK limits are per runway). Going outside and staying outside
-  is the trigger (AIM 5-4-11). They stop at DH (JO 7110.65 5-10-14).
-* **Timers:** target lost above 3 s is told to the pilot (RA 3291 para 5); 5 s silence is the pilot's lost-comm point
-  (JO 7110.65 5-10-4). Inside 4 NM a returned target does not restart the approach (RA 3291 para 7b); we latch everywhere.
-* **Each axis has its own validity** (Doc 4444 8.9.7.2.5.4: elevation failure is told at once).
+* **Words** are JO 7110.65BB 5-12-4: ON GLIDEPATH, ON COURSE, SLIGHTLY/WELL ABOVE/BELOW GLIDEPATH, SLIGHTLY/WELL
+  LEFT/RIGHT
+  OF COURSE; trends GOING, COMING DOWN/UP, HOLDING, CORRECTING, RAPIDLY. "On" is one third of the limit (Smolensk report
+  p. 253); FAA and ICAO give no numbers.
+* **Missed approach** follows JO 7110.65BB 5-10-14: (a) safety limits exceeded, (b) position in doubt, (c) radar contact
+  lost or malfunction suspected. The call is the reason, then "if runway or approach lights not in sight, execute missed
+  approach". None of these applies after DH. (d) airport or traffic is unconditional and comes from the tower.
+* **After DH** position stays on as advisory until the threshold (5-12-7); 14 CFR 91.175 is the pilot's.
+* **Elevation failure** ends PAR guidance at once (5-12-10). **Guidance link silent 5 s** is not a missed approach: the
+  pilot applies the lost communications instruction given before final (5-10-4).
+* **Limits** +-0.5 deg and +-2 deg are defaults from one published set (Smolensk report p. 257). FAA prints no
+  number: real
+  limits are per runway (UK cursor, RA 3291), so these are inputs. Going outside and staying outside is the trigger
+  (AIM 5-4-11).
+* **Timers:** target lost above 3 s is told to the pilot and treated as a fault (RA 3291 para 5). Inside 4 NM that
+  fault is
+  final (para 7b). Outside 4 NM it may wait to the 5 s longest silence (Doc 4444 8.9.7.2.3).
 * **Closure:** position alone misses an aircraft sinking fast towards the path, which is what the Smolensk event showed.
   A 10 s line fit gives the trend words and a fast-closure flag, with Raytheon patent bands. The fit is not used in the
   heading or rate targets: a rate from 1 Hz PAR plots is too noisy for control. Three designs that used it failed in
@@ -36,15 +50,18 @@ from dataclasses import dataclass, field
 import numpy as np
 
 from aerokit.approach import Runway, glide_path_height
-from aerokit.atc.cue_intensity import CueIntensity, IntensityConfig
+from aerokit.atc.cue_intensity import CueIntensity, IntensityConfig, voice_level_dba
 from aerokit.atc.parflight import AIRCRAFT, FT, KT, Aircraft, Atmosphere, PilotModel, wind_at
 from aerokit.atc.parradar import NM, ParRadar, RadarConfig, RadarPlot, error_limits_m
+from aerokit.atc.voice_arbiter import VoiceArbiter
 
 __all__ = ["CueConfig", "AxisKalman", "CueLogic", "Fault", "ReplayConfig", "fly_replay", "replay_track", "cue_changes",
-           "END_STATES", "PilotModel", "RadarPlot"]
+           "END_STATES", "MISSED_STATES", "PilotModel", "RadarPlot", "dh_frame"]
 
 FPM = 196.850394                 # ft/min per m/s
-END_STATES = ("LOST", "OUTSIDE LIMITS", "MINIMUMS")
+#: JO 7110.65 5-10-14 a-c: conditional missed approach, before DH only
+MISSED_STATES = ("RADAR LOST", "RADAR SUSPECT", "OUTSIDE LIMITS", "ELEVATION FAILED")
+END_STATES = (*MISSED_STATES, "NO CLEARANCE", "LINK LOST", "OVER THRESHOLD", "VISUAL")
 
 
 @dataclass(frozen=True)
@@ -75,7 +92,10 @@ class CueConfig:
     limit_frames: int = 3             # outside and staying outside (AIM 5-4-11) [Y] 3 s
     latch_limits: bool = True         # False: words and alerts keep working past a limit (replay analysis only)
     track_lost_s: float = 3.0         # RA 3291 para 5
-    lost_s: float = 5.0               # JO 7110.65 5-10-4a
+    lost_s: float = 5.0               # longest silence on final, Doc 4444 8.9.7.2.3
+    no_resume_nm: float = 4.0         # RA 3291 para 7b
+    link_lost_s: float = 5.0          # JO 7110.65 5-10-4a: PAR final
+    missed_approach: str = ""         # the procedure given before final descent (JO 7110.65 5-10-11)
     reject_to_invalid: int = 2        # [Y]
     recover_plots: int = 3            # [Y]
     acquire_plots: int = 3            # [Y]
@@ -95,6 +115,7 @@ class CueConfig:
     fast_max_ft: float = 1000.0       # the stabilised approach rule starts at the gate (FSF ALAR 7.1)
     sink_limit_fpm: float = 1000.0    # stabilised approach limit (FSF ALAR 7.1)
     gear_nm: float = 3.0              # prompt before 2 NM (RA 3291 para 1d)
+    threshold_m: float = 0.0          # guidance ends over the threshold (5-12-8)
     clearance_nm: float = 2.0         # Doc 4444 8.9.6.1.7
     not_correcting_s: float = 15.0    # [Y]
 
@@ -156,6 +177,11 @@ class CueLogic:
         self.kr: AxisKalman | None = None
         self.trim = self.hdg          # the heading last assigned is known
         self.alert = CueIntensity(self.intensity, quiet=self.quiet)
+        self.arbiter = VoiceArbiter()
+        self._flag = {"az": 0, "el": 0}
+        self._last_plot = -1e9
+        self._last_link = 0.0
+        self._call: str | None = None
         self._first: list[RadarPlot] = []
         self._rej = {"az": 0, "el": 0}
         self._good = {"az": 0, "el": 0}
@@ -167,7 +193,6 @@ class CueLogic:
         self._hb = 0
         self._last_hdg_t = -1e9
         self._hist: deque[tuple[float, float, float, float]] = deque()
-        self._clearance_said = False
         self._fast_hist: deque[tuple[float, float]] = deque()
         self._fast_n = 0
 
@@ -179,6 +204,7 @@ class CueLogic:
         return (s * l_az) ** 2, (s * l_el) ** 2, (s * l_r) ** 2
 
     def _axis(self, key: str, kal: AxisKalman, value: float, valid: bool, var: float, t: float) -> None:
+        self._flag[key] = 0 if valid else self._flag[key] + 1
         if not valid or not math.isfinite(value):
             self._rej[key] += 1
             self._good[key] = 0
@@ -193,7 +219,8 @@ class CueLogic:
             self._rej[key] += 1
             self._good[key] = 0
 
-    def _take(self, p: RadarPlot) -> None:
+    def _take(self, p: RadarPlot, t: float) -> None:
+        self._last_plot = t
         if self.kr is None or self.ky is None or self.kz is None:
             if p.az_valid and p.el_valid and all(map(math.isfinite, (p.range_m, p.az_dev_m, p.el_dev_m))):
                 self._first.append(p)
@@ -240,23 +267,35 @@ class CueLogic:
         side = plus if dev > 0 else minus
         return f"{'SLIGHTLY' if share <= c.slight_fraction else 'WELL'} {side}"
 
-    def _trend_word(self, dev: float, rate_dps: float | None, word: str) -> str:
+    def _trend_word(self, dev: float, rate_dps: float | None, word: str, toward: str, plus: str, minus: str) -> str:
         c = self.cfg
         if rate_dps is None or word.startswith("ON "):
             return ""
         size = abs(rate_dps)
         if size < c.trend_slow_dps:
             return "HOLDING"
-        head = "CORRECTING" if rate_dps * dev < 0 else "GOING"
+        if rate_dps * dev < 0:
+            head = toward
+        else:
+            head = f"GOING {plus if dev > 0 else minus}"
         return f"{head} RAPIDLY" if size >= c.trend_fast_dps else head
 
     def _next_state(self, t: float, y: float, z: float, r: float, height_ft: float) -> str:
         c = self.cfg
         if self.state in END_STATES:
             return self.state
+        if r <= c.threshold_m - self.rwy.gpip:
+            return "OVER THRESHOLD"
+        if self.state == "ADVISORY":
+            return self.state          # below DH: 5-10-14 a-c do not apply, position stays advisory
+        if self._flag["el"] >= c.reject_to_invalid and self._flag["az"] == 0:
+            self._call = "no_glidepath"
+            return "ELEVATION FAILED"  # 5-12-10: at once
         age = max(t - self._last["az"], t - self._last["el"])
-        if age > c.lost_s:
-            return "LOST"
+        if age > (c.track_lost_s if r < c.no_resume_nm * NM else c.lost_s):
+            arriving = t - self._last_plot <= 1.5
+            self._call = "radar_suspect" if arriving else "radar_lost"
+            return "RADAR SUSPECT" if arriving else "RADAR LOST"
         for k in ("az", "el"):
             if self._rej[k] >= c.reject_to_invalid:
                 self._bad[k] = True
@@ -267,13 +306,22 @@ class CueLogic:
         if age > c.track_lost_s:
             return "DELAYED"
         if height_ft <= c.dh_ft:
-            return "MINIMUMS"
+            return "ADVISORY"
+        if not self.clearance and r <= c.clearance_nm * NM:
+            self._call = "no_clearance"
+            return "NO CLEARANCE"      # Doc 4444 8.9.6.1.8a, phrase from JO 7110.65 5-10-13
         lim_y, lim_z = self._limits_m(r)
         v_az, v_el, _ = self._vars(RadarPlot(t, r, y, z))
         outside = (abs(y) - math.sqrt(v_az) > lim_y or abs(z) - math.sqrt(v_el) > lim_z or r > c.max_range_m or
                    abs(math.degrees(math.atan2(y, max(r, 1.0)))) > c.sector_deg)
         self._out = self._out + 1 if outside else 0
-        return "OUTSIDE LIMITS" if c.latch_limits and self._out >= c.limit_frames else "VALID"
+        if c.latch_limits and self._out >= c.limit_frames:
+            if abs(z) / lim_z >= abs(y) / lim_y:
+                self._call = "too_high" if z > 0 else "too_low"
+            else:
+                self._call = "too_right" if y > 0 else "too_left"
+            return "OUTSIDE LIMITS"
+        return "VALID"
 
     def _closing_fast(self, t: float, z: float, r: float, y: float, nominal: float, lim_z: float,
                       height_ft: float) -> bool:
@@ -320,13 +368,29 @@ class CueLogic:
             self._next[1] = t + c.update_s
         return new_h, new_s
 
-    def step(self, t: float, plot: RadarPlot | None) -> dict:
+    def step(self, t: float, plot: RadarPlot | None, aircraft: Sequence[str] = (), radio: bool = False,
+             link_ok: bool = True, pilot_visual: bool = False, tower_break: str | None = None) -> dict:
+        """``aircraft``: aircraft alerts sounding now. ``radio``: a transmission is on. ``link_ok``: the guidance link is
+        delivering. ``pilot_visual``: pilot reports lights in sight and will proceed visually (5-12-8a4). ``tower_break``:
+        5-10-14d, airport or traffic, unconditional."""
         c = self.cfg
+        if link_ok:
+            self._last_link = t
+        if self.state not in END_STATES:
+            if t - self._last_link > c.link_lost_s:
+                self.state, self._call = "LINK LOST", "link_lost"
+            elif pilot_visual:
+                self.state, self._call = "VISUAL", None
+            elif tower_break:
+                self.state, self._call = "NO CLEARANCE", "no_clearance"
         if plot is not None and self.state not in END_STATES:
-            self._take(plot)
+            self._take(plot, t)
         if self.ky is None or self.kz is None or self.kr is None:
-            self.state = "ACQUIRING" if t <= c.lost_s + c.acquire_plots else "LOST"
-            return self._frame(t, self.alert.step(t, self.state, None, None, None, None))
+            if self.state not in END_STATES:
+                self.state = "ACQUIRING" if t <= c.lost_s + c.acquire_plots else "RADAR LOST"
+            self._call = "radar_lost" if self.state == "RADAR LOST" else self._call
+            v = self.alert.step(t, self.state, None, None, None, None, call=self._call)
+            return self._frame(t, self._speak(t, v, aircraft, radio))
         y, z = float(self.ky.x[0]), float(self.kz.x[0])        # shown values are never extrapolated
         r = max(float(self.kr.predict(t)[0][0]), 1.0)
         gs = min(max(-float(self.kr.x[1]), c.gs_min_ms), c.gs_max_ms)
@@ -342,36 +406,52 @@ class CueLogic:
             self._trim_t = None
             self._next = [t + 1.0, t + 1.0]
         lim_y, lim_z = self._limits_m(r)
-        lat_word = self._word(y, lim_y, "ON COURSE", "RIGHT", "LEFT")
-        vert_word = self._word(z, lim_z, "ON GLIDE PATH", "ABOVE", "BELOW")
+        lat_word = self._word(y, lim_y, "ON COURSE", "RIGHT OF COURSE", "LEFT OF COURSE")
+        vert_word = self._word(z, lim_z, "ON GLIDEPATH", "ABOVE GLIDEPATH", "BELOW GLIDEPATH")
         rate_lat = _slope([(h[0], h[1]) for h in self._hist])
         rate_vert = _slope([(h[0], h[2]) for h in self._hist])
         rate_z = _slope([(h[0], h[3]) for h in self._hist])
         nominal = gs * math.tan(math.radians(self.rwy.glide_path_deg))
         sink_fpm = None if rate_z is None else (nominal - rate_z) * FPM
-        fast = self._closing_fast(t, z, r, y, nominal, lim_z, height_ft)
-        not_corr = (self.state == "VALID" and not lat_word.startswith("ON ") and rate_lat is not None and
-                    t - self._last_hdg_t >= c.not_correcting_s and rate_lat * y >= 0)
-        notice = None
-        if self.state == "VALID" and r <= c.clearance_nm * NM and not self.clearance and not self._clearance_said:
-            self._clearance_said = True
-            notice = "no_clearance"
+        fast = self.state == "VALID" and self._closing_fast(t, z, r, y, nominal, lim_z, height_ft)
+        not_corr = (self.state == "VALID" and not lat_word.startswith("ON ") and rate_lat is not None
+                    and t - self._last_hdg_t >= c.not_correcting_s and rate_lat * y >= 0)
         v_az, v_el, _ = self._vars(RadarPlot(t, r, y, z))
-        v = self.alert.step(t, self.state, y, z, r, height_ft, closing_fast=fast, notice=notice,
+        call = self._call if self.state in END_STATES else None
+        v = self.alert.step(t, self.state, y, z, r, height_ft, closing_fast=fast, call=call,
                             resolve_m=(math.sqrt(v_az), math.sqrt(v_el)))
-        live = self.state in ("VALID", "DELAYED", "INVALID")
+        v = self._speak(t, v, aircraft, radio)
+        live = self.state in ("VALID", "DELAYED", "INVALID", "ADVISORY")
+        if self.state == "ADVISORY":   # data faults below DH: remove the needle, no call
+            stale = {k: t - self._last[k] > c.track_lost_s or self._rej[k] >= c.reject_to_invalid for k in ("az", "el")}
+            self._bad = stale
         show_lat, show_vert = live and not self._bad["az"], live and not self._bad["el"]
         ld, vd = self._dots(y, z, r)
         note = ""
         if self.state == "VALID" and c.clearance_nm * NM < r <= c.gear_nm * NM:
             note = "CHECK GEAR"
-        elif r <= c.clearance_nm * NM and not self.clearance:
-            note = "CLEARANCE NOT CONFIRMED"
-        lat_trend = "NOT CORRECTING" if not_corr else self._trend_word(y, rate_lat, lat_word)
+        elif self.state == "VALID" and r <= c.gear_nm * NM and not self.clearance:
+            note = "TOWER CLEARANCE NOT RECEIVED"
+        elif self.state == "ADVISORY":
+            note = "ADVISORY ONLY"
+        elif self.state in MISSED_STATES and c.missed_approach:
+            note = c.missed_approach
+        lat_trend = self._trend_word(y, rate_lat, lat_word, "CORRECTING", "RIGHT", "LEFT")
+        lat_trend = "NOT CORRECTING" if not_corr else lat_trend
         return self._frame(t, v, ld if show_lat else None, vd if show_vert else None, lat_word if show_lat else "",
                            vert_word if show_vert else "", lat_trend if show_lat else "",
-                           self._trend_word(z, rate_vert, vert_word) if show_vert else "", new_h, new_s, r,
+                           self._trend_word(z, rate_vert, vert_word, "COMING DOWN" if z > 0 else "COMING UP", "ABOVE",
+                                            "BELOW") if show_vert else "", new_h, new_s, r,
                            height_ft if show_vert else None, gs, sink_fpm, fast, note)
+
+    def _speak(self, t: float, v: dict, aircraft: Sequence[str], radio: bool) -> dict:
+        """Pass the wanted call through the arbiter. The level and the display do not change, only the voice."""
+        a = self.arbiter.step(t, v["voice"], v["level"], aircraft, radio)
+        out = dict(v)
+        out.update(voice=a["voice"], voice_held=a["held"], voice_dropped=a["dropped"],
+                   voice_dba=voice_level_dba(a["voice_level"], self.intensity) if a["voice"] else None,
+                   tone_first=bool(a["voice"]) and a["voice_level"] == 4)
+        return out
 
     def _frame(self, t: float, v: dict, ld: float | None = None, vd: float | None = None, lat_word: str = "",
                vert_word: str = "", lat_trend: str = "", vert_trend: str = "", new_h: float = 0.0, new_s: float = 0.0,
@@ -386,13 +466,14 @@ class CueLogic:
                 "range_nm": None if r is None else r / NM, "height_ft": height_ft, "gs_ms": gs, "sink_fpm": sink_fpm,
                 "closing_fast": fast, "note": note, "trim_deg": self.trim, "level": v["level"], "voice": v["voice"],
                 "voice_dba": v["voice_dba"], "tone_first": v["tone_first"], "visual": v["visual"], "blink": v["blink"],
-                "intensity": v["intensity"]}
+                "intensity": v["intensity"], "voice_held": v["voice_held"], "voice_dropped": v["voice_dropped"],
+                "missed_approach": self.state in MISSED_STATES or self.state == "NO CLEARANCE"}
 
 
 @dataclass(frozen=True)
 class Fault:
-    """A scripted radar fault between ``t0`` and ``t1``. kind: delay (value = s), jump (value = m on both axes),
-    invalid (both axes), el_invalid, az_invalid, dropout (no plots)."""
+    """A scripted fault between ``t0`` and ``t1``. kind: delay (value = s), jump (value = m on both axes), invalid (both
+    axes), el_invalid, az_invalid, dropout (no plots), link (guidance link silent)."""
 
     kind: str
     t0: float
@@ -411,7 +492,9 @@ class ReplayConfig:
     start_heading_error_deg: float = 0.0   # the aircraft arrives crabbed for the wind; this is the error in that crab
     turbulence_w20_kt: float = 15.0   # light
     dt: float = 0.1
-    after_end_s: float = 15.0         # keep flying this long after LOST or OUTSIDE LIMITS
+    after_end_s: float = 15.0         # keep flying this long after a missed approach
+    aircraft_alerts: tuple[tuple[float, float, str], ...] = ()   # (from, to, name): aircraft alert sounding
+    radio: tuple[tuple[float, float], ...] = ()                  # (from, to): a transmission is on
 
 
 def _apply_faults(faults: Sequence[Fault], p: RadarPlot | None, t: float) -> tuple[RadarPlot | None, float]:
@@ -464,14 +547,17 @@ def fly_replay(rwy: Runway, cfg: CueConfig = CueConfig(), rc: ReplayConfig = Rep
                 in_flight.append((t + delay, p))
             due = [q for q in in_flight if q[0] <= t + 1e-9]
             in_flight = [q for q in in_flight if q[0] > t + 1e-9]
-            fr = logic.step(t, due[-1][1] if due else None)
+            alerts = [a[2] for a in rc.aircraft_alerts if a[0] <= t < a[1]]
+            on_air = any(a <= t < b for a, b in rc.radio)
+            link = not any(f.kind == "link" and f.t0 <= t < f.t1 for f in faults)
+            fr = logic.step(t, due[-1][1] if due else None, alerts, on_air, link)
             fr.update(x_m=x, y_m=y, z_dev_m=z - float(glide_path_height(rwy, x)), height_m=z)
             frames.append(fr)
             z_seen = float(logic.kz.x[0]) if logic.kz is not None and fr["vert_dots"] is not None else None
             shown = (fr["hdg_rel_deg"] if fr["hdg_rel_deg"] is not None else shown[0], z_seen)
             if fr["state"] in END_STATES and t_end is None:
-                t_end = t + (2.0 if fr["state"] == "MINIMUMS" else rc.after_end_s)
-                go_around = fr["state"] != "MINIMUMS"
+                t_end = t + (0.0 if fr["state"] in ("OVER THRESHOLD", "VISUAL") else rc.after_end_s)
+                go_around = fr["state"] not in ("OVER THRESHOLD", "VISUAL")
             if (t_end is not None and t >= t_end) or x <= rwy.gpip + 100.0:
                 return frames
         lag.append(shown)
@@ -517,6 +603,11 @@ def replay_track(rwy: Runway, t: Sequence[float], x: Sequence[float], y: Sequenc
         if stop_at_end_state and fr["state"] in END_STATES:
             break
     return frames
+
+
+def dh_frame(frames: Sequence[dict]) -> dict | None:
+    """The frame where the aircraft reached decision height, or ``None`` if it never did."""
+    return next((f for f in frames if f["state"] == "ADVISORY"), None)
 
 
 def cue_changes(frames: Sequence[dict]) -> int:

@@ -4,11 +4,13 @@ Design rule: the pilot flies. On the path the system is silent; it never tells a
 already see. Evidence and tags are in ``03_Advionics/research/R4_cue_intensity_human_factors.md``. In short:
 
 * Real voice systems are silent on the path. EGPWS Mode 5 starts at 1.3 dots below 1000 ft at about -6 dB, says one word
-  and repeats only for each 20 % more deviation (Honeywell guide; CAA 2017). Normal conditions get no alarm (HFDS 7.2.1.6).
+  and repeats only for each 20 % more deviation (Honeywell guide; CAA 2017). Normal conditions get no alarm (HFDS
+  7.2.1.6).
 * A correct alert about a problem already being fixed is still a nuisance (Wickens et al. 2009, via Ruskin et al.), so a
   closing deviation lowers the level. The trend uses position over 5 s, not a radar rate, which is too noisy.
 * Voice has an attention cost whatever its content (Helleberg and Wickens 2003), so the goal is few calls.
-* Status words state position, as a PAR controller does (JO 7110.65 5-12-4). The only imperative is GO AROUND.
+* Status words state position, as a PAR controller does (JO 7110.65 5-12-4). The only instruction is the conditional
+  missed approach of JO 7110.65 5-10-14: reason, then "if runway or approach lights not in sight".
 * Radio voice sits at 84-88 dB(A) at the ear and the non-emergency limit is 90 dB(A): loudness has only a few dB to use.
 
 Sourced anchors and our own weights are marked in :class:`IntensityConfig`. The weights have not been tested by a pilot.
@@ -23,17 +25,27 @@ __all__ = ["IntensityConfig", "CueIntensity", "intensity_score", "voice_level_db
 
 LEVELS = ("L0 QUIET", "L1 NOTE", "L2 ADVISE", "L3 CAUTION", "L4 WARNING")
 
-VOICE_TEXT = {"slightly_below": "Slightly below path", "well_below": "Well below path",
-              "slightly_above": "Slightly above path", "well_above": "Well above path",
-              "slightly_left": "Slightly left", "well_left": "Well left",
-              "slightly_right": "Slightly right", "well_right": "Well right",
-              "coming_down": "Coming down rapidly", "no_clearance": "No clearance",
-              "delayed": "Radar delayed", "invalid": "Data invalid",
-              "lost": "Radar lost. If not visual, go around.",
-              "limits": "Limits. If not visual, go around.", "minimums": "Minimums"}
+_IF_NOT_VISUAL = "If runway or approach lights not in sight, execute missed approach."
 
-_DATA_LEVEL = {"DELAYED": 2, "INVALID": 3, "LOST": 4, "OUTSIDE LIMITS": 4}
-_DATA_CALL = {"DELAYED": "delayed", "INVALID": "invalid", "LOST": "lost", "OUTSIDE LIMITS": "limits"}
+#: position words are JO 7110.65 5-12-4; the missed approach pattern is 5-10-14; elevation is 5-12-10; tower is 5-10-13
+VOICE_TEXT = {"slightly_below": "Slightly below glidepath", "well_below": "Well below glidepath",
+              "slightly_above": "Slightly above glidepath", "well_above": "Well above glidepath",
+              "slightly_left": "Slightly left of course", "well_left": "Well left of course",
+              "slightly_right": "Slightly right of course", "well_right": "Well right of course",
+              "coming_down": "Coming down rapidly", "delayed": "Radar data delayed", "invalid": "Radar data invalid",
+              "at_dh": "At decision height",
+              "too_low": f"Too low for safe approach. {_IF_NOT_VISUAL}",
+              "too_high": f"Too high for safe approach. {_IF_NOT_VISUAL}",
+              "too_left": f"Too far left for safe approach. {_IF_NOT_VISUAL}",
+              "too_right": f"Too far right for safe approach. {_IF_NOT_VISUAL}",
+              "radar_lost": f"Radar contact lost. {_IF_NOT_VISUAL}",
+              "radar_suspect": f"Radar malfunction suspected. {_IF_NOT_VISUAL}",
+              "no_glidepath": f"No glidepath information available. {_IF_NOT_VISUAL}",
+              "no_clearance": "Tower clearance not received. Execute missed approach.",
+              "link_lost": "Guidance link lost. Apply lost communications procedure."}
+
+_DATA_LEVEL = {"DELAYED": 2, "INVALID": 3}
+_DATA_CALL = {"DELAYED": "delayed", "INVALID": "invalid"}
 
 
 @dataclass(frozen=True)
@@ -59,8 +71,8 @@ class IntensityConfig:
     growth: float = 1.2               # repeat only for 20 % more deviation, EGPWS Mode 5 [D]
     gap_l2_s: float = 10.0            # [Y] two PAR intervals
     gap_l3_s: float = 5.0             # ACAS first response and PAR interval [D], used by analogy
-    gap_l4_s: float = 3.0             # Mode 5 hard alert period [D]
-    l4_repeats: int = 3               # [Y] Patterson 1990: further urgent repetition irritates [D]
+    gap_l4_s: float = 8.0             # [Y] the call takes about 5 s at 156 words/min, then the Mode 5 3 s period [D]
+    l4_repeats: int = 2               # [Y] Patterson 1990: further urgent repetition irritates [D]
     no_l2_voice_below_ft: float = 300.0   # [Y] the pilot is looking for lights; Mode 5 hard starts here [D]
     noise_dba: float = 78.0           # jet cockpit ambient 74-80 dB(A) [D-f]; measure it in a real aircraft
     delta_db: tuple[float, float, float] = (5.0, 11.0, 15.0)  # L2, L3, L4 above ambient [Y] on sourced anchors
@@ -111,7 +123,6 @@ class CueIntensity:
         self._called_level = 0
         self._l4_calls = 0
         self._l4_since: float | None = None
-        self._done = False
         self._old_state = ""
         self._fast_said = False
 
@@ -184,33 +195,32 @@ class CueIntensity:
                 "visual": ("none", "note", "advise", "caution", "warning")[level], "blink": blink}
 
     def step(self, t: float, state: str, lat_m: float | None, vert_m: float | None, range_m: float | None,
-             height_ft: float | None, closing_fast: bool = False, notice: str | None = None,
+             height_ft: float | None, closing_fast: bool = False, call: str | None = None,
              resolve_m: tuple[float, float] = (0.0, 0.0)) -> dict:
         """One frame. ``state`` is the validity state of :class:`aerokit.atc.parcue.CueLogic`. ``closing_fast``: heading
-        below the limit in the look-ahead, the case position alone misses. ``notice``: a one-off status call.
+        below the limit in the look-ahead, the case position alone misses. ``call``: the level 4 call of an end state.
         ``resolve_m``: radar 1 sigma (lateral, vertical). What the radar cannot resolve is not alerted: ICAO also allows
         tolerance before 2 NM (Doc 4444 8.9.7.2.5.3)."""
         c = self.cfg
         changed = state != self._old_state
         self._old_state = state
-        if self._done or state == "MINIMUMS":          # guidance ends; nothing after the one call
-            voice = None if self._done else "minimums"
-            self._done = True
-            return self._result(0, 0.0, 0.0, voice, t)
-        if state in _DATA_LEVEL:                       # bad data replaces guidance intensity, it never raises it
-            lvl = _DATA_LEVEL[state]
+        if call:                                       # end state: reason, condition, at most l4_repeats times
             voice = None
-            if lvl == 4:
-                if changed:
-                    self._l4_calls = 0
-                if self._l4_calls < c.l4_repeats and t - self._last_voice >= c.gap_l4_s:
-                    voice = _DATA_CALL[state]
-                    self._l4_calls += 1
-                    self._last_voice = t
-            elif changed and not self.quiet:
-                voice = _DATA_CALL[state]
+            if changed:
+                self._l4_calls = 0
+                self._last_voice = -1e9
+            if self._l4_calls < c.l4_repeats and t - self._last_voice >= c.gap_l4_s:
+                voice = call
+                self._l4_calls += 1
                 self._last_voice = t
-            return self._result(lvl, 0.0, 0.0, voice, t)
+            return self._result(4, 0.0, 0.0, voice, t)
+        if state == "ADVISORY":                        # below DH: 5-10-14 a-c no longer apply; one call, then quiet
+            return self._result(0, 0.0, 0.0, "at_dh" if changed else None, t)
+        if state in _DATA_LEVEL:                       # bad data replaces guidance intensity, it never raises it
+            voice = _DATA_CALL[state] if changed and not self.quiet else None
+            if voice:
+                self._last_voice = t
+            return self._result(_DATA_LEVEL[state], 0.0, 0.0, voice, t)
         if state != "VALID" or lat_m is None or vert_m is None or range_m is None or height_ft is None:
             return self._result(0, 0.0, 0.0, None, t)
         sure_lat = math.copysign(max(abs(lat_m) - resolve_m[0], 0.0), lat_m)
@@ -227,8 +237,5 @@ class CueIntensity:
             self._fast_said = True
             self._last_voice, self._last_e, self._called_level = t, e, lvl
             return self._result(lvl, score, trend, "coming_down", t)
-        if notice and not self.quiet:
-            self._last_voice = t
-            return self._result(max(lvl, 2), score, trend, notice, t)
         voice = self._guidance_voice(t, e, word, height_ft)
         return self._result(lvl, score, trend, voice, t)

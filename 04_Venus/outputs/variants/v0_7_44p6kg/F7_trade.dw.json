@@ -8,7 +8,7 @@
  "metin_kutusu_pt": [
   3.0,
   3.0,
-  804.5,
+  767.0,
   411.0
  ],
  "hedef": "sunum-tam",
@@ -223,8 +223,8 @@
     "tarih": false,
     "ters": false,
     "sinir": [
-     2.288,
-     2.912
+     1.3699999999999999,
+     2.9299999999999997
     ],
     "gorunur": true,
     "kategorik": false,
@@ -234,9 +234,9 @@
     ],
     "ondalik_isareti": ".",
     "tikler": [
-     "2.4",
-     "2.6",
-     "2.8"
+     "1.5",
+     "2.0",
+     "2.5"
     ],
     "eksi": null,
     "e_gosterimi": false,

@@ -227,8 +227,11 @@ def _flown(im: BU.Interaction, prof: BU.Profile, D: float, req: S.Requirements, 
         return {"error": str(e)}
     try:
         r = BU.fly_case(d, im, prof, step_km=0.5)
-    except RuntimeError as e:
-        return {"gross_kg": d.gross_kg, "flight_error": str(e), "flight_h": 0.0, "sustained_h": 0.0}
+    except RuntimeError as e:                       # no sunset start keeps 5 % charge: fly it to the end all the same
+        tab = BU.power_table(d, im, prof, 0.5)
+        fl = BU.fly(d, tab, prof, BU.release_angle(BU.threshold_mu0(d, tab)))
+        return {"gross_kg": d.gross_kg, "flight_h": fl.flight_h, "sustained_h": fl.sun_h, "closes": False,
+                "note": f"{e}; flown with the default horizon: {fl.end_reason}", "span_m": 2 * d.arm_m + D}
     return {"gross_kg": d.gross_kg, "mu0_loiter": r["mu0_loiter"], "loiter_W": r["loiter_W"],
             "solar_overhead_W": r["solar_overhead_W"], "flight_h": r["flight_h"], "sustained_h": r["sun_h"],
             "release_hour_angle_deg": r["release_hour_angle_deg"], "closes": r["closes"], "span_m": 2 * d.arm_m + D}
@@ -557,6 +560,25 @@ def _f7(fig) -> None:
     fig.axes[1].set_xlim(fig.axes[0].get_xlim())
 
 
+def _f9(fig) -> None:
+    """Both cruise altitudes now cost hours, so their bars lie on one side and the longer one hid the shorter: split the row."""
+    ax = fig.axes[0]
+    row = next(t.get_position()[1] for t in ax.get_yticklabels() if t.get_text() == "Cruise altitude")
+    bars = sorted((b for b in ax.patches if abs(b.get_y() + b.get_height() / 2.0 - row) < 0.01), key=lambda b: b.get_width())
+    labels = {t.get_text(): t for t in ax.texts if t.get_text() in ("53 km", "58 km")}
+    for bar, name, off in zip(bars, ("58 km", "53 km"), (-0.16, 0.16), strict=True):
+        bar.set_height(0.3)
+        bar.set_y(row + off - 0.15)
+        labels[name].set_y(row + 1.5 * off if name == "53 km" else row + off)     # text is taller than half a row
+
+
+def _f10(fig) -> None:
+    """The 2.3 m marker of the 180 Wh/kg row sat on the "no closure" note: the notes move up, clear of that marker row."""
+    for t in fig.axes[0].texts:
+        if t.get_text().startswith("no closure"):
+            t.set_y(t.get_position()[1] + 0.16)
+
+
 def _f12(fig) -> None:
     """The end label of the forward-flight curve touched the dotted curve (also in the baseline)."""
     label = next(t for t in fig.axes[0].texts if t.get_text() == "Pull-out in forward flight")
@@ -571,7 +593,7 @@ def _f13(fig) -> None:
     note.set_bbox({"facecolor": ax.get_facecolor(), "edgecolor": "none", "pad": 1.5})
 
 
-TWEAKS = {"F6_mission": _f6, "F7_trade": _f7, "F12_deployment_monte_carlo": _f12, "F13_day_and_station_keeping": _f13}
+TWEAKS = {"F6_mission": _f6, "F7_trade": _f7, "F9_sensitivity": _f9, "F10_robustness": _f10, "F12_deployment_monte_carlo": _f12, "F13_day_and_station_keeping": _f13}
 
 
 def draw(c: dict) -> None:
@@ -727,9 +749,9 @@ def changes_md(base: dict, doc: dict, sim_changes: list[dict], m: dict, figs: di
         else:
             state = "numbers unchanged, same PNG bytes as baseline" if r["same_pixels_as_baseline"] else "regenerated"
             L.append(f"| {name} | {state} | {r['audit']} |")
-    L += ["", "UYARI in F2 and F13: the pink of the set is 2.93:1 on the background, as in the baseline; the colour stays for set "
-          "consistency. Save-time changes against `venus_final.py`: F4 thermal in the \"other\" bar, F6 altitude axis, F7 shared x range, "
-          "F12 label moved off the dotted curve, F13 note background.", "", BRIEFS, "## design.json: every changed value", "",
+    L += ["", "UYARI in F2, F10 and F13: a set colour is under 3:1 on the background (pink 2.93:1, light blue 2.21:1), as in the "
+          "baseline; it stays for set consistency. Save-time changes against `venus_final.py`: F4 thermal in the other bar, F6 altitude "
+          "axis, F7 shared x range, F9 cruise row split, F10 notes moved up, F12 label off the dotted curve, F13 note background.", "", BRIEFS, "## design.json: every changed value", "",
           f"{len(rows)} changed leaves. `operations.events` and `operations.series_hourly` are replaced whole; their rows are in "
           "`design.json`. Same list as JSON: `changes_full.json`.", "",
           "| Path | Old | New | Tag | Source |", "|---|---|---|---|---|"]

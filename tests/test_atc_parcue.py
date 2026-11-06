@@ -6,8 +6,8 @@ import pytest
 
 from aerokit.approach import Runway
 from aerokit.atc.cue_intensity import VOICE_TEXT
-from aerokit.atc.parcue import (END_STATES, AxisKalman, CueConfig, CueLogic, Fault, PilotModel, RadarPlot, ReplayConfig,
-                                cue_changes, fly_replay, replay_track)
+from aerokit.atc.parcue import (END_STATES, MISSED_STATES, AxisKalman, CueConfig, CueLogic, Fault, PilotModel, RadarPlot,
+                                ReplayConfig, cue_changes, dh_frame, fly_replay, replay_track)
 from aerokit.atc.parflight import AIRCRAFT, dryden_sigmas, wind_at
 from aerokit.atc.parradar import NM, ParRadar, RadarConfig, error_limits_m
 
@@ -92,16 +92,15 @@ def test_gate_recovers_after_noise_rejections():
 
 # --- closed loop -----------------------------------------------------------------------------------------------------
 def test_clean_runs_reach_minimums_near_the_path():
-    ends = [fly_replay(RWY, seed=s)[-1] for s in SEEDS]
-    gate = [e for e in ends if e["state"] == "MINIMUMS"]
-    assert len(gate) >= 0.95 * len(ends)
+    gate = [g for g in (dh_frame(fly_replay(RWY, seed=s)) for s in SEEDS) if g is not None]
+    assert len(gate) >= 0.95 * len(SEEDS)
     assert np.percentile([abs(e["y_m"]) for e in gate], 95) < 45
     assert np.percentile([abs(e["z_dev_m"]) for e in gate], 95) < 20
 
 
 def test_without_the_cue_the_aircraft_does_not_get_there():
-    assert all(fly_replay(RWY, rc=ReplayConfig(crosswind_ms=3.0), pilot=PilotModel(follows_cue=False), seed=s)[-1]["state"]
-               != "MINIMUMS" for s in range(5))
+    assert all(dh_frame(fly_replay(RWY, rc=ReplayConfig(crosswind_ms=3.0), pilot=PilotModel(follows_cue=False), seed=s))
+               is None for s in range(5))
 
 
 def test_heading_target_points_back_to_the_path():
@@ -118,12 +117,12 @@ def test_guidance_changes_as_the_aircraft_returns():
 
 
 def test_crosswind_is_handled_by_the_trim():
-    ends = [fly_replay(RWY, rc=ReplayConfig(crosswind_ms=5.0), seed=s)[-1] for s in range(10)]
-    assert sum(e["state"] == "MINIMUMS" for e in ends) >= 9
+    assert sum(dh_frame(fly_replay(RWY, rc=ReplayConfig(crosswind_ms=5.0), seed=s)) is not None for s in range(10)) >= 9
 
 
 def test_other_aircraft_run():
-    assert fly_replay(RWY, rc=ReplayConfig(aircraft=AIRCRAFT["F-16"]), seed=2)[-1]["state"] == "MINIMUMS"
+    assert sum(dh_frame(fly_replay(RWY, rc=ReplayConfig(aircraft=AIRCRAFT[a]), seed=2)) is not None
+               for a in AIRCRAFT) >= 2
 
 
 def test_target_changes_are_rate_limited():
@@ -135,6 +134,8 @@ def test_target_changes_are_rate_limited():
 def test_no_imperative_words_on_the_display():
     words = {f[k] for s in range(5) for f in fly_replay(RWY, seed=s) for k in ("lat_word", "vert_word")}
     assert not any(w.startswith(("TURN", "DESCEND", "CLIMB", "EASE")) for w in words)
+    assert {"ON COURSE", "ON GLIDEPATH"} <= words
+    assert any("OF COURSE" in w and w.startswith(("SLIGHTLY", "WELL")) for w in words)
 
 
 def test_voice_is_scarce_and_never_on_the_path():
@@ -143,7 +144,7 @@ def test_voice_is_scarce_and_never_on_the_path():
     for r in runs:
         for f in r:
             if f["voice"] and f["state"] == "VALID":
-                assert not (f["lat_word"] == "ON COURSE" and f["vert_word"] == "ON GLIDE PATH" and f["voice"] != "coming_down")
+                assert not (f["lat_word"] == "ON COURSE" and f["vert_word"] == "ON GLIDEPATH" and f["voice"] != "coming_down")
 
 
 def test_every_voice_key_has_text():
@@ -159,43 +160,107 @@ def test_heartbeat_moves_while_silent():
 
 # --- faults ----------------------------------------------------------------------------------------------------------
 def test_delay_above_three_seconds_is_told_with_no_new_target():
-    fr = fly_replay(RWY, faults=(Fault("delay", 60, 75, 4.0),), seed=5)
+    fr = fly_replay(RWY, faults=(Fault("delay", 12, 22, 4.0),), seed=5)        # outside 4 NM a fault is not final
     d = [f for f in fr if f["state"] == "DELAYED"]
     assert d and all(f["age_s"] > CueConfig().track_lost_s for f in d)
     assert all(f["hdg_new"] == 0 and f["rod_new"] == 0 and f["hdg_rel_deg"] is None for f in d)
     assert all(f["lat_dots"] is not None for f in d)
 
 
-def test_elevation_failure_leaves_azimuth_working():
-    fr = fly_replay(RWY, faults=(Fault("el_invalid", 60, 63),), seed=6)
-    bad = [f for f in fr if f["state"] == "INVALID"]
-    assert bad and all(f["vert_dots"] is None and f["lat_dots"] is not None for f in bad)
+def test_elevation_failure_ends_guidance_at_once():
+    """JO 7110.65 5-12-10: discontinue PAR instructions; no 5 s wait."""
+    fr = fly_replay(RWY, faults=(Fault("el_invalid", 60, 1e9),), seed=6)
+    first = next(f for f in fr if f["state"] == "ELEVATION FAILED")
+    assert first["t"] <= 62 and first["voice"] == "no_glidepath" and first["missed_approach"]
+    assert all(f["lat_dots"] is None and f["vert_dots"] is None for f in fr if f["t"] >= first["t"])
+
+
+def test_one_bad_elevation_flag_is_not_a_failure():
+    fr = fly_replay(RWY, faults=(Fault("el_invalid", 60, 61),), seed=6)
+    assert not any(f["state"] == "ELEVATION FAILED" for f in fr)
 
 
 def test_jump_is_rejected_not_flown():
     fr = fly_replay(RWY, faults=(Fault("jump", 60, 63, 400.0),), seed=7)
-    assert any(f["state"] == "INVALID" for f in fr)
+    assert any(f["state"] == "INVALID" for f in fr) and dh_frame(fr) is not None
     assert max(abs(f["y_m"]) for f in fr if f["t"] > 55) < 100
 
 
-def test_persistent_bad_data_ends_in_lost():
-    fr = fly_replay(RWY, faults=(Fault("jump", 60, 300, 400.0),), seed=8)
-    assert fr[-1]["state"] == "LOST"
+def test_persistent_bad_data_is_a_suspected_malfunction():
+    fr = fly_replay(RWY, faults=(Fault("jump", 70, 300, 400.0),), seed=8)
+    assert fr[-1]["state"] == "RADAR SUSPECT"
+    assert any(f["voice"] == "radar_suspect" for f in fr)
 
 
-def test_radar_stop_lost_after_five_seconds_and_latches():
-    fr = fly_replay(RWY, faults=(Fault("dropout", 60, 66),), seed=9)
-    lost = next(f for f in fr if f["state"] == "LOST")
-    assert 64 <= lost["t"] <= 67
-    assert any(f["state"] == "DELAYED" and f["t"] < lost["t"] for f in fr)   # told at 3 s, before LOST
-    assert all(f["state"] == "LOST" and f["lat_dots"] is None for f in fr if f["t"] >= lost["t"])
+def test_inside_4_nm_a_lost_target_is_final_after_3_s_and_latches():
+    """RA 3291 paras 5, 7b; call from JO 7110.65 5-10-14c. Radar back later does not restart the approach."""
+    fr = fly_replay(RWY, faults=(Fault("dropout", 70, 76),), seed=9)
+    lost = next(f for f in fr if f["state"] == "RADAR LOST")
+    assert lost["x_m"] < 4 * NM and 72 <= lost["t"] <= 75
+    assert all(f["state"] == "RADAR LOST" and f["lat_dots"] is None for f in fr if f["t"] >= lost["t"])
     assert fr[-1]["height_m"] > lost["height_m"]
-    assert lost["voice"] == "lost" and "not visual" in VOICE_TEXT["lost"]
+    assert lost["voice"] == "radar_lost" and "If runway or approach lights not in sight" in VOICE_TEXT["radar_lost"]
+
+
+def test_outside_4_nm_a_short_loss_can_recover():
+    fr = fly_replay(RWY, faults=(Fault("dropout", 12, 16),), seed=9)
+    assert any(f["state"] == "DELAYED" for f in fr) and not any(f["state"] == "RADAR LOST" for f in fr)
+
+
+def test_missed_approach_call_gives_the_side():
+    assert fly_replay(RWY, rc=ReplayConfig(start_above_m=-110.0), seed=1)[-1]["state"] == "OUTSIDE LIMITS"
+    assert any(f["voice"] == "too_low" for f in fly_replay(RWY, rc=ReplayConfig(start_above_m=-110.0), seed=1))
+    assert any(f["voice"] == "too_right" for f in fly_replay(RWY, rc=ReplayConfig(start_offset_m=420.0), seed=1))
+
+
+def test_after_dh_no_missed_approach_call_is_made():
+    """5-10-14: conditions a, b, c do not apply after DH."""
+    r = fly_replay(RWY, seed=1)
+    t_dh = dh_frame(r)["t"]
+    fr = fly_replay(RWY, faults=(Fault("dropout", t_dh + 2, 1e9),), seed=1)
+    assert dh_frame(fr) is not None and not any(f["state"] in MISSED_STATES for f in fr)
+    assert fr[-1]["state"] == "OVER THRESHOLD"
+
+
+def test_position_stays_on_as_advisory_until_the_threshold():
+    """5-12-7: guidance to the threshold, advisory only below DH; 5-12-8a3 ends it."""
+    fr = fly_replay(RWY, seed=1)
+    below = [f for f in fr if f["state"] == "ADVISORY"]
+    assert below and all(f["note"] == "ADVISORY ONLY" and f["lat_dots"] is not None for f in below)
+    assert all(f["hdg_rel_deg"] is None for f in below) and fr[-1]["state"] == "OVER THRESHOLD"
+    assert [f["voice"] for f in fr if f["voice"]].count("at_dh") == 1
+
+
+def test_link_loss_is_lost_comm_not_a_missed_approach():
+    """5-10-4: 5 s on PAR final, then the instruction given before final."""
+    fr = fly_replay(RWY, faults=(Fault("link", 70, 1e9),), seed=2)
+    f = next(q for q in fr if q["state"] == "LINK LOST")
+    assert 75 <= f["t"] <= 77 and f["voice"] == "link_lost" and not f["missed_approach"]
+    assert "lost communications" in VOICE_TEXT["link_lost"]
+
+
+def test_pilot_proceeding_visually_ends_guidance():
+    lg = CueLogic(RWY)
+    _feed(lg, _plots(6))
+    fr = lg.step(6.0, RadarPlot(6.0, 8598.0, 0.0, 0.0), pilot_visual=True)
+    assert fr["state"] == "VISUAL" and fr["voice"] is None
+
+
+def test_tower_break_is_unconditional():
+    lg = CueLogic(RWY)
+    _feed(lg, _plots(6))
+    fr = lg.step(6.0, RadarPlot(6.0, 8598.0, 0.0, 0.0), tower_break="traffic on runway")
+    assert fr["state"] == "NO CLEARANCE" and fr["voice"] == "no_clearance" and "If" not in VOICE_TEXT["no_clearance"]
+
+
+def test_missed_approach_procedure_is_shown():
+    fr = fly_replay(RWY, cfg=CueConfig(missed_approach="CLIMB 3000 RUNWAY HEADING"), faults=(Fault("dropout", 70, 1e9),), seed=1)
+    assert any(f["note"] == "CLIMB 3000 RUNWAY HEADING" for f in fr)
 
 
 def test_no_guidance_is_extrapolated():
     for f in fly_replay(RWY, faults=(Fault("dropout", 60, 90),), seed=10):
-        if f["state"] == "LOST":
+        if f["state"] in MISSED_STATES:
             assert f["lat_dots"] is None and f["hdg_rel_deg"] is None and f["lat_word"] == ""
 
 
@@ -211,29 +276,30 @@ def test_non_finite_plot_is_rejected():
     lg = CueLogic(RWY)
     _feed(lg, _plots(6))
     lg.step(6.0, RadarPlot(6.0, 8598.0, float("nan"), 0.0))
-    assert lg.step(7.0, RadarPlot(7.0, 8531.0, float("inf"), 0.0))["state"] == "INVALID"
+    assert lg.step(7.0, RadarPlot(7.0, 8531.0, float("inf"), 0.0))["state"] == "INVALID"     # 2 bad plots
 
 
 def test_outside_limits_needs_to_stay_outside_and_latches():
     lg = CueLogic(RWY)
-    a = _feed(lg, _plots(5, y=500.0))
+    a = _feed(lg, _plots(4, y=450.0))
     assert a["state"] == "VALID"
-    b = _feed(lg, _plots(4, y=500.0, t0=5.0))
-    assert b["state"] == "OUTSIDE LIMITS"
-    assert lg.step(9.0, RadarPlot(9.0, 8397.0, 0.0, 0.0))["state"] == "OUTSIDE LIMITS"
+    b = _feed(lg, _plots(6, y=450.0, t0=4.0))
+    assert b["state"] == "OUTSIDE LIMITS" and b["missed_approach"]
+    assert lg.step(10.0, RadarPlot(10.0, 8330.0, 0.0, 0.0))["state"] == "OUTSIDE LIMITS"
 
 
 def test_decision_height_comes_from_the_pilot():
-    a = fly_replay(RWY, cfg=CueConfig(dh_ft=300.0), seed=1)
-    b = fly_replay(RWY, cfg=CueConfig(dh_ft=200.0), seed=1)
-    assert a[-1]["state"] == b[-1]["state"] == "MINIMUMS" and a[-1]["x_m"] > b[-1]["x_m"]
+    a = dh_frame(fly_replay(RWY, cfg=CueConfig(dh_ft=300.0), seed=1))
+    b = dh_frame(fly_replay(RWY, cfg=CueConfig(dh_ft=200.0), seed=1))
+    assert a["x_m"] > b["x_m"]
 
 
 def test_clearance_gate_and_gear_prompt():
     fr = fly_replay(RWY, clearance=False, seed=1)
-    assert any(f["note"] == "CHECK GEAR" for f in fr) and any(f["voice"] == "no_clearance" for f in fr)
-    assert any(f["note"] == "CLEARANCE NOT CONFIRMED" for f in fr)
-    assert not any(f["voice"] == "no_clearance" for f in fly_replay(RWY, seed=1))
+    stop = next(f for f in fr if f["state"] == "NO CLEARANCE")
+    assert stop["x_m"] <= 2.2 * NM and stop["voice"] == "no_clearance" and stop["missed_approach"]
+    ok = fly_replay(RWY, seed=1)
+    assert any(f["note"] == "CHECK GEAR" for f in ok) and not any(f["state"] == "NO CLEARANCE" for f in ok)
 
 
 def test_end_states_are_terminal():
@@ -253,7 +319,7 @@ def test_open_loop_track_on_the_path_is_silent():
     x = 8000.0 - 67.0 * t
     z = RWY.tch + x * math.tan(math.radians(3.0))
     fr = replay_track(RWY, t, x, np.zeros_like(t), z, noise=False)
-    assert all(f["level"] == 0 and not f["voice"] for f in fr)
+    assert all(f["level"] == 0 for f in fr) and not any(f["voice"] and f["voice"] != "at_dh" for f in fr)
 
 
 def test_fast_closure_is_called_on_a_steep_track_below_the_gate():

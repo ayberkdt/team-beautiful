@@ -26,6 +26,36 @@ REFERENCES: tuple[Reference, ...] = (
                    "D:\\tmp_ideathon\\pylib) was read 2026-11-04: _altcode.py (AC layout C1 A1 C2 A2 C4 A4 M B1 Q B2 "
                    "D2 B4 D4, Gray-to-binary fold, N100 in {0,5,6} invalid, 7 -> 5, odd N500 -> 6 - N100) and "
                    "_bits.py (generator 0xFFF409 / 0x1FFF409). Used only as an independent cross-check in tests"),
+    # --- automated PAR cue (official Advionics task, 6 Nov 2026) ---------------------------------------------------
+    Reference("faa_jo7110_65bb", "FAA", 2026, "Air Traffic Control, Order JO 7110.65BB with Change 1 and 2",
+              "Federal Aviation Administration", url="https://www.faa.gov/air_traffic/publications/atpubs/atc_html/chap5_section_12.html",
+              note="read 2026-11-06 from a third-party PDF copy dated 1-22-26 (the FAA site refused automated reading): "
+                   "5-10-4 lost communications, 5-10-11 missed approach, 5-10-13 tower clearance, 5-10-14 final approach "
+                   "abnormalities, 5-12-1 to 5-12-11. Notes in 03_Advionics/research/R6_faa_jo7110_65bb_par_rules.md"),
+    Reference("icao_doc4444_par", "ICAO", 2016, "Procedures for Air Navigation Services: Air Traffic Management, Doc 4444",
+              "ICAO", "16th ed.", url="https://www.bazl.admin.ch/dam/it/sd-web/jMIWMg9YgaoW/4444_cons_en.pdf",
+              note="read by agent 2026-11-06 (R2): 8.9.6.1.7-8, 8.9.7.2.3-8 azimuth by instruction, elevation by information, "
+                   "at most 5 s without transmission, elevation failure"),
+    Reference("icao_annex10_par", "ICAO", 2018, "Annex 10 Volume I, 3.2 Precision approach radar system",
+              "ICAO", url="https://www.icao.int", note="read by agent 2026-11-06 (R2 S2): accuracy, coverage, update rate"),
+    Reference("uk_ra3291", "UK Military Aviation Authority", 2025, "RA 3291 Precision Approach Radar, Issue 4", "MAA",
+              url="https://assets.publishing.service.gov.uk/media/68db8f9ac487360cc70c9eea/RA3291_Issue_4.pdf",
+              note="read by agent 2026-11-06 (R2, R3): target lost above 3 s, no resume inside 4 NM, height and azimuth bands"),
+    Reference("tso_c151c_priority", "FAA", 2013, "Human Factors General Guidance, Section 4.3, Table 4.3.1 (TSO-C151c Table 4-2)",
+              "FAA", url="https://hfcc.dot.gov/publications/docs/GeneralGuidance/zz_FAA_GeneralGuidanceDoc_Chapter_04_Section_03.pdf",
+              note="read 2026-11-06: alert priority list, 23 lines plus TCAS"),
+    Reference("honeywell_egpws_guide", "Honeywell", 2000, "MK V and MK VII EGPWS Pilot Guide, 060-4241-000 Rev. D", "Honeywell",
+              url="https://lso.fe.uni-lj.si/literatura/Razno/Avionika/radar/EGPWS.pdf",
+              note="read by agent 2026-11-06 (R4), unofficial host: Mode 5 thresholds, repeat rule, inhibits"),
+    Reference("pkbwl_smolensk_2011", "Committee for Investigation of National Aviation Accidents", 2011,
+              "Final Report 192/2010/11, Tu-154M 101, Smolensk North, 10 April 2010", "Poland, English information copy",
+              url="https://doc.rmf.pl/rmf_fm/store/rkm_en.pdf",
+              note="read by agent 2026-11-06 (R5): pp. 214-216 track, p. 253 one third band, p. 257 limits, p. 267 trend time. "
+                   "Used for deviations and calls only"),
+    Reference("olive_landing_2019", "X. Olive, L. Basora", 2019,
+              "Reference data sets for detection and identification of significant events in historical aircraft trajectory data",
+              "figshare", doi="10.6084/m9.figshare.11406735.v1",
+              url="https://figshare.com/articles/dataset/11406735", note="MIT licence; 19,480 Zurich landings; used 2026-11-06"),
     # --- comms rules and VHF ------------------------------------------------------------------------------
     Reference("easa_sera_14083_2025", "EASA", 2025,
               "Easy Access Rules for Standardised European Rules of the Air (SERA), SERA.14083 Air-ground "

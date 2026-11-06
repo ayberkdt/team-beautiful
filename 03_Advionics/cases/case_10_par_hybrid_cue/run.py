@@ -23,7 +23,8 @@ from _common import Case, figure_set, md_table, save_figure  # noqa: E402
 from aerokit.approach import Runway  # noqa: E402
 from aerokit.atc.parradar import RadarConfig  # noqa: E402
 from aerokit.atc.cue_intensity import VOICE_TEXT  # noqa: E402
-from aerokit.atc.parcue import CueConfig, Fault, PilotModel, ReplayConfig, cue_changes, fly_replay  # noqa: E402
+from aerokit.atc.parcue import (MISSED_STATES, CueConfig, Fault, PilotModel, ReplayConfig, cue_changes,  # noqa: E402
+                                dh_frame, fly_replay)
 
 NM = 1852.0
 TEMPLATE = Path(__file__).resolve().parents[2] / "templates" / "par_cue.html"
@@ -47,12 +48,14 @@ def _slim(f: dict, course: float) -> dict:
 def _chapters(frames: list[dict]) -> list[dict]:
     """The story of a replay, read from the frames themselves."""
     out = [{"t": frames[0]["t"], "label": "Off path"}]
-    labels = {"DELAYED": "Radar delayed", "INVALID": "Data invalid", "LOST": "Radar lost", "OUTSIDE LIMITS": "Outside limits",
-              "MINIMUMS": "Minimums"}
+    labels = {"DELAYED": "Radar delayed", "INVALID": "Data invalid", "RADAR LOST": "Radar contact lost",
+              "RADAR SUSPECT": "Radar malfunction suspected", "OUTSIDE LIMITS": "Outside limits",
+              "ELEVATION FAILED": "Elevation failed", "LINK LOST": "Guidance link lost", "ADVISORY": "At decision height",
+              "OVER THRESHOLD": "Over threshold"}
     first = next((f for f in frames if f["hdg_new"] or f["rod_new"]), None)
     if first:
         out.append({"t": first["t"], "label": "Correcting"})
-    onp = next((f for f in frames if f["lat_word"] == "ON COURSE" and f["vert_word"] == "ON GLIDE PATH"), None)
+    onp = next((f for f in frames if f["lat_word"] == "ON COURSE" and f["vert_word"] == "ON GLIDEPATH"), None)
     if onp:
         out.append({"t": onp["t"], "label": "On path"})
     for a, b in zip(frames, frames[1:]):
@@ -64,12 +67,12 @@ def _chapters(frames: list[dict]) -> list[dict]:
 
 
 def _end_text(fr: list[dict]) -> str:
-    e = fr[-1]
+    e = dh_frame(fr)
+    if e is None:
+        return f"Missed approach flown. Height {fr[-1]['height_m'] * 3.28084:.0f} ft and climbing."
     side = "right" if e["y_m"] >= 0 else "left"
     vert = "above" if e["z_dev_m"] >= 0 else "below"
-    if e["state"] == "MINIMUMS":
-        return f"At minimums: {abs(e['y_m']):.0f} m {side} of the centreline, {abs(e['z_dev_m']):.0f} m {vert} the path."
-    return f"Go-around flown. Height {e['height_m'] * 3.28084:.0f} ft and climbing."
+    return f"At decision height: {abs(e['y_m']):.0f} m {side} of the centreline, {abs(e['z_dev_m']):.0f} m {vert} the path."
 
 
 def _monte_carlo(rwy, cfg, rc, n: int) -> list[dict]:
@@ -85,9 +88,9 @@ def _monte_carlo(rwy, cfg, rc, n: int) -> list[dict]:
         args = {"rc": rc, **kw}
         runs = [fly_replay(rwy, cfg, seed=s, **args) for s in range(n)]
         ends = Counter(r[-1]["state"] for r in runs)
-        gate = [r[-1] for r in runs if r[-1]["state"] == "MINIMUMS"]
-        rows.append({"case": name, "minimums": ends.get("MINIMUMS", 0), "limits": ends.get("OUTSIDE LIMITS", 0),
-                     "lost": ends.get("LOST", 0),
+        gate = [g for g in map(dh_frame, runs) if g is not None]
+        rows.append({"case": name, "minimums": len(gate), "limits": ends.get("OUTSIDE LIMITS", 0),
+                     "lost": sum(ends.get(k, 0) for k in MISSED_STATES if k != "OUTSIDE LIMITS"),
                      "lat95_m": round(float(np.percentile([abs(g["y_m"]) for g in gate], 95))) if gate else "-",
                      "vert95_m": round(float(np.percentile([abs(g["z_dev_m"]) for g in gate], 95))) if gate else "-",
                      "changes": float(np.median([cue_changes(r) for r in runs])),
@@ -103,13 +106,13 @@ def _fault_timing(rwy, cfg, rc, plan, p, n: int) -> tuple[list[dict], dict, int]
     runs_c = [fly_replay(rwy, cfg, rc, faults=c_faults, seed=s) for s in range(n)]
     for name, runs, state, t0 in (("Delay 4 s", runs_b, "DELAYED", p["delay_from_s"]),
                                   ("Jump 400 m", runs_b, "INVALID", p["jump_from_s"]),
-                                  ("Radar stop", runs_c, "LOST", p["dropout_from_s"])):
+                                  ("Radar stop", runs_c, "RADAR LOST", p["dropout_from_s"])):
         d = [next(f["t"] for f in r if f["state"] == state) - t0 for r in runs if any(f["state"] == state for f in r)]
         rows.append({"fault": name, "shown_in_runs": len(d), "of": n, "median_s": float(np.median(d)) if d else "-",
                      "worst_s": float(np.max(d)) if d else "-"})
     ends = Counter(r[-1]["state"] for r in runs_b)
     bad = sum(1 for r in runs_b + runs_c for f in r
-              if f["state"] in ("INVALID", "LOST") and (f["lat_dots"] is not None or f["hdg_rel_deg"] is not None))
+              if f["state"] in MISSED_STATES and (f["lat_dots"] is not None or f["hdg_rel_deg"] is not None))
     return rows, dict(ends), bad
 
 
@@ -138,10 +141,10 @@ def _envelope(rwy, cfg, base_rc, n: int) -> list[dict]:
     for off in (150.0, 300.0, 450.0):
         for wind in (0.0, 5.0, 10.0):
             rc = replace(base_rc, start_offset_m=off, crosswind_ms=wind)
-            ends = [fly_replay(rwy, cfg, rc, seed=s)[-1] for s in range(n)]
-            gate = [e for e in ends if e["state"] == "MINIMUMS"]
+            frames = [fly_replay(rwy, cfg, rc, seed=s) for s in range(n)]
+            gate = [g for g in map(dh_frame, frames) if g is not None]
             rows.append({"offset_m": int(off), "wind_ms": int(wind), "minimums": len(gate), "of": n,
-                         "lat95_m": round(float(np.percentile([abs(e["y_m"]) for e in gate], 95))) if gate else "-"})
+                         "lat95_m": round(float(np.percentile([abs(g["y_m"]) for g in gate], 95))) if gate else "-"})
     return rows
 
 
@@ -181,9 +184,15 @@ def main(argv: list[str] | None = None) -> dict:
     plan = [("A", "Return to path", ()),
             ("B", "Delayed and invalid data", (Fault("delay", p["delay_from_s"], p["delay_to_s"], p["delay_s"]),
                                                Fault("jump", p["jump_from_s"], p["jump_to_s"], p["jump_m"]))),
-            ("C", "Radar lost", (Fault("dropout", p["dropout_from_s"], 1e9),)),
-            ("D", "Elevation fault", (Fault("el_invalid", p["delay_from_s"], p["delay_from_s"] + 4.0),))]
+            ("C", "Radar contact lost", (Fault("dropout", p["dropout_from_s"], 1e9),)),
+            ("D", "Elevation failure", (Fault("el_invalid", p["dropout_from_s"], 1e9),)),
+            ("E", "Guidance link lost", (Fault("link", p["dropout_from_s"], 1e9),))]
     runs = {k: fly_replay(rwy, cfg, rc, faults=f, seed=seed) for k, _, f in plan}
+    # an aircraft alert during a cue call: the cue gives way, the display stays
+    alert_rc = replace(rc, start_offset_m=320.0, aircraft_alerts=((3.0, 14.0, "TERRAIN"), (60.0, 70.0, "GLIDESLOPE")),
+                       radio=((40.0, 46.0),))
+    runs["F"] = fly_replay(rwy, cfg, alert_rc, seed=seed)
+    plan.append(("F", "Aircraft alert sounding", ()))
     base = fly_replay(rwy, cfg, rc, pilot=PilotModel(follows_cue=False), seed=seed)
     mc = _monte_carlo(rwy, cfg, rc, int(p["mc_runs"]))
     n = int(p["mc_runs"])
@@ -192,16 +201,16 @@ def main(argv: list[str] | None = None) -> dict:
     envelope = _envelope(rwy, cfg, rc, n)
     b = mc[0]
     a_end = runs["A"][-1]
-    lost_t = next(f["t"] for f in runs["C"] if f["state"] == "LOST")
+    lost_t = next(f["t"] for f in runs["C"] if f["state"] == "RADAR LOST")
     delayed = [f for f in runs["B"] if f["state"] == "DELAYED"]
     invalid = [f for f in runs["B"] if f["state"] == "INVALID"]
     shown_bad = sum(1 for k in "BC" for f in runs[k]
-                    if f["state"] == "LOST" and (f["lat_dots"] is not None or f["hdg_rel_deg"] is not None))
+                    if f["state"] in MISSED_STATES and (f["lat_dots"] is not None or f["hdg_rel_deg"] is not None))
     key = [("closed loop", f"{b['minimums']} of {n} runs reach minimums; 95 % error there {b['lat95_m']} m lateral, "
                            f"{b['vert95_m']} m vertical; with no cue {mc[-1]['minimums']} of {n}"),
            ("cue load", f"median {b['changes']:.0f} target changes and {b['voice']:.0f} voice calls per approach"),
            ("bad data", f"delay shown in {len(delayed)} s, jump rejected for {len(invalid)} s, radar stop at "
-                        f"{p['dropout_from_s']:.0f} s gives LOST at {lost_t:.0f} s; {shown_bad} frames show guidance "
+                        f"{p['dropout_from_s']:.0f} s gives RADAR LOST at {lost_t:.0f} s; {shown_bad} frames show guidance "
                         "without valid data")]
     calls = [{"t": f["t"], "voice": VOICE_TEXT[f["voice"]], "level": f["level"], "dBA": f["voice_dba"]}
              for f in runs["A"] if f["voice"]]

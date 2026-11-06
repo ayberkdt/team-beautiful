@@ -4,6 +4,13 @@ The scene never computes guidance. It reads what ``aerokit.atc.parcue`` produced
 return the raw radar plots or the aircraft heading, so ``CueLogic`` is wrapped without changing that module: each plot and
 what the gate did with it is recorded, and heading and sink are read from the caller's locals at that moment.
 
+The ring on the display is the point on the ideal path T seconds ahead, with T the look-ahead of ``_update_targets``. Its
+position is the same pursuit law as the assigned heading and rate, before rounding and hysteresis, and without wind trim:
+the flight path marker shows the real track, so a wind needs no term. Marker in ring = velocity aimed at the path, and the
+error decays with time constant T. The replay pilot of this scene flies that marker into the ring (:class:`RingPilot`).
+The file keeps parcue's own assigned heading and rate (``hdg_assigned``, ``rod_fpm``); the page shows the ring's values, so
+the pilot has one target. Case 10 results do not use this pilot.
+
 Run from the project root:  python 03_Advionics/scripts/par_visual_export.py <preset folder> [--no-voice]
 """
 from __future__ import annotations
@@ -20,14 +27,24 @@ from aerokit.approach import Runway  # noqa: E402
 from aerokit.atc import parcue  # noqa: E402
 from aerokit.atc.cue_intensity import VOICE_TEXT  # noqa: E402
 from aerokit.atc.parcue import CueConfig, Fault, ReplayConfig, fly_replay  # noqa: E402
-from aerokit.atc.parflight import AIRCRAFT, KT  # noqa: E402
+from aerokit.atc.parflight import AIRCRAFT, KT, PilotModel  # noqa: E402
 
 CASE = ROOT / "03_Advionics" / "cases" / "case_10_par_hybrid_cue"
 RING_DEG = 1.25            # ring radius on the display
-TURBULENCE_KT = 6.0        # [Y] calm day for the demo replay; Monte Carlo in Case 10 keeps the default
-KEEP = ("t", "state", "lat_dots", "vert_dots", "hdg_rel_deg", "rod_fpm", "sink_fpm", "gs_ms", "hdg_new", "rod_new", "lat_word",
+TURBULENCE_KT = float(sys.argv[sys.argv.index("--turb") + 1]) if "--turb" in sys.argv else 6.0   # [Y] calm day; ReplayConfig default is 15
+DRIFT_TIME_S = 6.0         # [Y] the pilot reads drift from the marker, averaged over about this time
+KEEP = ("t", "state", "lat_dots", "vert_dots", "hdg_rel_deg", "hdg_assigned", "aim_trk_deg", "aim_gam_deg", "ring_rod_fpm", "rod_fpm", "sink_fpm", "gs_ms", "hdg_new", "rod_new", "lat_word",
         "vert_word", "lat_trend", "vert_trend", "age_s", "voice", "range_nm", "height_ft", "closing_fast", "note", "level",
         "visual", "blink", "intensity", "x_m", "y_m", "z_dev_m", "height_m")
+
+
+class RingPilot:
+    """PilotModel, except that the vertical gain follows the ring: ``fly_replay`` reads it each step, _Recording sets it."""
+
+    vertical_wc = 0.05
+
+    def __getattr__(self, name):
+        return getattr(PilotModel, name)
 
 
 class _Recording(parcue.CueLogic):
@@ -35,10 +52,12 @@ class _Recording(parcue.CueLogic):
 
     log: list[dict] = []
     state_log: dict = {}
+    pilot: RingPilot | None = None
+    drift_deg: float | None = None
 
-    def step(self, t, plot):
+    def step(self, t, plot, *args, **kwargs):
         before = dict(self._rej)
-        out = super().step(t, plot)
+        out = super().step(t, plot, *args, **kwargs)
         loc = sys._getframe(1).f_locals
         if "psi" in loc:
             _Recording.state_log[round(t, 1)] = (float(loc["psi"]), float(loc.get("sink", 0.0)))
@@ -46,37 +65,50 @@ class _Recording(parcue.CueLogic):
             rej = any(self._rej[k] > before.get(k, 0) for k in self._rej)
             _Recording.log.append({"t": round(t, 1), "tm": round(plot.t, 1), "r": round(plot.range_m, 1),
                                    "y": round(plot.az_dev_m, 1), "z": round(plot.el_dev_m, 1), "rej": bool(rej)})
+        self._ring(out, loc)
         return out
+
+    def _ring(self, out: dict, loc: dict) -> None:
+        """Add the ring and hand the pilot the heading that puts the marker in it. Only what the cue shows is used for the
+        ring (filtered y and z, range, ground speed). Drift comes from the marker, which the pilot can see."""
+        c = self.cfg
+        out["hdg_assigned"], out["aim_trk_deg"], out["aim_gam_deg"], out["ring_rod_fpm"] = out["hdg_rel_deg"], None, None, None
+        psi, tas, cross = loc.get("psi"), loc.get("tas"), loc.get("cross_f")
+        if psi is not None and tas:
+            now = math.degrees(math.atan2(cross, tas)) if cross is not None else -math.degrees(psi)
+            d = _Recording.drift_deg
+            _Recording.drift_deg = now if d is None else d + (now - d) / DRIFT_TIME_S
+        if out["state"] != "VALID":
+            return
+        y, z, r, gs = float(self.ky.x[0]), float(self.kz.x[0]), out["range_nm"] * parcue.NM, out["gs_ms"]
+        T = min(c.look_ahead_s, max(0.5 * r / gs, c.min_look_ahead_s))
+        cap = c.cap_near_deg if r < c.near_nm * parcue.NM else c.cap_far_deg
+        trk = max(-cap, min(cap, math.degrees(math.atan(-y / (gs * T)))))
+        sink = gs * math.tan(math.radians(self.rwy.glide_path_deg)) + max(-c.max_rod_corr_ms, min(c.max_rod_corr_ms, z / T))
+        out["aim_trk_deg"], out["aim_gam_deg"] = trk, -math.degrees(math.atan2(sink, gs))
+        # One target on the display: a second, rounded heading beside the ring would be mode confusion.
+        # hdg_assigned and rod_fpm stay in the file as parcue said them; hysteresis keeps them up to about 5 deg away.
+        out["hdg_rel_deg"] = trk - (_Recording.drift_deg or 0.0)
+        out["ring_rod_fpm"] = round(sink * parcue.FPM / 50.0) * 50.0
+        _Recording.pilot.vertical_wc = 1.0 / T
 
 
 def _clean(v):
     return round(v, 3) if isinstance(v, float) else v
 
 
-def aim_point(rows: list[dict], gs: float, ring_deg: float) -> None:
-    """Ring target for the display: the heading and descent the system assigned, smoothed over 3 s so the ring glides.
-
-    No new guidance. Holding the assigned heading and rate puts the flight path marker in the ring. Prints how often the
-    replay pilot is inside it, in valid frames."""
-    for i, r in enumerate(rows):
-        near = [q for q in rows[max(0, i - 1):i + 2] if q["hdg_rel_deg"] is not None and q["rod_fpm"] is not None]
-        ok = r["hdg_rel_deg"] is not None and bool(near)
-        r["aim_hdg_deg"] = round(sum(q["hdg_rel_deg"] for q in near) / len(near), 3) if ok else None
-        rod = sum(q["rod_fpm"] for q in near) / len(near) / parcue.FPM if ok else None
-        r["aim_gam_deg"] = round(-math.degrees(math.atan2(rod, gs)), 3) if ok else None
-    good = hit = 0
-    lat, ver = [], []
-    for i in range(2, len(rows) - 2):
-        a, b, r = rows[i - 2], rows[i + 2], rows[i]
-        if r["state"] != "VALID" or r["aim_hdg_deg"] is None:
+def ring_stats(rows: list[dict]) -> None:
+    """How often the marker sits in the ring, in valid frames. Track and flight path angle from the true positions, +-1 s."""
+    hit = good = 0
+    for i in range(1, len(rows) - 1):
+        a, b, r = rows[i - 1], rows[i + 1], rows[i]
+        if r["state"] != "VALID" or r["aim_trk_deg"] is None:
             continue
-        dx, dz = b["x_m"] - a["x_m"], b["height_m"] - a["height_m"]
-        e_l, e_v = r["aim_hdg_deg"] - math.degrees(r["psi"]), math.degrees(math.atan2(dz, abs(dx))) - r["aim_gam_deg"]
-        lat.append(abs(e_l))
-        ver.append(abs(e_v))
+        dx = abs(b["x_m"] - a["x_m"])
+        trk, gam = math.degrees(math.atan2(b["y_m"] - a["y_m"], dx)), math.degrees(math.atan2(b["height_m"] - a["height_m"], dx))
         good += 1
-        hit += math.hypot(e_l, e_v) <= ring_deg
-    print(f"   marker in ring: {hit}/{good} valid frames, median error lat {sorted(lat)[len(lat) // 2]:.2f} deg, vert {sorted(ver)[len(ver) // 2]:.2f} deg")
+        hit += math.hypot(trk - r["aim_trk_deg"], gam - r["aim_gam_deg"]) <= RING_DEG
+    print(f"   marker in ring: {hit}/{good} valid frames")
 
 
 def main(folder: str, voice: bool) -> None:
@@ -93,8 +125,9 @@ def main(folder: str, voice: bool) -> None:
     parcue.CueLogic = _Recording
     scenarios, used = [], set()
     for key, title, faults in plan:
-        _Recording.log, _Recording.state_log = [], {}
-        frames = fly_replay(rwy, cfg, rc, faults=faults, seed=int(p["seed"]))
+        _Recording.log, _Recording.state_log, _Recording.drift_deg = [], {}, None
+        _Recording.pilot = RingPilot()
+        frames = fly_replay(rwy, cfg, rc, pilot=_Recording.pilot, faults=faults, seed=int(p["seed"]))
         rows = []
         for f in frames:
             psi, sink = _Recording.state_log.get(round(f["t"], 1), (None, None))
@@ -105,7 +138,7 @@ def main(folder: str, voice: bool) -> None:
             rows.append(row)
             if f.get("voice"):
                 used.add(f["voice"])
-        aim_point(rows, rc.aircraft.vat_kt * KT, RING_DEG)
+        ring_stats(rows)
         states = []
         for r in rows:
             if not states or states[-1][1] != r["state"]:
@@ -117,6 +150,7 @@ def main(folder: str, voice: bool) -> None:
     data = {"schema": "par_visual/2", "source": "aerokit.atc.parcue via 03_Advionics/scripts/par_visual_export.py",
             "runway": {"course_deg": rwy.course_deg, "length_m": rwy.length, "glide_deg": rwy.glide_path_deg,
                        "tch_m": rwy.tch, "gpip_m": rwy.gpip},
+            "ring_deg": RING_DEG, "turbulence_kt": TURBULENCE_KT,
             "cfg": {"lat_full_deg": cfg.lat_full_scale_deg, "vert_full_deg": cfg.vert_full_scale_deg,
                     "on_fraction": cfg.on_fraction, "limit_lat_deg": cfg.limit_lat_deg, "limit_vert_deg": cfg.limit_vert_deg,
                     "dh_ft": cfg.dh_ft, "sector_deg": cfg.sector_deg, "max_range_m": cfg.max_range_m},

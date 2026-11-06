@@ -1,3 +1,5 @@
+> **Correction 6 Nov 2026:** distance accuracy is 30 m **plus** 3 %, not "or"; azimuth and elevation floors are "whichever is greater" and use the distance from the antenna (Annex 10 3.2.3.3, see R2 section 1.3).
+
 # R_par_enri_soumu — ENRI (Japan) presentation "Overview of Precision Approach Radar PAR" (精測進入レーダPARの概要)
 
 ## Citation
