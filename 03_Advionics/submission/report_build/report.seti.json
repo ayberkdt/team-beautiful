@@ -1,0 +1,112 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "genel",
+ "hedef": "genel-tek",
+ "ortam": "makale",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {
+  "No cue": {
+   "renk": "#919191",
+   "baglam": true,
+   "isaret": null,
+   "cizgi": "-",
+   "sira": 0
+  },
+  "Zurich": {
+   "renk": "#000000",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 1
+  },
+  "Sim, ring": {
+   "renk": "#1f3a93",
+   "baglam": false,
+   "isaret": "s",
+   "cizgi": "-",
+   "sira": 2
+  },
+  "Sim, heading": {
+   "renk": "#d55e00",
+   "baglam": false,
+   "isaret": "^",
+   "cizgi": "--",
+   "sira": 3
+  },
+  "ILS, St Louis": {
+   "renk": "#919191",
+   "baglam": true,
+   "isaret": null,
+   "cizgi": "-",
+   "sira": 4
+  }
+ },
+ "nicelikler": {
+  "nm": {
+   "etiket": "Distance to touchdown",
+   "birim": "NM",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "km": {
+   "etiket": "Distance to threshold",
+   "birim": "km",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "lat": {
+   "etiket": "Lateral deviation",
+   "birim": "m",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "vert": {
+   "etiket": "Vertical deviation",
+   "birim": "m",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "lat_sd": {
+   "etiket": "Lateral scatter, SD",
+   "birim": "m",
+   "eksen": "y",
+   "sinir": [
+    0,
+    20
+   ],
+   "olcek": null,
+   "bicim": null
+  },
+  "vert_sd": {
+   "etiket": "Vertical scatter, SD",
+   "birim": "m",
+   "eksen": "y",
+   "sinir": [
+    0,
+    20
+   ],
+   "olcek": null,
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "F2_return_to_path": "../latex/figures/F2_return_to_path.dw.json",
+  "F3_real_data": "../latex/figures/F3_real_data.dw.json",
+  "F4_display": "../latex/figures/F4_display.dw.json"
+ }
+}

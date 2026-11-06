@@ -1,0 +1,9 @@
+figür denetimi: 0 HATA · 0 UYARI · 4 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] belirsizlik-tanimi eksen 0: hata çubuğu/bant var
+          → altyazıda ne gösterdiğini yaz: SD mi, SE mi, %95 GA mı; n kaç  [Belia2005; Cumming2007 kural 1–3; NatureFormatting]
+  [BİLGİ] banking-45         eksen 0: çizim alanı y/g = 0.34; 45° için ≈ 1.74
+          → eğim karşılaştırması amaçsa oranı yaklaştır (ax.set_box_aspect)  [ClevelandMcGillMcGill1988 (VS); Kosara2013b; TalbotGerthHanrahan2011 — başlangıç sezgisi]
+  [BİLGİ] belirsizlik-tanimi eksen 1: hata çubuğu/bant var
+          → altyazıda ne gösterdiğini yaz: SD mi, SE mi, %95 GA mı; n kaç  [Belia2005; Cumming2007 kural 1–3; NatureFormatting]
+  [BİLGİ] banking-45         eksen 1: çizim alanı y/g = 0.34; 45° için ≈ 0.87
+          → eğim karşılaştırması amaçsa oranı yaklaştır (ax.set_box_aspect)  [ClevelandMcGillMcGill1988 (VS); Kosara2013b; TalbotGerthHanrahan2011 — başlangıç sezgisi]

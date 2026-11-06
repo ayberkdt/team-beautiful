@@ -98,6 +98,12 @@ Zurich, 1000 real landings on RWY 14, open loop:
 - 22 labelled go-arounds could be cut out of the data. The cue spoke before the climb in 11, median 15 s. Others may be for
   traffic or weather, with no deviation.
 
+Zurich, 2000 further tracks, not used for any tuning:
+
+- 1959 stay fully quiet. 13 reach "slightly", 4 "well", 24 a missed approach state.
+- 98.0 % have no guidance voice. The closure flag fires on 10 tracks (0.5 %).
+- We did not check whether the missed approach states were real excursions.
+
 Smolensk, 200 noisy runs:
 
 - Limit call in 200 of 200, median 88.5 s before the first strike. The real first correction came 5.5 s before.

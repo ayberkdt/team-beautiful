@@ -1,0 +1,11 @@
+{
+ "tracks": 2000,
+ "peak_level": {
+  "L0": 1959,
+  "L2": 13,
+  "L3": 4,
+  "L4": 24
+ },
+ "closure_flag_tracks": 10,
+ "silent_share_pct": 98.0
+}

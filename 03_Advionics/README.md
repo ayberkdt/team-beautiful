@@ -4,8 +4,8 @@
 to the pilot. Weights: clarity 30 %, technical logic 25 %, demonstration 25 %, safety awareness 20 %.
 
 **Our answer: HYBRID.** Needles, FAA position words and a heading target on a display, updated with every radar plot. Voice
-only when it matters, and below every aircraft alert. Faults follow FAA JO 7110.65. Checked on 1000 real landings and one real
-radar talk-down. Educational concept on simulated and recorded data. Not approved or ready for flight use.
+only when it matters, and below every aircraft alert. Faults follow FAA JO 7110.65. Replayed open loop on 1000 recorded tracks and one
+real radar talk-down; no pilot has flown it. Educational concept on simulated and recorded data. Not approved or ready for flight use.
 
 **Open the demo:** `cases/case_10_par_hybrid_cue/outputs/par_cue_demo.html` (offline, voices inside).
 

@@ -122,6 +122,6 @@ def test_report_round_trip(res, nxt, notes):
     assert d["result"] == res and d["next_step"] == nxt and d["tables"][0]["rows"] == [["1", "2"]]
     text = rep.render("text")
     if res:
-        assert text.splitlines()[-1] == f"Next step: {nxt}".rstrip() or text.endswith(f"Next step: {nxt}")
+        assert text.splitlines()[-1].rstrip() == f"Next step: {nxt}".rstrip() or text.endswith(f"Next step: {nxt}")
     with pytest.raises(ValueError):
         rep.render("xml")

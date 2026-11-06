@@ -1,0 +1,470 @@
+{
+ "surum": 1,
+ "ad": "F3_real_data",
+ "boyut_pt": [
+  510.2,
+  133.2
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  494.0,
+  127.8
+ ],
+ "hedef": "genel-cift",
+ "ortam": "makale",
+ "boyut_mm": [
+  180.0,
+  47.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   8.1
+  ],
+  "eksen_adi": [
+   9.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [
+   10.0
+  ],
+  "metin": [
+   8.1,
+   9.0
+  ]
+ },
+ "punto_tepe": {
+  "tik": 8.1,
+  "eksen_adi": 9.0,
+  "panel": 10.0,
+  "metin": 9.0
+ },
+ "panel_harfleri": [
+  {
+   "harf": "a",
+   "bicim": "({})",
+   "buyuk": false,
+   "kalin": false,
+   "italik": false,
+   "punto": 10.0,
+   "ic": false
+  },
+  {
+   "harf": "b",
+   "bicim": "({})",
+   "buyuk": false,
+   "kalin": false,
+   "italik": false,
+   "punto": 10.0,
+   "ic": false
+  },
+  {
+   "harf": "c",
+   "bicim": "({})",
+   "buyuk": false,
+   "kalin": false,
+   "italik": false,
+   "punto": 10.0,
+   "ic": false
+  }
+ ],
+ "eksenler": [
+  {
+   "konum_pt": [
+    30.0,
+    32.0,
+    164.1,
+    113.7
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Sim, heading",
+     "tur": "cizgi",
+     "renk": "#d55e00",
+     "isaret": "Path(array([[ 1.55884573e-01,  7.30000000e-01],\n       [ 1.75185684e-16,  1.00000000e+00],\n       [-1.55884573e-01,  7.30000000e-01],\n       [-7.10140831e-01, -2.30000000e-01],\n       [-8.66025404e-01, -5.00000000e-01],\n       [-5.54256258e-01, -5.00000000e-01],\n       [ 5.54256258e-01, -5.00000000e-01],\n       [ 8.66025404e-01, -5.00000000e-01],\n       [ 7.10140831e-01, -2.30000000e-01],\n       [ 1.55884573e-01,  7.30000000e-01]]), array([ 1,  3,  3,  2,  3,  3,  2,  3,  3, 79], dtype=uint8))",
+     "cizgi": "--",
+     "kalinlik": 1.2,
+     "isaret_boyu": 6.38
+    },
+    {
+     "etiket": "Sim, ring",
+     "tur": "cizgi",
+     "renk": "#1f3a93",
+     "isaret": "Path(array([[-1.  , -0.68],\n       [-1.  , -1.  ],\n       [-0.68, -1.  ],\n       [ 0.68, -1.  ],\n       [ 1.  , -1.  ],\n       [ 1.  , -0.68],\n       [ 1.  ,  0.68],\n       [ 1.  ,  1.  ],\n       [ 0.68,  1.  ],\n       [-0.68,  1.  ],\n       [-1.  ,  1.  ],\n       [-1.  ,  0.68],\n       [-1.  , -0.68]]), array([ 1,  3,  3,  2,  3,  3,  2,  3,  3,  2,  3,  3, 79], dtype=uint8))",
+     "cizgi": "-",
+     "kalinlik": 1.2,
+     "isaret_boyu": 3.59
+    },
+    {
+     "etiket": "Zurich",
+     "tur": "cizgi",
+     "renk": "#000000",
+     "isaret": "o",
+     "cizgi": "-",
+     "kalinlik": 1.2,
+     "isaret_boyu": 4.0
+    },
+    {
+     "etiket": "ILS, St Louis",
+     "tur": "cizgi",
+     "renk": "#919191",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 1.2,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Distance to touchdown (NM)",
+    "nicelik": "Distance to touchdown",
+    "birim": "NM",
+    "bicim": "parantez",
+    "anahtar": "distancetotouchdown",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": true,
+    "sinir": [
+     5.2,
+     0.7
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "5",
+     "4",
+     "3",
+     "2",
+     "1"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     43.6,
+     3.0,
+     150.6,
+     11.2
+    ]
+   },
+   "y": {
+    "ham": "Lateral scatter, SD (m)",
+    "nicelik": "Lateral scatter, SD",
+    "birim": "m",
+    "bicim": "parantez",
+    "anahtar": "lateralscatter,sd",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     20.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "5",
+     "10",
+     "15",
+     "20"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     3.0,
+     31.1,
+     11.2,
+     114.6
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [
+    "ILS, St Louis",
+    "Sim, heading",
+    "Sim, ring",
+    "Zurich"
+   ],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  },
+  {
+   "konum_pt": [
+    197.9,
+    32.0,
+    332.0,
+    113.7
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Sim, heading",
+     "tur": "cizgi",
+     "renk": "#d55e00",
+     "isaret": "Path(array([[ 1.55884573e-01,  7.30000000e-01],\n       [ 1.75185684e-16,  1.00000000e+00],\n       [-1.55884573e-01,  7.30000000e-01],\n       [-7.10140831e-01, -2.30000000e-01],\n       [-8.66025404e-01, -5.00000000e-01],\n       [-5.54256258e-01, -5.00000000e-01],\n       [ 5.54256258e-01, -5.00000000e-01],\n       [ 8.66025404e-01, -5.00000000e-01],\n       [ 7.10140831e-01, -2.30000000e-01],\n       [ 1.55884573e-01,  7.30000000e-01]]), array([ 1,  3,  3,  2,  3,  3,  2,  3,  3, 79], dtype=uint8))",
+     "cizgi": "--",
+     "kalinlik": 1.2,
+     "isaret_boyu": 6.38
+    },
+    {
+     "etiket": "Sim, ring",
+     "tur": "cizgi",
+     "renk": "#1f3a93",
+     "isaret": "Path(array([[-1.  , -0.68],\n       [-1.  , -1.  ],\n       [-0.68, -1.  ],\n       [ 0.68, -1.  ],\n       [ 1.  , -1.  ],\n       [ 1.  , -0.68],\n       [ 1.  ,  0.68],\n       [ 1.  ,  1.  ],\n       [ 0.68,  1.  ],\n       [-0.68,  1.  ],\n       [-1.  ,  1.  ],\n       [-1.  ,  0.68],\n       [-1.  , -0.68]]), array([ 1,  3,  3,  2,  3,  3,  2,  3,  3,  2,  3,  3, 79], dtype=uint8))",
+     "cizgi": "-",
+     "kalinlik": 1.2,
+     "isaret_boyu": 3.59
+    },
+    {
+     "etiket": "Zurich",
+     "tur": "cizgi",
+     "renk": "#000000",
+     "isaret": "o",
+     "cizgi": "-",
+     "kalinlik": 1.2,
+     "isaret_boyu": 4.0
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Distance to touchdown (NM)",
+    "nicelik": "Distance to touchdown",
+    "birim": "NM",
+    "bicim": "parantez",
+    "anahtar": "distancetotouchdown",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": true,
+    "sinir": [
+     5.2,
+     0.7
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "5",
+     "4",
+     "3",
+     "2",
+     "1"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     211.5,
+     3.0,
+     318.5,
+     11.2
+    ]
+   },
+   "y": {
+    "ham": "Vertical scatter, SD (m)",
+    "nicelik": "Vertical scatter, SD",
+    "birim": "m",
+    "bicim": "parantez",
+    "anahtar": "verticalscatter,sd",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     20.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "5",
+     "10",
+     "15",
+     "20"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     170.9,
+     30.1,
+     179.1,
+     115.7
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  },
+  {
+   "konum_pt": [
+    373.1,
+    32.0,
+    507.2,
+    113.7
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Zurich",
+     "tur": "cizgi",
+     "renk": "#000000",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 1.2,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "Cue: limit call",
+     "tur": "cizgi",
+     "renk": "#0072b2",
+     "isaret": "o",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 4.5
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Distance to threshold (km)",
+    "nicelik": "Distance to threshold",
+    "birim": "km",
+    "bicim": "parantez",
+    "anahtar": "distancetothreshold",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": true,
+    "sinir": [
+     10.4,
+     0.9
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "2",
+     "4",
+     "6",
+     "8",
+     "10"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     390.2,
+     3.0,
+     490.1,
+     11.2
+    ]
+   },
+   "y": {
+    "ham": "Vertical deviation (m)",
+    "nicelik": "Vertical deviation",
+    "birim": "m",
+    "bicim": "parantez",
+    "anahtar": "verticaldeviation",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -110.0,
+     175.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "-100",
+     "0",
+     "100"
+    ],
+    "eksi": "unicode",
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     338.0,
+     32.6,
+     346.2,
+     113.1
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [
+    "Cue: limit call"
+   ],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}
