@@ -33,14 +33,14 @@ Gust model re-run at 44.63 kg and 8.9 m/s (doc 25 §4.7 is at 43.66 kg and 8.8 m
 
 ## Numbers that move against doc 25 when the mass is 44.63 kg
 
-Doc 25 quotes these for 43.66 kg, or from the simulator at 43.66 kg. Doc 25 is not edited; update it on promotion.
+Doc 25 quotes these for 43.66 kg, or from the simulator at 43.66 kg. Doc 25 numbers are not edited (it only gained a two-line pointer to this folder); update them on promotion.
 
 | Quantity | Doc 25 | This variant |
 |---|---|---|
 | Pull-out loss (1-D model) | 26 m | 26.9 m |
 | Descent rate at release | 12.8 m/s | 13.0 m/s |
 | Time on the parachute | 716 s | 707 s |
-| Pull-out loss p99, Monte Carlo | 41 m | 35.7 m (maximum 41.6 m) |
+| Pull-out loss, Monte Carlo, n = 300 | p50 27.0 m, p99 40.9 m, maximum 41.4 m | p50 26.8 m, p99 35.7 m, maximum 41.6 m. p99 rests on the top 3 runs: read this as no change, not as an improvement |
 | Gust altitude RMS / peak | 5.9 m / 27 m | 5.8 m / 26.9 m |
 | Gust thrust peak, margin | 33 % W, 1.8× | 32.8 % W, 1.83× |
 | Fall to the surface, windmilling | ~12 h | 12.6 h, from 50.4 km |
@@ -173,7 +173,7 @@ Target: `sunum-tam`. Each brief gives the message; form and data are the baselin
 | `operations.events` | 7 rows | 11 rows | K | venus_budget_update.fly, nominal, 6 Nov profile |
 | `operations.series_hourly` | 50 rows | 44 rows | K | venus_budget_update.fly, nominal, 6 Nov profile |
 | `generated_by` | python scripts/venus_design.py | python 04_Venus/scripts/venus_variant_v07.py | - | file stamp |
-| `generated_at` | 2026-11-04T23:09+03:00 | 2026-11-06T13:21+03:00 | - | file stamp |
+| `generated_at` | 2026-11-04T23:09+03:00 | 2026-11-06T13:30+03:00 | - | file stamp |
 
 **Event kinds.** The visual's enum has no `other` (`tests/test_venus_system.py`), so `cruise altitude reached` is kind `release` and `array no longer carries loiter` is kind `sunset`.
 
@@ -201,7 +201,7 @@ Target: `sunum-tam`. Each brief gives the message; form and data are the baselin
 | `limits[dive abort battery temperature]` | null | 52 | degC | K/Y | doc 25 §0: 50 -> 52 degC, the 5 min hold at 52 km at 1.5 m/s needs it; venus_budget_upd… |
 | `limits[release sun height, minimum cos z]` | null | 0.68 | - | K/Y | doc 25 §0: 52.7 A at cos z 0.68 against the 2C limit; simulator at 43.66 kg, not rerun … |
 | `limits[release rotor speed, maximum]` | null | 668 | rpm | K | doc 25 §5.2: 1.30 x hover rpm, back-EMF cap [v0.7: new row] |
-| `limits[descent to cruise]` | null | {"down_m_s": 1.5, "forward_m_s": 3.5} | m/s | K/Y | doc 25 §5.2: outside the vortex-ring band; venus_budget_update.Profile [v0.7: new row] |
+| `limits[descent to cruise]` | null | [1.5, 3.5] | m/s (down, forward) | K/Y | doc 25 §5.2: outside the vortex-ring band; venus_budget_update.Profile [v0.7: new row] |
 | `limits[battery discharge current 2C]` | null | 53.6 | A | K/Y | 14S8P pack (venus_budget_update.pack at 1109 Wh); 2C is an aerokit input, not a measure… |
 | `failure_modes[downdraft].effect` | +1.4 kW to hold altitude | +1.5 kW to hold altitude | - | K | recomputed for the variant (python 04_Venus/scripts/venus_variant_v07.py) |
 | `failure_modes[downdraft].recovery` | ride it within 51-58 km, climb back (0.4 kWh) | ride it within 52-58 km, climb back (0.4 kWh) | - | K | recomputed for the variant (python 04_Venus/scripts/venus_variant_v07.py) |

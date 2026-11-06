@@ -2,7 +2,7 @@
  "schema": "vesper_sim_params/1",
  "version": "0.7",
  "generated_by": "python 04_Venus/scripts/venus_variant_v07.py",
- "generated_at": "2026-11-06T13:21+03:00",
+ "generated_at": "2026-11-06T13:30+03:00",
  "units": "SI unless stated; temperatures K in tables, degC in limits",
  "frame": "body: x forward (between arms 1 and 6), y left, z up; world: x east, z up; wind blows westward (negative x) at the tabulated speed",
  "atmosphere_and_wind": {
@@ -2113,11 +2113,11 @@
   },
   {
    "name": "descent to cruise",
-   "value": {
-    "down_m_s": 1.5,
-    "forward_m_s": 3.5
-   },
-   "unit": "m/s",
+   "value": [
+    1.5,
+    3.5
+   ],
+   "unit": "m/s (down, forward)",
    "tag": "K/Y",
    "source": "doc 25 §5.2: outside the vortex-ring band; venus_budget_update.Profile [v0.7: new row]"
   },

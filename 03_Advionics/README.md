@@ -18,6 +18,7 @@ radar talk-down. Educational concept on simulated and recorded data. Not approve
 | `templates/par_cue.html` | demo page source; the runner fills it |
 | `research/` | `R2` PAR, `R3` controller and pilot workload catalogue, `R4` cue intensity, `R5` real data and models, `R6` FAA rules; sponsor sources |
 | `submission/latex/` | report starter |
+| `complex/` | the fuller version, kept to one side: formula, extra rules, their tests and results |
 
 Code in `src/aerokit/atc/`: `parcue.py` (logic), `parradar.py` (radar), `parflight.py` (flight), `cue_intensity.py` (alert
 level), `voice_arbiter.py` (voice priority). Tests: `tests/test_atc_parcue.py`, `test_atc_cue_intensity.py`,

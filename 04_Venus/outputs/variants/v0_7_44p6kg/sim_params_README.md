@@ -42,7 +42,7 @@ Each changed scalar carries its old value in `source` as `[v0.7: was …]`. The 
 | `limits[dive abort battery temperature]` | null | 52 | degC | K/Y | doc 25 §0: 50 -> 52 degC, the 5 min hold at 52 km at 1.5 m/s needs it; venus_budget_upd… |
 | `limits[release sun height, minimum cos z]` | null | 0.68 | - | K/Y | doc 25 §0: 52.7 A at cos z 0.68 against the 2C limit; simulator at 43.66 kg, not rerun … |
 | `limits[release rotor speed, maximum]` | null | 668 | rpm | K | doc 25 §5.2: 1.30 x hover rpm, back-EMF cap [v0.7: new row] |
-| `limits[descent to cruise]` | null | {"down_m_s": 1.5, "forward_m_s": 3.5} | m/s | K/Y | doc 25 §5.2: outside the vortex-ring band; venus_budget_update.Profile [v0.7: new row] |
+| `limits[descent to cruise]` | null | [1.5, 3.5] | m/s (down, forward) | K/Y | doc 25 §5.2: outside the vortex-ring band; venus_budget_update.Profile [v0.7: new row] |
 | `limits[battery discharge current 2C]` | null | 53.6 | A | K/Y | 14S8P pack (venus_budget_update.pack at 1109 Wh); 2C is an aerokit input, not a measure… |
 | `failure_modes[downdraft].effect` | +1.4 kW to hold altitude | +1.5 kW to hold altitude | - | K | recomputed for the variant (python 04_Venus/scripts/venus_variant_v07.py) |
 | `failure_modes[downdraft].recovery` | ride it within 51-58 km, climb back (0.4 kWh) | ride it within 52-58 km, climb back (0.4 kWh) | - | K | recomputed for the variant (python 04_Venus/scripts/venus_variant_v07.py) |

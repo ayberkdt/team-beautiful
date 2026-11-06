@@ -239,25 +239,6 @@ def test_link_loss_is_lost_comm_not_a_missed_approach():
     assert "lost communications" in VOICE_TEXT["link_lost"]
 
 
-def test_pilot_proceeding_visually_ends_guidance():
-    lg = CueLogic(RWY)
-    _feed(lg, _plots(6))
-    fr = lg.step(6.0, RadarPlot(6.0, 8598.0, 0.0, 0.0), pilot_visual=True)
-    assert fr["state"] == "VISUAL" and fr["voice"] is None
-
-
-def test_tower_break_is_unconditional():
-    lg = CueLogic(RWY)
-    _feed(lg, _plots(6))
-    fr = lg.step(6.0, RadarPlot(6.0, 8598.0, 0.0, 0.0), tower_break="traffic on runway")
-    assert fr["state"] == "NO CLEARANCE" and fr["voice"] == "no_clearance" and "If" not in VOICE_TEXT["no_clearance"]
-
-
-def test_missed_approach_procedure_is_shown():
-    fr = fly_replay(RWY, cfg=CueConfig(missed_approach="CLIMB 3000 RUNWAY HEADING"), faults=(Fault("dropout", 70, 1e9),), seed=1)
-    assert any(f["note"] == "CLIMB 3000 RUNWAY HEADING" for f in fr)
-
-
 def test_no_guidance_is_extrapolated():
     for f in fly_replay(RWY, faults=(Fault("dropout", 60, 90),), seed=10):
         if f["state"] in MISSED_STATES:
@@ -292,14 +273,6 @@ def test_decision_height_comes_from_the_pilot():
     a = dh_frame(fly_replay(RWY, cfg=CueConfig(dh_ft=300.0), seed=1))
     b = dh_frame(fly_replay(RWY, cfg=CueConfig(dh_ft=200.0), seed=1))
     assert a["x_m"] > b["x_m"]
-
-
-def test_clearance_gate_and_gear_prompt():
-    fr = fly_replay(RWY, clearance=False, seed=1)
-    stop = next(f for f in fr if f["state"] == "NO CLEARANCE")
-    assert stop["x_m"] <= 2.2 * NM and stop["voice"] == "no_clearance" and stop["missed_approach"]
-    ok = fly_replay(RWY, seed=1)
-    assert any(f["note"] == "CHECK GEAR" for f in ok) and not any(f["state"] == "NO CLEARANCE" for f in ok)
 
 
 def test_end_states_are_terminal():

@@ -21,7 +21,10 @@ from aerokit.verification import check, check_true, expect_error
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "04_Venus" / "scripts" / "venus_budget_update.py"
 RESULT = ROOT / "04_Venus" / "outputs" / "variants" / "budget_update" / "result.json"
-BASELINE_RESULT = ROOT / "04_Venus" / "outputs" / "result.json"
+PROMOTION = ROOT / "04_Venus" / "outputs" / "variants" / "v0_7_44p6kg" / "PROMOTED.json"
+# The v0.6 regression anchor: promotion replaces outputs/result.json, its old copy stays in the anchor directory.
+BASELINE_RESULT = (Path(json.loads(PROMOTION.read_text(encoding="utf-8"))["anchor_dir"]) if PROMOTION.is_file()
+                   else ROOT / "04_Venus" / "outputs") / "result.json"
 
 
 def _load():

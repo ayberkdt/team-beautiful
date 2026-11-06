@@ -3,8 +3,8 @@
   "with_limits": {
    "timeline": [
     {
-     "before_strike_s": 93.5,
-     "range_km": 8.82,
+     "before_strike_s": 94.5,
+     "range_km": 8.9,
      "state": "VALID",
      "vert": "WELL ABOVE GLIDEPATH",
      "trend": "GOING ABOVE",
@@ -147,8 +147,8 @@
   "limits_off": {
    "timeline": [
     {
-     "before_strike_s": 93.5,
-     "range_km": 8.82,
+     "before_strike_s": 94.5,
+     "range_km": 8.9,
      "state": "VALID",
      "vert": "WELL ABOVE GLIDEPATH",
      "trend": "GOING ABOVE",
@@ -157,8 +157,8 @@
      "fast": false
     },
     {
-     "before_strike_s": 86.5,
-     "range_km": 8.22,
+     "before_strike_s": 89.5,
+     "range_km": 8.47,
      "state": "VALID",
      "vert": "WELL ABOVE GLIDEPATH",
      "trend": "GOING ABOVE",
@@ -167,8 +167,18 @@
      "fast": false
     },
     {
-     "before_strike_s": 73.5,
-     "range_km": 7.11,
+     "before_strike_s": 84.5,
+     "range_km": 8.05,
+     "state": "VALID",
+     "vert": "WELL ABOVE GLIDEPATH",
+     "trend": "GOING ABOVE",
+     "level": 3,
+     "voice": "well_above",
+     "fast": false
+    },
+    {
+     "before_strike_s": 65.5,
+     "range_km": 6.44,
      "state": "VALID",
      "vert": "WELL ABOVE GLIDEPATH",
      "trend": "HOLDING",
@@ -282,7 +292,7 @@
    "limit_called_before_strike_s_median": 88.5,
    "limit_called_runs": 200,
    "coming_down_before_strike_s_median": 16.5,
-   "coming_down_runs": 170
+   "coming_down_runs": 167
   },
   "real_first_radar_correction_before_strike_s": 5.5
  },
@@ -337,17 +347,17 @@
  "sim_scatter": [
   {
    "nm": 3,
-   "lat_sd_m": 25.5,
+   "lat_sd_m": 22.3,
    "vert_sd_m": 13.1
   },
   {
    "nm": 2,
-   "lat_sd_m": 22.1,
+   "lat_sd_m": 17.2,
    "vert_sd_m": 10.8
   },
   {
    "nm": 1,
-   "lat_sd_m": 21.5,
+   "lat_sd_m": 20.8,
    "vert_sd_m": 7.9
   }
  ],
@@ -359,15 +369,14 @@
    "OUTSIDE LIMITS": 6
   },
   "peak_level": {
-   "L0": 907,
-   "L1": 67,
-   "L2": 12,
-   "L3": 8,
+   "L0": 985,
+   "L2": 5,
+   "L3": 4,
    "L4": 6
   },
   "voice_median": 0.0,
   "voice_p95": 0.0,
-  "silent_share_pct": 97.8,
+  "silent_share_pct": 98.5,
   "invalid_or_delayed_approaches": 1
  },
  "zurich_replay_detection_90": {
@@ -379,22 +388,21 @@
    "RADAR LOST": 8
   },
   "peak_level": {
-   "L0": 892,
-   "L1": 71,
-   "L2": 15,
-   "L3": 7,
+   "L0": 976,
+   "L2": 3,
+   "L3": 6,
    "L4": 15
   },
   "voice_median": 0.0,
   "voice_p95": 0.0,
-  "silent_share_pct": 96.7,
+  "silent_share_pct": 97.6,
   "invalid_or_delayed_approaches": 2
  },
  "go_around_labels": {
   "lszh_go_arounds_oct_nov_2019": 81,
   "on_rwy_14": 66,
   "segments_found": 22,
-  "cue_spoke_before_climb": 10,
-  "median_lead_s": 20.0
+  "cue_spoke_before_climb": 11,
+  "median_lead_s": 15.0
  }
 }

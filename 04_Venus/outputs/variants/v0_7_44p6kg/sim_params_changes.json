@@ -186,11 +186,11 @@
  {
   "path": "limits[descent to cruise]",
   "old": null,
-  "new": {
-   "down_m_s": 1.5,
-   "forward_m_s": 3.5
-  },
-  "unit": "m/s",
+  "new": [
+   1.5,
+   3.5
+  ],
+  "unit": "m/s (down, forward)",
   "tag": "K/Y",
   "source": "doc 25 §5.2: outside the vortex-ring band; venus_budget_update.Profile [v0.7: new row]"
  },

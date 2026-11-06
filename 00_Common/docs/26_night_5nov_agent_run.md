@@ -110,3 +110,14 @@ Results log: appended below when each agent finishes.
   1 % / 0 % sim runs were scenario starts outside mission rules, not mission results. Main session: read result.md and
   doc 25 head, reran `test_venus_budget_update.py` → 23 passed. design.json, sim_params.json, F1–F15 remain 43.66 kg.
   All 8 sim frames re-rendered with the latest sim code (`D:\tmp_ideathon\visual\sim\final\`).
+
+## 6 Nov 13:55: 44.63 kg variant checked (not promoted)
+
+- Variant in `04_Venus/outputs/variants/v0_7_44p6kg/`; start with `CHANGES.md`. Promotion not run: `outputs/design.json` still reads v0.6, no `PROMOTED.json`.
+- Baseline unchanged: 75 files in `baseline_hashes_before.json` re-hashed by me, 0 differences.
+- Tests rerun by me: `test_venus_variant_v07.py` + `test_venus_budget_update.py` 41 passed, 77/77 numeric checks. After the note fix, `test_venus_variant_v07.py` 18 passed.
+- Two text corrections by me in `CHANGES.md` and `venus_variant_v07.py`:
+  - Pull-out p99 "41 → 35.7 m" read as an improvement. It is tail noise: n = 300, p50 27.0 → 26.8 m, maximum 41.4 → 41.6 m (`result.json`, `deployment_mc.forward`).
+  - "Doc 25 is not edited" was wrong: doc 25 gained a two-line pointer (anchor `docs/versions/..._before_v07_pointer.md`). Numbers in doc 25 are unchanged.
+- Open before promotion: `src/aerokit/venus/design.py` still has `DESIGN_VERSION = "0.6"`, so `venus_design.py` / `venus_final.py` would write v0.6 back into `outputs/` (agent read the code, did not run it; I confirmed the version line only).
+- Not rerun at 44.63 kg: simulator. Pull-out current 52.7 A at cos z 0.68 against the 53.6 A limit is a 43.66 kg number.

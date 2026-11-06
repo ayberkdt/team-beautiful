@@ -68,6 +68,8 @@ def _chapters(frames: list[dict]) -> list[dict]:
 
 def _end_text(fr: list[dict]) -> str:
     e = dh_frame(fr)
+    if e is None and fr[-1]["state"] == "LINK LOST":
+        return f"Lost communications procedure flown. Height {fr[-1]['height_m'] * 3.28084:.0f} ft and climbing."
     if e is None:
         return f"Missed approach flown. Height {fr[-1]['height_m'] * 3.28084:.0f} ft and climbing."
     side = "right" if e["y_m"] >= 0 else "left"

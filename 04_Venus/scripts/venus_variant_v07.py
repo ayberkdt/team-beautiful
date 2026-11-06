@@ -429,7 +429,7 @@ def sim_doc(c: dict, m: dict, doc: dict, gust: dict) -> tuple[dict, list[dict]]:
         {"name": "dive abort battery temperature", **SP.v(prof.dive_abort_C, "degC", "K/Y", "doc 25 §0: 50 -> 52 degC, the 5 min hold at 52 km at 1.5 m/s needs it; venus_budget_update.Profile")},
         {"name": "release sun height, minimum cos z", **SP.v(RELEASE_MIN_MU0, "-", "K/Y", "doc 25 §0: 52.7 A at cos z 0.68 against the 2C limit; simulator at 43.66 kg, not rerun at 44.63 kg")},
         {"name": "release rotor speed, maximum", **SP.v(float(round(RELEASE_RPM_RATIO * d.hover.rpm)), "rpm", "K", "doc 25 §5.2: 1.30 x hover rpm, back-EMF cap")},
-        {"name": "descent to cruise", **SP.v({"down_m_s": prof.down_rate, "forward_m_s": prof.down_speed}, "m/s", "K/Y", "doc 25 §5.2: outside the vortex-ring band; venus_budget_update.Profile")},
+        {"name": "descent to cruise", **SP.v([prof.down_rate, prof.down_speed], "m/s (down, forward)", "K/Y", "doc 25 §5.2: outside the vortex-ring band; venus_budget_update.Profile")},
         {"name": "battery discharge current 2C", **SP.v(round(d.req.battery.max_C_rate * BU.CELL_AH * n_par, 1), "A", "K/Y", f"14S{n_par}P pack (venus_budget_update.pack at {d.battery_Wh:.0f} Wh); 2C is an aerokit input, not a measured limit")},
     ]
     t_lost = BU.event(case["_flight"], "array no longer carries loiter")
@@ -728,12 +728,12 @@ def changes_md(base: dict, doc: dict, sim_changes: list[dict], m: dict, figs: di
     e, mc, w = out["entry"], out["deployment_mc"]["forward"], out["end_of_mission"]["windmilling"]
     gl = g["A_plus_C_loiter"]
     L += ["## Numbers that move against doc 25 when the mass is 44.63 kg", "",
-          "Doc 25 quotes these for 43.66 kg, or from the simulator at 43.66 kg. Doc 25 is not edited; update it on promotion.", "",
+          "Doc 25 quotes these for 43.66 kg, or from the simulator at 43.66 kg. Doc 25 numbers are not edited (it only gained a two-line pointer to this folder); update them on promotion.", "",
           "| Quantity | Doc 25 | This variant |", "|---|---|---|",
           f"| Pull-out loss (1-D model) | 26 m | {e['pullout_loss_m']:.1f} m |",
           f"| Descent rate at release | 12.8 m/s | {e['release_rate']:.1f} m/s |",
           f"| Time on the parachute | 716 s | {e['chute_s']:.0f} s |",
-          f"| Pull-out loss p99, Monte Carlo | 41 m | {mc['loss_p99_m']:.1f} m (maximum {mc['loss_max_m']:.1f} m) |",
+          f"| Pull-out loss, Monte Carlo, n = {mc['n']} | p50 27.0 m, p99 40.9 m, maximum 41.4 m | p50 {mc['loss_p50_m']:.1f} m, p99 {mc['loss_p99_m']:.1f} m, maximum {mc['loss_max_m']:.1f} m. p99 rests on the top 3 runs: read this as no change, not as an improvement |",
           f"| Gust altitude RMS / peak | 5.9 m / 27 m | {gl['z_rms_m']:.1f} m / {gl['z_peak_max_m']:.1f} m |",
           f"| Gust thrust peak, margin | 33 % W, 1.8× | {100 * gl['dT_peak_max_over_W']:.1f} % W, "
           f"{g['thrust_margin'] / gl['dT_peak_max_over_W']:.2f}× |",

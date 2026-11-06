@@ -38,7 +38,7 @@
  "punto_tepe": {
   "tik": 20.4,
   "eksen_adi": 24.0,
-  "metin": 20.4
+  "metin": 24.0
  },
  "panel_harfleri": [],
  "eksenler": [
@@ -124,8 +124,8 @@
     "tarih": false,
     "ters": false,
     "sinir": [
-     -67.92230037759256,
-     166.10980947880054
+     -50.0,
+     165.3412135522965
     ],
     "gorunur": true,
     "kategorik": false,
