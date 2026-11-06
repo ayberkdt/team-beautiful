@@ -1,0 +1,82 @@
+% main.tex -- starting point for an EUROAVIA Ideathon 2026 report
+%
+% Compile (in this folder):   latexmk -lualatex main.tex
+%                       or:   lualatex main.tex   (run it twice for the contents)
+%
+% Copy the whole folder (class, .lua file, fonts/, images/) when you start a
+% new report; only edit this file.
+\documentclass{ideathon2026}
+
+% ---- cover page -------------------------------------------------------
+\reporttitle{Advionics}            % Montserrat Medium 36, keep it to one line
+\reportsubtitle{One-line subtitle}      % Montserrat 16
+\teamname{Team Beetiful}                % optional, 2nd line under the subtitle
+\challenge{EUROAVIA Ideathon 2026 -- Advionics challenge} % optional, 3rd line
+
+% ---- optional settings --------------------------------------------------
+% \paragraphspacing{4.5bp}   % space after body paragraphs (template: 8bp)
+
+\begin{document}
+
+\makecover
+\tableofcontents          % "Table of Contents" page; the body starts on a new page
+
+\section{Problem and goal}
+Body text is Montserrat 11 on Word's line spacing, justified, with 8\,bp after
+each paragraph -- just type paragraphs as usual. Cite sources with
+\verb|\cite|, for example the accident report \cite{aaib} or two sources at
+once \cite{aaib,ad}.
+
+A list:
+\begin{itemize}
+  \item first point, with a bullet from the Symbol font as in Word;
+  \item second point.
+\end{itemize}
+Text after the list.
+
+\subsection{A second-level heading}
+Headings: \verb|\section| (Heading 1), \verb|\subsection| (Heading 2),
+\verb|\subsubsection| (EA Title 3) and \verb|\paragraph| (Title 4). All are
+numbered and go into the contents. Use the starred form for an unnumbered
+heading.
+
+\subsubsection{A third-level heading}
+Figures and tables float to the top or bottom of a page, 12\,bp away from the
+text, like the floating tables in the EASA report.
+
+\begin{figure}[tb]
+  \includegraphics[width=\linewidth]{figures/placeholder.png}
+  \caption{Figure captions sit under the picture. Write the finding as a sentence.}
+  \label{fig:placeholder}
+\end{figure}
+
+\paragraph{A fourth-level heading}
+Refer to Figure~\ref{fig:placeholder} and Table~\ref{tab:example}.
+
+\begin{table}[tb]
+  \caption{Table captions sit above the table.}
+  \label{tab:example}
+  % column widths include the cell margins (like Word's column width);
+  % the three widths below fill the text width (498.9bp)
+  \begin{tabular}{L{100bp}L{298.9bp}R{100bp}}
+    \toprule
+    \thead{Item} & \thead{Description} & \thead{Value}\\
+    \midrule
+    One   & Cell text is Montserrat 7.5 with 1\,bp above and below. & 1.5\\
+    Two   & A longer cell wraps inside its column, the row grows. & 22.3\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+% ---- references: numbered Heading 1 "References", Montserrat 8.5 --------
+\clearpage
+\begin{thebibliography}{99}
+\bibitem{aaib} Air Accidents Investigation Branch, ``Extra NG, G-MIIL,'' AAIB
+  Bulletin 4/2024, 22 Feb. 2024.
+  \url{https://www.gov.uk/aaib-reports}
+\bibitem{ad} European Union Aviation Safety Agency, Airworthiness Directive
+  AD 2025-0156, 21 Jul. 2025.
+  \url{https://ad.easa.europa.eu/}
+\end{thebibliography}
+
+\end{document}

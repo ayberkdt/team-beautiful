@@ -38,6 +38,21 @@ def test_spoofed_adsb_flagged_true_report_not():
     assert spoof["flag"] and spoof["status"].startswith("ADS-B POSITION INCONSISTENT")
 
 
+def test_adsb_noise_and_horizontal_only_options():
+    rng = np.random.default_rng(3)
+    st3 = np.array([[0, 0, 20], [9000, 2000, 30], [-6000, 7000, 25], [-4000, -8000, 40], [7000, -6000, 15]], float)
+    p = np.array([-9000.0, 1500.0, 600.0])
+    honest = flagged_default = 0
+    for _ in range(200):
+        fix = solve_tdoa(tdoa_measure(p, st3, 2e-9, rng), st3, p + 50, 2e-9)
+        rep = p + np.array([*rng.normal(0, 15, 2), 0.0])                          # honest ADS-B, 15 m noise
+        honest += adsb_consistency(rep, fix, adsb_sigma_m=15.0, dims=2)["flag"]
+        flagged_default += adsb_consistency(rep, fix)["flag"]
+    assert honest <= 2 < flagged_default                  # ignoring ADS-B noise and the poor MLAT height flags honest
+    fix = solve_tdoa(tdoa_measure(p, st3, 2e-9, rng), st3, p + 50, 2e-9)
+    assert adsb_consistency(p + np.array([300.0, 0, 0]), fix, adsb_sigma_m=15.0, dims=2)["flag"]
+
+
 def test_needs_enough_stations():
     with pytest.raises(ValueError):
         solve_tdoa(np.zeros(2), ST[:2], [0, 0])

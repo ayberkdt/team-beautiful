@@ -1,0 +1,7 @@
+figür denetimi: 0 HATA · 0 UYARI · 3 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] birim              eksen 0: x etiketi birim içermiyor: 'Iteration'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [APSStyleGuide (nicelik (birim)); NatureFigGuide; Wilke2019 W6]
+  [BİLGİ] birim              eksen 0: y etiketi birim içermiyor: 'Relative compliance'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [APSStyleGuide (nicelik (birim)); NatureFigGuide; Wilke2019 W6]
+  [BİLGİ] banking-45         eksen 0: çizim alanı y/g = 0.83; 45° için ≈ 186.29
+          → eğim karşılaştırması amaçsa oranı yaklaştır (ax.set_box_aspect)  [ClevelandMcGillMcGill1988 (VS); Kosara2013b; TalbotGerthHanrahan2011 — başlangıç sezgisi]

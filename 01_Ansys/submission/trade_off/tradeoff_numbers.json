@@ -1,0 +1,113 @@
+{
+ "V0_m3": 0.0194,
+ "fos": 1.5,
+ "materials": {
+  "S275N": {
+   "rho": 7849.840762716146,
+   "price_usd_per_kg": 1.2614277624977184,
+   "price_range": [
+    1.02,
+    1.56
+   ],
+   "co2_life_per_kg": 346.1486345830335,
+   "co2_production_per_kg": 9.019121425138762,
+   "co2_use_per_kg": 336.96,
+   "mass_at_V0_kg": 152.28691079669323,
+   "allow_300C_MPa": 106.60000000000001,
+   "E_300C_GPa": 168.1903683330291
+  },
+  "Al2618T6": {
+   "rho": 2749.836358767554,
+   "price_usd_per_kg": 3.2950872522590355,
+   "price_range": [
+    3.12,
+    3.48
+   ],
+   "co2_life_per_kg": 354.1997817449125,
+   "co2_production_per_kg": 17.070268587017747,
+   "co2_use_per_kg": 336.96,
+   "mass_at_V0_kg": 53.34682536009055,
+   "allow_300C_MPa": null,
+   "E_300C_GPa": null
+  },
+  "Ti811SA": {
+   "rho": 4374.928570845472,
+   "price_usd_per_kg": 24.594714879420742,
+   "price_range": [
+    23,
+    26.3
+   ],
+   "co2_life_per_kg": 379.16687551200897,
+   "co2_production_per_kg": 42.03736235411425,
+   "co2_use_per_kg": 336.96,
+   "mass_at_V0_kg": 84.87361427440216,
+   "allow_300C_MPa": 345.1426666666667,
+   "E_300C_GPa": 107.72445909355963
+  }
+ },
+ "initial_steel": {
+  "mass_kg": 152.27,
+  "co2_life_kg": 52708.05258795851,
+  "cost_usd": 192.0776053955276
+ },
+ "ti_same_shape": {
+  "volume_pct": 100.0,
+  "mass_kg": 84.87361427440216,
+  "co2_life_kg": 32181.26313783651,
+  "cost_usd": 2087.4423438648555
+ },
+ "ti_tie_with_initial_steel": {
+  "mass_kg": 139.0101720166986,
+  "volume_pct": 163.78490913238275
+ },
+ "steel_volume_to_tie_ti_ratio": 0.6104890613316141,
+ "life_co2_per_kg_ratio_ti_over_steel": 1.095387465470574,
+ "use_share_steel": 0.9734546559916318,
+ "use_share_ti": 0.8886852247970901,
+ "indices": [
+  {
+   "mode": "Tie (axial), strength-limited",
+   "property": "allow_300C_MPa",
+   "exponent": 1.0,
+   "mass_ratio_ti_over_steel": 0.172134797973003,
+   "co2_ratio_ti_over_steel": 0.18855430007093704,
+   "cost_ratio_ti_over_steel": 3.356201918839849
+  },
+  {
+   "mode": "Tie (axial), stiffness-limited",
+   "property": "E_300C_GPa",
+   "exponent": 1.0,
+   "mass_ratio_ti_over_steel": 0.8701555996402421,
+   "co2_ratio_ti_over_steel": 0.9531575368549523,
+   "cost_ratio_ti_over_steel": 16.96587748434136
+  },
+  {
+   "mode": "Beam (bending), strength-limited",
+   "property": "allow_300C_MPa",
+   "exponent": 0.6666666666666666,
+   "mass_ratio_ti_over_steel": 0.25465321060132795,
+   "co2_ratio_ti_over_steel": 0.2789439349345329,
+   "cost_ratio_ti_over_steel": 4.965106440552177
+  },
+  {
+   "mode": "Beam (bending), stiffness-limited",
+   "property": "E_300C_GPa",
+   "exponent": 0.5,
+   "mass_ratio_ti_over_steel": 0.6963915929150436,
+   "co2_ratio_ti_over_steel": 0.7628186219382254,
+   "cost_ratio_ti_over_steel": 13.577910032879995
+  }
+ ],
+ "example": {
+  "ti_volume_pct": 45.0,
+  "ti_mass_kg": 38.19312642348097,
+  "ti_co2_life_kg": 14481.568412026429,
+  "ti_cost_usd": 939.3490547391849,
+  "steel_volume_pct_same_co2": 27.472007759922633,
+  "steel_mass_same_co2_kg": 41.83627195141403,
+  "co2_saving_vs_initial_kg": 38226.484175932084,
+  "co2_saving_vs_initial_pct": 72.52494125473565,
+  "extra_cost_vs_initial_usd": 747.2714493436573,
+  "usd_per_t_co2_avoided": 19.548526772811336
+ }
+}

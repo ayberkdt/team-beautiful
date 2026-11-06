@@ -1,0 +1,37 @@
+{
+ "case": "case_2_lost_comms",
+ "params": {
+  "own_callsign": {"value": "BTL123", "unit": "", "source": "[Y]"},
+  "duration_s": {"value": 300, "unit": "s", "source": "[Y] scripted approach"},
+  "degraded_from_s": {"value": 60, "unit": "s", "source": "[Y] VHF gets noisy"},
+  "rx_lost_from_s": {"value": 100, "unit": "s", "source": "[Y] carrier gone"},
+  "alt_up_from_s": {"value": 160, "unit": "s", "source": "[Y] independent CPDLC link available"},
+  "alt_down_from_s": {"value": 200, "unit": "s", "source": "[Y] datalink drops too"},
+  "recovered_from_s": {"value": 240, "unit": "s", "source": "[Y] VHF back"},
+  "if_read_calls_s": {"value": [275, 285], "unit": "s", "source": "[Y] ATC: 'if you read, squawk ident' while we hear the frequency -> TX_LOST evidence (SERA.14083(b)(1), C_EASA_SERA_EAR [D-ag])"},
+  "our_calls_s": {"value": [12, 41, 72, 105, 118, 131, 252], "unit": "s", "source": "[Y] our transmissions (PTT)"},
+  "messages": {"value": [
+    [10, "beetle one two three turn left heading two seven zero descend and maintain three thousand feet", ""],
+    [45, "beetle one three two turn right heading zero nine zero descend and maintain five thousand feet", ""],
+    [70, "beetle one two three reduce speed one six zero knots", "low:6"],
+    [88, "beetle one two three turn right heading one niner zero descend and maintain <gap> feet", "partial"],
+    [250, "beetle one two three cleared ils approach runway two five right qnh one zero one three", ""]],
+    "unit": "[t s, text, flag]", "source": "[Y] flag 'low:<word index>' gives that word confidence 0.35; 'partial' = dropout seen"},
+  "cpdlc_uplinks": {"value": [[170, 190, 250]], "unit": "[t s, UM, value]", "source": "UM190 FLY HEADING (C_EUROCONTROL_WikiLink_MessageSets [D-ag]); times [Y]"},
+  "snr_good_db": {"value": 24.0, "unit": "dB", "source": "[Y]"},
+  "snr_degraded_db_level": {"value": 7.0, "unit": "dB", "source": "[Y] SNR during the degraded phase"},
+  "snr_degraded_db": {"value": 12.0, "unit": "dB", "source": "[Y] CommHealthMonitor threshold"},
+  "conf_degraded": {"value": 0.6, "unit": "confidence", "source": "[Y]"},
+  "dropout_degraded": {"value": 0.15, "unit": "share", "source": "[Y]"},
+  "answer_timeout_s": {"value": 10.0, "unit": "s", "source": "[Y]"},
+  "unanswered_for_loss": {"value": 2, "unit": "calls", "source": "[Y] silence alone never declares a loss"},
+  "silence_for_loss_s": {"value": 30.0, "unit": "s", "source": "[Y]"},
+  "no_signal_after_s": {"value": 1.0, "unit": "s", "source": "[Y] NO_SIGNAL (amber + age counter) from the first second without carrier; null = old behaviour (OK until loss declared)"},
+  "recover_ticks": {"value": 3, "unit": "ticks (1 s)", "source": "[Y] hysteresis"},
+  "stale_after_s": {"value": 120.0, "unit": "s", "source": "[Y] display marks items STALE after this age"},
+  "rule_set": {"value": "EU_SERA_2025", "unit": "", "source": "EU_SERA_2025 | ICAO_EUR_LEGACY | US_14CFR_91_185 (aerokit.atc.lostcomm); take it from the AIP of the State"},
+  "eat_min": {"value": 35.0, "unit": "min after trigger", "source": "[Y] last acknowledged EAT (null if none)"},
+  "eta_min": {"value": 30.0, "unit": "min after trigger", "source": "[Y]"}
+ },
+ "quick": {}
+}

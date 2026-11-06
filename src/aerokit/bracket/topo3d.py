@@ -34,7 +34,7 @@ from aerokit.bracket.voxfem import ReducedUpper, VoxelMesh, _rigid_body_modes, k
 from aerokit.optimization.projection import project, project_dx
 from aerokit.references import cite
 
-__all__ = ["density_filter", "AMFilter3D", "TopoResult", "optimize", "optimize_stress", "to_grid"]
+__all__ = ["density_filter", "AMFilter3D", "TopoResult", "optimize", "optimize_stress", "to_grid", "mirror_groups"]
 
 
 @cite("bourdin_2001", "bruns_tortorelli_2001", "andreassen_2011", note="cone filter on the solid voxels")
@@ -249,14 +249,32 @@ def optimize(mesh: VoxelMesh, F: np.ndarray, fixed: np.ndarray, volfrac: float, 
              max_iter: int = 100, tol: float = 0.01, am_axis: int | None = None, am_sign: int = 1,
              weights: np.ndarray | None = None, element: str = "H8", x0: np.ndarray | None = None,
              callback: Callable[[int, float, float], None] | None = None,
-             solver_kw: dict[str, Any] | None = None, snapshot_every: int = 0) -> TopoResult:
+             solver_kw: dict[str, Any] | None = None, snapshot_every: int = 0,
+             sym: np.ndarray | None = None) -> TopoResult:
     """Compliance minimisation with a volume bound ``volfrac`` (fraction of the solid voxels kept).
+
+    ``sym`` (ne, G) int: symmetry groups (column 0 = the element itself, −1 = mirror cell not in the domain). The
+    design variables of a group are tied (pattern grouping, as Altair OptiStruct / COMSOL mirror symmetry): the
+    start design, the filtered sensitivities and every OC update are averaged over the group, so a symmetric
+    problem cannot drift into a non-symmetric local optimum (5 Nov: the official layouts had one full and one
+    nearly empty lug although loads and supports are mirror-symmetric).
 
     ``F`` (ndof, n_cases) [N]; ``E0`` [Pa] scales the compliance only (the layout does not depend on it).
     ``keep``/``void`` (ne,) bool force elements solid/void. ``am_axis`` switches the overhang filter on.
     ``snapshot_every`` > 0 keeps the physical density of every k-th iteration (and the last) in ``snapshots``.
     """
     t0 = time.perf_counter()
+    if sym is not None:
+        sym = np.asarray(sym, int)
+        _sm = sym >= 0
+        _sidx = np.where(_sm, sym, 0)
+        _scnt = _sm.sum(1)
+
+        def S(v: np.ndarray) -> np.ndarray:
+            return (v[_sidx] * _sm).sum(1) / _scnt
+    else:
+        def S(v: np.ndarray) -> np.ndarray:
+            return v
     if not 0 < volfrac <= 1:
         raise ValueError("0 < volfrac <= 1 is required")
     ne = mesh.ne
@@ -302,6 +320,7 @@ def optimize(mesh: VoxelMesh, F: np.ndarray, fixed: np.ndarray, volfrac: float, 
         x = np.where(keep, 1.0, np.where(void, 0.0, min(max(start, 0.0), 1.0)))
     else:
         x = np.asarray(x0, float).copy()
+    x = np.where(keep, 1.0, np.where(void, 0.0, S(x)))
     beta = beta0 if projection else 1.0
     hist: dict[str, list[float]] = {"c": [], "v": [], "ch": [], "b": []}
     U = None
@@ -320,8 +339,8 @@ def optimize(mesh: VoxelMesh, F: np.ndarray, fixed: np.ndarray, volfrac: float, 
         cc = np.einsum("ec,e->c", ce, Ee)
         c = float(w @ cc)
         dc = -penal * (E0 - Emin) * frac * xp ** (penal - 1) * (ce @ w)
-        dcx = chain(x, dc, beta)
-        dvx = chain(x, np.ones(ne), beta)
+        dcx = S(chain(x, dc, beta))
+        dvx = S(chain(x, np.ones(ne), beta))
         hist["c"].append(c)
         hist["v"].append(float(xp.mean()))
         hist["b"].append(beta)
@@ -332,7 +351,7 @@ def optimize(mesh: VoxelMesh, F: np.ndarray, fixed: np.ndarray, volfrac: float, 
         xnew = x
         for _ in range(80):
             lm = 0.5 * (l1 + l2)
-            xnew = np.clip(x * ratio / math.sqrt(lm), xl, xu)
+            xnew = S(np.clip(x * ratio / math.sqrt(lm), xl, xu))
             xnew = np.where(keep, 1.0, np.where(void, 0.0, xnew))
             if physical(xnew, beta).sum() > volfrac * ne:
                 l1 = lm
@@ -360,7 +379,7 @@ def optimize(mesh: VoxelMesh, F: np.ndarray, fixed: np.ndarray, volfrac: float, 
                        "projection": projection, "eta": eta, "beta_max": beta_max, "move": move,
                        "am_axis": am_axis, "am_sign": am_sign, "element": element, "solver": "pardiso" if solver.pardiso
                        else ("direct" if solver.direct else ("amg-pcg" if solver.amg else "jacobi-pcg")),
-                       "cg_iterations": solver.cg_iters},
+                       "cg_iterations": solver.cg_iters, "symmetry_groups": None if sym is None else int(sym.shape[1])},
                       snaps + ([(loop, xp.astype(np.float16))] if snapshot_every and (not snaps or snaps[-1][0] != loop)
                                else []))
 
@@ -482,6 +501,27 @@ def optimize_stress(mesh: VoxelMesh, F: np.ndarray, fixed: np.ndarray, sigma_bar
             "volume_history": hist["volume"], "stress_history": hist["gmax"], "iterations": k,
             "converged": change < tol, "seconds": time.perf_counter() - t0, "U": U,
             "settings": {"sigma_bar": sigma_bar, "P": P, "q": q, "rmin": rmin, "penal": penal, "move": move}}
+
+
+def mirror_groups(mesh: VoxelMesh, planes_mm: dict[str, float]) -> np.ndarray:
+    """(ne, 2^k) element groups for mirror planes {axis: coordinate in mm}, e.g. {"x": 500.0, "y": 200.28}: the
+    mirror cell of every element is the voxel nearest to its reflected centre (−1 if that voxel is not solid)."""
+    ax = [("xyz".index(a), c * 1e-3) for a, c in planes_mm.items()]
+    shape = np.array(mesh.solid.shape)
+    o, h = np.asarray(mesh.origin, float), mesh.h
+    cols = [np.arange(mesh.ne)]
+    for k, c in ax:
+        new = []
+        for col in cols:
+            ijk = mesh.ijk[np.maximum(col, 0)].copy()
+            xc = o[k] + (ijk[:, k] + 0.5) * h
+            ijk[:, k] = np.rint((2 * c - xc - o[k]) / h - 0.5).astype(int)
+            ok = (col >= 0) & (ijk[:, k] >= 0) & (ijk[:, k] < shape[k])
+            j = np.full(mesh.ne, -1)
+            j[ok] = mesh.element_of[tuple(ijk[ok].T)]
+            new.append(j)
+        cols += new
+    return np.stack(cols, axis=1)
 
 
 def to_grid(mesh: VoxelMesh, v: np.ndarray, fill: float = 0.0) -> np.ndarray:

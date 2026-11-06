@@ -1,0 +1,189 @@
+{
+ "surum": 1,
+ "ad": "T1_risk_reduction_by_option",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  849.3,
+  400.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [
+   20.4
+  ],
+  "panel": [],
+  "metin": [
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "lejant": 20.4,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    216.5,
+    73.2,
+    861.6,
+    408.0
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Pilot always acts",
+     "tur": "cizgi",
+     "renk": "#07648e",
+     "isaret": "o",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 9.0
+    },
+    {
+     "etiket": "Pilot matches reliability",
+     "tur": "cizgi",
+     "renk": "#5f5f5f",
+     "isaret": "Path(array([[-1.  , -0.68],\n       [-1.  , -1.  ],\n       [-0.68, -1.  ],\n       [ 0.68, -1.  ],\n       [ 1.  , -1.  ],\n       [ 1.  , -0.68],\n       [ 1.  ,  0.68],\n       [ 1.  ,  1.  ],\n       [ 0.68,  1.  ],\n       [-0.68,  1.  ],\n       [-1.  ,  1.  ],\n       [-1.  ,  0.68],\n       [-1.  , -0.68]]), array([ 1,  3,  3,  2,  3,  3,  2,  3,  3,  2,  3,  3, 79], dtype=uint8))",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 8.08
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Risk reduction factor",
+    "nicelik": "Risk reduction factor",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "riskreductionfactor",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.8,
+     30000.0
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "1",
+     "10",
+     "10²",
+     "10³",
+     "10⁴"
+    ],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "1",
+     "10",
+     "10²",
+     "10³",
+     "10⁴"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     435.0,
+     3.0,
+     643.1,
+     25.3
+    ]
+   },
+   "y": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.45,
+     9.45
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "O1 bolt marks",
+     "O2 organisers' switch",
+     "O3 LOCK-SENSE + lamp",
+     "O4 + voice",
+     "O5 + belt tactor",
+     "O6 + ground gate",
+     "O7 + ground shut-down",
+     "O8 + in-flight shut-down",
+     "O9 + mechanical pawl",
+     "O10 + starter guard"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "O1 bolt marks",
+     "O2 organisers' switch",
+     "O3 LOCK-SENSE + lamp",
+     "O4 + voice",
+     "O5 + belt tactor",
+     "O6 + ground gate",
+     "O7 + ground shut-down",
+     "O8 + in-flight shut-down",
+     "O9 + mechanical pawl",
+     "O10 + starter guard"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "lejant": [
+    "Matches: 5–95 % range",
+    "Pilot always acts",
+    "Pilot matches reliability"
+   ],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

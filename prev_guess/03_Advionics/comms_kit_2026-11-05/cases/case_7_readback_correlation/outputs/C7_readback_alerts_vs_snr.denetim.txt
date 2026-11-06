@@ -1,0 +1,5 @@
+figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] belirsizlik-tanimi eksen 0: hata çubuğu/bant var
+          → altyazıda ne gösterdiğini yaz: SD mi, SE mi, %95 GA mı; n kaç  [Franconeri2021 (genel kitleye hata çubuğu yerine ayrık sonuç)]
+  [BİLGİ] banking-45         eksen 0: çizim alanı y/g = 0.47; 45° için ≈ 1.30
+          → eğim karşılaştırması amaçsa oranı yaklaştır (ax.set_box_aspect)  [Kosara2013b]

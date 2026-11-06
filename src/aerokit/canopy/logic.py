@@ -1,6 +1,6 @@
 """The canopy alert unit: sensor fusion, flight-phase state machine, annunciation and event log.
 
-Design rules implemented (the reasons and sources are in ``docs/23_easa_canopy_retrofit.md``):
+Design rules implemented (the reasons and sources are in ``02_EASA/docs/23_easa_canopy_retrofit.md``):
 
 * **Closed is not locked.** The canopy state is LOCKED only if every *seated* sensor and every *bolt-engagement*
   sensor is ACTIVE. A handle-position sensor alone cannot be trusted: on the Extra NG the handle sits at 70 mm both

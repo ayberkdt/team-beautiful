@@ -25,7 +25,7 @@ def test_schema_units_and_tags():
 
 
 def test_bundled_copy_matches_research_notes():
-    src = ROOT / "research_notes" / "Malzeme havuzu" / "materials_pool.json"
+    src = ROOT / "prev_guess" / "01_Ansys" / "research" / "Malzeme havuzu" / "materials_pool.json"
     if src.exists():
         bundled = ROOT / "src" / "aerokit" / "data" / "materials" / "materials_pool.json"
         check_true("package copy is identical to the research-notes pool",
@@ -33,7 +33,7 @@ def test_bundled_copy_matches_research_notes():
 
 
 def test_agrees_with_study_values_and_ranks():
-    study = json.loads((ROOT / "studies" / "tradeoff" / "bracket_a320_strength.json").read_text(encoding="utf-8"))
+    study = json.loads((ROOT / "prev_guess" / "01_Ansys" / "tradeoff" / "bracket_a320_strength.json").read_text(encoding="utf-8"))
     check("AlSi10Mg E agrees with the study file", pool.value("AlSi10Mg L-PBF", "E") * 1e9,
           study["materials"]["AlSi10Mg"]["E"], rtol=1e-9)
     check("Scalmalloy E agrees with the study file", pool.value("Scalmalloy L-PBF", "E") * 1e9,

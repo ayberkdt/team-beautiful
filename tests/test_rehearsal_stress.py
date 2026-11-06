@@ -1,4 +1,4 @@
-"""Stress recovery used by scripts/rehearsal_bracket.py, checked against closed-form cases."""
+"""Stress recovery used by prev_guess/01_Ansys/scripts/rehearsal_bracket.py, checked against closed-form cases."""
 import importlib.util
 from pathlib import Path
 
@@ -8,7 +8,7 @@ from aerokit.optimization import topology as tp
 from aerokit.verification import check, check_true
 
 _SPEC = importlib.util.spec_from_file_location(
-    "rehearsal_bracket", Path(__file__).resolve().parents[1] / "scripts" / "rehearsal_bracket.py")
+    "rehearsal_bracket", Path(__file__).resolve().parents[1] / "prev_guess" / "01_Ansys" / "scripts" / "rehearsal_bracket.py")
 R = importlib.util.module_from_spec(_SPEC)
 _SPEC.loader.exec_module(R)
 

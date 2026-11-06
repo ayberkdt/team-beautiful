@@ -1,7 +1,7 @@
 """Projection / robust TO (aerokit.optimization.projection) and stress-constrained TO (stress_topo).
 
 Formulas from Ferrari & Sigmund 2020, Qian & Sigmund 2013 and Holmberg et al. 2013 as read on 2026-11-03
-(research_notes/Optimizasyon kaynakları/TO_kaynak_paketi.md). Every gradient is checked against central
+(prev_guess/01_Ansys/research/Optimizasyon kaynakları/TO_kaynak_paketi.md). Every gradient is checked against central
 differences; the size-rule values are the worked table of that pack.
 """
 import numpy as np

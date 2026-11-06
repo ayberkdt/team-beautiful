@@ -54,9 +54,36 @@ FMEA: tuple[FmeaRow, ...] = (
             "flashing red in primary field of view", None),
     FmeaRow("Installation", "part bridges canopy and fuselage", "could obstruct emergency opening / jettison",
             "ground test of emergency opening after installation", "catastrophic if it occurred",
-            "nothing mounted across the split line; magnets passive in the frame", None),
-    FmeaRow("Installation", "magnet near the standby compass", "compass deviation", "compass swing",
-            "minor", "magnet position and size; DO-160 magnetic-effect test", None),
+            "nothing mounted across the split line; only passive steel targets in the frame", None),
+    FmeaRow("Installation", "gate solenoid or shaker motor near the standby compass", "compass deviation",
+            "compass swing", "minor", "position and shielding; DO-160 magnetic-effect test", None),
+    # rows added 5 Nov 2026 after an external review of report.md (common cause, mounting, self-test, phase logic,
+    # structure, gate, shaker)
+    FmeaRow("Harness / supply", "common-cause loss or short of the sensor supply or shared harness",
+            "all channels invalid -> CANOPY SENS (amber on the ground, red at take-off power), green off",
+            "immediate (line monitoring)", "minor", "own circuit breaker; harness separated from other bundles; "
+            "NAMUR levels make open and short distinct", None),
+    FmeaRow("Bolt sensor bracket", "moved after installation (vibration, canopy work), sensor itself healthy",
+            "trip point shifts; too early = latent missed alert", "gauge test at every annual and after any canopy "
+            "work; open-canopy plausibility check", "major (latent)", "torque-striped, safety-wired brackets; "
+            "rigging record kept", None),
+    FmeaRow("Self-test", "power-up test reports 'pass' while a lamp, the voice or the shaker is dead",
+            "latent loss of one cue", "the test is observed by the pilot (all lamp colours, the word CANOPY, one "
+            "shaker burst), not self-reported", "minor", "pilot-observed test in the checklist", None),
+    FmeaRow("Flight-phase inputs", "lever switch, rpm or IAS/GPS input wrong (e.g. stuck 'parked')",
+            "take-off stage not armed: only amber shown; or gate armed when it should not be",
+            "disagreement between the two arming inputs -> CANOPY SYS caution", "major",
+            "two independent arming inputs (lever switch, rpm); gate needs IAS AND GPS below 30 kt; red never "
+            "inhibited", None),
+    FmeaRow("Canopy structure", "frame or transparency fails while the bolts stay locked (G-MIIL AAIB cause)",
+            "system shows LOCKED; no warning", "not detected by this system", "catastrophic",
+            "outside the alert function: bond inspection in the maintenance programme (kit 06, T5); never claim "
+            "the alert detects structural failure", None),
+    FmeaRow("Take-off gate", "detent jams engaged in flight", "throttle cannot advance past run-up power "
+            "(go-around)", "functional test; pilot feels it", "hazardous", "detent de-energised airborne, "
+            "unpowered = free, mechanical breakout", None),
+    FmeaRow("Throttle shaker", "runs continuously (driver fault)", "annoyance; may be read as engine roughness",
+            "immediate", "minor", "driver time-out 10 s; own breaker; amber 'CANOPY SYS'", None),
     FmeaRow("Pilot", "relies on the light, skips the handle check", "the old barrier weakens",
             "training / line checks", "major", "AFM supplement: handle check stays primary; system is "
                                                  "supplementary", None),

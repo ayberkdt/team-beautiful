@@ -1,0 +1,269 @@
+{
+ "_about": "Official EUROAVIA Ideathon 2026 Ansys bracket set-up, written 2026-11-05 from the organisers' card (Ideathon_Challenge_Ansys_2026.docx) and CAD (Eurovia Challenge 2026 CAD file.dsco, geometry measured in derived/features.json). Interpretation choices are marked [Y] in setup/boundary_conditions.md. Hole ids follow aerokit.bracket.features ordering (axis, then centre); check them against the first bracket_day.py hole scan before use. | v2 (5 Nov 13:10): non-design regions per industrial TO practice — base skin kept (one continuous mounting flange ties both lugs and all 4 bolts), lug eyes kept to the ORIGINAL edge distance (e = 61.4 mm above the pin), bolt bosses Ø105 through the plate; see setup/TO_v2_method.md",
+ "name": "EUROAVIA 2026 cowling-support bracket (initial S275N design)",
+ "units": {
+  "length": "mm",
+  "force": "N",
+  "moment": "N m"
+ },
+ "temperature_C": 300.0,
+ "holes": [
+  {
+   "id": "H1",
+   "axis": "y",
+   "center_mm": [
+    500.0,
+    65.0,
+    260.0
+   ],
+   "diameter_mm": 60.0,
+   "segments_mm": [
+    [
+     30.0,
+     100.0
+    ]
+   ],
+   "roundness": 0.0,
+   "role": "load"
+  },
+  {
+   "id": "H2",
+   "axis": "y",
+   "center_mm": [
+    500.0,
+    335.56,
+    260.0
+   ],
+   "diameter_mm": 60.0,
+   "segments_mm": [
+    [
+     300.0,
+     371.12
+    ]
+   ],
+   "roundness": 0.0,
+   "role": "load"
+  },
+  {
+   "id": "H3",
+   "axis": "z",
+   "center_mm": [
+    245.0,
+    95.0,
+    65.0
+   ],
+   "diameter_mm": 60.0,
+   "segments_mm": [
+    [
+     30.0,
+     100.0
+    ]
+   ],
+   "roundness": 0.0,
+   "role": "support"
+  },
+  {
+   "id": "H4",
+   "axis": "z",
+   "center_mm": [
+    245.0,
+    305.0,
+    65.0
+   ],
+   "diameter_mm": 60.0,
+   "segments_mm": [
+    [
+     30.0,
+     100.0
+    ]
+   ],
+   "roundness": 0.0,
+   "role": "support"
+  },
+  {
+   "id": "H5",
+   "axis": "z",
+   "center_mm": [
+    755.0,
+    95.0,
+    65.0
+   ],
+   "diameter_mm": 60.0,
+   "segments_mm": [
+    [
+     30.0,
+     100.0
+    ]
+   ],
+   "roundness": 0.0,
+   "role": "support"
+  },
+  {
+   "id": "H6",
+   "axis": "z",
+   "center_mm": [
+    755.0,
+    305.0,
+    65.0
+   ],
+   "diameter_mm": 60.0,
+   "segments_mm": [
+    [
+     30.0,
+     100.0
+    ]
+   ],
+   "roundness": 0.0,
+   "role": "support"
+  }
+ ],
+ "supports": [
+  {
+   "hole": "H3",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H4",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H5",
+   "type": "fixed_bore"
+  },
+  {
+   "hole": "H6",
+   "type": "fixed_bore"
+  }
+ ],
+ "load_cases": [
+  {
+   "name": "LC1a Fz+97 kN, Fy+24 kN each pin",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      24000.0,
+      97000.0
+     ]
+    },
+    {
+     "hole": "H2",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      24000.0,
+      97000.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LC1b Fz+97 kN, Fy-24 kN each pin",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      -24000.0,
+      97000.0
+     ]
+    },
+    {
+     "hole": "H2",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      -24000.0,
+      97000.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      24000.0,
+      97000.0
+     ]
+    },
+    {
+     "hole": "H2",
+     "type": "bearing",
+     "force_N": [
+      0.0,
+      -24000.0,
+      97000.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LC2 My 2000 N m (1000 per pin bore)",
+   "loads": [
+    {
+     "hole": "H1",
+     "type": "moment",
+     "moment_Nm": [
+      0.0,
+      1000.0,
+      0.0
+     ]
+    },
+    {
+     "hole": "H2",
+     "type": "moment",
+     "moment_Nm": [
+      0.0,
+      1000.0,
+      0.0
+     ]
+    }
+   ]
+  }
+ ],
+ "non_design": {
+  "ring_factor": 0.75,
+  "ring_factor_by_role": {
+   "support": 0.75,
+   "load": 1.047
+  },
+  "ring_min_voxels": 2,
+  "boxes_mm": [
+   {
+    "name": "base skin (mounting flange) z 30-46",
+    "min": [
+     160,
+     20,
+     29
+    ],
+    "max": [
+     841,
+     381,
+     46
+    ]
+   }
+  ],
+  "_about": "support rings r 30 -> 52.5 mm (boss O105) over the full plate depth z 30-100; load rings r 30 -> 61.4 mm (= original top edge distance, ligament 31.4 mm) over each lug thickness; base skin = 2 voxel layers (15.6 mm at h 7.8 mm) of the original footprint"
+ },
+ "build_direction": "+z",
+ "load_case_weights": null,
+ "design_criteria": {
+  "factor_of_safety": 1.5,
+  "max_displacement_mm": 1.652525,
+  "_about": "card: FoS 1.5 on yield at working temperature (>300 C) [Y: applied as vM_max*1.5 <= Fty(300 C)]; max displacement < 1/400 of largest dimension (661.01 mm -> 1.653 mm) | 5 Nov ~13:45 mentor: FoS 1.5 preferably on YIELD -> strength_basis 'yield' (U = 1.5 sigma / Fty(T))",
+  "strength_basis": "yield"
+ },
+ "symmetry_planes_mm": {
+  "x": 500.0,
+  "y": 200.28
+ },
+ "_symmetry_about": "5 Nov: loads/supports are mirror-symmetric about x = 500 (pins, bolt pattern; LC2 sign unknown -> design must carry +-My) and about y = 200.28 (mid-plane of the pins; LC1a<->LC1b are mirror images, LC1c is self-mirror). Design variables tied over the 4-element mirror group (pattern grouping)."
+}

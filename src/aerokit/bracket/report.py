@@ -10,7 +10,7 @@
     ``loads_film.json``               supports and forces in the film's ``yukler.json`` format
     ``materials/``                    ``materials_engineering_data.xml`` (MatML) + one Markdown card per material
     ``eco_audit.json|md``             baseline vs redesign by phase
-    ``crosscheck_template.csv``       fill the Ansys column, then ``python scripts/bracket_crosscheck.py``
+    ``crosscheck_template.csv``       fill the Ansys column, then ``python 01_Ansys/scripts/bracket_crosscheck.py``
     ``figures/``                      datawiz-audited figures (``*.denetim.txt`` beside each)
 """
 from __future__ import annotations
@@ -289,8 +289,14 @@ def mechanical_steps(st: Study, opt: Options) -> str:
         d = next(x for x in st.designs if x["label"] == st.choice["design"])
         s += (f"6. **Topology Optimization** (Structural → Topology Optimization): Objective Minimize Compliance (all "
               f"load steps); Response Constraint Mass/Volume = {100 * d['volfrac']:.0f} % ; Exclusion Regions: the "
-              f"faces of every support and load bore with a ring of {st.setup['non_design']['ring_factor']:g} × bore "
-              f"radius (≥ {st.setup['non_design']['ring_min_voxels']} × {st.mesh.h * 1e3:.1f} mm); "
+              f"faces of every support and load bore with a ring of "
+              + ", ".join(f"{v:g} × bore radius ({k})" for k, v in
+                          (st.setup['non_design'].get('ring_factor_by_role')
+                           or {"all": st.setup['non_design']['ring_factor']}).items())
+              + f" (≥ {st.setup['non_design']['ring_min_voxels']} × {st.mesh.h * 1e3:.1f} mm)"
+              + "".join(f"; frozen box {b.get('name', '')} {b['min']}–{b['max']} mm"
+                        for b in st.setup['non_design'].get('boxes_mm', []))
+              + "; "
               + ("Manufacturing constraint AM Overhang, 45°, build direction "
                  f"{st.setup.get('build_direction', '+z')}; " if opt.am_filter else "")
               + "then Validation with the chosen material.\n")
@@ -344,10 +350,14 @@ def _report_md(st: Study, g: Geometry, opt: Options, files: dict[str, Any]) -> s
     s += (f"Input: `{g.source}` ({g.kind}) · voxel {st.mesh.h * 1e3:.2f} mm · {st.mesh.ne} elements · "
           f"{st.mesh.ndof} DOFs · working temperature **{T:g} °C** · element {opt.element} · total "
           f"{st.timings.get('total_s', 0):.0f} s.\n\n")
+    dcrit = st.setup.get("design_criteria", {})
     s += ("All numbers below are computed by `aerokit.bracket` [K] from the files in this folder. Loads and "
           "supports are those of `setup.json` (check them: a proposal unless a human edited it). Strength "
           f"criterion: von Mises outside the hole zones (radius + {opt.exclusion_vox:g} voxels) "
-          f"≤ Fty(T) at limit load and ≤ Ftu(T) at {opt.limit_to_ultimate:g} × limit [Y].\n\n")
+          + (f"× {dcrit.get('factor_of_safety', 1.5):g} ≤ Fty(T) (FoS on yield, mentor 5 Nov 2026); max "
+             f"displacement < {dcrit.get('max_displacement_mm', float('nan')):.3f} mm.\n\n"
+             if dcrit.get("strength_basis") == "yield" else
+             f"≤ Fty(T) at limit load and ≤ Ftu(T) at {opt.limit_to_ultimate:g} × limit [Y].\n\n"))
     s += "## 1. Set-up\n\n| Hole | Axis | Ø (mm) | Centre (mm) | Role |\n|---|---|---|---|---|\n"
     for h in st.setup["holes"]:
         s += f"| {h['id']} | {h['axis']} | {h['diameter_mm']:.2f} | {', '.join(f'{v:.1f}' for v in h['center_mm'])} | {h['role']} |\n"
@@ -454,7 +464,7 @@ def _report_md(st: Study, g: Geometry, opt: Options, files: dict[str, Any]) -> s
     s += fatigue_screen(st)
     s += _bolt_md(files.get("bolt_check") or {})
     s += ("## 5. Ansys cross-check\n\nFill the `ansys` column of `crosscheck_template.csv` (initial design, baseline "
-          "material) and `crosscheck_template_redesign.csv`, then run `python scripts/bracket_crosscheck.py "
+          "material) and `crosscheck_template_redesign.csv`, then run `python 01_Ansys/scripts/bracket_crosscheck.py "
           f"{st.out}`.\n\n")
     s += mechanical_steps(st, opt)
     figs = files.get("figures", {})

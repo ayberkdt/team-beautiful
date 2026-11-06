@@ -3,7 +3,7 @@
 Closed forms are derived in the docstrings of the functions under test (parabolic polar: Anderson 2017,
 Eq. 6.24, read from the user's PDF; performance models after Raymer 2018 Ch. 17, *not read in this
 session*, so every expected value here is a derivation, not a book number). The 2023 rehearsal design is
-the one of docs/04_2023_example_solution.md (W0 5974 kg, S 27.5 m², 1667 kW).
+the one of prev_guess/01_Ansys/docs/04_2023_example_solution.md (W0 5974 kg, S 27.5 m², 1667 kW).
 """
 import math
 
@@ -18,7 +18,7 @@ from aerokit.aero.propulsion import Turbofan, Turboprop
 from aerokit.verification import check, check_true, expect_error
 
 POLAR = "Anderson 2017 Eq. 6.24 (parabolic polar) + derivation"
-DOC04 = "docs/04_2023_example_solution.md (2023 card / rehearsal sizing)"
+DOC04 = "prev_guess/01_Ansys/docs/04_2023_example_solution.md (2023 card / rehearsal sizing)"
 MAINT = "maintainer measurement quoted in the P0-2 task brief (2026-10-25)"
 
 W0_REH = 5974 * G0

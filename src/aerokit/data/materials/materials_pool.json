@@ -50,27 +50,27 @@
           "value": 124,
           "unit": "MPa",
           "condition": "R=-1, 1e7, unnotched bare sheet 0.090 in, electropolished; mean curve (equation [D])",
-          "source": "MIL-HDBK-5J Fig. 3.2.3.1.8(e) p.3-116 best-fit equation solved at N=1e7, via research_notes/Üç sapma alanı/A_titresim_yorulma.md",
+          "source": "MIL-HDBK-5J Fig. 3.2.3.1.8(e) p.3-116 best-fit equation solved at N=1e7, via prev_guess/01_Ansys/research/Üç sapma alanı/A_titresim_yorulma.md",
           "tag": "Y"
         },
         "k": {
           "value": 119,
           "unit": "W/mK",
           "condition": "70 F",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.2.3.0 p.3-69 (~69 Btu/h ft F, eye-read)",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Fig 3.2.3.0 p.3-69 (~69 Btu/h ft F, eye-read)",
           "tag": "D"
         },
         "cte": {
           "value": 22.9,
           "unit": "1e-6/K",
           "condition": "70-212 F",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.2.3.0 (~12.7e-6/F, eye-read)",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Fig 3.2.3.0 (~12.7e-6/F, eye-read)",
           "tag": "D"
         },
         "Tmax": {
           "value": 120,
           "unit": "C",
-          "source": "judgement from MMPDS-01 Fty-vs-temperature curves (10,000 h exposure falls steeply above ~120 C), research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "source": "judgement from MMPDS-01 Fty-vs-temperature curves (10,000 h exposure falls steeply above ~120 C), prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md",
           "tag": "Y"
         },
         "co2": {
@@ -79,14 +79,14 @@
           "low": 6.6,
           "high": 15.1,
           "condition": "primary ingot, cradle-to-gate, fabrication excluded",
-          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "co2_recycled": {
           "value": 1.81,
           "unit": "kg CO2e/kg",
           "condition": "100 % recycled route",
-          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "price": {
@@ -95,7 +95,7 @@
           "low": 7.5,
           "high": 20,
           "condition": "aerospace plate, mill/distributor",
-          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/cost_data.md",
           "tag": "Y"
         }
       },
@@ -153,20 +153,20 @@
           "value": 119,
           "unit": "W/mK",
           "condition": "70 F; figure covers 2024 tempers",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.2.3.0 (2024, eye-read)",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Fig 3.2.3.0 (2024, eye-read)",
           "tag": "D"
         },
         "cte": {
           "value": 22.9,
           "unit": "1e-6/K",
           "condition": "70-212 F",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.2.3.0",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Fig 3.2.3.0",
           "tag": "D"
         },
         "Tmax": {
           "value": 120,
           "unit": "C",
-          "source": "judgement as for 2024-T3, research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "source": "judgement as for 2024-T3, prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md",
           "tag": "Y"
         },
         "co2": {
@@ -175,14 +175,14 @@
           "low": 6.6,
           "high": 15.1,
           "condition": "primary ingot, cradle-to-gate, fabrication excluded",
-          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "co2_recycled": {
           "value": 1.81,
           "unit": "kg CO2e/kg",
           "condition": "100 % recycled route",
-          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "price": {
@@ -191,7 +191,7 @@
           "low": 7.5,
           "high": 20,
           "condition": "aerospace plate, mill/distributor",
-          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/cost_data.md",
           "tag": "Y"
         }
       },
@@ -209,33 +209,33 @@
         "rho": {
           "value": 2700,
           "unit": "kg/m3",
-          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (Airware 2050 sheet p2, typical)",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md and prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md (Airware 2050 sheet p2, typical)",
           "tag": "S"
         },
         "E": {
           "value": 76.5,
           "unit": "GPa",
-          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (typical, tension)",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md and prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md (typical, tension)",
           "tag": "S"
         },
         "Fty": {
           "value": 476,
           "unit": "MPa",
           "condition": "minimum, L",
-          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (L minimum, 12.7-38.1 mm; 455 MPa at 101.6-175 mm)",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md and prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md (L minimum, 12.7-38.1 mm; 455 MPa at 101.6-175 mm)",
           "tag": "S"
         },
         "Ftu": {
           "value": 503,
           "unit": "MPa",
           "condition": "minimum, L",
-          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (L minimum, 12.7-38.1 mm)",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md and prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md (L minimum, 12.7-38.1 mm)",
           "tag": "S"
         },
         "elongation": {
           "value": 8,
           "unit": "%",
-          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (L minimum, 12.7-38.1 mm)",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md and prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md (L minimum, 12.7-38.1 mm)",
           "tag": "S"
         },
         "co2": {
@@ -244,14 +244,14 @@
           "low": 6.6,
           "high": 15.1,
           "condition": "primary ingot, cradle-to-gate, fabrication excluded",
-          "source": "Al-Li footprint NOT FOUND; aluminium (ICE/EA/IAI) values applied as proxy; research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "Al-Li footprint NOT FOUND; aluminium (ICE/EA/IAI) values applied as proxy; prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "Y"
         },
         "co2_recycled": {
           "value": 1.81,
           "unit": "kg CO2e/kg",
           "condition": "100 % recycled route",
-          "source": "proxy: ICE recycled Al; Constellium brochure says recycling Airware 'uses only 5% of the energy' (research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md)",
+          "source": "proxy: ICE recycled Al; Constellium brochure says recycling Airware 'uses only 5% of the energy' (prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md)",
           "tag": "Y"
         },
         "price": {
@@ -260,7 +260,7 @@
           "low": 7.5,
           "high": 20,
           "condition": "aerospace plate, mill/distributor",
-          "source": "Al-Li price NOT FOUND; conventional Al plate placeholder; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "source": "Al-Li price NOT FOUND; conventional Al plate placeholder; prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/cost_data.md",
           "tag": "Y"
         }
       },
@@ -278,27 +278,27 @@
         "rho": {
           "value": 2700,
           "unit": "kg/m3",
-          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (Airware 2198 sheet)",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md and prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md (Airware 2198 sheet)",
           "tag": "S"
         },
         "E": {
           "value": 76.5,
           "unit": "GPa",
-          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (L; identical value printed on the 2050 sheet, may be copied)",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md and prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md (L; identical value printed on the 2050 sheet, may be copied)",
           "tag": "S"
         },
         "Fty": {
           "value": 407,
           "unit": "MPa",
           "condition": "minimum, LT",
-          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (LT minimum, 1.6-3.2 mm; 427 at 3.2-6.3 mm)",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md and prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md (LT minimum, 1.6-3.2 mm; 427 at 3.2-6.3 mm)",
           "tag": "S"
         },
         "Ftu": {
           "value": 462,
           "unit": "MPa",
           "condition": "minimum, LT",
-          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md and research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (LT minimum, 1.6-3.2 mm; 476 at 3.2-6.3 mm)",
+          "source": "Smiths High Performance distributor sheets (2025), smithshp.com, via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md and prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md (LT minimum, 1.6-3.2 mm; 476 at 3.2-6.3 mm)",
           "tag": "S"
         },
         "co2": {
@@ -307,14 +307,14 @@
           "low": 6.6,
           "high": 15.1,
           "condition": "primary ingot, cradle-to-gate, fabrication excluded",
-          "source": "Al-Li footprint NOT FOUND; aluminium (ICE/EA/IAI) values applied as proxy; research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "Al-Li footprint NOT FOUND; aluminium (ICE/EA/IAI) values applied as proxy; prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "Y"
         },
         "co2_recycled": {
           "value": 1.81,
           "unit": "kg CO2e/kg",
           "condition": "100 % recycled route",
-          "source": "proxy: ICE recycled Al; Constellium brochure says recycling Airware 'uses only 5% of the energy' (research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md)",
+          "source": "proxy: ICE recycled Al; Constellium brochure says recycling Airware 'uses only 5% of the energy' (prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md)",
           "tag": "Y"
         }
       },
@@ -375,14 +375,14 @@
           "value": 154,
           "unit": "W/mK",
           "condition": "70 F",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.6.2.0 p.3-273 (~89 Btu, eye-read)",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Fig 3.6.2.0 p.3-273 (~89 Btu, eye-read)",
           "tag": "D"
         },
         "cte": {
           "value": 22.9,
           "unit": "1e-6/K",
           "condition": "70-200 F",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.6.2.0 (~12.7e-6/F)",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Fig 3.6.2.0 (~12.7e-6/F)",
           "tag": "D"
         },
         "co2": {
@@ -391,14 +391,14 @@
           "low": 6.6,
           "high": 15.1,
           "condition": "primary ingot, cradle-to-gate, fabrication excluded",
-          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "co2_recycled": {
           "value": 1.81,
           "unit": "kg CO2e/kg",
           "condition": "100 % recycled route",
-          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "price": {
@@ -407,7 +407,7 @@
           "low": 7.5,
           "high": 20,
           "condition": "aerospace plate, mill/distributor",
-          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/cost_data.md",
           "tag": "Y"
         }
       },
@@ -480,14 +480,14 @@
           "low": 6.6,
           "high": 15.1,
           "condition": "primary ingot, cradle-to-gate, fabrication excluded",
-          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "co2_recycled": {
           "value": 1.81,
           "unit": "kg CO2e/kg",
           "condition": "100 % recycled route",
-          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "price": {
@@ -496,7 +496,7 @@
           "low": 7.5,
           "high": 20,
           "condition": "aerospace plate, mill/distributor",
-          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/cost_data.md",
           "tag": "Y"
         }
       },
@@ -549,27 +549,27 @@
           "value": 170,
           "unit": "MPa",
           "condition": "R=-1, 1e7, unnotched rod/bar/extrusion, surface unspecified; mean curve (sheet, electropolished: 111 MPa)",
-          "source": "MIL-HDBK-5J Fig. 3.7.6.1.8(a) p.3-406 equation solved at 1e7, via research_notes/Üç sapma alanı/A_titresim_yorulma.md",
+          "source": "MIL-HDBK-5J Fig. 3.7.6.1.8(a) p.3-406 equation solved at 1e7, via prev_guess/01_Ansys/research/Üç sapma alanı/A_titresim_yorulma.md",
           "tag": "Y"
         },
         "k": {
           "value": 131,
           "unit": "W/mK",
           "condition": "70 F",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.7.6.0 p.3-388 (T6, eye-read)",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Fig 3.7.6.0 p.3-388 (T6, eye-read)",
           "tag": "D"
         },
         "cte": {
           "value": 22.9,
           "unit": "1e-6/K",
           "condition": "70-212 F",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.7.6.0 (~12.75e-6/F)",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Fig 3.7.6.0 (~12.75e-6/F)",
           "tag": "D"
         },
         "Tmax": {
           "value": 100,
           "unit": "C",
-          "source": "judgement: at 150 C / 10,000 h Fty keeps only ~34 % (MMPDS-01 Fig 3.7.6.1.1(d)), research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "source": "judgement: at 150 C / 10,000 h Fty keeps only ~34 % (MMPDS-01 Fig 3.7.6.1.1(d)), prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md",
           "tag": "Y"
         },
         "co2": {
@@ -578,14 +578,14 @@
           "low": 6.6,
           "high": 15.1,
           "condition": "primary ingot, cradle-to-gate, fabrication excluded",
-          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "co2_recycled": {
           "value": 1.81,
           "unit": "kg CO2e/kg",
           "condition": "100 % recycled route",
-          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "price": {
@@ -594,7 +594,7 @@
           "low": 7.5,
           "high": 20,
           "condition": "aerospace plate, mill/distributor",
-          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/cost_data.md",
           "tag": "Y"
         }
       },
@@ -648,14 +648,14 @@
           "value": 156,
           "unit": "W/mK",
           "condition": "70 F",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.7.6.0 (T73 curve, eye-read)",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Fig 3.7.6.0 (T73 curve, eye-read)",
           "tag": "D"
         },
         "cte": {
           "value": 22.9,
           "unit": "1e-6/K",
           "condition": "70-212 F",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.7.6.0",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Fig 3.7.6.0",
           "tag": "D"
         },
         "co2": {
@@ -664,14 +664,14 @@
           "low": 6.6,
           "high": 15.1,
           "condition": "primary ingot, cradle-to-gate, fabrication excluded",
-          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "co2_recycled": {
           "value": 1.81,
           "unit": "kg CO2e/kg",
           "condition": "100 % recycled route",
-          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "price": {
@@ -680,7 +680,7 @@
           "low": 7.5,
           "high": 20,
           "condition": "aerospace plate, mill/distributor",
-          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/cost_data.md",
           "tag": "Y"
         }
       },
@@ -731,13 +731,13 @@
         "k": {
           "value": 156,
           "unit": "W/mK",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Table 3.2.13.0(c) (90 Btu at 77 F); MIL-HDBK-5J prints the same 90",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Table 3.2.13.0(c) (90 Btu at 77 F); MIL-HDBK-5J prints the same 90",
           "tag": "D"
         },
         "cte": {
           "value": 20.8,
           "unit": "1e-6/K",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 3.2.13.0 (11.55e-6/F, 70-200 F)",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Fig 3.2.13.0 (11.55e-6/F, 70-200 F)",
           "tag": "D"
         },
         "Tmax": {
@@ -752,14 +752,14 @@
           "low": 6.6,
           "high": 15.1,
           "condition": "primary ingot, cradle-to-gate, fabrication excluded",
-          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (primary Al, CO2e); range: 6.6 EU-made (European Aluminium EPR 2024 V2.0 p5), 12 (Ashby family), 15.1 global (IAI factsheet 2022); via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "co2_recycled": {
           "value": 1.81,
           "unit": "kg CO2e/kg",
           "condition": "100 % recycled route",
-          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p1 (recycled Al CO2e); Ashby family 2.1; via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "price": {
@@ -768,7 +768,7 @@
           "low": 7.5,
           "high": 20,
           "condition": "aerospace plate, mill/distributor",
-          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "source": "low 7.5 = Constellium A&T FY2024 revenue/shipments; value/high = assumed distributor premium; prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/cost_data.md",
           "tag": "Y"
         }
       },
@@ -789,54 +789,54 @@
         "rho": {
           "value": 2670,
           "unit": "kg/m3",
-          "source": "EOS 'Materialdatenblatt FlexLine EOS Aluminium AlSi10Mg' CR507 v01 12.2017, M290, techpilot copy https://cdn.techpilot.com/public/132713/documents/4b7c1a54-6356-48a4-9cda-7a02f7f11853/alsi10mg_9011-0024_m290_material_data_sheet_12-17_de.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (ISO 3369)",
+          "source": "EOS 'Materialdatenblatt FlexLine EOS Aluminium AlSi10Mg' CR507 v01 12.2017, M290, techpilot copy https://cdn.techpilot.com/public/132713/documents/4b7c1a54-6356-48a4-9cda-7a02f7f11853/alsi10mg_9011-0024_m290_material_data_sheet_12-17_de.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md (ISO 3369)",
           "tag": "D"
         },
         "E": {
           "value": 72,
           "unit": "GPa",
-          "source": "AddUp AlSi10Mg datasheet 2023 (72 +- 3 GPa XY as-built; 77 +- 4 after 210 C/2 h), read by sub-agent 2026-11-01, as cited in studies/tradeoff/build_studies.py",
+          "source": "AddUp AlSi10Mg datasheet 2023 (72 +- 3 GPa XY as-built; 77 +- 4 after 210 C/2 h), read by sub-agent 2026-11-01, as cited in prev_guess/01_Ansys/tradeoff/build_studies.py",
           "tag": "S"
         },
         "Fty": {
           "value": 220,
           "unit": "MPa",
           "condition": "stress relieved, XY; T6 (EOS web) 260 H / 250 V; as-built 270 XY / 235 Z",
-          "source": "EOS 'Materialdatenblatt FlexLine EOS Aluminium AlSi10Mg' CR507 v01 12.2017, M290, techpilot copy https://cdn.techpilot.com/public/132713/documents/4b7c1a54-6356-48a4-9cda-7a02f7f11853/alsi10mg_9011-0024_m290_material_data_sheet_12-17_de.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md p4, stress relieved 270 C/90 min, XY (Z 225)",
+          "source": "EOS 'Materialdatenblatt FlexLine EOS Aluminium AlSi10Mg' CR507 v01 12.2017, M290, techpilot copy https://cdn.techpilot.com/public/132713/documents/4b7c1a54-6356-48a4-9cda-7a02f7f11853/alsi10mg_9011-0024_m290_material_data_sheet_12-17_de.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md p4, stress relieved 270 C/90 min, XY (Z 225)",
           "tag": "D"
         },
         "Ftu": {
           "value": 340,
           "unit": "MPa",
           "condition": "stress relieved, XY",
-          "source": "EOS 'Materialdatenblatt FlexLine EOS Aluminium AlSi10Mg' CR507 v01 12.2017, M290, techpilot copy https://cdn.techpilot.com/public/132713/documents/4b7c1a54-6356-48a4-9cda-7a02f7f11853/alsi10mg_9011-0024_m290_material_data_sheet_12-17_de.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md p4, stress relieved, XY (Z 350); as-built 460/470",
+          "source": "EOS 'Materialdatenblatt FlexLine EOS Aluminium AlSi10Mg' CR507 v01 12.2017, M290, techpilot copy https://cdn.techpilot.com/public/132713/documents/4b7c1a54-6356-48a4-9cda-7a02f7f11853/alsi10mg_9011-0024_m290_material_data_sheet_12-17_de.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md p4, stress relieved, XY (Z 350); as-built 460/470",
           "tag": "D"
         },
         "elongation": {
           "value": 12,
           "unit": "%",
-          "source": "EOS 'Materialdatenblatt FlexLine EOS Aluminium AlSi10Mg' CR507 v01 12.2017, M290, techpilot copy https://cdn.techpilot.com/public/132713/documents/4b7c1a54-6356-48a4-9cda-7a02f7f11853/alsi10mg_9011-0024_m290_material_data_sheet_12-17_de.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md p4, stress relieved XY (Z 9)",
+          "source": "EOS 'Materialdatenblatt FlexLine EOS Aluminium AlSi10Mg' CR507 v01 12.2017, M290, techpilot copy https://cdn.techpilot.com/public/132713/documents/4b7c1a54-6356-48a4-9cda-7a02f7f11853/alsi10mg_9011-0024_m290_material_data_sheet_12-17_de.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md p4, stress relieved XY (Z 9)",
           "tag": "D"
         },
         "fatigue": {
           "value": 110,
           "unit": "MPa",
           "condition": "R=-1, 2e7, turned (machined), V and H; as-built surface ~50-75 MPa (literature, [S])",
-          "source": "EOS PDS AlSi10Mg EOS M 290 30 um (web, last changed 30.10.2026), https://www.eos.info/metal-solutions/data-sheets/aluminium/pds-eos-aluminium-alsi10mg-eos-m-290-30um 'Fatigue' row (ASTM E466-15), via research_notes/Üç sapma alanı/A_titresim_yorulma.md",
+          "source": "EOS PDS AlSi10Mg EOS M 290 30 um (web, last changed 30.10.2026), https://www.eos.info/metal-solutions/data-sheets/aluminium/pds-eos-aluminium-alsi10mg-eos-m-290-30um 'Fatigue' row (ASTM E466-15), via prev_guess/01_Ansys/research/Üç sapma alanı/A_titresim_yorulma.md",
           "tag": "D"
         },
         "k": {
           "value": 110,
           "unit": "W/mK",
           "condition": "as-built H (V 100); after T6 155 H / 165 V",
-          "source": "EOS PDS AlSi10Mg EOS M 290 30 um (web, last changed 30.10.2026), https://www.eos.info/metal-solutions/data-sheets/aluminium/pds-eos-aluminium-alsi10mg-eos-m-290-30um (EN ISO 22007-2), via research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "source": "EOS PDS AlSi10Mg EOS M 290 30 um (web, last changed 30.10.2026), https://www.eos.info/metal-solutions/data-sheets/aluminium/pds-eos-aluminium-alsi10mg-eos-m-290-30um (EN ISO 22007-2), via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md",
           "tag": "D"
         },
         "cte": {
           "value": 20,
           "unit": "1e-6/K",
           "condition": "25-100 C (22 to 200 C, 27 to 300 C)",
-          "source": "EOS PDS AlSi10Mg EOS M 290 30 um (web, last changed 30.10.2026), https://www.eos.info/metal-solutions/data-sheets/aluminium/pds-eos-aluminium-alsi10mg-eos-m-290-30um (ASTM E228), via research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "source": "EOS PDS AlSi10Mg EOS M 290 30 um (web, last changed 30.10.2026), https://www.eos.info/metal-solutions/data-sheets/aluminium/pds-eos-aluminium-alsi10mg-eos-m-290-30um (ASTM E228), via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md",
           "tag": "D"
         },
         "co2": {
@@ -854,7 +854,7 @@
           "low": 40,
           "high": 126,
           "condition": "powder only; L-PBF route cost excl. powder ~500 (220-1910) EUR/kg finished",
-          "source": "Simpson 2021 USD 78/kg; Depboylu SFF 2024 USD 135-145/kg; low from IAPT ratio; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "source": "Simpson 2021 USD 78/kg; Depboylu SFF 2024 USD 135-145/kg; low from IAPT ratio; prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/cost_data.md",
           "tag": "S"
         }
       },
@@ -875,39 +875,39 @@
         "rho": {
           "value": 2670,
           "unit": "kg/m3",
-          "source": "3D Systems 'Certified Scalmalloy (A)' datasheet PN 10123B 02-22, https://3dsystems.com/sites/default/files/2022-02/3d-systems-certified-scalmalloy(a)-datasheet-usen-2022-02-23-a-print.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md ('value from literature', adopted from APWORKS)",
+          "source": "3D Systems 'Certified Scalmalloy (A)' datasheet PN 10123B 02-22, https://3dsystems.com/sites/default/files/2022-02/3d-systems-certified-scalmalloy(a)-datasheet-usen-2022-02-23-a-print.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md ('value from literature', adopted from APWORKS)",
           "tag": "D"
         },
         "E": {
           "value": 69,
           "unit": "GPa",
-          "source": "Colibrium Additive M2 Series 5 Al-Mg-Sc datasheet 2025-08-21 RevB (horizontal, after 325 C/4 h; 70 as-built), read by sub-agent 2026-11-01, as cited in studies/tradeoff/build_studies.py",
+          "source": "Colibrium Additive M2 Series 5 Al-Mg-Sc datasheet 2025-08-21 RevB (horizontal, after 325 C/4 h; 70 as-built), read by sub-agent 2026-11-01, as cited in prev_guess/01_Ansys/tradeoff/build_studies.py",
           "tag": "S"
         },
         "Fty": {
           "value": 490,
           "unit": "MPa",
           "condition": "SR 325 C/4 h, 95/95 TI basis",
-          "source": "3D Systems 'Certified Scalmalloy (A)' datasheet PN 10123B 02-22, https://3dsystems.com/sites/default/files/2022-02/3d-systems-certified-scalmalloy(a)-datasheet-usen-2022-02-23-a-print.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (30 um, XY and Z; 60 um XY 500)",
+          "source": "3D Systems 'Certified Scalmalloy (A)' datasheet PN 10123B 02-22, https://3dsystems.com/sites/default/files/2022-02/3d-systems-certified-scalmalloy(a)-datasheet-usen-2022-02-23-a-print.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md (30 um, XY and Z; 60 um XY 500)",
           "tag": "D"
         },
         "Ftu": {
           "value": 520,
           "unit": "MPa",
-          "source": "3D Systems 'Certified Scalmalloy (A)' datasheet PN 10123B 02-22, https://3dsystems.com/sites/default/files/2022-02/3d-systems-certified-scalmalloy(a)-datasheet-usen-2022-02-23-a-print.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (30 um, XY and Z)",
+          "source": "3D Systems 'Certified Scalmalloy (A)' datasheet PN 10123B 02-22, https://3dsystems.com/sites/default/files/2022-02/3d-systems-certified-scalmalloy(a)-datasheet-usen-2022-02-23-a-print.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md (30 um, XY and Z)",
           "tag": "D"
         },
         "elongation": {
           "value": 15.8,
           "unit": "%",
-          "source": "3D Systems 'Certified Scalmalloy (A)' datasheet PN 10123B 02-22, https://3dsystems.com/sites/default/files/2022-02/3d-systems-certified-scalmalloy(a)-datasheet-usen-2022-02-23-a-print.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md (30 um, plastic elongation)",
+          "source": "3D Systems 'Certified Scalmalloy (A)' datasheet PN 10123B 02-22, https://3dsystems.com/sites/default/files/2022-02/3d-systems-certified-scalmalloy(a)-datasheet-usen-2022-02-23-a-print.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md (30 um, plastic elongation)",
           "tag": "D"
         },
         "fatigue": {
           "value": 87,
           "unit": "MPa",
           "condition": "R=0.1, ~1e7 run-out, turned, sigma_a (amplitude) read off figure +-3 MPa; as-built ~41",
-          "source": "Musekamp et al. 2021, Metals 11:1961, Fig. 8 p.11, via research_notes/Üç sapma alanı/A_titresim_yorulma.md",
+          "source": "Musekamp et al. 2021, Metals 11:1961, Fig. 8 p.11, via prev_guess/01_Ansys/research/Üç sapma alanı/A_titresim_yorulma.md",
           "tag": "D"
         },
         "co2": {
@@ -915,7 +915,7 @@
           "unit": "kg CO2e/kg",
           "low": 68,
           "high": 128,
-          "source": "estimate: Sc share from Mehta et al. 2022 Table 2 x Hengevoss et al. 2024 Table 1, + Al 12; studies/tradeoff/build_studies.py SCAL_CO2",
+          "source": "estimate: Sc share from Mehta et al. 2022 Table 2 x Hengevoss et al. 2024 Table 1, + Al 12; prev_guess/01_Ansys/tradeoff/build_studies.py SCAL_CO2",
           "tag": "Y"
         },
         "price": {
@@ -923,7 +923,7 @@
           "unit": "EUR/kg (powder)",
           "low": 120,
           "high": 400,
-          "source": "no published price found; placeholder, research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "source": "no published price found; placeholder, prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/cost_data.md",
           "tag": "Y"
         }
       },
@@ -1050,14 +1050,14 @@
           "value": 7.3,
           "unit": "W/mK",
           "condition": "70 F",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 5.4.1.0 p.5-60 (~4.2 Btu, eye-read)",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Fig 5.4.1.0 p.5-60 (~4.2 Btu, eye-read)",
           "tag": "D"
         },
         "cte": {
           "value": 8.8,
           "unit": "1e-6/K",
           "condition": "70-200 F",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 5.4.1.0 (~4.9e-6/F)",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Fig 5.4.1.0 (~4.9e-6/F)",
           "tag": "D"
         },
         "co2": {
@@ -1078,7 +1078,7 @@
           "unit": "EUR/kg (plate/sheet)",
           "low": 29,
           "high": 96,
-          "source": "Dutta & Froes 2014 (USD 15-50/lb sheet) via Froes EWI deck slide 3; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "source": "Dutta & Froes 2014 (USD 15-50/lb sheet) via Froes EWI deck slide 3; prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/cost_data.md",
           "tag": "S"
         }
       },
@@ -1100,45 +1100,45 @@
         "rho": {
           "value": 4410,
           "unit": "kg/m3",
-          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md ('Approx. 4.41 g/cm3', M290)",
+          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md and prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md ('Approx. 4.41 g/cm3', M290)",
           "tag": "D"
         },
         "E": {
           "value": 110,
           "unit": "GPa",
-          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md (400 W sheet 07.2022: 110 +- 15 GPa, H and V), via research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md and prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md (400 W sheet 07.2022: 110 +- 15 GPa, H and V), via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md",
           "tag": "D"
         },
         "Fty": {
           "value": 945,
           "unit": "MPa",
           "condition": "800 C/2 h, H",
-          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md M290, 800 C/2 h, horizontal (vertical 965)",
+          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md and prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md M290, 800 C/2 h, horizontal (vertical 965)",
           "tag": "D"
         },
         "Ftu": {
           "value": 1055,
           "unit": "MPa",
-          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md M290, 800 C/2 h, horizontal (vertical 1075)",
+          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md and prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md M290, 800 C/2 h, horizontal (vertical 1075)",
           "tag": "D"
         },
         "elongation": {
           "value": 13,
           "unit": "%",
-          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md M290, H (V 14)",
+          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md and prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md M290, H (V 14)",
           "tag": "D"
         },
         "fatigue": {
           "value": 600,
           "unit": "MPa",
           "condition": "R=-1, 1e7, milled + HIP; HIP with as-built surface 175, annealed as-built 200",
-          "source": "Greitemeier (milled + HIP 920 C/100 MPa) via Afroz et al. 2022 Int J Fract 235 Table 3, via research_notes/Üç sapma alanı/A_titresim_yorulma.md",
+          "source": "Greitemeier (milled + HIP 920 C/100 MPa) via Afroz et al. 2022 Int J Fract 235 Table 3, via prev_guess/01_Ansys/research/Üç sapma alanı/A_titresim_yorulma.md",
           "tag": "S"
         },
         "Tmax": {
           "value": 350,
           "unit": "C",
-          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md 07.2022 'Thermal properties of parts' (max long-term operating ~350 C), via research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "source": "EOS Titanium Ti64ELI MDS (M290 06.2022 / M400 07.22), https://EOS.info/05-datasheet-images/Assets_MDS_Metal/EOS_Titanium_Ti64ELI/Material_DataSheet_EOS_Titanium_Ti64Eli_EOSM290_EOSM400_en.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md and prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md 07.2022 'Thermal properties of parts' (max long-term operating ~350 C), via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md",
           "tag": "D"
         },
         "k": {
@@ -1166,7 +1166,7 @@
           "low": 130,
           "high": 312,
           "condition": "powder only; route cost excl. powder ~500 (250-855) EUR/kg",
-          "source": "Fraunhofer IAPT 2021 Fig. 13 (cheapest 130-162) and Simpson 2021 USD 360; research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "source": "Fraunhofer IAPT 2021 Fig. 13 (cheapest 130-162) and Simpson 2021 USD 360; prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/cost_data.md",
           "tag": "S"
         }
       },
@@ -1243,7 +1243,7 @@
           "value": 7806,
           "unit": "kg/m3",
           "condition": "H900; AK Steel Cond. A 7780 [S]",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Table 2.6.9.0(b) p.2-197 (H900 value; MIL-HDBK-5J leaves omega blank for H1025)",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Table 2.6.9.0(b) p.2-197 (H900 value; MIL-HDBK-5J leaves omega blank for H1025)",
           "tag": "D"
         },
         "E": {
@@ -1276,19 +1276,19 @@
           "value": 17.3,
           "unit": "W/mK",
           "condition": "200 F",
-          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via research_notes/Üç sapma alanı/C_isil_enerji.md Fig 2.6.9.0 p.2-201 (~10.0 Btu at 200 F, eye-read)",
+          "source": "DOT/FAA/AR-MMPDS-01 (Jan 2003), https://everyspec.com/FAA/FAA-General/DOT-FAA-AR-MMPDS-01-JAN2003_24102/ via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Fig 2.6.9.0 p.2-201 (~10.0 Btu at 200 F, eye-read)",
           "tag": "D"
         },
         "cte": {
           "value": 10.8,
           "unit": "1e-6/K",
-          "source": "interpolated between H900 10.4 and H1150 11.1 (MMPDS-01 Fig 2.6.9.0, -100 to 70 F, via research_notes/Üç sapma alanı/C_isil_enerji.md)",
+          "source": "interpolated between H900 10.4 and H1150 11.1 (MMPDS-01 Fig 2.6.9.0, -100 to 70 F, via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md)",
           "tag": "Y"
         },
         "Tmax": {
           "value": 316,
           "unit": "C",
-          "source": "United Performance Metals 17-4 PH datasheet ('up to 600 F (316 C)'), https://www.upmet.com/sites/default/files/datasheets/17-4-ph.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md",
+          "source": "United Performance Metals 17-4 PH datasheet ('up to 600 F (316 C)'), https://www.upmet.com/sites/default/files/datasheets/17-4-ph.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md",
           "tag": "S"
         },
         "co2": {
@@ -1307,7 +1307,7 @@
           "value": 91,
           "unit": "USD/kg (2021, L-PBF powder)",
           "condition": "powder only; wrought bar price NOT FOUND",
-          "source": "Simpson 2021, Additive Manufacturing Media, via research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "source": "Simpson 2021, Additive Manufacturing Media, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/cost_data.md",
           "tag": "S"
         }
       },
@@ -1522,20 +1522,20 @@
           "value": 11.4,
           "unit": "W/mK",
           "condition": "70 F",
-          "source": "Special Metals SMC-045 'INCONEL alloy 718' (2007), https://www.specialmetals.com/documents/technical-bulletins/inconel/inconel-alloy-718.pdf, via research_notes/Üç sapma alanı/C_isil_enerji.md Table 5",
+          "source": "Special Metals SMC-045 'INCONEL alloy 718' (2007), https://www.specialmetals.com/documents/technical-bulletins/inconel/inconel-alloy-718.pdf, via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Table 5",
           "tag": "D"
         },
         "cte": {
           "value": 13.2,
           "unit": "1e-6/K",
           "condition": "70-200 F",
-          "source": "Special Metals SMC-045 'INCONEL alloy 718' (2007), https://www.specialmetals.com/documents/technical-bulletins/inconel/inconel-alloy-718.pdf, via research_notes/Üç sapma alanı/C_isil_enerji.md Table 2 (7.31e-6/F)",
+          "source": "Special Metals SMC-045 'INCONEL alloy 718' (2007), https://www.specialmetals.com/documents/technical-bulletins/inconel/inconel-alloy-718.pdf, via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md Table 2 (7.31e-6/F)",
           "tag": "D"
         },
         "Tmax": {
           "value": 704,
           "unit": "C",
-          "source": "Special Metals SMC-045 'INCONEL alloy 718' (2007), https://www.specialmetals.com/documents/technical-bulletins/inconel/inconel-alloy-718.pdf, via research_notes/Üç sapma alanı/C_isil_enerji.md p1: service range -423 to 1300 F",
+          "source": "Special Metals SMC-045 'INCONEL alloy 718' (2007), https://www.specialmetals.com/documents/technical-bulletins/inconel/inconel-alloy-718.pdf, via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md p1: service range -423 to 1300 F",
           "tag": "D"
         },
         "co2": {
@@ -1570,7 +1570,7 @@
           "value": 8150,
           "unit": "kg/m3",
           "condition": "minimum",
-          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md ('min 8.15 g/cm3')",
+          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md and prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md ('min 8.15 g/cm3')",
           "tag": "D"
         },
         "E": {
@@ -1583,31 +1583,31 @@
           "value": 1145,
           "unit": "MPa",
           "condition": "HT, V",
-          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md M290 40 um, heat treated, vertical (horizontal 1240)",
+          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md and prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md M290 40 um, heat treated, vertical (horizontal 1240)",
           "tag": "D"
         },
         "Ftu": {
           "value": 1375,
           "unit": "MPa",
-          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md heat treated, vertical (horizontal 1505)",
+          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md and prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md heat treated, vertical (horizontal 1505)",
           "tag": "D"
         },
         "elongation": {
           "value": 17,
           "unit": "%",
-          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md heat treated, vertical (horizontal 12)",
+          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md and prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md heat treated, vertical (horizontal 12)",
           "tag": "D"
         },
         "cte": {
           "value": 13.1,
           "unit": "1e-6/K",
-          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md (25-100 C)",
+          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md and prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md (25-100 C)",
           "tag": "D"
         },
         "Tmax": {
           "value": 700,
           "unit": "C",
-          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md and research_notes/Üç sapma alanı/C_isil_enerji.md p1: 'good tensile, fatigue, creep and rupture strength at temperatures up to 700 C'",
+          "source": "EOS NickelAlloy IN718 MDS V1.0 CR696 2020-02, https://eos.info/05-datasheet-images/Assets_MDS_Metal/EOS_NickelAlloy_IN718/Material_DataSheet_EOS_NickelAlloy_IN718_en.pdf, via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md and prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md p1: 'good tensile, fatigue, creep and rupture strength at temperatures up to 700 C'",
           "tag": "D"
         },
         "co2": {
@@ -1615,14 +1615,14 @@
           "unit": "kg CO2e/kg",
           "low": 11.6,
           "high": 25.0,
-          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py Ni family as low end; high 25 assumed for Nb/Mo and atomisation (studies/tradeoff/build_studies.py)",
+          "source": "Ashby 2013 'Materials and the Environment' family values via 'Useful numbers for environmental studies' compilation (polybags.co.uk PDF), as coded in src/aerokit/materials/eco.py Ni family as low end; high 25 assumed for Nb/Mo and atomisation (prev_guess/01_Ansys/tradeoff/build_studies.py)",
           "tag": "Y"
         },
         "price": {
           "value": 120,
           "unit": "USD/kg (2021, L-PBF powder)",
           "condition": "powder only; Simpson total part cost USD 1060/kg",
-          "source": "Simpson 2021 (Barnes Global), via research_notes/Hafifletme derin araştırma 2/cost_data.md",
+          "source": "Simpson 2021 (Barnes Global), via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/cost_data.md",
           "tag": "S"
         }
       },
@@ -1747,13 +1747,13 @@
           "low": 17.8,
           "high": 36.0,
           "condition": "primary Mg ingot",
-          "source": "IMA/DLR (Ehrenberger) Mg LCA study 2013, https://elib.dlr.de/87332/1/2013-12_IMA_LCA-Study_Report_Part-I-and-II_incl-summary.pdf, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md p5/p47 (Pidgeon, China 2011 weighted; 17.8 electrolytic); Ashby family 36 [S]",
+          "source": "IMA/DLR (Ehrenberger) Mg LCA study 2013, https://elib.dlr.de/87332/1/2013-12_IMA_LCA-Study_Report_Part-I-and-II_incl-summary.pdf, via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md p5/p47 (Pidgeon, China 2011 weighted; 17.8 electrolytic); Ashby family 36 [S]",
           "tag": "D"
         },
         "co2_recycled": {
           "value": 1.1,
           "unit": "kg CO2e/kg",
-          "source": "IMA/DLR (Ehrenberger) Mg LCA study 2013, https://elib.dlr.de/87332/1/2013-12_IMA_LCA-Study_Report_Part-I-and-II_incl-summary.pdf, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md p77 (Mg-recovery scenario; 3.8 if recycled into Al alloys); Ashby family 2.9",
+          "source": "IMA/DLR (Ehrenberger) Mg LCA study 2013, https://elib.dlr.de/87332/1/2013-12_IMA_LCA-Study_Report_Part-I-and-II_incl-summary.pdf, via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md p77 (Mg-recovery scenario; 3.8 if recycled into Al alloys); Ashby family 2.9",
           "tag": "D"
         }
       },
@@ -1773,7 +1773,7 @@
         "rho": {
           "value": 1830,
           "unit": "kg/m3",
-          "source": "Luxfer MEL Elektron 43 page/datasheet, 'Specific gravity: 1.83' (search snippet only; PDF redirects to homepage), via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md",
+          "source": "Luxfer MEL Elektron 43 page/datasheet, 'Specific gravity: 1.83' (search snippet only; PDF redirects to homepage), via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md",
           "tag": "S"
         },
         "E": {
@@ -1800,7 +1800,7 @@
           "value": 250,
           "unit": "C",
           "condition": "Elektron 43 wrought",
-          "source": "Luxfer Elektron 43: 'for use at temperatures up to 250 C' (snippet; WE43B casting up to 300 C), via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md",
+          "source": "Luxfer Elektron 43: 'for use at temperatures up to 250 C' (snippet; WE43B casting up to 300 C), via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md",
           "tag": "S"
         },
         "co2": {
@@ -1809,13 +1809,13 @@
           "low": 17.8,
           "high": 36.0,
           "condition": "primary Mg (generic), rare-earth additions not counted",
-          "source": "IMA/DLR (Ehrenberger) Mg LCA study 2013, https://elib.dlr.de/87332/1/2013-12_IMA_LCA-Study_Report_Part-I-and-II_incl-summary.pdf, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md p5/p47 (Pidgeon, China 2011 weighted; 17.8 electrolytic); Ashby family 36 [S]",
+          "source": "IMA/DLR (Ehrenberger) Mg LCA study 2013, https://elib.dlr.de/87332/1/2013-12_IMA_LCA-Study_Report_Part-I-and-II_incl-summary.pdf, via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md p5/p47 (Pidgeon, China 2011 weighted; 17.8 electrolytic); Ashby family 36 [S]",
           "tag": "D"
         },
         "co2_recycled": {
           "value": 1.1,
           "unit": "kg CO2e/kg",
-          "source": "IMA/DLR (Ehrenberger) Mg LCA study 2013, https://elib.dlr.de/87332/1/2013-12_IMA_LCA-Study_Report_Part-I-and-II_incl-summary.pdf, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md p77 (Mg-recovery scenario; 3.8 if recycled into Al alloys); Ashby family 2.9",
+          "source": "IMA/DLR (Ehrenberger) Mg LCA study 2013, https://elib.dlr.de/87332/1/2013-12_IMA_LCA-Study_Report_Part-I-and-II_incl-summary.pdf, via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md p77 (Mg-recovery scenario; 3.8 if recycled into Al alloys); Ashby family 2.9",
           "tag": "D"
         }
       },
@@ -1835,14 +1835,14 @@
         "rho": {
           "value": 1570,
           "unit": "kg/m3",
-          "source": "Hexcel HexPly 8552 EU PDS p2 (IM7/8552, Vf 57.7 %), via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "Hexcel HexPly 8552 EU PDS p2 (IM7/8552, Vf 57.7 %), via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "E": {
           "value": 57.8,
           "unit": "GPa",
           "condition": "[25/50/25], RTD, normalised mean, tension",
-          "source": "NCAMP NCP-RP-2009-028 Rev B p59 Table 5-2 (8.39 Msi), via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "NCAMP NCP-RP-2009-028 Rev B p59 Table 5-2 (8.39 Msi), via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "Ftu": {
@@ -1855,20 +1855,20 @@
         "cte": {
           "value": 2.4,
           "unit": "1e-6/K",
-          "source": "proxy: T300/5208 [0/+-45/90]s measured 1.89 (moire) / 2.41 (strain gauge), NASA TM-80788 Table 3; CLT 2.5; via research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "source": "proxy: T300/5208 [0/+-45/90]s measured 1.89 (moire) / 2.41 (strain gauge), NASA TM-80788 Table 3; CLT 2.5; via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md",
           "tag": "Y"
         },
         "k": {
           "value": 2.7,
           "unit": "W/mK",
           "condition": "in-plane; through-thickness ~0.6",
-          "source": "estimate (k1 4.89 + k3 0.58)/2 in-plane from Ulu 2015 UD IM7/8552, via research_notes/Üç sapma alanı/C_isil_enerji.md",
+          "source": "estimate (k1 4.89 + k3 0.58)/2 in-plane from Ulu 2015 UD IM7/8552, via prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md",
           "tag": "Y"
         },
         "Tmax": {
           "value": 121,
           "unit": "C",
-          "source": "Hexcel HexPly 8552 US PDS p1 'Service Temperature up to 250 F', via research_notes/Hafifletme derin araştırma 2/alloy_datasheets.md",
+          "source": "Hexcel HexPly 8552 US PDS p1 'Service Temperature up to 250 F', via prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/alloy_datasheets.md",
           "tag": "D"
         },
         "co2": {
@@ -1876,7 +1876,7 @@
           "unit": "kg CO2e/kg",
           "low": 14.9,
           "high": 46.2,
-          "source": "rule of mixtures 0.65 x carbon fibre (19.85 JCMA / 33 Ashby / 68 Meng coal) + 0.35 x epoxy 5.70 (ICE); studies/tradeoff/build_studies.py; process (autoclave 5-15) not included",
+          "source": "rule of mixtures 0.65 x carbon fibre (19.85 JCMA / 33 Ashby / 68 Meng coal) + 0.35 x epoxy 5.70 (ICE); prev_guess/01_Ansys/tradeoff/build_studies.py; process (autoclave 5-15) not included",
           "tag": "Y"
         }
       },
@@ -1894,7 +1894,7 @@
         "rho": {
           "value": 1830,
           "unit": "kg/m3",
-          "source": "Hexcel HexPly 913 US PDS p4 (7781/913, 37 % RC), via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "Hexcel HexPly 913 US PDS p4 (7781/913, 37 % RC), via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "E": {
@@ -1916,7 +1916,7 @@
           "low": 7.47,
           "high": 8.26,
           "condition": "Ashby 2013 7.47-8.26 [S]",
-          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p4 (GFRP, CO2; Ref. 1), via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "ICE v2.0 Summary Tables, Hammond & Jones, Jan 2011, https://kps.fsv.cvut.cz/upload/files/icev2.0summarytables.pdf printed p4 (GFRP, CO2; Ref. 1), via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         }
       },
@@ -1936,7 +1936,7 @@
         "rho": {
           "value": 1530,
           "unit": "kg/m3",
-          "source": "Toray Cetex TC1200 PDS v4.0 p2 (T300JB 5HS fabric, Vf 50 %), via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "Toray Cetex TC1200 PDS v4.0 p2 (T300JB 5HS fabric, Vf 50 %), via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         },
         "E": {
@@ -1957,7 +1957,7 @@
           "unit": "kg CO2e/kg",
           "low": 14.7,
           "high": 44.9,
-          "source": "rule of mixtures 0.58 x CF (19.85-33-68) + 0.42 x PEEK 7.5-13 (weak unattributed web value); studies/tradeoff/build_studies.py",
+          "source": "rule of mixtures 0.58 x CF (19.85-33-68) + 0.42 x PEEK 7.5-13 (weak unattributed web value); prev_guess/01_Ansys/tradeoff/build_studies.py",
           "tag": "Y"
         }
       },
@@ -2215,7 +2215,7 @@
         "rho": {
           "value": 48,
           "unit": "kg/m3",
-          "source": "Hexcel HexWeb HRH-10 PDS (US, (c)2017) p4 table, 3.0 pcf, https://www.hexcel.com/wp-content/uploads/2026/01/HexWeb_HRH10_DataSheet_us.pdf, via research_notes/Üç sapma alanı/B_malzeme_dongusellik.md",
+          "source": "Hexcel HexWeb HRH-10 PDS (US, (c)2017) p4 table, 3.0 pcf, https://www.hexcel.com/wp-content/uploads/2026/01/HexWeb_HRH10_DataSheet_us.pdf, via prev_guess/01_Ansys/research/Üç sapma alanı/B_malzeme_dongusellik.md",
           "tag": "D"
         }
       },

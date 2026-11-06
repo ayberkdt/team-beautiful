@@ -148,3 +148,30 @@ def test_partial_transmission_never_filled_in():
     assert items["heading"]["tag"] == "UNCONFIRMED" and items["heading"]["text"] == "TURN RIGHT HDG 190"
     assert v["partial"] is True
     assert not any(ch.isdigit() for ch in items["altitude"]["text"])
+
+
+def test_no_signal_state_opt_in_age_counter_then_loss():
+    mon = CommHealthMonitor(no_signal_after_s=1.0)
+    d = AdvisoryDisplay()
+    d.receive(parse("beetle one two three heading two seven zero", own_callsign="BTL123", t_received=0.0, msg_id=1))
+    assert mon.step(tick(0)) == States.NORMAL
+    seen = []
+    for t in range(1, 80):
+        st = mon.step(CommInputs(float(t), carrier=False, we_transmitted=t in (35, 50)))
+        v = d.view(float(t), st, mon.no_signal_s if st == States.NO_SIGNAL else None)
+        assert v["banner"] != "VHF VOICE OK"                       # never "OK" while nothing is heard
+        seen.append((st, v))
+    first = seen[0][1]
+    assert seen[0][0] == States.NO_SIGNAL and first["banner"] == "VHF: NO SIGNAL 1 s - CHECKING" and first["caution"]
+    assert first["items"][0]["tag"].startswith("NO SIGNAL - LAST RX")
+    assert seen[11][1]["banner"] == "VHF: NO SIGNAL 12 s - CHECKING"
+    assert seen[-1][0] == States.RX_LOST and seen[-1][1]["items"][0]["tag"].startswith("STALE")
+    mon2 = CommHealthMonitor(no_signal_after_s=1.0)
+    mon2.step(tick(0))
+    mon2.step(CommInputs(1.0, carrier=False))
+    assert mon2.step(tick(2)) == States.NORMAL                        # carrier back: true now, no hysteresis
+
+
+def test_no_signal_default_off_keeps_old_behaviour():
+    mon = CommHealthMonitor()
+    assert mon.step(CommInputs(5.0, carrier=False)) == States.NORMAL and mon.no_signal_s >= 1.0

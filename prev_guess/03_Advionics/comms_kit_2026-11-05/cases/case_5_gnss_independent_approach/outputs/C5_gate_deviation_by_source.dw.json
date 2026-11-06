@@ -1,0 +1,160 @@
+{
+ "surum": 1,
+ "ad": "C5_gate_deviation_by_source",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  816.6,
+  396.6
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   20.4,
+   24.0
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 24.0
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    262.9,
+    74.0,
+    861.6,
+    355.6
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Gate error",
+     "tur": "sacilim",
+     "renk": "#0072b2",
+     "isaret": "?",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 9.0
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "95th-percentile vertical error at the 200 ft gate (m)",
+    "nicelik": "95th-percentile vertical error at the 200 ft gate",
+    "birim": "m",
+    "bicim": "parantez",
+    "anahtar": "95thpercentileverticalerroratthe200ftgate",
+    "harf": "kucuk",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     66.11336001596699
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "20",
+     "40",
+     "60"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     312.5,
+     3.0,
+     812.0,
+     26.0
+    ]
+   },
+   "y": {
+    "ham": "Navigation source",
+    "nicelik": "Navigation source",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "navigationsource",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.15000000000000002,
+     3.15
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "GNSS (SBAS-like)",
+     "Ground radar (0.05 deg)",
+     "Ground radar (0.1 deg)",
+     "Spoofed GNSS (0.5 m/s ramp)"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": ".",
+    "tikler": [
+     "GNSS (SBAS-like)",
+     "Ground radar (0.05 deg)",
+     "Ground radar (0.1 deg)",
+     "Spoofed GNSS (0.5 m/s ramp)"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     262.9,
+     364.0,
+     443.9,
+     386.4
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

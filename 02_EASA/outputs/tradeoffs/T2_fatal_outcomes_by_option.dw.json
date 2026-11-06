@@ -1,0 +1,189 @@
+{
+ "surum": 1,
+ "ad": "T2_fatal_outcomes_by_option",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  797.9,
+  396.6
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [
+   20.4
+  ],
+  "panel": [],
+  "metin": [
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "lejant": 20.4,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    216.5,
+    74.0,
+    861.6,
+    339.6
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Pilot matches reliability",
+     "tur": "cizgi",
+     "renk": "#5f5f5f",
+     "isaret": "Path(array([[-1.  , -0.68],\n       [-1.  , -1.  ],\n       [-0.68, -1.  ],\n       [ 0.68, -1.  ],\n       [ 1.  , -1.  ],\n       [ 1.  , -0.68],\n       [ 1.  ,  0.68],\n       [ 1.  ,  1.  ],\n       [ 0.68,  1.  ],\n       [-0.68,  1.  ],\n       [-1.  ,  1.  ],\n       [-1.  ,  0.68],\n       [-1.  , -0.68]]), array([ 1,  3,  3,  2,  3,  3,  2,  3,  3,  2,  3,  3, 79], dtype=uint8))",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 8.08
+    },
+    {
+     "etiket": "Engine loss caused by the device",
+     "tur": "cizgi",
+     "renk": "#d55e00",
+     "isaret": "Path(array([[ 1.55884573e-01,  7.30000000e-01],\n       [ 1.75185684e-16,  1.00000000e+00],\n       [-1.55884573e-01,  7.30000000e-01],\n       [-7.10140831e-01, -2.30000000e-01],\n       [-8.66025404e-01, -5.00000000e-01],\n       [-5.54256258e-01, -5.00000000e-01],\n       [ 5.54256258e-01, -5.00000000e-01],\n       [ 8.66025404e-01, -5.00000000e-01],\n       [ 7.10140831e-01, -2.30000000e-01],\n       [ 1.55884573e-01,  7.30000000e-01]]), array([ 1,  3,  3,  2,  3,  3,  2,  3,  3, 79], dtype=uint8))",
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": 14.35
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Fatal outcomes per million flights",
+    "nicelik": "Fatal outcomes per million flights",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "fataloutcomespermillionflights",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.1,
+     400.0
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "10⁻¹",
+     "1",
+     "10",
+     "10²"
+    ],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "10⁻¹",
+     "1",
+     "10",
+     "10²"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     371.5,
+     3.0,
+     706.6,
+     26.0
+    ]
+   },
+   "y": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.5,
+     10.5
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "O0 no system",
+     "O1 bolt marks",
+     "O2 organisers' switch",
+     "O3 LOCK-SENSE + lamp",
+     "O4 + voice",
+     "O5 + belt tactor",
+     "O6 + ground gate",
+     "O7 + ground shut-down",
+     "O8 + in-flight shut-down",
+     "O9 + mechanical pawl",
+     "O10 + starter guard"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "O0 no system",
+     "O1 bolt marks",
+     "O2 organisers' switch",
+     "O3 LOCK-SENSE + lamp",
+     "O4 + voice",
+     "O5 + belt tactor",
+     "O6 + ground gate",
+     "O7 + ground shut-down",
+     "O8 + in-flight shut-down",
+     "O9 + mechanical pawl",
+     "O10 + starter guard"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "lejant": [
+    "Pilot matches reliability",
+    "5–95 % range",
+    "Engine loss caused by the device"
+   ],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": true,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

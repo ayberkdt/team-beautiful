@@ -1,0 +1,89 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "sunum",
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {
+  "Pilot always acts": {
+   "renk": "#07648e",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 0
+  },
+  "Pilot matches reliability": {
+   "renk": "#5f5f5f",
+   "baglam": false,
+   "isaret": "s",
+   "cizgi": "--",
+   "sira": 1
+  },
+  "Seated sensor only": {
+   "renk": "#d55e00",
+   "baglam": false,
+   "isaret": "^",
+   "cizgi": "-.",
+   "sira": 2
+  },
+  "Seated + one latch sensor": {
+   "renk": "#e69f00",
+   "baglam": false,
+   "isaret": "D",
+   "cizgi": ":",
+   "sira": 3
+  },
+  "One sensor per latch point": {
+   "renk": "#0072b2",
+   "baglam": false,
+   "isaret": "v",
+   "cizgi": [
+    0,
+    [
+     5,
+     1
+    ]
+   ],
+   "sira": 4
+  }
+ },
+ "nicelikler": {
+  "rrf": {
+   "etiket": "Risk reduction factor",
+   "birim": null,
+   "eksen": "y",
+   "sinir": null,
+   "olcek": "log",
+   "bicim": null
+  },
+  "option": {
+   "etiket": "Design option",
+   "birim": null,
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "points": {
+   "etiket": "Latch points on the canopy",
+   "birim": null,
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "K1_concept_ladder": "K1_concept_ladder.dw.json",
+  "K2_any_aircraft_latch_points": "K2_any_aircraft_latch_points.dw.json",
+  "K3_retrofit_process": "K3_retrofit_process.dw.json",
+  "K4_lock_sense_architecture": "K4_lock_sense_architecture.dw.json"
+ }
+}

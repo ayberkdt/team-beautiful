@@ -129,7 +129,7 @@ _ROUTE = ("buy_to_fly", "process_MJ_per_kg", "mass_factor")
 
 
 def load_study(path: str | Path) -> Study:
-    """Read and validate a study JSON file (see ``studies/tradeoff/README.md`` for the schema)."""
+    """Read and validate a study JSON file (see ``prev_guess/01_Ansys/tradeoff/README.md`` for the schema)."""
     raw = json.loads(Path(path).read_text(encoding="utf-8"))
     return _parse(raw)
 

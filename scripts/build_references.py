@@ -1,8 +1,8 @@
-"""Generate ``docs/references.md`` from the bibliography registry and the ``@cite`` decorators.
+"""Generate ``00_Common/docs/references.md`` from the bibliography registry and the ``@cite`` decorators.
 
 Usage::
 
-    python scripts/build_references.py            # write docs/references.md
+    python scripts/build_references.py            # write 00_Common/docs/references.md
     python scripts/build_references.py --check    # exit 1 if the file is out of date
 
 The page lists every reference with the functions that cite it, so a reader can go from a
@@ -24,7 +24,7 @@ sys.path.insert(0, str(ROOT / "src"))
 import aerokit  # noqa: E402
 from aerokit.references import REFERENCES  # noqa: E402
 
-OUT = ROOT / "docs" / "references.md"
+OUT = ROOT / "00_Common" / "docs" / "references.md"
 
 
 def citations() -> dict[str, list[str]]:
@@ -70,7 +70,7 @@ def render() -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--check", action="store_true", help="fail if docs/references.md is out of date")
+    ap.add_argument("--check", action="store_true", help="fail if 00_Common/docs/references.md is out of date")
     a = ap.parse_args()
     text = render()
     if a.check:

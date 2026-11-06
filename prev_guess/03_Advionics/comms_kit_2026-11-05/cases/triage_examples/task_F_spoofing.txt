@@ -1,0 +1,1 @@
+Someone transmits fake ADS-B positions near the airport. Show how the surveillance system detects the ghost target, for example with multilateration, and keeps the approach picture trustworthy.

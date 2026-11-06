@@ -1,0 +1,647 @@
+{
+ "phases": [
+  {
+   "label": "Initial climb",
+   "n": 76,
+   "fatal": 9
+  },
+  {
+   "label": "Cruise",
+   "n": 24,
+   "fatal": 4
+  },
+  {
+   "label": "Take-off roll",
+   "n": 17,
+   "fatal": 0
+  },
+  {
+   "label": "Approach",
+   "n": 7,
+   "fatal": 3
+  },
+  {
+   "label": "Other",
+   "n": 2,
+   "fatal": 0
+  }
+ ],
+ "families": [
+  {
+   "label": "Grob",
+   "n": 10,
+   "fatal": 1,
+   "bold": false
+  },
+  {
+   "label": "Van's RV",
+   "n": 10,
+   "fatal": 5,
+   "bold": false
+  },
+  {
+   "label": "Rutan-type canards",
+   "n": 9,
+   "fatal": 1,
+   "bold": false
+  },
+  {
+   "label": "Zenith / Zenair CH",
+   "n": 9,
+   "fatal": 1,
+   "bold": false
+  },
+  {
+   "label": "SportCruiser",
+   "n": 8,
+   "fatal": 0,
+   "bold": false
+  },
+  {
+   "label": "Evektor",
+   "n": 6,
+   "fatal": 2,
+   "bold": false
+  },
+  {
+   "label": "Europa",
+   "n": 5,
+   "fatal": 0,
+   "bold": false
+  },
+  {
+   "label": "Extra",
+   "n": 5,
+   "fatal": 0,
+   "bold": true
+  },
+  {
+   "label": "Schweizer",
+   "n": 5,
+   "fatal": 0,
+   "bold": false
+  },
+  {
+   "label": "Cap / Mudry",
+   "n": 4,
+   "fatal": 0,
+   "bold": false
+  },
+  {
+   "label": "All other types",
+   "n": 55,
+   "fatal": 6
+  }
+ ],
+ "options": [
+  {
+   "key": "O1",
+   "label": "Bolt marks only",
+   "acts": 1.4547677261613692,
+   "match": 1.4547677261613692,
+   "lo": 1.2000092100481585,
+   "hi": 1.9630875501817044,
+   "recommended": false
+  },
+  {
+   "key": "O2",
+   "label": "Organisers' switch",
+   "acts": 4.6475489579228055,
+   "match": 2.0117796882116132,
+   "lo": 1.1298298869443322,
+   "hi": 4.4611541973769135,
+   "recommended": false
+  },
+  {
+   "key": "O3",
+   "label": "LOCK-SENSE + lamp",
+   "acts": 4.3264286350092185,
+   "match": 2.0227613701164957,
+   "lo": 1.193971364629141,
+   "hi": 3.474811534544285,
+   "recommended": false
+  },
+  {
+   "key": "O4",
+   "label": "+ voice",
+   "acts": 23.45858479576337,
+   "match": 2.6997508100166443,
+   "lo": 1.25392339614423,
+   "hi": 9.166598166272918,
+   "recommended": false
+  },
+  {
+   "key": "O5",
+   "label": "+ throttle shaker",
+   "acts": 71.32184991215517,
+   "match": 2.844209676542207,
+   "lo": 1.264916746902187,
+   "hi": 12.192018364378816,
+   "recommended": true
+  },
+  {
+   "key": "O6",
+   "label": "+ ground gate",
+   "acts": 1175.4051480351914,
+   "match": 16.267700440710097,
+   "lo": 3.1125330476750586,
+   "hi": 158.86719602886294,
+   "recommended": false
+  },
+  {
+   "key": "O7",
+   "label": "+ ground shut-down",
+   "acts": 1726.4584950425105,
+   "match": 25.760205906613688,
+   "lo": 4.471341481287597,
+   "hi": 283.48846778076074,
+   "recommended": false
+  },
+  {
+   "key": "O8",
+   "label": "+ in-flight shut-down",
+   "acts": 1726.4584950425105,
+   "match": 25.760205906613688,
+   "lo": 4.534683982912425,
+   "hi": 281.6853768428109,
+   "recommended": false
+  },
+  {
+   "key": "O9",
+   "label": "+ mechanical pawl",
+   "acts": 555.1867536288185,
+   "match": 11.15342532430327,
+   "lo": 2.64849755581216,
+   "hi": 75.91786531132287,
+   "recommended": false
+  },
+  {
+   "key": "O10",
+   "label": "+ starter guard",
+   "acts": 138.27056887982715,
+   "match": 4.998448957025081,
+   "lo": 1.9076749978205394,
+   "hi": 24.325837193417,
+   "recommended": false
+  }
+ ],
+ "xmax": 10000,
+ "arch": {
+  "canopy": [
+   "steel target",
+   "bolt 1 tip",
+   "bolt 2 tip",
+   "bolt 3 tip"
+  ],
+  "sensors": [
+   "S0 seated",
+   "S1 lug 1",
+   "S2 lug 2",
+   "S3 lug 3"
+  ],
+  "cues": [
+   [
+    "i-lightbulb",
+    "3-colour lamp"
+   ],
+   [
+    "i-audio-waveform",
+    "Voice “CANOPY”"
+   ],
+   [
+    "i-waves",
+    "Throttle shaker"
+   ],
+   [
+    "i-lock",
+    "Take-off gate"
+   ],
+   [
+    "i-database",
+    "Lock-state log"
+   ]
+  ]
+ },
+ "process": [
+  {
+   "name": "Define",
+   "icon": "i-search",
+   "steps": [
+    [
+     "1",
+     "Pick aircraft"
+    ],
+    [
+     "2",
+     "Survey"
+    ],
+    [
+     "3",
+     "Hazards + HF"
+    ]
+   ],
+   "gate": [
+    "Every hazard has",
+    "a requirement"
+   ]
+  },
+  {
+   "name": "Design",
+   "icon": "i-pen-tool",
+   "steps": [
+    [
+     "4",
+     "Requirements"
+    ],
+    [
+     "5",
+     "Sensors + cues"
+    ],
+    [
+     "6",
+     "Logic"
+    ]
+   ],
+   "gate": [
+    "Logic passes the",
+    "fault demo"
+   ]
+  },
+  {
+   "name": "Build & test",
+   "icon": "i-wrench",
+   "steps": [
+    [
+     "7",
+     "Mount + rig"
+    ],
+    [
+     "8",
+     "Wire + EFIS"
+    ],
+    [
+     "9",
+     "Bench test"
+    ],
+    [
+     "10",
+     "Ground test"
+    ]
+   ],
+   "gate": [
+    "Every single",
+    "fault caught"
+   ]
+  },
+  {
+   "name": "Operate",
+   "icon": "i-list-checks",
+   "steps": [
+    [
+     "11",
+     "Flight check"
+    ],
+    [
+     "12",
+     "Train + gauge"
+    ]
+   ],
+   "gate": [
+    "Log + nuisance",
+    "review"
+   ]
+  }
+ ],
+ "n_lock": 126,
+ "n_all": 241,
+ "elec": {
+  "inputs": [
+   [
+    "i-scan-search",
+    "4 sensors",
+    "monitored loops",
+    true
+   ],
+   [
+    "i-check",
+    "Lever switch",
+    "primary arming",
+    true
+   ],
+   [
+    "i-gauge",
+    "MAP, rpm",
+    "engine power",
+    false
+   ],
+   [
+    "i-earth",
+    "IAS, GPS speed",
+    "air / ground",
+    false
+   ],
+   [
+    "i-zap",
+    "Main bus",
+    "own 5 A breaker",
+    false
+   ]
+  ],
+  "unit": [
+   "Alert unit",
+   "line monitor",
+   "phase logic",
+   "hardware AND",
+   "self-test, log"
+  ],
+  "outputs": [
+   [
+    "i-lightbulb",
+    "Lamps rear + front",
+    "3-colour",
+    false
+   ],
+   [
+    "i-audio-waveform",
+    "Audio panel",
+    "alert + fail-safe",
+    false
+   ],
+   [
+    "i-waves",
+    "Throttle shaker",
+    "below 30 kt",
+    false
+   ],
+   [
+    "i-lock",
+    "Take-off gate",
+    "unpowered = free",
+    false
+   ],
+   [
+    "i-cpu",
+    "EFIS discrete",
+    "optional",
+    true
+   ]
+  ]
+ },
+ "lugs": [
+  [
+   "front",
+   110
+  ],
+  [
+   "centre",
+   280
+  ],
+  [
+   "rear",
+   520
+  ]
+ ],
+ "sweep": {
+  "c": [
+   0.05,
+   0.1,
+   0.2,
+   0.3,
+   0.5,
+   0.7,
+   0.9,
+   1.0
+  ],
+  "series": [
+   {
+    "key": "O3",
+    "label": "lamp only",
+    "barrier": false,
+    "recommended": false,
+    "vals": [
+     1.0399800831142467,
+     1.0832901118217206,
+     1.1817153123268642,
+     1.2998133024362744,
+     1.6245138840583495,
+     2.1654570916974074,
+     3.246502685380738,
+     4.3264286350092185
+    ]
+   },
+   {
+    "key": "O4",
+    "label": "lamp + voice",
+    "barrier": false,
+    "recommended": false,
+    "vals": [
+     1.0502751861020603,
+     1.1058731652924105,
+     1.236819120470833,
+     1.4029407133783216,
+     1.918229120094208,
+     3.0317746148678224,
+     7.227235858670367,
+     23.45858479576337
+    ]
+   },
+   {
+    "key": "O5",
+    "label": "+ belt pad",
+    "barrier": false,
+    "recommended": true,
+    "vals": [
+     1.0518553678857614,
+     1.109382822260209,
+     1.245633758238979,
+     1.4200384487433135,
+     1.972345840123984,
+     3.2277361786584895,
+     8.879507878635396,
+     71.32184991215517
+    ]
+   },
+   {
+    "key": "O6",
+    "label": "+ gate",
+    "barrier": true,
+    "recommended": false,
+    "vals": [
+     2.4503560518794982,
+     2.717136023721953,
+     3.4001175605139196,
+     4.3770839377705855,
+     8.195409217498382,
+     20.531623057756054,
+     117.36986175704479,
+     1175.4051480351914
+    ]
+   }
+  ],
+  "ymax": 1528.0266924457487
+ },
+ "timeline": {
+  "rolls": [
+   {
+    "label": "Brisk roll",
+    "a": 5.0,
+    "m": 169,
+    "tlof": 8.23,
+    "t30": 3.09,
+    "t40": 4.12
+   },
+   {
+    "label": "Slow roll",
+    "a": 2.8,
+    "m": 302,
+    "tlof": 14.7,
+    "t30": 5.51,
+    "t40": 7.35
+   }
+  ],
+  "tmax": 16,
+  "onsets": [
+   [
+    "alert onset, lever switch (0.35 s)",
+    0.35
+   ],
+   [
+    "alert onset, rpm + persistence (1.65 s)",
+    1.65
+   ]
+  ],
+  "rt_med": 1.5,
+  "rt_p95": 3.0,
+  "lanes": [
+   {
+    "label": "lever trigger",
+    "onset": 0.35,
+    "med_t": 1.85,
+    "p95_t": 3.35,
+    "med_kt": 18,
+    "p95_kt": 33,
+    "ours": true
+   },
+   {
+    "label": "rpm trigger",
+    "onset": 1.65,
+    "med_t": 3.15,
+    "p95_t": 4.65,
+    "med_kt": 31,
+    "p95_kt": 45,
+    "ours": false
+   }
+  ]
+ },
+ "sensing": [
+  {
+   "key": "S1",
+   "label": "Inductive × 3 (LOCK-SENSE)",
+   "c": 44.311912875106074,
+   "u": 2.2691741569873916,
+   "sees": "Y/Y/Y",
+   "recommended": true
+  },
+  {
+   "key": "S2",
+   "label": "Bolt contact + resistors",
+   "c": 5.349316845332905,
+   "u": 2.2945119237078906,
+   "sees": "Y/Y/Y",
+   "recommended": false
+  },
+  {
+   "key": "S3",
+   "label": "Bolt contact, plain",
+   "c": 5.330971666991252,
+   "u": 2.2944941028327484,
+   "sees": "Y/Y/Y",
+   "recommended": false
+  },
+  {
+   "key": "S4",
+   "label": "Snap switch × 3",
+   "c": 16.26830736629909,
+   "u": 2.3123057935224547,
+   "sees": "Y/Y/Y",
+   "recommended": false
+  },
+  {
+   "key": "S5",
+   "label": "Hall + magnet × 3",
+   "c": 2.97685683083298,
+   "u": 2.2319742947356316,
+   "sees": "Y/Y/Y",
+   "recommended": false
+  },
+  {
+   "key": "S6",
+   "label": "LVDT on linkage tube",
+   "c": 6.0020430186774885,
+   "u": 6.001890720552041,
+   "sees": "Y/N/Y",
+   "recommended": false
+  },
+  {
+   "key": "S7",
+   "label": "Handle switch only",
+   "c": 5.710071688908461,
+   "u": 5.710209547966772,
+   "sees": "Y/N/N",
+   "recommended": false
+  }
+ ],
+ "sensing_xmax": 100,
+ "print": {
+  "F1a": {
+   "mm": [
+    72,
+    59.7
+   ],
+   "px": [
+    601,
+    498
+   ]
+  },
+  "F1b": {
+   "mm": [
+    72,
+    59.7
+   ],
+   "px": [
+    601,
+    498
+   ]
+  },
+  "F8": {
+   "mm": [
+    160,
+    52.2
+   ],
+   "px": [
+    1336,
+    436
+   ]
+  },
+  "F7": {
+   "mm": [
+    80,
+    49.7
+   ],
+   "px": [
+    668,
+    415
+   ]
+  },
+  "F10": {
+   "mm": [
+    176,
+    40
+   ],
+   "px": [
+    1469,
+    334
+   ]
+  }
+ }
+}

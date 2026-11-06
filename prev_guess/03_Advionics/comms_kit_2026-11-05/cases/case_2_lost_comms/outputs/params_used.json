@@ -1,0 +1,73 @@
+{
+ "params": {
+  "own_callsign": "BTL123",
+  "duration_s": 300,
+  "degraded_from_s": 60,
+  "rx_lost_from_s": 100,
+  "alt_up_from_s": 160,
+  "alt_down_from_s": 200,
+  "recovered_from_s": 240,
+  "if_read_calls_s": [
+   275,
+   285
+  ],
+  "our_calls_s": [
+   12,
+   41,
+   72,
+   105,
+   118,
+   131,
+   252
+  ],
+  "messages": [
+   [
+    10,
+    "beetle one two three turn left heading two seven zero descend and maintain three thousand feet",
+    ""
+   ],
+   [
+    45,
+    "beetle one three two turn right heading zero nine zero descend and maintain five thousand feet",
+    ""
+   ],
+   [
+    70,
+    "beetle one two three reduce speed one six zero knots",
+    "low:6"
+   ],
+   [
+    88,
+    "beetle one two three turn right heading one niner zero descend and maintain <gap> feet",
+    "partial"
+   ],
+   [
+    250,
+    "beetle one two three cleared ils approach runway two five right qnh one zero one three",
+    ""
+   ]
+  ],
+  "cpdlc_uplinks": [
+   [
+    170,
+    190,
+    250
+   ]
+  ],
+  "snr_good_db": 24.0,
+  "snr_degraded_db_level": 7.0,
+  "snr_degraded_db": 12.0,
+  "conf_degraded": 0.6,
+  "dropout_degraded": 0.15,
+  "answer_timeout_s": 10.0,
+  "unanswered_for_loss": 2,
+  "silence_for_loss_s": 30.0,
+  "no_signal_after_s": 1.0,
+  "recover_ticks": 3,
+  "stale_after_s": 120.0,
+  "rule_set": "EU_SERA_2025",
+  "eat_min": 35.0,
+  "eta_min": 30.0
+ },
+ "overrides": []
+}

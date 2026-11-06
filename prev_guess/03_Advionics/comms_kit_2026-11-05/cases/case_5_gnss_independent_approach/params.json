@@ -1,0 +1,26 @@
+{
+ "case": "case_5_gnss_independent_approach",
+ "params": {
+  "rwy_lat": {"value": 51.0, "unit": "deg", "source": "[Y]"},
+  "rwy_lon": {"value": 4.0, "unit": "deg", "source": "[Y]"},
+  "rwy_elev_m": {"value": 10.0, "unit": "m", "source": "[Y]"},
+  "rwy_course_deg": {"value": 250.0, "unit": "deg", "source": "[Y]"},
+  "start_range_nm": {"value": 5.0, "unit": "NM", "source": "[Y]"},
+  "gate_height_ft": {"value": 200.0, "unit": "ft", "source": "CAT I DH 200 ft (R_ils_wiki [D-ag])"},
+  "runs": {"value": 100, "unit": "approaches per source", "source": "[Y] Monte Carlo size"},
+  "radar_range_at_gate_m": {"value": 1500.0, "unit": "m", "source": "[Y] ground radar to the 200 ft gate"},
+  "vertical_alert_limit_m": {"value": 35.0, "unit": "m", "source": "LPV-200 VAL 35 m (R_faa_aim_ch1 [D-ag]; approach.ALERT_LIMITS)"},
+  "integrity_risk": {"value": 1e-7, "unit": "per approach", "source": "[Y] typical precision-approach figure (K = 5.33, approach.k_factor)"},
+  "p_false_alert": {"value": 1e-5, "unit": "per sample", "source": "[Y] monitor false-alert allocation"},
+  "sensors": {"value": [
+    {"name": "GNSS (SBAS-like)", "bias": [0, 0, 0], "sigma": [1.5, 1.5, 3.0]},
+    {"name": "Ground radar (0.05 deg)", "range_sigma_m": 7.0, "angle_deg": 0.05},
+    {"name": "Ground radar (0.1 deg)", "range_sigma_m": 7.0, "angle_deg": 0.1},
+    {"name": "Spoofed GNSS (0.5 m/s ramp)", "bias": [0, 0, 0], "sigma": [1.5, 1.5, 3.0], "ramp": [0, 0, -0.5], "ramp_start": 30.0}],
+    "unit": "m, deg, m/s, s", "source": "[Y] GNSS sigmas; radar angle 0.05-0.1 deg (L-IESA az < 0.1 deg RMS, S_intersoft_liesa_leaflet [D-ag]); Mode S range 7 m rms (R_ssr_wiki [D-ag])"},
+  "monitor_sensor": {"value": "Ground radar (0.05 deg)", "unit": "", "source": "[Y] dissimilar monitor of the spoofed source"},
+  "spoof_sensor": {"value": "Spoofed GNSS (0.5 m/s ramp)", "unit": "", "source": "[Y]"},
+  "seed": {"value": 1, "unit": "", "source": "[Y]"}
+ },
+ "quick": {"runs": 15}
+}

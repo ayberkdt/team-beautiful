@@ -19,7 +19,7 @@ def test_conversions_ge_bracket():
 
 
 def test_knee_on_the_retain_sweep():
-    d = json.loads((ROOT / "studies" / "retain_sweep" / "retain_sweep.json").read_text(encoding="utf-8"))
+    d = json.loads((ROOT / "prev_guess" / "01_Ansys" / "retain_sweep" / "retain_sweep.json").read_text(encoding="utf-8"))
     v = [r["volume"] for r in d["runs"]]
     c = [r["compliance_rel"] for r in d["runs"]]
     k = tpl.knee(v, c)

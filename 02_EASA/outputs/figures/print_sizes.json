@@ -1,0 +1,37 @@
+{
+ "F1a": {
+  "png": "F1a.png",
+  "width_mm": 72,
+  "height_mm": 59.7,
+  "min_text_pt": 7.81,
+  "font": "Montserrat"
+ },
+ "F1b": {
+  "png": "F1b.png",
+  "width_mm": 72,
+  "height_mm": 59.7,
+  "min_text_pt": 7.81,
+  "font": "Montserrat"
+ },
+ "F8": {
+  "png": "F8.png",
+  "width_mm": 160,
+  "height_mm": 52.2,
+  "min_text_pt": 7.81,
+  "font": "Montserrat"
+ },
+ "F7": {
+  "png": "F7.png",
+  "width_mm": 80,
+  "height_mm": 49.7,
+  "min_text_pt": 7.81,
+  "font": "Montserrat"
+ },
+ "F10": {
+  "png": "F10.png",
+  "width_mm": 176,
+  "height_mm": 40,
+  "min_text_pt": 7.81,
+  "font": "Montserrat"
+ }
+}

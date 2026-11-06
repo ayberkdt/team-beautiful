@@ -11,14 +11,14 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def _rehearsal_designs():
-    runs = json.loads((ROOT / "studies" / "retain_sweep" / "retain_sweep.json").read_text(encoding="utf-8"))["runs"]
+    runs = json.loads((ROOT / "prev_guess" / "01_Ansys" / "retain_sweep" / "retain_sweep.json").read_text(encoding="utf-8"))["runs"]
     return [{"volume": r["volume"], "density": np.asarray(r["density"])} for r in runs]
 
 
 def test_matches_rehearsal_script():
-    card = C.load_card(ROOT / "studies" / "cards" / "rehearsal_l_bracket.json")
+    card = C.load_card(ROOT / "prev_guess" / "01_Ansys" / "cards" / "rehearsal_l_bracket.json")
     out = C.run(card, _rehearsal_designs())
-    ref = json.loads((ROOT / "studies" / "rehearsal" / "rehearsal.json").read_text(encoding="utf-8"))
+    ref = json.loads((ROOT / "prev_guess" / "01_Ansys" / "rehearsal" / "rehearsal.json").read_text(encoding="utf-8"))
     check("ultimate load 1.5 x 1.15 x 2 kN", out["ultimate_N"], 3450.0, rtol=1e-12)
     check("same 4x-mesh deflection factor", out["deflection_mesh_factor"], ref["deflection_mesh_factor"], rtol=1e-9)
     names = {"Scalmalloy": "Scalmalloy TO + Eİ", "AlSi10Mg": "AlSi10Mg TO + Eİ"}
@@ -33,7 +33,7 @@ def test_matches_rehearsal_script():
 
 
 def test_temperature_screen_and_validation(tmp_path):
-    raw = json.loads((ROOT / "studies" / "cards" / "rehearsal_l_bracket.json").read_text(encoding="utf-8"))
+    raw = json.loads((ROOT / "prev_guess" / "01_Ansys" / "cards" / "rehearsal_l_bracket.json").read_text(encoding="utf-8"))
     raw["limits"]["service_temperature_C"] = 150
     raw["volumes"] = [0.5]
     p = tmp_path / "hot.json"
@@ -49,7 +49,7 @@ def test_temperature_screen_and_validation(tmp_path):
 def test_cantilever_tip_against_beam_theory():
     # Slender solid cantilever 40 x 4 elements, tip load at mid-height: Timoshenko tip deflection
     # delta = P L^3/(3 E I) + P L/(kappa G A); unit E, t, P; Q4 is stiff in bending, so allow 25 %.
-    raw = json.loads((ROOT / "studies" / "cards" / "template_cantilever.json").read_text(encoding="utf-8"))
+    raw = json.loads((ROOT / "prev_guess" / "01_Ansys" / "cards" / "template_cantilever.json").read_text(encoding="utf-8"))
     raw["geometry"].update({"length_m": 1.0, "height_m": 0.1, "elements": 40, "load_at": "middle"})
     card = C._parse(raw, ROOT)
     a = C.analyse(card, np.ones((4, 40)))

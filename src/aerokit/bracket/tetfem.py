@@ -10,7 +10,7 @@ gmsh node order of the 10-node tetrahedron, checked on 2026-11-04 by comparing m
 midpoints: vertices 0-3, then edges (0,1) (1,2) (2,0) (3,0) (3,2) (3,1).
 
 Why it matters: the voxel model's staircase boundary under-predicts stress concentrations at holes and fillets
-(plate-with-hole Kt −4 … −33 % in ``scripts/bracket_validate.py``); this model resolves curved boundaries the way
+(plate-with-hole Kt −4 … −33 % in ``01_Ansys/scripts/bracket_validate.py``); this model resolves curved boundaries the way
 Ansys does, so its numbers are the ones to compare with an Ansys run, and the voxel-vs-T10 difference is a
 quantified discrepancy cause.
 """
@@ -204,7 +204,23 @@ def _face_weights(m: TetMesh) -> np.ndarray:
     return a
 
 
+def _node_normals(m: TetMesh) -> np.ndarray:
+    """Area-weighted boundary normal at every node (zero for interior nodes; orientation irrelevant here)."""
+    P = m.X[m.faces[:, :3]]
+    n = np.cross(P[:, 1] - P[:, 0], P[:, 2] - P[:, 0])
+    N = np.zeros_like(m.X)
+    for k in range(m.faces.shape[1]):
+        np.add.at(N, m.faces[:, k], n)
+    ln = np.linalg.norm(N, axis=1)
+    return N / np.where(ln > 0, ln, 1.0)[:, None]
+
+
 def _bore(m: TetMesh, hl: Hole, tol: float) -> np.ndarray:
+    """Boundary nodes of the CYLINDRICAL bore face. 5 Nov fix: the radial/axial tolerance alone also caught an
+    annulus of the plane faces at the bore mouths (|r - R| <= tol, about 4.7 mm wide on a smoothed voxel STL), so
+    supports fixed and loads acted on parts of the boss/lug side faces. A node now also needs a boundary normal
+    at least 60° away from the bore axis (|n·axis| < 0.5); edge nodes shared with the mouth face keep a mixed
+    normal and are kept only if it is mostly radial."""
     surf = np.unique(m.faces)
     d = m.X[surf] - hl.center
     rad = np.linalg.norm(np.delete(d, hl.axis, axis=1), axis=1)
@@ -212,7 +228,9 @@ def _bore(m: TetMesh, hl: Hole, tol: float) -> np.ndarray:
     ins = np.zeros(len(surf), bool)
     for a, b in hl.segments:
         ins |= (za >= a - tol) & (za <= b + tol)
-    return surf[ins & (np.abs(rad - hl.radius) <= tol + 1e-3 * hl.radius)]
+    nrm = _node_normals(m)[surf]
+    radial = np.abs(nrm[:, hl.axis]) < 0.5
+    return surf[ins & radial & (np.abs(rad - hl.radius) <= tol + 1e-3 * hl.radius)]
 
 
 def static_t10(m: TetMesh, setup: dict[str, Any], E: float, nu: float = 0.3,
@@ -227,6 +245,7 @@ def static_t10(m: TetMesh, setup: dict[str, Any], E: float, nu: float = 0.3,
     tol = bore_tol_m if bore_tol_m is not None else 0.02 * min(h.radius for h in holes.values())
     a = _face_weights(m)
     fixed = []
+    sup_nodes = {}
     for s in setup["supports"]:
         if s.get("type", "fixed_bore") != "fixed_bore":
             raise ValueError("T10 check supports fixed_bore only")
@@ -234,6 +253,7 @@ def static_t10(m: TetMesh, setup: dict[str, Any], E: float, nu: float = 0.3,
         if not len(nn):
             raise ValueError(f"no T10 nodes on bore {s['hole']}")
         fixed.append((3 * nn[:, None] + np.arange(3)).ravel())
+        sup_nodes[s["hole"]] = nn
     fixed_d = np.unique(np.concatenate(fixed))
     cases = setup["load_cases"]
     F = np.zeros((m.ndof, len(cases)))
@@ -285,6 +305,7 @@ def static_t10(m: TetMesh, setup: dict[str, Any], E: float, nu: float = 0.3,
                 np.add.at(sn[c], T[:, k], eps @ D.T)
     sn /= cnt[None, :, None]
     zone = np.zeros(len(m.X), bool)
+    zone_sup = np.zeros(len(m.X), bool)
     margin = margin_m if margin_m is not None else setup.get("exclusion_mm", 0.0) * 1e-3
     for hid, hl in holes.items():
         if roles.get(hid) not in ("support", "load"):
@@ -296,6 +317,8 @@ def static_t10(m: TetMesh, setup: dict[str, Any], E: float, nu: float = 0.3,
         for lo, hi in hl.segments:
             ins |= (za >= lo - margin) & (za <= hi + margin)
         zone |= ins & (rad <= hl.radius + margin)
+        if roles.get(hid) == "support":
+            zone_sup |= ins & (rad <= hl.radius + margin)
     out = []
     for c, case in enumerate(cases):
         vm = voxfem.von_mises(sn[c])
@@ -303,12 +326,20 @@ def static_t10(m: TetMesh, setup: dict[str, Any], E: float, nu: float = 0.3,
         disp = np.linalg.norm(u, axis=1)
         vo = np.where(zone, 0.0, vm)
         j = int(np.argmax(vo))
+        # 5 Nov: the zone also covered the lug eyes (ligament 31.4 mm < R + margin), so the lug net section was never
+        # checked. Only the fixed-support zones are singular (rigid clamp corner); the bearing-loaded pin bores are not.
+        vs = np.where(zone_sup, 0.0, vm)
+        js = int(np.argmax(vs))
         ln = np.unique(np.concatenate([_bore(m, holes[ld["hole"]], tol) for ld in case["loads"]]))
         wl = a[ln] if a[ln].sum() > 0 else np.ones(len(ln))
         load_disp = float(np.linalg.norm((u[ln] * wl[:, None]).sum(0) / wl.sum())) if len(ln) else float("nan")
+        Rf = (K @ U[:, c] - F[:, c]).reshape(-1, 3)              # reaction forces at the fixed nodes
+        reac = {hid: Rf[nn].sum(0).tolist() for hid, nn in sup_nodes.items()}
         out.append({"name": case["name"], "compliance_J": float(F[:, c] @ U[:, c]), "max_disp_m": float(disp.max()),
+                    "reactions_N": reac,
                     "load_disp_m": load_disp,
                     "vm_outside_Pa": float(vo[j]), "vm_outside_at_m": m.X[j].tolist(), "vm_max_Pa": float(vm.max()),
+                    "vm_outside_supports_Pa": float(vs[js]), "vm_outside_supports_at_m": m.X[js].tolist(),
                     "vm_max_at_m": m.X[int(np.argmax(vm))].tolist()})
     surf = np.unique(m.faces)
     vm_all = np.max([voxfem.von_mises(sn[c]) for c in range(len(cases))], axis=0)
@@ -335,5 +366,6 @@ def worst(r: dict[str, Any]) -> dict[str, float]:
     c = r["cases"]
     return {"max_disp_m": max(x["max_disp_m"] for x in c), "compliance_J": max(x["compliance_J"] for x in c),
             "load_disp_m": max(x.get("load_disp_m", float("nan")) for x in c),
-            "vm_outside_Pa": max(x["vm_outside_Pa"] for x in c), "vm_max_Pa": max(x["vm_max_Pa"] for x in c)}
+            "vm_outside_Pa": max(x["vm_outside_Pa"] for x in c), "vm_max_Pa": max(x["vm_max_Pa"] for x in c),
+            "vm_outside_supports_Pa": max(x.get("vm_outside_supports_Pa", x["vm_outside_Pa"]) for x in c)}
 

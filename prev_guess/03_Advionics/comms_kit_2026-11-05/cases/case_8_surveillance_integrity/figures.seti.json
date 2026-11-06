@@ -1,0 +1,47 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "sunum",
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {
+  "MLAT consistency check": {
+   "renk": "#0072b2",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 0
+  }
+ },
+ "nicelikler": {
+  "offset": {
+   "etiket": "Spoofed position offset",
+   "birim": "m",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "flagged": {
+   "etiket": "Reports flagged as inconsistent",
+   "birim": "%",
+   "eksen": "y",
+   "sinir": [
+    0,
+    102
+   ],
+   "olcek": null,
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "C8_spoof_detection_vs_offset": "outputs/C8_spoof_detection_vs_offset.dw.json"
+ }
+}

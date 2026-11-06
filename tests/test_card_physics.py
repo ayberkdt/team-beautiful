@@ -68,7 +68,7 @@ def test_thermal_clamped_strip_and_free_body():
 
 
 def _bridge_card(**extra):
-    raw = json.loads((ROOT / "studies" / "cards" / "template_cantilever.json").read_text(encoding="utf-8"))
+    raw = json.loads((ROOT / "prev_guess" / "01_Ansys" / "cards" / "template_cantilever.json").read_text(encoding="utf-8"))
     raw["geometry"] = {"type": "bridge", "length_m": 0.2, "height_m": 0.04, "thickness_m": 0.01, "elements": 40}
     raw["volumes"] = [0.5]
     raw.update(extra)

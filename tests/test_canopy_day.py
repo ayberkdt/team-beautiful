@@ -1,4 +1,4 @@
-"""Smoke test of the competition-day command scripts/canopy_day.py (small sample, no figures)."""
+"""Smoke test of the competition-day command 02_EASA/scripts/canopy_day.py (small sample, no figures)."""
 import importlib.util
 import json
 import pathlib
@@ -9,20 +9,20 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 
 def _load():
-    spec = importlib.util.spec_from_file_location("canopy_day", ROOT / "scripts" / "canopy_day.py")
+    spec = importlib.util.spec_from_file_location("canopy_day", ROOT / "02_EASA" / "scripts" / "canopy_day.py")
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
 
 
 def test_canopy_day_runs_and_reports(tmp_path):
-    cfg = json.loads((ROOT / "studies" / "final_2026" / "easa" / "inputs.json").read_text(encoding="utf-8"))
+    cfg = json.loads((ROOT / "02_EASA" / "inputs" / "inputs.json").read_text(encoding="utf-8"))
     cfg["n_samples"] = 4000
     inp = tmp_path / "inputs.json"
     inp.write_text(json.dumps(cfg), encoding="utf-8")
     code = _load().main([str(inp), "--no-figures"])
-    out = tmp_path / "out"
-    rep = (out / "report.md").read_text(encoding="utf-8")
+    out = tmp_path / "outputs" / "day"
+    rep = (out / "analysis.md").read_text(encoding="utf-8")
     res = json.loads((out / "result.json").read_text(encoding="utf-8"))
     check("exit code without figures", code, 0)
     check_true("all five architectures reported", set(res["architectures"]) == {"A0", "A1", "A2", "A3", "A4"})

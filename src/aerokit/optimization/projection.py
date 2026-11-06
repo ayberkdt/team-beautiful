@@ -1,6 +1,6 @@
 """Threshold (tanh) projection, the robust eroded/dilated formulation and the filter-radius → member-size rule.
 
-Equations used, all read in the primary source on 2026-11-03 (research_notes/Optimizasyon kaynakları/
+Equations used, all read in the primary source on 2026-11-03 (prev_guess/01_Ansys/research/Optimizasyon kaynakları/
 TO_kaynak_paketi.md §2–§3):
 
 * projection (Ferrari & Sigmund 2020 Eq. 1; Qian & Sigmund 2013 Eq. 25; Lazarov et al. 2016 Eq. 23)::

@@ -1,0 +1,63 @@
+{
+ "params": {
+  "rwy_lat": 51.0,
+  "rwy_lon": 4.0,
+  "rwy_elev_m": 10.0,
+  "rwy_course_deg": 250.0,
+  "start_range_nm": 5.0,
+  "gate_height_ft": 200.0,
+  "runs": 100,
+  "radar_range_at_gate_m": 1500.0,
+  "vertical_alert_limit_m": 35.0,
+  "integrity_risk": 1e-07,
+  "p_false_alert": 1e-05,
+  "sensors": [
+   {
+    "name": "GNSS (SBAS-like)",
+    "bias": [
+     0,
+     0,
+     0
+    ],
+    "sigma": [
+     1.5,
+     1.5,
+     3.0
+    ]
+   },
+   {
+    "name": "Ground radar (0.05 deg)",
+    "range_sigma_m": 7.0,
+    "angle_deg": 0.05
+   },
+   {
+    "name": "Ground radar (0.1 deg)",
+    "range_sigma_m": 7.0,
+    "angle_deg": 0.1
+   },
+   {
+    "name": "Spoofed GNSS (0.5 m/s ramp)",
+    "bias": [
+     0,
+     0,
+     0
+    ],
+    "sigma": [
+     1.5,
+     1.5,
+     3.0
+    ],
+    "ramp": [
+     0,
+     0,
+     -0.5
+    ],
+    "ramp_start": 30.0
+   }
+  ],
+  "monitor_sensor": "Ground radar (0.05 deg)",
+  "spoof_sensor": "Spoofed GNSS (0.5 m/s ramp)",
+  "seed": 1
+ },
+ "overrides": []
+}

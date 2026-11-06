@@ -1,6 +1,6 @@
 """Hand-off of a bracket run to the film session (``D:\\Video Simulations\\Ideathon-2026-Ansys``, read-only for us).
 
-Writes ``studies/final_2026/ansys/handoff/<case>/`` in the input format the film already reads (its README,
+Writes ``01_Ansys/outputs/handoff/<case>/`` in the input format the film already reads (its README,
 "Girdi dosyası" table, read on 2026-11-04):
 
 ``girdi.json``     film input: ``parca_adi``, ``sonuc``, ``yukler``, ``geometri`` {dosya, birim, hizala, yukari},

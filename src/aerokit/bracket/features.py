@@ -378,6 +378,7 @@ def non_design_mask(mesh: VoxelMesh, setup: dict[str, Any],
     ``ring_min_voxels`` voxels) over its segments, plus ``boxes_mm``."""
     nd = setup.get("non_design", {})
     k = nd.get("ring_factor", 0.75)
+    k_role = nd.get("ring_factor_by_role", {})      # e.g. {"load": 1.047} = lug eye kept to the original edge
     nmin = nd.get("ring_min_voxels", 2)
     keep = np.zeros(mesh.ne, bool)
     C = mesh.centers
@@ -385,7 +386,7 @@ def non_design_mask(mesh: VoxelMesh, setup: dict[str, Any],
     for hid, hl in _holes(setup).items():
         if role_of.get(hid) not in roles:
             continue
-        t = max(k * hl.radius, nmin * mesh.h)
+        t = max(k_role.get(role_of.get(hid), k) * hl.radius, nmin * mesh.h)
         d = C - hl.center
         rad = np.linalg.norm(np.delete(d, hl.axis, axis=1), axis=1)
         za = C[:, hl.axis]
@@ -394,10 +395,90 @@ def non_design_mask(mesh: VoxelMesh, setup: dict[str, Any],
             inseg |= (za >= a) & (za <= b)
         keep |= inseg & (rad <= hl.radius + t)
     if roles == ("support", "load"):
-        for b in nd.get("boxes_mm", []):
+        for b in nd.get("boxes_mm", []) + load_ties(setup, mesh.h):
             lo, hi = np.asarray(b["min"]) * 1e-3, np.asarray(b["max"]) * 1e-3
             keep |= np.all((lo <= C) & (hi >= C), axis=1)
+        for sg in support_ties(setup, mesh.h):
+            keep |= _seg_dist(C * 1e3, np.asarray(sg["a"]), np.asarray(sg["b"])) <= sg["r"]
     return keep
+
+
+def _seg_dist(P: np.ndarray, a: np.ndarray, b: np.ndarray) -> np.ndarray:
+    """Distance [mm] of points P (n, 3) [mm] from the segment a-b."""
+    ab = b - a
+    t = np.clip(((P - a) @ ab) / float(ab @ ab), 0.0, 1.0)
+    return np.linalg.norm(P - (a + t[:, None] * ab), axis=1)
+
+
+def support_ties(setup: dict[str, Any], h: float) -> list[dict[str, Any]]:
+    """Automatic support-pattern bracing (``non_design.connect_supports: "x"``): every support bore is joined to the
+    support bore farthest from it (the diagonal of the bolt pattern) by a frozen round bar of radius
+    ``tie_radius_mm`` (default one voxel) at the mid-height of the support bores. For a 2 × 2 bolt pattern this is
+    an X: it keeps the bolt pattern and its distances rigid (card: locations and distances of the supports stay
+    the same) and makes every lug that reaches a boss part of ONE body. The optimiser may thicken it."""
+    nd = setup.get("non_design", {})
+    if nd.get("connect_supports") != "x":
+        return []
+    hs = _holes(setup)
+    role = {d["id"]: d.get("role") for d in setup["holes"]}
+    sups = [(i, hs[i]) for i in sorted(hs) if role.get(i) == "support"]
+    if len(sups) < 2:
+        return []
+    up = sups[0][1].axis
+    r = float(nd.get("tie_radius_mm", h * 1e3))
+    pairs = set()
+    for i, hi in sups:
+        j = max((j for j, _ in sups if j != i), key=lambda j: np.linalg.norm(hs[j].center - hi.center))
+        pairs.add(tuple(sorted((i, j))))
+    out = []
+    for i, j in sorted(pairs):
+        a, b = hs[i].center * 1e3, hs[j].center * 1e3
+        mid = 0.5 * (min(x for seg in hs[i].segments for x in seg) + max(x for seg in hs[i].segments for x in seg)) * 1e3
+        a = a.copy(); b = b.copy(); a[up] = b[up] = mid
+        out.append({"name": f"X tie {i}-{j} (auto)", "a": a.tolist(), "b": b.tolist(), "r": r})
+    return out
+
+
+def load_ties(setup: dict[str, Any], h: float) -> list[dict[str, Any]]:
+    """Automatic lug-to-lug connection rule (``non_design.connect_loads: true``), boxes in mm.
+
+    Every pair of load holes is joined by a frozen minimum-section tie (``tie_section_mm``, default 2 voxels, the
+    filter length scale) that runs along the line between their centres, extended over both bore segments. It lies
+    at the top of the support region (the highest support-bore end along the support axis), so it ties the two load
+    interfaces through the mounting level and never crosses the gap between them where the mating part sits.
+    Axis-aligned layouts only (the load centres differ along one axis): anything else raises.
+    """
+    nd = setup.get("non_design", {})
+    if not nd.get("connect_loads"):
+        return []
+    hs = _holes(setup)
+    role = {d["id"]: d.get("role") for d in setup["holes"]}
+    loads = [hs[i] for i in sorted(hs) if role.get(i) == "load"]
+    sups = [hs[i] for i in sorted(hs) if role.get(i) == "support"]
+    if len(loads) < 2 or not sups:
+        return []
+    up = sups[0].axis
+    if any(s_.axis != up for s_ in sups):
+        raise ValueError("connect_loads: support bores must share one axis")
+    top = max(b for s_ in sups for _, b in s_.segments) * 1e3
+    t = float(nd.get("tie_section_mm", 2 * h * 1e3))
+    out = []
+    for a_, b_ in zip(loads, loads[1:]):
+        ca, cb = a_.center * 1e3, b_.center * 1e3
+        d = np.abs(cb - ca)
+        d[up] = 0.0
+        run = int(np.argmax(d))
+        if np.count_nonzero(d > 1e-6) != 1:
+            raise ValueError("connect_loads: load centres must differ along one axis")
+        lo, hi = np.minimum(ca, cb), np.maximum(ca, cb)
+        segs = [x * 1e3 for hl in (a_, b_) for seg in hl.segments for x in seg] if a_.axis == run else []
+        lo[run], hi[run] = (min(segs), max(segs)) if segs else (lo[run], hi[run])
+        other = 3 - up - run
+        lo[other], hi[other] = ca[other] - t / 2 - 0.5 * h * 1e3, ca[other] + t / 2
+        lo[up], hi[up] = top - t, top
+        out.append({"name": f"tie {a_.id if hasattr(a_, 'id') else ''}-{b_.id if hasattr(b_, 'id') else ''} (auto)",
+                    "min": lo.tolist(), "max": hi.tolist()})
+    return out
 
 
 def scaled_setup(setup: dict[str, Any], factor: float) -> dict[str, Any]:
@@ -409,3 +490,62 @@ def scaled_setup(setup: dict[str, Any], factor: float) -> dict[str, Any]:
                 if key in ld:
                     ld[key] = [factor * v for v in ld[key]]
     return s
+
+
+def detect_symmetry(setup: dict[str, Any], tol_mm: float = 2.0) -> dict[str, float]:
+    """Mirror planes (axis -> coordinate, mm) under which the set-up maps onto itself: every hole onto a hole of the
+    same role, diameter and axis, every support onto a support, and the SET of load cases onto itself (a mirrored
+    case must equal some case of the set; forces flip the normal component, moments — axial vectors — flip the two
+    in-plane components). The plane is the mean hole coordinate along that axis. A plane is returned only if every
+    check holds within ``tol_mm`` (positions) and 1 % (loads), so a non-symmetric problem gets no symmetry."""
+    hs = setup["holes"]
+    role = {d["id"]: d.get("role", "free") for d in hs}
+    out: dict[str, float] = {}
+    for k, ax in enumerate("xyz"):
+        c = float(np.mean([d["center_mm"][k] for d in hs]))
+        img: dict[str, str] = {}
+        for d in hs:
+            m = list(d["center_mm"]); m[k] = 2 * c - m[k]
+            hit = [e for e in hs if e.get("axis") == d.get("axis") and role[e["id"]] == role[d["id"]]
+                   and abs(e["diameter_mm"] - d["diameter_mm"]) < tol_mm
+                   and np.linalg.norm(np.subtract(e["center_mm"], m)) < tol_mm]
+            if not hit:
+                break
+            img[d["id"]] = hit[0]["id"]
+        else:
+            def key(case: dict[str, Any], mirror: bool) -> list[tuple[Any, ...]]:
+                rows = []
+                for ld in case["loads"]:
+                    h_ = img[ld["hole"]] if mirror else ld["hole"]
+                    if "force_N" in ld:
+                        v = np.array(ld["force_N"], float)
+                        if mirror:
+                            v[k] = -v[k]
+                        rows.append((h_, "F", ld.get("type", "bearing"), v))
+                    else:
+                        v = np.array(ld["moment_Nm"], float)
+                        if mirror:
+                            v = -v; v[k] = -v[k]
+                        rows.append((h_, "M", ld.get("type", "moment"), v))
+                return sorted(rows, key=lambda r: (r[0], r[1]))
+
+            def same(a: list[tuple[Any, ...]], b: list[tuple[Any, ...]]) -> bool:
+                return len(a) == len(b) and all(x[:3] == y[:3] and np.allclose(x[3], y[3], rtol=0.01,
+                                                atol=1e-6 + 0.01 * np.abs(x[3]).max()) for x, y in zip(a, b))
+            cases = setup["load_cases"]
+            sup_ok = sorted(img[s_["hole"]] for s_ in setup["supports"]) == sorted(s_["hole"] for s_ in setup["supports"])
+            # a moment whose sign the card does not give: a case and its mirror are both admissible -> accept
+            # cases that are mirror-images of themselves up to the sign of a pure-moment case
+            def in_set(case: dict[str, Any]) -> bool:
+                mk = key(case, True)
+                if any(same(mk, key(o, False)) for o in cases):
+                    return True
+                pure_m = all("moment_Nm" in ld for ld in case["loads"]) or bool(case.get("sign_free"))
+                if pure_m:
+                    neg = [(r[0], r[1], r[2], -r[3]) for r in mk]
+                    return any(same(neg, key(o, False)) for o in cases)
+                return False
+            if sup_ok and all(in_set(cs) for cs in cases):
+                out[ax] = round(c, 3)
+    return out
+

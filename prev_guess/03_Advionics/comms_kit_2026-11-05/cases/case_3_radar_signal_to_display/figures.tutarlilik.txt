@@ -1,0 +1,4 @@
+set tutarlılığı (1 figür): 1 HATA · 0 UYARI · 1 BİLGİ · TESLİM YOK
+  [HATA ] nicelik-aralik     C3_message_outcome_vs_ber: 'Share of Mode S messages' (y) -6…102, setin ortak sınırı 0…100
+          → Seti.eksen(ax, y=...) setin sınırını uygular; sonradan set_ylim çağırma  [06 T5 + §7a: Wilke2019Ch21 §21.1; UrbanStyle; Qu2018 C1.1; mekanizma (tek grafik, dolaylı): Correll2020, Witt2019 — dar aralık aynı etkiyi büyük gösterir; serbest/ortak ölçek deneyi yok]
+  [BİLGİ] tek-figur          1 figür; figürler arası karşılaştırma için en az 2 gerekir

@@ -1,0 +1,7 @@
+figür denetimi: 0 HATA · 0 UYARI · 3 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] dogrudan-etiket    eksen 0: 2 çizgi serisi lejantla adlandırılmış
+          → çizgi sonlarına doğrudan etiket: datawiz.etiket.cizgi_sonu(ax)  [Mayer2017 mekânsal bitişiklik d=0.79; Sweller2019]
+  [BİLGİ] birim              eksen 0: x etiketi birim içermiyor: 'Fatal outcomes per million flights'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [Kosslyn2012; TufteNotebookPP (birimler kaybolmasın)]
+  [BİLGİ] banking-45         eksen 0: çizim alanı y/g = 0.41; 45° için ≈ 1.78
+          → eğim karşılaştırması amaçsa oranı yaklaştır (ax.set_box_aspect)  [Kosara2013b]

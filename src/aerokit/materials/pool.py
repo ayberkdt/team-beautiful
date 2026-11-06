@@ -2,7 +2,7 @@
 embodied CO₂, price) and the bridge to the Ashby ranking of :mod:`aerokit.materials.selection`.
 
 The data file ``aerokit/data/materials/materials_pool.json`` is a copy of
-``research_notes/Malzeme havuzu/materials_pool.json`` (built 2026-11-03 from MIL-HDBK-5J, manufacturer datasheets,
+``prev_guess/01_Ansys/research/Malzeme havuzu/materials_pool.json`` (built 2026-11-03 from MIL-HDBK-5J, manufacturer datasheets,
 ICE v2.0 and the project's research notes; the README beside it lists the conflicts and gaps). Every property is
 ``{"value", "unit", "source", "tag"}`` with tag D (read from the primary source), S (secondary) or Y (estimate or
 stand-in). Units: rho kg/m3, E GPa, Fty/Ftu/fatigue MPa, k W/mK, cte 1e-6/K, Tmax C, co2 kg CO2e/kg.

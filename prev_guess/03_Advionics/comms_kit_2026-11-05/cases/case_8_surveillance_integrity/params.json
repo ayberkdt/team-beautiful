@@ -1,0 +1,16 @@
+{
+ "case": "case_8_surveillance_integrity",
+ "params": {
+  "stations_m": {"value": [[0, 0, 20], [9000, 2000, 30], [-6000, 7000, 25], [-4000, -8000, 40], [7000, -6000, 15]], "unit": "m (east, north, up)", "source": "[Y] 5 ground receivers around the airport"},
+  "target_m": {"value": [-9000, 1500, 600], "unit": "m", "source": "[Y] aircraft on final (about 5 NM)"},
+  "sigma_t_ns": {"value": 2.0, "unit": "ns per station", "source": "[Y]; gives metre-level fixes; measured WAM 6-7 m on final (R_icao_suricg7_ip14_wam [D-ag])"},
+  "adsb_sigma_m": {"value": 15.0, "unit": "m", "source": "[Y] honest ADS-B position noise (traffic.Scenario default); ADS-B ~20 m measured (R_icao_suricg7_ip14_wam [D-ag])"},
+  "offsets_m": {"value": [0, 25, 50, 75, 100, 150, 200, 400], "unit": "m", "source": "[Y] claimed minus true horizontal position"},
+  "trials": {"value": 600, "unit": "per offset", "source": "[Y]"},
+  "k_sigma": {"value": 5.0, "unit": "Mahalanobis", "source": "[Y] mlat.adsb_consistency default"},
+  "floor_m": {"value": 30.0, "unit": "m", "source": "[Y] mlat.adsb_consistency default"},
+  "icao": {"value": "4B1A23", "unit": "hex", "source": "[Y]"},
+  "seed": {"value": 0, "unit": "", "source": "[Y]"}
+ },
+ "quick": {"trials": 100}
+}

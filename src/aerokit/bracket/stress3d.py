@@ -15,7 +15,7 @@ Formulation (as in the validated 2-D :mod:`aerokit.optimization.stress_topo`, no
 β continuation [Y, Guest/Sigmund practice]: β = ``beta0`` until iteration ``beta_start``, then doubled every
 ``beta_every`` iterations up to ``beta_max``; the MMA asymptotes are reset at every change.
 
-Validation (``scripts/bracket_validate.py``, doc 22 §4c): Holmberg's L-beam extruded one voxel thick against the
+Validation (``01_Ansys/scripts/bracket_validate.py``, doc 22 §4c): Holmberg's L-beam extruded one voxel thick against the
 published mass and compliance, and the grey level of a 3-D cantilever with and without projection.
 """
 from __future__ import annotations

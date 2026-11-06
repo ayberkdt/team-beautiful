@@ -1,0 +1,5 @@
+figür denetimi: 0 HATA · 0 UYARI · 2 BİLGİ · TESLİM EDİLEBİLİR
+  [BİLGİ] dogrudan-etiket    eksen 0: 2 çizgi serisi lejantla adlandırılmış
+          → çizgi sonlarına doğrudan etiket: datawiz.etiket.cizgi_sonu(ax)  [Mayer2017 mekânsal bitişiklik d=0.79; Sweller2019]
+  [BİLGİ] birim              eksen 0: x etiketi birim içermiyor: 'Risk reduction factor'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [Kosslyn2012; TufteNotebookPP (birimler kaybolmasın)]

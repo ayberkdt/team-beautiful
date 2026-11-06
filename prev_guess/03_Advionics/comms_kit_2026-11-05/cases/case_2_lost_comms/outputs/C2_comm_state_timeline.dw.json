@@ -1,0 +1,165 @@
+{
+ "surum": 1,
+ "ad": "C2_comm_state_timeline",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  861.6,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": []
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    207.1,
+    73.3,
+    846.1,
+    379.5
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "State",
+     "tur": "cizgi",
+     "renk": "#3b3b3b",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 3.0,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Time (s)",
+    "nicelik": "Time",
+    "birim": "s",
+    "bicim": "parantez",
+    "anahtar": "time",
+    "harf": "tek",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     300.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "50",
+     "100",
+     "150",
+     "200",
+     "250",
+     "300"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     486.6,
+     3.0,
+     566.5,
+     25.3
+    ]
+   },
+   "y": {
+    "ham": "Communication state",
+    "nicelik": "Communication state",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "communicationstate",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.30000000000000004,
+     6.3
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "NORMAL",
+     "DEGRADED",
+     "NO SIGNAL",
+     "RX LOST",
+     "TX LOST",
+     "ALTERNATE AVAILABLE",
+     "ALL COMMS LOST"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "NORMAL",
+     "DEGRADED",
+     "NO SIGNAL",
+     "RX LOST",
+     "TX LOST",
+     "ALTERNATE AVAILABLE",
+     "ALL COMMS LOST"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     207.1,
+     388.7,
+     423.8,
+     411.0
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

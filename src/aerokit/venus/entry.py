@@ -17,7 +17,7 @@ atmosphere above 100 km varies strongly day/night (not modelled).
 **Validation.** For an exponential atmosphere and straight-line ballistic entry, Allen & Eggers (1958) give the peak
 deceleration ``a_max = V_E² |sin γ_E| / (2 e H)`` independent of β, reached where ``ρ = β |sin γ| / H`` — the
 integrator reproduces it (tests). The real-atmosphere peak from the table is then compared with Pioneer Venus and
-Venera values read by the research agent (``research_notes/Venus rotorcraft/B_*.md``).
+Venera values read by the research agent (``04_Venus/research/B_*.md``).
 
 **Heating.** Stagnation-point convective heating by Sutton & Graves (1971), ``q = k √(ρ/R_n) V³`` with the constant
 for the Venus CO₂/N₂ mixture (:data:`K_SUTTON_GRAVES_VENUS`); radiative heating, important above ~10 km/s at Venus,

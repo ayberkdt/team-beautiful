@@ -8,7 +8,7 @@ numbers of Granta EduPack supersede them on the day. Read on 2026-11-01 from the
 
 Not here, on purpose: alloy-level values (2024 vs 7075 vs Al-Li), regional smelting mixes (the aluminium figure
 moves by a factor of ~2-3 with the electricity mix), AM powder and post-processing — see the decision catalogue
-in ``reports/`` for those sources and their verification tags.
+in ``prev_guess/01_Ansys/reports/`` for those sources and their verification tags.
 """
 from __future__ import annotations
 

@@ -1,0 +1,24 @@
+{
+ "case": "case_6_flight_inspection_ils_drone",
+ "params": {
+  "rwy_lat": {"value": 51.0, "unit": "deg", "source": "[Y]"},
+  "rwy_lon": {"value": 4.0, "unit": "deg", "source": "[Y]"},
+  "rwy_elev_m": {"value": 10.0, "unit": "m", "source": "[Y]"},
+  "rwy_course_deg": {"value": 250.0, "unit": "deg", "source": "[Y]"},
+  "start_range_m": {"value": 4000.0, "unit": "m before threshold", "source": "[Y] SkyRF 'Mini-Approach' pattern (S_intersoft_skyrf_brochure [D-ag]); length [Y]"},
+  "end_range_m": {"value": 1000.0, "unit": "m before threshold", "source": "[Y]"},
+  "ground_speed_mps": {"value": 25.0, "unit": "m/s", "source": "[Y] drone speed"},
+  "weave_amplitude_m": {"value": 60.0, "unit": "m", "source": "[Y] lateral weave to sample DDM across the course"},
+  "weave_period_s": {"value": 40.0, "unit": "s", "source": "[Y]"},
+  "sample_s": {"value": 0.5, "unit": "s", "source": "[Y] one receiver reading per 0.5 s audio block"},
+  "full_scale_deg": {"value": 2.5, "unit": "deg", "source": "[Y] localizer half course width for 0.155 DDM (aerokit atc.ils full_scale_ddm 0.155)"},
+  "full_scale_ddm": {"value": 0.155, "unit": "DDM", "source": "atc.ils.read_ils default; check against Annex 10 (not read)"},
+  "aid_bias_ddm": {"value": 0.004, "unit": "DDM", "source": "[Y] injected course-alignment error of the aid under test"},
+  "snr_db": {"value": 30.0, "unit": "dB", "source": "[Y] detected-audio SNR"},
+  "truth_sigma_m": {"value": 0.05, "unit": "m", "source": "[Y] RTK-class drone position error (lever arms, time sync not modelled)"},
+  "faults": {"value": [[30, 38, "tone90_off"], [70, 76, "carrier_off"]], "unit": "[t0 s, t1 s, kind]", "source": "[Y] injected receiver/aid faults: tone90_off, tone150_off, carrier_off"},
+  "tolerance_ddm": {"value": 0.01, "unit": "DDM", "source": "[Y] GAP: ICAO Doc 8071 / Annex 10 tolerances NOT read — replace with the mentor's figure"},
+  "seed": {"value": 0, "unit": "", "source": "[Y]"}
+ },
+ "quick": {"sample_s": 1.0}
+}

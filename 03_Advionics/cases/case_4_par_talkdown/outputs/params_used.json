@@ -1,0 +1,30 @@
+{
+ "params": {
+  "rwy_lat": 51.0,
+  "rwy_lon": 4.0,
+  "rwy_elev_m": 10.0,
+  "rwy_course_deg": 250.0,
+  "start_range_nm": 8.0,
+  "start_offset_m": 150.0,
+  "nav_bias_m": [
+   0,
+   40,
+   -25
+  ],
+  "nav_sigma_m": [
+   0,
+   5,
+   3
+  ],
+  "gust_sigma": 1.0,
+  "voice_lost_at_s": 100.0,
+  "lost_after_s": 5.0,
+  "every_s": 5.0,
+  "update_s": 1.0,
+  "gp_slightly_deg": 0.1,
+  "gp_well_deg": 0.3,
+  "decision_height_m": 60.96,
+  "seed": 1
+ },
+ "overrides": []
+}

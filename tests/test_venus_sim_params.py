@@ -1,4 +1,4 @@
-"""Contract of studies/final_2026/venus/sim_params.json (written by scripts/venus_sim_params.py)."""
+"""Contract of 04_Venus/outputs/sim_params.json (written by 04_Venus/scripts/venus_sim_params.py)."""
 from __future__ import annotations
 
 import json
@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-PATH = Path(__file__).resolve().parents[1] / "studies" / "final_2026" / "venus" / "sim_params.json"
+PATH = Path(__file__).resolve().parents[1] / "04_Venus" / "outputs" / "sim_params.json"
 TAGS = {"D", "D-ag", "K", "Y"}
 
 

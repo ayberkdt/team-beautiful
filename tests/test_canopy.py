@@ -368,6 +368,9 @@ def test_fmea_table_renders():
     check_true("one row per failure mode", text.count("\n") == len(fmea.FMEA) + 2)
     check_true("probability filled where a rate exists", "1.0e-03" in text)
     check_true("emergency opening hazard listed", any("emergency opening" in r.effect for r in fmea.FMEA))
+    check_true("structural failure listed as not detected (alert cannot see G-MIIL's cause)",
+               any(r.item == "Canopy structure" and "not detected" in r.detection for r in fmea.FMEA))
+    check_true("common-cause harness/supply row present", any(r.item == "Harness / supply" for r in fmea.FMEA))
 
 
 def test_sensor_fault_at_takeoff_power_is_red():

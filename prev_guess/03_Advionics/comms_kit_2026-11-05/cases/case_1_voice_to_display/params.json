@@ -1,0 +1,31 @@
+{
+ "case": "case_1_voice_to_display",
+ "params": {
+  "own_callsign": {"value": "BTL123", "unit": "", "source": "[Y] synthetic callsign (no verified designator table read)"},
+  "phrases": {"value": [
+    "beetle one two three turn left heading two seven zero descend and maintain three thousand feet",
+    "beetle one two three turn right heading three four zero",
+    "beetle one two three descend and maintain four thousand feet reduce speed one eight zero knots",
+    "beetle one two three climb flight level one two zero",
+    "beetle one two three squawk four six two one",
+    "beetle one two three contact approach one one eight decimal five zero five",
+    "beetle one two three cleared ils approach runway two five right qnh one zero one three",
+    "beetle one two three turn left heading two zero zero"], "unit": "", "source": "[Y] same set as atc_day.py PHRASES; replace with the mentor's phraseology"},
+  "other_phrase": {"value": "beetle one three two turn right heading zero nine zero descend and maintain five thousand feet", "unit": "", "source": "[Y] similar callsign BTL132"},
+  "p_other": {"value": 0.2, "unit": "share", "source": "[Y]"},
+  "snr_db": {"value": [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30], "unit": "dB", "source": "[Y] range covers ATC audio 'usually below 15 dB' (Zuluaga-Gomez 2022, A_ZuluagaGomez2022_wav2vec2_ATC_SNR [D])"},
+  "n_per_snr": {"value": 600, "unit": "transmissions", "source": "[Y] Monte Carlo size"},
+  "hi": {"value": 0.85, "unit": "word confidence", "source": "[Y] CONFIRMED threshold (clearance.parse default)"},
+  "lo": {"value": 0.5, "unit": "word confidence", "source": "[Y] digit masking threshold"},
+  "known_runways": {"value": ["07L", "07R", "25L", "25R"], "unit": "", "source": "[Y] synthetic destination (nav database / ATIS in a product)"},
+  "wer_floor": {"value": 0.03, "unit": "share", "source": "[Y] word-error model (channel.WordChannel); literature: ATCo 2.8-8 % WER at >= 20 dB (A_00_summary)"},
+  "wer_ceiling": {"value": 0.6, "unit": "share", "source": "[Y] word-error model"},
+  "snr_mid_db": {"value": 8.0, "unit": "dB", "source": "[Y] SNR where the error rate is half-way"},
+  "snr_width_db": {"value": 3.0, "unit": "dB", "source": "[Y]"},
+  "p_confident_error": {"value": 0.15, "unit": "share", "source": "[Y] errors that still get high confidence (miscalibration)"},
+  "trace_snr_db": {"value": 12.0, "unit": "dB", "source": "[Y] SNR of the one stage-by-stage trace in result.md"},
+  "trace_seed": {"value": 3, "unit": "", "source": "[Y]"},
+  "seed": {"value": 0, "unit": "", "source": "[Y]"}
+ },
+ "quick": {"n_per_snr": 60, "snr_db": [0, 10, 20, 30]}
+}

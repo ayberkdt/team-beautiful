@@ -244,7 +244,7 @@ def design_document(b: Baseline = BASELINE) -> dict:
         "atmosphere": {
             "source": "40-64 km: Pioneer Venus 4-probe mean of T, p, rho; wind = mean of the probes with a DLBI "
                       "sample within +-0.5 km (2-4 probes; 4-probe interpolation is 0-2.4 m/s lower) (PDS raw "
-                      "tables, scripts/venus_pds_extract.py),"
+                      "tables, 04_Venus/scripts/venus_pds_extract.py),"
                       " bands = probe envelope (wind band widened ±10 m/s); outside: aerokit.planetary (VIRA-like "
                       "table via Wikipedia). Speed of sound from NIST CO2 Cp (aerokit.venus.gas).",
             "profile": profile,

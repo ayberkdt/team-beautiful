@@ -1,7 +1,7 @@
 """References for the 2026 final-challenge work on the canopy task (owned by one parallel session; add entries here only).
 
 Every entry here was opened and read in the EASA canopy session on 4 Nov 2026; the evidence notes with page numbers are in
-``research_notes/EASA kanopi/`` (``R0_*`` read by the main session, ``R1_``–``R4_`` by subagents).
+``02_EASA/research/`` (``R0_*`` read by the main session, ``R1_``–``R4_`` by subagents).
 """
 from aerokit.references import Reference
 

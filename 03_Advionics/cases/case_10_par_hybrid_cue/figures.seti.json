@@ -1,0 +1,51 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "sunum",
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {
+  "No cue": {
+   "renk": "#919191",
+   "baglam": true,
+   "isaret": null,
+   "cizgi": "-",
+   "sira": 0
+  },
+  "With cue": {
+   "renk": "#1f3a93",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 1
+  }
+ },
+ "nicelikler": {
+  "t": {
+   "etiket": "Time",
+   "birim": "s",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "y": {
+   "etiket": "Lateral deviation, true",
+   "birim": "m",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "C10_return_to_path": "outputs/C10_return_to_path.dw.json"
+ }
+}

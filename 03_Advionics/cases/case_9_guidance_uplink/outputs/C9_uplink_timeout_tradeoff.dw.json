@@ -1,0 +1,181 @@
+{
+ "surum": 1,
+ "ad": "C9_uplink_timeout_tradeoff",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  850.2,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    52.4,
+    73.2,
+    778.0,
+    378.8
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Timeout 2 s",
+     "tur": "cizgi",
+     "renk": "#0072b2",
+     "isaret": "o",
+     "cizgi": "-",
+     "kalinlik": 3.0,
+     "isaret_boyu": 9.0
+    },
+    {
+     "etiket": "Timeout 3 s",
+     "tur": "cizgi",
+     "renk": "#d55e00",
+     "isaret": "o",
+     "cizgi": "--",
+     "kalinlik": 3.0,
+     "isaret_boyu": 9.0
+    },
+    {
+     "etiket": "Timeout 5 s",
+     "tur": "cizgi",
+     "renk": "#009e73",
+     "isaret": "o",
+     "cizgi": "-.",
+     "kalinlik": 3.0,
+     "isaret_boyu": 9.0
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Message loss probability",
+    "nicelik": "Message loss probability",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "messagelossprobability",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0007692307692307692,
+     0.39
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "10⁻³",
+     "10⁻²",
+     "10⁻¹"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "10⁻³",
+     "10⁻²",
+     "10⁻¹"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     292.5,
+     3.0,
+     537.9,
+     25.3
+    ]
+   },
+   "y": {
+    "ham": "Approaches with a spurious GUIDANCE LOST (%)",
+    "nicelik": "Approaches with a spurious GUIDANCE LOST",
+    "birim": "%",
+    "bicim": "parantez",
+    "anahtar": "approacheswithaspuriousguidancelost",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     100.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "20",
+     "40",
+     "60",
+     "80",
+     "100"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     52.4,
+     388.0,
+     537.4,
+     411.0
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [
+    "Timeout 2 s",
+    "Timeout 3 s",
+    "Timeout 5 s"
+   ],
+   "izgara": {
+    "x": true,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

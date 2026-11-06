@@ -1,0 +1,1474 @@
+{
+ "source": "Material selection report Ideathon challenge.pdf",
+ "columns": [
+  "*Structural steel, S275N, normalized",
+  "Aluminum, 2618, T6",
+  "Titanium, near-alpha alloy, Ti-8Al-1Mo-1V, single annealed"
+ ],
+ "rows": [
+  {
+   "page": 7,
+   "property": "Computed Properties",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 7,
+   "property": "Mass per unit of stiffness",
+   "S275N": "528 - 556",
+   "Al2618T6": "314 - 325",
+   "Ti811SA": "388 - 398",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "Cost per unit of stiffness",
+   "S275N": "552 - 846",
+   "Al2618T6": "995 - 1120",
+   "Ti811SA": "9020 - 10300",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "General information",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 7,
+   "property": "Condition",
+   "S275N": "Normalized",
+   "Al2618T6": "T6 (Solution heat- treated and artificially aged)",
+   "Ti811SA": "Single annealed",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "UNS number",
+   "S275N": "",
+   "Al2618T6": "A92618",
+   "Ti811SA": "R54810",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "US name",
+   "S275N": "ASTM A633 Grade A",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "EN name",
+   "S275N": "BS EN 10025-3:2004",
+   "Al2618T6": "EN AW-2618 (EN AW- Al Cu2Mg1,5Ni)",
+   "Ti811SA": "",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "EN number",
+   "S275N": "1.0490",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "GB (Chinese) name",
+   "S275N": "Q295 to GB/T 1591, 25Mn to GB 699, 20MnMo to GB/T 17107",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "JIS (Japanese) name",
+   "S275N": "SM400B",
+   "Al2618T6": "A2618FD, A2618FH to JIS H4140",
+   "Ti811SA": "",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "Included in Materials Data for Simulation",
+   "S275N": "Yes",
+   "Al2618T6": "Yes",
+   "Ti811SA": "Yes",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "Materials Data for Simulation name",
+   "S275N": "Structural steel, S275N",
+   "Al2618T6": "Aluminum alloy, wrought, 2618, T6",
+   "Ti811SA": "Titanium alloy, Ti-8Al- 1Mo-1V, annealed",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "Composition overview",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 7,
+   "property": "Material state",
+   "S275N": "Solid",
+   "Al2618T6": "Solid",
+   "Ti811SA": "Solid",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "Material class",
+   "S275N": "Metal",
+   "Al2618T6": "Metal",
+   "Ti811SA": "Metal",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "Material family",
+   "S275N": "Metal (ferrous)",
+   "Al2618T6": "Metal (non-ferrous)",
+   "Ti811SA": "Metal (non-ferrous)",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "Material sub-class",
+   "S275N": "Microalloy and high strength steel",
+   "Al2618T6": "Aluminum alloy",
+   "Ti811SA": "Titanium alloy",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "Base material",
+   "S275N": "Fe (Iron)",
+   "Al2618T6": "Al (Aluminum)",
+   "Ti811SA": "Ti (Titanium)",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "Composition detail (metals, ceramics and glasses)",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 7,
+   "property": "Al (aluminum) (%)",
+   "S275N": "0.02 - 0.024",
+   "Al2618T6": "92.4 - 94.9",
+   "Ti811SA": "7.5 - 8.5",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "C (carbon) (%)",
+   "S275N": "0 - 0.18",
+   "Al2618T6": "0",
+   "Ti811SA": "0 - 0.08",
+   "section": false
+  },
+  {
+   "page": 7,
+   "property": "Cr (chromium) (%)",
+   "S275N": "0 - 0.3",
+   "Al2618T6": "0",
+   "Ti811SA": "0",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Cu (copper) (%)",
+   "S275N": "0 - 0.35",
+   "Al2618T6": "1.9 - 2.7",
+   "Ti811SA": "0",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Fe (iron) (%)",
+   "S275N": "96.7 - 99.5",
+   "Al2618T6": "0.9 - 1.3",
+   "Ti811SA": "0 - 0.3",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Mg (magnesium) (%)",
+   "S275N": "0",
+   "Al2618T6": "1.3 - 1.8",
+   "Ti811SA": "0",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Mn (manganese) (%)",
+   "S275N": "0.5 - 1.4",
+   "Al2618T6": "0",
+   "Ti811SA": "0",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Mo (molybdenum) (%)",
+   "S275N": "0 - 0.1",
+   "Al2618T6": "0",
+   "Ti811SA": "0.75 - 1.25",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "N (nitrogen) (%)",
+   "S275N": "0 - 0.015",
+   "Al2618T6": "0",
+   "Ti811SA": "0 - 0.05",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Nb (niobium) (%)",
+   "S275N": "0 - 0.05",
+   "Al2618T6": "0",
+   "Ti811SA": "0",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Ni (nickel) (%)",
+   "S275N": "0 - 0.3",
+   "Al2618T6": "0.9 - 1.2",
+   "Ti811SA": "0",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "P (phosphorus) (%)",
+   "S275N": "0 - 0.035",
+   "Al2618T6": "0",
+   "Ti811SA": "0",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "S (sulfur) (%)",
+   "S275N": "0 - 0.03",
+   "Al2618T6": "0",
+   "Ti811SA": "0",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Si (silicon) (%)",
+   "S275N": "0 - 0.4",
+   "Al2618T6": "0.1 - 0.25",
+   "Ti811SA": "0",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Ti (titanium) (%)",
+   "S275N": "0 - 0.03",
+   "Al2618T6": "0.04 - 0.1",
+   "Ti811SA": "88.6 - 91",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "V (vanadium) (%)",
+   "S275N": "0 - 0.05",
+   "Al2618T6": "0",
+   "Ti811SA": "0.75 - 1.25",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Zn (zinc) (%)",
+   "S275N": "0",
+   "Al2618T6": "0 - 0.1",
+   "Ti811SA": "0",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Other (%)",
+   "S275N": "0",
+   "Al2618T6": "0 - 0.15",
+   "Ti811SA": "0",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Price",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 8,
+   "property": "Price (USD/kg)",
+   "S275N": "1.02 - 1.56",
+   "Al2618T6": "3.12 - 3.48",
+   "Ti811SA": "23 - 26.3",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Price per unit volume (USD/m^3)",
+   "S275N": "7960 - 12300",
+   "Al2618T6": "8490 - 9670",
+   "Ti811SA": "100000 - 116000",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Physical properties",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 8,
+   "property": "Density (kg/m^3)",
+   "S275N": "7800 - 7900",
+   "Al2618T6": "2720 - 2780",
+   "Ti811SA": "4350 - 4400",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Mechanical properties",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 8,
+   "property": "Young's modulus (GPa)",
+   "S275N": "200 - 221",
+   "Al2618T6": "72 - 76",
+   "Ti811SA": "121 - 127",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Young's modulus with temperature (GPa) #",
+   "S275N": "",
+   "Al2618T6": "74",
+   "Ti811SA": "125",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Specific stiffness (MN.m/kg)",
+   "S275N": "25.5 - 28.1",
+   "Al2618T6": "26.1 - 27.7",
+   "Ti811SA": "27.7 - 29.1",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Yield strength (elastic limit) (MPa)",
+   "S275N": "205 - 275",
+   "Al2618T6": "320 - 380",
+   "Ti811SA": "758 - 931",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Yield strength with temperature (MPa) #",
+   "S275N": "",
+   "Al2618T6": "370",
+   "Ti811SA": "845",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Tensile strength (MPa)",
+   "S275N": "350 - 510",
+   "Al2618T6": "400 - 440",
+   "Ti811SA": "827 - 1000",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Tensile strength with temperature (MPa) #",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "921",
+   "section": true
+  },
+  {
+   "page": 8,
+   "property": "Specific strength (kN.m/kg)",
+   "S275N": "26.1 - 35",
+   "Al2618T6": "116 - 138",
+   "Ti811SA": "173 - 213",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Elongation (% strain)",
+   "S275N": "23 - 24",
+   "Al2618T6": "8 - 9",
+   "Ti811SA": "6 - 10",
+   "section": false
+  },
+  {
+   "page": 8,
+   "property": "Tangent modulus (MPa)",
+   "S275N": "1280",
+   "Al2618T6": "1240",
+   "Ti811SA": "1640",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Compressive strength (MPa)",
+   "S275N": "205 - 275",
+   "Al2618T6": "320 - 380",
+   "Ti811SA": "750 - 829",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Flexural modulus (GPa)",
+   "S275N": "200 - 221",
+   "Al2618T6": "72 - 76",
+   "Ti811SA": "121 - 127",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Flexural strength (modulus of rupture) (MPa)",
+   "S275N": "360 - 440",
+   "Al2618T6": "320 - 380",
+   "Ti811SA": "758 - 931",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Shear modulus (GPa)",
+   "S275N": "77.5 - 83.5",
+   "Al2618T6": "25 - 28",
+   "Ti811SA": "46 - 48.4",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Bulk modulus (GPa)",
+   "S275N": "159 - 204",
+   "Al2618T6": "68 - 73",
+   "Ti811SA": "112 - 117",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Poisson's ratio",
+   "S275N": "0.29 - 0.32",
+   "Al2618T6": "0.325 - 0.335",
+   "Ti811SA": "0.32 - 0.333",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Shape factor",
+   "S275N": "64",
+   "Al2618T6": "21",
+   "Ti811SA": "15",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Hardness - Vickers (HV)",
+   "S275N": "79 - 141",
+   "Al2618T6": "119 - 131",
+   "Ti811SA": "340 - 380",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Hardness - Brinell (HB)",
+   "S275N": "",
+   "Al2618T6": "109 - 121",
+   "Ti811SA": "",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Elastic stored energy (springs) (kJ/m^3)",
+   "S275N": "102 - 177",
+   "Al2618T6": "696 - 971",
+   "Ti811SA": "2340 - 3460",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Fatigue strength at 10^7 cycles (MPa)",
+   "S275N": "194 - 233",
+   "Al2618T6": "118 - 130",
+   "Ti811SA": "529 - 579",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Fatigue strength model (stress amplitude) (MPa) #",
+   "S275N": "149 - 303",
+   "Al2618T6": "112 - 137",
+   "Ti811SA": "459 - 668",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Impact & fracture properties",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 9,
+   "property": "Fracture toughness (MPa.m^0.5)",
+   "S275N": "26.4 - 38.1",
+   "Al2618T6": "31 - 34",
+   "Ti811SA": "65 - 75",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Toughness (G) (kJ/m^2)",
+   "S275N": "3.41 - 6.73",
+   "Al2618T6": "13 - 15.7",
+   "Ti811SA": "34.2 - 45.2",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Thermal properties",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 9,
+   "property": "Melting point (°C)",
+   "S275N": "1410 - 1500",
+   "Al2618T6": "560 - 650",
+   "Ti811SA": "1530 - 1550",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Maximum service temperature (°C)",
+   "S275N": "471 - 501",
+   "Al2618T6": "250 - 300",
+   "Ti811SA": "407 - 455",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Minimum service temperature (°C)",
+   "S275N": "-52 - -24",
+   "Al2618T6": "-273",
+   "Ti811SA": "-273",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Thermal conductivity (W/m.°C)",
+   "S275N": "48 - 53",
+   "Al2618T6": "148 - 154",
+   "Ti811SA": "6.1 - 6.61",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Thermal conductivity with temperature (W/m.°C) #",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "6.1",
+   "section": true
+  },
+  {
+   "page": 9,
+   "property": "Specific heat capacity (J/kg.°C)",
+   "S275N": "457 - 503",
+   "Al2618T6": "858 - 893",
+   "Ti811SA": "502 - 522",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Thermal expansion coefficient (µstrain/°C)",
+   "S275N": "11 - 13",
+   "Al2618T6": "21.5 - 22.6",
+   "Ti811SA": "8.73 - 9.18",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Thermal expansion coefficient with temperature (µstrain/°C) #",
+   "S275N": "",
+   "Al2618T6": "21.4",
+   "Ti811SA": "8.62",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Thermal expansion coefficient with temperature Reference _ temp (°C)",
+   "S275N": "",
+   "Al2618T6": "20",
+   "Ti811SA": "20",
+   "section": false
+  },
+  {
+   "page": 9,
+   "property": "Thermal shock resistance (°C)",
+   "S275N": "79.6 - 112",
+   "Al2618T6": "195 - 235",
+   "Ti811SA": "679 - 843",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Thermal distortion resistance (MW/m)",
+   "S275N": "3.83 - 4.64",
+   "Al2618T6": "6.63 - 7.07",
+   "Ti811SA": "0.677 - 0.743",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Latent heat of fusion (kJ/kg)",
+   "S275N": "377 - 456",
+   "Al2618T6": "384 - 393",
+   "Ti811SA": "360 - 370",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Electrical properties",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 10,
+   "property": "Electrical resistivity (µohm.cm)",
+   "S275N": "16 - 19",
+   "Al2618T6": "4.3 - 4.5",
+   "Ti811SA": "195 - 202",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Electrical conductivity (%IACS)",
+   "S275N": "9.07 - 10.8",
+   "Al2618T6": "38.3 - 40.1",
+   "Ti811SA": "0.854 - 0.884",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Galvanic potential (V)",
+   "S275N": "-0.51 - -0.43",
+   "Al2618T6": "-0.78 - -0.7",
+   "Ti811SA": "-0.13 - -0.05",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Magnetic properties",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 10,
+   "property": "Magnetic type",
+   "S275N": "Magnetic",
+   "Al2618T6": "Non-magnetic",
+   "Ti811SA": "Non-magnetic",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "B-H curve, initial magnetization (T) #",
+   "S275N": "1.13",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Optical, aesthetic and acoustic properties",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 10,
+   "property": "Transparency",
+   "S275N": "Opaque",
+   "Al2618T6": "Opaque",
+   "Ti811SA": "Opaque",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Acoustic velocity (m/s)",
+   "S275N": "5050 - 5300",
+   "Al2618T6": "5110 - 5260",
+   "Ti811SA": "5260 - 5390",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Mechanical loss coefficient (tan delta)",
+   "S275N": "0.00102 - 0.00153",
+   "Al2618T6": "0.0001 - 0.002",
+   "Ti811SA": "0.001 - 0.002",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Healthcare & food",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 10,
+   "property": "Food contact",
+   "S275N": "Yes",
+   "Al2618T6": "No",
+   "Ti811SA": "Yes",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Restricted substances risk indicators",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 10,
+   "property": "RoHS 2 (EU) compliant grades?",
+   "S275N": "Yes",
+   "Al2618T6": "Yes",
+   "Ti811SA": "Yes",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "EU REACH Candidate List indicator (0-1, 1 = high risk)",
+   "S275N": "0",
+   "Al2618T6": "0",
+   "Ti811SA": "0",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "SIN List indicator (0-1, 1 = high risk)",
+   "S275N": "0",
+   "Al2618T6": "0",
+   "Ti811SA": "0",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Critical materials risk",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 10,
+   "property": "Contains >5wt% critical elements?",
+   "S275N": "No",
+   "Al2618T6": "Yes",
+   "Ti811SA": "Yes",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Abundance risk level",
+   "S275N": "Low",
+   "Al2618T6": "Medium",
+   "Ti811SA": "Medium",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Sourcing and geopolitical risk level",
+   "S275N": "Low",
+   "Al2618T6": "Very high",
+   "Ti811SA": "Medium",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Environmental country risk level",
+   "S275N": "High",
+   "Al2618T6": "Very high",
+   "Ti811SA": "High",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Price volatility risk level",
+   "S275N": "Medium",
+   "Al2618T6": "High",
+   "Ti811SA": "Low",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Conflict material risk level",
+   "S275N": "None",
+   "Al2618T6": "Caution",
+   "Ti811SA": "None",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Processing properties",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 10,
+   "property": "Metal casting",
+   "S275N": "Unsuitable",
+   "Al2618T6": "Unsuitable",
+   "Ti811SA": "Limited use",
+   "section": false
+  },
+  {
+   "page": 10,
+   "property": "Metal cold forming",
+   "S275N": "Excellent",
+   "Al2618T6": "Acceptable",
+   "Ti811SA": "Acceptable",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Metal hot forming",
+   "S275N": "Excellent",
+   "Al2618T6": "Acceptable",
+   "Ti811SA": "Acceptable",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Metal press forming",
+   "S275N": "Acceptable",
+   "Al2618T6": "Acceptable",
+   "Ti811SA": "Acceptable",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Metal deep drawing",
+   "S275N": "Limited use",
+   "Al2618T6": "Limited use",
+   "Ti811SA": "Limited use",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Machining speed (m/min)",
+   "S275N": "45.7",
+   "Al2618T6": "39.6",
+   "Ti811SA": "9.75",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Weldability",
+   "S275N": "Good",
+   "Al2618T6": "Poor",
+   "Ti811SA": "Good",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Weldability Notes _",
+   "S275N": "Preheating and post weld heat treatments may be required",
+   "Al2618T6": "Preheating is not required, post weld heat treatment is required",
+   "Ti811SA": "Preheating and post weld heat treatments are not required",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Carbon equivalency",
+   "S275N": "0.025 - 0.313",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Durability",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 11,
+   "property": "Water (fresh)",
+   "S275N": "Acceptable",
+   "Al2618T6": "Excellent",
+   "Ti811SA": "Excellent",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Water (salt)",
+   "S275N": "Limited use",
+   "Al2618T6": "Acceptable",
+   "Ti811SA": "Excellent",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Weak acids",
+   "S275N": "Limited use",
+   "Al2618T6": "Excellent",
+   "Ti811SA": "Excellent",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Strong acids",
+   "S275N": "Unacceptable",
+   "Al2618T6": "Excellent",
+   "Ti811SA": "Acceptable",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Weak alkalis",
+   "S275N": "Acceptable",
+   "Al2618T6": "Acceptable",
+   "Ti811SA": "Excellent",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Strong alkalis",
+   "S275N": "Limited use",
+   "Al2618T6": "Unacceptable",
+   "Ti811SA": "Acceptable",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Organic solvents",
+   "S275N": "Excellent",
+   "Al2618T6": "Excellent",
+   "Ti811SA": "Excellent",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Oxidation at 500C",
+   "S275N": "Acceptable",
+   "Al2618T6": "Unacceptable",
+   "Ti811SA": "Acceptable",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "UV radiation (sunlight)",
+   "S275N": "Excellent",
+   "Al2618T6": "Excellent",
+   "Ti811SA": "Excellent",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Galling resistance (adhesive wear)",
+   "S275N": "Acceptable",
+   "Al2618T6": "Limited use",
+   "Ti811SA": "Limited use",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Flammability",
+   "S275N": "Non-flammable",
+   "Al2618T6": "Non-flammable",
+   "Ti811SA": "Non-flammable",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Corrosion resistance of metals",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 11,
+   "property": "Stress corrosion cracking",
+   "S275N": "Slightly susceptible",
+   "Al2618T6": "Highly susceptible",
+   "Ti811SA": "Slightly susceptible",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Stress corrosion cracking Notes _",
+   "S275N": "Rated in chloride; Other susceptible environments: Hydrogen sulfide",
+   "Al2618T6": "Rated in chloride; Other susceptible environments: Halide, water",
+   "Ti811SA": "Rated in chloride; Other susceptible environments: Halide, organic liquids, dinitrogen tetroxide",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Environmental indicators - material production",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 11,
+   "property": "Climate change (CO2-eq) (virgin grade production) (kg/kg)",
+   "S275N": "2.89 - 3.18",
+   "Al2618T6": "12 - 13.2",
+   "Ti811SA": "33.6 - 37.1",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Climate change (CO2-eq) (typical grade production) (kg/kg)",
+   "S275N": "2.03 - 2.23",
+   "Al2618T6": "8.77 - 9.64",
+   "Ti811SA": "21.7 - 23.9",
+   "section": false
+  },
+  {
+   "page": 11,
+   "property": "Embodied energy (virgin grade production) (MJ/kg)",
+   "S275N": "27.4 - 30.2",
+   "Al2618T6": "167 - 184",
+   "Ti811SA": "553 - 609",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Embodied energy (typical grade production) (MJ/kg)",
+   "S275N": "19.6 - 21.7",
+   "Al2618T6": "126 - 138",
+   "Ti811SA": "465 - 512",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Water usage (l/kg)",
+   "S275N": "43.2 - 47.7",
+   "Al2618T6": "1110 - 1230",
+   "Ti811SA": "195 - 215",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Environmental indicators - processing",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 12,
+   "property": "Metal casting, climate change (CO2-eq) (kg/kg)",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "3.79 - 4.28",
+   "section": true
+  },
+  {
+   "page": 12,
+   "property": "Metal casting, embodied energy (MJ/kg)",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "52.1 - 58.6",
+   "section": true
+  },
+  {
+   "page": 12,
+   "property": "Metal rolling and forging, climate change (CO2-eq) (kg/kg)",
+   "S275N": "0.394 - 0.555",
+   "Al2618T6": "1.56 - 2",
+   "Ti811SA": "2.26 - 2.73",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Metal rolling and forging, embodied energy (MJ/kg)",
+   "S275N": "6.02 - 8.48",
+   "Al2618T6": "23.9 - 30.5",
+   "Ti811SA": "34.6 - 41.7",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Metal extrusion, hot, climate change (CO2-eq) (kg/kg)",
+   "S275N": "0.725 - 1.04",
+   "Al2618T6": "3.05 - 3.9",
+   "Ti811SA": "4.44 - 5.36",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Metal extrusion, hot, embodied energy (MJ/kg)",
+   "S275N": "11.1 - 15.9",
+   "Al2618T6": "46.6 - 59.5",
+   "Ti811SA": "67.8 - 81.7",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Wire drawing, climate change (CO2-eq) (kg/kg)",
+   "S275N": "0.287 - 0.317",
+   "Al2618T6": "0.859 - 0.95",
+   "Ti811SA": "0.859 - 0.95",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Wire drawing, embodied energy (MJ/kg)",
+   "S275N": "4.38 - 4.83",
+   "Al2618T6": "13.1 - 14.5",
+   "Ti811SA": "13.1 - 14.5",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Metal powder forming, climate change (CO2-eq) (kg/kg)",
+   "S275N": "5.28 - 6.79",
+   "Al2618T6": "3.89 - 5.17",
+   "Ti811SA": "6.24 - 7.26",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Metal powder forming, embodied energy (MJ/kg)",
+   "S275N": "64.7 - 83.2",
+   "Al2618T6": "47.9 - 63.6",
+   "Ti811SA": "76.4 - 88.9",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Chemical vapor deposition (CVD), climate change (CO2-eq) (kg/kg)",
+   "S275N": "1150 - 1540",
+   "Al2618T6": "1170 - 1320",
+   "Ti811SA": "1100 - 1250",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Chemical vapor deposition (CVD), embodied energy (MJ/kg)",
+   "S275N": "14000 - 18700",
+   "Al2618T6": "14200 - 16100",
+   "Ti811SA": "13300 - 15200",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Machining, coarse, climate change (CO2-eq) (kg/kg)",
+   "S275N": "1.06 - 1.2",
+   "Al2618T6": "1.4 - 1.63",
+   "Ti811SA": "1.61 - 1.85",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Machining, coarse, embodied energy (MJ/kg)",
+   "S275N": "16.1 - 18.3",
+   "Al2618T6": "21.5 - 24.9",
+   "Ti811SA": "24.7 - 28.2",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Machining, fine, climate change (CO2-eq) (kg/kg)",
+   "S275N": "1.26 - 1.5",
+   "Al2618T6": "2.3 - 2.79",
+   "Ti811SA": "2.93 - 3.44",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Machining, fine, embodied energy (MJ/kg)",
+   "S275N": "19.2 - 22.8",
+   "Al2618T6": "35.2 - 42.5",
+   "Ti811SA": "44.8 - 52.5",
+   "section": false
+  },
+  {
+   "page": 12,
+   "property": "Machining, grinding, climate change (CO2-eq) (kg/kg)",
+   "S275N": "1.46 - 1.79",
+   "Al2618T6": "3.2 - 3.94",
+   "Ti811SA": "4.25 - 5.03",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Machining, grinding, embodied energy (MJ/kg)",
+   "S275N": "22.3 - 27.3",
+   "Al2618T6": "49 - 60.1",
+   "Ti811SA": "64.9 - 76.8",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Machining, laser, CO2, climate change (CO2-eq) (kg/m)",
+   "S275N": "0.137 - 0.183",
+   "Al2618T6": "0.139 - 0.158",
+   "Ti811SA": "0.131 - 0.148",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Machining, laser, CO2, embodied energy (MJ/m)",
+   "S275N": "1.66 - 2.23",
+   "Al2618T6": "1.69 - 1.92",
+   "Ti811SA": "1.59 - 1.8",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Recycling and end of life",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 13,
+   "property": "Recycle",
+   "S275N": "Yes",
+   "Al2618T6": "Yes",
+   "Ti811SA": "Yes",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Functional recycle",
+   "S275N": "Yes",
+   "Al2618T6": "No",
+   "Ti811SA": "No",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Climate change (CO2-eq), recycling (kg/kg)",
+   "S275N": "0.78 - 0.859",
+   "Al2618T6": "2.76 - 3.04",
+   "Ti811SA": "9.74 - 10.8",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Embodied energy, recycling (MJ/kg)",
+   "S275N": "8.49 - 9.36",
+   "Al2618T6": "48.4 - 53.4",
+   "Ti811SA": "376 - 414",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Recycle fraction in current supply (%)",
+   "S275N": "41",
+   "Al2618T6": "35",
+   "Ti811SA": "50",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Combust for energy recovery",
+   "S275N": "No",
+   "Al2618T6": "No",
+   "Ti811SA": "No",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Landfill",
+   "S275N": "Yes",
+   "Al2618T6": "Yes",
+   "Ti811SA": "Yes",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Biodegrade",
+   "S275N": "No",
+   "Al2618T6": "No",
+   "Ti811SA": "No",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Geo-economic data for principal component",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 13,
+   "property": "Principal component",
+   "S275N": "Iron",
+   "Al2618T6": "Aluminum",
+   "Ti811SA": "Titanium",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Typical exploited ore grade (%)",
+   "S275N": "45.1 - 49.9",
+   "Al2618T6": "30.4 - 33.6",
+   "Ti811SA": "15.2 - 16.8",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Minimum economic ore grade (%)",
+   "S275N": "25 - 70",
+   "Al2618T6": "25 - 39",
+   "Ti811SA": "2 - 30",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Abundance in Earth's crust (ppm)",
+   "S275N": "41000 - 63000",
+   "Al2618T6": "82000",
+   "Ti811SA": "4140 - 6600",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Abundance in seawater (ppm)",
+   "S275N": "0.0025 - 0.003",
+   "Al2618T6": "0.0005 - 0.005",
+   "Ti811SA": "0.001",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Annual world production, principal component (tonne/yr)",
+   "S275N": "2.5e9",
+   "Al2618T6": "4e8",
+   "Ti811SA": "8.6e6",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Reserves, principal component (tonne)",
+   "S275N": "1.9e11",
+   "Al2618T6": "3e10",
+   "Ti811SA": "6.9e8",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Links",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  },
+  {
+   "page": 13,
+   "property": "Elements in this material",
+   "S275N": "4",
+   "Al2618T6": "8",
+   "Ti811SA": "5",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Nations of the World",
+   "S275N": "0",
+   "Al2618T6": "28",
+   "Ti811SA": "7",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "ProcessUniverse",
+   "S275N": "125",
+   "Al2618T6": "111",
+   "Ti811SA": "114",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Producers",
+   "S275N": "19",
+   "Al2618T6": "12",
+   "Ti811SA": "11",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Reference",
+   "S275N": "15",
+   "Al2618T6": "25",
+   "Ti811SA": "16",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Shape",
+   "S275N": "24",
+   "Al2618T6": "24",
+   "Ti811SA": "24",
+   "section": false
+  },
+  {
+   "page": 13,
+   "property": "Full Datasheet",
+   "S275N": "",
+   "Al2618T6": "",
+   "Ti811SA": "",
+   "section": true
+  }
+ ]
+}

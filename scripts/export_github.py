@@ -20,24 +20,35 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MAX_BYTES = 20 * 1024 * 1024
 
-INCLUDE_DIRS = ["src", "tests", "scripts", "docs", "reports", "research_notes", "studies", "design_report", "outputs"]
+INCLUDE_DIRS = ["src", "tests", "scripts", "00_Common", "01_Ansys", "02_EASA", "03_Advionics", "04_Venus", "prev_guess"]
 INCLUDE_FILES = ["README.md", "pyproject.toml", ".gitignore"]
 
 # Never published (glob on the path relative to the project root, forward slashes)
 EXCLUDE = [
     # organiser files and anything rebuilt from their CAD
-    "studies/final_2026/ansys/official_2026-11-05/files/*", "studies/final_2026/ansys/official_2026-11-05/unpacked/*",
-    "studies/final_2026/ansys/official_2026-11-05/Files.zip*",
-    "studies/final_2026/ansys/official_2026-11-05/visuals/turntable/*",
+    "01_Ansys/official_2026-11-05/files/*", "01_Ansys/official_2026-11-05/unpacked/*",
+    "01_Ansys/official_2026-11-05/Files.zip*",
+    "01_Ansys/official_2026-11-05/visuals/turntable/*",
     "*/cad/*", "*.stl", "*.step", "*.stp", "*.igs", "*.iges", "*.dsco", "*.x_b",
     # Synopsys "Do Not Share" introduction and documents derived from it (doc 10-14 and their reports)
-    "*Synopsys Introduction*", "docs/10_*", "docs/11_*", "docs/12_*", "docs/13_*", "docs/14_*",
-    "reports/beetiful_three_variants.*", "reports/beetiful_task_scenarios.*", "reports/beetiful_task_space.*",
-    "reports/beetiful_course_playbook.*", "research_notes/Görev senaryoları/*", "research_notes/Üç sapma alanı/*",
-    "studies/tradeoff/decision_rules.json",  # quotes the Do-Not-Share deck
+    "*Synopsys Introduction*", "prev_guess/01_Ansys/docs/1[0-4]_*",
+    "prev_guess/01_Ansys/reports/beetiful_three_variants.*", "prev_guess/01_Ansys/reports/beetiful_task_scenarios.*", "prev_guess/01_Ansys/reports/beetiful_task_space.*",
+    "prev_guess/01_Ansys/reports/beetiful_course_playbook.*", "prev_guess/01_Ansys/research/Görev senaryoları/*", "prev_guess/01_Ansys/research/Üç sapma alanı/*",
+    "prev_guess/01_Ansys/tradeoff/decision_rules.json",  # quotes the Do-Not-Share deck
     "tests/data/*.xml",  # third-party Ansys Workbench Engineering Data export
     # third-party documents (handbooks, regulations, papers): cite, do not redistribute
-    "*.pdf.part", "research_notes/*.pdf", "research_notes/*/*.pdf", "references/*",
+    "*.pdf.part", "*/research/*.pdf", "references/*",
+    # organiser rules, templates and competition PDFs; the team's working report; legacy archive (never exported before)
+    "00_Common/rules_and_templates/*", "01_Ansys/submission/final_report/*", "prev_guess/00_general/archive/*",
+    # official task files of the other challenges and anything holding their verbatim text
+    "02_EASA/official_2026-*/*.docx", "03_Advionics/official_2026-*/*.pdf", "03_Advionics/official_2026-*/task_text.txt",
+    "prev_guess/03_Advionics/comms_kit_2026-11-05/triage_plan.*",
+    "*/official_2026-*/00_OFFICIAL_TASK_vs_KIT.md",        # section 1 follows the organisers' text closely
+    # organiser report template art and renders; filled-in organiser sheets; the team's report before the jury
+    "00_Common/latex_template/compare/*", "00_Common/latex_template/images/*", "*/submission/latex/images/*",
+    "01_Ansys/submission/*TASLAK*", "02_EASA/submission/Team_Beetiful_EASA_Report.*",
+    "*/research/S_intersoft_res_update_2025.md",           # holds a named person's work e-mail
+    "prev_guess/00_general/past_competitions/*",
     # bulky / machine-local
     "*.pkl", "*.zip", "*.pptx", "*.mp4", "*.mov", "*/__pycache__/*", "*.pyc", "*/.pytest_cache/*", "*/mpl/*",
 ]
@@ -65,9 +76,9 @@ def main(dest: Path) -> None:
         out.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(p, out)
         kept.append((rel, hashlib.sha256(p.read_bytes()).hexdigest()[:12], p.stat().st_size))
-    readme = ROOT / "scripts" / "github_readme.md"           # the repo's front page; project README -> docs/
+    readme = ROOT / "scripts" / "github_readme.md"           # the repo's front page; project README -> 00_Common/
     if readme.exists():
-        shutil.copy2(dest / "README.md", dest / "docs" / "PROJECT_README.md") if (dest / "README.md").exists() else None
+        shutil.copy2(dest / "README.md", dest / "00_Common" / "PROJECT_README.md") if (dest / "README.md").exists() else None
         shutil.copy2(readme, dest / "README.md")
     (dest / "EXPORT_MANIFEST.txt").write_text(
         "".join(f"{h}  {s:>10d}  {r}\n" for r, h, s in sorted(kept)), encoding="utf-8")

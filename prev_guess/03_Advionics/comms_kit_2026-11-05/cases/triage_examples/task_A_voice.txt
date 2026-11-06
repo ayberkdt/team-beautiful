@@ -1,0 +1,1 @@
+Design a system that translates ATC voice instructions received over VHF radio into text shown on a cockpit display. Consider speech recognition errors, noisy audio and how the pilot verifies the transcribed clearance before acting on it.

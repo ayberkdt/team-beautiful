@@ -1,0 +1,85 @@
+{
+  "schema": "venus_turbulence_model/1",
+  "written": "2026-11-05",
+  "purpose": "Recommended wind, gust and turbulence parameters for a Venus rotorcraft flight simulator at 45-70 km. Every value has a unit, a tag and a source. Change [Y] values freely; keep [D]/[K] values unless you have better data.",
+  "tags": {
+    "D": "read at the primary source in this session (5 Nov 2026)",
+    "D-ag": "secondary source, or read by an earlier agent/session (note named in source)",
+    "A": "abstract or search snippet only",
+    "K": "computed in this session from [D] values (method in note)",
+    "Y": "engineering judgement; tune freely"
+  },
+  "frames": {
+    "world": "x east, y north, z up; the super-rotation blows toward -x (westward)",
+    "advice": "Move the vehicle in the air-mass frame: the mean wind only carries it. Add the components below on top of the mean wind."
+  },
+  "mean_wind": {
+    "zonal_profile": {
+      "value": "use columns u_west_ms_mean / _min / _max of venus_atmosphere_40_70km.csv (40-64 km); above 64 km use 95-100 m/s",
+      "unit": "m/s westward",
+      "tag": "D (40-64 km), D (64-70 km anchor)",
+      "source": "Pioneer Venus DLBI tables (PDS, E_02); cloud-top value ~100 m/s between about 45S and 45N (Sanchez-Lavega 2017 abstract and Sect. 2.2, E_11)"
+    },
+    "zonal_at_60km_cloud_tracked": {"value": 70, "unit": "m/s", "tag": "D", "source": "Sanchez-Lavega 2017 Sect. 2.2: mean constant velocity between +-45 deg at ~60 km is 70 m/s (E_11)"},
+    "latitude_law": {
+      "value": "u(lat) = u_eq for |lat| <= 45 deg; poleward, reduce linearly to 0 at the pole",
+      "unit": "-",
+      "tag": "Y (shape) / D (45 deg knee)",
+      "source": "Sanchez-Lavega 2017 Sect. 2.2: nearly constant ~100 m/s between +-45 deg, decreasing toward the pole (E_11). Linear decrease is our simplification."
+    },
+    "local_time_variation_cloud_top": {"value": [5, 15], "unit": "m/s increase from 07 h to 17 h LT, 10-40 deg latitude, 65-70 km only", "tag": "D", "source": "Sanchez-Lavega 2017 Sect. 2.4 (E_11). No LT dependence detected at 60 km and 47 km."},
+    "meridional_cloud_layer": {"value": [-5, 5], "unit": "m/s", "tag": "D", "source": "PV probes: in the cloud region (above ~45 km) meridional wind between -5 and +5 m/s (Sanchez-Lavega 2017 Sect. 2.3.1, E_11); PV DLBI in this session gives -7.1 ... +5.8 m/s at 40-60 km (E_02); VEGA balloons V -6.25 ... +4.44 m/s at 53-54 km (E_04)"},
+    "meridional_cloud_top": {"value": [0, 15], "unit": "m/s poleward, peak near 60 deg latitude, 65-70 km", "tag": "D", "source": "Sanchez-Lavega 2017 Sect. 2.3.1 (E_11)"},
+    "vertical_shear": {
+      "value": {"47-56 km": "< 1 m/s per km on average, but PV large probe 56->60 km about 6 m/s per km", "56-62 km": "use the csv profile (about 5-10 m/s per km)", "61-66 km": "8 +- 2 m/s per km"},
+      "unit": "m/s per km",
+      "tag": "K from D (csv) / D-ag",
+      "source": "csv u_west_ms_mean gradient (E_02); VEX VIRTIS shear in A_winds_cloudtracking_vex_akatsuki.md (earlier session)"
+    },
+    "decadal_variability": {"value": 15, "unit": "m/s amplitude (nightside lower cloud)", "tag": "D-ag", "source": "Peralta 2018 via A_winds_cloudtracking_vex_akatsuki.md"}
+  },
+  "component_A_mesoscale_convective_vertical_wind": {
+    "applies": {"value": [47.5, 56.5], "unit": "km", "tag": "D", "source": "convective/low-stability layer: Lefevre 2018 model 46-55 km (9 km thick, matches VEX/Akatsuki RO); Ando 2020 low stability 50-58 km at low latitude, down to ~42 km poleward of 75 deg (E_08, E_10)"},
+    "sigma_w": {"value": 0.70, "unit": "m/s", "tag": "K from D", "source": "VEGA-1 sd 0.663, VEGA-2 sd 0.731 m/s of anemometer vertical wind W_a, flag>=2 samples, 53-54 km (E_04, script vega_stats.py)"},
+    "extremes_measured": {"value": [-3.5, 1.96], "unit": "m/s", "tag": "D", "source": "VEGA-1/2 W_a min/max (E_04)"},
+    "exceedance": {"value": {"P(|w|>1 m/s)": 0.174, "P(|w|>2 m/s)": [0.036, 0.056]}, "unit": "-", "tag": "K from D", "source": "VEGA-1 / VEGA-2 W_a (E_04)"},
+    "mean_offset_note": {"value": -0.49, "unit": "m/s", "tag": "K from D", "source": "both VEGA W_a records have a mean of -0.48 ... -0.50 m/s. We read this as instrument/balloon bias, not a 46 h mean downdraft [Y]; use zero mean in the sim."},
+    "process": {"value": "first-order Gauss-Markov (Ornstein-Uhlenbeck) in time, drifting with the air", "unit": "-", "tag": "Y", "source": "fits the measured autocorrelation shape (below)"},
+    "lagrangian_time_scale": {"value": 1500, "unit": "s", "tag": "K from D", "source": "VEGA W_a autocorrelation: R(300 s)=0.78, R(600 s)=0.59-0.71, R(1200 s)=0.53-0.56, R(1800 s)=0.28 -> 1/e at ~1500 s (E_04). Sampling is 75.5 s, so periods < ~150 s are not resolved by this record."},
+    "eulerian_length_scale": {"value": 5000, "unit": "m", "tag": "Y", "source": "half the convective cell width: cells ~6 km (noon) to 15 km (midnight) in Lefevre 2017, ~20 km in Lefevre 2018; VEGA: hundreds of metres to tens of km (E_09, E_10)"},
+    "effective_correlation_time": {"value": "1/tau = 1/1500 s + V_air/5000 m", "unit": "s", "tag": "Y", "source": "combine Lagrangian decay with frozen-pattern advection at airspeed V_air"},
+    "cell_geometry_option": {"value": "broad updrafts in cell centres, narrow strong downdrafts at cell edges; cell aspect ratio (width/depth) ~3", "unit": "-", "tag": "D", "source": "Lefevre 2017 Sect. 3 (E_09)"}
+  },
+  "component_B_downdraft_events": {
+    "amplitude": {"value": [-2.0, -3.5], "unit": "m/s", "tag": "D", "source": "VEGA: downdrafts 2-3.5 m/s (Linkin 1986 via Lefevre 2017/2018 intro; E_09); most negative 1 h mean in this session's data: VEGA-1 -2.23, VEGA-2 -1.71 m/s (E_04)"},
+    "duration": {"value": [1, 2], "unit": "h", "tag": "D-ag", "source": "TM-88516 via A_vega1985_balloons_lander.md; consistent with 1 h means above"},
+    "altitude_excursion": {"value": [2.5, 3.0], "unit": "km", "tag": "D-ag", "source": "VEGA-2 588->884 hPa (A_vega1985 note); 'downdrafts to 3.5 m/s, 2.5 km excursions' (B_vega_balloon)"},
+    "rate": {"value": 0.03, "unit": "events per hour (about 1 per 33 h)", "tag": "Y", "source": "about one large event per 46 h balloon record (VEGA-1 and VEGA-2), rounded up for test value"},
+    "shape": {"value": "trapezoid: 10 min ramp, plateau, 10 min ramp; add on top of component A", "unit": "-", "tag": "Y", "source": "-"}
+  },
+  "component_C_small_scale_turbulence_dryden": {
+    "form": {"value": "Dryden, MIL-F-8785C transfer functions: Hu = sigma_u*sqrt(2 Lu/(pi V)) / (1 + (Lu/V) s); Hv = sigma_v*sqrt(Lv/(pi V)) (1 + sqrt(3) (Lv/V) s)/(1 + (Lv/V) s)^2; Hw same as Hv with Lw, sigma_w", "unit": "-", "tag": "D-ag", "source": "MathWorks Aerospace Blockset 'Dryden Wind Turbulence Model (Continuous)' page, citing MIL-F-8785C (E_13)"},
+    "sigma_u": {"value": 1.0, "unit": "m/s", "tag": "Y from D-ag", "source": "VEGA horizontal velocity fluctuations at 30-130 s periods: 0.05-1 m/s (VEGA-2), up to 2 m/s (VEGA-1), true value ~1.5x measured; turbulent > 50 % of the time (Kerzhanovich, TM-88516, via A_vega1985 note)"},
+    "sigma_v": {"value": 1.0, "unit": "m/s", "tag": "Y", "source": "isotropic in the horizontal"},
+    "sigma_w": {"value": 0.5, "unit": "m/s", "tag": "Y", "source": "small-scale part only; the total vertical variance is dominated by component A"},
+    "L_u_L_v_L_w": {"value": 533, "unit": "m", "tag": "Y (value = MIL-F-8785C medium/high altitude 1750 ft, D-ag)", "source": "MIL default (E_13); also about 0.1 x the 5-9 km convective layer depth [Y]. A vehicle at 8 m/s then sees ~65 s correlation, inside the measured 30-130 s periods."},
+    "low_speed_rule": {"value": "use V = max(V_air, 2 m/s) in the filters", "unit": "m/s", "tag": "Y", "source": "Dryden filters contain 1/V (E_13); hover needs a floor"},
+    "outside_convective_layer": {"value": 0.3, "unit": "scale factor on all sigma above 57 km and below 47 km", "tag": "Y", "source": "stable layers (static stability 1-4 K/km below 50 km, > 4 K/km above 58 km; Ando 2020, E_08)"}
+  },
+  "component_D_gravity_waves_above_57km": {
+    "temperature_amplitude": {"value": [0.5, 1.0], "unit": "K", "tag": "D", "source": "Lefevre 2018: -0.7 ... +0.5 K at 57 km, about 2x weaker than VeRa (> 1 K) (E_10)"},
+    "horizontal_wavelength": {"value": [1, 20], "unit": "km", "tag": "D", "source": "1-6 km at 57 km without shear, up to 20 km with superrotation shear (Lefevre 2018, E_10)"},
+    "vertical_wind_effect": {"value": "small for flight (tenths of m/s); use for visuals (cloud banding) and as density perturbation", "unit": "-", "tag": "Y", "source": "-"}
+  },
+  "density_and_temperature_variability": {
+    "probe_to_probe_density_spread_55km": {"value": [0.854, 0.907], "unit": "kg/m^3 (mean 0.889)", "tag": "D", "source": "4 PV probes + VEGA-2 lander (csv rho_kgm3_min/max, E_01, E_04)"},
+    "latitude_density_spread_65km": {"value": [0.153, 0.214], "unit": "kg/m^3", "tag": "D-ag (tertiary model)", "source": "Venus-GRAM 10N-80N low/high (csv rho_gram_lat_lo/hi, E_07). Above 60 km latitude matters more than time of day."},
+    "local_time_temperature_at_55km": {"value": "very low variability with local time in VeRa profiles", "unit": "-", "tag": "D", "source": "Lefevre 2017 Sect. 4.1 citing VeRa (E_09)"},
+    "minimum_T_uncertainty_band": {"value": 5, "unit": "K at 50-60 km, low latitude; 10-15 K poleward of ~50 deg above 60 km", "tag": "D-ag", "source": "A_limaye2018_banerjee2026_thermal_review.md (earlier session)"}
+  },
+  "scenario_presets": {
+    "calm_air_mass": {"A_sigma_w": 0.3, "C_sigma_u": 0.5, "downdrafts": false, "tag": "Y"},
+    "nominal_55km": {"A_sigma_w": 0.70, "C_sigma_u": 1.0, "downdrafts": true, "tag": "K/Y"},
+    "severe_convective": {"A_sigma_w": 1.2, "C_sigma_u": 2.0, "downdraft_amplitude": -3.5, "tag": "Y (upper end of VEGA extremes; LES without large-scale heating gave -4.7 ... +2.8 m/s, Lefevre 2017 Sect. 4.2, E_09)"}
+  }
+}

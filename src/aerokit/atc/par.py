@@ -170,6 +170,10 @@ class ParGuidanceMonitor:
     """Declares PAR guidance lost when no talk-down has been received for ``lost_after_s``."""
 
     lost_after_s: float = 5.0
+    #: optional: calls are expected this often; between (expected + grace) and lost_after_s the status is
+    #: "PAR CALL OVERDUE" (amber) instead of plain guidance. None = old behaviour.
+    expected_every_s: float | None = None
+    grace_s: float = 0.5
     last: ParDisplayState | None = None
 
     def receive(self, st: ParDisplayState) -> None:
@@ -177,12 +181,18 @@ class ParGuidanceMonitor:
 
     def view(self, t: float) -> dict:
         if self.last is None:
-            return {"t": t, "status": "NO PAR GUIDANCE YET", "state": None}
+            return {"t": t, "status": "NO PAR GUIDANCE YET", "state": None, "display": "NO PAR GUIDANCE YET"}
         age = t - self.last.t
         if age > self.lost_after_s:
             return {"t": t, "status": f"PAR GUIDANCE LOST ({age:.0f} s) - apply the lost-communication instruction "
-                                      "given before final", "state": None, "last": self.last, "age_s": age}
-        return {"t": t, "status": "PAR GUIDANCE", "state": self.last, "age_s": age}
+                                      "given before final", "state": None, "last": self.last, "age_s": age,
+                    "display": f"PAR GUIDANCE LOST {age:.0f} s"}
+        if self.expected_every_s is not None and age > self.expected_every_s + self.grace_s:
+            return {"t": t, "status": f"PAR CALL OVERDUE ({age:.0f} s) - CHECKING", "state": self.last, "age_s": age,
+                    "display": f"PAR CALL OVERDUE {age:.0f} s", "caution": True}
+        # the age is always on the panel: the class shown is "as of the last call", never "now"
+        return {"t": t, "status": "PAR GUIDANCE", "state": self.last, "age_s": age,
+                "display": f"PAR GUIDANCE - last call {max(age, 0.0):.0f} s"}
 
 
 def talkdown_series(rwy: Runway, t: Sequence[float], x: Sequence[float], y: Sequence[float], z: Sequence[float],

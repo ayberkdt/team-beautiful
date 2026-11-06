@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PAR Pilot Cue</title>
+<style>
+:root {
+  --bg: #0d1117; --panel: #161b22; --line: #30363d; --text: #e6edf3; --muted: #9aa4af;
+  --accent: #39c5e0; --ok: #3fb950; --caution: #e3b341; --warn: #f47067;
+  --r1: 4px; --r2: 8px; --s1: 8px; --s2: 16px; --s3: 24px;
+  --f1: 12px; --f2: 14px; --f3: 16px; --f4: 20px; --f5: 28px; --f6: 40px;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }   /* the attribute alone does not hide SVG elements */
+body { margin: 0; background: var(--bg); color: var(--text); font: var(--f3)/1.4 system-ui, "Segoe UI", sans-serif; }
+header { display: flex; flex-wrap: wrap; gap: var(--s1) var(--s2); align-items: baseline; justify-content: space-between;
+  padding: var(--s1) var(--s2); border-bottom: 1px solid var(--line); }
+h1 { font-size: var(--f4); margin: 0; font-weight: 600; }
+header p { margin: 0; font-size: var(--f2); color: var(--muted); }
+main { max-width: 1180px; margin: 0 auto; padding: var(--s2); display: grid; gap: var(--s2);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+.pilot, .outside { background: var(--panel); border-radius: var(--r2); padding: var(--s2); min-width: 0; }
+h2 { font-size: var(--f2); color: var(--muted); font-weight: 600; margin: 0 0 var(--s1); }
+.banner { padding: var(--s1) var(--s2); border-radius: var(--r1); border: 2px solid var(--line); font-size: var(--f4);
+  font-weight: 700; margin-bottom: var(--s2); }
+/* colour is never the only cue: wording and border style differ per level */
+.banner[data-level="ok"] { border-color: var(--ok); border-style: solid; }
+.banner[data-level="caution"] { border-color: var(--caution); color: var(--caution); border-style: dashed; }
+.banner[data-level="warn"] { border-color: var(--warn); color: var(--warn); border-style: double; border-width: 4px; }
+.cockpit { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: var(--s3); align-items: center; }
+svg { display: block; width: 100%; height: auto; }
+#inst text { fill: var(--muted); font-size: 12px; }
+#inst .flag { fill: var(--warn); font-size: 20px; font-weight: 700; }
+#inst .frame { fill: none; stroke: var(--line); stroke-width: 2; }
+#inst .dot { fill: none; stroke: var(--muted); stroke-width: 2; }
+#inst .plane { fill: none; stroke: var(--text); stroke-width: 4; stroke-linecap: round; }
+#inst .needle { stroke: var(--accent); stroke-width: 6; stroke-linecap: round; transition: transform 300ms linear; }
+#inst.old .needle { stroke: var(--caution); stroke-dasharray: 10 8; }
+.cues { display: grid; gap: var(--s2); min-width: 0; }
+.cue .word { font-size: var(--f6); font-weight: 700; line-height: 1.15; min-height: 46px; }
+.cue .word[data-kind="act"] { color: var(--accent); }
+.cue .word[data-kind="on"] { color: var(--ok); }
+.cue .word[data-kind="hold"] { color: var(--text); }
+.cue .word[data-kind="stop"] { color: var(--warn); }
+.cue .value { font: 600 var(--f5)/1.2 ui-monospace, Consolas, monospace; min-height: 34px; }
+.facts { display: flex; flex-wrap: wrap; gap: var(--s1) var(--s3); margin: var(--s2) 0 0; font-size: var(--f2); color: var(--muted); }
+.facts b { color: var(--text); font: 600 var(--f3) ui-monospace, Consolas, monospace; }
+.voice { margin: var(--s1) 0 0; font-size: var(--f3); min-height: 24px; }
+.outside p { font-size: var(--f1); color: var(--muted); margin: 0 0 var(--s1); }
+.outside svg { margin-bottom: var(--s2); }
+.outside svg:last-child { margin-bottom: 0; }
+.outside text { fill: var(--muted); font-size: 12px; }
+.outside .path { stroke: var(--muted); stroke-width: 2; stroke-dasharray: 6 5; fill: none; }
+.outside .flown { stroke: var(--text); stroke-width: 2; fill: none; }
+.outside .ac { fill: var(--text); }
+.controls { grid-column: 1 / -1; display: grid; gap: var(--s1); }
+.row { display: flex; flex-wrap: wrap; gap: var(--s1) var(--s2); align-items: center; }
+fieldset { border: 0; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--s1); }
+legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+fieldset label { display: inline-flex; align-items: center; gap: var(--s1); min-height: 44px; padding: 0 var(--s2); cursor: pointer;
+  border: 1px solid var(--line); border-radius: var(--r1); font-size: var(--f2); }
+fieldset label:has(input:checked) { border-color: var(--text); }
+button { min-height: 44px; min-width: 44px; padding: 0 var(--s2); border-radius: var(--r1); font: 600 var(--f3) system-ui, sans-serif;
+  cursor: pointer; border: 1px solid var(--line); background: transparent; color: var(--text); }
+button.btn-primary { background: var(--accent); color: #062029; border-color: var(--accent); min-width: 160px; }
+input[type=range] { width: 100%; min-height: 44px; accent-color: var(--accent); margin: 0; }
+.chapter { font-size: var(--f3); min-height: 24px; margin: 0; }
+:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+@media (max-width: 860px) {
+  main { grid-template-columns: minmax(0, 1fr); }
+  .cockpit { grid-template-columns: minmax(0, 1fr); }
+  #inst { max-width: 300px; margin: 0 auto; }
+  .cue .word { font-size: var(--f5); min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) { #inst .needle { transition: none; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Automated PAR guidance</h1>
+  <p>Educational concept. Simulated data. Not approved or ready for flight use.</p>
+</header>
+<main>
+  <section class="pilot" aria-label="Pilot display">
+    <h2>Pilot display</h2>
+    <div class="banner" id="banner" role="status" data-level="ok"></div>
+    <div class="cockpit">
+      <svg id="inst" viewBox="0 0 300 300" role="img" aria-label="Deviation needles. Fly towards the needles.">
+        <rect class="frame" x="10" y="10" width="280" height="280" rx="4"/>
+        <g id="dots"></g>
+        <path class="plane" d="M120 150h20M160 150h20M150 140v-8"/>
+        <line class="needle" id="nl" x1="150" y1="30" x2="150" y2="270"/>
+        <line class="needle" id="nv" x1="30" y1="150" x2="270" y2="150"/>
+        <text x="150" y="26" text-anchor="middle">Fly to the needles</text>
+        <text class="flag" id="fl" x="80" y="95" text-anchor="middle" hidden>L FLAG</text>
+        <text class="flag" id="fv" x="220" y="215" text-anchor="middle" hidden>V FLAG</text>
+      </svg>
+      <div class="cues">
+        <div class="cue"><div class="word" id="lw"></div><div class="value" id="lv"></div></div>
+        <div class="cue"><div class="word" id="vw"></div><div class="value" id="vv"></div></div>
+      </div>
+    </div>
+    <p class="voice" id="voice" aria-live="polite"></p>
+    <p class="facts"><span>Range <b id="rn">-</b></span><span>Height <b id="hf">-</b></span><span>Data age <b id="age">-</b></span></p>
+  </section>
+  <section class="outside" aria-label="Outside view">
+    <h2>Outside view</h2>
+    <p>For the jury, not on the pilot display. True aircraft position. Lateral scale enlarged.</p>
+    <svg id="plan" viewBox="0 0 320 120" role="img" aria-label="Top view of the approach"></svg>
+    <svg id="prof" viewBox="0 0 320 130" role="img" aria-label="Side view of the approach"></svg>
+  </section>
+  <section class="controls" aria-label="Replay">
+    <div class="row">
+      <button class="btn-primary" id="play" type="button">Play approach</button>
+      <fieldset id="scn"><legend>Scenario</legend></fieldset>
+      <button id="snd" type="button" aria-pressed="true">Sound on</button>
+    </div>
+    <input id="seek" type="range" min="0" max="1" step="1" value="0" aria-label="Replay position">
+    <p class="chapter" id="chap"></p>
+  </section>
+</main>
+<script src="par_cue_data.js"></script>
+<script>
+"use strict";
+const D = window.PAR, $ = id => document.getElementById(id);
+const SPEED = 2, DOT = 55, BANNER = {
+  ACQUIRING: ["caution", "ACQUIRING RADAR"], VALID: ["ok", "GUIDANCE VALID"], DELAYED: ["caution", "DATA DELAYED"],
+  INVALID: ["warn", "DATA INVALID"], LOST: ["warn", "GUIDANCE LOST"], "OUTSIDE LIMITS": ["warn", "OUTSIDE LIMITS"],
+  MINIMUMS: ["ok", "MINIMUMS"] };
+const STOP = {
+  ACQUIRING: ["hold", "STAND BY", "", "hold", "", ""],
+  DELAYED: ["hold", "HOLD LAST TARGET", "", "hold", "NO NEW CORRECTION", ""],
+  INVALID: ["hold", "HOLD LAST TARGET", "", "hold", "NO NEW CORRECTION", ""],
+  LOST: ["stop", "GO AROUND", "", "hold", "MISSED APPROACH", ""],
+  "OUTSIDE LIMITS": ["stop", "GO AROUND", "", "hold", "MISSED APPROACH", ""],
+  MINIMUMS: ["hold", "GUIDANCE ENDS", "", "hold", "PILOT DECIDES", ""] };
+const ARROW = { "TURN LEFT": "← ", "TURN RIGHT": "→ ", "DESCEND MORE": "↓ ", "DESCEND LESS": "↑ " };
+let sc = D.scenarios[0], i = 0, timer = null, sound = true, audio = null;
+
+function kind(w) { return ARROW[w] ? "act" : w.startsWith("ON ") ? "on" : "hold"; }
+function setCue(wordEl, valEl, k, w, v) { wordEl.dataset.kind = k; wordEl.textContent = (ARROW[w] || "") + w; valEl.textContent = v; }
+
+function drawStatic() {
+  let d = "";
+  for (const n of [-2, -1, 1, 2]) {
+    d += `<circle class="dot" cx="${150 + n * DOT}" cy="150" r="5"/><circle class="dot" cx="150" cy="${150 + n * DOT}" r="5"/>`;
+  }
+  $("dots").innerHTML = d;
+}
+const X0 = () => sc.frames[0].x;
+const px = x => 20 + (1 - x / X0()) * 285;
+const planY = y => 55 - Math.max(-300, Math.min(300, y)) / 300 * 45;
+const zMax = () => Math.max(...D.scenarios.flatMap(s => s.frames.map(f => f.z))) * 1.05;
+const profY = z => 105 - z / zMax() * 90;
+
+function drawOutside() {
+  const f = sc.frames.slice(0, i + 1), a = f[f.length - 1];
+  const gp = sc.frames[0].z - sc.frames[0].dz;
+  const trail = g => f.map(p => g(p).map(v => v.toFixed(1)).join(",")).join(" ");
+  $("plan").innerHTML = `<text x="20" y="114">${(X0() / 1852).toFixed(0)} NM</text><text x="305" y="114" text-anchor="end">Runway</text>
+    <text x="20" y="12">Top view</text>
+    <line class="path" x1="20" y1="55" x2="305" y2="55"/>
+    <polyline class="flown" points="${trail(p => [px(p.x), planY(p.y)])}"/>
+    <circle class="ac" cx="${px(a.x).toFixed(1)}" cy="${planY(a.y).toFixed(1)}" r="5"/>`;
+  $("prof").innerHTML = `<text x="20" y="124">${(X0() / 1852).toFixed(0)} NM</text><text x="305" y="124" text-anchor="end">Runway</text>
+    <text x="305" y="12" text-anchor="end">Side view</text>
+    <line class="path" x1="20" y1="${profY(gp).toFixed(1)}" x2="${px(0).toFixed(1)}" y2="${profY(15).toFixed(1)}"/>
+    <polyline class="flown" points="${trail(p => [px(p.x), profY(p.z)])}"/>
+    <circle class="ac" cx="${px(a.x).toFixed(1)}" cy="${profY(a.z).toFixed(1)}" r="5"/>`;
+}
+
+function render() {
+  const f = sc.frames[i], [lvl, txt] = BANNER[f.s], old = f.s === "DELAYED";
+  $("banner").dataset.level = lvl;
+  $("banner").textContent = old ? `${txt}: ${Math.round(f.age)} s OLD` : txt;
+  const show = f.ld !== null;
+  $("inst").classList.toggle("old", old);
+  $("nl").toggleAttribute("hidden", !show); $("nv").toggleAttribute("hidden", !show);
+  $("fl").toggleAttribute("hidden", show || f.s === "ACQUIRING" || f.s === "MINIMUMS");
+  $("fv").toggleAttribute("hidden", show || f.s === "ACQUIRING" || f.s === "MINIMUMS");
+  if (show) {
+    const c = v => Math.max(-2.2, Math.min(2.2, v)) * DOT;
+    $("nl").style.transform = `translateX(${-c(f.ld)}px)`;
+    $("nv").style.transform = `translateY(${c(f.vd)}px)`;
+  }
+  const s = STOP[f.s];
+  if (s) { setCue($("lw"), $("lv"), s[0], s[1], s[2]); setCue($("vw"), $("vv"), s[3], s[4], s[5]); }
+  else {
+    setCue($("lw"), $("lv"), kind(f.lw), f.lw, `HDG ${String(f.hdg).padStart(3, "0")}`);
+    setCue($("vw"), $("vv"), kind(f.vw), f.vw, `${f.sink} ft/min`);
+  }
+  $("rn").textContent = f.rn === null ? "-" : `${f.rn.toFixed(1)} NM`;
+  $("hf").textContent = f.hf === null ? "-" : `${Math.round(f.hf / 10) * 10} ft`;
+  $("age").textContent = f.age === null ? "-" : `${Math.round(f.age)} s`;
+  let last = "";
+  for (let k = i; k >= 0 && k > i - 4; k--) if (sc.frames[k].v) { last = D.voice[sc.frames[k].v].text; break; }
+  $("voice").textContent = last ? `Voice: "${last}"` : "";
+  const at = i === sc.frames.length - 1;
+  const ch = sc.chapters.filter(c => c.t <= f.t).pop();
+  $("chap").textContent = at ? sc.end : `${sc.chapters.indexOf(ch) + 1} of ${sc.chapters.length}: ${ch.label} (t = ${Math.round(f.t)} s)`;
+  $("seek").value = i;
+  drawOutside();
+}
+
+function speak(key) {
+  if (!sound || !key || !D.voice[key].b64) return;
+  if (audio) audio.pause();
+  audio = new Audio("data:audio/wav;base64," + D.voice[key].b64);
+  audio.play().catch(() => {});
+}
+function stop() { clearInterval(timer); timer = null; $("play").textContent = i >= sc.frames.length - 1 ? "Replay" : "Play approach"; }
+function tick() {
+  if (i >= sc.frames.length - 1) { stop(); return; }
+  i++; render(); speak(sc.frames[i].v);
+}
+function play() {
+  if (timer) { stop(); return; }
+  if (i >= sc.frames.length - 1) i = 0;
+  render(); speak(sc.frames[i].v);
+  timer = setInterval(tick, 1000 / SPEED);
+  $("play").textContent = "Pause";
+}
+function pick(id) {
+  stop(); sc = D.scenarios.find(s => s.id === id); i = 0;
+  $("seek").max = sc.frames.length - 1;
+  stop(); render();
+}
+D.scenarios.forEach((s, k) => {
+  const l = document.createElement("label");
+  l.innerHTML = `<input type="radio" name="scn" value="${s.id}" ${k ? "" : "checked"}> ${s.id}. ${s.title}`;
+  $("scn").append(l);
+});
+$("scn").addEventListener("change", e => pick(e.target.value));
+$("play").addEventListener("click", play);
+$("snd").addEventListener("click", () => {
+  sound = !sound; $("snd").textContent = sound ? "Sound on" : "Sound off"; $("snd").setAttribute("aria-pressed", sound);
+  if (!sound && audio) audio.pause();
+});
+$("seek").addEventListener("input", e => { if (timer) stop(); i = +e.target.value; render(); stop(); });
+document.addEventListener("keydown", e => {
+  if (e.code === "Space" && !["BUTTON", "INPUT"].includes(e.target.tagName)) { e.preventDefault(); play(); }
+});
+drawStatic(); pick(D.scenarios[0].id);
+</script>
+</body>
+</html>

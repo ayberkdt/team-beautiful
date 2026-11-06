@@ -1,0 +1,29 @@
+{
+ "case": "case_3_radar_signal_to_display",
+ "params": {
+  "bers": {"value": [0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03], "unit": "per bit", "source": "[Y] range; independent bit errors"},
+  "n_messages": {"value": 3000, "unit": "messages per BER", "source": "[Y] Monte Carlo size"},
+  "callsign": {"value": "BTL123", "unit": "", "source": "[Y]"},
+  "icao": {"value": "4B1A23", "unit": "hex", "source": "[Y]"},
+  "lat": {"value": 51.2, "unit": "deg", "source": "[Y]"},
+  "lon": {"value": 4.1, "unit": "deg", "source": "[Y]"},
+  "alt_ft": {"value": 7000, "unit": "ft", "source": "[Y]"},
+  "trace_ber": {"value": 0.003, "unit": "per bit", "source": "[Y]"},
+  "trace_seed": {"value": 5, "unit": "", "source": "[Y]"},
+  "squawk": {"value": "7600", "unit": "octal", "source": "7600 = radio failure (SERA.13005, C_EASA_SERA_EAR [D-ag])"},
+  "fruit_per_s": {"value": 3000.0, "unit": "replies/s", "source": "[Y]"},
+  "psr_power_w": {"value": 25000.0, "unit": "W", "source": "[Y] illustrative S-band terminal radar (traffic.Scenario default)"},
+  "psr_gain_dbi": {"value": 34.0, "unit": "dBi", "source": "[Y]"},
+  "psr_freq_hz": {"value": 2.8e9, "unit": "Hz", "source": "[Y] ASR-9 band 2.7-2.9 GHz (R_asr_wiki [D-ag])"},
+  "psr_bw_hz": {"value": 1e6, "unit": "Hz", "source": "[Y]"},
+  "psr_nf_db": {"value": 3.0, "unit": "dB", "source": "[Y]"},
+  "psr_losses_db": {"value": 8.0, "unit": "dB", "source": "[Y]"},
+  "psr_pulses": {"value": 16, "unit": "pulses (coherent)", "source": "[Y]"},
+  "pfa": {"value": 1e-6, "unit": "", "source": "[Y]"},
+  "rcs_m2": {"value": [2.0, 10.0], "unit": "m2", "source": "[Y]"},
+  "pd_required": {"value": 0.9, "unit": "", "source": "PSR Pd > 90 % (EUROCONTROL 1997, R_eurocontrol_radar_std_1997 [D])"},
+  "run_traffic": {"value": true, "unit": "", "source": "run the full synthetic chain (traffic.simulate) for RASS-style KPIs"},
+  "seed": {"value": 0, "unit": "", "source": "[Y]"}
+ },
+ "quick": {"n_messages": 300, "run_traffic": false}
+}

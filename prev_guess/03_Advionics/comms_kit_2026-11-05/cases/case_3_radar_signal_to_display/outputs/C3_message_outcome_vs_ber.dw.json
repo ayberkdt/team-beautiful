@@ -1,0 +1,191 @@
+{
+ "surum": 1,
+ "ad": "C3_message_outcome_vs_ber",
+ "boyut_pt": [
+  864.6,
+  411.0
+ ],
+ "metin_kutusu_pt": [
+  3.0,
+  3.0,
+  850.2,
+  411.0
+ ],
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "boyut_mm": [
+  305.0,
+  145.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   20.4
+  ],
+  "eksen_adi": [
+   24.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   20.4
+  ]
+ },
+ "punto_tepe": {
+  "tik": 20.4,
+  "eksen_adi": 24.0,
+  "metin": 20.4
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    52.4,
+    73.2,
+    744.3,
+    378.8
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "Intact",
+     "tur": "cizgi",
+     "renk": "#0072b2",
+     "isaret": "o",
+     "cizgi": "-",
+     "kalinlik": 3.0,
+     "isaret_boyu": 9.0
+    },
+    {
+     "etiket": "Repaired (1 bit)",
+     "tur": "cizgi",
+     "renk": "#d55e00",
+     "isaret": "o",
+     "cizgi": "--",
+     "kalinlik": 3.0,
+     "isaret_boyu": 9.0
+    },
+    {
+     "etiket": "Rejected",
+     "tur": "cizgi",
+     "renk": "#009e73",
+     "isaret": "o",
+     "cizgi": "-.",
+     "kalinlik": 3.0,
+     "isaret_boyu": 9.0
+    },
+    {
+     "etiket": "Wrong shown",
+     "tur": "cizgi",
+     "renk": "#cc79a7",
+     "isaret": "o",
+     "cizgi": ":",
+     "kalinlik": 3.0,
+     "isaret_boyu": 9.0
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Bit error rate",
+    "nicelik": "Bit error rate",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "biterrorrate",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     7.692307692307693e-05,
+     0.039
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "10⁻⁴",
+     "10⁻³",
+     "10⁻²"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "10⁻⁴",
+     "10⁻³",
+     "10⁻²"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     334.3,
+     3.0,
+     462.4,
+     25.3
+    ]
+   },
+   "y": {
+    "ham": "Share of Mode S messages (%)",
+    "nicelik": "Share of Mode S messages",
+    "birim": "%",
+    "bicim": "parantez",
+    "anahtar": "shareofmodesmessages",
+    "harf": "karisik",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -6.0,
+     102.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "20",
+     "40",
+     "60",
+     "80",
+     "100"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     52.4,
+     388.0,
+     355.5,
+     411.0
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [
+    "Intact",
+    "Rejected",
+    "Repaired (1 bit)",
+    "Wrong shown"
+   ],
+   "izgara": {
+    "x": true,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 1.5,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

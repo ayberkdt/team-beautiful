@@ -1,0 +1,1130 @@
+{
+ "note": "Read-only runs of the sunumatik simulator after the 6 Nov 11:07 wake refit (kw 0.3/0.5/0.7). Electric power incl. 55 W. credit = share of W V_d / eta returned at 1.5 m/s down, 3.5 m/s forward; climb_k = climb power over W V_c / eta at 3 m/s, 8 m/s forward (deck drag in the simulator); means of 55 and 53 km.",
+ "descent_credit": {
+  "off": 0.9851556958030925,
+  "low": 0.7836785526454194,
+  "nominal": 0.6497356474176923,
+  "high": 0.2984872620174608
+ },
+ "climb_k": {
+  "off": 1.297993983380667,
+  "low": 1.2642620384979488,
+  "nominal": 1.2411526664562955,
+  "high": 1.217656379509835
+ },
+ "spacing": {
+  "V": [
+   0,
+   5,
+   7,
+   8,
+   9,
+   10,
+   12
+  ],
+  "isolated_shaft_W": [
+   1628.8,
+   1106.2,
+   1023.6,
+   1020.7,
+   1038.6,
+   1076,
+   1208.3
+  ],
+  "nominal_shaft_W": {
+   "0.10": [
+    1684.5,
+    1366.7,
+    1247.3,
+    1222.1,
+    1220.4,
+    1241.1,
+    1347.9
+   ],
+   "0.26": [
+    1678.1,
+    1351.6,
+    1238.2,
+    1214.5,
+    1213.7,
+    1235.1,
+    1342.8
+   ],
+   "0.52": [
+    1669.3,
+    1326.7,
+    1223,
+    1201.7,
+    1202.6,
+    1225.1,
+    1334.1
+   ],
+   "0.78": [
+    1662.2,
+    1301.7,
+    1207.5,
+    1188.5,
+    1191.1,
+    1214.7,
+    1325.1
+   ]
+  }
+ },
+ "dive_checks": [
+  {
+   "name": "as simulated 5 Nov: afternoon, cos z 0.70",
+   "kind": "dive",
+   "log": "dalis_on2",
+   "interaction": "nominal",
+   "air": "seed 1",
+   "H0_deg": 45.57,
+   "soc0": 1.0,
+   "t_end_s": 4400,
+   "mu0_start": 0.7000373416081896,
+   "sim_end_soc": 0.1671,
+   "sim_end_km": 54.882,
+   "sim_T_peak_C": 58.32,
+   "sim_min_soc": 0.1671
+  },
+  {
+   "name": "same, interaction off",
+   "kind": "dive",
+   "log": "dalis_off2",
+   "interaction": "off",
+   "air": "seed 1",
+   "H0_deg": 45.57,
+   "soc0": 1.0,
+   "t_end_s": 4400,
+   "mu0_start": 0.7000373416081896,
+   "sim_end_soc": 0.2639,
+   "sim_end_km": 54.9152,
+   "sim_T_peak_C": 57.62,
+   "sim_min_soc": 0.2639
+  },
+  {
+   "name": "same, calm air",
+   "kind": "dive",
+   "log": "dalis_h70_calm",
+   "interaction": "nominal",
+   "air": "calm",
+   "H0_deg": 45.57,
+   "soc0": 1.0,
+   "t_end_s": 4400,
+   "mu0_start": 0.7000373416081896,
+   "sim_end_soc": 0.2061,
+   "sim_end_km": 54.9519,
+   "sim_T_peak_C": 58.66,
+   "sim_min_soc": 0.2061
+  },
+  {
+   "name": "dive at cos z 0.80 (morning)",
+   "kind": "dive",
+   "log": "dalis_m80",
+   "interaction": "nominal",
+   "air": "seed 1",
+   "H0_deg": -36.87,
+   "soc0": 1.0,
+   "t_end_s": 4400,
+   "mu0_start": 0.7999989281485086,
+   "sim_end_soc": 0.4185,
+   "sim_end_km": 54.882,
+   "sim_T_peak_C": 55.89,
+   "sim_min_soc": 0.4185
+  },
+  {
+   "name": "dive at cos z 0.87, calm",
+   "kind": "dive",
+   "log": "dalis_m29_calm",
+   "interaction": "nominal",
+   "air": "calm",
+   "H0_deg": -29.0,
+   "soc0": 1.0,
+   "t_end_s": 4400,
+   "mu0_start": 0.8746197071393957,
+   "sim_end_soc": 0.5555,
+   "sim_end_km": 54.9519,
+   "sim_T_peak_C": 55.95,
+   "sim_min_soc": 0.5555
+  },
+  {
+   "name": "dive at cos z 0.87, seed 2",
+   "kind": "dive",
+   "log": "dalis_m29_s2",
+   "interaction": "nominal",
+   "air": "seed 2",
+   "H0_deg": -29.0,
+   "soc0": 1.0,
+   "t_end_s": 4400,
+   "mu0_start": 0.8746197071393957,
+   "sim_end_soc": 0.2173,
+   "sim_end_km": 54.4639,
+   "sim_T_peak_C": 59.76,
+   "sim_min_soc": 0.2173
+  },
+  {
+   "name": "dive at cos z 0.87, seed 3",
+   "kind": "dive",
+   "log": "dalis_m29_s3",
+   "interaction": "nominal",
+   "air": "seed 3",
+   "H0_deg": -29.0,
+   "soc0": 1.0,
+   "t_end_s": 4400,
+   "mu0_start": 0.8746197071393957,
+   "sim_end_soc": 0.4778,
+   "sim_end_km": 54.945800000000006,
+   "sim_T_peak_C": 56.02,
+   "sim_min_soc": 0.4778
+  },
+  {
+   "name": "dive near noon",
+   "kind": "dive",
+   "log": "dalis_noon",
+   "interaction": "nominal",
+   "air": "seed 1",
+   "H0_deg": -4.0,
+   "soc0": 1.0,
+   "t_end_s": 4400,
+   "mu0_start": 0.9975640502598242,
+   "sim_end_soc": 0.6778,
+   "sim_end_km": 54.882,
+   "sim_T_peak_C": 54.31,
+   "sim_min_soc": 0.6778
+  },
+  {
+   "name": "sunset as simulated: forced SoC 35 %, cos z 0.12",
+   "kind": "sunset",
+   "log": "sunset_asis2",
+   "interaction": "nominal",
+   "air": "seed 1",
+   "H0_deg": 83.1,
+   "soc0": 0.35,
+   "t_end_s": 1800,
+   "mu0_start": 0.12013683883464721,
+   "sim_end_soc": 0,
+   "sim_end_km": 52.3084,
+   "sim_T_peak_C": 48.55,
+   "sim_min_soc": 0
+  },
+  {
+   "name": "sunset at mission state, at 60 C",
+   "kind": "sunset",
+   "log": "sunset_real",
+   "interaction": "nominal",
+   "air": "seed 1",
+   "H0_deg": 52.7,
+   "soc0": 0.5,
+   "t_end_s": 5000,
+   "mu0_start": 0.605988400265711,
+   "sim_end_soc": 0.1383,
+   "sim_end_km": 48.9332,
+   "sim_T_peak_C": 60.02,
+   "sim_min_soc": 0.1383
+  }
+ ],
+ "release": {
+  "min_soc": 0.9968,
+  "H0_deg": -43.0,
+  "descent_end_soc": 1
+ },
+ "dive_52km": [
+  {
+   "seed": "seed 1",
+   "tilt": 12.2,
+   "t": 4082,
+   "h": 54999,
+   "minsoc": 0.698,
+   "Tmax": 51.4,
+   "over25": 0
+  },
+  {
+   "seed": "seed 2",
+   "tilt": 12.3,
+   "t": 4202,
+   "h": 54999,
+   "minsoc": 0.352,
+   "Tmax": 54.8,
+   "over25": 0
+  },
+  {
+   "seed": "seed 3",
+   "tilt": 8.1,
+   "t": 2765,
+   "h": 52001,
+   "minsoc": 0.614,
+   "Tmax": 52.2,
+   "over25": 0
+  }
+ ],
+ "dive_51km": [
+  {
+   "seed": "seed 1",
+   "tilt": 10.7,
+   "t": 3799,
+   "h": 53193,
+   "minsoc": 0.522,
+   "Tmax": 55.1,
+   "over25": 0
+  },
+  {
+   "seed": "seed 2",
+   "tilt": 10.8,
+   "t": 2765,
+   "h": 51000,
+   "minsoc": 0.21,
+   "Tmax": 59.8,
+   "over25": 0
+  },
+  {
+   "seed": "seed 3",
+   "tilt": 8.2,
+   "t": 2765,
+   "h": 51001,
+   "minsoc": 0.476,
+   "Tmax": 56,
+   "over25": 0
+  }
+ ],
+ "release_current": [
+  {
+   "H": null,
+   "mu0": 0.63,
+   "Ipeak": 56.66,
+   "Pbus": 5258,
+   "Psol": 2187,
+   "t_after_release": 3.82,
+   "lost": 19.5,
+   "gap": 0.325
+  },
+  {
+   "H": -50.55,
+   "mu0": 0.635,
+   "Ipeak": 56.26,
+   "Pbus": 5265,
+   "Psol": 2215,
+   "t_after_release": 3.82,
+   "lost": 19.5,
+   "gap": 0.325
+  },
+  {
+   "H": -47.1,
+   "mu0": 0.681,
+   "Ipeak": 52.72,
+   "Pbus": 5325,
+   "Psol": 2455,
+   "t_after_release": 3.81,
+   "lost": 19.5,
+   "gap": 0.325
+  },
+  {
+   "H": -44.94,
+   "mu0": 0.708,
+   "Ipeak": 50.1,
+   "Pbus": 5340,
+   "Psol": 2605,
+   "t_after_release": 3.81,
+   "lost": 19.5,
+   "gap": 0.325
+  },
+  {
+   "H": -42.8,
+   "mu0": 0.734,
+   "Ipeak": 47.27,
+   "Pbus": 5340,
+   "Psol": 2750,
+   "t_after_release": 3.81,
+   "lost": 19.5,
+   "gap": 0.325
+  }
+ ],
+ "descent_W_55km": {
+  "off": 915.5,
+  "low": 1259.6,
+  "nominal": 1477.7,
+  "high": 1736.5
+ },
+ "climb_W_55km": {
+  "off": 3157.6,
+  "low": 3249.1,
+  "nominal": 3309.9,
+  "high": 3370.9
+ },
+ "raw_points": [
+  {
+   "tag": "level35",
+   "km": 55,
+   "e": "off",
+   "V": 3.5,
+   "sh": 1259.5,
+   "el": 1618.7,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "descent",
+   "km": 55,
+   "e": "off",
+   "V": 3.5,
+   "vd": 1.5,
+   "sh": 678.4,
+   "el": 915.5,
+   "vz": -1.493,
+   "h": 54946
+  },
+  {
+   "tag": "level35",
+   "km": 55,
+   "e": "low",
+   "V": 3.5,
+   "sh": 1389.8,
+   "el": 1782.5,
+   "vz": -0.001,
+   "h": 55000
+  },
+  {
+   "tag": "descent",
+   "km": 55,
+   "e": "low",
+   "V": 3.5,
+   "vd": 1.5,
+   "sh": 962.9,
+   "el": 1259.6,
+   "vz": -1.477,
+   "h": 54944
+  },
+  {
+   "tag": "level35",
+   "km": 55,
+   "e": "nominal",
+   "V": 3.5,
+   "sh": 1465.9,
+   "el": 1879.4,
+   "vz": -0.001,
+   "h": 55000
+  },
+  {
+   "tag": "descent",
+   "km": 55,
+   "e": "nominal",
+   "V": 3.5,
+   "vd": 1.5,
+   "sh": 1137.6,
+   "el": 1477.7,
+   "vz": -1.462,
+   "h": 54942
+  },
+  {
+   "tag": "level35",
+   "km": 55,
+   "e": "high",
+   "V": 3.5,
+   "sh": 1539.1,
+   "el": 1973.4,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "descent",
+   "km": 55,
+   "e": "high",
+   "V": 3.5,
+   "vd": 1.5,
+   "sh": 1340.8,
+   "el": 1736.5,
+   "vz": -1.485,
+   "h": 54940
+  },
+  {
+   "tag": "level35",
+   "km": 53,
+   "e": "off",
+   "V": 3.5,
+   "sh": 1198.7,
+   "el": 1543.3,
+   "vz": 0.001,
+   "h": 53000
+  },
+  {
+   "tag": "descent",
+   "km": 53,
+   "e": "off",
+   "V": 3.5,
+   "vd": 1.5,
+   "sh": 619.5,
+   "el": 846.1,
+   "vz": -1.493,
+   "h": 52948
+  },
+  {
+   "tag": "level35",
+   "km": 53,
+   "e": "low",
+   "V": 3.5,
+   "sh": 1327.9,
+   "el": 1704.9,
+   "vz": -0.001,
+   "h": 53000
+  },
+  {
+   "tag": "descent",
+   "km": 53,
+   "e": "low",
+   "V": 3.5,
+   "vd": 1.5,
+   "sh": 843.1,
+   "el": 1113.8,
+   "vz": -1.474,
+   "h": 52945
+  },
+  {
+   "tag": "level35",
+   "km": 53,
+   "e": "nominal",
+   "V": 3.5,
+   "sh": 1407.4,
+   "el": 1805.7,
+   "vz": -0.001,
+   "h": 53000
+  },
+  {
+   "tag": "descent",
+   "km": 53,
+   "e": "nominal",
+   "V": 3.5,
+   "vd": 1.5,
+   "sh": 981.3,
+   "el": 1283.8,
+   "vz": -1.446,
+   "h": 52944
+  },
+  {
+   "tag": "level35",
+   "km": 53,
+   "e": "high",
+   "V": 3.5,
+   "sh": 1484.3,
+   "el": 1904.1,
+   "vz": 0,
+   "h": 53000
+  },
+  {
+   "tag": "descent",
+   "km": 53,
+   "e": "high",
+   "V": 3.5,
+   "vd": 1.5,
+   "sh": 1327.3,
+   "el": 1716.7,
+   "vz": -1.478,
+   "h": 52940
+  },
+  {
+   "tag": "climb",
+   "km": 55,
+   "e": "off",
+   "V": 8,
+   "vc": 3,
+   "sh": 2439.7,
+   "el": 3157.6,
+   "vz": 3.002,
+   "h": 55120
+  },
+  {
+   "tag": "level8",
+   "km": 55,
+   "e": "off",
+   "V": 8,
+   "sh": 1020.9,
+   "el": 1325.3,
+   "vz": 0.001,
+   "h": 55000
+  },
+  {
+   "tag": "climb",
+   "km": 55,
+   "e": "low",
+   "V": 8,
+   "vc": 3,
+   "sh": 2506.2,
+   "el": 3249.1,
+   "vz": 3.001,
+   "h": 55119
+  },
+  {
+   "tag": "level8",
+   "km": 55,
+   "e": "low",
+   "V": 8,
+   "sh": 1141.9,
+   "el": 1474.3,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "climb",
+   "km": 55,
+   "e": "nominal",
+   "V": 8,
+   "vc": 3,
+   "sh": 2550.1,
+   "el": 3309.9,
+   "vz": 3.001,
+   "h": 55119
+  },
+  {
+   "tag": "level8",
+   "km": 55,
+   "e": "nominal",
+   "V": 8,
+   "sh": 1222.1,
+   "el": 1574.5,
+   "vz": -0.001,
+   "h": 55000
+  },
+  {
+   "tag": "climb",
+   "km": 55,
+   "e": "high",
+   "V": 8,
+   "vc": 3,
+   "sh": 2593.9,
+   "el": 3370.9,
+   "vz": 3.001,
+   "h": 55118
+  },
+  {
+   "tag": "level8",
+   "km": 55,
+   "e": "high",
+   "V": 8,
+   "sh": 1301.8,
+   "el": 1675.4,
+   "vz": -0.002,
+   "h": 55000
+  },
+  {
+   "tag": "climb",
+   "km": 53,
+   "e": "off",
+   "V": 8,
+   "vc": 3,
+   "sh": 2485.5,
+   "el": 3222.5,
+   "vz": 3.002,
+   "h": 53119
+  },
+  {
+   "tag": "level8",
+   "km": 53,
+   "e": "off",
+   "V": 8,
+   "sh": 1053.2,
+   "el": 1364.6,
+   "vz": 0.001,
+   "h": 53000
+  },
+  {
+   "tag": "climb",
+   "km": 53,
+   "e": "low",
+   "V": 8,
+   "vc": 3,
+   "sh": 2542.4,
+   "el": 3301.2,
+   "vz": 3.001,
+   "h": 53118
+  },
+  {
+   "tag": "level8",
+   "km": 53,
+   "e": "low",
+   "V": 8,
+   "sh": 1148.3,
+   "el": 1481.7,
+   "vz": 0.001,
+   "h": 53000
+  },
+  {
+   "tag": "climb",
+   "km": 53,
+   "e": "nominal",
+   "V": 8,
+   "vc": 3,
+   "sh": 2580,
+   "el": 3353.5,
+   "vz": 3.001,
+   "h": 53118
+  },
+  {
+   "tag": "level8",
+   "km": 53,
+   "e": "nominal",
+   "V": 8,
+   "sh": 1211.3,
+   "el": 1560.3,
+   "vz": 0,
+   "h": 53000
+  },
+  {
+   "tag": "climb",
+   "km": 53,
+   "e": "high",
+   "V": 8,
+   "vc": 3,
+   "sh": 2617.4,
+   "el": 3405.8,
+   "vz": 3.001,
+   "h": 53117
+  },
+  {
+   "tag": "level8",
+   "km": 53,
+   "e": "high",
+   "V": 8,
+   "sh": 1274.2,
+   "el": 1639.5,
+   "vz": -0.001,
+   "h": 53000
+  },
+  {
+   "tag": "heading",
+   "V": 9,
+   "psi": 0,
+   "e": "nominal",
+   "sh": 1220.4,
+   "el": 1572,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "heading",
+   "V": 9,
+   "psi": 15,
+   "e": "nominal",
+   "sh": 1190.3,
+   "el": 1534.4,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "heading",
+   "V": 9,
+   "psi": 30,
+   "e": "nominal",
+   "sh": 1180.3,
+   "el": 1522.3,
+   "vz": 0.001,
+   "h": 55000
+  },
+  {
+   "tag": "heading",
+   "V": 9,
+   "psi": 45,
+   "e": "nominal",
+   "sh": 1158.3,
+   "el": 1495,
+   "vz": 0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.1,
+   "V": 0,
+   "e": "nominal",
+   "sh": 1684.5,
+   "el": 2155.9,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.1,
+   "V": 5,
+   "e": "nominal",
+   "sh": 1366.7,
+   "el": 1756.3,
+   "vz": -0.002,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.1,
+   "V": 7,
+   "e": "nominal",
+   "sh": 1247.3,
+   "el": 1606.3,
+   "vz": -0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.1,
+   "V": 8,
+   "e": "nominal",
+   "sh": 1222.1,
+   "el": 1574.5,
+   "vz": -0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.1,
+   "V": 9,
+   "e": "nominal",
+   "sh": 1220.4,
+   "el": 1572,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.1,
+   "V": 10,
+   "e": "nominal",
+   "sh": 1241.1,
+   "el": 1597.2,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.1,
+   "V": 12,
+   "e": "nominal",
+   "sh": 1347.9,
+   "el": 1729.9,
+   "vz": 0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.26,
+   "V": 0,
+   "e": "nominal",
+   "sh": 1678.1,
+   "el": 2147.7,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.26,
+   "V": 5,
+   "e": "nominal",
+   "sh": 1351.6,
+   "el": 1736.9,
+   "vz": -0.002,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.26,
+   "V": 7,
+   "e": "nominal",
+   "sh": 1238.2,
+   "el": 1594.9,
+   "vz": -0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.26,
+   "V": 8,
+   "e": "nominal",
+   "sh": 1214.5,
+   "el": 1565,
+   "vz": -0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.26,
+   "V": 9,
+   "e": "nominal",
+   "sh": 1213.7,
+   "el": 1563.6,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.26,
+   "V": 10,
+   "e": "nominal",
+   "sh": 1235.1,
+   "el": 1589.7,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.26,
+   "V": 12,
+   "e": "nominal",
+   "sh": 1342.8,
+   "el": 1723.3,
+   "vz": 0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.52,
+   "V": 0,
+   "e": "nominal",
+   "sh": 1669.3,
+   "el": 2136.4,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.52,
+   "V": 5,
+   "e": "nominal",
+   "sh": 1326.7,
+   "el": 1705.1,
+   "vz": -0.002,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.52,
+   "V": 7,
+   "e": "nominal",
+   "sh": 1223,
+   "el": 1575.8,
+   "vz": -0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.52,
+   "V": 8,
+   "e": "nominal",
+   "sh": 1201.7,
+   "el": 1548.9,
+   "vz": -0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.52,
+   "V": 9,
+   "e": "nominal",
+   "sh": 1202.6,
+   "el": 1549.6,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.52,
+   "V": 10,
+   "e": "nominal",
+   "sh": 1225.1,
+   "el": 1577.1,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.52,
+   "V": 12,
+   "e": "nominal",
+   "sh": 1334.1,
+   "el": 1712.3,
+   "vz": 0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.78,
+   "V": 0,
+   "e": "nominal",
+   "sh": 1662.2,
+   "el": 2127.2,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.78,
+   "V": 5,
+   "e": "nominal",
+   "sh": 1301.7,
+   "el": 1673.3,
+   "vz": -0.002,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.78,
+   "V": 7,
+   "e": "nominal",
+   "sh": 1207.5,
+   "el": 1556.2,
+   "vz": -0.002,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.78,
+   "V": 8,
+   "e": "nominal",
+   "sh": 1188.5,
+   "el": 1532.5,
+   "vz": -0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.78,
+   "V": 9,
+   "e": "nominal",
+   "sh": 1191.1,
+   "el": 1535.3,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.78,
+   "V": 10,
+   "e": "nominal",
+   "sh": 1214.7,
+   "el": 1564.2,
+   "vz": 0,
+   "h": 55000
+  },
+  {
+   "tag": "spacing",
+   "c": 0.78,
+   "V": 12,
+   "e": "nominal",
+   "sh": 1325.1,
+   "el": 1701,
+   "vz": 0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing_off",
+   "c": 0.26,
+   "V": 8,
+   "e": "off",
+   "sh": 1020.8,
+   "el": 1325.2,
+   "vz": 0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing_high",
+   "c": 0.26,
+   "V": 8,
+   "e": "high",
+   "sh": 1291.2,
+   "el": 1661.9,
+   "vz": -0.002,
+   "h": 55000
+  },
+  {
+   "tag": "spacing_off",
+   "c": 0.26,
+   "V": 9,
+   "e": "off",
+   "sh": 1038.7,
+   "el": 1347,
+   "vz": 0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing_high",
+   "c": 0.26,
+   "V": 9,
+   "e": "high",
+   "sh": 1283.3,
+   "el": 1651.4,
+   "vz": -0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing_off",
+   "c": 0.52,
+   "V": 8,
+   "e": "off",
+   "sh": 1020.7,
+   "el": 1325.1,
+   "vz": 0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing_high",
+   "c": 0.52,
+   "V": 8,
+   "e": "high",
+   "sh": 1273.3,
+   "el": 1639.2,
+   "vz": -0.002,
+   "h": 55000
+  },
+  {
+   "tag": "spacing_off",
+   "c": 0.52,
+   "V": 9,
+   "e": "off",
+   "sh": 1038.6,
+   "el": 1346.9,
+   "vz": 0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing_high",
+   "c": 0.52,
+   "V": 9,
+   "e": "high",
+   "sh": 1267.7,
+   "el": 1631.5,
+   "vz": -0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing_off",
+   "c": 0.78,
+   "V": 8,
+   "e": "off",
+   "sh": 1020.6,
+   "el": 1325,
+   "vz": 0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing_high",
+   "c": 0.78,
+   "V": 8,
+   "e": "high",
+   "sh": 1254.9,
+   "el": 1615.9,
+   "vz": -0.002,
+   "h": 55000
+  },
+  {
+   "tag": "spacing_off",
+   "c": 0.78,
+   "V": 9,
+   "e": "off",
+   "sh": 1038.6,
+   "el": 1346.8,
+   "vz": 0.001,
+   "h": 55000
+  },
+  {
+   "tag": "spacing_high",
+   "c": 0.78,
+   "V": 9,
+   "e": "high",
+   "sh": 1251.5,
+   "el": 1611.2,
+   "vz": -0.001,
+   "h": 55000
+  }
+ ]
+}

@@ -1,0 +1,433 @@
+{
+ "setup_non_design": {
+  "ring_factor": 0.75,
+  "ring_factor_by_role": {
+   "support": 0.75,
+   "load": 1.047
+  },
+  "ring_min_voxels": 2,
+  "boxes_mm": [
+   {
+    "name": "base skin (mounting flange) z 30-46",
+    "min": [
+     160,
+     20,
+     29
+    ],
+    "max": [
+     841,
+     381,
+     46
+    ]
+   }
+  ],
+  "_about": "support rings r 30 -> 52.5 mm (boss O105) over the full plate depth z 30-100; load rings r 30 -> 61.4 mm (= original top edge distance, ligament 31.4 mm) over each lug thickness; base skin = 2 voxel layers (15.6 mm at h 7.8 mm) of the original footprint"
+ },
+ "cases": [
+  "LC1a Fz+97 kN, Fy+24 kN each pin",
+  "LC1b Fz+97 kN, Fy-24 kN each pin",
+  "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+  "LC2 My 2000 N m (1000 per pin bore)",
+  "LC3 LC1a + LC2 (+My) combined [Y]",
+  "LC3 LC1a + LC2 (-My) combined [Y]",
+  "LC3 LC1b + LC2 (+My) combined [Y]",
+  "LC3 LC1b + LC2 (-My) combined [Y]"
+ ],
+ "layouts": [
+  {
+   "T10_elements": 79282,
+   "mesh_size_mm": 10.14,
+   "volume_m3": 0.00879692508395896,
+   "mass_Ti811_kg": 38.48591888539926,
+   "per_case": [
+    {
+     "name": "LC1a Fz+97 kN, Fy+24 kN each pin",
+     "vm_out_MPa": 184.88221643461173,
+     "vm_max_MPa": 351.3249063055684,
+     "disp_mm_300C": 0.8989706649365208,
+     "at_mm": [
+      540,
+      301,
+      64
+     ]
+    },
+    {
+     "name": "LC1b Fz+97 kN, Fy-24 kN each pin",
+     "vm_out_MPa": 159.0495814879249,
+     "vm_max_MPa": 341.3891991327686,
+     "disp_mm_300C": 0.9096161711682059,
+     "at_mm": [
+      540,
+      301,
+      64
+     ]
+    },
+    {
+     "name": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+     "vm_out_MPa": 142.33550916682768,
+     "vm_max_MPa": 343.080389319746,
+     "disp_mm_300C": 0.9981362609302838,
+     "at_mm": [
+      605,
+      365,
+      134
+     ]
+    },
+    {
+     "name": "LC2 My 2000 N m (1000 per pin bore)",
+     "vm_out_MPa": 35.08732208884636,
+     "vm_max_MPa": 35.08732208884636,
+     "disp_mm_300C": 0.024145013150032073,
+     "at_mm": [
+      453,
+      369,
+      118
+     ]
+    },
+    {
+     "name": "LC3 LC1a + LC2 (+My) combined [Y]",
+     "vm_out_MPa": 173.12193235253886,
+     "vm_max_MPa": 365.33624860102196,
+     "disp_mm_300C": 0.8999804835297674,
+     "at_mm": [
+      540,
+      301,
+      64
+     ]
+    },
+    {
+     "name": "LC3 LC1a + LC2 (-My) combined [Y]",
+     "vm_out_MPa": 196.77215139179037,
+     "vm_max_MPa": 337.3496235493906,
+     "disp_mm_300C": 0.8986048862126551,
+     "at_mm": [
+      540,
+      301,
+      64
+     ]
+    },
+    {
+     "name": "LC3 LC1b + LC2 (+My) combined [Y]",
+     "vm_out_MPa": 170.63398931070455,
+     "vm_max_MPa": 325.355773388538,
+     "disp_mm_300C": 0.9065851798888638,
+     "at_mm": [
+      540,
+      301,
+      64
+     ]
+    },
+    {
+     "name": "LC3 LC1b + LC2 (-My) combined [Y]",
+     "vm_out_MPa": 147.80248476897916,
+     "vm_max_MPa": 357.5041500467022,
+     "disp_mm_300C": 0.9137465803051892,
+     "at_mm": [
+      605,
+      365,
+      134
+     ]
+    }
+   ],
+   "sigma_max_MPa": 196.77215139179037,
+   "sigma_case": "LC3 LC1a + LC2 (-My) combined [Y]",
+   "sigma_at_mm": [
+    540,
+    301,
+    64
+   ],
+   "disp_mm_23C": 0.8673804107484167,
+   "disp_mm_300C": 0.9981362609302838,
+   "disp_case": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+   "util_23C": 0.3893908009072368,
+   "util_300C": 0.5701183029388533,
+   "disp_limit_mm": 1.652525,
+   "allow_vm_300C_MPa": 345.1426666666667,
+   "passes_300C": true,
+   "solve_s": 119.78065910001169,
+   "layout": "topo 45 %",
+   "volfrac": 0.45,
+   "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\official_2026-11-05\\runs\\topo_v2_base_kept\\cad\\optimised_45.stl",
+   "stl_info": {
+    "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\official_2026-11-05\\runs\\topo_v2_base_kept\\cad\\optimised_45.stl",
+    "triangles": 38908,
+    "volume_mm3": 8797027.0,
+    "level": 0.485,
+    "target_volume_mm3": 8768297.303999998,
+    "bodies": 1,
+    "watertight": true,
+    "method": "vtk flying edges + Taubin"
+   },
+   "bodies_raw_density": 1,
+   "bodies_kept": 1,
+   "lugs_tied_through_base": true,
+   "x_mirror_symmetry": 0.9481517562374845
+  },
+  {
+   "T10_elements": 68193,
+   "mesh_size_mm": 10.14,
+   "volume_m3": 0.007471436072036507,
+   "mass_Ti811_kg": 32.68699913679798,
+   "per_case": [
+    {
+     "name": "LC1a Fz+97 kN, Fy+24 kN each pin",
+     "vm_out_MPa": 258.09364222064573,
+     "vm_max_MPa": 404.629047108496,
+     "disp_mm_300C": 1.7416258213385978,
+     "at_mm": [
+      385,
+      305,
+      111
+     ]
+    },
+    {
+     "name": "LC1b Fz+97 kN, Fy-24 kN each pin",
+     "vm_out_MPa": 332.2339703943784,
+     "vm_max_MPa": 332.2339703943784,
+     "disp_mm_300C": 1.9460140419886147,
+     "at_mm": [
+      410,
+      99,
+      142
+     ]
+    },
+    {
+     "name": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+     "vm_out_MPa": 276.2225094255413,
+     "vm_max_MPa": 398.7067170398978,
+     "disp_mm_300C": 1.6816039073855378,
+     "at_mm": [
+      404,
+      371,
+      144
+     ]
+    },
+    {
+     "name": "LC2 My 2000 N m (1000 per pin bore)",
+     "vm_out_MPa": 49.36407627202771,
+     "vm_max_MPa": 49.36407627202771,
+     "disp_mm_300C": 0.044307320146921195,
+     "at_mm": [
+      445,
+      308,
+      87
+     ]
+    },
+    {
+     "name": "LC3 LC1a + LC2 (+My) combined [Y]",
+     "vm_out_MPa": 270.89993791899894,
+     "vm_max_MPa": 420.92736539262285,
+     "disp_mm_300C": 1.7447884283891697,
+     "at_mm": [
+      385,
+      305,
+      111
+     ]
+    },
+    {
+     "name": "LC3 LC1a + LC2 (-My) combined [Y]",
+     "vm_out_MPa": 259.58364363209887,
+     "vm_max_MPa": 388.33612037643053,
+     "disp_mm_300C": 1.741326585601329,
+     "at_mm": [
+      601,
+      33,
+      138
+     ]
+    },
+    {
+     "name": "LC3 LC1b + LC2 (+My) combined [Y]",
+     "vm_out_MPa": 338.20763251130853,
+     "vm_max_MPa": 351.8319152291807,
+     "disp_mm_300C": 1.951875008976343,
+     "at_mm": [
+      407,
+      98,
+      143
+     ]
+    },
+    {
+     "name": "LC3 LC1b + LC2 (-My) combined [Y]",
+     "vm_out_MPa": 327.19289419042053,
+     "vm_max_MPa": 327.19289419042053,
+     "disp_mm_300C": 1.9484269479448935,
+     "at_mm": [
+      410,
+      99,
+      142
+     ]
+    }
+   ],
+   "sigma_max_MPa": 338.20763251130853,
+   "sigma_case": "LC3 LC1b + LC2 (+My) combined [Y]",
+   "sigma_at_mm": [
+    407,
+    98,
+    143
+   ],
+   "disp_mm_23C": 1.696179382800442,
+   "disp_mm_300C": 1.951875008976343,
+   "disp_case": "LC3 LC1b + LC2 (+My) combined [Y]",
+   "util_23C": 0.6692763176345156,
+   "util_300C": 0.9799067608118822,
+   "disp_limit_mm": 1.652525,
+   "allow_vm_300C_MPa": 345.1426666666667,
+   "passes_300C": false,
+   "solve_s": 88.62914029999229,
+   "layout": "topo 38 %",
+   "volfrac": 0.38,
+   "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\official_2026-11-05\\runs\\topo_v2_base_kept\\cad\\optimised_38.stl",
+   "stl_info": {
+    "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\official_2026-11-05\\runs\\topo_v2_base_kept\\cad\\optimised_38.stl",
+    "triangles": 35904,
+    "volume_mm3": 7471464.0,
+    "level": 0.47,
+    "target_volume_mm3": 7412502.239999998,
+    "bodies": 1,
+    "watertight": true,
+    "method": "vtk flying edges + Taubin"
+   },
+   "bodies_raw_density": 1,
+   "bodies_kept": 1,
+   "lugs_tied_through_base": false,
+   "x_mirror_symmetry": 0.9329065300896286
+  },
+  {
+   "T10_elements": 57098,
+   "mesh_size_mm": 10.14,
+   "volume_m3": 0.006428403957647636,
+   "mass_Ti811_kg": 28.123808139248744,
+   "per_case": [
+    {
+     "name": "LC1a Fz+97 kN, Fy+24 kN each pin",
+     "vm_out_MPa": 7638.231214458316,
+     "vm_max_MPa": 7638.231214458316,
+     "disp_mm_300C": 13.824656431199093,
+     "at_mm": [
+      398,
+      343,
+      134
+     ]
+    },
+    {
+     "name": "LC1b Fz+97 kN, Fy-24 kN each pin",
+     "vm_out_MPa": 4154.588518068123,
+     "vm_max_MPa": 4154.588518068123,
+     "disp_mm_300C": 10.251425616121635,
+     "at_mm": [
+      398,
+      343,
+      134
+     ]
+    },
+    {
+     "name": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+     "vm_out_MPa": 4248.962222504768,
+     "vm_max_MPa": 4248.962222504768,
+     "disp_mm_300C": 14.643796532700769,
+     "at_mm": [
+      398,
+      343,
+      134
+     ]
+    },
+    {
+     "name": "LC2 My 2000 N m (1000 per pin bore)",
+     "vm_out_MPa": 275.25515939372576,
+     "vm_max_MPa": 275.25515939372576,
+     "disp_mm_300C": 0.750598596031646,
+     "at_mm": [
+      427,
+      312,
+      210
+     ]
+    },
+    {
+     "name": "LC3 LC1a + LC2 (+My) combined [Y]",
+     "vm_out_MPa": 7416.148135736694,
+     "vm_max_MPa": 7416.148135736694,
+     "disp_mm_300C": 13.913949869479232,
+     "at_mm": [
+      398,
+      338,
+      133
+     ]
+    },
+    {
+     "name": "LC3 LC1a + LC2 (-My) combined [Y]",
+     "vm_out_MPa": 7867.9824754349975,
+     "vm_max_MPa": 7867.9824754349975,
+     "disp_mm_300C": 13.74048933849987,
+     "at_mm": [
+      398,
+      343,
+      134
+     ]
+    },
+    {
+     "name": "LC3 LC1b + LC2 (+My) combined [Y]",
+     "vm_out_MPa": 4385.980369356421,
+     "vm_max_MPa": 4385.980369356421,
+     "disp_mm_300C": 9.832431241295389,
+     "at_mm": [
+      398,
+      343,
+      134
+     ]
+    },
+    {
+     "name": "LC3 LC1b + LC2 (-My) combined [Y]",
+     "vm_out_MPa": 3924.103080189488,
+     "vm_max_MPa": 3924.103080189488,
+     "disp_mm_300C": 10.70650120722254,
+     "at_mm": [
+      398,
+      343,
+      134
+     ]
+    }
+   ],
+   "sigma_max_MPa": 7867.9824754349975,
+   "sigma_case": "LC3 LC1a + LC2 (-My) combined [Y]",
+   "sigma_at_mm": [
+    398,
+    343,
+    134
+   ],
+   "disp_mm_23C": 12.725459186916968,
+   "disp_mm_300C": 14.643796532700769,
+   "disp_case": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+   "util_23C": 15.569886165108834,
+   "util_300C": 22.79631942182845,
+   "disp_limit_mm": 1.652525,
+   "allow_vm_300C_MPa": 345.1426666666667,
+   "passes_300C": false,
+   "solve_s": 78.50557670000126,
+   "layout": "topo 33 %",
+   "volfrac": 0.33,
+   "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\official_2026-11-05\\runs\\topo_v2_base_kept\\cad\\optimised_33.stl",
+   "stl_info": {
+    "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\official_2026-11-05\\runs\\topo_v2_base_kept\\cad\\optimised_33.stl",
+    "triangles": 31036,
+    "volume_mm3": 6428430.0,
+    "level": 0.46249999999999997,
+    "target_volume_mm3": 6427806.839999999,
+    "bodies": 1,
+    "watertight": true,
+    "method": "vtk flying edges + Taubin"
+   },
+   "bodies_raw_density": 1,
+   "bodies_kept": 1,
+   "lugs_tied_through_base": false,
+   "x_mirror_symmetry": 0.9262458471760797
+  }
+ ],
+ "chosen": {
+  "layout": "topo 45 %",
+  "mass_kg": 38.48591888539926,
+  "life_co2_new_t": 14.592585614985456,
+  "life_co2_base_t": 52.61459245662109,
+  "co2_saving_pct": 72.2651360893529,
+  "mass_saving_pct": 74.72521252682783
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "springer",
+ "hedef": "springer-cift",
+ "ortam": "makale",
+ "palet": "derin",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {
+  "S275N": {
+   "renk": "#8c8c8c",
+   "baglam": true,
+   "isaret": null,
+   "cizgi": "-",
+   "sira": 0
+  },
+  "Al 2618-T6": {
+   "renk": "#bb7b21",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "--",
+   "sira": 1
+  },
+  "Ti-8Al-1Mo-1V": {
+   "renk": "#25458f",
+   "baglam": false,
+   "isaret": "s",
+   "cizgi": "-",
+   "sira": 2
+  }
+ },
+ "nicelikler": {
+  "vol": {
+   "etiket": "Part volume",
+   "birim": "% of initial design",
+   "eksen": "x",
+   "sinir": [
+    0,
+    120
+   ],
+   "olcek": null,
+   "bicim": null
+  },
+  "co2": {
+   "etiket": "Life-cycle CO₂-eq",
+   "birim": "t",
+   "eksen": "y",
+   "sinir": [
+    0,
+    70
+   ],
+   "olcek": null,
+   "bicim": null
+  },
+  "rel_co2": {
+   "etiket": "Ti life-cycle CO₂",
+   "birim": "% of S275N",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "rel": {
+   "etiket": "Ratio to the initial S275N part",
+   "birim": "×, log scale",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "fig_tradeoff_table": "fig_tradeoff_table.dw.json",
+  "fig_tradeoff_indices": "fig_tradeoff_indices.dw.json",
+  "fig_tradeoff_breakeven": "fig_tradeoff_breakeven.dw.json"
+ }
+}

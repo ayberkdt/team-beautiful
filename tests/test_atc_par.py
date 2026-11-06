@@ -58,3 +58,13 @@ def test_series_on_simulated_approach_detects_biased_aircraft():
     late = " ".join(phrases[-8:-1])
     assert "above glidepath" in late and "left of course" in late        # the ground radar sees the bias
     assert all(b.t - a.t >= 4.9 for (a, _), (b, _) in zip(ser[:-2], ser[1:-1]))
+
+
+def test_par_call_overdue_and_age_display():
+    mon = ParGuidanceMonitor(lost_after_s=10.0, expected_every_s=5.0)
+    mon.receive(parse_talkdown("beetle one two three on glidepath on course", 0.0))
+    assert mon.view(3.0)["display"] == "PAR GUIDANCE - last call 3 s"
+    v = mon.view(7.0)
+    assert v["status"].startswith("PAR CALL OVERDUE") and v["caution"] and v["state"] is not None
+    assert mon.view(11.0)["status"].startswith("PAR GUIDANCE LOST")
+    assert ParGuidanceMonitor().view(0.0)["display"] == "NO PAR GUIDANCE YET"

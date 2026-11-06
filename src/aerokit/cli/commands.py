@@ -632,7 +632,7 @@ def raymer(a: Args) -> None:
         ["W/S · wing area", f"{WS:.0f} N/m² · {S:.1f} m²", f"CLmax landing {a.CLmax_landing:g}"],
         ["Installed power (SL)", f"{PW * s['W0'] / 1e3:.0f} kW", f"governing: {governing}"]])
     result(f"W0 ≈ {s['W0'] / G0:.0f} kg, S ≈ {S:.1f} m², power ≈ {PW * s['W0'] / 1e3:.0f} kW ({governing} governs).",
-           "Compare with similar aircraft (docs/04_2023_example_solution.md), then vary one assumption at a time.")
+           "Compare with similar aircraft (prev_guess/01_Ansys/docs/04_2023_example_solution.md), then vary one assumption at a time.")
 
 
 def vn(a: Args) -> None:

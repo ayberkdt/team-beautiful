@@ -1,0 +1,490 @@
+{
+ "baseline": {
+  "label": "baseline (initial, machined)",
+  "material": "Structural Steel (Ansys Engineering Data default)",
+  "mass_kg": 152.27070735033357,
+  "bought_kg": 1218.1656588026685,
+  "phases": {
+   "material": {
+    "energy_MJ": 32281.389958270716,
+    "co2_kg": 2192.6981858448034
+   },
+   "manufacture": {
+    "energy_MJ": 10202.137392472348,
+    "co2_kg": 687.7560281990066
+   },
+   "transport": {
+    "energy_MJ": 143.13446490931355,
+    "co2_kg": 10.305681473470575
+   },
+   "use": {
+    "energy_MJ": 59385575.86663009,
+    "co2_kg": 4275761.462397367
+   },
+   "end_of_life": {
+    "energy_MJ": 0.0,
+    "co2_kg": 0.0
+   }
+  },
+  "total": {
+   "energy_MJ": 59428202.52844574,
+   "co2_kg": 4278652.222292884
+  },
+  "eol_potential": {
+   "energy_MJ": -0.0,
+   "co2_kg": -0.0
+  },
+  "use_marginal_co2_kg": 1503673.2350845442,
+  "inputs": {
+   "route": "machined",
+   "buy_to_fly": null,
+   "am_kwh_per_kg": 31.0,
+   "atomisation_mj_per_kg": 20.0,
+   "rolling_mj_per_kg": 4.0,
+   "rolling_co2_per_kg": 0.2,
+   "machining_mj_per_kg_removed": 5.0,
+   "grid_kgCO2_per_kWh": 0.3,
+   "transport_km": 1000.0,
+   "transport_mj_per_tkm": 0.94,
+   "co2_per_mj_fuel": 0.072,
+   "use_mj_per_tkm": 6.5,
+   "life_km": 60000000.0,
+   "marginal_fuel_kg_per_kg_year": 125.0,
+   "life_years": 25.0,
+   "recovered_fraction": 0.9,
+   "recycled_content": 0.0,
+   "sources": {
+    "am_kwh_per_kg": "Baumers et al. 2010, SFF Symp., Table 5 (SLM250, 316L: 31 kWh/kg) [D-ag]",
+    "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
+    "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
+    "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level (research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+    "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
+    "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
+    "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"
+   },
+   "buy_to_fly_used": 8.0
+  }
+ },
+ "candidates": {
+  "structural_steel": {
+   "audit": {
+    "label": "Structural Steel (Ansys Engineering Data default) · initial",
+    "material": "Structural Steel (Ansys Engineering Data default)",
+    "mass_kg": 152.27070735033357,
+    "bought_kg": 1218.1656588026685,
+    "phases": {
+     "material": {
+      "energy_MJ": 32281.389958270716,
+      "co2_kg": 2192.6981858448034
+     },
+     "manufacture": {
+      "energy_MJ": 10202.137392472348,
+      "co2_kg": 687.7560281990066
+     },
+     "transport": {
+      "energy_MJ": 143.13446490931355,
+      "co2_kg": 10.305681473470575
+     },
+     "use": {
+      "energy_MJ": 59385575.86663009,
+      "co2_kg": 4275761.462397367
+     },
+     "end_of_life": {
+      "energy_MJ": 0.0,
+      "co2_kg": 0.0
+     }
+    },
+    "total": {
+     "energy_MJ": 59428202.52844574,
+     "co2_kg": 4278652.222292884
+    },
+    "eol_potential": {
+     "energy_MJ": -0.0,
+     "co2_kg": -0.0
+    },
+    "use_marginal_co2_kg": 1503673.2350845442,
+    "inputs": {
+     "route": "machined",
+     "buy_to_fly": null,
+     "am_kwh_per_kg": 31.0,
+     "atomisation_mj_per_kg": 20.0,
+     "rolling_mj_per_kg": 4.0,
+     "rolling_co2_per_kg": 0.2,
+     "machining_mj_per_kg_removed": 5.0,
+     "grid_kgCO2_per_kWh": 0.3,
+     "transport_km": 1000.0,
+     "transport_mj_per_tkm": 0.94,
+     "co2_per_mj_fuel": 0.072,
+     "use_mj_per_tkm": 6.5,
+     "life_km": 60000000.0,
+     "marginal_fuel_kg_per_kg_year": 125.0,
+     "life_years": 25.0,
+     "recovered_fraction": 0.9,
+     "recycled_content": 0.0,
+     "sources": {
+      "am_kwh_per_kg": "Baumers et al. 2010, SFF Symp., Table 5 (SLM250, 316L: 31 kWh/kg) [D-ag]",
+      "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
+      "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
+      "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level (research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+      "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
+      "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
+      "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"
+     },
+     "buy_to_fly_used": 8.0
+    }
+   },
+   "vs_baseline": {
+    "phases": {
+     "material": {
+      "base_co2_kg": 2192.6981858448034,
+      "new_co2_kg": 2192.6981858448034,
+      "delta_co2_kg": 0.0
+     },
+     "manufacture": {
+      "base_co2_kg": 687.7560281990066,
+      "new_co2_kg": 687.7560281990066,
+      "delta_co2_kg": 0.0
+     },
+     "transport": {
+      "base_co2_kg": 10.305681473470575,
+      "new_co2_kg": 10.305681473470575,
+      "delta_co2_kg": 0.0
+     },
+     "use": {
+      "base_co2_kg": 4275761.462397367,
+      "new_co2_kg": 4275761.462397367,
+      "delta_co2_kg": 0.0
+     },
+     "end_of_life": {
+      "base_co2_kg": 0.0,
+      "new_co2_kg": 0.0,
+      "delta_co2_kg": 0.0
+     }
+    },
+    "total_base_co2_kg": 4278652.222292884,
+    "total_new_co2_kg": 4278652.222292884,
+    "delta_total_co2_kg": 0.0,
+    "extra_production_co2_kg": 0.0,
+    "break_even_km": 0.0,
+    "mass_saving_kg": 0.0,
+    "delta_use_marginal_co2_kg": 0.0
+   },
+   "passes": true
+  },
+  "ss_17_4ph": {
+   "audit": {
+    "label": "17-4PH H1025 (wrought data; L-PBF route) · topo 41 %",
+    "material": "17-4PH H1025 (wrought data; L-PBF route)",
+    "mass_kg": 61.51352662404341,
+    "bought_kg": 79.96758461125643,
+    "phases": {
+     "material": {
+      "energy_MJ": 6757.260899651168,
+      "co2_kg": 399.83792305628214
+     },
+     "manufacture": {
+      "energy_MJ": 10523.734134841347,
+      "co2_kg": 876.9778445701121
+     },
+     "transport": {
+      "energy_MJ": 57.8227150266008,
+      "co2_kg": 4.163235481915257
+     },
+     "use": {
+      "energy_MJ": 23990275.38337693,
+      "co2_kg": 1727299.8276031388
+     },
+     "end_of_life": {
+      "energy_MJ": 0.0,
+      "co2_kg": 0.0
+     }
+    },
+    "total": {
+     "energy_MJ": 24007614.20112645,
+     "co2_kg": 1728580.806606247
+    },
+    "eol_potential": {
+     "energy_MJ": -0.0,
+     "co2_kg": -236.39648281619878
+    },
+    "use_marginal_co2_kg": 607446.0754124287,
+    "inputs": {
+     "route": "am",
+     "buy_to_fly": null,
+     "am_kwh_per_kg": 31.0,
+     "atomisation_mj_per_kg": 20.0,
+     "rolling_mj_per_kg": 4.0,
+     "rolling_co2_per_kg": 0.2,
+     "machining_mj_per_kg_removed": 5.0,
+     "grid_kgCO2_per_kWh": 0.3,
+     "transport_km": 1000.0,
+     "transport_mj_per_tkm": 0.94,
+     "co2_per_mj_fuel": 0.072,
+     "use_mj_per_tkm": 6.5,
+     "life_km": 60000000.0,
+     "marginal_fuel_kg_per_kg_year": 125.0,
+     "life_years": 25.0,
+     "recovered_fraction": 0.9,
+     "recycled_content": 0.0,
+     "sources": {
+      "am_kwh_per_kg": "Baumers et al. 2010, SFF Symp., Table 5 (SLM250, 316L: 31 kWh/kg) [D-ag]",
+      "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
+      "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
+      "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level (research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+      "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
+      "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
+      "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"
+     },
+     "buy_to_fly_used": 1.3
+    }
+   },
+   "vs_baseline": {
+    "phases": {
+     "material": {
+      "base_co2_kg": 2192.6981858448034,
+      "new_co2_kg": 399.83792305628214,
+      "delta_co2_kg": -1792.8602627885214
+     },
+     "manufacture": {
+      "base_co2_kg": 687.7560281990066,
+      "new_co2_kg": 876.9778445701121,
+      "delta_co2_kg": 189.22181637110555
+     },
+     "transport": {
+      "base_co2_kg": 10.305681473470575,
+      "new_co2_kg": 4.163235481915257,
+      "delta_co2_kg": -6.142445991555317
+     },
+     "use": {
+      "base_co2_kg": 4275761.462397367,
+      "new_co2_kg": 1727299.8276031388,
+      "delta_co2_kg": -2548461.634794228
+     },
+     "end_of_life": {
+      "base_co2_kg": 0.0,
+      "new_co2_kg": 0.0,
+      "delta_co2_kg": 0.0
+     }
+    },
+    "total_base_co2_kg": 4278652.222292884,
+    "total_new_co2_kg": 1728580.806606247,
+    "delta_total_co2_kg": -2550071.415686637,
+    "extra_production_co2_kg": -1603.6384464174155,
+    "break_even_km": 0.0,
+    "mass_saving_kg": 90.75718072629016,
+    "delta_use_marginal_co2_kg": -896227.1596721155
+   },
+   "passes": true
+  },
+  "ti64_lpbf": {
+   "audit": {
+    "label": "Ti-6Al-4V (L-PBF, stress relieved / HIP) · initial",
+    "material": "Ti-6Al-4V (L-PBF, stress relieved / HIP)",
+    "mass_kg": 85.54316170891352,
+    "bought_kg": 111.20611022158758,
+    "phases": {
+     "material": {
+      "energy_MJ": 76176.18550178749,
+      "co2_kg": 5171.0841253038225
+     },
+     "manufacture": {
+      "energy_MJ": 14634.724105160925,
+      "co2_kg": 1219.5603420967436
+     },
+     "transport": {
+      "energy_MJ": 80.4105720063787,
+      "co2_kg": 5.789561184459266
+     },
+     "use": {
+      "energy_MJ": 33361833.06647627,
+      "co2_kg": 2402051.9807862914
+     },
+     "end_of_life": {
+      "energy_MJ": 0.0,
+      "co2_kg": 0.0
+     }
+    },
+    "total": {
+     "energy_MJ": 33452724.386655226,
+     "co2_kg": 2408448.4148148764
+    },
+    "eol_potential": {
+     "energy_MJ": -0.0,
+     "co2_kg": -3179.639320720315
+    },
+    "use_marginal_co2_kg": 844738.721875521,
+    "inputs": {
+     "route": "am",
+     "buy_to_fly": null,
+     "am_kwh_per_kg": 31.0,
+     "atomisation_mj_per_kg": 20.0,
+     "rolling_mj_per_kg": 4.0,
+     "rolling_co2_per_kg": 0.2,
+     "machining_mj_per_kg_removed": 5.0,
+     "grid_kgCO2_per_kWh": 0.3,
+     "transport_km": 1000.0,
+     "transport_mj_per_tkm": 0.94,
+     "co2_per_mj_fuel": 0.072,
+     "use_mj_per_tkm": 6.5,
+     "life_km": 60000000.0,
+     "marginal_fuel_kg_per_kg_year": 125.0,
+     "life_years": 25.0,
+     "recovered_fraction": 0.9,
+     "recycled_content": 0.0,
+     "sources": {
+      "am_kwh_per_kg": "Baumers et al. 2010, SFF Symp., Table 5 (SLM250, 316L: 31 kWh/kg) [D-ag]",
+      "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
+      "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
+      "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level (research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+      "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
+      "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
+      "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"
+     },
+     "buy_to_fly_used": 1.3
+    }
+   },
+   "vs_baseline": {
+    "phases": {
+     "material": {
+      "base_co2_kg": 2192.6981858448034,
+      "new_co2_kg": 5171.0841253038225,
+      "delta_co2_kg": 2978.385939459019
+     },
+     "manufacture": {
+      "base_co2_kg": 687.7560281990066,
+      "new_co2_kg": 1219.5603420967436,
+      "delta_co2_kg": 531.8043138977371
+     },
+     "transport": {
+      "base_co2_kg": 10.305681473470575,
+      "new_co2_kg": 5.789561184459266,
+      "delta_co2_kg": -4.516120289011309
+     },
+     "use": {
+      "base_co2_kg": 4275761.462397367,
+      "new_co2_kg": 2402051.9807862914,
+      "delta_co2_kg": -1873709.4816110753
+     },
+     "end_of_life": {
+      "base_co2_kg": 0.0,
+      "new_co2_kg": 0.0,
+      "delta_co2_kg": 0.0
+     }
+    },
+    "total_base_co2_kg": 4278652.222292884,
+    "total_new_co2_kg": 2408448.4148148764,
+    "delta_total_co2_kg": -1870203.8074780079,
+    "extra_production_co2_kg": 3510.1902533567563,
+    "break_even_km": 112403.45275955745,
+    "mass_saving_kg": 66.72754564142005,
+    "delta_use_marginal_co2_kg": -658934.5132090232
+   },
+   "passes": true
+  },
+  "in718_lpbf": {
+   "audit": {
+    "label": "Inconel 718 (L-PBF, solution + double age) · topo 41 %",
+    "material": "Inconel 718 (L-PBF, solution + double age)",
+    "mass_kg": 64.22434562976605,
+    "bought_kg": 83.49164931869586,
+    "phases": {
+     "material": {
+      "energy_MJ": 19411.808466596787,
+      "co2_kg": 968.503132096872
+     },
+     "manufacture": {
+      "energy_MJ": 10987.501050340376,
+      "co2_kg": 915.6250875283646
+     },
+     "transport": {
+      "energy_MJ": 60.37088489198008,
+      "co2_kg": 4.346703712222566
+     },
+     "use": {
+      "energy_MJ": 25047494.79560876,
+      "co2_kg": 1803419.6252838306
+     },
+     "end_of_life": {
+      "energy_MJ": 0.0,
+      "co2_kg": 0.0
+     }
+    },
+    "total": {
+     "energy_MJ": 25077954.476010587,
+     "co2_kg": 1805308.100207168
+    },
+    "eol_potential": {
+     "energy_MJ": -0.0,
+     "co2_kg": -546.8060786918281
+    },
+    "use_marginal_co2_kg": 634215.4130939397,
+    "inputs": {
+     "route": "am",
+     "buy_to_fly": null,
+     "am_kwh_per_kg": 31.0,
+     "atomisation_mj_per_kg": 20.0,
+     "rolling_mj_per_kg": 4.0,
+     "rolling_co2_per_kg": 0.2,
+     "machining_mj_per_kg_removed": 5.0,
+     "grid_kgCO2_per_kWh": 0.3,
+     "transport_km": 1000.0,
+     "transport_mj_per_tkm": 0.94,
+     "co2_per_mj_fuel": 0.072,
+     "use_mj_per_tkm": 6.5,
+     "life_km": 60000000.0,
+     "marginal_fuel_kg_per_kg_year": 125.0,
+     "life_years": 25.0,
+     "recovered_fraction": 0.9,
+     "recycled_content": 0.0,
+     "sources": {
+      "am_kwh_per_kg": "Baumers et al. 2010, SFF Symp., Table 5 (SLM250, 316L: 31 kWh/kg) [D-ag]",
+      "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
+      "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
+      "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level (research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+      "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
+      "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
+      "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"
+     },
+     "buy_to_fly_used": 1.3
+    }
+   },
+   "vs_baseline": {
+    "phases": {
+     "material": {
+      "base_co2_kg": 2192.6981858448034,
+      "new_co2_kg": 968.503132096872,
+      "delta_co2_kg": -1224.1950537479315
+     },
+     "manufacture": {
+      "base_co2_kg": 687.7560281990066,
+      "new_co2_kg": 915.6250875283646,
+      "delta_co2_kg": 227.86905932935804
+     },
+     "transport": {
+      "base_co2_kg": 10.305681473470575,
+      "new_co2_kg": 4.346703712222566,
+      "delta_co2_kg": -5.958977761248009
+     },
+     "use": {
+      "base_co2_kg": 4275761.462397367,
+      "new_co2_kg": 1803419.6252838306,
+      "delta_co2_kg": -2472341.837113536
+     },
+     "end_of_life": {
+      "base_co2_kg": 0.0,
+      "new_co2_kg": 0.0,
+      "delta_co2_kg": 0.0
+     }
+    },
+    "total_base_co2_kg": 4278652.222292884,
+    "total_new_co2_kg": 1805308.100207168,
+    "delta_total_co2_kg": -2473344.1220857166,
+    "extra_production_co2_kg": -996.3259944185731,
+    "break_even_km": 0.0,
+    "mass_saving_kg": 88.04636172056752,
+    "delta_use_marginal_co2_kg": -869457.8219906045
+   },
+   "passes": true
+  }
+ }
+}

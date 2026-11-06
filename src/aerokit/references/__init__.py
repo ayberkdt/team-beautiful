@@ -9,7 +9,7 @@ Every formula, coefficient or benchmark taken from the literature is tied to a k
 
 The registry is split by subject (``_core``, ``_aero``, ``_structures``, ``_composites``,
 ``_fem``, ``_fem_dynamics``, ``_optimization``, ``_cad``, ``_materials``); :data:`REFERENCES` merges them and rejects
-duplicate keys. ``docs/references.md`` is generated from it by ``scripts/build_references.py``.
+duplicate keys. ``00_Common/docs/references.md`` is generated from it by ``scripts/build_references.py``.
 
 Example
 -------

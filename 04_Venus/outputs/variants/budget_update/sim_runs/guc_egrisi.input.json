@@ -1,0 +1,3522 @@
+{
+ "schema": "vesper_guc_egrisi/1",
+ "uretildi": "2026-11-06T08:12:38.033Z",
+ "komut": "node presets/venus_rotorcraft/sim/guc-egrisi-uret.mjs",
+ "kaynak": "VESPER simulator, closed-loop trimmed level flight, still air, sim_params v0.6, blade-element rotors 10×6 (venus-sim.mjs)",
+ "tanim": {
+  "electric_W": "bus power: motors + ESC + 55 W system; no solar, before battery I²R",
+  "shaft_W": "sum of rotor shaft power",
+  "V": "airspeed, air-mass frame, m/s"
+ },
+ "etkilesim": {
+  "off": "isolated rotors (comparable to aerokit)",
+  "low": {
+   "kw": 0.3,
+   "ks": 1.6,
+   "kp": 1
+  },
+  "nominal": {
+   "kw": 0.5,
+   "ks": 1.6,
+   "kp": 1
+  },
+  "high": {
+   "kw": 0.7,
+   "ks": 1.6,
+   "kp": 1
+  },
+  "kalibrasyon": "kw, ks fitted to NASA MTB thrust ratios (Russell & Conley 2020), rms 0.041; low/high = kw ×0.6/×1.4 bracket the data; see DOGRULAMA.md"
+ },
+ "en_az_guc": {
+  "51_km": {
+   "off": {
+    "V": 6,
+    "electric_W": 1413.8,
+    "shaft_W": 1093.5
+   },
+   "low": {
+    "V": 7,
+    "electric_W": 1532,
+    "shaft_W": 1189.2
+   },
+   "nominal": {
+    "V": 7,
+    "electric_W": 1602.2,
+    "shaft_W": 1245.4
+   },
+   "high": {
+    "V": 7,
+    "electric_W": 1672.4,
+    "shaft_W": 1301.1
+   }
+  },
+  "53_km": {
+   "off": {
+    "V": 7,
+    "electric_W": 1344.7,
+    "shaft_W": 1036.8
+   },
+   "low": {
+    "V": 7,
+    "electric_W": 1476.7,
+    "shaft_W": 1144
+   },
+   "nominal": {
+    "V": 8,
+    "electric_W": 1560.7,
+    "shaft_W": 1211.6
+   },
+   "high": {
+    "V": 8,
+    "electric_W": 1639.9,
+    "shaft_W": 1274.6
+   }
+  },
+  "55_km": {
+   "off": {
+    "V": 8,
+    "electric_W": 1325.1,
+    "shaft_W": 1020.7
+   },
+   "low": {
+    "V": 8,
+    "electric_W": 1474.5,
+    "shaft_W": 1142.1
+   },
+   "nominal": {
+    "V": 9,
+    "electric_W": 1572.3,
+    "shaft_W": 1220.7
+   },
+   "high": {
+    "V": 9,
+    "electric_W": 1663.8,
+    "shaft_W": 1293.2
+   }
+  },
+  "58_km": {
+   "off": {
+    "V": 9,
+    "electric_W": 1609.5,
+    "shaft_W": 1241.4
+   },
+   "low": {
+    "V": 10,
+    "electric_W": 1787.8,
+    "shaft_W": 1388.9
+   },
+   "nominal": {
+    "V": 10,
+    "electric_W": 1904.1,
+    "shaft_W": 1483.8
+   },
+   "high": {
+    "V": 11,
+    "electric_W": 2014,
+    "shaft_W": 1573.1
+   }
+  }
+ },
+ "egri": {
+  "51_km": {
+   "off": [
+    {
+     "V": 0,
+     "electric_W": 1997.2,
+     "shaft_W": 1560.6,
+     "pitch_deg": -0.01,
+     "rpm": 514.2,
+     "theta_min_deg": 4.21,
+     "theta_max_deg": 4.22,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 1931.2,
+     "shaft_W": 1508.6,
+     "pitch_deg": 0.17,
+     "rpm": 514.2,
+     "theta_min_deg": 3.91,
+     "theta_max_deg": 4.22,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 1769.7,
+     "shaft_W": 1380.6,
+     "pitch_deg": 0.43,
+     "rpm": 514.2,
+     "theta_min_deg": 3.42,
+     "theta_max_deg": 3.96,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 1604.8,
+     "shaft_W": 1248.4,
+     "pitch_deg": 0.76,
+     "rpm": 514.2,
+     "theta_min_deg": 2.96,
+     "theta_max_deg": 3.58,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 1492.4,
+     "shaft_W": 1157.5,
+     "pitch_deg": 1.16,
+     "rpm": 514.2,
+     "theta_min_deg": 2.67,
+     "theta_max_deg": 3.26,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 1433.1,
+     "shaft_W": 1109.1,
+     "pitch_deg": 1.66,
+     "rpm": 514.2,
+     "theta_min_deg": 2.53,
+     "theta_max_deg": 3.05,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 1413.8,
+     "shaft_W": 1093.5,
+     "pitch_deg": 2.25,
+     "rpm": 514.2,
+     "theta_min_deg": 2.48,
+     "theta_max_deg": 2.93,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 1427.1,
+     "shaft_W": 1104.3,
+     "pitch_deg": 2.95,
+     "rpm": 514.2,
+     "theta_min_deg": 2.51,
+     "theta_max_deg": 2.91,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 1469.5,
+     "shaft_W": 1138.8,
+     "pitch_deg": 3.76,
+     "rpm": 514.2,
+     "theta_min_deg": 2.61,
+     "theta_max_deg": 2.97,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 1540.5,
+     "shaft_W": 1196.5,
+     "pitch_deg": 4.69,
+     "rpm": 514.2,
+     "theta_min_deg": 2.79,
+     "theta_max_deg": 3.11,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 1641.7,
+     "shaft_W": 1278.2,
+     "pitch_deg": 5.74,
+     "rpm": 514.2,
+     "theta_min_deg": 3.04,
+     "theta_max_deg": 3.33,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 1776,
+     "shaft_W": 1385.6,
+     "pitch_deg": 6.92,
+     "rpm": 514.2,
+     "theta_min_deg": 3.38,
+     "theta_max_deg": 3.64,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 1949.1,
+     "shaft_W": 1522.7,
+     "pitch_deg": 8.23,
+     "rpm": 514.2,
+     "theta_min_deg": 3.82,
+     "theta_max_deg": 4.06,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 2169.7,
+     "shaft_W": 1695.1,
+     "pitch_deg": 9.68,
+     "rpm": 514.2,
+     "theta_min_deg": 4.36,
+     "theta_max_deg": 4.58,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 2452.9,
+     "shaft_W": 1912.9,
+     "pitch_deg": 11.33,
+     "rpm": 514.2,
+     "theta_min_deg": 5.04,
+     "theta_max_deg": 5.26,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 2823.6,
+     "shaft_W": 2192,
+     "pitch_deg": 13.2,
+     "rpm": 514.2,
+     "theta_min_deg": 5.89,
+     "theta_max_deg": 6.1,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 3321,
+     "shaft_W": 2557.1,
+     "pitch_deg": 15.3,
+     "rpm": 514.2,
+     "theta_min_deg": 6.93,
+     "theta_max_deg": 7.14,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 3995.3,
+     "shaft_W": 3035.8,
+     "pitch_deg": 17.54,
+     "rpm": 514.2,
+     "theta_min_deg": 8.13,
+     "theta_max_deg": 8.36,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 4178.4,
+     "shaft_W": 3147.2,
+     "pitch_deg": 18.14,
+     "rpm": 514.2,
+     "theta_min_deg": 8.38,
+     "theta_max_deg": 9.6,
+     "trim_ok": false
+    },
+    {
+     "V": 19,
+     "electric_W": 4102.9,
+     "shaft_W": 3080.2,
+     "pitch_deg": 17.77,
+     "rpm": 479.4,
+     "theta_min_deg": 8.61,
+     "theta_max_deg": 9.6,
+     "trim_ok": false
+    },
+    {
+     "V": 20,
+     "electric_W": 4137.5,
+     "shaft_W": 3102,
+     "pitch_deg": 15.97,
+     "rpm": 514.2,
+     "theta_min_deg": 8.33,
+     "theta_max_deg": 9.49,
+     "trim_ok": false
+    }
+   ],
+   "low": [
+    {
+     "V": 0,
+     "electric_W": 2051.3,
+     "shaft_W": 1602.9,
+     "pitch_deg": -0.01,
+     "rpm": 514.2,
+     "theta_min_deg": 4.34,
+     "theta_max_deg": 4.35,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 1977.2,
+     "shaft_W": 1544.8,
+     "pitch_deg": 0.18,
+     "rpm": 514.2,
+     "theta_min_deg": 4.03,
+     "theta_max_deg": 4.32,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 1850.2,
+     "shaft_W": 1444.4,
+     "pitch_deg": 0.44,
+     "rpm": 514.2,
+     "theta_min_deg": 3.52,
+     "theta_max_deg": 4.23,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 1745.5,
+     "shaft_W": 1360.6,
+     "pitch_deg": 0.78,
+     "rpm": 514.2,
+     "theta_min_deg": 3.03,
+     "theta_max_deg": 4.18,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 1644.1,
+     "shaft_W": 1279.2,
+     "pitch_deg": 1.21,
+     "rpm": 514.2,
+     "theta_min_deg": 2.67,
+     "theta_max_deg": 3.98,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 1569.9,
+     "shaft_W": 1219.5,
+     "pitch_deg": 1.71,
+     "rpm": 514.2,
+     "theta_min_deg": 2.5,
+     "theta_max_deg": 3.73,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 1533.6,
+     "shaft_W": 1190.4,
+     "pitch_deg": 2.31,
+     "rpm": 514.2,
+     "theta_min_deg": 2.45,
+     "theta_max_deg": 3.55,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 1532,
+     "shaft_W": 1189.2,
+     "pitch_deg": 3.01,
+     "rpm": 514.2,
+     "theta_min_deg": 2.49,
+     "theta_max_deg": 3.46,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 1562.4,
+     "shaft_W": 1213.9,
+     "pitch_deg": 3.82,
+     "rpm": 514.2,
+     "theta_min_deg": 2.59,
+     "theta_max_deg": 3.46,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 1624,
+     "shaft_W": 1263.6,
+     "pitch_deg": 4.75,
+     "rpm": 514.2,
+     "theta_min_deg": 2.77,
+     "theta_max_deg": 3.55,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 1717.8,
+     "shaft_W": 1338.9,
+     "pitch_deg": 5.8,
+     "rpm": 514.2,
+     "theta_min_deg": 3.03,
+     "theta_max_deg": 3.73,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 1846.8,
+     "shaft_W": 1441.8,
+     "pitch_deg": 6.98,
+     "rpm": 514.2,
+     "theta_min_deg": 3.38,
+     "theta_max_deg": 4.01,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 2017.1,
+     "shaft_W": 1576,
+     "pitch_deg": 8.3,
+     "rpm": 514.2,
+     "theta_min_deg": 3.82,
+     "theta_max_deg": 4.39,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 2235.8,
+     "shaft_W": 1746.2,
+     "pitch_deg": 9.76,
+     "rpm": 514.2,
+     "theta_min_deg": 4.36,
+     "theta_max_deg": 4.9,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 2519.4,
+     "shaft_W": 1963.3,
+     "pitch_deg": 11.42,
+     "rpm": 514.2,
+     "theta_min_deg": 5.05,
+     "theta_max_deg": 5.55,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 2893.2,
+     "shaft_W": 2243.6,
+     "pitch_deg": 13.3,
+     "rpm": 514.2,
+     "theta_min_deg": 5.91,
+     "theta_max_deg": 6.39,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 3396.9,
+     "shaft_W": 2611.7,
+     "pitch_deg": 15.41,
+     "rpm": 514.2,
+     "theta_min_deg": 6.96,
+     "theta_max_deg": 7.42,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 4080.4,
+     "shaft_W": 3094.8,
+     "pitch_deg": 17.65,
+     "rpm": 514.2,
+     "theta_min_deg": 8.17,
+     "theta_max_deg": 8.62,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 4103.5,
+     "shaft_W": 3095.7,
+     "pitch_deg": 17.8,
+     "rpm": 514.2,
+     "theta_min_deg": 8.19,
+     "theta_max_deg": 9.61,
+     "trim_ok": false
+    },
+    {
+     "V": 19,
+     "electric_W": 4103.5,
+     "shaft_W": 3095.7,
+     "pitch_deg": 17.8,
+     "rpm": 514.2,
+     "theta_min_deg": 8.19,
+     "theta_max_deg": 9.61,
+     "trim_ok": false
+    },
+    {
+     "V": 20,
+     "electric_W": 4103.5,
+     "shaft_W": 3095.7,
+     "pitch_deg": 17.8,
+     "rpm": 514.2,
+     "theta_min_deg": 8.19,
+     "theta_max_deg": 9.61,
+     "trim_ok": false
+    }
+   ],
+   "nominal": [
+    {
+     "V": 0,
+     "electric_W": 2051.3,
+     "shaft_W": 1602.9,
+     "pitch_deg": -0.01,
+     "rpm": 514.2,
+     "theta_min_deg": 4.34,
+     "theta_max_deg": 4.35,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 1978,
+     "shaft_W": 1545.4,
+     "pitch_deg": 0.17,
+     "rpm": 514.2,
+     "theta_min_deg": 4.03,
+     "theta_max_deg": 4.33,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 1887.2,
+     "shaft_W": 1473.5,
+     "pitch_deg": 0.44,
+     "rpm": 514.2,
+     "theta_min_deg": 3.55,
+     "theta_max_deg": 4.37,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 1830.7,
+     "shaft_W": 1427.9,
+     "pitch_deg": 0.79,
+     "rpm": 514.2,
+     "theta_min_deg": 3.06,
+     "theta_max_deg": 4.54,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 1745.4,
+     "shaft_W": 1359.4,
+     "pitch_deg": 1.24,
+     "rpm": 514.2,
+     "theta_min_deg": 2.67,
+     "theta_max_deg": 4.46,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 1660.5,
+     "shaft_W": 1291.6,
+     "pitch_deg": 1.75,
+     "rpm": 514.2,
+     "theta_min_deg": 2.49,
+     "theta_max_deg": 4.19,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 1613.2,
+     "shaft_W": 1254,
+     "pitch_deg": 2.35,
+     "rpm": 514.2,
+     "theta_min_deg": 2.43,
+     "theta_max_deg": 3.96,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 1602.2,
+     "shaft_W": 1245.4,
+     "pitch_deg": 3.05,
+     "rpm": 514.2,
+     "theta_min_deg": 2.47,
+     "theta_max_deg": 3.82,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 1624.7,
+     "shaft_W": 1263.7,
+     "pitch_deg": 3.86,
+     "rpm": 514.2,
+     "theta_min_deg": 2.58,
+     "theta_max_deg": 3.78,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 1679.8,
+     "shaft_W": 1308.2,
+     "pitch_deg": 4.79,
+     "rpm": 514.2,
+     "theta_min_deg": 2.77,
+     "theta_max_deg": 3.84,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 1768.4,
+     "shaft_W": 1379.1,
+     "pitch_deg": 5.84,
+     "rpm": 514.2,
+     "theta_min_deg": 3.03,
+     "theta_max_deg": 3.99,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 1893.3,
+     "shaft_W": 1478.3,
+     "pitch_deg": 7.02,
+     "rpm": 514.2,
+     "theta_min_deg": 3.37,
+     "theta_max_deg": 4.25,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 2059.7,
+     "shaft_W": 1609.1,
+     "pitch_deg": 8.33,
+     "rpm": 514.2,
+     "theta_min_deg": 3.81,
+     "theta_max_deg": 4.61,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 2276.5,
+     "shaft_W": 1777.4,
+     "pitch_deg": 9.8,
+     "rpm": 514.2,
+     "theta_min_deg": 4.36,
+     "theta_max_deg": 5.1,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 2559.4,
+     "shaft_W": 1993.4,
+     "pitch_deg": 11.46,
+     "rpm": 514.2,
+     "theta_min_deg": 5.06,
+     "theta_max_deg": 5.75,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 2933.8,
+     "shaft_W": 2273.5,
+     "pitch_deg": 13.35,
+     "rpm": 514.2,
+     "theta_min_deg": 5.92,
+     "theta_max_deg": 6.57,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 3439.7,
+     "shaft_W": 2642.3,
+     "pitch_deg": 15.46,
+     "rpm": 514.2,
+     "theta_min_deg": 6.97,
+     "theta_max_deg": 7.59,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 4125.3,
+     "shaft_W": 3125.7,
+     "pitch_deg": 17.69,
+     "rpm": 514.2,
+     "theta_min_deg": 8.18,
+     "theta_max_deg": 8.79,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 4054,
+     "shaft_W": 3061.6,
+     "pitch_deg": 17.57,
+     "rpm": 514.2,
+     "theta_min_deg": 8.06,
+     "theta_max_deg": 9.62,
+     "trim_ok": false
+    },
+    {
+     "V": 19,
+     "electric_W": 4054,
+     "shaft_W": 3061.6,
+     "pitch_deg": 17.57,
+     "rpm": 514.2,
+     "theta_min_deg": 8.06,
+     "theta_max_deg": 9.62,
+     "trim_ok": false
+    },
+    {
+     "V": 20,
+     "electric_W": 4054,
+     "shaft_W": 3061.6,
+     "pitch_deg": 17.57,
+     "rpm": 514.2,
+     "theta_min_deg": 8.06,
+     "theta_max_deg": 9.62,
+     "trim_ok": false
+    }
+   ],
+   "high": [
+    {
+     "V": 0,
+     "electric_W": 2051.3,
+     "shaft_W": 1602.9,
+     "pitch_deg": -0.01,
+     "rpm": 514.2,
+     "theta_min_deg": 4.34,
+     "theta_max_deg": 4.35,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 1978.8,
+     "shaft_W": 1546,
+     "pitch_deg": 0.17,
+     "rpm": 514.2,
+     "theta_min_deg": 4.03,
+     "theta_max_deg": 4.33,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 1922.7,
+     "shaft_W": 1501.4,
+     "pitch_deg": 0.44,
+     "rpm": 514.2,
+     "theta_min_deg": 3.59,
+     "theta_max_deg": 4.51,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 1910.9,
+     "shaft_W": 1490.6,
+     "pitch_deg": 0.78,
+     "rpm": 514.2,
+     "theta_min_deg": 3.11,
+     "theta_max_deg": 4.87,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 1849.9,
+     "shaft_W": 1441.2,
+     "pitch_deg": 1.33,
+     "rpm": 514.2,
+     "theta_min_deg": 2.69,
+     "theta_max_deg": 4.94,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 1752.2,
+     "shaft_W": 1363.8,
+     "pitch_deg": 1.79,
+     "rpm": 514.2,
+     "theta_min_deg": 2.47,
+     "theta_max_deg": 4.64,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 1692.5,
+     "shaft_W": 1316.7,
+     "pitch_deg": 2.39,
+     "rpm": 514.2,
+     "theta_min_deg": 2.42,
+     "theta_max_deg": 4.37,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 1672.4,
+     "shaft_W": 1301.1,
+     "pitch_deg": 3.09,
+     "rpm": 514.2,
+     "theta_min_deg": 2.45,
+     "theta_max_deg": 4.19,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 1687.3,
+     "shaft_W": 1313.4,
+     "pitch_deg": 3.9,
+     "rpm": 514.2,
+     "theta_min_deg": 2.57,
+     "theta_max_deg": 4.11,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 1736.1,
+     "shaft_W": 1352.7,
+     "pitch_deg": 4.83,
+     "rpm": 514.2,
+     "theta_min_deg": 2.76,
+     "theta_max_deg": 4.13,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 1819.6,
+     "shaft_W": 1419.4,
+     "pitch_deg": 5.88,
+     "rpm": 514.2,
+     "theta_min_deg": 3.02,
+     "theta_max_deg": 4.26,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 1940.5,
+     "shaft_W": 1515.3,
+     "pitch_deg": 7.07,
+     "rpm": 514.2,
+     "theta_min_deg": 3.37,
+     "theta_max_deg": 4.49,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 2103.9,
+     "shaft_W": 1643.3,
+     "pitch_deg": 8.37,
+     "rpm": 514.2,
+     "theta_min_deg": 3.81,
+     "theta_max_deg": 4.84,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 2318.5,
+     "shaft_W": 1809.4,
+     "pitch_deg": 9.84,
+     "rpm": 514.2,
+     "theta_min_deg": 4.36,
+     "theta_max_deg": 5.31,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 2600,
+     "shaft_W": 2023.9,
+     "pitch_deg": 11.51,
+     "rpm": 514.2,
+     "theta_min_deg": 5.06,
+     "theta_max_deg": 5.94,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 2972.9,
+     "shaft_W": 2302.3,
+     "pitch_deg": 13.4,
+     "rpm": 514.2,
+     "theta_min_deg": 5.93,
+     "theta_max_deg": 6.75,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 3477.1,
+     "shaft_W": 2669,
+     "pitch_deg": 15.49,
+     "rpm": 514.2,
+     "theta_min_deg": 6.97,
+     "theta_max_deg": 7.75,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 4112.6,
+     "shaft_W": 3119.5,
+     "pitch_deg": 17.42,
+     "rpm": 514.2,
+     "theta_min_deg": 7.98,
+     "theta_max_deg": 9.65,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 4004.9,
+     "shaft_W": 3027.5,
+     "pitch_deg": 17.33,
+     "rpm": 514.2,
+     "theta_min_deg": 7.93,
+     "theta_max_deg": 9.63,
+     "trim_ok": false
+    },
+    {
+     "V": 19,
+     "electric_W": 4004.9,
+     "shaft_W": 3027.5,
+     "pitch_deg": 17.33,
+     "rpm": 514.2,
+     "theta_min_deg": 7.93,
+     "theta_max_deg": 9.63,
+     "trim_ok": false
+    },
+    {
+     "V": 20,
+     "electric_W": 4004.9,
+     "shaft_W": 3027.5,
+     "pitch_deg": 17.33,
+     "rpm": 514.2,
+     "theta_min_deg": 7.93,
+     "theta_max_deg": 9.63,
+     "trim_ok": false
+    }
+   ]
+  },
+  "53_km": {
+   "off": [
+    {
+     "V": 0,
+     "electric_W": 2009.1,
+     "shaft_W": 1569.9,
+     "pitch_deg": 0,
+     "rpm": 514.2,
+     "theta_min_deg": 5.45,
+     "theta_max_deg": 5.46,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 1949.2,
+     "shaft_W": 1522.8,
+     "pitch_deg": 0.16,
+     "rpm": 514.2,
+     "theta_min_deg": 5.17,
+     "theta_max_deg": 5.48,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 1795,
+     "shaft_W": 1400.7,
+     "pitch_deg": 0.39,
+     "rpm": 514.2,
+     "theta_min_deg": 4.69,
+     "theta_max_deg": 5.25,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 1617.8,
+     "shaft_W": 1258.8,
+     "pitch_deg": 0.67,
+     "rpm": 514.2,
+     "theta_min_deg": 4.2,
+     "theta_max_deg": 4.88,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 1480.3,
+     "shaft_W": 1147.6,
+     "pitch_deg": 1.01,
+     "rpm": 514.2,
+     "theta_min_deg": 3.83,
+     "theta_max_deg": 4.52,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 1395.4,
+     "shaft_W": 1078.3,
+     "pitch_deg": 1.42,
+     "rpm": 514.2,
+     "theta_min_deg": 3.62,
+     "theta_max_deg": 4.25,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 1353.3,
+     "shaft_W": 1043.8,
+     "pitch_deg": 1.9,
+     "rpm": 514.2,
+     "theta_min_deg": 3.51,
+     "theta_max_deg": 4.07,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 1344.7,
+     "shaft_W": 1036.8,
+     "pitch_deg": 2.47,
+     "rpm": 514.2,
+     "theta_min_deg": 3.49,
+     "theta_max_deg": 3.98,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 1364.5,
+     "shaft_W": 1053.1,
+     "pitch_deg": 3.12,
+     "rpm": 514.2,
+     "theta_min_deg": 3.53,
+     "theta_max_deg": 3.97,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 1410.6,
+     "shaft_W": 1090.8,
+     "pitch_deg": 3.87,
+     "rpm": 514.2,
+     "theta_min_deg": 3.64,
+     "theta_max_deg": 4.03,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 1482.7,
+     "shaft_W": 1149.6,
+     "pitch_deg": 4.71,
+     "rpm": 514.2,
+     "theta_min_deg": 3.81,
+     "theta_max_deg": 4.17,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 1582.1,
+     "shaft_W": 1230.2,
+     "pitch_deg": 5.65,
+     "rpm": 514.2,
+     "theta_min_deg": 4.05,
+     "theta_max_deg": 4.38,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 1711.4,
+     "shaft_W": 1334.1,
+     "pitch_deg": 6.7,
+     "rpm": 514.2,
+     "theta_min_deg": 4.37,
+     "theta_max_deg": 4.67,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 1874.7,
+     "shaft_W": 1464,
+     "pitch_deg": 7.85,
+     "rpm": 514.2,
+     "theta_min_deg": 4.76,
+     "theta_max_deg": 5.04,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 2079.2,
+     "shaft_W": 1624.7,
+     "pitch_deg": 9.15,
+     "rpm": 514.2,
+     "theta_min_deg": 5.27,
+     "theta_max_deg": 5.53,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 2335.6,
+     "shaft_W": 1823.2,
+     "pitch_deg": 10.6,
+     "rpm": 514.2,
+     "theta_min_deg": 5.89,
+     "theta_max_deg": 6.14,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 2662.1,
+     "shaft_W": 2071.2,
+     "pitch_deg": 12.23,
+     "rpm": 514.2,
+     "theta_min_deg": 6.65,
+     "theta_max_deg": 6.9,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 3086.8,
+     "shaft_W": 2386.5,
+     "pitch_deg": 14.04,
+     "rpm": 514.2,
+     "theta_min_deg": 7.58,
+     "theta_max_deg": 7.83,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 3647.4,
+     "shaft_W": 2791,
+     "pitch_deg": 16,
+     "rpm": 514.2,
+     "theta_min_deg": 8.66,
+     "theta_max_deg": 8.91,
+     "trim_ok": true
+    },
+    {
+     "V": 19,
+     "electric_W": 4110.1,
+     "shaft_W": 3096.2,
+     "pitch_deg": 17.44,
+     "rpm": 514.2,
+     "theta_min_deg": 9.49,
+     "theta_max_deg": 10.88,
+     "trim_ok": false
+    },
+    {
+     "V": 20,
+     "electric_W": 4141.2,
+     "shaft_W": 3112.5,
+     "pitch_deg": 14.56,
+     "rpm": 514.2,
+     "theta_min_deg": 9.13,
+     "theta_max_deg": 10.83,
+     "trim_ok": false
+    }
+   ],
+   "low": [
+    {
+     "V": 0,
+     "electric_W": 2071.1,
+     "shaft_W": 1618.4,
+     "pitch_deg": 0,
+     "rpm": 514.2,
+     "theta_min_deg": 5.6,
+     "theta_max_deg": 5.61,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 2003,
+     "shaft_W": 1565.1,
+     "pitch_deg": 0.17,
+     "rpm": 514.2,
+     "theta_min_deg": 5.3,
+     "theta_max_deg": 5.6,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 1869.7,
+     "shaft_W": 1459.9,
+     "pitch_deg": 0.39,
+     "rpm": 514.2,
+     "theta_min_deg": 4.8,
+     "theta_max_deg": 5.49,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 1758.2,
+     "shaft_W": 1370.7,
+     "pitch_deg": 0.7,
+     "rpm": 514.2,
+     "theta_min_deg": 4.28,
+     "theta_max_deg": 5.44,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 1653.9,
+     "shaft_W": 1286.8,
+     "pitch_deg": 1.06,
+     "rpm": 514.2,
+     "theta_min_deg": 3.86,
+     "theta_max_deg": 5.31,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 1562,
+     "shaft_W": 1212.8,
+     "pitch_deg": 1.48,
+     "rpm": 514.2,
+     "theta_min_deg": 3.61,
+     "theta_max_deg": 5.06,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 1502.5,
+     "shaft_W": 1164.8,
+     "pitch_deg": 1.96,
+     "rpm": 514.2,
+     "theta_min_deg": 3.49,
+     "theta_max_deg": 4.82,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 1476.7,
+     "shaft_W": 1144,
+     "pitch_deg": 2.53,
+     "rpm": 514.2,
+     "theta_min_deg": 3.46,
+     "theta_max_deg": 4.66,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 1481.9,
+     "shaft_W": 1148.4,
+     "pitch_deg": 3.19,
+     "rpm": 514.2,
+     "theta_min_deg": 3.51,
+     "theta_max_deg": 4.58,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 1516,
+     "shaft_W": 1176.2,
+     "pitch_deg": 3.93,
+     "rpm": 514.2,
+     "theta_min_deg": 3.62,
+     "theta_max_deg": 4.58,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 1578.6,
+     "shaft_W": 1227,
+     "pitch_deg": 4.77,
+     "rpm": 514.2,
+     "theta_min_deg": 3.8,
+     "theta_max_deg": 4.67,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 1670.6,
+     "shaft_W": 1301.1,
+     "pitch_deg": 5.72,
+     "rpm": 514.2,
+     "theta_min_deg": 4.04,
+     "theta_max_deg": 4.84,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 1794.4,
+     "shaft_W": 1400.1,
+     "pitch_deg": 6.77,
+     "rpm": 514.2,
+     "theta_min_deg": 4.36,
+     "theta_max_deg": 5.09,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 1954.1,
+     "shaft_W": 1526.4,
+     "pitch_deg": 7.93,
+     "rpm": 514.2,
+     "theta_min_deg": 4.77,
+     "theta_max_deg": 5.44,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 2156.2,
+     "shaft_W": 1684.4,
+     "pitch_deg": 9.23,
+     "rpm": 514.2,
+     "theta_min_deg": 5.27,
+     "theta_max_deg": 5.9,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 2412.3,
+     "shaft_W": 1881.7,
+     "pitch_deg": 10.7,
+     "rpm": 514.2,
+     "theta_min_deg": 5.9,
+     "theta_max_deg": 6.49,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 2740.9,
+     "shaft_W": 2130.1,
+     "pitch_deg": 12.35,
+     "rpm": 514.2,
+     "theta_min_deg": 6.68,
+     "theta_max_deg": 7.24,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 3170.4,
+     "shaft_W": 2447.5,
+     "pitch_deg": 14.15,
+     "rpm": 514.2,
+     "theta_min_deg": 7.61,
+     "theta_max_deg": 8.15,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 3739.4,
+     "shaft_W": 2856,
+     "pitch_deg": 16.12,
+     "rpm": 514.2,
+     "theta_min_deg": 8.71,
+     "theta_max_deg": 9.23,
+     "trim_ok": true
+    },
+    {
+     "V": 19,
+     "electric_W": 4120.2,
+     "shaft_W": 3106.7,
+     "pitch_deg": 17.32,
+     "rpm": 514.2,
+     "theta_min_deg": 9.29,
+     "theta_max_deg": 10.93,
+     "trim_ok": false
+    },
+    {
+     "V": 20,
+     "electric_W": 4096.4,
+     "shaft_W": 3078.4,
+     "pitch_deg": 18.45,
+     "rpm": 478.8,
+     "theta_min_deg": 8.95,
+     "theta_max_deg": 10.98,
+     "trim_ok": false
+    }
+   ],
+   "nominal": [
+    {
+     "V": 0,
+     "electric_W": 2071.1,
+     "shaft_W": 1618.4,
+     "pitch_deg": 0,
+     "rpm": 514.2,
+     "theta_min_deg": 5.6,
+     "theta_max_deg": 5.61,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 2003.2,
+     "shaft_W": 1565.3,
+     "pitch_deg": 0.17,
+     "rpm": 514.2,
+     "theta_min_deg": 5.3,
+     "theta_max_deg": 5.6,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 1900.1,
+     "shaft_W": 1483.8,
+     "pitch_deg": 0.4,
+     "rpm": 514.2,
+     "theta_min_deg": 4.83,
+     "theta_max_deg": 5.6,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 1838.3,
+     "shaft_W": 1433.9,
+     "pitch_deg": 0.7,
+     "rpm": 514.2,
+     "theta_min_deg": 4.33,
+     "theta_max_deg": 5.77,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 1766.7,
+     "shaft_W": 1375.9,
+     "pitch_deg": 1.09,
+     "rpm": 514.2,
+     "theta_min_deg": 3.88,
+     "theta_max_deg": 5.82,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 1672.6,
+     "shaft_W": 1300.6,
+     "pitch_deg": 1.52,
+     "rpm": 514.2,
+     "theta_min_deg": 3.6,
+     "theta_max_deg": 5.59,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 1601.8,
+     "shaft_W": 1244.1,
+     "pitch_deg": 2.01,
+     "rpm": 514.2,
+     "theta_min_deg": 3.47,
+     "theta_max_deg": 5.32,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 1565.1,
+     "shaft_W": 1214.8,
+     "pitch_deg": 2.58,
+     "rpm": 514.2,
+     "theta_min_deg": 3.45,
+     "theta_max_deg": 5.11,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 1560.7,
+     "shaft_W": 1211.6,
+     "pitch_deg": 3.23,
+     "rpm": 514.2,
+     "theta_min_deg": 3.49,
+     "theta_max_deg": 4.99,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 1586.9,
+     "shaft_W": 1233,
+     "pitch_deg": 3.98,
+     "rpm": 514.2,
+     "theta_min_deg": 3.61,
+     "theta_max_deg": 4.95,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 1643,
+     "shaft_W": 1278.4,
+     "pitch_deg": 4.82,
+     "rpm": 514.2,
+     "theta_min_deg": 3.79,
+     "theta_max_deg": 5,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 1729.6,
+     "shaft_W": 1348,
+     "pitch_deg": 5.77,
+     "rpm": 514.2,
+     "theta_min_deg": 4.04,
+     "theta_max_deg": 5.14,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 1849.1,
+     "shaft_W": 1443.2,
+     "pitch_deg": 6.82,
+     "rpm": 514.2,
+     "theta_min_deg": 4.36,
+     "theta_max_deg": 5.37,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 2005.3,
+     "shaft_W": 1566.4,
+     "pitch_deg": 7.98,
+     "rpm": 514.2,
+     "theta_min_deg": 4.77,
+     "theta_max_deg": 5.69,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 2205.4,
+     "shaft_W": 1722.4,
+     "pitch_deg": 9.29,
+     "rpm": 514.2,
+     "theta_min_deg": 5.28,
+     "theta_max_deg": 6.14,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 2460.8,
+     "shaft_W": 1918.4,
+     "pitch_deg": 10.75,
+     "rpm": 514.2,
+     "theta_min_deg": 5.91,
+     "theta_max_deg": 6.72,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 2790.5,
+     "shaft_W": 2167,
+     "pitch_deg": 12.41,
+     "rpm": 514.2,
+     "theta_min_deg": 6.7,
+     "theta_max_deg": 7.46,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 3223.2,
+     "shaft_W": 2485.7,
+     "pitch_deg": 14.22,
+     "rpm": 514.2,
+     "theta_min_deg": 7.63,
+     "theta_max_deg": 8.35,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 3797.5,
+     "shaft_W": 2896.8,
+     "pitch_deg": 16.19,
+     "rpm": 514.2,
+     "theta_min_deg": 8.73,
+     "theta_max_deg": 9.43,
+     "trim_ok": true
+    },
+    {
+     "V": 19,
+     "electric_W": 4065.3,
+     "shaft_W": 3068.8,
+     "pitch_deg": 17.06,
+     "rpm": 514.2,
+     "theta_min_deg": 9.14,
+     "theta_max_deg": 10.93,
+     "trim_ok": false
+    },
+    {
+     "V": 20,
+     "electric_W": 4048.7,
+     "shaft_W": 3046.5,
+     "pitch_deg": 17.16,
+     "rpm": 512.8,
+     "theta_min_deg": 8.29,
+     "theta_max_deg": 10.98,
+     "trim_ok": false
+    }
+   ],
+   "high": [
+    {
+     "V": 0,
+     "electric_W": 2071.1,
+     "shaft_W": 1618.4,
+     "pitch_deg": 0,
+     "rpm": 514.2,
+     "theta_min_deg": 5.6,
+     "theta_max_deg": 5.61,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 2003.5,
+     "shaft_W": 1565.5,
+     "pitch_deg": 0.17,
+     "rpm": 514.2,
+     "theta_min_deg": 5.3,
+     "theta_max_deg": 5.6,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 1930,
+     "shaft_W": 1507.3,
+     "pitch_deg": 0.4,
+     "rpm": 514.2,
+     "theta_min_deg": 4.85,
+     "theta_max_deg": 5.72,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 1914,
+     "shaft_W": 1493.3,
+     "pitch_deg": 0.71,
+     "rpm": 514.2,
+     "theta_min_deg": 4.38,
+     "theta_max_deg": 6.08,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 1879.6,
+     "shaft_W": 1464.1,
+     "pitch_deg": 1.11,
+     "rpm": 514.2,
+     "theta_min_deg": 3.9,
+     "theta_max_deg": 6.31,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 1785.3,
+     "shaft_W": 1388.9,
+     "pitch_deg": 1.57,
+     "rpm": 514.2,
+     "theta_min_deg": 3.59,
+     "theta_max_deg": 6.12,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 1701.6,
+     "shaft_W": 1322.8,
+     "pitch_deg": 2.06,
+     "rpm": 514.2,
+     "theta_min_deg": 3.45,
+     "theta_max_deg": 5.81,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 1653.6,
+     "shaft_W": 1285,
+     "pitch_deg": 2.63,
+     "rpm": 514.2,
+     "theta_min_deg": 3.43,
+     "theta_max_deg": 5.56,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 1639.9,
+     "shaft_W": 1274.6,
+     "pitch_deg": 3.28,
+     "rpm": 514.2,
+     "theta_min_deg": 3.48,
+     "theta_max_deg": 5.39,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 1658.3,
+     "shaft_W": 1289.8,
+     "pitch_deg": 4.03,
+     "rpm": 514.2,
+     "theta_min_deg": 3.59,
+     "theta_max_deg": 5.31,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 1707.9,
+     "shaft_W": 1329.9,
+     "pitch_deg": 4.88,
+     "rpm": 514.2,
+     "theta_min_deg": 3.78,
+     "theta_max_deg": 5.33,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 1789.3,
+     "shaft_W": 1395.1,
+     "pitch_deg": 5.82,
+     "rpm": 514.2,
+     "theta_min_deg": 4.03,
+     "theta_max_deg": 5.44,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 1904.6,
+     "shaft_W": 1486.7,
+     "pitch_deg": 6.87,
+     "rpm": 514.2,
+     "theta_min_deg": 4.36,
+     "theta_max_deg": 5.65,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 2057.6,
+     "shaft_W": 1607,
+     "pitch_deg": 8.03,
+     "rpm": 514.2,
+     "theta_min_deg": 4.77,
+     "theta_max_deg": 5.96,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 2255.5,
+     "shaft_W": 1760.7,
+     "pitch_deg": 9.34,
+     "rpm": 514.2,
+     "theta_min_deg": 5.28,
+     "theta_max_deg": 6.38,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 2509.5,
+     "shaft_W": 1955.2,
+     "pitch_deg": 10.81,
+     "rpm": 514.2,
+     "theta_min_deg": 5.92,
+     "theta_max_deg": 6.95,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 2838.8,
+     "shaft_W": 2202.7,
+     "pitch_deg": 12.47,
+     "rpm": 514.2,
+     "theta_min_deg": 6.71,
+     "theta_max_deg": 7.68,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 3271.3,
+     "shaft_W": 2520.4,
+     "pitch_deg": 14.27,
+     "rpm": 514.2,
+     "theta_min_deg": 7.64,
+     "theta_max_deg": 8.56,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 3845,
+     "shaft_W": 2930,
+     "pitch_deg": 16.23,
+     "rpm": 514.2,
+     "theta_min_deg": 8.74,
+     "theta_max_deg": 9.62,
+     "trim_ok": true
+    },
+    {
+     "V": 19,
+     "electric_W": 4010.7,
+     "shaft_W": 3030.9,
+     "pitch_deg": 16.8,
+     "rpm": 514.2,
+     "theta_min_deg": 8.98,
+     "theta_max_deg": 10.94,
+     "trim_ok": false
+    },
+    {
+     "V": 20,
+     "electric_W": 4010.7,
+     "shaft_W": 3030.9,
+     "pitch_deg": 16.8,
+     "rpm": 514.2,
+     "theta_min_deg": 8.98,
+     "theta_max_deg": 10.94,
+     "trim_ok": false
+    }
+   ]
+  },
+  "55_km": {
+   "off": [
+    {
+     "V": 0,
+     "electric_W": 2084.4,
+     "shaft_W": 1628.8,
+     "pitch_deg": 0,
+     "rpm": 514.2,
+     "theta_min_deg": 7.03,
+     "theta_max_deg": 7.04,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 2030.1,
+     "shaft_W": 1586.3,
+     "pitch_deg": 0.16,
+     "rpm": 514.2,
+     "theta_min_deg": 6.76,
+     "theta_max_deg": 7.07,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 1885.5,
+     "shaft_W": 1472.4,
+     "pitch_deg": 0.37,
+     "rpm": 514.2,
+     "theta_min_deg": 6.3,
+     "theta_max_deg": 6.88,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 1703.2,
+     "shaft_W": 1327.3,
+     "pitch_deg": 0.61,
+     "rpm": 514.2,
+     "theta_min_deg": 5.78,
+     "theta_max_deg": 6.54,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 1542.6,
+     "shaft_W": 1198.1,
+     "pitch_deg": 0.9,
+     "rpm": 514.2,
+     "theta_min_deg": 5.36,
+     "theta_max_deg": 6.15,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 1429.6,
+     "shaft_W": 1106.2,
+     "pitch_deg": 1.24,
+     "rpm": 514.2,
+     "theta_min_deg": 5.07,
+     "theta_max_deg": 5.82,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 1361.3,
+     "shaft_W": 1050.3,
+     "pitch_deg": 1.63,
+     "rpm": 514.2,
+     "theta_min_deg": 4.89,
+     "theta_max_deg": 5.58,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 1328.7,
+     "shaft_W": 1023.6,
+     "pitch_deg": 2.09,
+     "rpm": 514.2,
+     "theta_min_deg": 4.81,
+     "theta_max_deg": 5.42,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 1325.1,
+     "shaft_W": 1020.7,
+     "pitch_deg": 2.61,
+     "rpm": 514.2,
+     "theta_min_deg": 4.79,
+     "theta_max_deg": 5.34,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 1346.9,
+     "shaft_W": 1038.6,
+     "pitch_deg": 3.21,
+     "rpm": 514.2,
+     "theta_min_deg": 4.83,
+     "theta_max_deg": 5.32,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 1392.5,
+     "shaft_W": 1076,
+     "pitch_deg": 3.88,
+     "rpm": 514.2,
+     "theta_min_deg": 4.92,
+     "theta_max_deg": 5.38,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 1461.5,
+     "shaft_W": 1132.4,
+     "pitch_deg": 4.63,
+     "rpm": 514.2,
+     "theta_min_deg": 5.08,
+     "theta_max_deg": 5.49,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 1555.1,
+     "shaft_W": 1208.3,
+     "pitch_deg": 5.46,
+     "rpm": 514.2,
+     "theta_min_deg": 5.3,
+     "theta_max_deg": 5.68,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 1674.9,
+     "shaft_W": 1304.9,
+     "pitch_deg": 6.37,
+     "rpm": 514.2,
+     "theta_min_deg": 5.57,
+     "theta_max_deg": 5.93,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 1824.6,
+     "shaft_W": 1424.3,
+     "pitch_deg": 7.39,
+     "rpm": 514.2,
+     "theta_min_deg": 5.93,
+     "theta_max_deg": 6.26,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 2008.8,
+     "shaft_W": 1569.6,
+     "pitch_deg": 8.52,
+     "rpm": 514.2,
+     "theta_min_deg": 6.37,
+     "theta_max_deg": 6.69,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 2235.3,
+     "shaft_W": 1745.9,
+     "pitch_deg": 9.77,
+     "rpm": 514.2,
+     "theta_min_deg": 6.92,
+     "theta_max_deg": 7.22,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 2516.2,
+     "shaft_W": 1961,
+     "pitch_deg": 11.17,
+     "rpm": 514.2,
+     "theta_min_deg": 7.59,
+     "theta_max_deg": 7.88,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 2869,
+     "shaft_W": 2225.8,
+     "pitch_deg": 12.7,
+     "rpm": 514.2,
+     "theta_min_deg": 8.38,
+     "theta_max_deg": 8.66,
+     "trim_ok": true
+    },
+    {
+     "V": 19,
+     "electric_W": 3318.9,
+     "shaft_W": 2555.6,
+     "pitch_deg": 14.35,
+     "rpm": 514.2,
+     "theta_min_deg": 9.31,
+     "theta_max_deg": 9.6,
+     "trim_ok": true
+    },
+    {
+     "V": 20,
+     "electric_W": 3910.2,
+     "shaft_W": 2976.3,
+     "pitch_deg": 16.23,
+     "rpm": 514.2,
+     "theta_min_deg": 10.44,
+     "theta_max_deg": 10.74,
+     "trim_ok": true
+    }
+   ],
+   "low": [
+    {
+     "V": 0,
+     "electric_W": 2156,
+     "shaft_W": 1684.6,
+     "pitch_deg": 0,
+     "rpm": 514.2,
+     "theta_min_deg": 7.2,
+     "theta_max_deg": 7.21,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 2094,
+     "shaft_W": 1636.3,
+     "pitch_deg": 0.16,
+     "rpm": 514.2,
+     "theta_min_deg": 6.92,
+     "theta_max_deg": 7.22,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 1959.9,
+     "shaft_W": 1531.1,
+     "pitch_deg": 0.37,
+     "rpm": 514.2,
+     "theta_min_deg": 6.43,
+     "theta_max_deg": 7.09,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 1836.8,
+     "shaft_W": 1433.3,
+     "pitch_deg": 0.63,
+     "rpm": 514.2,
+     "theta_min_deg": 5.9,
+     "theta_max_deg": 7.03,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 1730.6,
+     "shaft_W": 1348.2,
+     "pitch_deg": 0.94,
+     "rpm": 514.2,
+     "theta_min_deg": 5.42,
+     "theta_max_deg": 6.96,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 1628,
+     "shaft_W": 1265.6,
+     "pitch_deg": 1.3,
+     "rpm": 514.2,
+     "theta_min_deg": 5.07,
+     "theta_max_deg": 6.75,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 1546.4,
+     "shaft_W": 1200,
+     "pitch_deg": 1.7,
+     "rpm": 514.2,
+     "theta_min_deg": 4.88,
+     "theta_max_deg": 6.48,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 1495.5,
+     "shaft_W": 1158.9,
+     "pitch_deg": 2.16,
+     "rpm": 514.2,
+     "theta_min_deg": 4.78,
+     "theta_max_deg": 6.26,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 1474.5,
+     "shaft_W": 1142.1,
+     "pitch_deg": 2.69,
+     "rpm": 514.2,
+     "theta_min_deg": 4.76,
+     "theta_max_deg": 6.1,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 1481.5,
+     "shaft_W": 1147.9,
+     "pitch_deg": 3.28,
+     "rpm": 514.2,
+     "theta_min_deg": 4.81,
+     "theta_max_deg": 6.02,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 1514.8,
+     "shaft_W": 1175.1,
+     "pitch_deg": 3.96,
+     "rpm": 514.2,
+     "theta_min_deg": 4.91,
+     "theta_max_deg": 6.01,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 1574,
+     "shaft_W": 1223.2,
+     "pitch_deg": 4.71,
+     "rpm": 514.2,
+     "theta_min_deg": 5.07,
+     "theta_max_deg": 6.07,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 1659.7,
+     "shaft_W": 1292.2,
+     "pitch_deg": 5.54,
+     "rpm": 514.2,
+     "theta_min_deg": 5.29,
+     "theta_max_deg": 6.21,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 1773.6,
+     "shaft_W": 1383.4,
+     "pitch_deg": 6.46,
+     "rpm": 514.2,
+     "theta_min_deg": 5.57,
+     "theta_max_deg": 6.42,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 1918.7,
+     "shaft_W": 1498.4,
+     "pitch_deg": 7.48,
+     "rpm": 514.2,
+     "theta_min_deg": 5.93,
+     "theta_max_deg": 6.72,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 2099.9,
+     "shaft_W": 1640.6,
+     "pitch_deg": 8.61,
+     "rpm": 514.2,
+     "theta_min_deg": 6.38,
+     "theta_max_deg": 7.12,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 2325.2,
+     "shaft_W": 1814.9,
+     "pitch_deg": 9.88,
+     "rpm": 514.2,
+     "theta_min_deg": 6.94,
+     "theta_max_deg": 7.63,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 2607,
+     "shaft_W": 2029.4,
+     "pitch_deg": 11.29,
+     "rpm": 514.2,
+     "theta_min_deg": 7.62,
+     "theta_max_deg": 8.28,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 2962.7,
+     "shaft_W": 2295,
+     "pitch_deg": 12.81,
+     "rpm": 514.2,
+     "theta_min_deg": 8.41,
+     "theta_max_deg": 9.04,
+     "trim_ok": true
+    },
+    {
+     "V": 19,
+     "electric_W": 3419,
+     "shaft_W": 2627.5,
+     "pitch_deg": 14.48,
+     "rpm": 514.2,
+     "theta_min_deg": 9.35,
+     "theta_max_deg": 9.97,
+     "trim_ok": true
+    },
+    {
+     "V": 20,
+     "electric_W": 4022,
+     "shaft_W": 3054.1,
+     "pitch_deg": 16.38,
+     "rpm": 514.2,
+     "theta_min_deg": 10.51,
+     "theta_max_deg": 11.11,
+     "trim_ok": true
+    }
+   ],
+   "nominal": [
+    {
+     "V": 0,
+     "electric_W": 2156,
+     "shaft_W": 1684.6,
+     "pitch_deg": 0,
+     "rpm": 514.2,
+     "theta_min_deg": 7.2,
+     "theta_max_deg": 7.21,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 2094.1,
+     "shaft_W": 1636.3,
+     "pitch_deg": 0.16,
+     "rpm": 514.2,
+     "theta_min_deg": 6.92,
+     "theta_max_deg": 7.22,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 1980.8,
+     "shaft_W": 1547.4,
+     "pitch_deg": 0.37,
+     "rpm": 514.2,
+     "theta_min_deg": 6.44,
+     "theta_max_deg": 7.18,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 1908.7,
+     "shaft_W": 1489.8,
+     "pitch_deg": 0.64,
+     "rpm": 514.2,
+     "theta_min_deg": 5.95,
+     "theta_max_deg": 7.31,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 1847.7,
+     "shaft_W": 1440.2,
+     "pitch_deg": 0.97,
+     "rpm": 514.2,
+     "theta_min_deg": 5.45,
+     "theta_max_deg": 7.46,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 1758.6,
+     "shaft_W": 1368.6,
+     "pitch_deg": 1.34,
+     "rpm": 514.2,
+     "theta_min_deg": 5.07,
+     "theta_max_deg": 7.35,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 1669.7,
+     "shaft_W": 1297.7,
+     "pitch_deg": 1.75,
+     "rpm": 514.2,
+     "theta_min_deg": 4.86,
+     "theta_max_deg": 7.07,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 1607.2,
+     "shaft_W": 1247.9,
+     "pitch_deg": 2.22,
+     "rpm": 514.2,
+     "theta_min_deg": 4.76,
+     "theta_max_deg": 6.81,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 1575.1,
+     "shaft_W": 1222.5,
+     "pitch_deg": 2.74,
+     "rpm": 514.2,
+     "theta_min_deg": 4.75,
+     "theta_max_deg": 6.6,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 1572.3,
+     "shaft_W": 1220.7,
+     "pitch_deg": 3.34,
+     "rpm": 514.2,
+     "theta_min_deg": 4.79,
+     "theta_max_deg": 6.48,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 1597.4,
+     "shaft_W": 1241.2,
+     "pitch_deg": 4.01,
+     "rpm": 514.2,
+     "theta_min_deg": 4.9,
+     "theta_max_deg": 6.43,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 1649.8,
+     "shaft_W": 1283.6,
+     "pitch_deg": 4.77,
+     "rpm": 514.2,
+     "theta_min_deg": 5.06,
+     "theta_max_deg": 6.46,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 1729.8,
+     "shaft_W": 1347.9,
+     "pitch_deg": 5.6,
+     "rpm": 514.2,
+     "theta_min_deg": 5.28,
+     "theta_max_deg": 6.56,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 1839.1,
+     "shaft_W": 1435,
+     "pitch_deg": 6.52,
+     "rpm": 514.2,
+     "theta_min_deg": 5.57,
+     "theta_max_deg": 6.75,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 1980.7,
+     "shaft_W": 1546.9,
+     "pitch_deg": 7.54,
+     "rpm": 514.2,
+     "theta_min_deg": 5.94,
+     "theta_max_deg": 7.03,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 2159.6,
+     "shaft_W": 1686.7,
+     "pitch_deg": 8.68,
+     "rpm": 514.2,
+     "theta_min_deg": 6.39,
+     "theta_max_deg": 7.41,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 2383.9,
+     "shaft_W": 1859.6,
+     "pitch_deg": 9.95,
+     "rpm": 514.2,
+     "theta_min_deg": 6.95,
+     "theta_max_deg": 7.91,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 2666.3,
+     "shaft_W": 2073.9,
+     "pitch_deg": 11.37,
+     "rpm": 514.2,
+     "theta_min_deg": 7.63,
+     "theta_max_deg": 8.54,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 3024.9,
+     "shaft_W": 2340.5,
+     "pitch_deg": 12.89,
+     "rpm": 514.2,
+     "theta_min_deg": 8.43,
+     "theta_max_deg": 9.3,
+     "trim_ok": true
+    },
+    {
+     "V": 19,
+     "electric_W": 3486.7,
+     "shaft_W": 2675.8,
+     "pitch_deg": 14.57,
+     "rpm": 514.2,
+     "theta_min_deg": 9.38,
+     "theta_max_deg": 10.21,
+     "trim_ok": true
+    },
+    {
+     "V": 20,
+     "electric_W": 4097.9,
+     "shaft_W": 3106.6,
+     "pitch_deg": 16.48,
+     "rpm": 514.2,
+     "theta_min_deg": 10.55,
+     "theta_max_deg": 11.36,
+     "trim_ok": true
+    }
+   ],
+   "high": [
+    {
+     "V": 0,
+     "electric_W": 2156,
+     "shaft_W": 1684.6,
+     "pitch_deg": 0,
+     "rpm": 514.2,
+     "theta_min_deg": 7.2,
+     "theta_max_deg": 7.21,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 2094.1,
+     "shaft_W": 1636.4,
+     "pitch_deg": 0.16,
+     "rpm": 514.2,
+     "theta_min_deg": 6.92,
+     "theta_max_deg": 7.22,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 2002.5,
+     "shaft_W": 1564.4,
+     "pitch_deg": 0.37,
+     "rpm": 514.2,
+     "theta_min_deg": 6.46,
+     "theta_max_deg": 7.26,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 1977.9,
+     "shaft_W": 1543.8,
+     "pitch_deg": 0.65,
+     "rpm": 514.2,
+     "theta_min_deg": 5.99,
+     "theta_max_deg": 7.58,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 1962,
+     "shaft_W": 1529,
+     "pitch_deg": 0.99,
+     "rpm": 514.2,
+     "theta_min_deg": 5.48,
+     "theta_max_deg": 7.94,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 1890.8,
+     "shaft_W": 1471.4,
+     "pitch_deg": 1.39,
+     "rpm": 514.2,
+     "theta_min_deg": 5.08,
+     "theta_max_deg": 7.94,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 1794.2,
+     "shaft_W": 1395.1,
+     "pitch_deg": 1.81,
+     "rpm": 514.2,
+     "theta_min_deg": 4.85,
+     "theta_max_deg": 7.66,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 1719.6,
+     "shaft_W": 1336.4,
+     "pitch_deg": 2.27,
+     "rpm": 514.2,
+     "theta_min_deg": 4.74,
+     "theta_max_deg": 7.35,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 1676.3,
+     "shaft_W": 1302.5,
+     "pitch_deg": 2.8,
+     "rpm": 514.2,
+     "theta_min_deg": 4.73,
+     "theta_max_deg": 7.11,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 1663.8,
+     "shaft_W": 1293.2,
+     "pitch_deg": 3.4,
+     "rpm": 514.2,
+     "theta_min_deg": 4.78,
+     "theta_max_deg": 6.93,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 1680.7,
+     "shaft_W": 1307.2,
+     "pitch_deg": 4.07,
+     "rpm": 514.2,
+     "theta_min_deg": 4.88,
+     "theta_max_deg": 6.85,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 1726.2,
+     "shaft_W": 1344,
+     "pitch_deg": 4.83,
+     "rpm": 514.2,
+     "theta_min_deg": 5.05,
+     "theta_max_deg": 6.84,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 1800.7,
+     "shaft_W": 1403.7,
+     "pitch_deg": 5.66,
+     "rpm": 514.2,
+     "theta_min_deg": 5.28,
+     "theta_max_deg": 6.92,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 1905.4,
+     "shaft_W": 1486.9,
+     "pitch_deg": 6.58,
+     "rpm": 514.2,
+     "theta_min_deg": 5.57,
+     "theta_max_deg": 7.08,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 2043.5,
+     "shaft_W": 1595.6,
+     "pitch_deg": 7.6,
+     "rpm": 514.2,
+     "theta_min_deg": 5.94,
+     "theta_max_deg": 7.34,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 2219.9,
+     "shaft_W": 1733,
+     "pitch_deg": 8.74,
+     "rpm": 514.2,
+     "theta_min_deg": 6.4,
+     "theta_max_deg": 7.7,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 2442.6,
+     "shaft_W": 1904.1,
+     "pitch_deg": 10.02,
+     "rpm": 514.2,
+     "theta_min_deg": 6.96,
+     "theta_max_deg": 8.19,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 2724.6,
+     "shaft_W": 2117.3,
+     "pitch_deg": 11.44,
+     "rpm": 514.2,
+     "theta_min_deg": 7.65,
+     "theta_max_deg": 8.8,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 3083.2,
+     "shaft_W": 2383,
+     "pitch_deg": 12.96,
+     "rpm": 514.2,
+     "theta_min_deg": 8.45,
+     "theta_max_deg": 9.54,
+     "trim_ok": true
+    },
+    {
+     "V": 19,
+     "electric_W": 3545.7,
+     "shaft_W": 2717.7,
+     "pitch_deg": 14.64,
+     "rpm": 514.2,
+     "theta_min_deg": 9.4,
+     "theta_max_deg": 10.45,
+     "trim_ok": true
+    },
+    {
+     "V": 20,
+     "electric_W": 4041.7,
+     "shaft_W": 3060.2,
+     "pitch_deg": 16.36,
+     "rpm": 514.2,
+     "theta_min_deg": 10.13,
+     "theta_max_deg": 12.48,
+     "trim_ok": true
+    }
+   ]
+  },
+  "58_km": {
+   "off": [
+    {
+     "V": 0,
+     "electric_W": 2510.8,
+     "shaft_W": 1977.8,
+     "pitch_deg": 0,
+     "rpm": 622.8,
+     "theta_min_deg": 6.96,
+     "theta_max_deg": 6.97,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 2466.8,
+     "shaft_W": 1942.6,
+     "pitch_deg": 0.13,
+     "rpm": 622.8,
+     "theta_min_deg": 6.75,
+     "theta_max_deg": 7.01,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 2344.5,
+     "shaft_W": 1844.3,
+     "pitch_deg": 0.29,
+     "rpm": 622.8,
+     "theta_min_deg": 6.4,
+     "theta_max_deg": 6.9,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 2173.7,
+     "shaft_W": 1706,
+     "pitch_deg": 0.48,
+     "rpm": 622.8,
+     "theta_min_deg": 5.98,
+     "theta_max_deg": 6.66,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 1997.1,
+     "shaft_W": 1562,
+     "pitch_deg": 0.7,
+     "rpm": 622.8,
+     "theta_min_deg": 5.57,
+     "theta_max_deg": 6.35,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 1848.7,
+     "shaft_W": 1439.9,
+     "pitch_deg": 0.94,
+     "rpm": 622.8,
+     "theta_min_deg": 5.24,
+     "theta_max_deg": 6.04,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 1739.8,
+     "shaft_W": 1349.8,
+     "pitch_deg": 1.22,
+     "rpm": 622.8,
+     "theta_min_deg": 5.01,
+     "theta_max_deg": 5.77,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 1667.6,
+     "shaft_W": 1289.8,
+     "pitch_deg": 1.54,
+     "rpm": 622.8,
+     "theta_min_deg": 4.85,
+     "theta_max_deg": 5.56,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 1625.8,
+     "shaft_W": 1255,
+     "pitch_deg": 1.9,
+     "rpm": 622.8,
+     "theta_min_deg": 4.76,
+     "theta_max_deg": 5.4,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 1609.5,
+     "shaft_W": 1241.4,
+     "pitch_deg": 2.31,
+     "rpm": 622.8,
+     "theta_min_deg": 4.72,
+     "theta_max_deg": 5.31,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 1615.1,
+     "shaft_W": 1246.1,
+     "pitch_deg": 2.76,
+     "rpm": 622.8,
+     "theta_min_deg": 4.72,
+     "theta_max_deg": 5.26,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 1640.8,
+     "shaft_W": 1267.5,
+     "pitch_deg": 3.27,
+     "rpm": 622.8,
+     "theta_min_deg": 4.76,
+     "theta_max_deg": 5.26,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 1685.7,
+     "shaft_W": 1304.9,
+     "pitch_deg": 3.82,
+     "rpm": 622.8,
+     "theta_min_deg": 4.84,
+     "theta_max_deg": 5.3,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 1749.5,
+     "shaft_W": 1358,
+     "pitch_deg": 4.43,
+     "rpm": 622.8,
+     "theta_min_deg": 4.96,
+     "theta_max_deg": 5.39,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 1832.9,
+     "shaft_W": 1427.1,
+     "pitch_deg": 5.09,
+     "rpm": 622.8,
+     "theta_min_deg": 5.12,
+     "theta_max_deg": 5.52,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 1936.8,
+     "shaft_W": 1512.6,
+     "pitch_deg": 5.82,
+     "rpm": 622.8,
+     "theta_min_deg": 5.33,
+     "theta_max_deg": 5.69,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 2062.7,
+     "shaft_W": 1615.8,
+     "pitch_deg": 6.59,
+     "rpm": 622.8,
+     "theta_min_deg": 5.57,
+     "theta_max_deg": 5.92,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 2213.2,
+     "shaft_W": 1738.3,
+     "pitch_deg": 7.44,
+     "rpm": 622.8,
+     "theta_min_deg": 5.87,
+     "theta_max_deg": 6.2,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 2391.6,
+     "shaft_W": 1882.3,
+     "pitch_deg": 8.37,
+     "rpm": 622.8,
+     "theta_min_deg": 6.23,
+     "theta_max_deg": 6.55,
+     "trim_ok": true
+    },
+    {
+     "V": 19,
+     "electric_W": 2602.8,
+     "shaft_W": 2051.1,
+     "pitch_deg": 9.38,
+     "rpm": 622.8,
+     "theta_min_deg": 6.66,
+     "theta_max_deg": 6.97,
+     "trim_ok": true
+    },
+    {
+     "V": 20,
+     "electric_W": 2853.7,
+     "shaft_W": 2249.6,
+     "pitch_deg": 10.5,
+     "rpm": 622.8,
+     "theta_min_deg": 7.17,
+     "theta_max_deg": 7.46,
+     "trim_ok": true
+    }
+   ],
+   "low": [
+    {
+     "V": 0,
+     "electric_W": 2595.4,
+     "shaft_W": 2045.3,
+     "pitch_deg": 0,
+     "rpm": 622.8,
+     "theta_min_deg": 7.13,
+     "theta_max_deg": 7.14,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 2545,
+     "shaft_W": 2005.1,
+     "pitch_deg": 0.13,
+     "rpm": 622.8,
+     "theta_min_deg": 6.91,
+     "theta_max_deg": 7.16,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 2419.7,
+     "shaft_W": 1904.7,
+     "pitch_deg": 0.3,
+     "rpm": 622.8,
+     "theta_min_deg": 6.54,
+     "theta_max_deg": 7.06,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 2289.5,
+     "shaft_W": 1799.6,
+     "pitch_deg": 0.49,
+     "rpm": 622.8,
+     "theta_min_deg": 6.11,
+     "theta_max_deg": 6.99,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 2178.4,
+     "shaft_W": 1709.2,
+     "pitch_deg": 0.73,
+     "rpm": 622.8,
+     "theta_min_deg": 5.67,
+     "theta_max_deg": 6.95,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 2075,
+     "shaft_W": 1624.4,
+     "pitch_deg": 0.99,
+     "rpm": 622.8,
+     "theta_min_deg": 5.29,
+     "theta_max_deg": 6.87,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 1975.1,
+     "shaft_W": 1542.6,
+     "pitch_deg": 1.29,
+     "rpm": 622.8,
+     "theta_min_deg": 5.02,
+     "theta_max_deg": 6.69,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 1891.8,
+     "shaft_W": 1474.3,
+     "pitch_deg": 1.61,
+     "rpm": 622.8,
+     "theta_min_deg": 4.84,
+     "theta_max_deg": 6.47,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 1832.7,
+     "shaft_W": 1425.7,
+     "pitch_deg": 1.98,
+     "rpm": 622.8,
+     "theta_min_deg": 4.74,
+     "theta_max_deg": 6.27,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 1798.5,
+     "shaft_W": 1397.6,
+     "pitch_deg": 2.39,
+     "rpm": 622.8,
+     "theta_min_deg": 4.7,
+     "theta_max_deg": 6.11,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 1787.8,
+     "shaft_W": 1388.9,
+     "pitch_deg": 2.84,
+     "rpm": 622.8,
+     "theta_min_deg": 4.7,
+     "theta_max_deg": 6,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 1799.4,
+     "shaft_W": 1398.7,
+     "pitch_deg": 3.34,
+     "rpm": 622.8,
+     "theta_min_deg": 4.74,
+     "theta_max_deg": 5.94,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 1832.2,
+     "shaft_W": 1425.9,
+     "pitch_deg": 3.9,
+     "rpm": 622.8,
+     "theta_min_deg": 4.83,
+     "theta_max_deg": 5.93,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 1886,
+     "shaft_W": 1470.3,
+     "pitch_deg": 4.51,
+     "rpm": 622.8,
+     "theta_min_deg": 4.95,
+     "theta_max_deg": 5.98,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 1960.8,
+     "shaft_W": 1532,
+     "pitch_deg": 5.18,
+     "rpm": 622.8,
+     "theta_min_deg": 5.11,
+     "theta_max_deg": 6.07,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 2057.7,
+     "shaft_W": 1611.3,
+     "pitch_deg": 5.9,
+     "rpm": 622.8,
+     "theta_min_deg": 5.32,
+     "theta_max_deg": 6.21,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 2178,
+     "shaft_W": 1709.3,
+     "pitch_deg": 6.68,
+     "rpm": 622.8,
+     "theta_min_deg": 5.57,
+     "theta_max_deg": 6.4,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 2324.1,
+     "shaft_W": 1827.6,
+     "pitch_deg": 7.54,
+     "rpm": 622.8,
+     "theta_min_deg": 5.88,
+     "theta_max_deg": 6.66,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 2499.3,
+     "shaft_W": 1968.3,
+     "pitch_deg": 8.47,
+     "rpm": 622.8,
+     "theta_min_deg": 6.24,
+     "theta_max_deg": 6.99,
+     "trim_ok": true
+    },
+    {
+     "V": 19,
+     "electric_W": 2708.6,
+     "shaft_W": 2134.9,
+     "pitch_deg": 9.49,
+     "rpm": 622.8,
+     "theta_min_deg": 6.68,
+     "theta_max_deg": 7.39,
+     "trim_ok": true
+    },
+    {
+     "V": 20,
+     "electric_W": 2959.4,
+     "shaft_W": 2332.3,
+     "pitch_deg": 10.61,
+     "rpm": 622.8,
+     "theta_min_deg": 7.2,
+     "theta_max_deg": 7.87,
+     "trim_ok": true
+    }
+   ],
+   "nominal": [
+    {
+     "V": 0,
+     "electric_W": 2595.4,
+     "shaft_W": 2045.3,
+     "pitch_deg": 0,
+     "rpm": 622.8,
+     "theta_min_deg": 7.13,
+     "theta_max_deg": 7.14,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 2545,
+     "shaft_W": 2005.1,
+     "pitch_deg": 0.13,
+     "rpm": 622.8,
+     "theta_min_deg": 6.91,
+     "theta_max_deg": 7.16,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 2429,
+     "shaft_W": 1912.2,
+     "pitch_deg": 0.3,
+     "rpm": 622.8,
+     "theta_min_deg": 6.55,
+     "theta_max_deg": 7.09,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 2342.8,
+     "shaft_W": 1842.4,
+     "pitch_deg": 0.5,
+     "rpm": 622.8,
+     "theta_min_deg": 6.14,
+     "theta_max_deg": 7.16,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 2281.8,
+     "shaft_W": 1792.2,
+     "pitch_deg": 0.74,
+     "rpm": 622.8,
+     "theta_min_deg": 5.71,
+     "theta_max_deg": 7.31,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 2216.9,
+     "shaft_W": 1738.5,
+     "pitch_deg": 1.03,
+     "rpm": 622.8,
+     "theta_min_deg": 5.31,
+     "theta_max_deg": 7.39,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 2128.6,
+     "shaft_W": 1666.3,
+     "pitch_deg": 1.33,
+     "rpm": 622.8,
+     "theta_min_deg": 5.02,
+     "theta_max_deg": 7.28,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 2040.2,
+     "shaft_W": 1594.3,
+     "pitch_deg": 1.67,
+     "rpm": 622.8,
+     "theta_min_deg": 4.83,
+     "theta_max_deg": 7.06,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 1970.6,
+     "shaft_W": 1537.8,
+     "pitch_deg": 2.03,
+     "rpm": 622.8,
+     "theta_min_deg": 4.72,
+     "theta_max_deg": 6.84,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 1925.2,
+     "shaft_W": 1500.8,
+     "pitch_deg": 2.44,
+     "rpm": 622.8,
+     "theta_min_deg": 4.68,
+     "theta_max_deg": 6.64,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 1904.1,
+     "shaft_W": 1483.8,
+     "pitch_deg": 2.9,
+     "rpm": 622.8,
+     "theta_min_deg": 4.68,
+     "theta_max_deg": 6.49,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 1906.3,
+     "shaft_W": 1486,
+     "pitch_deg": 3.4,
+     "rpm": 622.8,
+     "theta_min_deg": 4.73,
+     "theta_max_deg": 6.4,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 1931.1,
+     "shaft_W": 1506.6,
+     "pitch_deg": 3.96,
+     "rpm": 622.8,
+     "theta_min_deg": 4.82,
+     "theta_max_deg": 6.36,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 1977.9,
+     "shaft_W": 1545.3,
+     "pitch_deg": 4.57,
+     "rpm": 622.8,
+     "theta_min_deg": 4.94,
+     "theta_max_deg": 6.37,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 2046.9,
+     "shaft_W": 1601.9,
+     "pitch_deg": 5.24,
+     "rpm": 622.8,
+     "theta_min_deg": 5.11,
+     "theta_max_deg": 6.43,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 2138.8,
+     "shaft_W": 1676.9,
+     "pitch_deg": 5.96,
+     "rpm": 622.8,
+     "theta_min_deg": 5.31,
+     "theta_max_deg": 6.55,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 2254.9,
+     "shaft_W": 1771.3,
+     "pitch_deg": 6.74,
+     "rpm": 622.8,
+     "theta_min_deg": 5.57,
+     "theta_max_deg": 6.73,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 2397.7,
+     "shaft_W": 1886.5,
+     "pitch_deg": 7.6,
+     "rpm": 622.8,
+     "theta_min_deg": 5.88,
+     "theta_max_deg": 6.97,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 2570.6,
+     "shaft_W": 2024.9,
+     "pitch_deg": 8.53,
+     "rpm": 622.8,
+     "theta_min_deg": 6.25,
+     "theta_max_deg": 7.28,
+     "trim_ok": true
+    },
+    {
+     "V": 19,
+     "electric_W": 2778.6,
+     "shaft_W": 2189.8,
+     "pitch_deg": 9.56,
+     "rpm": 622.8,
+     "theta_min_deg": 6.69,
+     "theta_max_deg": 7.67,
+     "trim_ok": true
+    },
+    {
+     "V": 20,
+     "electric_W": 3029.1,
+     "shaft_W": 2386.5,
+     "pitch_deg": 10.69,
+     "rpm": 622.8,
+     "theta_min_deg": 7.21,
+     "theta_max_deg": 8.14,
+     "trim_ok": true
+    }
+   ],
+   "high": [
+    {
+     "V": 0,
+     "electric_W": 2595.4,
+     "shaft_W": 2045.3,
+     "pitch_deg": 0,
+     "rpm": 622.8,
+     "theta_min_deg": 7.13,
+     "theta_max_deg": 7.14,
+     "trim_ok": true
+    },
+    {
+     "V": 1,
+     "electric_W": 2545,
+     "shaft_W": 2005.1,
+     "pitch_deg": 0.13,
+     "rpm": 622.8,
+     "theta_min_deg": 6.91,
+     "theta_max_deg": 7.16,
+     "trim_ok": true
+    },
+    {
+     "V": 2,
+     "electric_W": 2438.7,
+     "shaft_W": 1919.9,
+     "pitch_deg": 0.3,
+     "rpm": 622.8,
+     "theta_min_deg": 6.55,
+     "theta_max_deg": 7.12,
+     "trim_ok": true
+    },
+    {
+     "V": 3,
+     "electric_W": 2395.2,
+     "shaft_W": 1884.3,
+     "pitch_deg": 0.5,
+     "rpm": 622.8,
+     "theta_min_deg": 6.17,
+     "theta_max_deg": 7.32,
+     "trim_ok": true
+    },
+    {
+     "V": 4,
+     "electric_W": 2381.6,
+     "shaft_W": 1871.9,
+     "pitch_deg": 0.76,
+     "rpm": 622.8,
+     "theta_min_deg": 5.76,
+     "theta_max_deg": 7.65,
+     "trim_ok": true
+    },
+    {
+     "V": 5,
+     "electric_W": 2356.8,
+     "shaft_W": 1849.8,
+     "pitch_deg": 1.05,
+     "rpm": 622.8,
+     "theta_min_deg": 5.34,
+     "theta_max_deg": 7.9,
+     "trim_ok": true
+    },
+    {
+     "V": 6,
+     "electric_W": 2283.1,
+     "shaft_W": 1789.3,
+     "pitch_deg": 1.38,
+     "rpm": 622.8,
+     "theta_min_deg": 5.02,
+     "theta_max_deg": 7.87,
+     "trim_ok": true
+    },
+    {
+     "V": 7,
+     "electric_W": 2189.7,
+     "shaft_W": 1713.8,
+     "pitch_deg": 1.72,
+     "rpm": 622.8,
+     "theta_min_deg": 4.82,
+     "theta_max_deg": 7.66,
+     "trim_ok": true
+    },
+    {
+     "V": 8,
+     "electric_W": 2109.3,
+     "shaft_W": 1649.1,
+     "pitch_deg": 2.09,
+     "rpm": 622.8,
+     "theta_min_deg": 4.71,
+     "theta_max_deg": 7.4,
+     "trim_ok": true
+    },
+    {
+     "V": 9,
+     "electric_W": 2052.5,
+     "shaft_W": 1603.5,
+     "pitch_deg": 2.5,
+     "rpm": 622.8,
+     "theta_min_deg": 4.66,
+     "theta_max_deg": 7.17,
+     "trim_ok": true
+    },
+    {
+     "V": 10,
+     "electric_W": 2021,
+     "shaft_W": 1578.4,
+     "pitch_deg": 2.96,
+     "rpm": 622.8,
+     "theta_min_deg": 4.67,
+     "theta_max_deg": 6.98,
+     "trim_ok": true
+    },
+    {
+     "V": 11,
+     "electric_W": 2014,
+     "shaft_W": 1573.1,
+     "pitch_deg": 3.46,
+     "rpm": 622.8,
+     "theta_min_deg": 4.72,
+     "theta_max_deg": 6.85,
+     "trim_ok": true
+    },
+    {
+     "V": 12,
+     "electric_W": 2030.6,
+     "shaft_W": 1587.2,
+     "pitch_deg": 4.02,
+     "rpm": 622.8,
+     "theta_min_deg": 4.8,
+     "theta_max_deg": 6.78,
+     "trim_ok": true
+    },
+    {
+     "V": 13,
+     "electric_W": 2070.5,
+     "shaft_W": 1620.2,
+     "pitch_deg": 4.63,
+     "rpm": 622.8,
+     "theta_min_deg": 4.93,
+     "theta_max_deg": 6.76,
+     "trim_ok": true
+    },
+    {
+     "V": 14,
+     "electric_W": 2133.6,
+     "shaft_W": 1671.9,
+     "pitch_deg": 5.3,
+     "rpm": 622.8,
+     "theta_min_deg": 5.1,
+     "theta_max_deg": 6.8,
+     "trim_ok": true
+    },
+    {
+     "V": 15,
+     "electric_W": 2220.5,
+     "shaft_W": 1742.7,
+     "pitch_deg": 6.02,
+     "rpm": 622.8,
+     "theta_min_deg": 5.31,
+     "theta_max_deg": 6.9,
+     "trim_ok": true
+    },
+    {
+     "V": 16,
+     "electric_W": 2332.6,
+     "shaft_W": 1833.4,
+     "pitch_deg": 6.8,
+     "rpm": 622.8,
+     "theta_min_deg": 5.57,
+     "theta_max_deg": 7.05,
+     "trim_ok": true
+    },
+    {
+     "V": 17,
+     "electric_W": 2472.1,
+     "shaft_W": 1945.6,
+     "pitch_deg": 7.66,
+     "rpm": 622.8,
+     "theta_min_deg": 5.88,
+     "theta_max_deg": 7.28,
+     "trim_ok": true
+    },
+    {
+     "V": 18,
+     "electric_W": 2642.5,
+     "shaft_W": 2081.6,
+     "pitch_deg": 8.6,
+     "rpm": 622.8,
+     "theta_min_deg": 6.26,
+     "theta_max_deg": 7.57,
+     "trim_ok": true
+    },
+    {
+     "V": 19,
+     "electric_W": 2848.8,
+     "shaft_W": 2244.8,
+     "pitch_deg": 9.63,
+     "rpm": 622.8,
+     "theta_min_deg": 6.7,
+     "theta_max_deg": 7.95,
+     "trim_ok": true
+    },
+    {
+     "V": 20,
+     "electric_W": 3098.6,
+     "shaft_W": 2440.3,
+     "pitch_deg": 10.76,
+     "rpm": 622.8,
+     "theta_min_deg": 7.23,
+     "theta_max_deg": 8.41,
+     "trim_ok": true
+    }
+   ]
+  }
+ }
+}

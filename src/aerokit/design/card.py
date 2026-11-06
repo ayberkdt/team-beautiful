@@ -32,7 +32,7 @@ Card schema (SI units)::
                                      "E_Pa_at_T": 1.05e11, "Fty_Pa_at_T": 7.0e8, "source": "..."}},
      "volumes": [0.5, 0.35, 0.3, 0.25],
      "topology": {"rmin": 2.4, "ft": 2, "optimizer": "OC", "max_iter": 400},
-     "study": "studies/tradeoff/bracket_a320_strength.json",
+     "study": "prev_guess/01_Ansys/tradeoff/bracket_a320_strength.json",
      "candidates": [["Scalmalloy", "am_TO"], ["7075-T6", "machined_TO"], ...]}
 
 Optional checks (each adds a utilisation; the largest one is ``governs``; a check whose material data is missing
@@ -102,10 +102,14 @@ class Card:
 
 
 def load_card(path: str | Path, root: str | Path | None = None) -> Card:
-    """Read and validate a card; ``study`` is resolved against ``root`` (default: the card's grandparent)."""
+    """Read and validate a card; ``study`` is resolved against ``root`` (default: the nearest folder above the card
+    that holds ``pyproject.toml``, i.e. the project root; the card's grandparent if there is none)."""
     path = Path(path)
     raw = json.loads(path.read_text(encoding="utf-8"))
-    return _parse(raw, Path(root) if root else path.resolve().parents[2])
+    if root is None:
+        here = path.resolve()
+        root = next((p for p in here.parents if (p / "pyproject.toml").is_file()), here.parents[2])
+    return _parse(raw, Path(root))
 
 
 def _parse(raw: Mapping[str, Any], root: Path) -> Card:

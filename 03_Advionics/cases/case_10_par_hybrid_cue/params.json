@@ -1,0 +1,23 @@
+{
+ "case": "case_10_par_hybrid_cue",
+ "params": {
+  "rwy_lat": {"value": 51.0, "unit": "deg", "source": "[Y] synthetic runway"},
+  "rwy_lon": {"value": 4.0, "unit": "deg", "source": "[Y]"},
+  "rwy_elev_m": {"value": 10.0, "unit": "m", "source": "[Y]"},
+  "rwy_course_deg": {"value": 250.0, "unit": "deg", "source": "[Y]"},
+  "start_range_nm": {"value": 5.0, "unit": "NM", "source": "[Y]; PAR coverage >= 9 NM (R_par_enri_soumu [D-ag])"},
+  "start_offset_m": {"value": 150.0, "unit": "m right", "source": "[Y] brief: slightly off the centreline"},
+  "start_above_m": {"value": 30.0, "unit": "m above", "source": "[Y] brief: slightly off the glide path"},
+  "crosswind_ms": {"value": 3.0, "unit": "m/s", "source": "[Y] pushes right; the radar does not know it"},
+  "delay_from_s": {"value": 55.0, "unit": "s", "source": "[Y] scenario B"},
+  "delay_to_s": {"value": 68.0, "unit": "s", "source": "[Y] scenario B"},
+  "delay_s": {"value": 3.0, "unit": "s", "source": "[Y] scenario B"},
+  "jump_from_s": {"value": 85.0, "unit": "s", "source": "[Y] scenario B"},
+  "jump_to_s": {"value": 89.0, "unit": "s", "source": "[Y] scenario B"},
+  "jump_m": {"value": 400.0, "unit": "m", "source": "[Y] scenario B, both axes"},
+  "dropout_from_s": {"value": 70.0, "unit": "s", "source": "[Y] scenario C: radar stops"},
+  "seed": {"value": 1, "unit": "", "source": "[Y] replay seed; the Monte Carlo gives the spread"},
+  "mc_runs": {"value": 100, "unit": "runs", "source": "[Y]"}
+ },
+ "quick": {"mc_runs": 5}
+}

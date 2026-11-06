@@ -1,0 +1,7 @@
+set tutarlılığı (3 figür): 0 HATA · 2 UYARI · 1 BİLGİ · SET TUTARLI
+  [UYARI] isaret-boyu        isaret boyu figürden figüre değişiyor — 9 pt: T1_risk_reduction_by_option · 8.08 pt: T2_fatal_outcomes_by_option · 13.43 pt: T3_compliance_sweep
+          → aynı rol aynı kalınlık; vurgu/bağlam farkı figür içinde kalsın  [06 T6: APSStyleGuide §II.S.1 ('consistent line widths'); tolerans datawiz-secimi]
+  [UYARI] cizim-alani-hizasi sunum-tam: çizim alanının sol kenarı figürden figüre 167.2 pt oynuyor — T1_risk_reduction_by_option 76.4 mm, T2_fatal_outcomes_by_option 76.4 mm, T3_compliance_sweep 17.4 mm
+          → alt alta duran figürlerde eksenler aynı hizada olsun: S.kenar(*S.kenar_oner()) ile sabit kenar, sonra figürleri yeniden üret  [06 T15: Wilke2019Ch21 §21.2 (paneller hizalı) — figürler arasına genişletme datawiz-secimi]
+  [BİLGİ] adlandirma-yontemi seri adlandırma yöntemi karışık — lejant: T1_risk_reduction_by_option, T2_fatal_outcomes_by_option · doğrudan etiket: T3_compliance_sweep
+          → mümkünse hep doğrudan etiket; lejant gerekiyorsa her figürde aynı konum  [06 T1/T2: Qu2018 C1.4, C2.4; UrbanStyle; DatawrapperColors2018; TableauBlueprint; Few2008Color; Kosslyn2012 — işaret/çizgi tipi datawiz-secimi]

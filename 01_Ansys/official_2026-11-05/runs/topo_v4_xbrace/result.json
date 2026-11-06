@@ -1,0 +1,2275 @@
+{
+ "case": "initial_exact",
+ "temperature_C": 300.0,
+ "ranking": [
+  {
+   "material": "17-4PH H1025 (wrought data; L-PBF route)",
+   "route": "AM L-PBF + H1025 + HIP",
+   "mass_kg": 42.03437327084507,
+   "co2_production_kg": 872.4934745251742,
+   "co2_use_kg": 1180325.2014453295,
+   "volume": 0.27760630213359855,
+   "sigma_ult_Pa": 410900634.15362346,
+   "utilisation": 0.5034876529283975,
+   "voxel_utilisation": 0.5034876529283975,
+   "stress_basis": "voxel",
+   "ultimate_N": 299774.9155616588,
+   "design": "topo 28 %",
+   "temperature_C": 300.0,
+   "passes": true
+  },
+  {
+   "material": "Inconel 718 (L-PBF, solution + double age)",
+   "route": "AM L-PBF + STA",
+   "mass_kg": 43.88677199044162,
+   "co2_production_kg": 1287.491600959589,
+   "co2_use_kg": 1232340.5574916007,
+   "volume": 0.27760630213359855,
+   "sigma_ult_Pa": 410900634.15362346,
+   "utilisation": 0.3749681075301793,
+   "voxel_utilisation": 0.3749681075301793,
+   "stress_basis": "voxel",
+   "ultimate_N": 299774.9155616588,
+   "design": "topo 28 %",
+   "temperature_C": 300.0,
+   "passes": true
+  },
+  {
+   "material": "Ti-6Al-4V (L-PBF, stress relieved / HIP)",
+   "route": "AM L-PBF + HIP",
+   "mass_kg": 85.54316170891352,
+   "co2_production_kg": 6390.644467400566,
+   "co2_use_kg": 2402051.9807862914,
+   "volume": 1.0,
+   "sigma_ult_Pa": 89085106.38170668,
+   "utilisation": 0.1509549776077008,
+   "voxel_utilisation": 0.1509549776077008,
+   "stress_basis": "voxel",
+   "ultimate_N": 299774.9155616588,
+   "design": "initial",
+   "temperature_C": 300.0,
+   "passes": true
+  },
+  {
+   "material": "Structural Steel (Ansys Engineering Data default)",
+   "route": "machined from plate / welded",
+   "mass_kg": 152.27070735033357,
+   "co2_production_kg": 2880.4542140438098,
+   "co2_use_kg": 4275761.462397367,
+   "volume": 1.0,
+   "sigma_ult_Pa": 89085106.38170668,
+   "utilisation": 0.5473202614300934,
+   "voxel_utilisation": 0.5473202614300934,
+   "stress_basis": "voxel",
+   "ultimate_N": 299774.9155616588,
+   "design": "initial",
+   "temperature_C": 300.0,
+   "passes": true
+  }
+ ],
+ "baseline": {
+  "material": "structural_steel",
+  "mass_kg": 152.27070735033357
+ },
+ "element_size_m": 0.006,
+ "details": {
+  "result": {
+   "case": "initial_exact",
+   "temperature_C": 300.0,
+   "ranking": [
+    {
+     "material": "17-4PH H1025 (wrought data; L-PBF route)",
+     "route": "AM L-PBF + H1025 + HIP",
+     "mass_kg": 42.03437327084507,
+     "co2_production_kg": 872.4934745251742,
+     "co2_use_kg": 1180325.2014453295,
+     "volume": 0.27760630213359855,
+     "sigma_ult_Pa": 410900634.15362346,
+     "utilisation": 0.5034876529283975,
+     "voxel_utilisation": 0.5034876529283975,
+     "stress_basis": "voxel",
+     "ultimate_N": 299774.9155616588,
+     "design": "topo 28 %",
+     "temperature_C": 300.0,
+     "passes": true
+    },
+    {
+     "material": "Inconel 718 (L-PBF, solution + double age)",
+     "route": "AM L-PBF + STA",
+     "mass_kg": 43.88677199044162,
+     "co2_production_kg": 1287.491600959589,
+     "co2_use_kg": 1232340.5574916007,
+     "volume": 0.27760630213359855,
+     "sigma_ult_Pa": 410900634.15362346,
+     "utilisation": 0.3749681075301793,
+     "voxel_utilisation": 0.3749681075301793,
+     "stress_basis": "voxel",
+     "ultimate_N": 299774.9155616588,
+     "design": "topo 28 %",
+     "temperature_C": 300.0,
+     "passes": true
+    },
+    {
+     "material": "Ti-6Al-4V (L-PBF, stress relieved / HIP)",
+     "route": "AM L-PBF + HIP",
+     "mass_kg": 85.54316170891352,
+     "co2_production_kg": 6390.644467400566,
+     "co2_use_kg": 2402051.9807862914,
+     "volume": 1.0,
+     "sigma_ult_Pa": 89085106.38170668,
+     "utilisation": 0.1509549776077008,
+     "voxel_utilisation": 0.1509549776077008,
+     "stress_basis": "voxel",
+     "ultimate_N": 299774.9155616588,
+     "design": "initial",
+     "temperature_C": 300.0,
+     "passes": true
+    },
+    {
+     "material": "Structural Steel (Ansys Engineering Data default)",
+     "route": "machined from plate / welded",
+     "mass_kg": 152.27070735033357,
+     "co2_production_kg": 2880.4542140438098,
+     "co2_use_kg": 4275761.462397367,
+     "volume": 1.0,
+     "sigma_ult_Pa": 89085106.38170668,
+     "utilisation": 0.5473202614300934,
+     "voxel_utilisation": 0.5473202614300934,
+     "stress_basis": "voxel",
+     "ultimate_N": 299774.9155616588,
+     "design": "initial",
+     "temperature_C": 300.0,
+     "passes": true
+    }
+   ],
+   "baseline": {
+    "material": "structural_steel",
+    "mass_kg": 152.27070735033357
+   },
+   "element_size_m": 0.006
+  },
+  "options": {
+   "target_elements": 25000,
+   "voxel_mm": 6.0,
+   "temperature_C": null,
+   "baseline": "structural_steel",
+   "candidates": null,
+   "snapshot_every": 5,
+   "volfracs": [
+    0.28
+   ],
+   "rmin_vox": 2.0,
+   "max_iter": 60,
+   "am_filter": false,
+   "convergence": false,
+   "limit_to_ultimate": 1.5,
+   "exclusion_vox": 3.0,
+   "hole_resolution": 2.5,
+   "max_elements": 80000,
+   "calibrate_utilisation": null,
+   "tet_check": false,
+   "tet_sizes_vox": [
+    2.0,
+    1.3
+   ],
+   "unit": "mm",
+   "magnitude_N": 10000.0,
+   "element": "H8IM",
+   "log": true
+  },
+  "setup": {
+   "name": "EUROAVIA 2026 cowling-support bracket (initial S275N design)",
+   "units": {
+    "length": "mm",
+    "force": "N",
+    "moment": "N m"
+   },
+   "temperature_C": 300.0,
+   "holes": [
+    {
+     "id": "H1",
+     "axis": "y",
+     "center_mm": [
+      500.0,
+      65.0,
+      260.0
+     ],
+     "diameter_mm": 60.0,
+     "segments_mm": [
+      [
+       30.0,
+       100.0
+      ]
+     ],
+     "roundness": 0.0,
+     "role": "load"
+    },
+    {
+     "id": "H2",
+     "axis": "y",
+     "center_mm": [
+      500.0,
+      335.56,
+      260.0
+     ],
+     "diameter_mm": 60.0,
+     "segments_mm": [
+      [
+       300.0,
+       371.12
+      ]
+     ],
+     "roundness": 0.0,
+     "role": "load"
+    },
+    {
+     "id": "H3",
+     "axis": "z",
+     "center_mm": [
+      245.0,
+      95.0,
+      65.0
+     ],
+     "diameter_mm": 60.0,
+     "segments_mm": [
+      [
+       30.0,
+       100.0
+      ]
+     ],
+     "roundness": 0.0,
+     "role": "support"
+    },
+    {
+     "id": "H4",
+     "axis": "z",
+     "center_mm": [
+      245.0,
+      305.0,
+      65.0
+     ],
+     "diameter_mm": 60.0,
+     "segments_mm": [
+      [
+       30.0,
+       100.0
+      ]
+     ],
+     "roundness": 0.0,
+     "role": "support"
+    },
+    {
+     "id": "H5",
+     "axis": "z",
+     "center_mm": [
+      755.0,
+      95.0,
+      65.0
+     ],
+     "diameter_mm": 60.0,
+     "segments_mm": [
+      [
+       30.0,
+       100.0
+      ]
+     ],
+     "roundness": 0.0,
+     "role": "support"
+    },
+    {
+     "id": "H6",
+     "axis": "z",
+     "center_mm": [
+      755.0,
+      305.0,
+      65.0
+     ],
+     "diameter_mm": 60.0,
+     "segments_mm": [
+      [
+       30.0,
+       100.0
+      ]
+     ],
+     "roundness": 0.0,
+     "role": "support"
+    }
+   ],
+   "supports": [
+    {
+     "hole": "H3",
+     "type": "fixed_bore"
+    },
+    {
+     "hole": "H4",
+     "type": "fixed_bore"
+    },
+    {
+     "hole": "H5",
+     "type": "fixed_bore"
+    },
+    {
+     "hole": "H6",
+     "type": "fixed_bore"
+    }
+   ],
+   "load_cases": [
+    {
+     "name": "LC1a Fz+97 kN, Fy+24 kN each pin",
+     "loads": [
+      {
+       "hole": "H1",
+       "type": "bearing",
+       "force_N": [
+        0.0,
+        24000.0,
+        97000.0
+       ]
+      },
+      {
+       "hole": "H2",
+       "type": "bearing",
+       "force_N": [
+        0.0,
+        24000.0,
+        97000.0
+       ]
+      }
+     ]
+    },
+    {
+     "name": "LC1b Fz+97 kN, Fy-24 kN each pin",
+     "loads": [
+      {
+       "hole": "H1",
+       "type": "bearing",
+       "force_N": [
+        0.0,
+        -24000.0,
+        97000.0
+       ]
+      },
+      {
+       "hole": "H2",
+       "type": "bearing",
+       "force_N": [
+        0.0,
+        -24000.0,
+        97000.0
+       ]
+      }
+     ]
+    },
+    {
+     "name": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+     "loads": [
+      {
+       "hole": "H1",
+       "type": "bearing",
+       "force_N": [
+        0.0,
+        24000.0,
+        97000.0
+       ]
+      },
+      {
+       "hole": "H2",
+       "type": "bearing",
+       "force_N": [
+        0.0,
+        -24000.0,
+        97000.0
+       ]
+      }
+     ]
+    },
+    {
+     "name": "LC2 My 2000 N m (1000 per pin bore)",
+     "loads": [
+      {
+       "hole": "H1",
+       "type": "moment",
+       "moment_Nm": [
+        0.0,
+        1000.0,
+        0.0
+       ]
+      },
+      {
+       "hole": "H2",
+       "type": "moment",
+       "moment_Nm": [
+        0.0,
+        1000.0,
+        0.0
+       ]
+      }
+     ],
+     "sign_free": true
+    },
+    {
+     "name": "LC4 racking (pin alignment) Fx +24/-24 kN [Y]",
+     "sign_free": true,
+     "loads": [
+      {
+       "hole": "H1",
+       "type": "bearing",
+       "force_N": [
+        24000.0,
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "hole": "H2",
+       "type": "bearing",
+       "force_N": [
+        -24000.0,
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   ],
+   "non_design": {
+    "ring_factor": 0.75,
+    "ring_factor_by_role": {
+     "support": 0.75,
+     "load": 1.047
+    },
+    "ring_min_voxels": 2,
+    "boxes_mm": [],
+    "connect_loads": false,
+    "tie_section_mm": 15.6,
+    "connect_supports": "x",
+    "tie_radius_mm": 7.8
+   },
+   "build_direction": "+z",
+   "load_case_weights": null,
+   "design_criteria": {
+    "factor_of_safety": 1.5,
+    "max_displacement_mm": 1.652525,
+    "strength_basis": "yield"
+   },
+   "symmetry_planes_mm": "auto",
+   "roles_source": "edited",
+   "exclusion_mm": 18.0
+  },
+  "baseline": {
+   "material": "structural_steel",
+   "T_C": 300.0,
+   "mass_kg": 152.27070735033357,
+   "volume_m3": 0.01939754233762211,
+   "volume_elements_m3": 0.019322472000000004,
+   "vol_corr": 1.0038851311375743,
+   "at_T": {
+    "cases": [
+     {
+      "name": "LC1a Fz+97 kN, Fy+24 kN each pin",
+      "compliance_J": 15.501073700613686,
+      "max_disp_m": 0.00018755149665519355,
+      "load_disp_m": 9.850458602532331e-05,
+      "max_disp_at_m": [
+       0.506,
+       0.03,
+       0.32399999999999995
+      ],
+      "vm_outside_Pa": 59390070.92113779,
+      "vm_outside_at_m": [
+       0.62,
+       0.03,
+       0.126
+      ],
+      "vm_max_Pa": 185213870.20358828,
+      "vm_max_at_m": [
+       0.506,
+       0.10200000000000001,
+       0.28800000000000003
+      ],
+      "vm_element_max_Pa": 81592210.67803162,
+      "applied_N": [
+       0.0,
+       48000.0000000002,
+       193999.99999999956
+      ],
+      "reaction_N": [
+       1.7780985217541456e-07,
+       -47999.99999937117,
+       -193999.99999889548
+      ],
+      "solver": "pardiso",
+      "solve_s": 13.839953799993964,
+      "residual": 5.340706206210844e-13
+     },
+     {
+      "name": "LC1b Fz+97 kN, Fy-24 kN each pin",
+      "compliance_J": 15.632993326474349,
+      "max_disp_m": 0.00018601376728618802,
+      "load_disp_m": 9.984971068311458e-05,
+      "max_disp_at_m": [
+       0.506,
+       0.372,
+       0.32399999999999995
+      ],
+      "vm_outside_Pa": 56212019.47451152,
+      "vm_outside_at_m": [
+       0.62,
+       0.372,
+       0.126
+      ],
+      "vm_max_Pa": 178232688.20432884,
+      "vm_max_at_m": [
+       0.506,
+       0.10200000000000001,
+       0.28800000000000003
+      ],
+      "vm_element_max_Pa": 78866179.62620373,
+      "applied_N": [
+       0.0,
+       -48000.0000000002,
+       193999.99999999956
+      ],
+      "reaction_N": [
+       1.4741090126335621e-08,
+       47999.999999601605,
+       -193999.99999901187
+      ],
+      "solver": "pardiso",
+      "solve_s": 13.839953799993964,
+      "residual": 5.340706206210844e-13
+     },
+     {
+      "name": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+      "compliance_J": 17.87296362865368,
+      "max_disp_m": 0.0001832094226545074,
+      "load_disp_m": 5.555184420988652e-05,
+      "max_disp_at_m": [
+       0.506,
+       0.03,
+       0.32399999999999995
+      ],
+      "vm_outside_Pa": 55596236.27216632,
+      "vm_outside_at_m": [
+       0.62,
+       0.03,
+       0.126
+      ],
+      "vm_max_Pa": 185266686.97367486,
+      "vm_max_at_m": [
+       0.506,
+       0.10200000000000001,
+       0.28800000000000003
+      ],
+      "vm_element_max_Pa": 69301443.37659608,
+      "applied_N": [
+       0.0,
+       -3.836930773104541e-13,
+       193999.99999999956
+      ],
+      "reaction_N": [
+       1.0174699127674103e-07,
+       1.1809321165401343e-07,
+       -193999.99999890005
+      ],
+      "solver": "pardiso",
+      "solve_s": 13.839953799993964,
+      "residual": 5.340706206210844e-13
+     },
+     {
+      "name": "LC2 My 2000 N m (1000 per pin bore)",
+      "compliance_J": 0.11387266274315347,
+      "max_disp_m": 7.672327756704214e-06,
+      "load_disp_m": 4.154784682079597e-06,
+      "max_disp_at_m": [
+       0.506,
+       0.096,
+       0.32399999999999995
+      ],
+      "vm_outside_Pa": 4580047.162389673,
+      "vm_outside_at_m": [
+       0.5780000000000001,
+       0.10200000000000001,
+       0.24
+      ],
+      "vm_max_Pa": 23320851.366881352,
+      "vm_max_at_m": [
+       0.524,
+       0.08399999999999999,
+       0.27
+      ],
+      "vm_element_max_Pa": 9212939.575896628,
+      "applied_N": [
+       3.850452401366056e-09,
+       0.0,
+       -6.635616500716424e-10
+      ],
+      "reaction_N": [
+       2.512095420570404e-09,
+       2.553189659693089e-09,
+       2.2128006094135344e-09
+      ],
+      "solver": "pardiso",
+      "solve_s": 13.839953799993964,
+      "residual": 5.340706206210844e-13
+     },
+     {
+      "name": "LC4 racking (pin alignment) Fx +24/-24 kN [Y]",
+      "compliance_J": 0.9217050829018532,
+      "max_disp_m": 2.5309272128939233e-05,
+      "load_disp_m": 3.653499488194874e-07,
+      "max_disp_at_m": [
+       0.47,
+       0.10200000000000001,
+       0.31800000000000006
+      ],
+      "vm_outside_Pa": 15713758.671081008,
+      "vm_outside_at_m": [
+       0.374,
+       0.096,
+       0.12
+      ],
+      "vm_max_Pa": 50246961.05247396,
+      "vm_max_at_m": [
+       0.524,
+       0.08399999999999999,
+       0.27
+      ],
+      "vm_element_max_Pa": 22004904.62423445,
+      "applied_N": [
+       1.7109869077103212e-11,
+       0.0,
+       0.0
+      ],
+      "reaction_N": [
+       -1.6929107005125843e-09,
+       -5.920810508541763e-10,
+       4.077591597706487e-10
+      ],
+      "solver": "pardiso",
+      "solve_s": 13.839953799993964,
+      "residual": 5.340706206210844e-13
+     }
+    ],
+    "volume_m3": 0.019322472000000004,
+    "elements": 91918,
+    "dofs": 312522,
+    "h_m": 0.006,
+    "E_Pa": 182674919309.46973,
+    "nu": 0.3,
+    "element": "H8IM"
+   },
+   "at_20C": {
+    "cases": [
+     {
+      "name": "LC1a Fz+97 kN, Fy+24 kN each pin",
+      "compliance_J": 14.158286937400213,
+      "max_disp_m": 0.0001713047725903414,
+      "load_disp_m": 8.997158651946042e-05,
+      "max_disp_at_m": [
+       0.506,
+       0.03,
+       0.32399999999999995
+      ],
+      "vm_outside_Pa": 59390070.92146469,
+      "vm_outside_at_m": [
+       0.62,
+       0.03,
+       0.126
+      ],
+      "vm_max_Pa": 185213870.20358458,
+      "vm_max_at_m": [
+       0.506,
+       0.10200000000000001,
+       0.28800000000000003
+      ],
+      "vm_element_max_Pa": 81592210.67846224,
+      "applied_N": [
+       0.0,
+       48000.0000000002,
+       193999.99999999956
+      ],
+      "reaction_N": [
+       1.4810939319431782e-07,
+       -47999.99999982348,
+       -193999.9999996556
+      ],
+      "solver": "pardiso",
+      "solve_s": 14.256904299996677,
+      "residual": 5.346947354780326e-13
+     },
+     {
+      "name": "LC1b Fz+97 kN, Fy-24 kN each pin",
+      "compliance_J": 14.278778972442968,
+      "max_disp_m": 0.0001699002496482454,
+      "load_disp_m": 9.120018921103407e-05,
+      "max_disp_at_m": [
+       0.506,
+       0.372,
+       0.32399999999999995
+      ],
+      "vm_outside_Pa": 56212019.47479482,
+      "vm_outside_at_m": [
+       0.62,
+       0.372,
+       0.126
+      ],
+      "vm_max_Pa": 178232688.20433792,
+      "vm_max_at_m": [
+       0.506,
+       0.10200000000000001,
+       0.28800000000000003
+      ],
+      "vm_element_max_Pa": 78866179.6265919,
+      "applied_N": [
+       0.0,
+       -48000.0000000002,
+       193999.99999999956
+      ],
+      "reaction_N": [
+       -4.284083843231201e-08,
+       47999.999999943495,
+       -193999.99999970436
+      ],
+      "solver": "pardiso",
+      "solve_s": 14.256904299996677,
+      "residual": 5.346947354780326e-13
+     },
+     {
+      "name": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+      "compliance_J": 16.32471094349043,
+      "max_disp_m": 0.00016733883250176187,
+      "load_disp_m": 5.0739643292840095e-05,
+      "max_disp_at_m": [
+       0.506,
+       0.03,
+       0.32399999999999995
+      ],
+      "vm_outside_Pa": 55596236.2724617,
+      "vm_outside_at_m": [
+       0.62,
+       0.03,
+       0.126
+      ],
+      "vm_max_Pa": 185266686.97366875,
+      "vm_max_at_m": [
+       0.506,
+       0.10200000000000001,
+       0.28800000000000003
+      ],
+      "vm_element_max_Pa": 69301443.37691563,
+      "applied_N": [
+       0.0,
+       -3.836930773104541e-13,
+       193999.99999999956
+      ],
+      "reaction_N": [
+       6.017944542691112e-08,
+       5.068807240604656e-08,
+       -193999.99999965646
+      ],
+      "solver": "pardiso",
+      "solve_s": 14.256904299996677,
+      "residual": 5.346947354780326e-13
+     },
+     {
+      "name": "LC2 My 2000 N m (1000 per pin bore)",
+      "compliance_J": 0.10400839739084435,
+      "max_disp_m": 7.007709269364301e-06,
+      "load_disp_m": 3.7948747827391215e-06,
+      "max_disp_at_m": [
+       0.506,
+       0.096,
+       0.32399999999999995
+      ],
+      "vm_outside_Pa": 4580047.162391006,
+      "vm_outside_at_m": [
+       0.5780000000000001,
+       0.10200000000000001,
+       0.24
+      ],
+      "vm_max_Pa": 23320851.366882034,
+      "vm_max_at_m": [
+       0.524,
+       0.08399999999999999,
+       0.27
+      ],
+      "vm_element_max_Pa": 9212939.575896846,
+      "applied_N": [
+       3.850452401366056e-09,
+       0.0,
+       -6.635616500716424e-10
+      ],
+      "reaction_N": [
+       -4.925666985400312e-09,
+       2.99775848588979e-09,
+       1.5224941307678819e-09
+      ],
+      "solver": "pardiso",
+      "solve_s": 14.256904299996677,
+      "residual": 5.346947354780326e-13
+     },
+     {
+      "name": "LC4 racking (pin alignment) Fx +24/-24 kN [Y]",
+      "compliance_J": 0.8418620082317539,
+      "max_disp_m": 2.3116846219696617e-05,
+      "load_disp_m": 3.337013621019139e-07,
+      "max_disp_at_m": [
+       0.47,
+       0.10200000000000001,
+       0.31800000000000006
+      ],
+      "vm_outside_Pa": 15713758.671096725,
+      "vm_outside_at_m": [
+       0.374,
+       0.096,
+       0.12
+      ],
+      "vm_max_Pa": 50246961.05247561,
+      "vm_max_at_m": [
+       0.524,
+       0.08399999999999999,
+       0.27
+      ],
+      "vm_element_max_Pa": 22004904.624240085,
+      "applied_N": [
+       1.7109869077103212e-11,
+       0.0,
+       0.0
+      ],
+      "reaction_N": [
+       -1.8932269085780717e-09,
+       -3.6561687011271715e-10,
+       5.77252023958863e-10
+      ],
+      "solver": "pardiso",
+      "solve_s": 14.256904299996677,
+      "residual": 5.346947354780326e-13
+     }
+    ],
+    "volume_m3": 0.019322472000000004,
+    "elements": 91918,
+    "dofs": 312522,
+    "h_m": 0.006,
+    "E_Pa": 200000000000.0,
+    "nu": 0.3,
+    "element": "H8IM"
+   },
+   "worst_T": {
+    "max_disp_m": 0.00018755149665519355,
+    "compliance_J": 17.87296362865368,
+    "load_disp_m": 9.984971068311458e-05,
+    "vm_outside_Pa": 59390070.92113779,
+    "vm_max_Pa": 185266686.97367486
+   },
+   "worst_20C": {
+    "max_disp_m": 0.0001713047725903414,
+    "compliance_J": 16.32471094349043,
+    "load_disp_m": 9.120018921103407e-05,
+    "vm_outside_Pa": 59390070.92146469,
+    "vm_max_Pa": 185266686.97366875
+   },
+   "thermal": {
+    "delta_T_K": 278.0,
+    "alpha_per_K": 1.2e-05,
+    "E_T_Pa": 182674919309.46973,
+    "E_alpha_dT_Pa": 609403530.816391,
+    "vm_outside_Pa": 1246846209.6758428,
+    "vm_max_Pa": 2596721070.0035224,
+    "max_disp_m": 0.001350571614097098
+   }
+  },
+  "convergence": [],
+  "designs": [
+   {
+    "label": "initial",
+    "volfrac": 1.0,
+    "volume_m3": 0.01939754233762211,
+    "stress_unitE": {
+     "LC1a Fz+97 kN, Fy+24 kN each pin": 59390070.92113779,
+     "LC1b Fz+97 kN, Fy-24 kN each pin": 56212019.47451152,
+     "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)": 55596236.27216632,
+     "LC2 My 2000 N m (1000 per pin bore)": 4580047.162389673,
+     "LC4 racking (pin alignment) Fx +24/-24 kN [Y]": 15713758.671081008
+    },
+    "disp_unitE": 34260954.51785777,
+    "compliance_unitE": 3264942188685.398,
+    "vm_max_unitE": 185266686.97367486
+   },
+   {
+    "label": "topo 28 %",
+    "volfrac": 0.28,
+    "volume_m3": 0.005384879998827193,
+    "iterations": 60,
+    "converged": false,
+    "gray_pct": 1.442455430123339,
+    "seconds": 1073.4383341999928,
+    "compliance_history": [
+     1200.9328094019415,
+     260.7518546871268,
+     122.16972582346652,
+     72.31144685977164,
+     48.24831498545456,
+     36.99928726425892,
+     31.935792023732613,
+     29.336812157365706,
+     27.863549293156936,
+     26.983233220569126,
+     26.40153244197491,
+     26.00642617452852,
+     24.594788743721686,
+     23.925807769730724,
+     23.79890623422467,
+     23.704956604650516,
+     23.62838238379123,
+     23.567547092229876,
+     23.51617264624909,
+     23.47235642930553,
+     23.436395551877062,
+     23.406577806856102,
+     23.37991732583237,
+     23.35613301315069,
+     21.14314713774673,
+     20.467811293759638,
+     20.429029406348064,
+     20.39827262114558,
+     20.37134653160111,
+     20.34756350602628,
+     20.326024143690354,
+     20.307530297563254,
+     20.29247378499538,
+     20.279492631277876,
+     20.268204839353793,
+     20.259075861659156,
+     18.367148018499588,
+     17.935537767773383,
+     17.88099656760032,
+     17.84415627413464,
+     17.816733122249644,
+     17.793166939430883,
+     17.77134612045346,
+     17.751087154448353,
+     17.73060465245235,
+     17.710905838180032,
+     17.69369930991793,
+     17.678888119037147,
+     16.926568385542826,
+     16.7868047863589,
+     16.757826854378553,
+     16.744304428719914,
+     16.74426170027899,
+     16.739343435896934,
+     16.73548099899802,
+     16.736180745213694,
+     16.726996443179182,
+     16.729437721213053,
+     16.718091231797644,
+     16.72661614691384
+    ],
+    "beta_history": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0
+    ],
+    "volume_fraction_kept": 0.2808372679997389,
+    "overhang_violations": 0,
+    "stress_unitE": {
+     "LC1a Fz+97 kN, Fy+24 kN each pin": 226298798.84610212,
+     "LC1b Fz+97 kN, Fy-24 kN each pin": 273933756.1024156,
+     "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)": 191834570.52564558,
+     "LC2 My 2000 N m (1000 per pin bore)": 20938104.52822088,
+     "LC4 racking (pin alignment) Fx +24/-24 kN [Y]": 47134691.61143163
+    },
+    "disp_unitE": 166051063.87890968,
+    "compliance_unitE": 10255675866190.598,
+    "vm_max_unitE": 273933756.1024156,
+    "settings": {
+     "volfrac": 0.28,
+     "rmin": 2.0,
+     "penal": 3.0,
+     "emin_ratio": 1e-06,
+     "projection": true,
+     "eta": 0.5,
+     "beta_max": 16.0,
+     "move": 0.2,
+     "am_axis": null,
+     "am_sign": 1,
+     "element": "H8IM",
+     "solver": "pardiso",
+     "symmetry_groups": 4
+    }
+   }
+  ],
+  "materials": [
+   {
+    "key": "structural_steel",
+    "name": "Structural Steel (Ansys Engineering Data default)",
+    "route": "machined from plate / welded",
+    "am": false,
+    "temp_ok": true,
+    "Tmax_C": 400.0,
+    "E_T_Pa": 182674919309.46973,
+    "Fty_T_Pa": 162765957.44680852,
+    "Ftu_T_Pa": 414157291.20146215,
+    "rho": 7850.0,
+    "co2_per_kg": 1.8,
+    "designs": [
+     {
+      "design": "initial",
+      "mass_kg": 152.27070735033357,
+      "vm_limit_Pa": 59390070.92113779,
+      "stress_factor": 1.0,
+      "utilisation": 0.5473202614300934,
+      "passes": true,
+      "max_disp_m": 0.00018755149665519358,
+      "disp_ratio": 0.11349389368099944,
+      "voxel_vm_limit_Pa": 59390070.92113779,
+      "voxel_utilisation": 0.5473202614300934,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 28 %",
+      "mass_kg": 42.27130799079347,
+      "vm_limit_Pa": 273933756.1024156,
+      "stress_factor": 1.0,
+      "utilisation": 2.524487556237948,
+      "passes": false,
+      "max_disp_m": 0.0009089976035385703,
+      "disp_ratio": 0.5500658710389074,
+      "voxel_vm_limit_Pa": 273933756.1024156,
+      "voxel_utilisation": 2.524487556237948,
+      "stress_basis": "voxel"
+     }
+    ],
+    "best": {
+     "design": "initial",
+     "mass_kg": 152.27070735033357,
+     "vm_limit_Pa": 59390070.92113779,
+     "stress_factor": 1.0,
+     "utilisation": 0.5473202614300934,
+     "passes": true,
+     "max_disp_m": 0.00018755149665519358,
+     "disp_ratio": 0.11349389368099944,
+     "voxel_vm_limit_Pa": 59390070.92113779,
+     "voxel_utilisation": 0.5473202614300934,
+     "stress_basis": "voxel"
+    }
+   },
+   {
+    "key": "ss_17_4ph",
+    "name": "17-4PH H1025 (wrought data; L-PBF route)",
+    "route": "AM L-PBF + H1025 + HIP",
+    "am": true,
+    "temp_ok": true,
+    "Tmax_C": 316.0,
+    "E_T_Pa": 173005467386.49258,
+    "Fty_T_Pa": 816108660.785886,
+    "Ftu_T_Pa": 902272777.2777278,
+    "rho": 7806.0,
+    "co2_per_kg": 5.0,
+    "designs": [
+     {
+      "design": "initial",
+      "mass_kg": 151.4172154874782,
+      "vm_limit_Pa": 59390070.92113779,
+      "stress_factor": 1.0,
+      "utilisation": 0.10915838865858944,
+      "passes": true,
+      "max_disp_m": 0.00019803394098129347,
+      "disp_ratio": 0.11983718308727159,
+      "voxel_vm_limit_Pa": 59390070.92113779,
+      "voxel_utilisation": 0.10915838865858944,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 28 %",
+      "mass_kg": 42.03437327084507,
+      "vm_limit_Pa": 273933756.1024156,
+      "stress_factor": 1.0,
+      "utilisation": 0.5034876529283975,
+      "passes": true,
+      "max_disp_m": 0.0009598024061745584,
+      "disp_ratio": 0.5808096132733596,
+      "voxel_vm_limit_Pa": 273933756.1024156,
+      "voxel_utilisation": 0.5034876529283975,
+      "stress_basis": "voxel"
+     }
+    ],
+    "best": {
+     "design": "topo 28 %",
+     "mass_kg": 42.03437327084507,
+     "vm_limit_Pa": 273933756.1024156,
+     "stress_factor": 1.0,
+     "utilisation": 0.5034876529283975,
+     "passes": true,
+     "max_disp_m": 0.0009598024061745584,
+     "disp_ratio": 0.5808096132733596,
+     "voxel_vm_limit_Pa": 273933756.1024156,
+     "voxel_utilisation": 0.5034876529283975,
+     "stress_basis": "voxel"
+    }
+   },
+   {
+    "key": "ti64_lpbf",
+    "name": "Ti-6Al-4V (L-PBF, stress relieved / HIP)",
+    "route": "AM L-PBF + HIP",
+    "am": true,
+    "temp_ok": true,
+    "Tmax_C": 350.0,
+    "E_T_Pa": 96800000000.0,
+    "Fty_T_Pa": 590143550.0405924,
+    "Ftu_T_Pa": 751639416.3183098,
+    "rho": 4410.0,
+    "co2_per_kg": 46.5,
+    "designs": [
+     {
+      "design": "initial",
+      "mass_kg": 85.54316170891352,
+      "vm_limit_Pa": 59390070.92113779,
+      "stress_factor": 1.0,
+      "utilisation": 0.1509549776077008,
+      "passes": true,
+      "max_disp_m": 0.0003539354805563819,
+      "disp_ratio": 0.2141785937013854,
+      "voxel_vm_limit_Pa": 59390070.92113779,
+      "voxel_utilisation": 0.1509549776077008,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 28 %",
+      "mass_kg": 23.74732079482792,
+      "vm_limit_Pa": 273933756.1024156,
+      "stress_factor": 1.0,
+      "utilisation": 0.6962723461526608,
+      "passes": false,
+      "max_disp_m": 0.001715403552468075,
+      "disp_ratio": 1.0380499856087353,
+      "voxel_vm_limit_Pa": 273933756.1024156,
+      "voxel_utilisation": 0.6962723461526608,
+      "stress_basis": "voxel"
+     }
+    ],
+    "best": {
+     "design": "initial",
+     "mass_kg": 85.54316170891352,
+     "vm_limit_Pa": 59390070.92113779,
+     "stress_factor": 1.0,
+     "utilisation": 0.1509549776077008,
+     "passes": true,
+     "max_disp_m": 0.0003539354805563819,
+     "disp_ratio": 0.2141785937013854,
+     "voxel_vm_limit_Pa": 59390070.92113779,
+     "voxel_utilisation": 0.1509549776077008,
+     "stress_basis": "voxel"
+    }
+   },
+   {
+    "key": "in718_lpbf",
+    "name": "Inconel 718 (L-PBF, solution + double age)",
+    "route": "AM L-PBF + STA",
+    "am": true,
+    "temp_ok": true,
+    "Tmax_C": 700.0,
+    "E_T_Pa": 184000000000.0,
+    "Fty_T_Pa": 1095828220.8588958,
+    "Ftu_T_Pa": 1274305555.5555556,
+    "rho": 8150.0,
+    "co2_per_kg": 11.6,
+    "designs": [
+     {
+      "design": "initial",
+      "mass_kg": 158.0899700516202,
+      "vm_limit_Pa": 59390070.92113779,
+      "stress_factor": 1.0,
+      "utilisation": 0.08129477292698571,
+      "passes": true,
+      "max_disp_m": 0.00018620083977096612,
+      "disp_ratio": 0.11267656451246796,
+      "voxel_vm_limit_Pa": 59390070.92113779,
+      "voxel_utilisation": 0.08129477292698571,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 28 %",
+      "mass_kg": 43.88677199044162,
+      "vm_limit_Pa": 273933756.1024156,
+      "stress_factor": 1.0,
+      "utilisation": 0.3749681075301793,
+      "passes": true,
+      "max_disp_m": 0.0009024514341245091,
+      "disp_ratio": 0.5461045576463346,
+      "voxel_vm_limit_Pa": 273933756.1024156,
+      "voxel_utilisation": 0.3749681075301793,
+      "stress_basis": "voxel"
+     }
+    ],
+    "best": {
+     "design": "topo 28 %",
+     "mass_kg": 43.88677199044162,
+     "vm_limit_Pa": 273933756.1024156,
+     "stress_factor": 1.0,
+     "utilisation": 0.3749681075301793,
+     "passes": true,
+     "max_disp_m": 0.0009024514341245091,
+     "disp_ratio": 0.5461045576463346,
+     "voxel_vm_limit_Pa": 273933756.1024156,
+     "voxel_utilisation": 0.3749681075301793,
+     "stress_basis": "voxel"
+    }
+   },
+   {
+    "key": "scalmalloy",
+    "name": "Scalmalloy (Al-Mg-Sc, L-PBF)",
+    "route": "AM L-PBF + age",
+    "am": true,
+    "temp_ok": false,
+    "Tmax_C": 150.0,
+    "E_T_Pa": 29000000000.0,
+    "Fty_T_Pa": 60000000.0,
+    "Ftu_T_Pa": 103000000.0,
+    "rho": 2670.0,
+    "co2_per_kg": 128.0,
+    "designs": [
+     {
+      "design": "initial",
+      "mass_kg": 51.79143804145104,
+      "vm_limit_Pa": 59390070.92113779,
+      "stress_factor": 1.0,
+      "utilisation": 1.4847517730284447,
+      "passes": false,
+      "max_disp_m": 0.001181412224753716,
+      "disp_ratio": 0.7149133748377278,
+      "voxel_vm_limit_Pa": 59390070.92113779,
+      "voxel_utilisation": 1.4847517730284447,
+      "stress_basis": "voxel"
+     },
+     {
+      "design": "topo 28 %",
+      "mass_kg": 14.377629596868607,
+      "vm_limit_Pa": 273933756.1024156,
+      "stress_factor": 1.0,
+      "utilisation": 6.848343902560391,
+      "passes": false,
+      "max_disp_m": 0.005725898754445161,
+      "disp_ratio": 3.4649392623077784,
+      "voxel_vm_limit_Pa": 273933756.1024156,
+      "voxel_utilisation": 6.848343902560391,
+      "stress_basis": "voxel"
+     }
+    ],
+    "best": null
+   }
+  ],
+  "choice": {
+   "material": "ss_17_4ph",
+   "design": "topo 28 %",
+   "mass_kg": 42.03437327084507,
+   "utilisation": 0.5034876529283975,
+   "passes": true
+  },
+  "eco": {
+   "baseline": {
+    "label": "baseline (initial, machined)",
+    "material": "Structural Steel (Ansys Engineering Data default)",
+    "mass_kg": 152.27070735033357,
+    "bought_kg": 1218.1656588026685,
+    "phases": {
+     "material": {
+      "energy_MJ": 32281.389958270716,
+      "co2_kg": 2192.6981858448034
+     },
+     "manufacture": {
+      "energy_MJ": 10202.137392472348,
+      "co2_kg": 687.7560281990066
+     },
+     "transport": {
+      "energy_MJ": 143.13446490931355,
+      "co2_kg": 10.305681473470575
+     },
+     "use": {
+      "energy_MJ": 59385575.86663009,
+      "co2_kg": 4275761.462397367
+     },
+     "end_of_life": {
+      "energy_MJ": 0.0,
+      "co2_kg": 0.0
+     }
+    },
+    "total": {
+     "energy_MJ": 59428202.52844574,
+     "co2_kg": 4278652.222292884
+    },
+    "eol_potential": {
+     "energy_MJ": -0.0,
+     "co2_kg": -0.0
+    },
+    "use_marginal_co2_kg": 1503673.2350845442,
+    "inputs": {
+     "route": "machined",
+     "buy_to_fly": null,
+     "am_kwh_per_kg": 31.0,
+     "atomisation_mj_per_kg": 20.0,
+     "rolling_mj_per_kg": 4.0,
+     "rolling_co2_per_kg": 0.2,
+     "machining_mj_per_kg_removed": 5.0,
+     "grid_kgCO2_per_kWh": 0.3,
+     "transport_km": 1000.0,
+     "transport_mj_per_tkm": 0.94,
+     "co2_per_mj_fuel": 0.072,
+     "use_mj_per_tkm": 6.5,
+     "life_km": 60000000.0,
+     "marginal_fuel_kg_per_kg_year": 125.0,
+     "life_years": 25.0,
+     "recovered_fraction": 0.9,
+     "recycled_content": 0.0,
+     "sources": {
+      "am_kwh_per_kg": "Baumers et al. 2010, SFF Symp., Table 5 (SLM250, 316L: 31 kWh/kg) [D-ag]",
+      "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
+      "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
+      "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level (research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+      "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
+      "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
+      "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"
+     },
+     "buy_to_fly_used": 8.0
+    }
+   },
+   "candidates": {
+    "structural_steel": {
+     "audit": {
+      "label": "Structural Steel (Ansys Engineering Data default) · initial",
+      "material": "Structural Steel (Ansys Engineering Data default)",
+      "mass_kg": 152.27070735033357,
+      "bought_kg": 1218.1656588026685,
+      "phases": {
+       "material": {
+        "energy_MJ": 32281.389958270716,
+        "co2_kg": 2192.6981858448034
+       },
+       "manufacture": {
+        "energy_MJ": 10202.137392472348,
+        "co2_kg": 687.7560281990066
+       },
+       "transport": {
+        "energy_MJ": 143.13446490931355,
+        "co2_kg": 10.305681473470575
+       },
+       "use": {
+        "energy_MJ": 59385575.86663009,
+        "co2_kg": 4275761.462397367
+       },
+       "end_of_life": {
+        "energy_MJ": 0.0,
+        "co2_kg": 0.0
+       }
+      },
+      "total": {
+       "energy_MJ": 59428202.52844574,
+       "co2_kg": 4278652.222292884
+      },
+      "eol_potential": {
+       "energy_MJ": -0.0,
+       "co2_kg": -0.0
+      },
+      "use_marginal_co2_kg": 1503673.2350845442,
+      "inputs": {
+       "route": "machined",
+       "buy_to_fly": null,
+       "am_kwh_per_kg": 31.0,
+       "atomisation_mj_per_kg": 20.0,
+       "rolling_mj_per_kg": 4.0,
+       "rolling_co2_per_kg": 0.2,
+       "machining_mj_per_kg_removed": 5.0,
+       "grid_kgCO2_per_kWh": 0.3,
+       "transport_km": 1000.0,
+       "transport_mj_per_tkm": 0.94,
+       "co2_per_mj_fuel": 0.072,
+       "use_mj_per_tkm": 6.5,
+       "life_km": 60000000.0,
+       "marginal_fuel_kg_per_kg_year": 125.0,
+       "life_years": 25.0,
+       "recovered_fraction": 0.9,
+       "recycled_content": 0.0,
+       "sources": {
+        "am_kwh_per_kg": "Baumers et al. 2010, SFF Symp., Table 5 (SLM250, 316L: 31 kWh/kg) [D-ag]",
+        "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
+        "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
+        "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level (research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+        "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
+        "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
+        "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"
+       },
+       "buy_to_fly_used": 8.0
+      }
+     },
+     "vs_baseline": {
+      "phases": {
+       "material": {
+        "base_co2_kg": 2192.6981858448034,
+        "new_co2_kg": 2192.6981858448034,
+        "delta_co2_kg": 0.0
+       },
+       "manufacture": {
+        "base_co2_kg": 687.7560281990066,
+        "new_co2_kg": 687.7560281990066,
+        "delta_co2_kg": 0.0
+       },
+       "transport": {
+        "base_co2_kg": 10.305681473470575,
+        "new_co2_kg": 10.305681473470575,
+        "delta_co2_kg": 0.0
+       },
+       "use": {
+        "base_co2_kg": 4275761.462397367,
+        "new_co2_kg": 4275761.462397367,
+        "delta_co2_kg": 0.0
+       },
+       "end_of_life": {
+        "base_co2_kg": 0.0,
+        "new_co2_kg": 0.0,
+        "delta_co2_kg": 0.0
+       }
+      },
+      "total_base_co2_kg": 4278652.222292884,
+      "total_new_co2_kg": 4278652.222292884,
+      "delta_total_co2_kg": 0.0,
+      "extra_production_co2_kg": 0.0,
+      "break_even_km": 0.0,
+      "mass_saving_kg": 0.0,
+      "delta_use_marginal_co2_kg": 0.0
+     },
+     "passes": true
+    },
+    "ss_17_4ph": {
+     "audit": {
+      "label": "17-4PH H1025 (wrought data; L-PBF route) · topo 28 %",
+      "material": "17-4PH H1025 (wrought data; L-PBF route)",
+      "mass_kg": 42.03437327084507,
+      "bought_kg": 54.6446852520986,
+      "phases": {
+       "material": {
+        "energy_MJ": 4617.475903802331,
+        "co2_kg": 273.223426260493
+       },
+       "manufacture": {
+        "energy_MJ": 7191.240579176176,
+        "co2_kg": 599.2700482646812
+       },
+       "transport": {
+        "energy_MJ": 39.51231087459437,
+        "co2_kg": 2.8448863829707944
+       },
+       "use": {
+        "energy_MJ": 16393405.575629577,
+        "co2_kg": 1180325.2014453295
+       },
+       "end_of_life": {
+        "energy_MJ": 0.0,
+        "co2_kg": 0.0
+       }
+      },
+      "total": {
+       "energy_MJ": 16405253.804423431,
+       "co2_kg": 1181200.5398062377
+      },
+      "eol_potential": {
+       "energy_MJ": -0.0,
+       "co2_kg": -161.5380964798576
+      },
+      "use_marginal_co2_kg": 415089.43604959507,
+      "inputs": {
+       "route": "am",
+       "buy_to_fly": null,
+       "am_kwh_per_kg": 31.0,
+       "atomisation_mj_per_kg": 20.0,
+       "rolling_mj_per_kg": 4.0,
+       "rolling_co2_per_kg": 0.2,
+       "machining_mj_per_kg_removed": 5.0,
+       "grid_kgCO2_per_kWh": 0.3,
+       "transport_km": 1000.0,
+       "transport_mj_per_tkm": 0.94,
+       "co2_per_mj_fuel": 0.072,
+       "use_mj_per_tkm": 6.5,
+       "life_km": 60000000.0,
+       "marginal_fuel_kg_per_kg_year": 125.0,
+       "life_years": 25.0,
+       "recovered_fraction": 0.9,
+       "recycled_content": 0.0,
+       "sources": {
+        "am_kwh_per_kg": "Baumers et al. 2010, SFF Symp., Table 5 (SLM250, 316L: 31 kWh/kg) [D-ag]",
+        "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
+        "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
+        "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level (research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+        "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
+        "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
+        "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"
+       },
+       "buy_to_fly_used": 1.3
+      }
+     },
+     "vs_baseline": {
+      "phases": {
+       "material": {
+        "base_co2_kg": 2192.6981858448034,
+        "new_co2_kg": 273.223426260493,
+        "delta_co2_kg": -1919.4747595843105
+       },
+       "manufacture": {
+        "base_co2_kg": 687.7560281990066,
+        "new_co2_kg": 599.2700482646812,
+        "delta_co2_kg": -88.48597993432531
+       },
+       "transport": {
+        "base_co2_kg": 10.305681473470575,
+        "new_co2_kg": 2.8448863829707944,
+        "delta_co2_kg": -7.46079509049978
+       },
+       "use": {
+        "base_co2_kg": 4275761.462397367,
+        "new_co2_kg": 1180325.2014453295,
+        "delta_co2_kg": -3095436.2609520373
+       },
+       "end_of_life": {
+        "base_co2_kg": 0.0,
+        "new_co2_kg": 0.0,
+        "delta_co2_kg": 0.0
+       }
+      },
+      "total_base_co2_kg": 4278652.222292884,
+      "total_new_co2_kg": 1181200.5398062377,
+      "delta_total_co2_kg": -3097451.682486647,
+      "extra_production_co2_kg": -2007.9607395186356,
+      "break_even_km": 0.0,
+      "mass_saving_kg": 110.2363340794885,
+      "delta_use_marginal_co2_kg": -1088583.7990349492
+     },
+     "passes": true
+    },
+    "ti64_lpbf": {
+     "audit": {
+      "label": "Ti-6Al-4V (L-PBF, stress relieved / HIP) · initial",
+      "material": "Ti-6Al-4V (L-PBF, stress relieved / HIP)",
+      "mass_kg": 85.54316170891352,
+      "bought_kg": 111.20611022158758,
+      "phases": {
+       "material": {
+        "energy_MJ": 76176.18550178749,
+        "co2_kg": 5171.0841253038225
+       },
+       "manufacture": {
+        "energy_MJ": 14634.724105160925,
+        "co2_kg": 1219.5603420967436
+       },
+       "transport": {
+        "energy_MJ": 80.4105720063787,
+        "co2_kg": 5.789561184459266
+       },
+       "use": {
+        "energy_MJ": 33361833.06647627,
+        "co2_kg": 2402051.9807862914
+       },
+       "end_of_life": {
+        "energy_MJ": 0.0,
+        "co2_kg": 0.0
+       }
+      },
+      "total": {
+       "energy_MJ": 33452724.386655226,
+       "co2_kg": 2408448.4148148764
+      },
+      "eol_potential": {
+       "energy_MJ": -0.0,
+       "co2_kg": -3179.639320720315
+      },
+      "use_marginal_co2_kg": 844738.721875521,
+      "inputs": {
+       "route": "am",
+       "buy_to_fly": null,
+       "am_kwh_per_kg": 31.0,
+       "atomisation_mj_per_kg": 20.0,
+       "rolling_mj_per_kg": 4.0,
+       "rolling_co2_per_kg": 0.2,
+       "machining_mj_per_kg_removed": 5.0,
+       "grid_kgCO2_per_kWh": 0.3,
+       "transport_km": 1000.0,
+       "transport_mj_per_tkm": 0.94,
+       "co2_per_mj_fuel": 0.072,
+       "use_mj_per_tkm": 6.5,
+       "life_km": 60000000.0,
+       "marginal_fuel_kg_per_kg_year": 125.0,
+       "life_years": 25.0,
+       "recovered_fraction": 0.9,
+       "recycled_content": 0.0,
+       "sources": {
+        "am_kwh_per_kg": "Baumers et al. 2010, SFF Symp., Table 5 (SLM250, 316L: 31 kWh/kg) [D-ag]",
+        "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
+        "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
+        "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level (research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+        "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
+        "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
+        "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"
+       },
+       "buy_to_fly_used": 1.3
+      }
+     },
+     "vs_baseline": {
+      "phases": {
+       "material": {
+        "base_co2_kg": 2192.6981858448034,
+        "new_co2_kg": 5171.0841253038225,
+        "delta_co2_kg": 2978.385939459019
+       },
+       "manufacture": {
+        "base_co2_kg": 687.7560281990066,
+        "new_co2_kg": 1219.5603420967436,
+        "delta_co2_kg": 531.8043138977371
+       },
+       "transport": {
+        "base_co2_kg": 10.305681473470575,
+        "new_co2_kg": 5.789561184459266,
+        "delta_co2_kg": -4.516120289011309
+       },
+       "use": {
+        "base_co2_kg": 4275761.462397367,
+        "new_co2_kg": 2402051.9807862914,
+        "delta_co2_kg": -1873709.4816110753
+       },
+       "end_of_life": {
+        "base_co2_kg": 0.0,
+        "new_co2_kg": 0.0,
+        "delta_co2_kg": 0.0
+       }
+      },
+      "total_base_co2_kg": 4278652.222292884,
+      "total_new_co2_kg": 2408448.4148148764,
+      "delta_total_co2_kg": -1870203.8074780079,
+      "extra_production_co2_kg": 3510.1902533567563,
+      "break_even_km": 112403.45275955745,
+      "mass_saving_kg": 66.72754564142005,
+      "delta_use_marginal_co2_kg": -658934.5132090232
+     },
+     "passes": true
+    },
+    "in718_lpbf": {
+     "audit": {
+      "label": "Inconel 718 (L-PBF, solution + double age) · topo 28 %",
+      "material": "Inconel 718 (L-PBF, solution + double age)",
+      "mass_kg": 43.88677199044162,
+      "bought_kg": 57.05280358757411,
+      "phases": {
+       "material": {
+        "energy_MJ": 13264.77683411098,
+        "co2_kg": 661.8125216158596
+       },
+       "manufacture": {
+        "energy_MJ": 7508.148952124753,
+        "co2_kg": 625.6790793437294
+       },
+       "transport": {
+        "energy_MJ": 41.253565671015124,
+        "co2_kg": 2.9702567283130885
+       },
+       "use": {
+        "energy_MJ": 17115841.076272234,
+        "co2_kg": 1232340.5574916007
+       },
+       "end_of_life": {
+        "energy_MJ": 0.0,
+        "co2_kg": 0.0
+       }
+      },
+      "total": {
+       "energy_MJ": 17136655.25562414,
+       "co2_kg": 1233631.0193492887
+      },
+      "eol_potential": {
+       "energy_MJ": -0.0,
+       "co2_kg": -373.65197672662
+      },
+      "use_marginal_co2_kg": 433381.8734056111,
+      "inputs": {
+       "route": "am",
+       "buy_to_fly": null,
+       "am_kwh_per_kg": 31.0,
+       "atomisation_mj_per_kg": 20.0,
+       "rolling_mj_per_kg": 4.0,
+       "rolling_co2_per_kg": 0.2,
+       "machining_mj_per_kg_removed": 5.0,
+       "grid_kgCO2_per_kWh": 0.3,
+       "transport_km": 1000.0,
+       "transport_mj_per_tkm": 0.94,
+       "co2_per_mj_fuel": 0.072,
+       "use_mj_per_tkm": 6.5,
+       "life_km": 60000000.0,
+       "marginal_fuel_kg_per_kg_year": 125.0,
+       "life_years": 25.0,
+       "recovered_fraction": 0.9,
+       "recycled_content": 0.0,
+       "sources": {
+        "am_kwh_per_kg": "Baumers et al. 2010, SFF Symp., Table 5 (SLM250, 316L: 31 kWh/kg) [D-ag]",
+        "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
+        "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
+        "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level (research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+        "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
+        "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
+        "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"
+       },
+       "buy_to_fly_used": 1.3
+      }
+     },
+     "vs_baseline": {
+      "phases": {
+       "material": {
+        "base_co2_kg": 2192.6981858448034,
+        "new_co2_kg": 661.8125216158596,
+        "delta_co2_kg": -1530.8856642289438
+       },
+       "manufacture": {
+        "base_co2_kg": 687.7560281990066,
+        "new_co2_kg": 625.6790793437294,
+        "delta_co2_kg": -62.076948855277124
+       },
+       "transport": {
+        "base_co2_kg": 10.305681473470575,
+        "new_co2_kg": 2.9702567283130885,
+        "delta_co2_kg": -7.335424745157486
+       },
+       "use": {
+        "base_co2_kg": 4275761.462397367,
+        "new_co2_kg": 1232340.5574916007,
+        "delta_co2_kg": -3043420.9049057662
+       },
+       "end_of_life": {
+        "base_co2_kg": 0.0,
+        "new_co2_kg": 0.0,
+        "delta_co2_kg": 0.0
+       }
+      },
+      "total_base_co2_kg": 4278652.222292884,
+      "total_new_co2_kg": 1233631.0193492887,
+      "delta_total_co2_kg": -3045021.2029435956,
+      "extra_production_co2_kg": -1592.9626130842207,
+      "break_even_km": 0.0,
+      "mass_saving_kg": 108.38393535989195,
+      "delta_use_marginal_co2_kg": -1070291.361678933
+     },
+     "passes": true
+    }
+   }
+  },
+  "timings": {
+   "baseline_s": 65.98188020000816,
+   "topology_s": 1078.7764193999901,
+   "total_s": 1144.8044248000078
+  },
+  "cad": {
+   "initial": {
+    "copied": "studies\\final_2026\\ansys\\official_2026-11-05\\runs\\topo_v4_xbrace\\cad\\initial.step"
+   },
+   "initial_voxel_surface": {
+    "stl": "studies\\final_2026\\ansys\\official_2026-11-05\\runs\\topo_v4_xbrace\\cad\\initial_voxels.stl",
+    "triangles": 42824,
+    "volume_mm3": 19730178.0,
+    "level": 0.5,
+    "target_volume_mm3": null,
+    "bodies": 1,
+    "watertight": true,
+    "method": "vtk flying edges + Taubin"
+   },
+   "topo 28 %": {
+    "stl": "studies\\final_2026\\ansys\\official_2026-11-05\\runs\\topo_v4_xbrace\\cad\\optimised_28.stl",
+    "triangles": 49160,
+    "volume_mm3": 5601619.5,
+    "level": 0.47,
+    "target_volume_mm3": 5575824.0,
+    "bodies": 1,
+    "watertight": true,
+    "method": "vtk flying edges + Taubin"
+   }
+  },
+  "tet": {},
+  "verification": [],
+  "stress_factors": {},
+  "voxel": {
+   "h_m": 0.006,
+   "shape": [
+    111,
+    57,
+    49
+   ],
+   "origin_m": [
+    0.17,
+    0.03,
+    0.03
+   ],
+   "elements": 91918,
+   "keep_elements": 14512
+  },
+  "bolt_check": {
+   "rows": [
+    {
+     "case": "LC1a Fz+97 kN, Fy+24 kN each pin",
+     "hole": "H3",
+     "fea_shear_N": 38281.60975616059,
+     "fea_axial_N": -64678.99167834508,
+     "classical_shear_N": 11996.511355976001,
+     "classical_axial_N": -70187.55890062361,
+     "fea_clamp_moment_Nm": 6006.706226120477
+    },
+    {
+     "case": "LC1a Fz+97 kN, Fy+24 kN each pin",
+     "hole": "H4",
+     "fea_shear_N": 15955.337402836676,
+     "fea_axial_N": -32225.110012103665,
+     "classical_shear_N": 11996.511355976001,
+     "classical_axial_N": -26749.61437569063,
+     "fea_clamp_moment_Nm": 3404.667579086896
+    },
+    {
+     "case": "LC1a Fz+97 kN, Fy+24 kN each pin",
+     "hole": "H5",
+     "fea_shear_N": 38313.028564782755,
+     "fea_axial_N": -64863.79542118883,
+     "classical_shear_N": 12003.488815993727,
+     "classical_axial_N": -70250.38562430916,
+     "fea_clamp_moment_Nm": 6021.720263806128
+    },
+    {
+     "case": "LC1a Fz+97 kN, Fy+24 kN each pin",
+     "hole": "H6",
+     "fea_shear_N": 15947.261190169444,
+     "fea_axial_N": -32232.1028872568,
+     "classical_shear_N": 12003.488815993727,
+     "classical_axial_N": -26812.441099376178,
+     "fea_clamp_moment_Nm": 3406.82058819084
+    },
+    {
+     "case": "LC1b Fz+97 kN, Fy-24 kN each pin",
+     "hole": "H3",
+     "fea_shear_N": 15803.001797800225,
+     "fea_axial_N": -31845.82505398445,
+     "classical_shear_N": 11996.511355976001,
+     "classical_axial_N": -25830.3664976509,
+     "fea_clamp_moment_Nm": 3384.1281398572664
+    },
+    {
+     "case": "LC1b Fz+97 kN, Fy-24 kN each pin",
+     "hole": "H4",
+     "fea_shear_N": 38552.419629609416,
+     "fea_axial_N": -65060.02398983242,
+     "classical_shear_N": 11996.511355976001,
+     "classical_axial_N": -71106.80677866333,
+     "fea_clamp_moment_Nm": 6045.040106572978
+    },
+    {
+     "case": "LC1b Fz+97 kN, Fy-24 kN each pin",
+     "hole": "H5",
+     "fea_shear_N": 15800.790210134028,
+     "fea_axial_N": -32024.97322779949,
+     "classical_shear_N": 12003.488815993727,
+     "classical_axial_N": -25893.193221336445,
+     "fea_clamp_moment_Nm": 3397.501413231982
+    },
+    {
+     "case": "LC1b Fz+97 kN, Fy-24 kN each pin",
+     "hole": "H6",
+     "fea_shear_N": 38564.48095260338,
+     "fea_axial_N": -65069.177727390845,
+     "classical_shear_N": 12003.488815993727,
+     "classical_axial_N": -71169.63350234888,
+     "fea_clamp_moment_Nm": 6047.162305326076
+    },
+    {
+     "case": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+     "hole": "H3",
+     "fea_shear_N": 22042.20203764582,
+     "fea_axial_N": -48329.82472624452,
+     "classical_shear_N": 3.772913016557931,
+     "classical_axial_N": -48027.558900623655,
+     "fea_clamp_moment_Nm": 4921.790208114184
+    },
+    {
+     "case": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+     "hole": "H4",
+     "fea_shear_N": 22237.31204715442,
+     "fea_axial_N": -48574.95861685216,
+     "classical_shear_N": 3.772913016557931,
+     "classical_axial_N": -48909.61437569058,
+     "fea_clamp_moment_Nm": 4956.174783850181
+    },
+    {
+     "case": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+     "hole": "H5",
+     "fea_shear_N": 22040.054989537235,
+     "fea_axial_N": -48514.26302221021,
+     "classical_shear_N": 3.772913016557754,
+     "classical_axial_N": -48090.3856243092,
+     "fea_clamp_moment_Nm": 4936.232044548583
+    },
+    {
+     "case": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+     "hole": "H6",
+     "fea_shear_N": 22228.822550316785,
+     "fea_axial_N": -48580.95363359632,
+     "classical_shear_N": 3.7729130165577534,
+     "classical_axial_N": -48972.44109937613,
+     "fea_clamp_moment_Nm": 4958.005157936614
+    },
+    {
+     "case": "LC2 My 2000 N m (1000 per pin bore)",
+     "hole": "H3",
+     "fea_shear_N": 113.06736821372205,
+     "fea_axial_N": -2723.955997171888,
+     "classical_shear_N": 6.889827777440391,
+     "classical_axial_N": -1960.8888229303905,
+     "fea_clamp_moment_Nm": 196.11359525097436
+    },
+    {
+     "case": "LC2 My 2000 N m (1000 per pin bore)",
+     "hole": "H4",
+     "fea_shear_N": 131.91310739829325,
+     "fea_axial_N": -2712.840728907337,
+     "classical_shear_N": 6.88982777817342,
+     "classical_axial_N": -1960.6798045217288,
+     "fea_clamp_moment_Nm": 195.2090125532473
+    },
+    {
+     "case": "LC2 My 2000 N m (1000 per pin bore)",
+     "hole": "H5",
+     "fea_shear_N": 112.53856133885847,
+     "fea_axial_N": 2723.937580750939,
+     "classical_shear_N": 6.889827777440391,
+     "classical_axial_N": 1960.6798045220605,
+     "fea_clamp_moment_Nm": 196.2422696954901
+    },
+    {
+     "case": "LC2 My 2000 N m (1000 per pin bore)",
+     "hole": "H6",
+     "fea_shear_N": 131.45682621241107,
+     "fea_axial_N": 2712.85914533045,
+     "classical_shear_N": 6.88982777817342,
+     "classical_axial_N": 1960.8888229307222,
+     "fea_clamp_moment_Nm": 195.29432531019657
+    },
+    {
+     "case": "LC4 racking (pin alignment) Fx +24/-24 kN [Y]",
+     "hole": "H3",
+     "fea_shear_N": 8301.942866743968,
+     "fea_axial_N": -11452.451921157492,
+     "classical_shear_N": 5875.356611745129,
+     "classical_axial_N": -12.801023530592719,
+     "fea_clamp_moment_Nm": 724.0847559244806
+    },
+    {
+     "case": "LC4 racking (pin alignment) Fx +24/-24 kN [Y]",
+     "hole": "H4",
+     "fea_shear_N": 7987.009478496765,
+     "fea_axial_N": 11396.844545544003,
+     "classical_shear_N": 5875.3566117451255,
+     "classical_axial_N": -12.801023530592719,
+     "fea_clamp_moment_Nm": 716.9449841448454
+    },
+    {
+     "case": "LC4 racking (pin alignment) Fx +24/-24 kN [Y]",
+     "hole": "H5",
+     "fea_shear_N": 7982.278349107253,
+     "fea_axial_N": 11451.862343788127,
+     "classical_shear_N": 5875.356611745129,
+     "classical_axial_N": 12.801023530592719,
+     "fea_clamp_moment_Nm": 720.5860838690659
+    },
+    {
+     "case": "LC4 racking (pin alignment) Fx +24/-24 kN [Y]",
+     "hole": "H6",
+     "fea_shear_N": 8299.586565140582,
+     "fea_axial_N": -11396.254968174066,
+     "classical_shear_N": 5875.3566117451255,
+     "classical_axial_N": 12.801023530592719,
+     "fea_clamp_moment_Nm": 720.8759723761643
+    }
+   ],
+   "axis": "z",
+   "reaction_N": {
+    "LC1a Fz+97 kN, Fy+24 kN each pin": {
+     "H3": [
+      -37213.52927742202,
+      -8979.692881241752,
+      -64678.99167834508
+     ],
+     "H4": [
+      -5442.971655966794,
+      -14998.228268388939,
+      -32225.110012103665
+     ],
+     "H5": [
+      37234.97617890545,
+      -9024.672113833449,
+      -64863.79542118883
+     ],
+     "H6": [
+      5421.524754657722,
+      -14997.406735903312,
+      -32232.1028872568
+     ]
+    },
+    "LC1b Fz+97 kN, Fy-24 kN each pin": {
+     "H3": [
+      -5106.6500934122205,
+      14955.166018628148,
+      -31845.82505398445
+     ],
+     "H4": [
+      -37478.87345054285,
+      9034.550579618626,
+      -65060.02398983242
+     ],
+     "H5": [
+      5099.151959654778,
+      14955.387676587196,
+      -32024.97322779949
+     ],
+     "H6": [
+      37486.371584314,
+      9054.89572476925,
+      -65069.177727390845
+     ]
+    },
+    "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)": {
+     "H3": [
+      -21407.305997958254,
+      5252.230057621057,
+      -48329.82472624452
+     ],
+     "H4": [
+      -21611.920375822083,
+      -5236.69215742585,
+      -48574.95861685216
+     ],
+     "H5": [
+      21414.37380604935,
+      5214.270652412728,
+      -48514.26302221021
+     ],
+     "H6": [
+      21604.852567832753,
+      -5229.80855248856,
+      -48580.95363359632
+     ]
+    },
+    "LC2 My 2000 N m (1000 per pin bore)": {
+     "H3": [
+      -4.269685626565632,
+      112.9867228457738,
+      -2723.955997171888
+     ],
+     "H4": [
+      2.611314297465995,
+      -131.88725844869737,
+      -2712.840728907337
+     ],
+     "H5": [
+      -0.5939582706572875,
+      -112.5369939255209,
+      2723.937580750939
+     ],
+     "H6": [
+      2.2523296021947434,
+      131.43752953096435,
+      2712.85914533045
+     ]
+    },
+    "LC4 racking (pin alignment) Fx +24/-24 kN [Y]": {
+     "H3": [
+      -7691.824917752261,
+      3123.793334605618,
+      -11452.451921157492
+     ],
+     "H4": [
+      7368.06862751707,
+      3082.8371850936082,
+      11396.844545544003
+     ],
+     "H5": [
+      -7364.251319588226,
+      -3079.7029312207187,
+      11451.862343788127
+     ],
+     "H6": [
+      7688.007609821347,
+      -3126.927588479003,
+      -11396.254968174066
+     ]
+    }
+   },
+   "clamp_moment_Nm": {
+    "LC1a Fz+97 kN, Fy+24 kN each pin": {
+     "H3": [
+      996.3020206016943,
+      5894.905361825402,
+      -581.3714352989979
+     ],
+     "H4": [
+      146.34624338612892,
+      3382.0033822352775,
+      -363.8642929463314
+     ],
+     "H5": [
+      998.0986170980043,
+      -5909.660680328423,
+      583.8019608228439
+     ],
+     "H6": [
+      147.23617801863014,
+      -3384.1145722246015,
+      364.0282819514875
+     ]
+    },
+    "LC1b Fz+97 kN, Fy-24 kN each pin": {
+     "H3": [
+      -185.764273433926,
+      3358.4585514706423,
+      372.2513394778912
+     ],
+     "H4": [
+      -1090.8286055589897,
+      5912.412856798825,
+      629.2670769474889
+     ],
+     "H5": [
+      -184.6922830112189,
+      -3371.9728734236483,
+      -372.42926094022806
+     ],
+     "H6": [
+      -1089.6349361783282,
+      -5914.873893172803,
+      -628.5972324780336
+     ]
+    },
+    "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)": {
+     "H3": [
+      1270.0811861587304,
+      4750.712420659889,
+      -204.0689330646522
+     ],
+     "H4": [
+      -1347.7801612143628,
+      4763.647456280587,
+      234.1367920273608
+     ],
+     "H5": [
+      1272.0963328428586,
+      -4765.0546564986,
+      205.94134644857402
+     ],
+     "H6": [
+      -1346.8874348530767,
+      -4765.824086096772,
+      -233.73096572948626
+     ]
+    },
+    "LC2 My 2000 N m (1000 per pin bore)": {
+     "H3": [
+      28.92294849377607,
+      193.7705506062173,
+      -8.773768315424391
+     ],
+     "H4": [
+      -31.34419028209526,
+      192.4991217930797,
+      8.257628380275843
+     ],
+     "H5": [
+      -28.864002997748024,
+      193.90905103883935,
+      -8.785082321769268
+     ],
+     "H6": [
+      31.325271202783046,
+      192.58760686546256,
+      8.28339086793616
+     ]
+    },
+    "LC4 racking (pin alignment) Fx +24/-24 kN [Y]": {
+     "H3": [
+      225.36084341013924,
+      687.2654187853605,
+      -34.31425595096684
+     ],
+     "H4": [
+      237.3886977490118,
+      -675.1700120954588,
+      -42.45198745051908
+     ],
+     "H5": [
+      -226.97071893687175,
+      683.0458998057526,
+      -34.30591449860839
+     ],
+     "H6": [
+      -235.90263347099372,
+      -679.8385889342923,
+      -42.797290411435654
+     ]
+    }
+   }
+  }
+ }
+}

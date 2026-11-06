@@ -1,0 +1,159 @@
+{
+ "surum": 1,
+ "ad": "f2_materials",
+ "boyut_pt": [
+  249.4,
+  137.2
+ ],
+ "metin_kutusu_pt": [
+  2.2,
+  2.3,
+  209.8,
+  112.5
+ ],
+ "hedef": "genel-tek",
+ "ortam": "makale",
+ "boyut_mm": [
+  88.0,
+  48.4
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   8.1
+  ],
+  "eksen_adi": [
+   9.0
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   8.0,
+   8.1
+  ]
+ },
+ "punto_tepe": {
+  "tik": 8.1,
+  "eksen_adi": 9.0,
+  "metin": 8.0
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    73.7,
+    31.5,
+    209.2,
+    121.9
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "",
+     "tur": "cubuk",
+     "renk": "#84b1d6",
+     "isaret": null,
+     "cizgi": null,
+     "kalinlik": null,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Mass (kg)",
+    "nicelik": "Mass",
+    "birim": "kg",
+    "bicim": "parantez",
+    "anahtar": "mass",
+    "harf": "tek",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     190.33838418791697
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "50",
+     "100",
+     "150"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     124.0,
+     2.3,
+     158.9,
+     10.6
+    ]
+   },
+   "y": {
+    "ham": "Material",
+    "nicelik": "Material",
+    "birim": null,
+    "bicim": "yok",
+    "anahtar": "material",
+    "harf": "tek",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     -0.5900000000000001,
+     3.5900000000000003
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "Structural Steel",
+     "Ti-6Al-4V",
+     "Inconel 718",
+     "17-4PH H1025"
+    ],
+    "ondaliklar": [],
+    "ondalik_isareti": null,
+    "tikler": [
+     "Structural Steel",
+     "Ti-6Al-4V",
+     "Inconel 718",
+     "17-4PH H1025"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     2.2,
+     61.3,
+     10.4,
+     92.1
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": true
+   },
+   "cerceve": [
+    "bottom"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

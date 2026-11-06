@@ -1,0 +1,86 @@
+{
+ "_doc": "Transparent keyword weights for scripts/triage.py. Text and phrases are lower-cased and accent-folded (Turkish i/s/g/u/o/c too). A phrase ending in * matches any word ending (translat* = translate, translation). Score = sum(weight * min(count, cap)). Weights are judgement [Y]; edit freely.",
+ "cap_per_phrase": 3,
+ "min_score": 4.0,
+ "keep_ratio": 0.35,
+ "cases": {
+  "case_1_voice_to_display": {
+   "voice": 3, "speech": 4, "speech recognition": 3, "asr": 4, "transcri*": 4, "voice to text": 5, "speech to text": 5,
+   "translat*": 2, "radio": 1.5, "vhf": 2, "phraseology": 2, "clearance*": 2, "instruction*": 1, "cockpit": 1,
+   "display*": 1, "text": 1.5, "nlp": 3, "natural language": 3, "language model": 2, "audio": 2,
+   "ses": 3, "sesli": 3, "telsiz": 2, "metne": 3, "kokpit": 1, "ekran*": 1
+  },
+  "case_2_lost_comms": {
+   "communication lost": 5, "communications lost": 5, "loss of communication*": 5, "lost comm*": 5,
+   "communication failure": 4, "comms failure": 4, "radio failure": 5, "radio communication failure": 5, "7600": 5,
+   "7601": 4, "sera.14083": 6, "14083": 4, "nordo": 5, "no radio": 4, "degraded": 2, "interrupt*": 2, "link loss": 3,
+   "fallback": 2, "backup": 1.5, "redundan*": 1.5, "if communication": 3, "tower is lost": 5, "is lost": 2,
+   "cpdlc": 2, "satcom": 2, "lost": 1.5, "fail*": 1.5, "failure": 1, "voice channel fail*": 4, "channel fail*": 3, "radio link": 2, "kesil*": 4, "iletisim": 2, "kayb*": 2
+  },
+  "case_3_radar_signal_to_display": {
+   "radar": 1.5, "radar expertise": 1, "psr": 4, "primary radar": 4, "primary surveillance": 4, "ssr": 4,
+   "secondary radar": 4, "secondary surveillance": 4, "mode s": 4, "mode a": 3, "mode c": 3, "transponder*": 3,
+   "ads-b": 1.5, "asterix": 5, "plots": 2, "plot extraction": 4, "track*": 1.5, "tracker": 3, "signal processing": 3,
+   "clutter": 4, "cfar": 5, "mti": 4, "mtd": 4, "doppler": 2, "1090": 3, "1030": 3, "scope": 2,
+   "air situation display": 4, "situation display": 2, "radar display": 4, "radar screen": 4, "surveillance": 2,
+   "rf signal": 3, "radar signal": 4, "translate signal": 2, "detection probability": 3, "false plot*": 3
+  },
+  "case_4_par_talkdown": {
+   "par": 4, "precision approach radar": 6, "talkdown": 6, "talk-down": 6, "talk down": 6, "gca": 5,
+   "ground controlled approach": 6, "glide path": 2, "glidepath": 2, "radar approach": 4, "final approach": 1.5,
+   "on final": 1.5, "above glide*": 3, "below glide*": 3, "voice guidance": 4, "approach guidance": 1.5,
+   "radar measures": 4, "ground radar": 2, "radar": 1
+  },
+  "case_5_gnss_independent_approach": {
+   "gnss": 4, "gps": 3, "gnss-independent": 6, "without gnss": 6, "without gps": 6, "jamming": 3, "autoland": 4,
+   "automatic landing": 5, "automated landing": 5, "automated approach": 2, "automatic approach": 2,
+   "approach guidance": 1.5, "uav": 1.5, "uas": 1.5, "ship": 3, "deck": 4, "integrity": 1.5, "protection level": 4,
+   "alert limit": 4, "lpv": 4, "sbas": 4, "gbas": 4, "rnp": 3, "landing system": 2, "navigation source*": 3
+  },
+  "case_6_flight_inspection_ils_drone": {
+   "ils": 3, "localizer": 4, "localiser": 4, "glide slope": 3, "ddm": 6, "flight inspection": 6, "flight check*": 5,
+   "inspect*": 3, "skyrf": 6, "drone": 2, "papi": 4, "navaid*": 3, "navigation aid*": 3, "calibrat*": 3,
+   "signal in space": 5, "8071": 6, "tolerance*": 2, "mini-approach": 6, "dme": 3, "vor": 3, "pass or fail": 3,
+   "commissioning": 3
+  },
+  "case_7_readback_correlation": {
+   "readback": 6, "read back": 6, "read-back": 6, "hearback": 6, "hear back": 6, "callsign*": 3, "call sign*": 3,
+   "similar call*": 5, "callsign confusion": 6, "correlat*": 3, "wrong aircraft": 5, "voice and surveillance": 5,
+   "speech and radar": 5, "misunderstand*": 3, "miscommunicat*": 4, "human error": 2, "cross-check*": 2,
+   "verif*": 1
+  },
+  "case_8_surveillance_integrity": {
+   "spoof*": 4, "fake": 3, "ghost": 4, "ads-b": 2, "adsb": 2, "mlat": 6, "multilateration": 6, "wam": 5, "tdoa": 5,
+   "authenticat*": 3, "iff": 4, "mode 5": 6, "mode-5": 6, "cyber*": 4, "security": 2, "jamming": 1,
+   "integrity monitoring": 3, "intrusion": 3, "replay*": 3, "l-iesa": 3, "friend or foe": 6, "trustworthy": 2
+  },
+  "case_9_guidance_uplink": {
+   "uplink": 5, "data link": 3, "datalink": 3, "message format": 5, "bits": 2, "protocol": 3, "latency": 3,
+   "update rate": 2, "time to alert": 5, "packet*": 3, "link budget": 3, "bandwidth": 2, "message loss": 5,
+   "messages stop": 5, "comm-a": 4, "vdl": 3, "encoding": 2, "as data": 4, "send the deviation": 4,
+   "data instead of voice": 6, "without voice": 4, "cpdlc": 1
+  }
+ },
+ "always_keep": [
+  "README.md", "docs", "research", "scripts", "templates", "submission",
+  "cases/_common.py", "cases/CATALOG.md", "cases/CATALOG_standards.md", "cases/REVEAL_DAY.md", "cases/FIGURES.md",
+  "cases/UX_AUDIT.md", "cases/triage_keywords.json", "cases/triage_examples",
+  "outputs/report.md", "outputs/advionics.seti.json", "outputs/advionics.tutarlilik.txt", "outputs/ux_denetim.md",
+  "outputs/decoder_vectors.json", "triage_plan.json", "triage_plan.md"
+ ],
+ "case_assets": {
+  "case_1_voice_to_display": ["outputs/F1_wrong_values_vs_snr.*", "outputs/F2_withheld_vs_snr.*",
+                              "outputs/F5_real_asr_threshold.*", "outputs/asr_raw.json", "outputs/asr_sweep.json",
+                              "outputs/cockpit_demo.html", "outputs/cockpit_data.js"],
+  "case_2_lost_comms": ["outputs/F4_comm_state_timeline.*", "outputs/cockpit_demo.html", "outputs/cockpit_data.js"],
+  "case_3_radar_signal_to_display": ["outputs/F3_psr_pd_vs_range.*", "outputs/F6_psr_false_plots.*",
+                                     "outputs/psr_chains.json", "outputs/scope_demo.html", "outputs/scope_data.js"],
+  "case_4_par_talkdown": ["outputs/F7_guidance_needle.*", "outputs/par_talkdown.json", "outputs/par_asr_raw.json",
+                          "outputs/guidance_panel.json"],
+  "case_5_gnss_independent_approach": ["outputs/F7_guidance_needle.*", "outputs/guidance_panel.json"],
+  "case_6_flight_inspection_ils_drone": [],
+  "case_7_readback_correlation": ["outputs/cockpit_demo.html", "outputs/cockpit_data.js"],
+  "case_8_surveillance_integrity": ["outputs/scope_demo.html", "outputs/scope_data.js"],
+  "case_9_guidance_uplink": ["outputs/guidance_panel.json"]
+ }
+}

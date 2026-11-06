@@ -1,0 +1,167 @@
+{
+ "setup_non_design": {
+  "ring_factor": 0.75,
+  "ring_factor_by_role": {
+   "support": 0.75,
+   "load": 1.047
+  },
+  "ring_min_voxels": 2,
+  "boxes_mm": [
+   {
+    "name": "base skin (mounting flange) z 30-46",
+    "min": [
+     160,
+     20,
+     29
+    ],
+    "max": [
+     841,
+     381,
+     46
+    ]
+   }
+  ],
+  "_about": "support rings r 30 -> 52.5 mm (boss O105) over the full plate depth z 30-100; load rings r 30 -> 61.4 mm (= original top edge distance, ligament 31.4 mm) over each lug thickness; base skin = 2 voxel layers (15.6 mm at h 7.8 mm) of the original footprint"
+ },
+ "cases": [
+  "LC1a Fz+97 kN, Fy+24 kN each pin",
+  "LC1b Fz+97 kN, Fy-24 kN each pin",
+  "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+  "LC2 My 2000 N m (1000 per pin bore)",
+  "LC3 LC1a + LC2 (+My) combined [Y]",
+  "LC3 LC1a + LC2 (-My) combined [Y]",
+  "LC3 LC1b + LC2 (+My) combined [Y]",
+  "LC3 LC1b + LC2 (-My) combined [Y]"
+ ],
+ "layouts": [
+  {
+   "T10_elements": 73450,
+   "mesh_size_mm": 10.14,
+   "volume_m3": 0.008019970328632331,
+   "mass_Ti811_kg": 35.08679732806653,
+   "per_case": [
+    {
+     "name": "LC1a Fz+97 kN, Fy+24 kN each pin",
+     "vm_out_MPa": 350.7128179384395,
+     "vm_max_MPa": 389.09952198024325,
+     "disp_mm_300C": 1.3592048330344741,
+     "at_mm": [
+      584,
+      305,
+      110
+     ]
+    },
+    {
+     "name": "LC1b Fz+97 kN, Fy-24 kN each pin",
+     "vm_out_MPa": 291.18447064586456,
+     "vm_max_MPa": 291.18447064586456,
+     "disp_mm_300C": 1.4551438259242344,
+     "at_mm": [
+      564,
+      98,
+      185
+     ]
+    },
+    {
+     "name": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+     "vm_out_MPa": 208.49455708859477,
+     "vm_max_MPa": 384.05661592620305,
+     "disp_mm_300C": 1.6269460578641042,
+     "at_mm": [
+      696,
+      58,
+      80
+     ]
+    },
+    {
+     "name": "LC2 My 2000 N m (1000 per pin bore)",
+     "vm_out_MPa": 24.232347721460222,
+     "vm_max_MPa": 24.232347721460222,
+     "disp_mm_300C": 0.03309429064020099,
+     "at_mm": [
+      574,
+      308,
+      125
+     ]
+    },
+    {
+     "name": "LC3 LC1a + LC2 (+My) combined [Y]",
+     "vm_out_MPa": 349.42348893869695,
+     "vm_max_MPa": 402.64894029352826,
+     "disp_mm_300C": 1.3675106123354626,
+     "at_mm": [
+      584,
+      305,
+      110
+     ]
+    },
+    {
+     "name": "LC3 LC1a + LC2 (-My) combined [Y]",
+     "vm_out_MPa": 352.0658644731004,
+     "vm_max_MPa": 375.5664332513875,
+     "disp_mm_300C": 1.351553235584735,
+     "at_mm": [
+      584,
+      305,
+      110
+     ]
+    },
+    {
+     "name": "LC3 LC1b + LC2 (+My) combined [Y]",
+     "vm_out_MPa": 291.36987513512605,
+     "vm_max_MPa": 299.56666842768414,
+     "disp_mm_300C": 1.4584048845493858,
+     "at_mm": [
+      564,
+      98,
+      185
+     ]
+    },
+    {
+     "name": "LC3 LC1b + LC2 (-My) combined [Y]",
+     "vm_out_MPa": 291.0132691810102,
+     "vm_max_MPa": 291.0132691810102,
+     "disp_mm_300C": 1.4544238061386758,
+     "at_mm": [
+      564,
+      98,
+      185
+     ]
+    }
+   ],
+   "sigma_max_MPa": 352.0658644731004,
+   "sigma_case": "LC3 LC1a + LC2 (-My) combined [Y]",
+   "sigma_at_mm": [
+    584,
+    305,
+    110
+   ],
+   "disp_mm_23C": 1.4138161242839065,
+   "disp_mm_300C": 1.6269460578641042,
+   "disp_case": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+   "util_23C": 0.6967002595114125,
+   "util_300C": 1.0200589451118776,
+   "disp_limit_mm": 1.652525,
+   "allow_vm_300C_MPa": 345.1426666666667,
+   "passes_300C": false,
+   "solve_s": 118.14944729999115,
+   "layout": "topo 41 %",
+   "volfrac": 0.41,
+   "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\official_2026-11-05\\runs\\topo_v2_base_kept_41\\cad\\optimised_41.stl",
+   "stl_info": {
+    "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\official_2026-11-05\\runs\\topo_v2_base_kept_41\\cad\\optimised_41.stl",
+    "triangles": 37028,
+    "volume_mm3": 8019928.0,
+    "level": 0.4775,
+    "target_volume_mm3": 7995252.095999999,
+    "bodies": 1,
+    "watertight": true,
+    "method": "vtk flying edges + Taubin"
+   },
+   "bodies_raw_density": 1,
+   "bodies_kept": 1,
+   "lugs_tied_through_base": true,
+   "x_mirror_symmetry": 0.9505579297245964
+  }
+ ]
+}

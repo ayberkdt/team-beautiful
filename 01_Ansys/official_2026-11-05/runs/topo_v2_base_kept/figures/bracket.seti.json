@@ -1,0 +1,136 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "genel",
+ "hedef": "genel-tek",
+ "ortam": "makale",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {
+  "passing material": {
+   "renk": "#0072b2",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 0
+  },
+  "baseline": {
+   "renk": "#919191",
+   "baglam": true,
+   "isaret": null,
+   "cizgi": "-",
+   "sira": 1
+  },
+  "redesign": {
+   "renk": "#d55e00",
+   "baglam": false,
+   "isaret": "s",
+   "cizgi": "--",
+   "sira": 2
+  },
+  "topo 45 %": {
+   "renk": "#009e73",
+   "baglam": false,
+   "isaret": "^",
+   "cizgi": "-.",
+   "sira": 3
+  },
+  "topo 38 %": {
+   "renk": "#cc79a7",
+   "baglam": false,
+   "isaret": "D",
+   "cizgi": ":",
+   "sira": 4
+  },
+  "topo 33 %": {
+   "renk": "#e69f00",
+   "baglam": false,
+   "isaret": "v",
+   "cizgi": [
+    0,
+    [
+     5,
+     1
+    ]
+   ],
+   "sira": 5
+  }
+ },
+ "nicelikler": {
+  "voxel": {
+   "etiket": "Voxel size",
+   "birim": "mm",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "defl": {
+   "etiket": "Max deformation",
+   "birim": "mm",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "vm": {
+   "etiket": "Peak von Mises",
+   "birim": "MPa",
+   "eksen": "y",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "mass": {
+   "etiket": "Mass",
+   "birim": "kg",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "co2": {
+   "etiket": "CO₂e",
+   "birim": "kg",
+   "eksen": "x",
+   "sinir": null,
+   "olcek": "log",
+   "bicim": null
+  },
+  "iter": {
+   "etiket": "Iteration",
+   "birim": null,
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  },
+  "cnorm": {
+   "etiket": "Relative compliance",
+   "birim": null,
+   "eksen": "y",
+   "sinir": null,
+   "olcek": "log",
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "f2_materials": "f2_materials.dw.json",
+  "f3_eco": "f3_eco.dw.json",
+  "f4_history": "f4_history.dw.json",
+  "f5_shapes": "f5_shapes.dw.json"
+ },
+ "kenar_mm": {
+  "tek": [
+   26.0,
+   11.1,
+   14.2,
+   5.4
+  ]
+ }
+}

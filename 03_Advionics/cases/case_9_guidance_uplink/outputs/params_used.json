@@ -1,0 +1,79 @@
+{
+ "params": {
+  "fields": [
+   [
+    "seq",
+    8,
+    1,
+    false
+   ],
+   [
+    "t_meas_s",
+    16,
+    0.015625,
+    false
+   ],
+   [
+    "range_m",
+    16,
+    1.0,
+    false
+   ],
+   [
+    "el_dev_m",
+    12,
+    0.1,
+    true
+   ],
+   [
+    "az_dev_m",
+    12,
+    0.25,
+    true
+   ],
+   [
+    "valid",
+    1,
+    1,
+    false
+   ],
+   [
+    "quality",
+    3,
+    1,
+    false
+   ],
+   [
+    "spare",
+    4,
+    1,
+    false
+   ]
+  ],
+  "rate_hz": 1.0,
+  "approach_s": 180.0,
+  "timeouts_s": [
+   2.0,
+   3.0,
+   5.0
+  ],
+  "p_loss": [
+   0.001,
+   0.003,
+   0.01,
+   0.03,
+   0.1,
+   0.2,
+   0.3
+  ],
+  "p_loss_design": 0.05,
+  "vertical_alert_limit_m": 35.0,
+  "crc_ber": 0.001,
+  "crc_trials": 20000,
+  "mc_runs": 3000,
+  "demo_timeout_s": 5.0,
+  "demo_p_loss": 0.5,
+  "seed": 0
+ },
+ "overrides": []
+}

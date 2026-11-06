@@ -1,7 +1,7 @@
 """References for the 2026 final-challenge work on the atc task (owned by one parallel session; add entries here only).
 
 Tags in ``note``: "read 2026-11-04" = read from the source by the ATC session itself; "read by agent" = a research
-subagent read it (note in ``research_notes/Advionics ATC/``); "snippet" = search-engine summary only.
+subagent read it (note in ``prev_guess/03_Advionics/comms_kit_2026-11-05/research/``); "snippet" = search-engine summary only.
 """
 from aerokit.references import Reference
 

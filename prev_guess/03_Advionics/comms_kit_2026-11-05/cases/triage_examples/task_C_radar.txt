@@ -1,0 +1,1 @@
+Using primary and secondary surveillance radar, design the processing chain that translates the received radar signal into plots and tracks on the controller's air situation display. Address clutter, false plots, Mode S decoding and the ASTERIX output format.

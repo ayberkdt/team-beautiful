@@ -1,0 +1,43 @@
+{
+ "params": {
+  "own_callsign": "BTL123",
+  "callsign_words": "beetle one two three",
+  "clearances": [
+   "turn left heading two seven zero descend and maintain three thousand feet",
+   "descend and maintain four thousand feet reduce speed one eight zero knots",
+   "climb flight level one two zero",
+   "squawk four six two one",
+   "contact approach one one eight decimal five zero five"
+  ],
+  "p_readback_error": 0.04,
+  "snr_db": [
+   6,
+   10,
+   14,
+   18,
+   22,
+   26,
+   30
+  ],
+  "n_per_snr": 1500,
+  "hi": 0.85,
+  "lo": 0.5,
+  "surveillance_callsigns": [
+   "BTL123",
+   "BTL132",
+   "NVA77",
+   "STU42",
+   "EXA901"
+  ],
+  "heard_callsigns": [
+   "BTL123",
+   "BTL128",
+   "BTL133",
+   "NVA71",
+   "XYZ999"
+  ],
+  "min_similarity": 0.8,
+  "seed": 0
+ },
+ "overrides": []
+}

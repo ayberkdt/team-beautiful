@@ -1,0 +1,7 @@
+set tutarlılığı (4 figür): 0 HATA · 3 UYARI · 0 BİLGİ · SET TUTARLI
+  [UYARI] isaret-boyu        isaret boyu figürden figüre değişiyor — 9 pt: K1_concept_ladder · 14.35 pt: K2_any_aircraft_latch_points
+          → aynı rol aynı kalınlık; vurgu/bağlam farkı figür içinde kalsın  [06 T6: APSStyleGuide §II.S.1 ('consistent line widths'); tolerans datawiz-secimi]
+  [UYARI] cizim-alani-hizasi sunum-tam: çizim alanının sol kenarı figürden figüre 79.4 pt oynuyor — K1_concept_ladder 17.4 mm, K2_any_aircraft_latch_points 29.1 mm, K3_retrofit_process 1.1 mm, K4_lock_sense_architecture 5.6 mm
+          → alt alta duran figürlerde eksenler aynı hizada olsun: S.kenar(*S.kenar_oner()) ile sabit kenar, sonra figürleri yeniden üret  [06 T15: Wilke2019Ch21 §21.2 (paneller hizalı) — figürler arasına genişletme datawiz-secimi]
+  [UYARI] izgara             izgara figürden figüre değişiyor — kategori: K1_concept_ladder, K2_any_aircraft_latch_points · değer: K3_retrofit_process, K4_lock_sense_architecture
+          → aynı tema her figürde: Seti.figur(...)  [06 T6: AIAAFig; ElsevierSizing; Kosslyn2012 (anlamsız görsel değişim)]

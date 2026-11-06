@@ -12,7 +12,7 @@ lighter design and the documents the challenge asks for:
 ``cards``      Ansys Engineering Data (MatML XML) and human-readable material cards
 ``ecoaudit``   Granta-EduPack-style eco audit (material, manufacture, transport, use, end of life)
 ``crosscheck`` Ansys result vs our result agreement table with likely causes of discrepancies
-``pipeline``   one-call driver used by ``scripts/bracket_day.py``
+``pipeline``   one-call driver used by ``01_Ansys/scripts/bracket_day.py``
 
 Every number that comes from literature is tied to :mod:`aerokit.references` with :func:`aerokit.references.cite`.
 """

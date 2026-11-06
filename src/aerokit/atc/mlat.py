@@ -88,12 +88,19 @@ def gdop(p: Sequence[float], stations: np.ndarray) -> float:
     return float(math.sqrt(np.trace(np.linalg.inv(j.T @ np.linalg.inv(_q(len(stations))) @ j))))
 
 
-def adsb_consistency(adsb_position: Sequence[float], fix: MlatFix, k: float = 5.0, floor_m: float = 30.0) -> dict:
+def adsb_consistency(adsb_position: Sequence[float], fix: MlatFix, k: float = 5.0, floor_m: float = 30.0,
+                     adsb_sigma_m: float = 0.0, dims: int | None = None) -> dict:
     """Compare a reported ADS-B position with the MLAT fix. Flag when the Mahalanobis distance exceeds ``k`` (and the
-    distance exceeds ``floor_m``, so a tiny MLAT covariance cannot flag ordinary ADS-B error)."""
-    dvec = np.asarray(adsb_position, float) - fix.position
+    distance exceeds ``floor_m``, so a tiny MLAT covariance cannot flag ordinary ADS-B error).
+
+    ``adsb_sigma_m`` adds the ADS-B report's own noise (σ² per axis) to the MLAT covariance, so honest reports are
+    judged against both uncertainties. ``dims`` compares only the first ``dims`` coordinates (e.g. 2 = horizontal:
+    a ground receiver network fixes height poorly; ADS-B altitude is checked against Mode C/S instead)."""
+    n = len(fix.position) if dims is None else dims
+    dvec = (np.asarray(adsb_position, float) - fix.position)[:n]
+    cov = fix.covariance[:n, :n] + adsb_sigma_m ** 2 * np.eye(n)
     dist = float(np.linalg.norm(dvec))
-    m2 = float(dvec @ np.linalg.solve(fix.covariance, dvec))
+    m2 = float(dvec @ np.linalg.solve(cov, dvec))
     flagged = math.sqrt(m2) > k and dist > floor_m
     return {"distance_m": dist, "mahalanobis": math.sqrt(m2), "flag": flagged,
             "status": "ADS-B POSITION INCONSISTENT WITH MLAT" if flagged else "consistent"}

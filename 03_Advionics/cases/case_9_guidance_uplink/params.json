@@ -1,0 +1,22 @@
+{
+ "case": "case_9_guidance_uplink",
+ "params": {
+  "fields": {"value": [["seq", 8, 1, false], ["t_meas_s", 16, 0.015625, false], ["range_m", 16, 1.0, false],
+                       ["el_dev_m", 12, 0.1, true], ["az_dev_m", 12, 0.25, true], ["valid", 1, 1, false],
+                       ["quality", 3, 1, false], ["spare", 4, 1, false]],
+             "unit": "[name, bits, LSB, signed]", "source": "[Y] uplink.DEFAULT_FORMAT; + 24-bit CRC (Mode S generator, R_1090_riddle [D-ag])"},
+  "rate_hz": {"value": 1.0, "unit": "messages/s", "source": "PAR update <= 1 s (R_par_enri_soumu [D-ag])"},
+  "approach_s": {"value": 180.0, "unit": "s", "source": "[Y] time on final"},
+  "timeouts_s": {"value": [2.0, 3.0, 5.0], "unit": "s", "source": "[Y]; 5 s = atc.guidance stale_after_s and the ~5 s PAR rule [A]"},
+  "p_loss": {"value": [0.001, 0.003, 0.01, 0.03, 0.1, 0.2, 0.3], "unit": "per message", "source": "[Y] independent losses (no burst model)"},
+  "p_loss_design": {"value": 0.05, "unit": "per message", "source": "[Y] design point for the key numbers"},
+  "vertical_alert_limit_m": {"value": 35.0, "unit": "m", "source": "LPV-200 VAL (R_faa_aim_ch1 [D-ag])"},
+  "crc_ber": {"value": 0.001, "unit": "per bit", "source": "[Y]"},
+  "crc_trials": {"value": 20000, "unit": "messages", "source": "[Y]"},
+  "mc_runs": {"value": 3000, "unit": "approaches", "source": "[Y] Monte Carlo check of the exact formula"},
+  "demo_timeout_s": {"value": 5.0, "unit": "s", "source": "[Y] end-to-end GuidancePanel run"},
+  "demo_p_loss": {"value": 0.5, "unit": "per message", "source": "[Y] high, to make the panel annunciate"},
+  "seed": {"value": 0, "unit": "", "source": "[Y]"}
+ },
+ "quick": {"crc_trials": 2000, "mc_runs": 300}
+}

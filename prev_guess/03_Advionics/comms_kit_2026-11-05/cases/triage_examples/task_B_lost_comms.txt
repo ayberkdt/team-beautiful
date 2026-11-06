@@ -1,0 +1,1 @@
+If communication with the tower is lost during the approach, how should the remaining information reach the cockpit display? Define the behaviour when the radio link is degraded or fails completely, including squawk 7600, backup channels such as CPDLC or SATCOM, and what the crew must never be shown.

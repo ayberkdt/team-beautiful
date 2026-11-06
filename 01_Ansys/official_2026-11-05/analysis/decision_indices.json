@@ -1,0 +1,92 @@
+{
+ "S275N": {
+  "name": "Structural steel, S275N, normalized",
+  "rho": 7849.840762716146,
+  "E_GPa": 210.23796041628637,
+  "Fy_min_MPa": 205,
+  "rho_over_E": 37.33788487660789,
+  "rho_over_sqrtE": 541.3838293650812,
+  "rho_over_Fy": 38.29190615959096,
+  "rho_over_fatigue": 40.46309671503168,
+  "price_USD_per_kg": 1.2614277624977184,
+  "life_CO2_per_kg_part": 346.1486345830335,
+  "production_CO2_per_kg": 9.019121425138762,
+  "use_share_pct": 97.34546559916319,
+  "eol_credit_per_kg": 2.2129867709810807,
+  "Tmax": [
+   471,
+   501
+  ],
+  "K1c": [
+   26.4,
+   38.1
+  ],
+  "casting": "Unsuitable",
+  "oxidation_500C": "Acceptable",
+  "scc": "Slightly susceptible",
+  "weldability": "Good",
+  "rel_mass_tie_stiffness": 1.0,
+  "rel_mass_beam_stiffness": 1.0,
+  "rel_mass_strength": 1.0
+ },
+ "Al2618T6": {
+  "name": "Aluminum, 2618, T6",
+  "rho": 2749.836358767554,
+  "E_GPa": 73.97296803562772,
+  "Fy_min_MPa": 320,
+  "rho_over_E": 37.1735301663595,
+  "rho_over_sqrtE": 319.7203853919825,
+  "rho_over_Fy": 8.593238621148606,
+  "rho_over_fatigue": 23.30369795565724,
+  "price_USD_per_kg": 3.2950872522590355,
+  "life_CO2_per_kg_part": 354.1997817449125,
+  "production_CO2_per_kg": 17.070268587017747,
+  "use_share_pct": 95.13275201357175,
+  "eol_credit_per_kg": 9.68908745960475,
+  "Tmax": [
+   250,
+   300
+  ],
+  "K1c": [
+   31,
+   34
+  ],
+  "casting": "Unsuitable",
+  "oxidation_500C": "Unacceptable",
+  "scc": "Highly susceptible",
+  "weldability": "Poor",
+  "rel_mass_tie_stiffness": 0.9955981783437509,
+  "rel_mass_beam_stiffness": 0.5905613874114805,
+  "rel_mass_strength": 0.22441396845939623
+ },
+ "Ti811SA": {
+  "name": "Titanium, near-alpha alloy, Ti-8Al-1Mo-1V, single annealed",
+  "rho": 4374.928570845472,
+  "E_GPa": 123.9637043654311,
+  "Fy_min_MPa": 758,
+  "rho_over_E": 35.292012232456955,
+  "rho_over_sqrtE": 392.93769561904315,
+  "rho_over_Fy": 5.771673576313288,
+  "rho_over_fatigue": 8.270186334301458,
+  "price_USD_per_kg": 24.594714879420742,
+  "life_CO2_per_kg_part": 379.16687551200897,
+  "production_CO2_per_kg": 42.03736235411425,
+  "use_share_pct": 88.86852247970901,
+  "eol_credit_per_kg": 25.050341468407808,
+  "Tmax": [
+   407,
+   455
+  ],
+  "K1c": [
+   65,
+   75
+  ],
+  "casting": "Limited use",
+  "oxidation_500C": "Acceptable",
+  "scc": "Slightly susceptible",
+  "weldability": "Good",
+  "rel_mass_tie_stiffness": 0.945206520109213,
+  "rel_mass_beam_stiffness": 0.7258024239103499,
+  "rel_mass_strength": 0.15072829104559107
+ }
+}

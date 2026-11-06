@@ -138,7 +138,7 @@ def test_risk_register_shape():
 def test_design_json_on_disk_is_consistent():
     from pathlib import Path
 
-    p = Path(__file__).resolve().parents[1] / "studies" / "final_2026" / "venus" / "design.json"
+    p = Path(__file__).resolve().parents[1] / "04_Venus" / "outputs" / "design.json"
     d = json.loads(p.read_text(encoding="utf-8"))
     assert d["schema"] == "venus_rotorcraft_design/1"
     comp = sum(c["mass_kg"] for c in d["vehicle"]["components"])
@@ -194,7 +194,7 @@ def test_heave_damping_and_gust_hold(design):
 def test_design_json_events_are_machine_readable():
     from pathlib import Path
 
-    p = Path(__file__).resolve().parents[1] / "studies" / "final_2026" / "venus" / "design.json"
+    p = Path(__file__).resolve().parents[1] / "04_Venus" / "outputs" / "design.json"
     d = json.loads(p.read_text(encoding="utf-8"))
     ev = d["operations"]["events"]
     assert ev[0]["kind"] == "release" and ev[-1]["kind"] == "end"

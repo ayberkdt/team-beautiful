@@ -1,0 +1,287 @@
+{
+ "created": "2026-11-05T22:25:41",
+ "task_sha1": "3a3f33c609f728d7fe849e91f5c31a45c7788887",
+ "task": "If communication with the tower is lost, how does the voice signal reach the cockpit display? Design the translation chain.",
+ "ranking": [
+  {
+   "case": "case_2_lost_comms",
+   "score": 11.5,
+   "matches": {
+    "if communication": 1,
+    "tower is lost": 1,
+    "is lost": 1,
+    "lost": 1
+   }
+  },
+  {
+   "case": "case_1_voice_to_display",
+   "score": 7.0,
+   "matches": {
+    "voice": 1,
+    "translat*": 1,
+    "cockpit": 1,
+    "display*": 1
+   }
+  },
+  {
+   "case": "case_3_radar_signal_to_display",
+   "score": 0.0,
+   "matches": {}
+  },
+  {
+   "case": "case_4_par_talkdown",
+   "score": 0.0,
+   "matches": {}
+  },
+  {
+   "case": "case_5_gnss_independent_approach",
+   "score": 0.0,
+   "matches": {}
+  },
+  {
+   "case": "case_6_flight_inspection_ils_drone",
+   "score": 0.0,
+   "matches": {}
+  },
+  {
+   "case": "case_7_readback_correlation",
+   "score": 0.0,
+   "matches": {}
+  },
+  {
+   "case": "case_8_surveillance_integrity",
+   "score": 0.0,
+   "matches": {}
+  },
+  {
+   "case": "case_9_guidance_uplink",
+   "score": 0.0,
+   "matches": {}
+  }
+ ],
+ "kept_cases": [
+  "case_1_voice_to_display",
+  "case_2_lost_comms"
+ ],
+ "destination": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\2026-11-05_unused",
+ "move": [
+  {
+   "path": "cases/case_3_radar_signal_to_display",
+   "why": "only used by case_3_radar_signal_to_display"
+  },
+  {
+   "path": "cases/case_4_par_talkdown",
+   "why": "only used by case_4_par_talkdown"
+  },
+  {
+   "path": "cases/case_5_gnss_independent_approach",
+   "why": "only used by case_5_gnss_independent_approach"
+  },
+  {
+   "path": "cases/case_6_flight_inspection_ils_drone",
+   "why": "only used by case_6_flight_inspection_ils_drone"
+  },
+  {
+   "path": "cases/case_7_readback_correlation",
+   "why": "only used by case_7_readback_correlation"
+  },
+  {
+   "path": "cases/case_8_surveillance_integrity",
+   "why": "only used by case_8_surveillance_integrity"
+  },
+  {
+   "path": "cases/case_9_guidance_uplink",
+   "why": "only used by case_9_guidance_uplink"
+  },
+  {
+   "path": "outputs/F3_psr_pd_vs_range.denetim.txt",
+   "why": "only used by case_3_radar_signal_to_display"
+  },
+  {
+   "path": "outputs/F3_psr_pd_vs_range.dw.json",
+   "why": "only used by case_3_radar_signal_to_display"
+  },
+  {
+   "path": "outputs/F3_psr_pd_vs_range.pdf",
+   "why": "only used by case_3_radar_signal_to_display"
+  },
+  {
+   "path": "outputs/F3_psr_pd_vs_range.png",
+   "why": "only used by case_3_radar_signal_to_display"
+  },
+  {
+   "path": "outputs/F6_psr_false_plots.denetim.txt",
+   "why": "only used by case_3_radar_signal_to_display"
+  },
+  {
+   "path": "outputs/F6_psr_false_plots.dw.json",
+   "why": "only used by case_3_radar_signal_to_display"
+  },
+  {
+   "path": "outputs/F6_psr_false_plots.pdf",
+   "why": "only used by case_3_radar_signal_to_display"
+  },
+  {
+   "path": "outputs/F6_psr_false_plots.png",
+   "why": "only used by case_3_radar_signal_to_display"
+  },
+  {
+   "path": "outputs/F7_guidance_needle.denetim.txt",
+   "why": "only used by case_4_par_talkdown, case_5_gnss_independent_approach"
+  },
+  {
+   "path": "outputs/F7_guidance_needle.dw.json",
+   "why": "only used by case_4_par_talkdown, case_5_gnss_independent_approach"
+  },
+  {
+   "path": "outputs/F7_guidance_needle.pdf",
+   "why": "only used by case_4_par_talkdown, case_5_gnss_independent_approach"
+  },
+  {
+   "path": "outputs/F7_guidance_needle.png",
+   "why": "only used by case_4_par_talkdown, case_5_gnss_independent_approach"
+  },
+  {
+   "path": "outputs/guidance_panel.json",
+   "why": "only used by case_4_par_talkdown, case_5_gnss_independent_approach, case_9_guidance_uplink"
+  },
+  {
+   "path": "outputs/par_asr_raw.json",
+   "why": "only used by case_4_par_talkdown"
+  },
+  {
+   "path": "outputs/par_talkdown.json",
+   "why": "only used by case_4_par_talkdown"
+  },
+  {
+   "path": "outputs/psr_chains.json",
+   "why": "only used by case_3_radar_signal_to_display"
+  },
+  {
+   "path": "outputs/scope_data.js",
+   "why": "only used by case_3_radar_signal_to_display, case_8_surveillance_integrity"
+  },
+  {
+   "path": "outputs/scope_demo.html",
+   "why": "only used by case_3_radar_signal_to_display, case_8_surveillance_integrity"
+  }
+ ],
+ "stay": [
+  {
+   "path": "cases/case_1_voice_to_display",
+   "why": "used by case_1_voice_to_display"
+  },
+  {
+   "path": "cases/case_2_lost_comms",
+   "why": "used by case_2_lost_comms"
+  },
+  {
+   "path": "outputs/F1_wrong_values_vs_snr.denetim.txt",
+   "why": "used by case_1_voice_to_display"
+  },
+  {
+   "path": "outputs/F1_wrong_values_vs_snr.dw.json",
+   "why": "used by case_1_voice_to_display"
+  },
+  {
+   "path": "outputs/F1_wrong_values_vs_snr.pdf",
+   "why": "used by case_1_voice_to_display"
+  },
+  {
+   "path": "outputs/F1_wrong_values_vs_snr.png",
+   "why": "used by case_1_voice_to_display"
+  },
+  {
+   "path": "outputs/F2_withheld_vs_snr.denetim.txt",
+   "why": "used by case_1_voice_to_display"
+  },
+  {
+   "path": "outputs/F2_withheld_vs_snr.dw.json",
+   "why": "used by case_1_voice_to_display"
+  },
+  {
+   "path": "outputs/F2_withheld_vs_snr.pdf",
+   "why": "used by case_1_voice_to_display"
+  },
+  {
+   "path": "outputs/F2_withheld_vs_snr.png",
+   "why": "used by case_1_voice_to_display"
+  },
+  {
+   "path": "outputs/F4_comm_state_timeline.denetim.txt",
+   "why": "used by case_2_lost_comms"
+  },
+  {
+   "path": "outputs/F4_comm_state_timeline.dw.json",
+   "why": "used by case_2_lost_comms"
+  },
+  {
+   "path": "outputs/F4_comm_state_timeline.pdf",
+   "why": "used by case_2_lost_comms"
+  },
+  {
+   "path": "outputs/F4_comm_state_timeline.png",
+   "why": "used by case_2_lost_comms"
+  },
+  {
+   "path": "outputs/F5_real_asr_threshold.denetim.txt",
+   "why": "used by case_1_voice_to_display"
+  },
+  {
+   "path": "outputs/F5_real_asr_threshold.dw.json",
+   "why": "used by case_1_voice_to_display"
+  },
+  {
+   "path": "outputs/F5_real_asr_threshold.pdf",
+   "why": "used by case_1_voice_to_display"
+  },
+  {
+   "path": "outputs/F5_real_asr_threshold.png",
+   "why": "used by case_1_voice_to_display"
+  },
+  {
+   "path": "outputs/asr_raw.json",
+   "why": "used by case_1_voice_to_display"
+  },
+  {
+   "path": "outputs/asr_sweep.json",
+   "why": "used by case_1_voice_to_display"
+  },
+  {
+   "path": "outputs/cockpit_data.js",
+   "why": "used by case_1_voice_to_display, case_2_lost_comms"
+  },
+  {
+   "path": "outputs/cockpit_demo.html",
+   "why": "used by case_1_voice_to_display, case_2_lost_comms"
+  },
+  {
+   "path": "README.md",
+   "why": "shared (not case-specific)"
+  },
+  {
+   "path": "docs",
+   "why": "shared (not case-specific)"
+  },
+  {
+   "path": "research",
+   "why": "shared (not case-specific)"
+  },
+  {
+   "path": "scripts",
+   "why": "shared (not case-specific)"
+  },
+  {
+   "path": "templates",
+   "why": "shared (not case-specific)"
+  },
+  {
+   "path": "triage_plan.json",
+   "why": "shared (not case-specific)"
+  },
+  {
+   "path": "triage_plan.md",
+   "why": "shared (not case-specific)"
+  }
+ ]
+}

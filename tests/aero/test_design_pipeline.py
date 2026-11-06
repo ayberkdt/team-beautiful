@@ -14,7 +14,7 @@ from aerokit.units import UnitError
 from aerokit.verification import check, check_true, expect_error
 
 REQ = example_path("design", "ansys_2023_requirements.json")
-DOC04 = "docs/04_2023_example_solution.md §1 (aerokit sizing raymer, 2026-10-25)"
+DOC04 = "prev_guess/01_Ansys/docs/04_2023_example_solution.md §1 (aerokit sizing raymer, 2026-10-25)"
 #: docs/04 predates the power-weight coupling; it is reproduced with the coupling switched off
 REHEARSAL = {"power_weight_coupling": "off"}
 

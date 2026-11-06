@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="493.228346pt" height="233.574803pt" viewBox="0 0 493.228346 233.574803" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-05T14:44:29.776677</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>datawiz</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 233.574803 
+L 493.228346 233.574803 
+L 493.228346 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 0 20.37901 
+L 493.228346 20.37901 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #222222; stroke-width: 0.9"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 270.935669 27.433282 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #25458f; stroke-width: 1.2; stroke-linecap: round"/>
+    <defs>
+     <path id="m7cd1ed5ee3" d="M 0 2 
+C 0.530406 2 1.03916 1.789267 1.414214 1.414214 
+C 1.789267 1.03916 2 0.530406 2 0 
+C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214 
+C 1.03916 -1.789267 0.530406 -2 0 -2 
+C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214 
+C -1.789267 -1.03916 -2 -0.530406 -2 0 
+C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214 
+C -1.03916 1.789267 -0.530406 2 0 2 
+z
+" style="stroke: #000000; stroke-opacity: 0"/>
+    </defs>
+    <g clip-path="url(#paf2706ea2c)">
+     <use xlink:href="#m7cd1ed5ee3" x="270.935669" y="27.433282" style="fill: #077b7c; stroke: #000000; stroke-opacity: 0"/>
+    </g>
+   </g>
+   <g id="line2d_3">
+    <path d="M 346.516063 27.433282 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #aa2d37; stroke-width: 1.2; stroke-linecap: round"/>
+    <defs>
+     <path id="meb4c41d61c" d="M -2.350243 -1.041559 
+Q -2.578878 -1.270194 -2.350243 -1.498829 
+L -1.498829 -2.350243 
+Q -1.270194 -2.578878 -1.041559 -2.350243 
+L -0.228635 -1.537319 
+Q 0 -1.308684 0.228635 -1.537319 
+L 1.041559 -2.350243 
+Q 1.270194 -2.578878 1.498829 -2.350243 
+L 2.350243 -1.498829 
+Q 2.578878 -1.270194 2.350243 -1.041559 
+L 1.537319 -0.228635 
+Q 1.308684 -0 1.537319 0.228635 
+L 2.350243 1.041559 
+Q 2.578878 1.270194 2.350243 1.498829 
+L 1.498829 2.350243 
+Q 1.270194 2.578878 1.041559 2.350243 
+L 0.228635 1.537319 
+Q -0 1.308684 -0.228635 1.537319 
+L -1.041559 2.350243 
+Q -1.270194 2.578878 -1.498829 2.350243 
+L -2.350243 1.498829 
+Q -2.578878 1.270194 -2.350243 1.041559 
+L -1.537319 0.228635 
+Q -1.308684 0 -1.537319 -0.228635 
+z
+" style="stroke: #000000; stroke-opacity: 0"/>
+    </defs>
+    <g clip-path="url(#paf2706ea2c)">
+     <use xlink:href="#meb4c41d61c" x="346.516063" y="27.433282" style="fill: #aa2d37; stroke: #000000; stroke-opacity: 0"/>
+    </g>
+   </g>
+   <g id="line2d_4">
+    <path d="M 423.866457 27.433282 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #077b7c; stroke-width: 1.2; stroke-linecap: round"/>
+    <g clip-path="url(#paf2706ea2c)">
+     <use xlink:href="#m7cd1ed5ee3" x="423.866457" y="27.433282" style="fill: #077b7c; stroke: #000000; stroke-opacity: 0"/>
+    </g>
+   </g>
+   <g id="line2d_5">
+    <path d="M 280.325669 43.109444 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #bb7b21; stroke-width: 1.2; stroke-linecap: round"/>
+    <g clip-path="url(#paf2706ea2c)">
+     <use xlink:href="#m7cd1ed5ee3" x="280.325669" y="43.109444" style="fill: #077b7c; stroke: #000000; stroke-opacity: 0"/>
+    </g>
+   </g>
+   <g id="line2d_6">
+    <path d="M 356.776063 43.109444 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #643e64; stroke-width: 1.2; stroke-linecap: round"/>
+    <g clip-path="url(#paf2706ea2c)">
+     <use xlink:href="#m7cd1ed5ee3" x="356.776063" y="43.109444" style="fill: #077b7c; stroke: #000000; stroke-opacity: 0"/>
+    </g>
+   </g>
+   <g id="line2d_7">
+    <path d="M 433.226457 43.109444 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #707d41; stroke-width: 1.2; stroke-linecap: round"/>
+    <g clip-path="url(#paf2706ea2c)">
+     <use xlink:href="#m7cd1ed5ee3" x="433.226457" y="43.109444" style="fill: #077b7c; stroke: #000000; stroke-opacity: 0"/>
+    </g>
+   </g>
+   <g id="line2d_8">
+    <path d="M 275.465669 58.785605 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #25458f; stroke-width: 1.2; stroke-linecap: round"/>
+    <g clip-path="url(#paf2706ea2c)">
+     <use xlink:href="#m7cd1ed5ee3" x="275.465669" y="58.785605" style="fill: #077b7c; stroke: #000000; stroke-opacity: 0"/>
+    </g>
+   </g>
+   <g id="line2d_9">
+    <path d="M 351.886063 58.785605 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #aa2d37; stroke-width: 1.2; stroke-linecap: round"/>
+    <g clip-path="url(#paf2706ea2c)">
+     <use xlink:href="#m7cd1ed5ee3" x="351.886063" y="58.785605" style="fill: #077b7c; stroke: #000000; stroke-opacity: 0"/>
+    </g>
+   </g>
+   <g id="line2d_10">
+    <path d="M 428.336457 58.785605 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #077b7c; stroke-width: 1.2; stroke-linecap: round"/>
+    <g clip-path="url(#paf2706ea2c)">
+     <use xlink:href="#m7cd1ed5ee3" x="428.336457" y="58.785605" style="fill: #077b7c; stroke: #000000; stroke-opacity: 0"/>
+    </g>
+   </g>
+   <g id="line2d_11">
+    <path d="M 0 66.623685 
+L 493.228346 66.623685 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #c8c8c8; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 347.956063 74.461766 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #bb7b21; stroke-width: 1.2; stroke-linecap: round"/>
+    <g clip-path="url(#paf2706ea2c)">
+     <use xlink:href="#meb4c41d61c" x="347.956063" y="74.461766" style="fill: #aa2d37; stroke: #000000; stroke-opacity: 0"/>
+    </g>
+   </g>
+   <g id="line2d_13">
+    <path d="M 0 113.652169 
+L 493.228346 113.652169 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #c8c8c8; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 0 160.680653 
+L 493.228346 160.680653 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #c8c8c8; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 335.986063 168.518734 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #643e64; stroke-width: 1.2; stroke-linecap: round"/>
+    <g clip-path="url(#paf2706ea2c)">
+     <use xlink:href="#meb4c41d61c" x="335.986063" y="168.518734" style="fill: #aa2d37; stroke: #000000; stroke-opacity: 0"/>
+    </g>
+   </g>
+   <g id="line2d_16">
+    <path d="M 354.226063 184.194895 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #707d41; stroke-width: 1.2; stroke-linecap: round"/>
+    <g clip-path="url(#paf2706ea2c)">
+     <use xlink:href="#meb4c41d61c" x="354.226063" y="184.194895" style="fill: #aa2d37; stroke: #000000; stroke-opacity: 0"/>
+    </g>
+   </g>
+   <g id="line2d_17">
+    <path d="M 344.506063 199.871056 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #25458f; stroke-width: 1.2; stroke-linecap: round"/>
+    <g clip-path="url(#paf2706ea2c)">
+     <use xlink:href="#meb4c41d61c" x="344.506063" y="199.871056" style="fill: #aa2d37; stroke: #000000; stroke-opacity: 0"/>
+    </g>
+   </g>
+   <g id="line2d_18">
+    <path d="M 0 207.709137 
+L 493.228346 207.709137 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #222222; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_19">
+    <path d="M 0 224.169106 
+L 493.228346 224.169106 
+" clip-path="url(#paf2706ea2c)" style="fill: none; stroke: #222222; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #222222; font: 700 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="0" y="14.07884" transform="rotate(-0 0 14.07884)">Criterion</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #222222; font: 700 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="162.765354" y="14.07884" transform="rotate(-0 162.765354 14.07884)">Unit · source</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #222222; font: 700 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="293.470866" y="14.07884" transform="rotate(-0 293.470866 14.07884)">S275N</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #8a5a14; font: 700 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="369.92126" y="14.07884" transform="rotate(-0 369.92126 14.07884)">Al 2618-T6</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #25458f; font: 700 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="446.371654" y="14.07884" transform="rotate(-0 446.371654 14.07884)">Ti-8Al-1Mo-1V</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="0" y="29.714923" transform="rotate(-0 0 29.714923)">Max. service temperature &gt; 300 °C</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #5a5a5a; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="162.765354" y="29.714923" transform="rotate(-0 162.765354 29.714923)">°C · p.9</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="293.470866" y="29.714923" transform="rotate(-0 293.470866 29.714923)">471–501</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #aa2d37; font: 700 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="369.92126" y="29.755001" transform="rotate(-0 369.92126 29.755001)">250–300</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="446.371654" y="29.714923" transform="rotate(-0 446.371654 29.714923)">407–455</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="0" y="45.391084" transform="rotate(-0 0 45.391084)">Castable or 3-D printable</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #5a5a5a; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="162.765354" y="45.219522" transform="rotate(-0 162.765354 45.219522)">stage 2 · p.5</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="293.470866" y="45.354522" transform="rotate(-0 293.470866 45.354522)">yes</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="369.92126" y="45.354522" transform="rotate(-0 369.92126 45.354522)">yes</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="446.371654" y="45.354522" transform="rotate(-0 446.371654 45.354522)">yes</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="0" y="60.981464" transform="rotate(-0 0 60.981464)">Fracture toughness ≥ 10</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #5a5a5a; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="162.765354" y="61.067245" transform="rotate(-0 162.765354 61.067245)">MPa·m½ · p.9</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="293.470866" y="61.067245" transform="rotate(-0 293.470866 61.067245)">26–38</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="369.92126" y="61.067245" transform="rotate(-0 369.92126 61.067245)">31–34</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="446.371654" y="61.067245" transform="rotate(-0 446.371654 61.067245)">65–75</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="0" y="76.743407" transform="rotate(-0 0 76.743407)">Allowable stress at 300 °C</text>
+   </g>
+   <g id="text_22">
+    <text style="fill: #5a5a5a; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="162.765354" y="76.715985" transform="rotate(-0 162.765354 76.715985)">MPa · σy/1.5</text>
+   </g>
+   <g id="text_23">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="293.470866" y="76.743407" transform="rotate(-0 293.470866 76.743407)">107</text>
+   </g>
+   <g id="text_24">
+    <text style="fill: #aa2d37; font: 700 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="369.92126" y="76.783485" transform="rotate(-0 369.92126 76.783485)">no data</text>
+   </g>
+   <g id="text_25">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="446.371654" y="76.743407" transform="rotate(-0 446.371654 76.743407)">345</text>
+   </g>
+   <g id="text_26">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="0" y="92.333787" transform="rotate(-0 0 92.333787)">Young's modulus at 23 °C</text>
+   </g>
+   <g id="text_27">
+    <text style="fill: #5a5a5a; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="162.765354" y="92.419568" transform="rotate(-0 162.765354 92.419568)">GPa · p.8</text>
+   </g>
+   <g id="text_28">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="293.470866" y="92.419568" transform="rotate(-0 293.470866 92.419568)">200–221</text>
+   </g>
+   <g id="text_29">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="369.92126" y="92.419568" transform="rotate(-0 369.92126 92.419568)">72–76</text>
+   </g>
+   <g id="text_30">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="446.371654" y="92.419568" transform="rotate(-0 446.371654 92.419568)">121–127</text>
+   </g>
+   <g id="text_31">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="0" y="108.059167" transform="rotate(-0 0 108.059167)">Density</text>
+   </g>
+   <g id="text_32">
+    <text style="fill: #5a5a5a; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="162.765354" y="108.414948" transform="rotate(-0 162.765354 108.414948)">kg/m³ · p.8</text>
+   </g>
+   <g id="text_33">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="293.470866" y="108.095729" transform="rotate(-0 293.470866 108.095729)">7800–7900</text>
+   </g>
+   <g id="text_34">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="369.92126" y="108.095729" transform="rotate(-0 369.92126 108.095729)">2720–2780</text>
+   </g>
+   <g id="text_35">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="446.371654" y="108.095729" transform="rotate(-0 446.371654 108.095729)">4350–4400</text>
+   </g>
+   <g id="text_36">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="0" y="123.771891" transform="rotate(-0 0 123.771891)">Price</text>
+   </g>
+   <g id="text_37">
+    <text style="fill: #5a5a5a; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="162.765354" y="123.686109" transform="rotate(-0 162.765354 123.686109)">USD/kg · p.8</text>
+   </g>
+   <g id="text_38">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="293.470866" y="123.771891" transform="rotate(-0 293.470866 123.771891)">1.0–1.6</text>
+   </g>
+   <g id="text_39">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="369.92126" y="123.771891" transform="rotate(-0 369.92126 123.771891)">3.1–3.5</text>
+   </g>
+   <g id="text_40">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="446.371654" y="123.771891" transform="rotate(-0 446.371654 123.771891)">23–26</text>
+   </g>
+   <g id="text_41">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="0" y="139.452271" transform="rotate(-0 0 139.452271)">Production CO₂ (virgin + powder)</text>
+   </g>
+   <g id="text_42">
+    <text style="fill: #5a5a5a; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="162.765354" y="139.362271" transform="rotate(-0 162.765354 139.362271)">kg/kg · p.11–12</text>
+   </g>
+   <g id="text_43">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="293.470866" y="139.448052" transform="rotate(-0 293.470866 139.448052)">9</text>
+   </g>
+   <g id="text_44">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="369.92126" y="139.448052" transform="rotate(-0 369.92126 139.448052)">17</text>
+   </g>
+   <g id="text_45">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="446.371654" y="139.448052" transform="rotate(-0 446.371654 139.448052)">42</text>
+   </g>
+   <g id="text_46">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="0" y="155.092573" transform="rotate(-0 0 155.092573)">Life-cycle CO₂ per kg of part</text>
+   </g>
+   <g id="text_47">
+    <text style="fill: #5a5a5a; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="162.765354" y="155.038432" transform="rotate(-0 162.765354 155.038432)">kg/kg · card</text>
+   </g>
+   <g id="text_48">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="293.470866" y="155.124213" transform="rotate(-0 293.470866 155.124213)">346</text>
+   </g>
+   <g id="text_49">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="369.92126" y="155.124213" transform="rotate(-0 369.92126 155.124213)">354</text>
+   </g>
+   <g id="text_50">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="446.371654" y="155.124213" transform="rotate(-0 446.371654 155.124213)">379</text>
+   </g>
+   <g id="text_51">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="0" y="170.800374" transform="rotate(-0 0 170.800374)">Oxidation at 500 °C</text>
+   </g>
+   <g id="text_52">
+    <text style="fill: #5a5a5a; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="162.765354" y="170.800374" transform="rotate(-0 162.765354 170.800374)">p.11</text>
+   </g>
+   <g id="text_53">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="293.470866" y="170.800374" transform="rotate(-0 293.470866 170.800374)">acceptable</text>
+   </g>
+   <g id="text_54">
+    <text style="fill: #aa2d37; font: 700 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="369.92126" y="170.844671" transform="rotate(-0 369.92126 170.844671)">unacceptable</text>
+   </g>
+   <g id="text_55">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="446.371654" y="170.800374" transform="rotate(-0 446.371654 170.800374)">acceptable</text>
+   </g>
+   <g id="text_56">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="0" y="186.390754" transform="rotate(-0 0 186.390754)">Stress-corrosion cracking</text>
+   </g>
+   <g id="text_57">
+    <text style="fill: #5a5a5a; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="162.765354" y="186.476536" transform="rotate(-0 162.765354 186.476536)">p.11</text>
+   </g>
+   <g id="text_58">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="293.470866" y="186.390754" transform="rotate(-0 293.470866 186.390754)">slight</text>
+   </g>
+   <g id="text_59">
+    <text style="fill: #aa2d37; font: 700 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="369.92126" y="186.499036" transform="rotate(-0 369.92126 186.499036)">high</text>
+   </g>
+   <g id="text_60">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="446.371654" y="186.390754" transform="rotate(-0 446.371654 186.390754)">slight</text>
+   </g>
+   <g id="text_61">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="0" y="202.066916" transform="rotate(-0 0 202.066916)">Sourcing risk</text>
+   </g>
+   <g id="text_62">
+    <text style="fill: #5a5a5a; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="162.765354" y="202.152697" transform="rotate(-0 162.765354 202.152697)">p.10</text>
+   </g>
+   <g id="text_63">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="293.470866" y="202.152697" transform="rotate(-0 293.470866 202.152697)">low</text>
+   </g>
+   <g id="text_64">
+    <text style="fill: #aa2d37; font: 700 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="369.92126" y="202.175197" transform="rotate(-0 369.92126 202.175197)">very high</text>
+   </g>
+   <g id="text_65">
+    <text style="fill: #222222; font: 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="446.371654" y="202.152697" transform="rotate(-0 446.371654 202.152697)">medium</text>
+   </g>
+   <g id="text_66">
+    <text style="fill: #222222; font: 700 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: start" x="0" y="217.868936" transform="rotate(-0 0 217.868936)">Verdict</text>
+   </g>
+   <g id="text_67">
+    <text style="fill: #222222; font: 700 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="293.470866" y="217.868936" transform="rotate(-0 293.470866 217.868936)">Reference</text>
+   </g>
+   <g id="text_68">
+    <text style="fill: #8a5a14; font: 700 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="369.92126" y="217.868936" transform="rotate(-0 369.92126 217.868936)">Eliminated</text>
+   </g>
+   <g id="text_69">
+    <text style="fill: #25458f; font: 700 9px 'Source Sans 3', 'Arial', 'Helvetica', 'Liberation Sans', 'Nimbus Sans', 'DejaVu Sans', sans-serif; text-anchor: middle" x="446.371654" y="217.868936" transform="rotate(-0 446.371654 217.868936)">Selected</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="paf2706ea2c">
+   <rect x="0" y="0" width="493.228346" height="233.574803"/>
+  </clipPath>
+ </defs>
+</svg>

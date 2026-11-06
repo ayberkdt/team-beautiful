@@ -1,0 +1,1 @@
+Automate the talk-down of a precision approach radar: the ground radar measures the aircraft position relative to the glide path and the guidance must reach the pilot. What happens if the voice channel fails on final?

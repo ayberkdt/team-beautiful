@@ -1,0 +1,568 @@
+{
+ "_about": "Inputs for the feedback-element trade-off (02_EASA/scripts/easa_tradeoffs.py, model src/aerokit/canopy/cues.py). Scope rule (user, 5 Nov 2026): alert system only; the latch itself is not changed, so no powered lock or latch fix. Every probability is a triangular distribution [min, mode, max]; the mode is the central case. Tags: D-ag = read at source by a research subagent (note named), D = re-read by the main session (R0_spot_checks round 4), Y = our judgement. The sensing side (hazard rates, pilot-check misses, channel rates, nuisance rate) comes from 02_EASA/inputs/inputs.json unchanged.",
+ "conditions": {
+  "_note": "Operating condition at the take-off decision (throttle forward to rotation). Weights are our judgement [Y]; the high-workload share is swept in the uncertainty run.",
+  "normal": {
+   "weight": 0.74,
+   "source": "routine take-off",
+   "tag": "Y"
+  },
+  "busy": {
+   "weight": 0.25,
+   "source": "crosswind, traffic, radio, distraction; Callan 2018 real-flight high-workload phases (R6 S7) show what 'busy' does to an aural cue",
+   "tag": "Y"
+  },
+  "no_audio": {
+   "weight": 0.01,
+   "source": "headset unplugged or audio path failed at take-off; R7-aural E17-18",
+   "tag": "Y"
+  }
+ },
+ "cues": {
+  "light": {
+   "label": "Red flashing lamp, top centre (dedicated, 4 Hz)",
+   "p_detect": {
+    "normal": [
+     0.7,
+     0.85,
+     0.95
+    ],
+    "busy": [
+     0.35,
+     0.55,
+     0.75
+    ],
+    "no_audio": [
+     0.7,
+     0.85,
+     0.95
+    ]
+   },
+   "source": "Rear-seat lamp sits ~25-40 deg off the line of sight on the take-off roll (R7-visual design implication 2, not measured); ~14 % missed already at 15 deg (Walters 2016, abstract, R7-visual); AC 23.1311-1C Note 4 allows up to 35 deg only with a unique aural tone [D]. Busy value set near the aural take-off-roll row because inattentional blindness and deafness share one attention bottleneck [Y].",
+   "tag": "Y"
+  },
+  "efis_message": {
+   "label": "EFIS crew-alert message (CANOPY OPEN on the PFD, flashing red at power)",
+   "p_detect": {
+    "normal": [
+     0.65,
+     0.8,
+     0.92
+    ],
+    "busy": [
+     0.3,
+     0.5,
+     0.7
+    ],
+    "no_audio": [
+     0.65,
+     0.8,
+     0.92
+    ]
+   },
+   "source": "G3X Touch 'Canopy Closed' function: solid yellow, flashing red at power or airborne (G3X IM Rev AZ p. 30-214) [D]. Text on a busy PFD among other messages; head-down display while the pilot looks out [Y]; slightly below the dedicated lamp.",
+   "tag": "D+Y"
+  },
+  "voice": {
+   "label": "Voice 'CANOPY, CANOPY' in the headset (unswitched alert input)",
+   "p_detect": {
+    "normal": [
+     0.85,
+     0.93,
+     0.98
+    ],
+    "busy": [
+     0.4,
+     0.62,
+     0.85
+    ],
+    "no_audio": [
+     0.0,
+     0.02,
+     0.1
+    ]
+   },
+   "source": "R7-aural §F table: run-up 0.93 (0.85-0.98), take-off roll 0.62 (0.40-0.85) from Callan 2018 real DR400 61.9 % hit (R6 S7, full text) and Dehais 2014/2019; headset lost 0.02. Level +15-25 dB above masked threshold, 1-4 kHz (Patterson CAA 82017) [D].",
+   "tag": "D-ag+Y"
+  },
+  "tone": {
+   "label": "Generic alert tone (EFIS tone, no words)",
+   "p_detect": {
+    "normal": [
+     0.8,
+     0.9,
+     0.97
+    ],
+    "busy": [
+     0.35,
+     0.58,
+     0.8
+    ],
+    "no_audio": [
+     0.0,
+     0.02,
+     0.1
+    ]
+   },
+   "source": "As voice, minus identification: a generic tone must be matched to its meaning and can be confused with stall/gear tones (R7-aural design note 13) [Y].",
+   "tag": "Y"
+  },
+  "shaker": {
+   "label": "Throttle-knob vibration, pulsed 150/100 ms x3, medium intensity",
+   "p_detect": {
+    "normal": [
+     0.82,
+     0.91,
+     0.96
+    ],
+    "busy": [
+     0.75,
+     0.86,
+     0.94
+    ],
+    "no_audio": [
+     0.7,
+     0.82,
+     0.92
+    ]
+   },
+   "source": "R7-haptic Monte Carlo table: P(hand on knob, take-off) 0.95-0.99 x P(feel | >= 5 m/s2 rms) 0.95-0.99 x P(correct interpretation) 0.95-0.99 with voice, 0.80-0.95 alone (no_audio row). Workload penalty smaller than for audio: tactile +53 ms vs auditory +148 ms (Mohebbi 2009, abstract). Laboratory and driving data moved to a cockpit.",
+   "tag": "D-ag+Y"
+  },
+  "taxi_chime": {
+   "label": "One soft chime + amber in taxi (earlier chance to notice)",
+   "p_detect": {
+    "normal": [
+     0.3,
+     0.5,
+     0.7
+    ],
+    "busy": [
+     0.15,
+     0.3,
+     0.5
+    ],
+    "no_audio": [
+     0.1,
+     0.2,
+     0.35
+    ]
+   },
+   "source": "Advisory heard (0.96, R7-aural) but the canopy is often open on purpose in taxi, so the amber state carries little new information until the canopy is closed; counted as the chance that the pilot acts on the amber after closing [Y].",
+   "tag": "Y"
+  },
+  "belt": {
+   "label": "Lap-belt vibration tactor, pulsed 150/100 ms x3, medium intensity",
+   "p_detect": {
+    "normal": [
+     0.78,
+     0.87,
+     0.94
+    ],
+    "busy": [
+     0.72,
+     0.82,
+     0.92
+    ],
+    "no_audio": [
+     0.64,
+     0.78,
+     0.9
+    ]
+   },
+   "source": "R7-haptic MC table: P(feel | lap-belt tactor) 0.85-0.95 [Y] x P(correct interpretation) 0.95-0.99 with voice, 0.80-0.95 alone; always in contact (no hand-on-lever term). Waist RT = hand RT (843 vs 841 ms) and fewer wrong actions at high intensity (10.9 % vs 22.3 %), Meng et al. 2015 (R7); waist is the quietest body site on a motorcycle (Kiss et al. CHI 2018, R10). Masking by whole-body engine vibration not measured: lower bounds widened.",
+   "tag": "D-ag+Y"
+  }
+ },
+ "barriers": {
+  "gate_release": {
+   "label": "Ground take-off gate, separate guarded release, reason shown, override logged",
+   "p_override_distrust": [
+    0.2,
+    0.45,
+    0.8
+   ],
+   "p_override_trust": [
+    0.01,
+    0.03,
+    0.1
+   ],
+   "active_in_air": false,
+   "p_new_hazard_engine_loss": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "source": "R7-interlock MC table: override of a true alert 0.01-0.15 (high trust) and 0.20-0.80, mode 0.45 (low trust: G-OALB dismissed a true alert after nuisance; G-IV PIC pressed past the stop; HVBG ~37 % respondents' estimate [D]). Separate and distinct operation (FAA, G-IV report) [D-ag]. Blocks forward travel only, never in the air: no engine-loss mode.",
+   "tag": "D-ag+Y"
+  },
+  "gate_push": {
+   "label": "Ground take-off gate, simple 50 N push-through",
+   "p_override_distrust": [
+    0.6,
+    0.8,
+    0.95
+   ],
+   "p_override_trust": [
+    0.02,
+    0.05,
+    0.15
+   ],
+   "active_in_air": false,
+   "p_new_hazard_engine_loss": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "source": "G-IV: the throttle went 3-4 times past the stop and the pilot pushed on (NTSB AAR15-03 pp. vii, 23-25, 34, R7-interlock #18) [D-ag]. A push-through needs no decision, so distrust converts to override easily [Y].",
+   "tag": "D-ag+Y"
+  },
+  "esd_ground": {
+   "label": "Automatic engine shut-down on the ground (ignition cut, restart to override)",
+   "p_override_distrust": [
+    0.1,
+    0.3,
+    0.6
+   ],
+   "p_override_trust": [
+    0.0,
+    0.01,
+    0.05
+   ],
+   "active_in_air": false,
+   "p_new_hazard_engine_loss": [
+    1e-07,
+    1e-06,
+    1e-05
+   ],
+   "source": "Override = restart and go; more effort than a gate release [Y]. New hazard: a logic or air/ground-sensing fault cuts the engine in the air (R7-interlock option C: 'any logic fault in air = option E'); per-flight probability is our judgement [Y].",
+   "tag": "Y"
+  },
+  "esd_air": {
+   "label": "Automatic engine shut-down also in flight",
+   "p_override_distrust": [
+    0.1,
+    0.3,
+    0.6
+   ],
+   "p_override_trust": [
+    0.0,
+    0.01,
+    0.05
+   ],
+   "active_in_air": true,
+   "p_new_hazard_engine_loss": [
+    1e-07,
+    1e-06,
+    1e-05
+   ],
+   "source": "As esd_ground on the ground; in the air every true or false alert becomes an engine loss (R7-interlock option E: 'its success state is the hazard').",
+   "tag": "Y"
+  },
+  "mech_pawl": {
+   "label": "Mechanical throttle pawl driven by cables from the bolt plungers, distinct release action",
+   "p_override_distrust": [
+    0.3,
+    0.55,
+    0.85
+   ],
+   "p_override_trust": [
+    0.05,
+    0.1,
+    0.25
+   ],
+   "active_in_air": false,
+   "p_new_hazard_engine_loss": [
+    1e-08,
+    1e-07,
+    1e-06
+   ],
+   "source": "R8-mechanical card B: no electrics, but no ground/air logic and a cable has 3-6 mm slack in a 10 mm signal, so it may fail to engage on a partial lock (folded into the override values) [Y]; release must be a distinct act (FAA, R7-interlock #15) [D-ag]; in the air a popped bolt could block re-advance of the throttle (CS 23.679(c) principle, R7-interlock #13) - small engine-loss-equivalent term [Y]",
+   "tag": "D-ag+Y"
+  },
+  "start_guard": {
+   "label": "Starter guard flap released only when all bolts are home (seed idea)",
+   "p_override_distrust": [
+    0.5,
+    0.7,
+    0.9
+   ],
+   "p_override_trust": [
+    0.3,
+    0.5,
+    0.7
+   ],
+   "active_in_air": false,
+   "p_new_hazard_engine_loss": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "source": "R8-mechanical card A1: precedent Cessna 172R control-lock flag over the ignition switch (POH p. 7-18, agent-read) [D-ag]. It only catches 'unlocked at start': the canopy is often opened again for taxi, and the LAST closure is what matters (NTSB SEA01LA058: canopy opened and closed several times before departure, last closure unlatched, R6 S4) [D-ag]. Override values = share of take-offs where the guard no longer protects [Y].",
+   "tag": "D-ag+Y"
+  }
+ },
+ "outcomes": {
+  "p_open_given_unlocked_takeoff": {
+   "value": [
+    0.2,
+    0.5,
+    0.9
+   ],
+   "source": "No data on how often an unlocked canopy actually opens; ERA10LA221 shows an unlatched canopy can rest closed on the ground and lift after take-off (R6 S4) [D-ag]",
+   "tag": "Y"
+  },
+  "f_open": {
+   "value": [
+    0.06,
+    0.118,
+    0.2
+   ],
+   "source": "9 fatal of 76 lock-related openings in the initial climb, our catalogue recount [D]; investigated events, so biased towards serious outcomes",
+   "tag": "D"
+  },
+  "f_engine_loss": {
+   "value": [
+    0.1,
+    0.19,
+    0.4
+   ],
+   "source": "BEA 2015-19 power loss at take-off: 12 fatal in the analysed sample, 13/68 by R7 arithmetic; turn-back 10/18 fatal [D]; Nall 2002 16.8 % of single fixed-gear take-off/climb accidents fatal [D]; high-power aircraft most exposed (BEA p. 9)",
+   "tag": "D+Y"
+  },
+  "f_shutdown_with_open_canopy": {
+   "value": [
+    0.15,
+    0.25,
+    0.5
+   ],
+   "source": "Engine loss plus open-canopy distraction, at least both single figures (R7-interlock MC table)",
+   "tag": "Y"
+  },
+  "p_false_alert_airborne": {
+   "value": [
+    0.2,
+    0.5,
+    0.8
+   ],
+   "source": "Share of false/nuisance alerts that occur in flight: canopy distortion at speed can disengage a switch (Van's V2 pp. 3-4; RV-14 annunciator flickered in flight, CEN23FA359 p. 1) [D-ag]; share is our judgement",
+   "tag": "Y"
+  }
+ },
+ "passive_marks": {
+  "label": "Red/green band on each shoot bolt (seen at walk-round / before closing)",
+  "pilot_miss_factor": {
+   "partial": [
+    0.4,
+    0.7,
+    0.95
+   ],
+   "one_bolt": [
+    0.3,
+    0.6,
+    0.9
+   ],
+   "unseated": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "source": "Multiplies the pilot-check miss probability. No evidence was found that passive marks alone prevent events (R7-visual §4.3); bands need line of sight to each bolt, which may require a frame window (structure change, kept optional). Values are our judgement.",
+  "tag": "Y"
+ },
+ "mcda": {
+  "weights": {
+   "distrust_robustness": 0.25,
+   "effectiveness": 0.2,
+   "no_new_hazard": 0.2,
+   "low_nuisance": 0.1,
+   "any_aircraft": 0.1,
+   "simple_retrofit": 0.1,
+   "device_worst_failure": 0.05
+  },
+  "source": "Proposed in chat 5 Nov and accepted by the user ('Evet, kur'). Concentration 20 for the Dirichlet weight resampling.",
+  "concentration": 20.0
+ },
+ "uncertainty": {
+  "n_draws": 4000,
+  "seed": 2611,
+  "p_nuisance": {
+   "value": [
+    3e-05,
+    0.0003,
+    0.003
+   ],
+   "source": "inputs.json exposure.p_nuisance = 3e-4 per flight [Y], no data; one decade either side (canopy_day C3 sweeps it); flight-load flicker of plain switches (Van's notes, RV-14) argues for the high side on the organisers' switch",
+   "tag": "Y"
+  },
+  "p_hazard_partial": {
+   "value": [
+    0.0001,
+    0.001,
+    0.01
+   ],
+   "source": "inputs.json exposure.p_hazard.partial = 1e-3 per flight, NUREG/CR-1278 omission HEP 0.001 (check-off used) to 0.01 (no check-off) [D]; low end one decade below",
+   "tag": "D+Y"
+  },
+  "p_pilot_miss_partial": {
+   "value": [
+    0.2,
+    0.5,
+    0.8
+   ],
+   "source": "inputs.json exposure.p_pilot_miss.partial = 0.5 [Y] (AAIB p. 20: no visible difference at the frame); swept (review 5 Nov, problem 2)",
+   "tag": "Y"
+  },
+  "p_pilot_miss_one_bolt": {
+   "value": [
+    0.7,
+    0.9,
+    0.98
+   ],
+   "source": "inputs.json exposure.p_pilot_miss.one_bolt = 0.9 [Y]; swept (review 5 Nov, problem 2)",
+   "tag": "Y"
+  }
+ },
+ "timing": {
+  "_note": "Reaction-time window for alert-only response (R8_reaction_time_design.md, 5 Nov). Window = time to reach 40 kt minus alert onset. A barrier acts on lever advance and is not limited by it.",
+  "rt_median_s": {
+   "value": [
+    1.2,
+    1.5,
+    2.0
+   ],
+   "source": "R8-timing design RT synthesis: AC 25-7D >= 1 s recognition even for test pilots expecting the event [D]; surprise doubles stall response 2.02 -> 4.12 s (Landman 2017 Table 3) [D]; RTO median < 2 s (Scrivens 2024 abstract) [D-ag]",
+   "tag": "D+Y"
+  },
+  "rt_p95_s": {
+   "value": [
+    2.5,
+    3.0,
+    4.0
+   ],
+   "source": "R8-timing synthesis (95th percentile)",
+   "tag": "Y"
+  },
+  "cases": {
+   "short": {
+    "weight": 0.5,
+    "t_40kt_s": 4.1
+   },
+   "long": {
+    "weight": 0.5,
+    "t_40kt_s": 7.4
+   },
+   "source": "R8-timing timeline_calc: constant acceleration, lift-off 65 kt, 112 m and 200 m rolls (no Extra performance data obtained)",
+   "tag": "Y"
+  },
+  "onset_s": {
+   "lever": 0.35,
+   "rpm": 1.65,
+   "source": "R8-timing B16: lever switch trips at 0.35 s; rpm threshold ~1.0 s + 0.5 s persistence + logic = 1.65 s. The G3X canopy function triggers on 'engine power increased' (IM Rev AZ p. 30-214) [D], i.e. the rpm case",
+   "tag": "D-ag+Y"
+  }
+ },
+ "sensing_options": {
+  "_note": "Extra NG sensing options (5 Nov evening). sigma_trip in handle-equivalent mm [central, upper for r = 0.5]; p_false_locked and p_nuisance per flight; blind = hazards the option cannot see (miss = 1). All per-bolt options keep a seated sensor of the same kind. Source: R9_not_locked_detection_physics.md §4.3 (sigma = RSS of sensor band, bolt-tip scatter 0.25 mm, residual rigging 0.15 mm, divided by the unpublished handle-to-bolt ratio r; range r = 1.5 to 0.5); p_false from P1/217F where data exist, else judgement; no nuisance value has field data",
+  "S1": {
+   "label": "Inductive × 3 + seated, line-monitored (LOCK-SENSE)",
+   "sigma": [
+    0.34,
+    0.67
+   ],
+   "p_false": 1.7e-07,
+   "p_nuisance": 0.0001,
+   "self_check": true,
+   "per_bolt": true,
+   "blind": [],
+   "tag": "D-ag+Y"
+  },
+  "S2": {
+   "label": "Bare bolt contact × 3 with 1 k/10 k resistors (team idea, monitored)",
+   "sigma": [
+    0.31,
+    0.62
+   ],
+   "p_false": 1e-06,
+   "p_nuisance": 0.001,
+   "self_check": true,
+   "per_bolt": true,
+   "blind": [],
+   "tag": "Y"
+  },
+  "S3": {
+   "label": "Bare bolt contact × 3, plain two-wire (team idea as first proposed)",
+   "sigma": [
+    0.31,
+    0.62
+   ],
+   "p_false": 1e-06,
+   "p_nuisance": 0.001,
+   "self_check": false,
+   "short_per_flight": 1e-05,
+   "per_bolt": true,
+   "blind": [],
+   "tag": "Y",
+   "note": "a harness short reads LOCKED (no line monitoring); short rate per channel per flight is judgement"
+  },
+  "S4": {
+   "label": "Snap-action switch × 3 at the lugs + self-test",
+   "sigma": [
+    0.3,
+    0.6
+   ],
+   "p_false": 2.6e-06,
+   "p_nuisance": 0.0003,
+   "self_check": true,
+   "per_bolt": true,
+   "blind": [],
+   "tag": "D-ag+Y"
+  },
+  "S5": {
+   "label": "Hall + magnet × 3",
+   "sigma": [
+    0.46,
+    0.91
+   ],
+   "p_false": 1e-06,
+   "p_nuisance": 0.0003,
+   "self_check": true,
+   "per_bolt": true,
+   "blind": [],
+   "tag": "Y"
+  },
+  "S6": {
+   "label": "LVDT on the linkage tube + seated sensor",
+   "sigma": [
+    0.1,
+    0.21
+   ],
+   "p_false": 1.7e-07,
+   "p_nuisance": 0.0001,
+   "self_check": true,
+   "per_bolt": false,
+   "blind": [
+    "one_bolt"
+   ],
+   "tag": "Y"
+  },
+  "S7": {
+   "label": "Handle switch alone",
+   "sigma": [
+    0.1,
+    0.21
+   ],
+   "p_false": 1.7e-07,
+   "p_nuisance": 0.0001,
+   "self_check": true,
+   "per_bolt": false,
+   "blind": [
+    "one_bolt",
+    "unseated"
+   ],
+   "tag": "Y",
+   "note": "also blind to the open-released state, which the hazard model does not include"
+  }
+ }
+}

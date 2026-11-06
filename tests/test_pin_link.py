@@ -30,7 +30,7 @@ def test_pin_link_problem():
 
 
 def test_pin_link_card_stretch_against_bar_theory():
-    card = C.load_card(ROOT / "studies" / "cards" / "rehearsal_pin_link.json")
+    card = C.load_card(ROOT / "prev_guess" / "01_Ansys" / "cards" / "rehearsal_pin_link.json")
     pr, _, h, _ = C.problem(card)
     solid = np.ones((pr.grid.nely, pr.grid.nelx))
     a = C.analyse(card, solid)
@@ -53,7 +53,7 @@ def test_pin_link_card_stretch_against_bar_theory():
 def test_pin_link_mesh_refinement_has_no_mechanism():
     # regression (3 Nov): on a 4x mesh, bore-edge nodes inside the coarse void pixels floated among void elements
     # and the loaded ones made a mechanism (deflection factor ~6.6e4); the edge band and solid rings prevent it
-    card = C.load_card(ROOT / "studies" / "cards" / "rehearsal_pin_link.json")
+    card = C.load_card(ROOT / "prev_guess" / "01_Ansys" / "cards" / "rehearsal_pin_link.json")
     pr, *_ = C.problem(card)
     mesh = C.mesh_check(card, np.ones((pr.grid.nely, pr.grid.nelx)))
     ratio = mesh[-1]["tip_unit"] / mesh[0]["tip_unit"]

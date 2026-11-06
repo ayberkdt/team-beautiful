@@ -1,0 +1,9 @@
+figür denetimi: 0 HATA · 1 UYARI · 3 BİLGİ · TESLİM EDİLEBİLİR
+  [UYARI] kategori-sayisi    eksen 0: 5 ayrı veri rengi
+          → küçük çoklu paneller, gri bağlam + vurgu, ya da 'diğer' grubu  [04 slayt kuralı 8: sayısal sınır kaynakta yok; Kosslyn2012 ≤4 benzetmesi (C düzeyi sezgi); Cowan2001 ~4 öbek]
+  [BİLGİ] birim              eksen 0: x etiketi birim içermiyor: 'Probability the pilot acts on a noticed alert'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [Kosslyn2012; TufteNotebookPP (birimler kaybolmasın)]
+  [BİLGİ] birim              eksen 0: y etiketi birim içermiyor: 'Risk reduction factor'
+          → birimsizse sorun yok; değilse '(birim)' ekle  [Kosslyn2012; TufteNotebookPP (birimler kaybolmasın)]
+  [BİLGİ] banking-45         eksen 0: çizim alanı y/g = 0.48; 45° için ≈ 29.73
+          → eğim karşılaştırması amaçsa oranı yaklaştır (ax.set_box_aspect)  [Kosara2013b]

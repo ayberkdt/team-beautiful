@@ -12,7 +12,7 @@ Margin:                                           Se(T) / σar   (> 1: the limit
 * k_T: steel → Marin kd(T) (Budynas & Nisbett Sec. 6-9 polynomial, steels 40–540 °C, :func:`marin_kd`); other
   alloys → Ftu(T)/Ftu(20 °C) of our strength curves (endurance assumed to follow the ultimate strength) [Y].
 * k_surface: AM parts keep the as-built surface except at machined bores; ratios as-built / machined from the same
-  study (research_notes/Üç sapma alanı/A_titresim_yorulma.md §1–§2) where the reference was machined; 1 where the
+  study (prev_guess/01_Ansys/research/Üç sapma alanı/A_titresim_yorulma.md §1–§2) where the reference was machined; 1 where the
   reference already is as-built or the part is machined (steel baseline).
 
 A screening, not a fatigue analysis: no load spectrum, no damage sum, no residual stress or porosity statistics.
@@ -28,7 +28,7 @@ from aerokit.structures.fatigue import equivalent_fully_reversed, marin_kd
 
 __all__ = ["Endurance", "ENDURANCE", "screen", "markdown"]
 
-_NOTE = "research_notes/Üç sapma alanı/A_titresim_yorulma.md"
+_NOTE = "prev_guess/01_Ansys/research/Üç sapma alanı/A_titresim_yorulma.md"
 
 
 @dataclass

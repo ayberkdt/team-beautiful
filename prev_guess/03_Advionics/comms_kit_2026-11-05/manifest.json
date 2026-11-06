@@ -1,0 +1,570 @@
+{
+ "created": "2026-11-06T11:30:43",
+ "root": "D:\\Masaustu\\Ideathon 2026\\03_Advionics",
+ "moves": [
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\cases\\case_1_voice_to_display",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\cases\\case_1_voice_to_display"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\cases\\case_2_lost_comms",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\cases\\case_2_lost_comms"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\cases\\case_3_radar_signal_to_display",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\cases\\case_3_radar_signal_to_display"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\cases\\case_5_gnss_independent_approach",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\cases\\case_5_gnss_independent_approach"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\cases\\case_6_flight_inspection_ils_drone",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\cases\\case_6_flight_inspection_ils_drone"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\cases\\case_7_readback_correlation",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\cases\\case_7_readback_correlation"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\cases\\case_8_surveillance_integrity",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\cases\\case_8_surveillance_integrity"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\cases\\CATALOG.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\cases\\CATALOG.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\cases\\CATALOG_standards.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\cases\\CATALOG_standards.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\cases\\FIGURES.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\cases\\FIGURES.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\cases\\REVEAL_DAY.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\cases\\REVEAL_DAY.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\cases\\triage_examples",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\cases\\triage_examples"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\cases\\triage_keywords.json",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\cases\\triage_keywords.json"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\cases\\UX_AUDIT.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\cases\\UX_AUDIT.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\docs",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\docs"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\outputs",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\outputs"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\scripts",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\scripts"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\templates\\cockpit.html",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\templates\\cockpit.html"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\templates\\scope.html",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\templates\\scope.html"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\triage_plan.json",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\triage_plan.json"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\triage_plan.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\triage_plan.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_00_summary.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_00_summary.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_Airbus_DragonFly_ATC_ASR_press.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_Airbus_DragonFly_ATC_ASR_press.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_ASRS_Directline1991_10vs11k_altitude.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_ASRS_Directline1991_10vs11k_altitude.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_ASRS_Directline1991_readback_hearback.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_ASRS_Directline1991_readback_hearback.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_ATCO2_corpus_2023.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_ATCO2_corpus_2023.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_Cardosi1993_FAA_enroute_readback.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_Cardosi1993_FAA_enroute_readback.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_Garcia2023_ENAIRE_Indra_callsign_Aerospace.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_Garcia2023_ENAIRE_Indra_callsign_Aerospace.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_HAAWAII_framework_SID2023.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_HAAWAII_framework_SID2023.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_HAAWAII_readback_SID2022.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_HAAWAII_readback_SID2022.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_Helmke2019_ATMSeminar_ABSR_ML_errors.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_Helmke2019_ATMSeminar_ABSR_ML_errors.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_Honeywell_patents_ATC_transcription.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_Honeywell_patents_ATC_transcription.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_Honeywell_US12322410_unsplit_segments.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_Honeywell_US12322410_unsplit_segments.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_Lutz2022_NASA_LiveATC_command_recognition.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_Lutz2022_NASA_LiveATC_command_recognition.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_MALORCA_D5-3_final_report.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_MALORCA_D5-3_final_report.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_Mirzaei2025_DistilWhisper_LoRA_LDC.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_Mirzaei2025_DistilWhisper_LoRA_LDC.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_Nigmatulina2021_callsign_surveillance.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_Nigmatulina2021_callsign_surveillance.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_Ohneiser2022_Tower_Sol97-2_SID2022.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_Ohneiser2022_Tower_Sol97-2_SID2022.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_Ontology_PJ16-04_DASC2018.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_Ontology_PJ16-04_DASC2018.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_Pellegrini2019_Airbus_ATC_challenge.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_Pellegrini2019_Airbus_ATC_challenge.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_PJ10-W2-96_ASR_TRL6_Openday2022.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_PJ10-W2-96_ASR_TRL6_Openday2022.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_vanDoorn2024_WhisperATC.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_vanDoorn2024_WhisperATC.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_vanEs2004_EUROCONTROL_air-ground_comm.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_vanEs2004_EUROCONTROL_air-ground_comm.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_Wee2025_SEA_accent_Whisper.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_Wee2025_SEA_accent_Whisper.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_ZuluagaGomez2020_ASR_benchmark_Interspeech.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_ZuluagaGomez2020_ASR_benchmark_Interspeech.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\A_ZuluagaGomez2022_wav2vec2_ATC_SNR.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\A_ZuluagaGomez2022_wav2vec2_ATC_SNR.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_00_summary.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_00_summary.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_14CFR_91_185.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_14CFR_91_185.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_A_unverified_snippets.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_A_unverified_snippets.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_AIP_Georgia_ENR18.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_AIP_Georgia_ENR18.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_BCAA_ASIL_2025_02.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_BCAA_ASIL_2025_02.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_Cardosi_1994_FAA_RD94_15.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_Cardosi_1994_FAA_RD94_15.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_EASA_Community_SERA_changes.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_EASA_Community_SERA_changes.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_EASA_CS_ACNS_DLS.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_EASA_CS_ACNS_DLS.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_EASA_ESSP_Iris_2023.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_EASA_ESSP_Iris_2023.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_EASA_SERA_EAR.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_EASA_SERA_EAR.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_EASA_SIB_2019_13.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_EASA_SIB_2019_13.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_ESA_Iris.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_ESA_Iris.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_ETSI_EN300676_1.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_ETSI_EN300676_1.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_ETSI_EN301841_1.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_ETSI_EN301841_1.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_EU_1079_2012.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_EU_1079_2012.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_EU_2015_310.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_EU_2015_310.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_EU_2023_1770.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_EU_2023_1770.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_EU_29_2009.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_EU_29_2009.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_EUROCONTROL_CPDLC_RecPractices_2026.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_EUROCONTROL_CPDLC_RecPractices_2026.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_EUROCONTROL_CSS_service.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_EUROCONTROL_CSS_service.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_EUROCONTROL_DL_Perf_2024_page.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_EUROCONTROL_DL_Perf_2024_page.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_EUROCONTROL_Leaflet_Datalink_VHF.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_EUROCONTROL_Leaflet_Datalink_VHF.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_EUROCONTROL_WikiLink_MessageSets.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_EUROCONTROL_WikiLink_MessageSets.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_EVAIR_Bulletin25.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_EVAIR_Bulletin25.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_FAA_FR_2012_TSO_C122a.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_FAA_FR_2012_TSO_C122a.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_IFATCA_WP96_2025.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_IFATCA_WP96_2025.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_LINK2000_TestTool_IH0617.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_LINK2000_TestTool_IH0617.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_OpsGroup_SERA_2025.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_OpsGroup_SERA_2025.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\C_SKYbrary_USiT.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\C_SKYbrary_USiT.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_00_summary.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_00_summary.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_1090_riddle.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_1090_riddle.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_14cfr_91_227_adsb.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_14cfr_91_227_adsb.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_alpha_beta_wiki.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_alpha_beta_wiki.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_asr_wiki.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_asr_wiki.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_atcrbs_wiki.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_atcrbs_wiki.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_audit_2026-11-04.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_audit_2026-11-04.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_blom_imm_atc.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_blom_imm_atc.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_esassp.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_esassp.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_eurocontrol_artas_asterix.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_eurocontrol_artas_asterix.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_eurocontrol_modeS_IC.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_eurocontrol_modeS_IC.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_eurocontrol_radar_std_1997.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_eurocontrol_radar_std_1997.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_eurocontrol_stca_spec.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_eurocontrol_stca_spec.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_eurocontrol_wind_turbines.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_eurocontrol_wind_turbines.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_faa_aim_ch1.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_faa_aim_ch1.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_faa_order_1812_8_arsr4.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_faa_order_1812_8_arsr4.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_gillham_wiki.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_gillham_wiki.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_icao_suricg7_ip14_wam.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_icao_suricg7_ip14_wam.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_mentor_roleplay_2026-11-04.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_mentor_roleplay_2026-11-04.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_mlat_wiki.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_mlat_wiki.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_radar_eq_swerling_wiki.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_radar_eq_swerling_wiki.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\R_ssr_wiki.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\R_ssr_wiki.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_00_summary.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_00_summary.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_canso_sms_1M_hours.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_canso_sms_1M_hours.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_esut_wilhelmshaven_2022.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_esut_wilhelmshaven_2022.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_aims_cert.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_aims_cert.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_asrm_booklet.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_asrm_booklet.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_atc_airport_services.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_atc_airport_services.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_bhansa_case.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_bhansa_case.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_drone_detection.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_drone_detection.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_home.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_home.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_ie_academy.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_ie_academy.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_iff_integrations.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_iff_integrations.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_jobs.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_jobs.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_knowledge_center.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_knowledge_center.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_liesa_leaflet.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_liesa_leaflet.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_liesa_page.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_liesa_page.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_mlu_brochure.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_mlu_brochure.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_mlu_page.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_mlu_page.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_modular_radar.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_modular_radar.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_naval_iff_blog.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_naval_iff_blog.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_news_list.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_news_list.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_nora_intro_pdf.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_nora_intro_pdf.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_nora_page.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_nora_page.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_processing_whitepaper.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_processing_whitepaper.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_product_development.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_product_development.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_psr_rtg.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_psr_rtg.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_radar_services.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_radar_services.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_radar_test_equipment.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_radar_test_equipment.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_rass_catalogue.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_rass_catalogue.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_rass_maintenance_kit.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_rass_maintenance_kit.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_rass_sms_leaflet.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_rass_sms_leaflet.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_res_page.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_res_page.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_res_update_2025.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_res_update_2025.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_skyrf_brochure.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_skyrf_brochure.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_skyrf_generator.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_skyrf_generator.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_sms_adsb_leaflet.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_sms_adsb_leaflet.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_sms_brochure.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_sms_brochure.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_sms_page.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_sms_page.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_uk_entity.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_uk_entity.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_intersoft_vlaio.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_intersoft_vlaio.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_scribd_rass_r_failed.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_scribd_rass_r_failed.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_search_euroavia_sponsor.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_search_euroavia_sponsor.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\research\\S_skyradar_rass_s_training.md",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\research\\S_skyradar_rass_s_training.md"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\official_2026-11-06\\rehearsal_triage_2026-11-05",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\prev_guess\\03_Advionics\\comms_kit_2026-11-05\\rehearsal_triage_2026-11-05"
+  },
+  {
+   "src": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\cases\\task_official.txt",
+   "dst": "D:\\Masaustu\\Ideathon 2026\\03_Advionics\\official_2026-11-06\\task_text.txt"
+  }
+ ]
+}

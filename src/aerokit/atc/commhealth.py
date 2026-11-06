@@ -5,6 +5,8 @@ States (demo names, not a certified logic):
 ========================  =====================================================================================
 NORMAL                    receiving ATC speech of good quality; our calls get answered
 DEGRADED                  carrier present but SNR / recogniser confidence low, clipping or dropouts
+NO_SIGNAL                 (opt-in, ``no_signal_after_s``) nothing heard for n s, loss not yet proven: amber banner
+                          with an age counter instead of "OK"
 RX_LOST                   we hear nobody (no carrier, no traffic) and our calls go unanswered
 TX_LOST                   we hear ATC and others, but ATC does not hear us (repeated calls to us, "if you read",
                           our transmitter self-test fails)
@@ -35,11 +37,12 @@ __all__ = ["States", "CommInputs", "AltLink", "CommHealthMonitor", "AdvisoryDisp
 class States:
     NORMAL = "NORMAL"
     DEGRADED = "DEGRADED"
+    NO_SIGNAL = "NO_SIGNAL"          # nothing heard for n s, loss not (yet) declared: shown with an age counter
     RX_LOST = "RX_LOST"
     TX_LOST = "TX_LOST"
     ALTERNATE_AVAILABLE = "ALTERNATE_AVAILABLE"
     ALL_COMMS_LOST = "ALL_COMMS_LOST"
-    ALL = (NORMAL, DEGRADED, RX_LOST, TX_LOST, ALTERNATE_AVAILABLE, ALL_COMMS_LOST)
+    ALL = (NORMAL, DEGRADED, NO_SIGNAL, RX_LOST, TX_LOST, ALTERNATE_AVAILABLE, ALL_COMMS_LOST)
 
 
 @dataclass(frozen=True)
@@ -87,17 +90,25 @@ class CommHealthMonitor:
     silence_for_loss_s: float = 30.0
     recover_ticks: int = 3
     stuck_mic_s: float = 30.0             # [Y] PTT keyed longer than this = stuck microphone suspected
+    #: opt-in: from this many seconds without carrier (and before any loss is declared) the state is NO_SIGNAL
+    #: instead of NORMAL/DEGRADED, so the display never says "OK" while nothing is heard. None = old behaviour.
+    no_signal_after_s: float | None = None
     state: str = States.NORMAL
+    no_signal_s: float = 0.0              # seconds since the carrier was last present (0 while present)
     reasons: tuple[str, ...] = ()
     _pending_calls: list[float] = field(default_factory=list)
     _unanswered: int = 0
     _last_heard: float = 0.0
     _good: int = 0
     _if_read_count: int = 0
+    _last_carrier: float | None = None
     history: list[tuple[float, str, tuple[str, ...]]] = field(default_factory=list)
 
     def step(self, x: CommInputs) -> str:
         why: list[str] = []
+        if x.carrier or self._last_carrier is None:
+            self._last_carrier = x.t if x.carrier else x.t - 1.0     # first tick without carrier counts as 1 s
+        self.no_signal_s = 0.0 if x.carrier else x.t - self._last_carrier
         # --- bookkeeping of our calls and ATC answers
         if x.we_transmitted:
             self._pending_calls.append(x.t)
@@ -161,6 +172,11 @@ class CommHealthMonitor:
             new = self.state if failure and self._good < self.recover_ticks else States.NORMAL
             if new != States.NORMAL:
                 why.append(f"recovering ({self._good}/{self.recover_ticks} good ticks)")
+        if (self.no_signal_after_s is not None and new in (States.NORMAL, States.DEGRADED) and not x.carrier
+                and self.no_signal_s >= self.no_signal_after_s):
+            new = States.NO_SIGNAL
+            why.append(f"no carrier for {self.no_signal_s:.0f} s - checking (loss declared only with "
+                       f"{self.unanswered_for_loss} unanswered calls and {self.silence_for_loss_s:.0f} s silence)")
         self.state = new
         self.reasons = tuple(why)
         self.history.append((x.t, new, self.reasons))
@@ -210,8 +226,9 @@ class AdvisoryDisplay:
             raise KeyError(msg_id)
         self.acknowledged.add(msg_id)
 
-    def view(self, t: float, state: str) -> dict:
-        """Panel content at time ``t`` for comm state ``state``."""
+    def view(self, t: float, state: str, no_signal_s: float | None = None) -> dict:
+        """Panel content at time ``t`` for comm state ``state`` (``no_signal_s``: the monitor's age counter, shown
+        in the NO_SIGNAL banner)."""
         mine = [c for c in self.received if c.t_received is not None and c.t_received <= t
                 and c.addressed_to_us is not False]
         others = [c for c in self.received if c.t_received is not None and c.t_received <= t
@@ -233,16 +250,21 @@ class AdvisoryDisplay:
                     tag = "UNCONFIRMED"
                 if last.addressed_to_us is None and ins.status == "CONFIRMED":
                     tag = "CHECK CALLSIGN"
+                if state == States.NO_SIGNAL and ins.status != "NOT_RECEIVED":
+                    tag = f"NO SIGNAL - LAST RX {age:.0f} s"       # newer transmissions may have been missed
                 if lost or age > self.stale_after_s:
                     tag = f"STALE {age:.0f} s"
                 items.append({"msg_id": last.msg_id, "kind": ins.kind, "text": shown, "tag": tag,
                               "pilot_confirmed": last.msg_id in self.acknowledged,
                               "source": last.source, "t_received": last.t_received})
+        ns = f" {no_signal_s:.0f} s" if no_signal_s is not None else ""
         banner = {States.NORMAL: "VHF VOICE OK", States.DEGRADED: "VHF DEGRADED - VERIFY BY EAR",
+                  States.NO_SIGNAL: f"VHF: NO SIGNAL{ns} - CHECKING",
                   States.RX_LOST: "NO ATC RECEPTION - NO NEW CLEARANCES",
                   States.TX_LOST: "ATC NOT RECEIVING US", States.ALTERNATE_AVAILABLE: "PRIMARY VHF LOST - ALTERNATE UP",
                   States.ALL_COMMS_LOST: "ALL COMMS LOST"}[state]
-        return {"t": t, "state": state, "banner": banner, "items": items,
+        return {"t": t, "state": state, "banner": banner, "items": items, "no_signal_s": no_signal_s,
+                "caution": state == States.NO_SIGNAL,        # amber: not a declared loss, not OK either
                 "last_rx_age_s": None if last is None else t - _t(last),
                 "reminders": (list(LOST_COMM_REMINDERS) if state in (States.RX_LOST, States.ALL_COMMS_LOST)
                               else list(ALTERNATE_REMINDERS) if state == States.ALTERNATE_AVAILABLE else []),
@@ -266,7 +288,7 @@ def run_scenario(ticks: Sequence[CommInputs], messages: Mapping[float, Clearance
         st = mon.step(x)
         if messages and x.t in messages and x.carrier:     # no carrier -> nothing was received, nothing shown
             disp.receive(messages[x.t])
-        v = disp.view(x.t, st)
+        v = disp.view(x.t, st, mon.no_signal_s if st == States.NO_SIGNAL else None)
         v["reasons"] = list(mon.reasons)
         out.append(v)
     return out

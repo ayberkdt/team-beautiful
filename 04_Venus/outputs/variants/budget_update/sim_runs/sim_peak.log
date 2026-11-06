@@ -1,0 +1,5 @@
+{"H":null,"mu0":0.63,"Ipeak":56.66,"Pbus":5258,"Psol":2187,"t_after_release":3.82,"lost":19.5,"gap":0.325}
+{"H":-50.55,"mu0":0.635,"Ipeak":56.26,"Pbus":5265,"Psol":2215,"t_after_release":3.82,"lost":19.5,"gap":0.325}
+{"H":-47.1,"mu0":0.681,"Ipeak":52.72,"Pbus":5325,"Psol":2455,"t_after_release":3.81,"lost":19.5,"gap":0.325}
+{"H":-44.94,"mu0":0.708,"Ipeak":50.1,"Pbus":5340,"Psol":2605,"t_after_release":3.81,"lost":19.5,"gap":0.325}
+{"H":-42.8,"mu0":0.734,"Ipeak":47.27,"Pbus":5340,"Psol":2750,"t_after_release":3.81,"lost":19.5,"gap":0.325}

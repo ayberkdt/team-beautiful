@@ -7,12 +7,22 @@ from pathlib import Path
 from aerokit.verification import check, check_true
 
 ROOT = Path(__file__).resolve().parents[1]
-CARDS = ROOT / "studies" / "cards_2026"
+CARDS = {"approach": ROOT / "prev_guess" / "03_Advionics" / "cards",
+         "easa": ROOT / "prev_guess" / "02_EASA" / "cards",
+         "venus": ROOT / "prev_guess" / "04_Venus" / "cards"}
+SCRIPT_DIRS = [ROOT / "scripts", *(ROOT / d for d in ("01_Ansys/scripts", "02_EASA/scripts", "prev_guess/03_Advionics/comms_kit_2026-11-05/scripts",
+                                                       "04_Venus/scripts", "prev_guess/00_general/scripts",
+                                                       "prev_guess/01_Ansys/scripts", "prev_guess/02_EASA/scripts",
+                                                       "prev_guess/03_Advionics/scripts"))]
+
+
+def script_path(name: str) -> Path:
+    return next(d / f"{name}.py" for d in SCRIPT_DIRS if (d / f"{name}.py").is_file())
 
 
 def _load(name: str):
     sys.path.insert(0, str(ROOT / "scripts"))
-    spec = importlib.util.spec_from_file_location(name, ROOT / "scripts" / f"{name}.py")
+    spec = importlib.util.spec_from_file_location(name, script_path(name))
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
@@ -20,7 +30,7 @@ def _load(name: str):
 
 def test_approach_day_runs_and_detects_the_spoof():
     m = _load("approach_day")
-    card = json.loads((CARDS / "approach_rehearsal.json").read_text(encoding="utf-8"))
+    card = json.loads((CARDS["approach"] / "approach_rehearsal.json").read_text(encoding="utf-8"))
     card["runs"] = 5
     card["autoland"]["runs"] = 2
     out, _ = m.run(card)
@@ -39,8 +49,8 @@ def test_approach_day_runs_and_detects_the_spoof():
 
 def test_investigation_day_on_the_fictional_pack():
     m = _load("investigation_day")
-    pack = json.loads((CARDS / "easa_rehearsal.json").read_text(encoding="utf-8"))
-    out, _ = m.analyse(pack, CARDS)
+    pack = json.loads((CARDS["easa"] / "easa_rehearsal.json").read_text(encoding="utf-8"))
+    out, _ = m.analyse(pack, CARDS["easa"])
     ms = out["milestones"]
     check_true("pack is marked fictional", out["fictional"] is True)
     check_true("unstable at 1000 ft: > 150 ft above the path", ms["gate_1000"]["path_excess_ft"] > 150)
@@ -54,7 +64,7 @@ def test_investigation_day_on_the_fictional_pack():
 
 def test_venus_day_ranks_concepts():
     m = _load("venus_day")
-    card = json.loads((CARDS / "venus_rehearsal.json").read_text(encoding="utf-8"))
+    card = json.loads((CARDS["venus"] / "venus_rehearsal.json").read_text(encoding="utf-8"))
     out = m.run(card)
     p = {r["concept"]: r["power_W"] for r in out["concepts"]}
     check_true("helium assistance cuts hover power by > 5x", p["Battery quadrotor"] > 5 * p["Helium-assisted quad"])

@@ -11,7 +11,7 @@ barriers    ERCS barrier comparison with / without the system (reuses ``aerokit.
 fmea        the FMEA table of the recommended installation.
 
 The system detects an unlocked or partially locked canopy. It does **not** detect the bonding defect / fatigue
-cracking that AAIB found as the cause of the G-MIIL accident; see ``docs/23_easa_canopy_retrofit.md``.
+cracking that AAIB found as the cause of the G-MIIL accident; see ``02_EASA/docs/23_easa_canopy_retrofit.md``.
 """
 from aerokit.canopy.logic import AlertLevel, AlertOutput, CanopyAlertUnit, CanopyState, FlightInputs, Phase
 from aerokit.canopy.mechanism import EXTRA_NG, LatchMechanism

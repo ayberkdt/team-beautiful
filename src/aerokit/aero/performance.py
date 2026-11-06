@@ -9,7 +9,7 @@ Core relations for the parabolic polar ``C_D = C_D0 + K C_L²`` (Anderson 2017, 
 Speeds are true airspeeds at altitude ``h``. Functions that use the engine take an
 :class:`aerokit.aero.aircraft.Aircraft`.
 
-Extended relations (P0-2 of ``docs/06_development_plan.md``):
+Extended relations (P0-2 of ``prev_guess/01_Ansys/docs/06_development_plan.md``):
 
 * ceilings: absolute (max ROC = 0) and service (max ROC = 0.508 m/s = 100 ft/min), solved by root
   finding over 0–20 000 m (the ISA model range); time to climb ∫ dh / ROC_max(h) at constant weight;

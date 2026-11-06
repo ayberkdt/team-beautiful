@@ -1,0 +1,27 @@
+{
+ "name": "Rehearsal C (thermal): system bracket between two CFRP frames next to an APU bay, invented card, not an official task",
+ "source": "invented 2026-11-02 for docs/11 area C; data from prev_guess/01_Ansys/research/Üç sapma alanı/C_isil_enerji.md",
+ "geometry": {"type": "bridge", "length_m": 0.2, "height_m": 0.05, "thickness_m": 0.008, "elements": 80},
+ "loads": {"value_N": 2000.0, "kind": "limit", "_note": "equipment load at mid-span (invented)"},
+ "factors": {"factor_of_safety": 1.5, "fitting_factor": 1.15},
+ "limits": {"deflection_m": 0.0005, "service_temperature_C": 150,
+            "_note": "150 C long-term service (invented); properties below are at 150 C"},
+ "thermal": {"delta_T_K": 130.0, "structure_alpha_per_K": 2.41e-6,
+             "_note": "assembled at 20 C, runs at 150 C; both ends bolted to quasi-isotropic CFRP frames: T300/5208 [0/+-45/90]s 2.41e-6/K strain gauge, NASA TM-80788 Table 3 [D]; frames assumed to reach the same temperature"},
+ "material_data": {
+  "7075-T6": {"alpha_per_K": 22.9e-6, "E_Pa_at_T": 64.1e9, "Fty_Pa_at_T": 164e6,
+              "source": "MMPDS-01: alpha Fig 3.7.6.0 (70-212 F) [D-fig]; E 90 % at 150 C Fig 3.7.6.1.4 [D-fig]; Fty 10,000 h at 150 C about 34 % of 483 (Fig 3.7.6.1.1(d)) [D-fig, Y]; over-ageing makes 7075 unfit for long exposure above about 100 C"},
+  "2618-T61": {"alpha_per_K": 20.8e-6, "E_Pa_at_T": 73.8e9, "Fty_Pa_at_T": 237e6,
+               "source": "MMPDS-01 Fig 3.2.13.0 alpha [D-fig]; E ~100 % at 150 C [D-fig]; Fty 1000 h at 200 C = 237 MPa used as a conservative proxy for long service at 150 C (95 % = 308 MPa after 1/2 h) [D-fig, Y]"},
+  "AlSi10Mg": {"alpha_per_K": 21e-6, "E_Pa_at_T": 67.7e9, "Fty_Pa_at_T": 182e6,
+               "source": "EOS M290: alpha 20e-6 (25-100 C) / 22e-6 (to 200 C) [D]; yield ratio 267/322 at 150 C interpolated from Cao 2021 Table 3 (298 at 100, 236 at 200) applied to Fty 220 [Y]; E 94 % taken from the 2024 curve [Y]"},
+  "Ti-6Al-4V": {"alpha_per_K": 8.8e-6, "E_Pa_at_T": 100e9, "Fty_Pa_at_T": 653e6,
+                "source": "MMPDS-01 Fig 5.4.1.0 alpha [D-fig]; E 91 % Fig 5.4.1.1.4 [D-fig]; Fty 79 % at 150 C Fig 5.4.1.1.1 applied to 827 [D-fig, Y]; wrought curves applied to AM [Y]"},
+  "Inconel 718": {"alpha_per_K": 13.1e-6, "E_Pa_at_T": 193e9, "Fty_Pa_at_T": 1120e6,
+                  "source": "EOS IN718 alpha 13.1e-6 (25-100 C) [D]; E 193 GPa at 300 F, SMC-045 Table 4 [D]; yield 1124 -> 1076 MPa (RT -> 316 C, SMC-045 Table 19) interpolated to 150 C and applied to 1145 [Y]"}
+ },
+ "volumes": [0.4, 0.3, 0.25, 0.2, 0.15],
+ "topology": {"rmin": 2.4, "ft": 2, "optimizer": "OC", "max_iter": 400},
+ "study": "prev_guess/01_Ansys/tradeoff/bracket_hot_strength.json",
+ "candidates": [["Scalmalloy", "am_TO"], ["7075-T6", "machined_TO"], ["2618-T61", "machined_TO"], ["AlSi10Mg", "am_TO"], ["Ti-6Al-4V", "am_TO"], ["Inconel 718", "am_TO"]]
+}

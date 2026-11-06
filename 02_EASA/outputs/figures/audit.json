@@ -1,0 +1,187 @@
+{
+ "F2": {
+  "overlaps": [],
+  "outside": [],
+  "clipped": [],
+  "texts": 26,
+  "extent": [
+   25,
+   13,
+   937,
+   519
+  ],
+  "font": "Montserrat, \"Segoe UI\", sans-serif",
+  "font_loaded": true,
+  "min_px": 24,
+  "min_pt": 8.15
+ },
+ "F3": {
+  "overlaps": [],
+  "outside": [
+   "Requirements",
+   "Sensors + cues"
+  ],
+  "clipped": [],
+  "texts": 37,
+  "extent": [
+   24,
+   14,
+   946,
+   550
+  ],
+  "font": "Montserrat, \"Segoe UI\", sans-serif",
+  "font_loaded": true,
+  "min_px": 22,
+  "min_pt": 7.47
+ },
+ "F4": {
+  "overlaps": [],
+  "outside": [],
+  "clipped": [],
+  "texts": 17,
+  "extent": [
+   29,
+   13,
+   899,
+   590
+  ],
+  "font": "Montserrat, \"Segoe UI\", sans-serif",
+  "font_loaded": true,
+  "min_px": 24,
+  "min_pt": 8.15
+ },
+ "F5": {
+  "overlaps": [],
+  "outside": [
+   "monitored loops",
+   "own 5 A breaker"
+  ],
+  "clipped": [],
+  "texts": 29,
+  "extent": [
+   60,
+   11,
+   943,
+   590
+  ],
+  "font": "Montserrat, \"Segoe UI\", sans-serif",
+  "font_loaded": true,
+  "min_px": 22,
+  "min_pt": 7.47
+ },
+ "F6": {
+  "overlaps": [],
+  "outside": [],
+  "clipped": [],
+  "texts": 21,
+  "extent": [
+   36,
+   11,
+   952,
+   486
+  ],
+  "font": "Montserrat, \"Segoe UI\", sans-serif",
+  "font_loaded": true,
+  "min_px": 22,
+  "min_pt": 7.47
+ },
+ "F9": {
+  "overlaps": [],
+  "outside": [],
+  "clipped": [
+   "sees P/O/U",
+   "Inductive × 3 (LOCK-SENSE)"
+  ],
+  "texts": 21,
+  "extent": [
+   -3,
+   11,
+   955,
+   550
+  ],
+  "font": "Montserrat, \"Segoe UI\", sans-serif",
+  "font_loaded": true,
+  "min_px": 20,
+  "min_pt": 6.79
+ },
+ "F1a": {
+  "overlaps": [],
+  "outside": [],
+  "clipped": [],
+  "texts": 19,
+  "extent": [
+   8,
+   10,
+   576,
+   490
+  ],
+  "font": "Montserrat, \"Segoe UI\", sans-serif",
+  "font_loaded": true,
+  "min_px": 23,
+  "min_pt": 7.81
+ },
+ "F1b": {
+  "overlaps": [],
+  "outside": [],
+  "clipped": [],
+  "texts": 30,
+  "extent": [
+   8,
+   10,
+   568,
+   490
+  ],
+  "font": "Montserrat, \"Segoe UI\", sans-serif",
+  "font_loaded": true,
+  "min_px": 23,
+  "min_pt": 7.81
+ },
+ "F8": {
+  "overlaps": [],
+  "outside": [],
+  "clipped": [],
+  "texts": 28,
+  "extent": [
+   26,
+   16,
+   1322,
+   426
+  ],
+  "font": "Montserrat, \"Segoe UI\", sans-serif",
+  "font_loaded": true,
+  "min_px": 23,
+  "min_pt": 7.81
+ },
+ "F7": {
+  "overlaps": [],
+  "outside": [],
+  "clipped": [],
+  "texts": 18,
+  "extent": [
+   7,
+   6,
+   660,
+   405
+  ],
+  "font": "Montserrat, \"Segoe UI\", sans-serif",
+  "font_loaded": true,
+  "min_px": 23,
+  "min_pt": 7.81
+ },
+ "F10": {
+  "overlaps": [],
+  "outside": [],
+  "clipped": [],
+  "texts": 15,
+  "extent": [
+   12,
+   11,
+   1457,
+   326
+  ],
+  "font": "Montserrat, \"Segoe UI\", sans-serif",
+  "font_loaded": true,
+  "min_px": 23,
+  "min_pt": 7.81
+ }
+}

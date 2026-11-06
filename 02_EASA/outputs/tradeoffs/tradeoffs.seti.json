@@ -1,0 +1,138 @@
+{
+ "_aciklama": "datawiz figür seti: bütün figürler bu sözleşmeyle üretilir. Elle düzenlenebilir; renk/birim değiştirirsen bütün figürleri yeniden üret.",
+ "surum": 1,
+ "dergi": "sunum",
+ "hedef": "sunum-tam",
+ "ortam": "sunum",
+ "palet": "okabe-ito",
+ "koyu": false,
+ "etiket_bicimi": "parantez",
+ "cift_kodlama": true,
+ "ondalik_ayirici": ".",
+ "varliklar": {
+  "Pilot always acts": {
+   "renk": "#07648e",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 0
+  },
+  "Pilot matches reliability": {
+   "renk": "#5f5f5f",
+   "baglam": false,
+   "isaret": "s",
+   "cizgi": "--",
+   "sira": 1
+  },
+  "Engine loss caused by the device": {
+   "renk": "#d55e00",
+   "baglam": false,
+   "isaret": "^",
+   "cizgi": "-.",
+   "sira": 2
+  },
+  "O3 lamp": {
+   "renk": "#cc79a7",
+   "baglam": false,
+   "isaret": "D",
+   "cizgi": ":",
+   "sira": 3
+  },
+  "O4 + voice": {
+   "renk": "#009e73",
+   "baglam": false,
+   "isaret": "v",
+   "cizgi": [
+    0,
+    [
+     5,
+     1
+    ]
+   ],
+   "sira": 4
+  },
+  "O5 + shaker": {
+   "renk": "#000000",
+   "baglam": false,
+   "isaret": "P",
+   "cizgi": [
+    0,
+    [
+     3,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   ],
+   "sira": 5
+  },
+  "O6 + ground gate": {
+   "renk": "#0072b2",
+   "baglam": false,
+   "isaret": "X",
+   "cizgi": [
+    0,
+    [
+     1,
+     1
+    ]
+   ],
+   "sira": 6
+  },
+  "O9 + mechanical pawl": {
+   "renk": "#56b4e9",
+   "baglam": false,
+   "isaret": "*",
+   "cizgi": [
+    0,
+    [
+     8,
+     2
+    ]
+   ],
+   "sira": 7
+  },
+  "O10 + starter guard": {
+   "renk": "#e69f00",
+   "baglam": false,
+   "isaret": "o",
+   "cizgi": "-",
+   "sira": 8
+  }
+ },
+ "nicelikler": {
+  "rrf": {
+   "etiket": "Risk reduction factor",
+   "birim": null,
+   "eksen": "serbest",
+   "sinir": null,
+   "olcek": "log",
+   "bicim": null
+  },
+  "fatal": {
+   "etiket": "Fatal outcomes per million flights",
+   "birim": null,
+   "eksen": "x",
+   "sinir": null,
+   "olcek": "log",
+   "bicim": null
+  },
+  "compliance": {
+   "etiket": "Probability the pilot acts on a noticed alert",
+   "birim": null,
+   "eksen": "x",
+   "sinir": null,
+   "olcek": null,
+   "bicim": null
+  }
+ },
+ "siralar": {},
+ "haritalar": {},
+ "figurler": {
+  "T1_risk_reduction_by_option": "T1_risk_reduction_by_option.dw.json",
+  "T2_fatal_outcomes_by_option": "T2_fatal_outcomes_by_option.dw.json",
+  "T3_compliance_sweep": "T3_compliance_sweep.dw.json"
+ }
+}

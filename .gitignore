@@ -6,12 +6,3 @@ __pycache__/
 .ruff_cache/
 .hypothesis/
 .tmp/
-*.pkl
-*.stl
-*.step
-*.dsco
-*.zip
-*.pptx
-*.mp4
-studies/final_2026/ansys/official_2026-11-05/files/
-studies/final_2026/ansys/official_2026-11-05/unpacked/

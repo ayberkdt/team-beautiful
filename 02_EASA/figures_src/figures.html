@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>EASA report figures (sunumatik)</title>
+<link rel="stylesheet" href="vendor/color_themes/palette-library.css">
+<link rel="stylesheet" href="vendor/charts_icons/chart-theme.css">
+<style>
+  /* print figures sit on a white page: canvas and plot are white; every other token from porcelain-ink */
+  body[data-palette="porcelain-ink"] { --color-canvas: #FFFFFF; --color-plot: #FFFFFF; }
+  html, body { margin: 0; padding: 0; background: var(--color-canvas); }
+  /* the report body font (Montserrat, OFL; vendor/fonts/README.txt), so figure text matches the page around it */
+  @font-face { font-family: "Montserrat"; font-weight: 400; src: url("vendor/fonts/Montserrat-Regular.ttf") format("truetype"); }
+  @font-face { font-family: "Montserrat"; font-weight: 500; src: url("vendor/fonts/Montserrat-Medium.ttf") format("truetype"); }
+  @font-face { font-family: "Montserrat"; font-weight: 700; src: url("vendor/fonts/Montserrat-Bold.ttf") format("truetype"); }
+  body { font-family: "Montserrat", "Segoe UI", sans-serif; color: var(--color-ink); }
+  #stage text { font-family: "Montserrat", "Segoe UI", sans-serif; font-feature-settings: "tnum" 1, "lnum" 1; }
+  #stage svg { display: block; }
+  #audit { display: none; }
+</style>
+</head>
+<body data-palette="porcelain-ink">
+<div id="stage"></div>
+<pre id="audit"></pre>
+<script type="module" src="figures.mjs"></script>
+</body>
+</html>

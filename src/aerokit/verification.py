@@ -69,7 +69,7 @@ def check(name: str, value: Any, expected: Any, rtol: float = 1e-6, atol: float 
     rtol, atol : float
         Relative and absolute tolerance.
     source : str
-        Bibliographic source of ``expected`` (see ``docs/references.md``).
+        Bibliographic source of ``expected`` (see ``00_Common/docs/references.md``).
 
     Raises
     ------

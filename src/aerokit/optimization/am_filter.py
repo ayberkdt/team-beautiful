@@ -10,7 +10,7 @@ densest of the three elements below it (left, centre, right), a 45° rule on a s
 
 Defaults are the paper's (p. 875): ε = 1e-4, P = 40, ξ₀ = 0.5; the paper's top88 recipe also lowers the OC move
 limit to 0.05. An earlier version of this module used P = 80, ε = 1e-3 (a CILAMCE 2024 study); pass them explicitly
-to reproduce ``studies/scenarios/am_filter_demo.json``. Because Q < P, a fully dense support row gives
+to reproduce ``prev_guess/01_Ansys/scenarios/am_filter_demo.json``. Because Q < P, a fully dense support row gives
 Ξ = N^(1/Q) > 1, so printed densities can exceed 1 by a fraction of a per cent; that is the paper's operator.
 
 The backward pass is the exact adjoint (Eq. 10–14), checked against finite differences in the tests.

@@ -1,0 +1,266 @@
+[
+ {
+  "name": "Al(2009)-15%SiC(w) MMC powder",
+  "family": "aluminium",
+  "rho": 2860,
+  "E": 92,
+  "Fy": 182,
+  "Fu": 325,
+  "Tmax": null,
+  "K1c": null,
+  "process_ok": null,
+  "process_note": "[D] powder metallurgy: vacuum hot-pressed above solidus, then extruded/hot-rolled (NASA TM-102694 materials section, supplier ACMC). Not a casting or AM route; SiC whisker powder is a respirable-fibre hazard [Y].",
+  "co2_virgin": null,
+  "price": null,
+  "strength_300C_ratio": null,
+  "sources": {
+   "rho": "[Y] rule of mixtures 0.85*2.80 (2009 matrix, unverified) + 0.15*3.21 (SiC, unverified) = 2.86 g/cm3",
+   "E": "[D] 92-115 GPa (low end T-L 6.35 mm sheet), NASA TM-102694 (Birt & Johnson, Jul 1990), https://ntrs.nasa.gov/api/citations/19900016766/downloads/19900016766.pdf, Table II (report p.19)",
+   "Fy": "[D] 182 MPa = lowest PROPORTIONAL LIMIT (not 0.2% offset; paper says 0.2% offset not representative), range 182-237 MPa, as-fabricated, NASA TM-102694 (Birt & Johnson, Jul 1990), https://ntrs.nasa.gov/api/citations/19900016766/downloads/19900016766.pdf, Table II (report p.19)",
+   "Fu": "[D] 325-574 MPa (low end T-L 3.18 mm), NASA TM-102694 (Birt & Johnson, Jul 1990), https://ntrs.nasa.gov/api/citations/19900016766/downloads/19900016766.pdf, Table II (report p.19)",
+   "Tmax": "NOT FOUND",
+   "K1c": "NOT FOUND (Lee/Kim/Kwon, Metall. Trans. A 25 (1994) 2213, https://www.osti.gov/biblio/6995957 abstract: 2009/SiC/15w tougher than 2124/SiC/15w; T4P tougher than overaged; no number in abstract)",
+   "co2_virgin": "NOT FOUND",
+   "price": "NOT FOUND",
+   "strength_300C_ratio": "NOT FOUND"
+  },
+  "notes": "Room-temperature, as-fabricated data only; anisotropic L-T vs T-L. 2xxx matrix overages above ~150-200 C [Y], so >300 C service is doubtful and unverified. Elongation 2.6-6.2 %."
+ },
+ {
+  "name": "Aluminum, 8009, rapid solidification",
+  "family": "aluminium",
+  "rho": 2920,
+  "E": 88,
+  "Fy": 395,
+  "Fu": null,
+  "Tmax": [
+   316,
+   400
+  ],
+  "K1c": 16.1,
+  "process_ok": true,
+  "process_note": "[D] conventional route is RS powder metallurgy (Al-8.5Fe-1.3V-1.7Si PM, extruded), Porr & Gangloff, NASA-UVA LA2ST report N90-22653, https://ntrs.nasa.gov/api/citations/19900013337/downloads/19900013337.pdf p.1-2; [S-snippet] crack-free SLM parts at 320 W, 1000 mm/s, 0.10 mm hatch with pre-heating (Sun et al., J. Mater. Res. 2015, doi 10.1557/jmr.2015.110; abstract seen only via search snippet). AM = research level. Not conventionally castable (needs rapid solidification to keep dispersoids fine) [Y].",
+  "co2_virgin": null,
+  "price": null,
+  "strength_300C_ratio": 0.69,
+  "sources": {
+   "rho": "[S-snippet] theoretical density 2.92 g/cm3 quoted in an SLM study (search snippet, paper not opened)",
+   "E": "[Y] ~88 GPa recollection for dispersoid-strengthened Al-Fe-V-Si; NOT verified this session (ASM Alloy Digest Al-298 paywalled)",
+   "Fy": "[D] ~395 MPa at 25 C, extruded FVS0812, read off Yield-Strength-vs-T figure, Porr & Gangloff, NASA-UVA LA2ST report N90-22653, https://ntrs.nasa.gov/api/citations/19900013337/downloads/19900013337.pdf PDF p.19 (+/-5 MPa digitising)",
+   "Fu": "NOT FOUND",
+   "Tmax": "[D-abstract] retains properties after 100 h and 1000 h at up to 589 K (316 C): Go & Wilshire, Scripta Metall. Mater. 26 (1992), https://www.osti.gov/biblio/5654180; [S-snippet] 'designed for high temperature (up to 400 C)' (Welding of RS alloy 8009 paper, snippet only)",
+   "K1c": "[D] LT 36.6 MPa m^0.5 at 25 C; LT minimum 14.6 at 200 C; TL 16.1 at 25 C falling to 9.5 at 316 C; abstract p.2, Porr & Gangloff, NASA-UVA LA2ST report N90-22653, https://ntrs.nasa.gov/api/citations/19900013337/downloads/19900013337.pdf",
+   "co2_virgin": "NOT FOUND",
+   "price": "NOT FOUND",
+   "strength_300C_ratio": "[D] YS ~273 MPa at 316 C / ~395 MPa at 25 C = 0.69, same figure p.19, Porr & Gangloff, NASA-UVA LA2ST report N90-22653, https://ntrs.nasa.gov/api/citations/19900013337/downloads/19900013337.pdf"
+  },
+  "notes": "K1c entered is TL at 25 C (worse orientation). WARNING: TL K1c at 316 C = 9.5 MPa m^0.5 < 10 threshold; dynamic strain ageing gives a toughness minimum at ~200 C. AMS 4309 (8009-H112 extrusions) exists [S, https://saemobilus.sae.org/content/AMS4309, not opened]. Fu and E unverified."
+ },
+ {
+  "name": "Bronze, CuAl10, cold worked",
+  "family": "copper",
+  "rho": 7600,
+  "E": 120,
+  "Fy": 220,
+  "Fu": 540,
+  "Tmax": null,
+  "K1c": null,
+  "process_ok": true,
+  "process_note": "[Y] aluminium bronzes are routinely sand/centrifugal cast (cast grades exist); the record itself is wrought cold-worked. No casting/AM evidence read this session.",
+  "co2_virgin": null,
+  "price": null,
+  "strength_300C_ratio": null,
+  "sources": {
+   "rho": "[S-snippet] ~7.6 g/cm3 for CuAl10-family (mfgrobots CuAl10Fe3Mn2 / Alumeco CW307G datasheet, via search snippet only)",
+   "E": "[S-snippet] ~120 GPa CuAl10-family (same snippet; CW307G 124 GPa)",
+   "Fy": "[S-snippet, PROXY] 220-270 MPa for UNS C61400 (CuAl8Fe3, NOT CuAl10) across tempers, makeitfrom/alfa-chemistry via search snippet; low end used",
+   "Fu": "[S-snippet, PROXY] 540-570 MPa C61400, same",
+   "Tmax": "NOT FOUND",
+   "K1c": "NOT FOUND (only Charpy 81-88 J for C61400 via snippet)",
+   "co2_virgin": "NOT FOUND",
+   "price": "NOT FOUND",
+   "strength_300C_ratio": "NOT FOUND"
+  },
+  "notes": "No CuAl10 cold-worked datasheet read (pages returned 403); all values are family proxies from search snippets. Treat as unverified. Density ~2.7x Al: not mass-competitive."
+ },
+ {
+  "name": "Bake hardening steel, YS260, cold rolled",
+  "family": "steel",
+  "rho": 7850,
+  "E": 205,
+  "Fy": 260,
+  "Fu": 360,
+  "Tmax": [
+   350,
+   400
+  ],
+  "K1c": null,
+  "process_ok": false,
+  "process_note": "[Y] cold-rolled automotive sheet (EN 10268 HC260B); grade is defined by cold rolling + bake-hardening response, so neither castable nor AM as this grade.",
+  "co2_virgin": 2.0,
+  "price": null,
+  "strength_300C_ratio": null,
+  "sources": {
+   "rho": "[Y] 7850 kg/m3 family-typical plain carbon steel; not read this session",
+   "E": "[S] 190-210 GPa, https://sheetsplates.ferrobend.com/carbon-steel/aisi-1010 (read); 205 used as family-typical [Y]",
+   "Tmax": "[Y] ~350-400 C family-typical plain C steel (creep/scaling); not read this session",
+   "K1c": "NOT FOUND (ductile low-C steel, expected well above 10 MPa m^0.5 [Y], no source read)",
+   "co2_virgin": "[Y] ~2 kg/kg typical BF-BOF steel, general knowledge, not verified this session",
+   "price": "NOT FOUND",
+   "strength_300C_ratio": "NOT FOUND",
+   "Fy": "[D] HC260B (1.0400) ReL/Rp0.2 260-320 MPa transverse, Salzgitter Flachstahl producer page, https://www.salzgitter-flachstahl.de/en/products/cold-rolled-products/stahlsorten/bake-hardening-steel-grades-with-high-yield-strength-for-cold-forming.html (grade table, DIN EN 10268)",
+   "Fu": "[D] Rm 360-440 MPa, same page; A80 >= 29 %"
+  },
+  "notes": "Mapping 'YS260' -> HC260B is my judgement [Y]. BH increment (>40 MPa per ArcelorMittal, snippet only) not counted."
+ },
+ {
+  "name": "Carbon steel, AISI 1010, annealed",
+  "family": "steel",
+  "rho": 7850,
+  "E": 205,
+  "Fy": null,
+  "Fu": null,
+  "Tmax": [
+   350,
+   400
+  ],
+  "K1c": null,
+  "process_ok": null,
+  "process_note": "[Y] Record is a wrought product. Plain carbon steels are castable in principle (cast-steel grades exist, e.g. ASTM A216 WCB) and low-C steel L-PBF exists at research level, but that is a different record/condition; no evidence read this session.",
+  "co2_virgin": 2.0,
+  "price": null,
+  "strength_300C_ratio": null,
+  "sources": {
+   "rho": "[Y] 7850 kg/m3 family-typical plain carbon steel; not read this session",
+   "E": "[S] 190-210 GPa, https://sheetsplates.ferrobend.com/carbon-steel/aisi-1010 (read); 205 used as family-typical [Y]",
+   "Tmax": "[Y] ~350-400 C family-typical plain C steel (creep/scaling); not read this session",
+   "K1c": "NOT FOUND (ductile low-C steel, expected well above 10 MPa m^0.5 [Y], no source read)",
+   "co2_virgin": "[Y] ~2 kg/kg typical BF-BOF steel, general knowledge, not verified this session",
+   "price": "NOT FOUND",
+   "strength_300C_ratio": "NOT FOUND",
+   "Fy": "NOT FOUND",
+   "Fu": "NOT FOUND ([S-snippet] ~45 ksi (310 MPa) full annealed, Scribd copy of AZoM 1010 datasheet, not opened; not entered)"
+  },
+  "notes": "Annealed 1010 yield and UTS NOT FOUND from a source read this session (search snippet of an AZoM copy says full-annealed UTS ~45 ksi = 310 MPa, not opened); expected <= 1015 annealed 284/386 MPa [Y]."
+ },
+ {
+  "name": "Carbon steel, AISI 1015, annealed",
+  "family": "steel",
+  "rho": 7850,
+  "E": 205,
+  "Fy": 284.4,
+  "Fu": 386.1,
+  "Tmax": [
+   350,
+   400
+  ],
+  "K1c": null,
+  "process_ok": null,
+  "process_note": "[Y] Record is a wrought product. Plain carbon steels are castable in principle (cast-steel grades exist, e.g. ASTM A216 WCB) and low-C steel L-PBF exists at research level, but that is a different record/condition; no evidence read this session.",
+  "co2_virgin": 2.0,
+  "price": null,
+  "strength_300C_ratio": null,
+  "sources": {
+   "rho": "[Y] 7850 kg/m3 family-typical plain carbon steel; not read this session",
+   "E": "[S] 190-210 GPa, https://sheetsplates.ferrobend.com/carbon-steel/aisi-1010 (read); 205 used as family-typical [Y]",
+   "Tmax": "[Y] ~350-400 C family-typical plain C steel (creep/scaling); not read this session",
+   "K1c": "NOT FOUND (ductile low-C steel, expected well above 10 MPa m^0.5 [Y], no source read)",
+   "co2_virgin": "[Y] ~2 kg/kg typical BF-BOF steel, general knowledge, not verified this session",
+   "price": "NOT FOUND",
+   "strength_300C_ratio": "NOT FOUND",
+   "Fy": "[S] typical, annealed at 1600 F: YS 41,250 psi, UTS 56,000 psi, https://engineersedge.com/materials/carbon-steel-properties.htm (typical values, original source not named)",
+   "Fu": "[S] typical, annealed at 1600 F: YS 41,250 psi, UTS 56,000 psi, https://engineersedge.com/materials/carbon-steel-properties.htm (typical values, original source not named)"
+  },
+  "notes": "Typical (not minimum) values from one table; converted psi->MPa."
+ },
+ {
+  "name": "Carbon steel, AISI 1015, normalized",
+  "family": "steel",
+  "rho": 7850,
+  "E": 205,
+  "Fy": 324.1,
+  "Fu": 424.0,
+  "Tmax": [
+   350,
+   400
+  ],
+  "K1c": null,
+  "process_ok": null,
+  "process_note": "[Y] Record is a wrought product. Plain carbon steels are castable in principle (cast-steel grades exist, e.g. ASTM A216 WCB) and low-C steel L-PBF exists at research level, but that is a different record/condition; no evidence read this session.",
+  "co2_virgin": 2.0,
+  "price": null,
+  "strength_300C_ratio": null,
+  "sources": {
+   "rho": "[Y] 7850 kg/m3 family-typical plain carbon steel; not read this session",
+   "E": "[S] 190-210 GPa, https://sheetsplates.ferrobend.com/carbon-steel/aisi-1010 (read); 205 used as family-typical [Y]",
+   "Tmax": "[Y] ~350-400 C family-typical plain C steel (creep/scaling); not read this session",
+   "K1c": "NOT FOUND (ductile low-C steel, expected well above 10 MPa m^0.5 [Y], no source read)",
+   "co2_virgin": "[Y] ~2 kg/kg typical BF-BOF steel, general knowledge, not verified this session",
+   "price": "NOT FOUND",
+   "strength_300C_ratio": "NOT FOUND",
+   "Fy": "[S] typical, normalized at 1700 F: YS 47,000 psi, UTS 61,500 psi, https://engineersedge.com/materials/carbon-steel-properties.htm (typical values, original source not named)",
+   "Fu": "[S] typical, normalized at 1700 F: YS 47,000 psi, UTS 61,500 psi, https://engineersedge.com/materials/carbon-steel-properties.htm (typical values, original source not named)"
+  },
+  "notes": "Typical (not minimum) values; converted psi->MPa."
+ },
+ {
+  "name": "Carbon steel, AISI 1020, annealed",
+  "family": "steel",
+  "rho": 7850,
+  "E": 205,
+  "Fy": 294.8,
+  "Fu": 394.7,
+  "Tmax": [
+   350,
+   400
+  ],
+  "K1c": null,
+  "process_ok": null,
+  "process_note": "[Y] Record is a wrought product. Plain carbon steels are castable in principle (cast-steel grades exist, e.g. ASTM A216 WCB) and low-C steel L-PBF exists at research level, but that is a different record/condition; no evidence read this session.",
+  "co2_virgin": 2.0,
+  "price": null,
+  "strength_300C_ratio": null,
+  "sources": {
+   "rho": "[Y] 7850 kg/m3 family-typical plain carbon steel; not read this session",
+   "E": "[S] 190-210 GPa, https://sheetsplates.ferrobend.com/carbon-steel/aisi-1010 (read); 205 used as family-typical [Y]",
+   "Tmax": "[Y] ~350-400 C family-typical plain C steel (creep/scaling); not read this session",
+   "K1c": "NOT FOUND (ductile low-C steel, expected well above 10 MPa m^0.5 [Y], no source read)",
+   "co2_virgin": "[Y] ~2 kg/kg typical BF-BOF steel, general knowledge, not verified this session",
+   "price": "NOT FOUND",
+   "strength_300C_ratio": "NOT FOUND",
+   "Fy": "[S] typical, annealed at 1600 F: YS 42,750 psi, UTS 57,250 psi, https://engineersedge.com/materials/carbon-steel-properties.htm (typical values, original source not named)",
+   "Fu": "[S] typical, annealed at 1600 F: YS 42,750 psi, UTS 57,250 psi, https://engineersedge.com/materials/carbon-steel-properties.htm (typical values, original source not named)"
+  },
+  "notes": "Typical (not minimum) values; converted psi->MPa."
+ },
+ {
+  "name": "Carbon steel, AISI 1020, as rolled",
+  "family": "steel",
+  "rho": 7850,
+  "E": 205,
+  "Fy": 330.9,
+  "Fu": 448.2,
+  "Tmax": [
+   350,
+   400
+  ],
+  "K1c": null,
+  "process_ok": null,
+  "process_note": "[Y] Record is a wrought product. Plain carbon steels are castable in principle (cast-steel grades exist, e.g. ASTM A216 WCB) and low-C steel L-PBF exists at research level, but that is a different record/condition; no evidence read this session.",
+  "co2_virgin": 2.0,
+  "price": null,
+  "strength_300C_ratio": null,
+  "sources": {
+   "rho": "[Y] 7850 kg/m3 family-typical plain carbon steel; not read this session",
+   "E": "[S] 190-210 GPa, https://sheetsplates.ferrobend.com/carbon-steel/aisi-1010 (read); 205 used as family-typical [Y]",
+   "Tmax": "[Y] ~350-400 C family-typical plain C steel (creep/scaling); not read this session",
+   "K1c": "NOT FOUND (ductile low-C steel, expected well above 10 MPa m^0.5 [Y], no source read)",
+   "co2_virgin": "[Y] ~2 kg/kg typical BF-BOF steel, general knowledge, not verified this session",
+   "price": "NOT FOUND",
+   "strength_300C_ratio": "NOT FOUND",
+   "Fy": "[S] typical, HOT ROLLED: YS 48,000 psi, UTS 65,000 psi, https://engineersedge.com/materials/carbon-steel-properties.htm (typical values, original source not named)",
+   "Fu": "[S] typical, HOT ROLLED: YS 48,000 psi, UTS 65,000 psi, https://engineersedge.com/materials/carbon-steel-properties.htm (typical values, original source not named)"
+  },
+  "notes": "'As rolled' mapped to the table's 'hot rolled' row [Y]. Typical values; converted psi->MPa."
+ }
+]

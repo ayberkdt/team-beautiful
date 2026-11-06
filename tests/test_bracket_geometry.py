@@ -10,7 +10,7 @@ from aerokit.bracket import features, geometry, pipeline
 from aerokit.bracket import voxfem as vf
 
 ROOT = Path(__file__).resolve().parents[1]
-INPUTS = ROOT / "studies" / "final_2026" / "ansys" / "inputs"
+INPUTS = ROOT / "01_Ansys" / "inputs"
 
 
 def plate_with_holes():

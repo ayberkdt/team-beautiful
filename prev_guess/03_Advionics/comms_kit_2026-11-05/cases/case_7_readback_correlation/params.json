@@ -1,0 +1,23 @@
+{
+ "case": "case_7_readback_correlation",
+ "params": {
+  "own_callsign": {"value": "BTL123", "unit": "", "source": "[Y]"},
+  "callsign_words": {"value": "beetle one two three", "unit": "", "source": "[Y]"},
+  "clearances": {"value": [
+    "turn left heading two seven zero descend and maintain three thousand feet",
+    "descend and maintain four thousand feet reduce speed one eight zero knots",
+    "climb flight level one two zero",
+    "squawk four six two one",
+    "contact approach one one eight decimal five zero five"], "unit": "", "source": "[Y] readback items of SERA.8015(e)(1) (C_EASA_SERA_EAR [D-ag])"},
+  "p_readback_error": {"value": 0.04, "unit": "per exchange", "source": "readback errors in 4 % of threads / 1.3 % of utterances (HAAWAII, A_HAAWAII_readback_SID2022 [D-ag])"},
+  "snr_db": {"value": [6, 10, 14, 18, 22, 26, 30], "unit": "dB", "source": "[Y]"},
+  "n_per_snr": {"value": 1500, "unit": "exchanges", "source": "[Y]"},
+  "hi": {"value": 0.85, "unit": "word confidence", "source": "[Y]"},
+  "lo": {"value": 0.5, "unit": "word confidence", "source": "[Y]"},
+  "surveillance_callsigns": {"value": ["BTL123", "BTL132", "NVA77", "STU42", "EXA901"], "unit": "", "source": "[Y] ADS-B / Mode S identities in the picture (traffic.default_aircraft)"},
+  "heard_callsigns": {"value": ["BTL123", "BTL128", "BTL133", "NVA71", "XYZ999"], "unit": "", "source": "[Y] recogniser outputs to correlate"},
+  "min_similarity": {"value": 0.8, "unit": "share of equal characters", "source": "[Y] clearance.resolve_callsign default"},
+  "seed": {"value": 0, "unit": "", "source": "[Y]"}
+ },
+ "quick": {"n_per_snr": 150, "snr_db": [10, 20, 30]}
+}

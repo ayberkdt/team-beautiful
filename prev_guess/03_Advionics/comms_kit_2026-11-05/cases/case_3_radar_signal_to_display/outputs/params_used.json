@@ -1,0 +1,38 @@
+{
+ "params": {
+  "bers": [
+   0.0001,
+   0.0003,
+   0.001,
+   0.003,
+   0.01,
+   0.03
+  ],
+  "n_messages": 3000,
+  "callsign": "BTL123",
+  "icao": "4B1A23",
+  "lat": 51.2,
+  "lon": 4.1,
+  "alt_ft": 7000,
+  "trace_ber": 0.003,
+  "trace_seed": 5,
+  "squawk": "7600",
+  "fruit_per_s": 3000.0,
+  "psr_power_w": 25000.0,
+  "psr_gain_dbi": 34.0,
+  "psr_freq_hz": 2800000000.0,
+  "psr_bw_hz": 1000000.0,
+  "psr_nf_db": 3.0,
+  "psr_losses_db": 8.0,
+  "psr_pulses": 16,
+  "pfa": 1e-06,
+  "rcs_m2": [
+   2.0,
+   10.0
+  ],
+  "pd_required": 0.9,
+  "run_traffic": true,
+  "seed": 0
+ },
+ "overrides": []
+}

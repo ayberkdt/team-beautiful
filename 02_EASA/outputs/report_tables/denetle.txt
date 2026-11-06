@@ -1,0 +1,5 @@
+table 1 (Element): 0 findings
+table 2 (No.): 0 findings
+table 3 (Cue set (per-bolt inductive sensors)): 0 findings
+table 4 (Sensor (lamp, voice, chime, belt pad)): 1 findings
+  - [UYARI] 'False alerts per 1 000 flights': sütunda farklı ondalık sayıları [1, 2] (Wilke2019 W7; APA2020)

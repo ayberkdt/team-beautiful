@@ -1,0 +1,205 @@
+{
+ "finalize": {
+  "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\official_2026-11-05\\runs\\topo_v2_base_kept\\cad\\finalized_45.stl",
+  "params": {
+   "h_mm": 2.0,
+   "sigma_mm": 4.0,
+   "r_open_mm": 6.0,
+   "max_open_loss": 0.02,
+   "r_close_mm": 10.0,
+   "stock_mm": 1.5,
+   "taubin_iter": 40,
+   "taubin_pass_band": 0.05,
+   "decimate_to_faces": 120000,
+   "build_axis": 2,
+   "overhang_deg": 45.0,
+   "pad_mm": 16.0,
+   "sdf_blur_vox": 1.0
+  },
+  "grid": [
+   347,
+   187,
+   162
+  ],
+  "threshold": 0.4611493800766765,
+  "target_volume_cm3": 8524.518183999997,
+  "stages_cm3": {
+   "thresholded_cm3": 8524.512,
+   "opened_cm3": 7411.8,
+   "r_open_used_mm": 2.0,
+   "opening_loss_pct": 0.19283286561488922,
+   "with_interfaces_cm3": 8517.808,
+   "closed_cm3": 8559.904,
+   "final_grid_cm3": 8544.656
+  },
+  "surface_volume_cm3": 8525.527350662342,
+  "faces": 120000,
+  "faces_before_decimation": 536712,
+  "bodies": 1,
+  "islands_removed": 0,
+  "enclosed_voids_filled": 0,
+  "open_or_nonmanifold_edges": 0,
+  "min_wall_mm": 8.0,
+  "wall_p1_mm": 8.0,
+  "wall_p5_mm": 8.0,
+  "overhang_area_cm2": 222.5298747419074,
+  "overhang_fraction": 0.024655629996087877,
+  "overhang_area_cm2_50deg": 272.1143122768736,
+  "surface_area_cm2": 9025.519720129494,
+  "bore_radius_mm": {
+   "H1": 30.042561674706228,
+   "H2": 30.038048569997173,
+   "H3": 30.028534735703833,
+   "H4": 30.03150838880156,
+   "H5": 30.030419799810392,
+   "H6": 30.029771199442894
+  },
+  "print_geometry": {
+   "stl": "D:\\Masaustu\\Ideathon 2026\\studies\\final_2026\\ansys\\official_2026-11-05\\runs\\topo_v2_base_kept\\cad\\finalized_45_print_stock.stl",
+   "volume_cm3": 8943.547754156456,
+   "stock_mm": 1.5,
+   "z_mounting_face_print_mm": 28.199888229370117
+  },
+  "seconds": 110.95252950000577
+ },
+ "t10": {
+  "T10_elements": 244524,
+  "mesh_size_mm": 10.14,
+  "volume_m3": 0.008525527350662325,
+  "mass_Ti811_kg": 37.29857318793711,
+  "per_case": [
+   {
+    "name": "LC1a Fz+97 kN, Fy+24 kN each pin",
+    "vm_out_MPa": 339.78805381976895,
+    "vm_max_MPa": 6640.721994524535,
+    "disp_mm_300C": 1.0483743971482302,
+    "at_mm": [
+     599,
+     40,
+     143
+    ]
+   },
+   {
+    "name": "LC1b Fz+97 kN, Fy-24 kN each pin",
+    "vm_out_MPa": 245.96018026378536,
+    "vm_max_MPa": 1820.4550762052838,
+    "disp_mm_300C": 0.7455555291726462,
+    "at_mm": [
+     420,
+     100,
+     102
+    ]
+   },
+   {
+    "name": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+    "vm_out_MPa": 328.09284435851157,
+    "vm_max_MPa": 6408.249640303595,
+    "disp_mm_300C": 1.1599993661231498,
+    "at_mm": [
+     599,
+     40,
+     143
+    ]
+   },
+   {
+    "name": "LC2 My 2000 N m (1000 per pin bore)",
+    "vm_out_MPa": 30.477870149600033,
+    "vm_max_MPa": 369.52306115710206,
+    "disp_mm_300C": 0.031202120613020065,
+    "at_mm": [
+     650,
+     368,
+     30
+    ]
+   },
+   {
+    "name": "LC3 LC1a + LC2 (+My) combined [Y]",
+    "vm_out_MPa": 330.00711618583443,
+    "vm_max_MPa": 7009.410651702201,
+    "disp_mm_300C": 1.057026869367692,
+    "at_mm": [
+     599,
+     40,
+     143
+    ]
+   },
+   {
+    "name": "LC3 LC1a + LC2 (-My) combined [Y]",
+    "vm_out_MPa": 349.6476964110399,
+    "vm_max_MPa": 6272.131545387714,
+    "disp_mm_300C": 1.0405806128303092,
+    "at_mm": [
+     599,
+     40,
+     143
+    ]
+   },
+   {
+    "name": "LC3 LC1b + LC2 (+My) combined [Y]",
+    "vm_out_MPa": 254.58557541847307,
+    "vm_max_MPa": 2101.6699626444893,
+    "disp_mm_300C": 0.7517824896237947,
+    "at_mm": [
+     409,
+     100,
+     103
+    ]
+   },
+   {
+    "name": "LC3 LC1b + LC2 (-My) combined [Y]",
+    "vm_out_MPa": 257.4934701630031,
+    "vm_max_MPa": 1576.1317591262093,
+    "disp_mm_300C": 0.7399228792012719,
+    "at_mm": [
+     595,
+     100,
+     102
+    ]
+   }
+  ],
+  "sigma_max_MPa": 349.6476964110399,
+  "sigma_case": "LC3 LC1a + LC2 (-My) combined [Y]",
+  "sigma_at_mm": [
+   599,
+   40,
+   143
+  ],
+  "disp_mm_23C": 1.0071908332204318,
+  "disp_mm_300C": 1.1599993661231498,
+  "disp_case": "LC1c Fz+97 kN, Fy +24/-24 kN (opposite, sensitivity)",
+  "util_23C": 0.691914966512612,
+  "util_300C": 1.0124933293755982,
+  "disp_limit_mm": 1.652525,
+  "allow_vm_300C_MPa": 345.3333333333333,
+  "passes_300C": false,
+  "solve_s": 396.8769231999904,
+  "eco": {
+   "life_co2_new_t": 14.142383456726106,
+   "life_co2_base_t": 52.61459245662109,
+   "co2_saving_pct": 73.12079634868213,
+   "mass_saving_pct": 75.50497590599782,
+   "phases_new": {
+    "material": 1316.8879150736755,
+    "manufacture": 251.04572131908716,
+    "transport": 4.494478069146422,
+    "use": 12568.127221407287,
+    "disposal": 1.8281208569087595,
+    "total_first_life": 14142.383456726106,
+    "eol_potential": -934.3419946422246,
+    "total_with_eol": 13208.041462083882
+   },
+   "phases_base": {
+    "material": 460.7932082832819,
+    "manufacture": 910.1132483378098,
+    "transport": 18.316,
+    "use": 51217.92,
+    "disposal": 7.45,
+    "total_first_life": 52614.59245662109,
+    "eol_potential": -336.37398918912425,
+    "total_with_eol": 52278.218467431965
+   }
+  }
+ },
+ "manufacturing_checks_pass": true,
+ "passes_all": false
+}

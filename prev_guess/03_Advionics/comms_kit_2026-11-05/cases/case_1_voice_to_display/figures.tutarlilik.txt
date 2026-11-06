@@ -1,0 +1,2 @@
+set tutarlılığı (1 figür): 0 HATA · 0 UYARI · 1 BİLGİ · SÖZLEŞMEYE UYGUN (tek figür; figürler arası karşılaştırma yok)
+  [BİLGİ] tek-figur          1 figür; figürler arası karşılaştırma için en az 2 gerekir

@@ -298,6 +298,7 @@ class Study:
     tet: dict[str, Any] = field(default_factory=dict)
     verification: list[dict[str, Any]] = field(default_factory=list)
     stress_factors: dict[str, float] = field(default_factory=dict)
+    disp_factors: dict[str, float] = field(default_factory=dict)
 
 
 def _progress(opt: Options, vf: float) -> Any:
@@ -420,6 +421,14 @@ def run_design(g: Geometry, out: str | Path, opt: Options | None = None,
     out = Path(out)
     t0 = time.perf_counter()
     st = prepare(g, out, opt, setup_path)
+    # fail BEFORE any solve when a volume fraction cannot hold the non-design regions (5 Nov: a 0.12 request was
+    # rejected only after 24 min of earlier layouts and nothing was written)
+    kf = float(st.keep.mean())
+    bad = [vf for vf in opt.volfracs if vf <= kf + 0.01]
+    if bad:
+        raise ValueError(f"volfracs {bad} <= non-design fraction {kf:.3f} + 0.01: raise them or shrink the "
+                         "non-design regions")
+    _log(opt, f"non-design fraction {kf:.4f} (support {st.keep_support.mean():.4f}, load {st.keep_load.mean():.4f})")
     T = st.T
     crit = st.setup.get("design_criteria", {})
     if "limit_to_ultimate" in crit:
@@ -431,7 +440,7 @@ def run_design(g: Geometry, out: str | Path, opt: Options | None = None,
     ev20 = evaluate(st.mesh, st.setup, base.E_at(20.0), element=opt.element, margin_vox=opt.exclusion_vox)
     if opt.calibrate_utilisation:
         s0 = worst(ev)["vm_outside_Pa"]
-        u0 = max(s0 / base.Fty_at(T), opt.limit_to_ultimate * s0 / base.Ftu_at(T))
+        u0 = strength_util(st.setup, opt, s0, base.Fty_at(T), base.Ftu_at(T))
         k = opt.calibrate_utilisation / u0
         st.setup = features.scaled_setup(st.setup, k)
         st.setup["_calibration"] = (f"all loads multiplied by {k:.6g} so that {base.key} on the initial design has "
@@ -484,16 +493,27 @@ def run_design(g: Geometry, out: str | Path, opt: Options | None = None,
     am_axis = "xyz".index(bd[-1]) if opt.am_filter else None
     am_sign = -1 if bd.startswith("-") else 1
     x0 = None
+    from aerokit.bracket.topo3d import mirror_groups
+    planes = st.setup.get("symmetry_planes_mm")
+    if planes == "auto":                       # planes detected from the holes, supports and load set (no hand input)
+        planes = features.detect_symmetry(st.setup)
+        st.setup["_symmetry_detected_mm"] = planes
+    sym = mirror_groups(st.mesh, planes) if planes else None
+    if sym is not None:
+        _log(opt, f"symmetry: {planes} -> {sym.shape[1]} tied variables per group, "
+                  f"{100 * float(np.mean(np.all(sym >= 0, axis=1))):.1f} % of elements with every mirror")
     st.designs.append({"label": "initial", "volfrac": 1.0, "volume_m3": st.mesh.volume * st.vol_corr,
                        "stress_unitE": {c["name"]: c["vm_outside_Pa"] for c in ev["cases"]},
                        "disp_unitE": max(c["max_disp_m"] for c in ev["cases"]) * base.E_at(T),
                        "compliance_unitE": max(c["compliance_J"] for c in ev["cases"]) * base.E_at(T),
                        "vm_max_unitE": max(c["vm_max_Pa"] for c in ev["cases"])})
     for vf in sorted(opt.volfracs, reverse=True):
-        r = optimize(st.mesh, ap.F, ap.fixed, vf, E0=1.0, nu=NU, keep=st.keep, rmin=opt.rmin_vox,
+        # 5 Nov: the optimiser ran on fully integrated H8 (shear locking in bending with 1-2 elements through a
+        # member) while every evaluation used H8IM -> pass the same element to both
+        r = optimize(st.mesh, ap.F, ap.fixed, vf, E0=1.0, nu=NU, keep=st.keep, rmin=opt.rmin_vox, element=opt.element,
                      max_iter=opt.max_iter, am_axis=am_axis, am_sign=am_sign, weights=weights, x0=x0,
                      beta_every=max(8, opt.max_iter // 5),
-                     callback=_progress(opt, vf), snapshot_every=getattr(opt, "snapshot_every", 0))
+                     callback=_progress(opt, vf), snapshot_every=getattr(opt, "snapshot_every", 0), sym=sym)
         st.fields[f"snap_{round(100 * vf)}"] = r.snapshots
         x0 = r.x
         solid = r.xphys > 0.5
@@ -505,12 +525,18 @@ def run_design(g: Geometry, out: str | Path, opt: Options | None = None,
         sup_lab = sup_lab[sup_lab > 0]
         grid &= np.isin(lab, sup_lab)
         load_ok = bool(np.all(grid[tuple(st.mesh.ijk[st.keep_load].T)])) if st.keep_load.any() else True
+        # 5 Nov: a layout of SEVERAL bodies (each lug standing on its own bolts) passed this filter — the official
+        # v1 layouts were 2 separate parts. One part means one body: the layout is recorded as failed otherwise.
+        n_bodies = int(len(np.unique(lab[grid])))
+        if n_bodies != 1:
+            load_ok = False
+            _log(opt, f"topo {round(100 * vf)} %: {n_bodies} separate bodies (not one part)")
         frac_grid = to_grid(st.mesh, np.asarray(st.mesh.frac))
         dm = voxfem.VoxelMesh(grid, st.mesh.h, st.mesh.origin, frac=frac_grid[grid])
         label = f"topo {round(100 * vf)} %"
         try:
             if not load_ok:
-                raise ValueError("load ring not connected to the supports")
+                raise ValueError("load ring not connected to the supports, or the layout is not one body")
             e = evaluate(dm, st.setup, 1.0, element=opt.element, margin_vox=opt.exclusion_vox)
         except Exception as exc:                       # noqa: BLE001 - a broken layout must not stop the day
             _log(opt, f"{label}: layout FAILED ({exc}); kept in the report as failed")
@@ -569,7 +595,9 @@ def replay_topology(st: Study, opt: Options, snapshot_every: int = 5) -> dict[st
     x0 = None
     diff: dict[str, float] = {}
     for vf in sorted(opt.volfracs, reverse=True):
-        r = optimize(st.mesh, ap.F, ap.fixed, vf, E0=1.0, nu=NU, keep=st.keep, rmin=opt.rmin_vox,
+        # 5 Nov: the optimiser ran on fully integrated H8 (shear locking in bending with 1-2 elements through a
+        # member) while every evaluation used H8IM -> pass the same element to both
+        r = optimize(st.mesh, ap.F, ap.fixed, vf, E0=1.0, nu=NU, keep=st.keep, rmin=opt.rmin_vox, element=opt.element,
                      max_iter=opt.max_iter, am_axis=am_axis, am_sign=am_sign, weights=weights, x0=x0,
                      beta_every=max(8, opt.max_iter // 5), snapshot_every=snapshot_every)
         x0 = r.x
@@ -605,13 +633,25 @@ def thermal_sensitivity(st: Study, opt: Options) -> dict[str, Any] | None:
     return th
 
 
-def rank_materials(st: Study, opt: Options, cands: list[Any], knockdown: dict[str, float] | None = None) -> None:
+def strength_util(setup: dict[str, Any] | None, opt: Options, s: float, fty: float, ftu: float) -> float:
+    """Strength utilisation of a limit-load stress ``s``. Default (unchanged): max(s/Fty, 1.5 s/Ftu). With
+    ``design_criteria.strength_basis == "yield"`` (mentor answer 5 Nov 2026: FoS 1.5 on yield): fos · s / Fty."""
+    dc = (setup or {}).get("design_criteria", {})
+    if dc.get("strength_basis") == "yield":
+        return float(dc.get("factor_of_safety", 1.5)) * s / fty
+    return max(s / fty, opt.limit_to_ultimate * s / ftu)
+
+
+def rank_materials(st: Study, opt: Options, cands: list[Any], knockdown: dict[str, float] | None = None,
+                   disp_factor: dict[str, float] | None = None) -> None:
     """Every material on every layout. ``knockdown[label]`` multiplies that layout's voxel stress (T10/voxel ratio
     measured on a conforming re-mesh); a layout without a measured ratio keeps its voxel stress and is measured
     itself when it becomes the choice (``verify_choice``)."""
     T = st.T
     kd = knockdown or {}
     k_default = 1.0
+    lim_mm = (getattr(st, "setup", None) or {}).get("design_criteria", {}).get("max_displacement_mm")
+    u_lim = float(lim_mm) * 1e-3 if lim_mm else None
     st.materials = []
     for m in cands:
         rows = []
@@ -619,10 +659,14 @@ def rank_materials(st: Study, opt: Options, cands: list[Any], knockdown: dict[st
             k = kd.get(d["label"], 1.0 if d["label"] == "initial" and "initial" not in kd else k_default)
             s = max(d["stress_unitE"].values()) * k
             fty, ftu = m.Fty_at(T), m.Ftu_at(T)
-            U = max(s / fty, opt.limit_to_ultimate * s / ftu)
+            U = strength_util(getattr(st, "setup", None), opt, s, fty, ftu)
+            u = d["disp_unitE"] / m.E_at(T) * (disp_factor or {}).get(d["label"], 1.0)
+            # 5 Nov: the card's stiffness criterion (max displacement < L/400) was not applied — a 2.17 mm layout
+            # passed against a 1.65 mm limit. A layout now passes only if BOTH strength and displacement pass.
+            ok_u = u <= u_lim if u_lim else True
             rows.append({"design": d["label"], "mass_kg": d["volume_m3"] * m.rho.value, "vm_limit_Pa": s,
-                         "stress_factor": k, "utilisation": U, "passes": U <= 1.0,
-                         "max_disp_m": d["disp_unitE"] / m.E_at(T)})
+                         "stress_factor": k, "utilisation": U, "passes": U <= 1.0 and ok_u,
+                         "max_disp_m": u, "disp_ratio": u / u_lim if u_lim else None})
         temp_ok = m.Tmax.value >= T
         passing = [r_ for r_ in rows if r_["passes"]] if temp_ok else []
         best = min(passing, key=lambda r_: r_["mass_kg"]) if passing else None
@@ -638,6 +682,7 @@ def verify_choice(st: Study, g: Geometry, opt: Options, cands: list[Any], max_ro
     check passes (or the initial design is chosen, which the T10 initial-design check already covers)."""
     from aerokit.bracket import tetfem
     kd: dict[str, float] = {}
+    ku: dict[str, float] = {}
     st.verification = []
     for _ in range(max_rounds):
         c = (st.tet or {}).get("chosen")
@@ -645,22 +690,33 @@ def verify_choice(st: Study, g: Geometry, opt: Options, cands: list[Any], max_ro
             break
         d = next(x for x in st.designs if x["label"] == st.choice["design"])
         s_vox = max(d["stress_unitE"].values())
-        k = max(1.0, c["worst"]["vm_outside_Pa"] / s_vox)
+        k = max(1.0, c["worst"]["vm_outside_supports_Pa"] / s_vox)
         st.verification.append({"material": st.choice["material"], "design": st.choice["design"],
-                                "voxel_stress_Pa": s_vox, "t10_stress_Pa": c["worst"]["vm_outside_Pa"],
+                                "voxel_stress_Pa": s_vox, "t10_stress_Pa": c["worst"]["vm_outside_supports_Pa"],
                                 "factor": k, "t10_utilisation": c["utilisation"], "passes": c["utilisation"] <= 1.0})
         _log(opt, f"verify {st.choice['material']} / {st.choice['design']}: T10/voxel stress {k:.3f}, "
                   f"T10 utilisation {c['utilisation']:.3f}")
         kd[d["label"]] = k
+        # T10/voxel displacement ratio (5 Nov: only stress was corrected, so a T10 displacement above L/400 never
+        # changed the choice and the layout stayed "passes")
+        mat = matdata.get(st.choice["material"])
+        u_vox = d["disp_unitE"] / mat.E_at(st.T)
+        ku[d["label"]] = max(1.0, c["worst"]["max_disp_m"] / u_vox) if u_vox > 0 else 1.0
+        st.verification[-1]["disp_factor"] = ku[d["label"]]
         before = (st.choice["material"], st.choice["design"])
-        rank_materials(st, opt, cands, kd)
+        rank_materials(st, opt, cands, kd, ku)
         decide(st, opt)
         if c["utilisation"] <= 1.0 and (st.choice["material"], st.choice["design"]) == before:
             break                      # passed, and the measured factor did not change the choice
         st.tet["chosen"] = None
         if st.choice and st.choice["design"] != "initial":
             _chosen_t10(st, opt, tetfem)
+    c = (st.tet or {}).get("chosen")
+    if st.choice and st.choice["design"] != "initial" and c is not None and c["utilisation"] > 1.0:
+        st.choice["passes"] = False            # the T10 check of the final choice failed: never report it as passing
+        _log(opt, f"T10 check of the final choice FAILS (governing ratio {c['utilisation']:.3f})")
     st.stress_factors = kd
+    st.disp_factors = ku
 
 
 def decide(st: Study, opt: Options) -> None:
@@ -716,8 +772,11 @@ def _chosen_t10(st: Study, opt: Options, tetfem: Any) -> None:
         m = tetfem.mesh_stl(stl, min(opt.tet_sizes_vox) * st.mesh.h * 1e3)
         r = tetfem.static_t10(m, st.setup, mat.E_at(T), bore_tol_m=0.6 * st.mesh.h)
         r["worst"] = tetfem.worst(r)
-        s_lim = r["worst"]["vm_outside_Pa"]
-        r["utilisation"] = max(s_lim / mat.Fty_at(T), opt.limit_to_ultimate * s_lim / mat.Ftu_at(T))
+        s_lim = r["worst"]["vm_outside_supports_Pa"]     # lug eyes included; only the clamp zones excluded
+        r["strength_utilisation"] = strength_util(st.setup, opt, s_lim, mat.Fty_at(T), mat.Ftu_at(T))
+        lim_mm = st.setup.get("design_criteria", {}).get("max_displacement_mm")
+        r["disp_ratio"] = r["worst"]["max_disp_m"] * 1e3 / float(lim_mm) if lim_mm else 0.0
+        r["utilisation"] = max(r["strength_utilisation"], r["disp_ratio"])     # governing ratio (strength or L/400)
         r["voxel_utilisation"] = st.choice.get("utilisation")
         out["chosen"] = r
         _log(opt, f"T10 chosen layout: {r['elements']} el, disp {r['worst']['max_disp_m'] * 1e3:.4f} mm, "
@@ -803,7 +862,7 @@ def verified_materials(st: Study, opt: Options) -> list[dict[str, Any]]:
             s, basis = _layout_stress(st, row)
             row["voxel_vm_limit_Pa"], row["voxel_utilisation"] = row["vm_limit_Pa"], row["utilisation"]
             row["vm_limit_Pa"], row["stress_basis"] = s, basis
-            row["utilisation"] = max(s / m.Fty_at(st.T), opt.limit_to_ultimate * s / m.Ftu_at(st.T))
+            row["utilisation"] = strength_util(st.setup, opt, s, m.Fty_at(st.T), m.Ftu_at(st.T))
     return out
 
 
@@ -829,7 +888,7 @@ def film_result(st: Study, opt: Options) -> dict[str, Any]:
                         "co2_use_kg": ph.get("use", {}).get("co2_kg", 0),
                         "volume": d["volume_m3"] / (st.mesh.volume * st.vol_corr),
                         "sigma_ult_Pa": opt.limit_to_ultimate * sv,
-                        "utilisation": max(sv / m.Fty_at(st.T), opt.limit_to_ultimate * sv / m.Ftu_at(st.T)),
+                        "utilisation": strength_util(st.setup, opt, sv, m.Fty_at(st.T), m.Ftu_at(st.T)),
                         "voxel_utilisation": x["best"]["utilisation"], "stress_basis": _layout_stress(st, x["best"])[1],
                         "ultimate_N": opt.limit_to_ultimate * max(loads),
                         "design": x["best"]["design"], "temperature_C": st.T,

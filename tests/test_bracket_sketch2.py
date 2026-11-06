@@ -1,4 +1,4 @@
-"""scripts/bracket_sketch2.py: the 5 Nov sketch geometry (curved arches, > 5 holes, a hole through a curved crown) is
+"""01_Ansys/scripts/bracket_sketch2.py: the 5 Nov sketch geometry (curved arches, > 5 holes, a hole through a curved crown) is
 accepted by the drawing voxeliser and the voxel hole detection used on the day (geometry only, no gmsh, no FEA)."""
 import importlib.util
 from pathlib import Path
@@ -9,7 +9,7 @@ import pytest
 from aerokit.bracket import features, geometry
 
 ROOT = Path(__file__).resolve().parents[1]
-spec = importlib.util.spec_from_file_location("bracket_sketch2", ROOT / "scripts" / "bracket_sketch2.py")
+spec = importlib.util.spec_from_file_location("bracket_sketch2", ROOT / "01_Ansys" / "scripts" / "bracket_sketch2.py")
 s2 = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(s2)
 

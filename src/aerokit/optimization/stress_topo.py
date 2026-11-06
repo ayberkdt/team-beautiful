@@ -1,7 +1,7 @@
 """Stress-constrained topology optimisation: minimum mass subject to clustered P-norm von Mises constraints (2-D Q4).
 
 Formulation (P1) of Holmberg, Torstenfelt & Klarbring (2013), read in the LiU post-print on 2026-11-03
-(research_notes/Optimizasyon kaynakları/TO_kaynak_paketi.md §4a):
+(prev_guess/01_Ansys/research/Optimizasyon kaynakları/TO_kaynak_paketi.md §4a):
 
 * stiffness ρ^q with q = 3, density filter with cone weights, initial ρ = 0.5;
 * stress at the element centroid, relaxed as σ_a = η_S(ρ_e) σ̂_a with η_S = ρ^(1/2), σ̂ = E B u;

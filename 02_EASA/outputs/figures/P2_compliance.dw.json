@@ -1,0 +1,206 @@
+{
+ "surum": 1,
+ "ad": "P2_compliance",
+ "boyut_pt": [
+  396.9,
+  130.4
+ ],
+ "metin_kutusu_pt": [
+  2.3,
+  6.3,
+  381.9,
+  121.9
+ ],
+ "hedef": "elsevier-bucuk",
+ "ortam": "makale",
+ "boyut_mm": [
+  140.0,
+  46.0
+ ],
+ "yazi_tipleri": [
+  "Montserrat"
+ ],
+ "punto": {
+  "tik": [
+   7.5
+  ],
+  "eksen_adi": [
+   7.5
+  ],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   7.5
+  ]
+ },
+ "punto_tepe": {
+  "tik": 7.5,
+  "eksen_adi": 7.5,
+  "metin": 7.5
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    41.7,
+    28.7,
+    301.6,
+    125.2
+   ],
+   "baslik": "",
+   "seriler": [
+    {
+     "etiket": "+ gate (rejected)",
+     "tur": "cizgi",
+     "renk": "#b8bec7",
+     "isaret": null,
+     "cizgi": "--",
+     "kalinlik": 1.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "2.0× at c = 0.5",
+     "tur": "cizgi",
+     "renk": "#2f4fa2",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 2.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "+ belt pad (chosen)",
+     "tur": "cizgi",
+     "renk": "#6b7280",
+     "isaret": null,
+     "cizgi": "-",
+     "kalinlik": 1.0,
+     "isaret_boyu": null
+    },
+    {
+     "etiket": "lamp + voice",
+     "tur": "cizgi",
+     "renk": "#6b7280",
+     "isaret": null,
+     "cizgi": "--",
+     "kalinlik": 1.0,
+     "isaret_boyu": null
+    }
+   ],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "Probability that the pilot acts on a noticed alert (c)",
+    "nicelik": "Probability that the pilot acts on a noticed alert",
+    "birim": "c",
+    "bicim": "parantez",
+    "anahtar": "probabilitythatthepilotactsonanoticedalert",
+    "harf": "cumle",
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     1.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     1
+    ],
+    "ondalik_isareti": ".",
+    "tikler": [
+     "0.0",
+     "0.1",
+     "0.2",
+     "0.3",
+     "0.4",
+     "0.5",
+     "0.6",
+     "0.7",
+     "0.8",
+     "0.9",
+     "1.0"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     77.3,
+     6.3,
+     266.0,
+     13.1
+    ]
+   },
+   "y": {
+    "ham": "Risk reduction (log)",
+    "nicelik": "Risk reduction",
+    "birim": "log",
+    "bicim": "parantez",
+    "anahtar": "riskreduction",
+    "harf": "cumle",
+    "olcek": "log",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.9,
+     2000.0
+    ],
+    "gorunur": true,
+    "kategorik": true,
+    "kategoriler": [
+     "1×",
+     "3×",
+     "10×",
+     "30×",
+     "100×",
+     "300×",
+     "1 000×"
+    ],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "1×",
+     "3×",
+     "10×",
+     "30×",
+     "100×",
+     "300×",
+     "1 000×"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": [
+     2.3,
+     40.3,
+     9.0,
+     113.6
+    ]
+   },
+   "lejant": [],
+   "dogrudan_etiket": [
+    "+ belt pad (chosen)",
+    "+ gate (rejected)",
+    "2.0× at c = 0.5",
+    "lamp + voice"
+   ],
+   "izgara": {
+    "x": true,
+    "y": true
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

@@ -60,7 +60,7 @@ class EcoInputs:
         "atomisation_mj_per_kg": "Kellens et al. 2017, Procedia CIRP 61:582, Table 2 (7.02-31.7 MJ/kg) [D-ag]",
         "rolling": "Ashby 2013 p.133 via reproduction (aerokit.materials.eco.SHAPING) [D]",
         "transport/use factors": "Granta EduPack 2021 R1 help, Eco Audit tables, search-snippet level "
-                                 "(research_notes/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
+                                 "(prev_guess/01_Ansys/research/Hafifletme derin araştırma 2/edupack_eco_audit_factors.md) [S]",
         "marginal fuel": "Kellens et al. 2017 Table 8 (12.5 t kerosene/(100 kg·y), short haul, 25 y) [D-ag]",
         "CO2 per kg fuel": "ICAO CEC 3.16 kg/kg (aerokit.design.sustainability) [D]",
         "grid / machining / buy-to-fly / life km / recovery": "team assumptions [Y]"})

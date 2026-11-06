@@ -1,0 +1,1 @@
+Propose an automated drone campaign to inspect a newly installed ILS before the flight check: measure the localizer DDM along a mini-approach, decide pass or fail against tolerances and detect signal faults.

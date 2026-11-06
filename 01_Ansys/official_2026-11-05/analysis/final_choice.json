@@ -1,0 +1,45 @@
+{
+ "layout": "topo 25 %",
+ "T10_elements": 52521,
+ "volume_m3": 0.004874165536300186,
+ "mass_kg": 21.324126063790025,
+ "sigma_T10_MPa": 257.3165504119053,
+ "sigma_at_mm": [
+  603,
+  95,
+  136
+ ],
+ "worst_case": "LC1b Fz+97 kN, Fy-24 kN each pin",
+ "limit_disp_mm": 1.652525,
+ "disp_mm_23 C": 1.3314789284026027,
+ "util_23 C": 0.5092016169101028,
+ "disp_mm_300 C": 1.5321966955150779,
+ "util_300 C": 0.7455367743925371,
+ "life_co2_new_t": 8.085402252631459,
+ "life_co2_base_t": 52.61459245662109,
+ "co2_saving_pct": 84.63277605105924,
+ "mass_saving_pct": 85.99584549563932,
+ "cost_new_USD": 524.4608005917402,
+ "cost_base_USD": 192.0745980105861,
+ "USD_per_t_CO2_saved": 7.464456484802045,
+ "eco_phases_new": {
+  "material": 752.8835961477106,
+  "manufacture": 143.52641808064277,
+  "transport": 2.569557190686698,
+  "use": 7185.377518454687,
+  "disposal": 1.0451627577318137,
+  "total_first_life": 8085.402252631459,
+  "eol_potential": -534.176639413315,
+  "total_with_eol": 7551.225613218145
+ },
+ "eco_phases_base": {
+  "material": 460.7932082832819,
+  "manufacture": 910.1132483378098,
+  "transport": 18.316,
+  "use": 51217.92,
+  "disposal": 7.45,
+  "total_first_life": 52614.59245662109,
+  "eol_potential": -336.37398918912425,
+  "total_with_eol": 52278.218467431965
+ }
+}

@@ -1,0 +1,23 @@
+\documentclass{ideathon2026}
+\begin{document}
+\begin{table}[t]
+\caption{For each element we kept the option that reaches a busy pilot and never takes away engine power.}
+\begin{tabular}{L{67.5bp}L{115bp}L{316.4bp}}
+\toprule
+\thead{Element} & \thead{Choice} & \thead{Why not the others}\\
+\midrule
+Sensing point & Each bolt and the seat & One pin (the task-sheet example), the handle or the linkage cannot see one bolt out (Table 4)\\
+Sensor type & Line-monitored inductive sensor & Snap switches, Hall sensors and bare contacts give more false alerts (Table 4); a worn or wet bare contact, our first idea, can read "locked"\\
+Aural & Voice without a lead tone & A lead tone slowed responses [12]\\
+Vibration & Lap-belt pad & A stick shaker means "stall"; a knob shaker vibrates an engine control, which must not creep under vibration [13]. The waist matched the hand's response time and, with a strong vibration, half the wrong actions (10.9 \% against 22.3 \%) [14]\\
+Barrier & None; alerts only & Removed for safety: engine shut-down, a take-off gate and a throttle pawl act on the engine or throttle, so a fault could take away power in flight\\
+G3X link & Unit output into the G3X & A raw switch on the two-state G3X input [15] would read a short to ground as "closed"\\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{figure}[b]
+\includegraphics[width=498.76bp]{tests/easa_fig2.png}
+\caption{Each sensor sees the steel bolt tip only at full lock; a partly locked bolt leaves it off, and the unit shows red.}
+\end{figure}
+Text.
+\end{document}

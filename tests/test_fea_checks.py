@@ -22,7 +22,7 @@ def test_singular_sequence_is_flagged():
 
 
 def test_rehearsal_mesh_study():
-    out = json.loads((ROOT / "studies" / "cards" / "out" / "rehearsal_l_bracket" / "result.json").read_text(
+    out = json.loads((ROOT / "prev_guess" / "01_Ansys" / "cards" / "out" / "rehearsal_l_bracket" / "result.json").read_text(
         encoding="utf-8"))
     m = out["mesh_check"]
     sizes = [1.0 / r["refinement"] for r in m]

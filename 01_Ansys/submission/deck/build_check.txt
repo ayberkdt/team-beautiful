@@ -1,0 +1,35 @@
+build check — Team_Beetiful_Ansys_4min.pptx
+
+Overflow / wrap checks:
+  none: every text box fits (Montserrat metrics, 1.2 line height)
+
+Overlap checks (drawn text height, pictures; gap < 0.05 in counts):
+  none
+
+Font sizes per slide (pt):
+  slide 1: [24] (1 sizes)
+  slide 2: [18, 24, 28, 40, 60, 96] (6 sizes)
+  slide 3: [18, 24, 28, 40, 60] (5 sizes)
+  slide 4: [18, 24, 28, 40, 60] (5 sizes)
+  slide 5: [18, 24, 40] (3 sizes)
+  slide 6: [18, 24, 40, 60] (4 sizes)
+  slide 7: [18, 24, 28, 40, 60] (5 sizes)
+  slide 8: [18, 24, 28, 40, 60] (5 sizes)
+  slide 9: [18, 24, 28, 40, 60] (5 sizes)
+  deck (script-made text): [18, 24, 28, 40, 60, 96] (6 sizes); template adds 34, 24, 18 + Arial 23.7/34.8
+
+Timing (notes):
+  slide | speaker   | s  | words | words/s
+      1 | Speaker 4 | 10 |    23 | 2.30
+      2 | Speaker 1 | 25 |    56 | 2.24
+      3 | Speaker 1 | 27 |    62 | 2.30
+      4 | Speaker 2 | 30 |    66 | 2.20
+      5 | Speaker 2 | 30 |    68 | 2.27
+      6 | Speaker 3 | 26 |    57 | 2.19
+      7 | Speaker 3 | 30 |    67 | 2.23
+      8 | Speaker 4 | 30 |    67 | 2.23
+      9 | Speaker 4 | 20 |    45 | 2.25
+  total 228 s = 3:48 (max 230 s)
+
+Note sentences > 20 words:
+  none
