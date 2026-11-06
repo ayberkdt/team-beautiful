@@ -1,6 +1,6 @@
 """Venus cloud-layer atmosphere from in-situ data, with uncertainty bands (40–64 km).
 
-**Data** — ``data/pv_profiles.json``, extracted by ``04_Venus/scripts/venus_pds_extract.py`` from the raw Pioneer Venus PDS4
+**Data** — ``data/pv_profiles.json``, extracted by ``04_Venus/code/data/venus_pds_extract.py`` from the raw Pioneer Venus PDS4
 tables (Large/Sounder, Day, Night and North probes, 9 Dec 1978; 00–08 h local time): temperature,
 pressure, density on a 1-km grid; zonal (westward) and meridional wind from the DLBI tracking (±0.5 km bin means);
 Large-probe solar flux radiometer (LSFR); probe sites 31.3°S–59.3°N (Day 31.3°S, Night 28.7°S, Large 4.4°N,

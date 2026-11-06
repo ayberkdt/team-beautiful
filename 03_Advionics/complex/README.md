@@ -15,7 +15,7 @@ is separate and did not change.
 | Pilot proceeds visually (5-12-8a4), missed approach text | Needs pilot input | same |
 | x1.5 band for target changes on the path | No effect on the standing offset | same |
 
-**Effect of taking them out, 1000 real Zurich landings:** quiet approaches 907 → 985, approaches with no guidance voice 97.8 % →
+**Effect of taking them out, 1000 recorded Zurich tracks:** quiet approaches 907 → 985, approaches with no guidance voice 97.8 % →
 98.5 %. Smolensk "coming down rapidly": 170 → 167 of 200. The formula gained nothing measurable. Full numbers:
 `result_full.md`, `validation_full.json`, `TECHNICAL_full.md`.
 

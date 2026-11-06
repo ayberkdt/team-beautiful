@@ -63,7 +63,7 @@ The cue ranks below every line of the aircraft alert list (TSO-C151c Table 4-2).
 
 ## 6. Evidence
 
-**Zurich: 1000 real landings.** The first version raised a false caution on 43 % of normal approaches. Simulation had not shown
+**Zurich: replay of 1000 recorded tracks.** The first version raised a false caution on 43 % of normal approaches. Simulation had not shown
 this. Real data found it.
 
 **Smolensk 2010: a real radar talk-down.** The radio said "on course, on glide path" five times, outside limits. The first
@@ -91,7 +91,7 @@ Simulation, 100 runs, C-130H, light turbulence, 3 m/s crosswind:
 - Radar twice as good: 100 of 100. Reaction 4 s: 95. Moderate turbulence: 77.
 - 0 frames show guidance without valid data.
 
-Zurich, 1000 real landings on RWY 14, open loop:
+Zurich, 1000 recorded tracks on RWY 14, replay, open loop (the aircraft did not react to the cue):
 
 - 985 stay fully quiet. 5 reach "slightly", 4 "well", 6 a missed approach state.
 - 98.5 % have no guidance voice.

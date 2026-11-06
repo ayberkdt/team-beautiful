@@ -1,4 +1,4 @@
-"""04_Venus/outputs/variants/v0_7_44p6kg: the 44.63 kg variant, written by 04_Venus/scripts/venus_variant_v07.py."""
+"""04_Venus/outputs/variants/v0_7_44p6kg: the 44.63 kg variant, written by 04_Venus/code/variants/venus_variant_v07.py."""
 from __future__ import annotations
 
 import hashlib
@@ -14,9 +14,10 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUTS = ROOT / "04_Venus" / "outputs"
 VAR = OUTPUTS / "variants" / "v0_7_44p6kg"
-SCRIPTS = ROOT / "04_Venus" / "scripts"
+VARIANT_SCRIPT = ROOT / "04_Venus" / "code" / "variants" / "venus_variant_v07.py"
+MANIFEST = ROOT / "04_Venus" / "catalog" / "reorg_manifest.json"
 BUDGET = OUTPUTS / "variants" / "budget_update" / "result.json"
-TURBULENCE = ROOT / "04_Venus" / "research" / "data" / "venus_turbulence_model.json"
+TURBULENCE = ROOT / "04_Venus" / "literature" / "data" / "venus_turbulence_model.json"
 TAGS = {"D", "D-ag", "K", "Y"}
 PROMOTED = (VAR / "PROMOTED.json").is_file()
 
@@ -129,8 +130,22 @@ def test_baseline_files_unchanged(anchors: dict) -> None:
 
 
 def test_existing_scripts_unchanged(anchors: dict) -> None:
+    """The anchor in outputs/ stays as written on 6 Nov. The reorganisation changed the scripts, so each one is checked
+    in three steps: the manifest's old hash is the anchor, the moved file has the manifest's new hash, and undoing the
+    listed path edits gives the anchored bytes again (venus_final was split: no undo, see final_split in the manifest)."""
+    changes = load(MANIFEST)["script_anchor_changes"]
+    assert set(changes) == set(anchors["scripts"])
     for name, digest in anchors["scripts"].items():
-        assert sha(SCRIPTS / name) == digest, name
+        entry = changes[name]
+        assert entry["old_sha256"] == digest, name
+        text = (ROOT / entry["new_path"]).read_bytes()
+        assert hashlib.sha256(text).hexdigest() == entry["new_sha256"], name
+        if entry["path_edits"] is None:
+            assert name == "venus_final.py"
+            continue
+        for old, new in entry["path_edits"]:
+            text = text.replace(new.encode(), old.encode())
+        assert hashlib.sha256(text).hexdigest() == digest, name
 
 
 # gust --------------------------------------------------------------------------------------------------------------
@@ -256,8 +271,8 @@ def test_changes_file_is_complete() -> None:
 
 
 def _script():
-    sys.path.insert(0, str(SCRIPTS))
-    spec = importlib.util.spec_from_file_location("venus_variant_v07", SCRIPTS / "venus_variant_v07.py")
+    sys.path.insert(0, str(VARIANT_SCRIPT.parent))
+    spec = importlib.util.spec_from_file_location("venus_variant_v07", VARIANT_SCRIPT)
     mod = importlib.util.module_from_spec(spec)
     sys.modules["venus_variant_v07"] = mod
     spec.loader.exec_module(mod)

@@ -1,0 +1,141 @@
+{
+ "surum": 1,
+ "ad": "F1_flow",
+ "boyut_pt": [
+  510.2,
+  124.7
+ ],
+ "metin_kutusu_pt": [
+  14.0,
+  10.7,
+  500.2,
+  122.8
+ ],
+ "hedef": "genel-cift",
+ "ortam": "makale",
+ "boyut_mm": [
+  180.0,
+  44.0
+ ],
+ "yazi_tipleri": [
+  "Source Sans 3"
+ ],
+ "punto": {
+  "tik": [
+   9.0
+  ],
+  "eksen_adi": [],
+  "baslik": [],
+  "lejant": [],
+  "panel": [],
+  "metin": [
+   9.0,
+   9.5
+  ]
+ },
+ "punto_tepe": {
+  "tik": 9.0,
+  "metin": 9.5
+ },
+ "panel_harfleri": [],
+ "eksenler": [
+  {
+   "konum_pt": [
+    0.0,
+    0.0,
+    510.2,
+    124.7
+   ],
+   "baslik": "",
+   "seriler": [],
+   "eksen_turu": "rectilinear",
+   "sabit_oran": false,
+   "x": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     180.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "20",
+     "40",
+     "60",
+     "80",
+     "100",
+     "120",
+     "140",
+     "160",
+     "180"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "y": {
+    "ham": "",
+    "nicelik": "",
+    "birim": null,
+    "bicim": null,
+    "anahtar": null,
+    "harf": null,
+    "olcek": "linear",
+    "tarih": false,
+    "ters": false,
+    "sinir": [
+     0.0,
+     44.0
+    ],
+    "gorunur": true,
+    "kategorik": false,
+    "kategoriler": [],
+    "ondaliklar": [
+     0
+    ],
+    "ondalik_isareti": null,
+    "tikler": [
+     "0",
+     "10",
+     "20",
+     "30",
+     "40"
+    ],
+    "eksi": null,
+    "e_gosterimi": false,
+    "ofset": "",
+    "etiket_pt": null
+   },
+   "lejant": [],
+   "dogrudan_etiket": [],
+   "izgara": {
+    "x": false,
+    "y": false
+   },
+   "cerceve": [
+    "bottom",
+    "left"
+   ],
+   "alan": false,
+   "cerceve_kalinlik": 0.6,
+   "tik_yonu": 3,
+   "haritalar": []
+  }
+ ],
+ "renk_cubuklari": []
+}

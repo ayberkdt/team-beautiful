@@ -1,8 +1,8 @@
 # 26 · Venus rotorcraft simulator — engineering data book (LuGus "Fly on Venus")
 
 Written 5 Nov 2026 for the Friday 6 Nov LuGus slot. Companion to doc 25 (VESPER); it does **not** change doc 25,
-`sim_params.json` or any code. Source notes: `04_Venus/research/E_*.md` (index `E_00_index.md`); data files:
-`04_Venus/research/data/venus_atmosphere_40_70km.csv` (+ `.md`) and `venus_turbulence_model.json`.
+`sim_params.json` or any code. Source notes: `04_Venus/literature/simulator/E_*.md` (index `E_00_index.md`); data files:
+`04_Venus/literature/data/venus_atmosphere_40_70km.csv` (+ `.md`) and `venus_turbulence_model.json`.
 
 **Tags.** **[D]** read at the primary source in this session (5 Nov) · **[D-ag]** secondary source, or read by an
 earlier agent/session (notes A_–D_, not re-read today) · **[A]** abstract or search snippet only · **[K]** computed

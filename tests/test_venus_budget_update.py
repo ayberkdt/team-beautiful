@@ -1,4 +1,4 @@
-"""04_Venus/scripts/venus_budget_update.py: interaction curves, mission flight, gust model and the written result."""
+"""04_Venus/code/analysis/venus_budget_update.py: interaction curves, mission flight, gust model and the written result."""
 from __future__ import annotations
 
 import importlib.util
@@ -19,7 +19,7 @@ from aerokit.venus import sizing as S
 from aerokit.verification import check, check_true, expect_error
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / "04_Venus" / "scripts" / "venus_budget_update.py"
+SCRIPT = ROOT / "04_Venus" / "code" / "analysis" / "venus_budget_update.py"
 RESULT = ROOT / "04_Venus" / "outputs" / "variants" / "budget_update" / "result.json"
 PROMOTION = ROOT / "04_Venus" / "outputs" / "variants" / "v0_7_44p6kg" / "PROMOTED.json"
 # The v0.6 regression anchor: promotion replaces outputs/result.json, its old copy stays in the anchor directory.

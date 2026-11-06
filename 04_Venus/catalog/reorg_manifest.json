@@ -1,0 +1,1178 @@
+{
+ "schema": "venus_reorg_manifest/1",
+ "date": "2026-11-06",
+ "note": "Move of 04_Venus/scripts and 04_Venus/research. File names unchanged. Written once by the reorganisation, not by build_catalog.py.",
+ "backup": {
+  "zip": "D:\\tmp_ideathon\\venus\\reorg_backup_2026-11-06.zip",
+  "sha256": "05ad7a00f39ed1bf3cdf3a0d40b15454f20430c946589ac4d159f189886dbadc",
+  "entries": 139
+ },
+ "counts": {
+  "moved": 120,
+  "moved_with_changed_text": 16,
+  "edited_in_place": 19
+ },
+ "tree_digest_method": "sha256 of sorted lines '<relative path> <sha256>', one per file, each ending in a newline",
+ "outputs_tree": {
+  "path": "04_Venus/outputs",
+  "files_before": 219,
+  "sha256_before": "cd39f59ed516dd3468a9677efb9b58ad9cf1d875d602a7267852fbd6efc4cf7a",
+  "files_after": 219,
+  "sha256_after": "cd39f59ed516dd3468a9677efb9b58ad9cf1d875d602a7267852fbd6efc4cf7a",
+  "equal": true
+ },
+ "docs_versions_tree": {
+  "path": "04_Venus/docs/versions",
+  "files_before": 3,
+  "sha256_before": "23145cb088255e355303a694cc5448a441a629d4b888b513d6dc416f14d80900",
+  "files_after": 3,
+  "sha256_after": "23145cb088255e355303a694cc5448a441a629d4b888b513d6dc416f14d80900",
+  "equal": true
+ },
+ "script_anchor": {
+  "anchor_file": "04_Venus/outputs/variants/v0_7_44p6kg/baseline_hashes_before.json",
+  "copy": "04_Venus/catalog/baseline_hashes_before_2026-11-06.json",
+  "note": "The anchor file is under outputs/ and was not changed. New hashes live in script_anchor_changes below."
+ },
+ "script_anchor_changes": {
+  "venus_budget_update.py": {
+   "old_path": "04_Venus/scripts/venus_budget_update.py",
+   "new_path": "04_Venus/code/analysis/venus_budget_update.py",
+   "old_sha256": "14f01906fad10524caea59743668b270c8e21e44f9144b9a48f49d2c81d9f4d5",
+   "new_sha256": "38f9e80cfaf86b6c5c0067d6d864c54ebcb607d0e8be8824d75240afdd7baec0",
+   "path_edits": [
+    [
+     "04_Venus/scripts/venus_budget_update.py",
+     "04_Venus/code/analysis/venus_budget_update.py"
+    ],
+    [
+     "ROOT / \"04_Venus\" / \"research\" / \"data\"",
+     "ROOT / \"04_Venus\" / \"literature\" / \"data\""
+    ]
+   ],
+   "why": "path text only: docstring commands, generated_by strings, the turbulence file path"
+  },
+  "venus_crosscheck.py": {
+   "old_path": "04_Venus/scripts/venus_crosscheck.py",
+   "new_path": "04_Venus/code/analysis/venus_crosscheck.py",
+   "old_sha256": "0390a4434c5b8fa8351d80c262edebc76b7855743d0d39f2d5ce75583de424ee",
+   "new_sha256": "dd3b91601e3034c3acbd1c365a5ce70f6715ab8e9eb87c5db481004d0e60c2cc",
+   "path_edits": [
+    [
+     "04_Venus/scripts/venus_crosscheck.py",
+     "04_Venus/code/analysis/venus_crosscheck.py"
+    ]
+   ],
+   "why": "path text only: docstring commands, generated_by strings"
+  },
+  "venus_day.py": {
+   "old_path": "04_Venus/scripts/venus_day.py",
+   "new_path": "04_Venus/code/pipeline/venus_day.py",
+   "old_sha256": "f5dc1ba7ffb5b74de2abd57c060cf0e45bc690824da5b62f474b73bce4866089",
+   "new_sha256": "0edbba036692166db19b4d392266617bb468faee599740fc3886f16a19680d82",
+   "path_edits": [
+    [
+     "04_Venus/scripts/venus_day.py",
+     "04_Venus/code/pipeline/venus_day.py"
+    ],
+    [
+     "04_Venus/scripts/venus_final.py",
+     "04_Venus/code/pipeline/venus_final.py"
+    ]
+   ],
+   "why": "path text only: docstring commands, generated_by strings"
+  },
+  "venus_design.py": {
+   "old_path": "04_Venus/scripts/venus_design.py",
+   "new_path": "04_Venus/code/pipeline/venus_design.py",
+   "old_sha256": "12b2b42ef9fffb309a963d77757fd9a7984442330c8ef0fdd8f1494ff39e927f",
+   "new_sha256": "19fa35b5b6e876733c4dffd9e0b682e8c3a4e7502fd591d4fa1e69e7589f6cfc",
+   "path_edits": [
+    [
+     "04_Venus/scripts/venus_design.py",
+     "04_Venus/code/pipeline/venus_design.py"
+    ]
+   ],
+   "why": "path text only: docstring commands, generated_by strings"
+  },
+  "venus_entry_validation.py": {
+   "old_path": "04_Venus/scripts/venus_entry_validation.py",
+   "new_path": "04_Venus/code/analysis/venus_entry_validation.py",
+   "old_sha256": "975192338c16737184668e005c92ace66bbb5ab5f23627ef86c55f553228dd12",
+   "new_sha256": "fa488374e3439ef3088139c6fb0850f6390856cecc7c3973e321842a2aedc5f4",
+   "path_edits": [
+    [
+     "04_Venus/scripts/venus_entry_validation.py",
+     "04_Venus/code/analysis/venus_entry_validation.py"
+    ]
+   ],
+   "why": "path text only: docstring commands, generated_by strings"
+  },
+  "venus_final.py": {
+   "old_path": "04_Venus/scripts/venus_final.py",
+   "new_path": "04_Venus/code/pipeline/venus_final.py",
+   "old_sha256": "6b2eac037dcfe8020ba556f318c4671f18dbde5600c463c016ac81eceaf15d9f",
+   "new_sha256": "ff5c1cdc8a779e947c014bd52b1ef571591cfb91877136aa165c4e4f13223c64",
+   "path_edits": null,
+   "why": "split into final_compute/final_figures/final_sim/final_report; see final_split"
+  },
+  "venus_pds_extract.py": {
+   "old_path": "04_Venus/scripts/venus_pds_extract.py",
+   "new_path": "04_Venus/code/data/venus_pds_extract.py",
+   "old_sha256": "d70377d4ab8074249a55d2000b52fea813448dce59c27c6c2d80965be1761f97",
+   "new_sha256": "67ade0cf995572549156df2020c1769c26ed4d94b60f14340c67b20df9077c4b",
+   "path_edits": [
+    [
+     "04_Venus/scripts/venus_pds_extract.py",
+     "04_Venus/code/data/venus_pds_extract.py"
+    ]
+   ],
+   "why": "path text only: docstring commands, generated_by strings"
+  },
+  "venus_sensitivity.py": {
+   "old_path": "04_Venus/scripts/venus_sensitivity.py",
+   "new_path": "04_Venus/code/analysis/venus_sensitivity.py",
+   "old_sha256": "931d96c3ea0a101be2f7bfc2b9317325c013e73b303f17bf3c12d5affad8181c",
+   "new_sha256": "3df3b3d8d88a589ac3b300149fad11e0a189e0b0599876f66df89d75808ef73a",
+   "path_edits": [
+    [
+     "04_Venus/scripts/venus_sensitivity.py",
+     "04_Venus/code/analysis/venus_sensitivity.py"
+    ]
+   ],
+   "why": "path text only: docstring commands, generated_by strings"
+  },
+  "venus_sim_params.py": {
+   "old_path": "04_Venus/scripts/venus_sim_params.py",
+   "new_path": "04_Venus/code/pipeline/venus_sim_params.py",
+   "old_sha256": "1abdc09b3b8fe54755f49463dc03049520fde55a5a031b17ee5258eba960201a",
+   "new_sha256": "f5443e6af36f337ec0a3c4b91c0f0a1bea53477558aace5585b67322f3443552",
+   "path_edits": [
+    [
+     "04_Venus/scripts/venus_sim_params.py",
+     "04_Venus/code/pipeline/venus_sim_params.py"
+    ]
+   ],
+   "why": "path text only: docstring commands, generated_by strings"
+  },
+  "venus_trade.py": {
+   "old_path": "04_Venus/scripts/venus_trade.py",
+   "new_path": "04_Venus/code/analysis/venus_trade.py",
+   "old_sha256": "e17e1cbfed45f4ac8f1727c2a508ba96cb19c13b61901097f22027d68e4bbb01",
+   "new_sha256": "1d768396cabc9a3168fb1a1cc733660565605cb8345e0bcde485ad5987760cc1",
+   "path_edits": [
+    [
+     "04_Venus/scripts/venus_trade.py",
+     "04_Venus/code/analysis/venus_trade.py"
+    ]
+   ],
+   "why": "path text only: docstring commands, generated_by strings"
+  }
+ },
+ "final_split": {
+  "done": true,
+  "modules": [
+   "04_Venus/code/pipeline/final_compute.py",
+   "04_Venus/code/pipeline/final_figures.py",
+   "04_Venus/code/pipeline/final_sim.py",
+   "04_Venus/code/pipeline/final_report.py"
+  ],
+  "body_changes": "every function body is the old text; only four signatures take OUT or BASE, and one call passes OUT on",
+  "method": "--final and venus_sim_params.py run in copies of the tree (the root is found by walking to pyproject.toml, so outputs/ of the copy was written, never the real one)",
+  "old_code_vs_split_code": "result.json, design.json, sim_params.json, result.md, vesper_for_simulator.json, entry_validation.json equal byte for byte after removing generated_at, generated_by and script path text; 15 PNG equal; 15 PDF equal after removing their date and ID fields",
+  "real_outputs_vs_split_code": "same result, except result.json risks[1].mitigation",
+  "known_difference_not_from_the_move": "outputs/result.json risks[1].mitigation is older than src/aerokit/venus/risk.py. The old code in a copy, before the move, gave the same new text.",
+  "variant_rerun": "venus_variant_v07.py in a copy with the split code: every JSON and text file equals outputs/variants/v0_7_44p6kg after removing stamps and path text, 15 PNG equal, except the hand-written section 'Before promotion: three things to do' of CHANGES.md, which a rerun does not write",
+  "evidence_folder": "D:\tmp_ideathon\u000benus\reorg_evidence"
+ },
+ "left_unchanged": [
+  {
+   "path": "04_Venus/outputs/sim_params_README.md",
+   "why": "Listed for an update, but it is one of the 75 files anchored in baseline_hashes_before.json, which lives in outputs/. Editing it fails test_baseline_files_unchanged and changes the outputs tree digest. Its first lines still name the old script path."
+  },
+  {
+   "path": "src/aerokit/venus/data/pv_profiles.json",
+   "why": "data file; its source field says scripts/venus_pds_extract.py, written by an earlier run"
+  },
+  {
+   "path": "04_Venus/docs/versions/*, 04_Venus/outputs/**, prev_guess/**",
+   "why": "historical record, not to be changed"
+  }
+ ],
+ "new_files": [
+  "04_Venus/code/README.md",
+  "04_Venus/code/catalog/build_catalog.py",
+  "04_Venus/code/pipeline/final_compute.py",
+  "04_Venus/code/pipeline/final_figures.py",
+  "04_Venus/code/pipeline/final_sim.py",
+  "04_Venus/code/pipeline/final_report.py",
+  "04_Venus/catalog/README.md",
+  "04_Venus/catalog/components.md",
+  "04_Venus/catalog/components.json",
+  "04_Venus/catalog/figures.md",
+  "04_Venus/catalog/scripts.md",
+  "04_Venus/catalog/literature.md",
+  "04_Venus/catalog/data_files.md",
+  "04_Venus/catalog/reorg_manifest.json",
+  "04_Venus/catalog/baseline_hashes_before_2026-11-06.json",
+  "tests/test_venus_catalog.py"
+ ],
+ "edited_in_place": [
+  {
+   "path": "00_Common/docs/21_final_challenges_coordination.md",
+   "sha256_before": "ebed36f867044c515e4ec8ca9cbd8c02016d78ac39ef11121912cf872949de73",
+   "sha256_after": "2a73da58d2a167d8b58151f55d2082798db414d808b6b2814bd7e7b204abb9af",
+   "why": "old path text replaced"
+  },
+  {
+   "path": "00_Common/docs/26_night_5nov_agent_run.md",
+   "sha256_before": "00ac00f3b8edbafb9f608c6969eaccde0173520bc6bf2639ca9ecda699395cc0",
+   "sha256_after": "d08dfaa567753ad319a3acf3a6f824fce4a56ec094ec82ef70fef7d7c3b3af23",
+   "why": "old path text replaced"
+  },
+  {
+   "path": "00_Common/docs/references.md",
+   "sha256_before": "c4f38fd9661c31e828124418a156aa2133ec8b1cdad3212f21c8abfad2a89bea",
+   "sha256_after": "f7027a0a7b2289f6fe858dfb4efbd0d8007152a822f82939d1ce10b298addc17",
+   "why": "regenerated with scripts/build_references.py after _task_venus2.py; 4 lines differ, path text only"
+  },
+  {
+   "path": "04_Venus/README.md",
+   "sha256_before": "d2ebf007d51a899e711db4c091e3df233d030979f002df549c1daa4faaa8998c",
+   "sha256_after": "dbdc54ac699785acebf5bfaecbf1296b28946da2dd49dfc3a3fc392730277fe1",
+   "why": "rewritten as the new index, plain Turkish; the outputs table is kept with new commands"
+  },
+  {
+   "path": "04_Venus/docs/25_lugus_venus_rotorcraft.md",
+   "sha256_before": "bd37c64d2d4326e147b9d801b43581a2a376ded1a8cbe16c8f3e728eaa31dea0",
+   "sha256_after": "9134743473042bc2ca44c286ca7678dd03f11d0e42a879a41364488d5610163c",
+   "why": "old path text replaced"
+  },
+  {
+   "path": "04_Venus/docs/26_venus_sim_databook.md",
+   "sha256_before": "8c7bcdcf2451bcc2c67663a33672a5c53ea8caaddc63a94b1f24b4eca7153c4e",
+   "sha256_after": "f467744833493dcf8317aa3697f66e18eb8aaf21ada42bc3576a1bdf15ab8616",
+   "why": "old path text replaced"
+  },
+  {
+   "path": "README.md",
+   "sha256_before": "fa2b12ace5bda0c1b27fd076d57796ee237813b1d133a8fd51d067f715edf82d",
+   "sha256_after": "7ea03b56af7dc71df8e1c1b6f2fd9bb657f7c8390f858f9e79a9720534c4a3a7",
+   "why": "folder line of 04_Venus"
+  },
+  {
+   "path": "scripts/export_github.py",
+   "sha256_before": "f8ee8d56dbcdf7db346bef952322b69f93562547aa3a330329e6befef07f9a7f",
+   "sha256_after": "891bee6a4b0ce706e11a128c75406ed36f1258bf7df717a224ab4a4ee97433dd",
+   "why": "added */literature/*.pdf next to */research/*.pdf so third-party PDFs stay out of the public repo"
+  },
+  {
+   "path": "src/aerokit/references/_task_venus2.py",
+   "sha256_before": "c7226d0b70cd9e10aadcf440c83b703b1b676a449b5ab97b59de2f74b06db99d",
+   "sha256_after": "1d204290cdfc34a434cadb54dc99dfd0c97b5af62af2df1ae5e9846ed412c8eb",
+   "why": "old path text replaced"
+  },
+  {
+   "path": "src/aerokit/venus/atmosphere.py",
+   "sha256_before": "6a5e746884d066c969e9be3a79b34acdacb08da53a242d9a3dfe5100e0ee53bc",
+   "sha256_after": "eaf200999eb66241f35253e8337a7a37f9ca1e6237e75eedf1ca149f1fadb364",
+   "why": "old path text replaced"
+  },
+  {
+   "path": "src/aerokit/venus/design.py",
+   "sha256_before": "42d2227309e6f1d15728b3d223e7abc493acccd5f476a82584c190b2b960c492",
+   "sha256_after": "094570d5b9b0905c9f8970d3c5acd2203beddb471316ad161ac8f36f67baba15",
+   "why": "path text in atmosphere.source; reaches design.json on the next run only. That field already differed from outputs/design.json before the move (scripts/... against 04_Venus/scripts/...)"
+  },
+  {
+   "path": "src/aerokit/venus/entry.py",
+   "sha256_before": "c3413ea8a951630e81d9bd26a03e5836f2e81c8fdf27f3a695a44ff70b907f5c",
+   "sha256_after": "b00b08c371e8e77bc9e009c3a1efdcb65b5d94e79743502cfb0621766d69fa04",
+   "why": "old path text replaced"
+  },
+  {
+   "path": "src/aerokit/venus/gas.py",
+   "sha256_before": "d821fd253809f5d6cc6215f66f47ceab49bc5ed6b2825cff06736f7cb88e13f8",
+   "sha256_after": "0239e3e8b8f1267209f613fdab682d0c32e0f05072edf56ef1ee52a96823878b",
+   "why": "old path text replaced"
+  },
+  {
+   "path": "tests/test_bracket_scripts.py",
+   "sha256_before": "96f912407cf5c754595646d340c5b3d99e2934cdbb056c4f302bf3706e77f37f",
+   "sha256_after": "7a217a4c3f6a40ed3cc5185b39453b596ad31207787d4c6a7e9aaf56bd06e3a9",
+   "why": "SCRIPT_DIRS: 04_Venus/code/pipeline"
+  },
+  {
+   "path": "tests/test_day_tools.py",
+   "sha256_before": "bd6ac39f3494b2571fd3b2d444abdd6ad7ad04ee11c1b902f6ffd20bcc999d6e",
+   "sha256_after": "47e0eb087101917d31309bd5f8de07430fb66edc57477634ee11f9899ded16b3",
+   "why": "SCRIPT_DIRS: 04_Venus/code/pipeline"
+  },
+  {
+   "path": "tests/test_venus_bemt.py",
+   "sha256_before": "6c6a7a30361bbf54f32c3403a9735db635f96cb8e84c9d0ae199899f8d5f96a0",
+   "sha256_after": "7ed69c5e5d0e164303fd900495fde61bd51a369533ca52bf7acfc873b61ca2fd",
+   "why": "old path text replaced"
+  },
+  {
+   "path": "tests/test_venus_budget_update.py",
+   "sha256_before": "e5673abc4c38365bb1c48d5b6dcbf97f6a07db3f6fd9810d2f82bfe704f7d13c",
+   "sha256_after": "c446882654e32f78e9076024e6ffdc68f81033840a965fa5269f8f09f2e87f00",
+   "why": "old path text replaced"
+  },
+  {
+   "path": "tests/test_venus_sim_params.py",
+   "sha256_before": "f0d8462d9efc9e276743715d994eabfb0f0293e57e6ef2b767e979894e007d64",
+   "sha256_after": "9f853b70d8496b859adcc551123c9a5f85e80bec2d00ddd0be7af6f8d3447df9",
+   "why": "old path text replaced"
+  },
+  {
+   "path": "tests/test_venus_variant_v07.py",
+   "sha256_before": "d4a522f80c30c907ca97ea45740c421d739fa51f2c6783b803d6c1baa36cd2ec",
+   "sha256_after": "7d822331e2056229a65e8eb1430f7037df99ac3d0eb5ce4d3b0a4be2f0d0ce7e",
+   "why": "new paths; test_existing_scripts_unchanged reads script_anchor_changes"
+  }
+ ],
+ "moves": [
+  {
+   "old": "04_Venus/scripts/venus_budget_update.py",
+   "new": "04_Venus/code/analysis/venus_budget_update.py",
+   "sha256_old": "14f01906fad10524caea59743668b270c8e21e44f9144b9a48f49d2c81d9f4d5",
+   "sha256_new": "38f9e80cfaf86b6c5c0067d6d864c54ebcb607d0e8be8824d75240afdd7baec0",
+   "content_changed": true
+  },
+  {
+   "old": "04_Venus/scripts/venus_crosscheck.py",
+   "new": "04_Venus/code/analysis/venus_crosscheck.py",
+   "sha256_old": "0390a4434c5b8fa8351d80c262edebc76b7855743d0d39f2d5ce75583de424ee",
+   "sha256_new": "dd3b91601e3034c3acbd1c365a5ce70f6715ab8e9eb87c5db481004d0e60c2cc",
+   "content_changed": true
+  },
+  {
+   "old": "04_Venus/scripts/venus_day.py",
+   "new": "04_Venus/code/pipeline/venus_day.py",
+   "sha256_old": "f5dc1ba7ffb5b74de2abd57c060cf0e45bc690824da5b62f474b73bce4866089",
+   "sha256_new": "0edbba036692166db19b4d392266617bb468faee599740fc3886f16a19680d82",
+   "content_changed": true
+  },
+  {
+   "old": "04_Venus/scripts/venus_design.py",
+   "new": "04_Venus/code/pipeline/venus_design.py",
+   "sha256_old": "12b2b42ef9fffb309a963d77757fd9a7984442330c8ef0fdd8f1494ff39e927f",
+   "sha256_new": "19fa35b5b6e876733c4dffd9e0b682e8c3a4e7502fd591d4fa1e69e7589f6cfc",
+   "content_changed": true
+  },
+  {
+   "old": "04_Venus/scripts/venus_entry_validation.py",
+   "new": "04_Venus/code/analysis/venus_entry_validation.py",
+   "sha256_old": "975192338c16737184668e005c92ace66bbb5ab5f23627ef86c55f553228dd12",
+   "sha256_new": "fa488374e3439ef3088139c6fb0850f6390856cecc7c3973e321842a2aedc5f4",
+   "content_changed": true
+  },
+  {
+   "old": "04_Venus/scripts/venus_final.py",
+   "new": "04_Venus/code/pipeline/venus_final.py",
+   "sha256_old": "6b2eac037dcfe8020ba556f318c4671f18dbde5600c463c016ac81eceaf15d9f",
+   "sha256_new": "ff5c1cdc8a779e947c014bd52b1ef571591cfb91877136aa165c4e4f13223c64",
+   "content_changed": true
+  },
+  {
+   "old": "04_Venus/scripts/venus_pds_extract.py",
+   "new": "04_Venus/code/data/venus_pds_extract.py",
+   "sha256_old": "d70377d4ab8074249a55d2000b52fea813448dce59c27c6c2d80965be1761f97",
+   "sha256_new": "67ade0cf995572549156df2020c1769c26ed4d94b60f14340c67b20df9077c4b",
+   "content_changed": true
+  },
+  {
+   "old": "04_Venus/scripts/venus_sensitivity.py",
+   "new": "04_Venus/code/analysis/venus_sensitivity.py",
+   "sha256_old": "931d96c3ea0a101be2f7bfc2b9317325c013e73b303f17bf3c12d5affad8181c",
+   "sha256_new": "3df3b3d8d88a589ac3b300149fad11e0a189e0b0599876f66df89d75808ef73a",
+   "content_changed": true
+  },
+  {
+   "old": "04_Venus/scripts/venus_sim_params.py",
+   "new": "04_Venus/code/pipeline/venus_sim_params.py",
+   "sha256_old": "1abdc09b3b8fe54755f49463dc03049520fde55a5a031b17ee5258eba960201a",
+   "sha256_new": "f5443e6af36f337ec0a3c4b91c0f0a1bea53477558aace5585b67322f3443552",
+   "content_changed": true
+  },
+  {
+   "old": "04_Venus/scripts/venus_trade.py",
+   "new": "04_Venus/code/analysis/venus_trade.py",
+   "sha256_old": "e17e1cbfed45f4ac8f1727c2a508ba96cb19c13b61901097f22027d68e4bbb01",
+   "sha256_new": "1d768396cabc9a3168fb1a1cc733660565605cb8345e0bcde485ad5987760cc1",
+   "content_changed": true
+  },
+  {
+   "old": "04_Venus/scripts/venus_variant_v07.py",
+   "new": "04_Venus/code/variants/venus_variant_v07.py",
+   "sha256_old": "7a846e803b46fc51a09ed5cae2eb19a78bb0a7dee7e179ae01c44fef0e029c1f",
+   "sha256_new": "4523d3d9ebcc7d6b81a5ffcf2f4494da39b9c315cc8176081ff2f6c12585fce0",
+   "content_changed": true
+  },
+  {
+   "old": "04_Venus/research/A_00_index.md",
+   "new": "04_Venus/literature/atmosphere/A_00_index.md",
+   "sha256_old": "c8b66625080abbe0a36cd1ae17a05d7a4dc9a04d441e3c41d52297b25e330905",
+   "sha256_new": "c8b66625080abbe0a36cd1ae17a05d7a4dc9a04d441e3c41d52297b25e330905",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/A_counselman1980_pv_dlbi_winds.md",
+   "new": "04_Venus/literature/atmosphere/A_counselman1980_pv_dlbi_winds.md",
+   "sha256_old": "ca9bec3aae1773fa398458c501b306c13fda60ddbcf8eb9c2197b556dea6a860",
+   "sha256_new": "ca9bec3aae1773fa398458c501b306c13fda60ddbcf8eb9c2197b556dea6a860",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/A_kerzhanovich_limaye1985_vira_winds.md",
+   "new": "04_Venus/literature/atmosphere/A_kerzhanovich_limaye1985_vira_winds.md",
+   "sha256_old": "75f0bdeda0bf1e5d9d7c1a890ed39422e01bc118517a684cf4c516165e648d9c",
+   "sha256_new": "75f0bdeda0bf1e5d9d7c1a890ed39422e01bc118517a684cf4c516165e648d9c",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/A_knollenberg_hunten1980_lcps.md",
+   "new": "04_Venus/literature/atmosphere/A_knollenberg_hunten1980_lcps.md",
+   "sha256_old": "6783031b9b418b4a8071ae984d57ef47a814534b9c604d22796fb2240b7b7601",
+   "sha256_new": "6783031b9b418b4a8071ae984d57ef47a814534b9c604d22796fb2240b7b7601",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/A_limaye2018_banerjee2026_thermal_review.md",
+   "new": "04_Venus/literature/atmosphere/A_limaye2018_banerjee2026_thermal_review.md",
+   "sha256_old": "c0c8d7f78179ff28e962b0cad3ad0eb0f775a313a2f589d3c953fc8c21872548",
+   "sha256_new": "c0c8d7f78179ff28e962b0cad3ad0eb0f775a313a2f589d3c953fc8c21872548",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/A_lorenz2018_lightning.md",
+   "new": "04_Venus/literature/atmosphere/A_lorenz2018_lightning.md",
+   "sha256_old": "080751daf685135ed2d2fdf5b477d6a92be7c72446d60e24a91bffcab84b08c4",
+   "sha256_new": "080751daf685135ed2d2fdf5b477d6a92be7c72446d60e24a91bffcab84b08c4",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/A_nist_co2_properties.md",
+   "new": "04_Venus/literature/atmosphere/A_nist_co2_properties.md",
+   "sha256_old": "a89dc9da6a7dc4a4a2301b9bfd5c12494e879c641b0b98fa3c31c5a3d47de6a4",
+   "sha256_new": "a89dc9da6a7dc4a4a2301b9bfd5c12494e879c641b0b98fa3c31c5a3d47de6a4",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/A_pv_lgc_composition.md",
+   "new": "04_Venus/literature/atmosphere/A_pv_lgc_composition.md",
+   "sha256_old": "c42d5e09a64ac880ef0a03aa78095144e75ed79e69955e2236437b9247e18d76",
+   "sha256_new": "c42d5e09a64ac880ef0a03aa78095144e75ed79e69955e2236437b9247e18d76",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/A_pv_nephelometer_cloud_layers.md",
+   "new": "04_Venus/literature/atmosphere/A_pv_nephelometer_cloud_layers.md",
+   "sha256_old": "b041be887def85b08b7531948c3ec1a3a3672996588fe8d1fa5649592a894f0f",
+   "sha256_new": "b041be887def85b08b7531948c3ec1a3a3672996588fe8d1fa5649592a894f0f",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/A_pv_probes_seiff1980_pds.md",
+   "new": "04_Venus/literature/atmosphere/A_pv_probes_seiff1980_pds.md",
+   "sha256_old": "5d9780d75b8cf5490b578fe4e3c2656b3849f2e878cc68c5a9738c63ac68fc70",
+   "sha256_new": "5d9780d75b8cf5490b578fe4e3c2656b3849f2e878cc68c5a9738c63ac68fc70",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/A_seiff1985_vira.md",
+   "new": "04_Venus/literature/atmosphere/A_seiff1985_vira.md",
+   "sha256_old": "8bf4631dd3593ef5af5b7add79db4bc726db7ed008b0d6e2a5c9e2d28adf546e",
+   "sha256_new": "8bf4631dd3593ef5af5b7add79db4bc726db7ed008b0d6e2a5c9e2d28adf546e",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/A_titov2018_clouds.md",
+   "new": "04_Venus/literature/atmosphere/A_titov2018_clouds.md",
+   "sha256_old": "9ce9dfa3f3edfac4aa22a46c6ad3ba97d31f4313c8a2a97849bac95237f92b9e",
+   "sha256_new": "9ce9dfa3f3edfac4aa22a46c6ad3ba97d31f4313c8a2a97849bac95237f92b9e",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/A_tomasko1980_lsfr_solar_flux.md",
+   "new": "04_Venus/literature/atmosphere/A_tomasko1980_lsfr_solar_flux.md",
+   "sha256_old": "276f46ec9be0c3a315e3a5268364c91f342e42bcd3fceb1b283187f95e640148",
+   "sha256_new": "276f46ec9be0c3a315e3a5268364c91f342e42bcd3fceb1b283187f95e640148",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/A_vega1985_balloons_lander.md",
+   "new": "04_Venus/literature/atmosphere/A_vega1985_balloons_lander.md",
+   "sha256_old": "e9e3e984ab6a2f973be945cf0eb5f38530f5c1cd0176cfb8bb7af19646b6538b",
+   "sha256_new": "e9e3e984ab6a2f973be945cf0eb5f38530f5c1cd0176cfb8bb7af19646b6538b",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/A_venera_flux_moroz_ekonomov.md",
+   "new": "04_Venus/literature/atmosphere/A_venera_flux_moroz_ekonomov.md",
+   "sha256_old": "4151b8b4a889e90aaed079fa3e01947a708a8017667391fec005e147cce026fa",
+   "sha256_new": "4151b8b4a889e90aaed079fa3e01947a708a8017667391fec005e147cce026fa",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/A_winds_cloudtracking_vex_akatsuki.md",
+   "new": "04_Venus/literature/atmosphere/A_winds_cloudtracking_vex_akatsuki.md",
+   "sha256_old": "cb820018065b5fa8c6debe8296adccba50c9d44c7c84c0a6d5023488edcfcc63",
+   "sha256_new": "cb820018065b5fa8c6debe8296adccba50c9d44c7c84c0a6d5023488edcfcc63",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_00_index.md",
+   "new": "04_Venus/literature/missions/B_00_index.md",
+   "sha256_old": "b4b80feb2dd9c49ce2d67e1361d7d2ead9ab7488d232014a893f8d23ce0db5b4",
+   "sha256_new": "b4b80feb2dd9c49ce2d67e1361d7d2ead9ab7488d232014a893f8d23ce0db5b4",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_abramovich1976_venera9_10.md",
+   "new": "04_Venus/literature/missions/B_abramovich1976_venera9_10.md",
+   "sha256_old": "cd2f2c41642f93fd9db4065087a09cd92bb4e4f841db96ac75206ad4673da37f",
+   "sha256_new": "cd2f2c41642f93fd9db4065087a09cd92bb4e4f841db96ac75206ad4673da37f",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_davinci.md",
+   "new": "04_Venus/literature/missions/B_davinci.md",
+   "sha256_old": "0b35c667b9788c10752f435737f2b9ec7da1ece6abb722cd82b7fd6668ef4baa",
+   "sha256_new": "0b35c667b9788c10752f435737f2b9ec7da1ece6abb722cd82b7fd6668ef4baa",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_fimmel1983_sp461.md",
+   "new": "04_Venus/literature/missions/B_fimmel1983_sp461.md",
+   "sha256_old": "aaf261fd31de495ca0c751dcae32fd95703c19c0560b231449bdd543e6df7f86",
+   "sha256_new": "aaf261fd31de495ca0c751dcae32fd95703c19c0560b231449bdd543e6df7f86",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_girija2023_probe_dataset.md",
+   "new": "04_Venus/literature/missions/B_girija2023_probe_dataset.md",
+   "sha256_old": "01237e0dcfa5e457877b2f26de7a75bab500a7ead3c953a7f8c68b372f75928c",
+   "sha256_new": "01237e0dcfa5e457877b2f26de7a75bab500a7ead3c953a7f8c68b372f75928c",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_izraelevitz2025_aerobot.md",
+   "new": "04_Venus/literature/missions/B_izraelevitz2025_aerobot.md",
+   "sha256_old": "02ef29941a5de3b1222c1263bad74f6160f7101cce6f7da7525dc884a4c92dc6",
+   "sha256_new": "02ef29941a5de3b1222c1263bad74f6160f7101cce6f7da7525dc884a4c92dc6",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_jpl_aerobot_posters.md",
+   "new": "04_Venus/literature/missions/B_jpl_aerobot_posters.md",
+   "sha256_old": "81b415e2a4a9e5dc7a3ea0cab67e92721cfd26f274d0a002613433f2c0b48222",
+   "sha256_new": "81b415e2a4a9e5dc7a3ea0cab67e92721cfd26f274d0a002613433f2c0b48222",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_landis_venus_airplane.md",
+   "new": "04_Venus/literature/missions/B_landis_venus_airplane.md",
+   "sha256_old": "d535d17d59778ea77137aca9d831a7f4b4175d6eb822daf80e0543083a03348b",
+   "sha256_new": "d535d17d59778ea77137aca9d831a7f4b4175d6eb822daf80e0543083a03348b",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_siddiqi2018.md",
+   "new": "04_Venus/literature/missions/B_siddiqi2018.md",
+   "sha256_old": "4014e8142ba28e5254c400ed9435cd875ee21e2c95ac1ec442b55bc1249917ab",
+   "sha256_new": "4014e8142ba28e5254c400ed9435cd875ee21e2c95ac1ec442b55bc1249917ab",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_vamp.md",
+   "new": "04_Venus/literature/missions/B_vamp.md",
+   "sha256_old": "0afca69b96df75c6e985c80118fde7b70b5881b117d6e725c49c0e0c58620e26",
+   "sha256_new": "0afca69b96df75c6e985c80118fde7b70b5881b117d6e725c49c0e0c58620e26",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_vaps2018.md",
+   "new": "04_Venus/literature/missions/B_vaps2018.md",
+   "sha256_old": "dfd5de556c0dc09120a474cc700bc8d2af5799699b25dc4471f39346f0f2dd4f",
+   "sha256_new": "dfd5de556c0dc09120a474cc700bc8d2af5799699b25dc4471f39346f0f2dd4f",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_vega_balloon.md",
+   "new": "04_Venus/literature/missions/B_vega_balloon.md",
+   "sha256_old": "84bac558dfc33a44c56ec1dd91b32d1a2dcc1fe293c3fb39053966276ecc1cd2",
+   "sha256_new": "84bac558dfc33a44c56ec1dd91b32d1a2dcc1fe293c3fb39053966276ecc1cd2",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_venera56_tass1969.md",
+   "new": "04_Venus/literature/missions/B_venera56_tass1969.md",
+   "sha256_old": "5062be4fdbe4895f9229ebb58c0ea93e4d3c98dd9a86781c5adb6fa124f92a1e",
+   "sha256_new": "5062be4fdbe4895f9229ebb58c0ea93e4d3c98dd9a86781c5adb6fa124f92a1e",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_venkatapathy2016_prabhu2013.md",
+   "new": "04_Venus/literature/missions/B_venkatapathy2016_prabhu2013.md",
+   "sha256_old": "40258a31741b8887a95f53daa729db2c3a01bbe381c1c9ac69bbb06fd2d1555f",
+   "sha256_new": "40258a31741b8887a95f53daa729db2c3a01bbe381c1c9ac69bbb06fd2d1555f",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_young2004_rwd_husseyin2016.md",
+   "new": "04_Venus/literature/missions/B_young2004_rwd_husseyin2016.md",
+   "sha256_old": "540780269396fcd9e27887bfdad09397eab82df61370a16bd59d7514a3ca31a1",
+   "sha256_new": "540780269396fcd9e27887bfdad09397eab82df61370a16bd59d7514a3ca31a1",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/B_young2026_venus_aerial.md",
+   "new": "04_Venus/literature/missions/B_young2026_venus_aerial.md",
+   "sha256_old": "011628621cd866f66ec800c2b6435c0d42088f91f59e929c3685adca8d239630",
+   "sha256_new": "011628621cd866f66ec800c2b6435c0d42088f91f59e929c3685adca8d239630",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_00_index.md",
+   "new": "04_Venus/literature/rotorcraft/C_00_index.md",
+   "sha256_old": "45909797d5dcf7fbd07064c820de3171647b934c5f865596f4e3c61109f58f1f",
+   "sha256_new": "45909797d5dcf7fbd07064c820de3171647b934c5f865596f4e3c61109f58f1f",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_balaram2018.md",
+   "new": "04_Venus/literature/rotorcraft/C_balaram2018.md",
+   "sha256_old": "685b43e5d5597491c4cb0b6b73c5b2e119229e07aa0382d90cf342a179d3c421",
+   "sha256_new": "685b43e5d5597491c4cb0b6b73c5b2e119229e07aa0382d90cf342a179d3c421",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_coleman1997.md",
+   "new": "04_Venus/literature/rotorcraft/C_coleman1997.md",
+   "sha256_old": "1cf1f2bc7d60dc63406c08ada6266c07efac69f262762306950ccbe6eae244a8",
+   "sha256_new": "1cf1f2bc7d60dc63406c08ada6266c07efac69f262762306950ccbe6eae244a8",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_delaune2022_mahd.md",
+   "new": "04_Venus/literature/rotorcraft/C_delaune2022_mahd.md",
+   "sha256_old": "b16005c79b52f568ded801125038426828aaf0d738c1379e754d3f54554f0f17",
+   "sha256_new": "b16005c79b52f568ded801125038426828aaf0d738c1379e754d3f54554f0f17",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_grip2018.md",
+   "new": "04_Venus/literature/rotorcraft/C_grip2018.md",
+   "sha256_old": "d5acc1ccc42978180bca4f4a4c71187c312466ca9f3dbaf96de15e12d257aa79",
+   "sha256_new": "d5acc1ccc42978180bca4f4a4c71187c312466ca9f3dbaf96de15e12d257aa79",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_harrington1951.md",
+   "new": "04_Venus/literature/rotorcraft/C_harrington1951.md",
+   "sha256_old": "70ae8394fa2cfd3091864723d1a14d8eeaa4f9c6bc47ee6c6f55e8f4c72bec7b",
+   "sha256_new": "70ae8394fa2cfd3091864723d1a14d8eeaa4f9c6bc47ee6c6f55e8f4c72bec7b",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_husseyin2016_cyclocopter.md",
+   "new": "04_Venus/literature/rotorcraft/C_husseyin2016_cyclocopter.md",
+   "sha256_old": "bcbda72937b50536ada1284da6eaec0f68cc0e0e6e7be92bdb3d983d6701c287",
+   "sha256_new": "bcbda72937b50536ada1284da6eaec0f68cc0e0e6e7be92bdb3d983d6701c287",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_ingenuity_jpl.md",
+   "new": "04_Venus/literature/rotorcraft/C_ingenuity_jpl.md",
+   "sha256_old": "f6a97892876e14757325072eaec9451a9b3adc86c48c95c5cfd5e6b16f7bb789",
+   "sha256_new": "f6a97892876e14757325072eaec9451a9b3adc86c48c95c5cfd5e6b16f7bb789",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_johnson2020_msh.md",
+   "new": "04_Venus/literature/rotorcraft/C_johnson2020_msh.md",
+   "sha256_old": "af6fcce08840fe9542436cf33741c0842d25aa09112d64f5ef88eabeb3176116",
+   "sha256_new": "af6fcce08840fe9542436cf33741c0842d25aa09112d64f5ef88eabeb3176116",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_knight_hefner1937.md",
+   "new": "04_Venus/literature/rotorcraft/C_knight_hefner1937.md",
+   "sha256_old": "09c86f4092df9323c1e2b09c2b6e012c1aa713dc5608e4b9b078899ac9eff57d",
+   "sha256_new": "09c86f4092df9323c1e2b09c2b6e012c1aa713dc5608e4b9b078899ac9eff57d",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_koning2018.md",
+   "new": "04_Venus/literature/rotorcraft/C_koning2018.md",
+   "sha256_old": "665a1d2cc3afb3d46c6f7d9886543a6b197fd7e6f4b03c07fda1bb0a79f22a44",
+   "sha256_new": "665a1d2cc3afb3d46c6f7d9886543a6b197fd7e6f4b03c07fda1bb0a79f22a44",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_koning2019.md",
+   "new": "04_Venus/literature/rotorcraft/C_koning2019.md",
+   "sha256_old": "11c1a041434c37dfb2f3b520ef78879ff0d2ee14987c0cf60d66b33bed75d6e3",
+   "sha256_new": "11c1a041434c37dfb2f3b520ef78879ff0d2ee14987c0cf60d66b33bed75d6e3",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_koning2020_lowRe_airfoils.md",
+   "new": "04_Venus/literature/rotorcraft/C_koning2020_lowRe_airfoils.md",
+   "sha256_old": "05222c434b6f4ce431d1c90df1f34f8503c16b69a317b965e3f9cd79d84b45e5",
+   "sha256_new": "05222c434b6f4ce431d1c90df1f34f8503c16b69a317b965e3f9cd79d84b45e5",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_langelaan2017_titan.md",
+   "new": "04_Venus/literature/rotorcraft/C_langelaan2017_titan.md",
+   "sha256_old": "ae366b098a56707db4dd930bec9a5a159e1b92fd4b90e8a1d7fda83324227b25",
+   "sha256_new": "ae366b098a56707db4dd930bec9a5a159e1b92fd4b90e8a1d7fda83324227b25",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_lorenz2018_dragonfly.md",
+   "new": "04_Venus/literature/rotorcraft/C_lorenz2018_dragonfly.md",
+   "sha256_old": "100b1d8c364cae24dfc783e303903043a501b980bb394d1094560035d35b5063",
+   "sha256_new": "100b1d8c364cae24dfc783e303903043a501b980bb394d1094560035d35b5063",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_pensado2025_dragonfly_edl.md",
+   "new": "04_Venus/literature/rotorcraft/C_pensado2025_dragonfly_edl.md",
+   "sha256_old": "9e65bab6a02b8517296bfd3f3e13194ec685f6baacf7daf365eedb30da043c59",
+   "sha256_new": "9e65bab6a02b8517296bfd3f3e13194ec685f6baacf7daf365eedb30da043c59",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_syal2008_coaxial.md",
+   "new": "04_Venus/literature/rotorcraft/C_syal2008_coaxial.md",
+   "sha256_old": "31ef1fc0be0a06310b9fbd7eaab8f0894947e6ec4c795122d2f27cd49fec09a2",
+   "sha256_new": "31ef1fc0be0a06310b9fbd7eaab8f0894947e6ec4c795122d2f27cd49fec09a2",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_yatsenko_vorontsov_mai.md",
+   "new": "04_Venus/literature/rotorcraft/C_yatsenko_vorontsov_mai.md",
+   "sha256_old": "f0d65aa6106a3bbb201fd765a0d92ddc60cbac4fa67723c58be2f81486b0e01e",
+   "sha256_new": "f0d65aa6106a3bbb201fd765a0d92ddc60cbac4fa67723c58be2f81486b0e01e",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/C_young2026_venus_aerial.md",
+   "new": "04_Venus/literature/rotorcraft/C_young2026_venus_aerial.md",
+   "sha256_old": "47b704288d41542a3e3f226693db4e46966e43cf83abec410d7fc17dfdab9e5f",
+   "sha256_new": "47b704288d41542a3e3f226693db4e46966e43cf83abec410d7fc17dfdab9e5f",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_00_index.md",
+   "new": "04_Venus/literature/engineering/D_00_index.md",
+   "sha256_old": "bc0dcfbb0bd6f6aa06b13244835a2d86f692cdffbc606f34b0666584a1817928",
+   "sha256_new": "bc0dcfbb0bd6f6aa06b13244835a2d86f692cdffbc606f34b0666584a1817928",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_aec_q100.md",
+   "new": "04_Venus/literature/engineering/D_aec_q100.md",
+   "sha256_old": "36bfbd8f420b8ba18c1a4f4a2b0461b20fc7ef0f40d56d4fa8998e97e5982fe0",
+   "sha256_new": "36bfbd8f420b8ba18c1a4f4a2b0461b20fc7ef0f40d56d4fa8998e97e5982fe0",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_agrawal_2022_vlf.md",
+   "new": "04_Venus/literature/engineering/D_agrawal_2022_vlf.md",
+   "sha256_old": "2299e10321de890c63e73e358e6ba533518f6bdb74c9ca05e83bd26703bd8245",
+   "sha256_new": "2299e10321de890c63e73e358e6ba533518f6bdb74c9ca05e83bd26703bd8245",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_alleima_steel_h2so4.md",
+   "new": "04_Venus/literature/engineering/D_alleima_steel_h2so4.md",
+   "sha256_old": "8324a9e3479a83ea38ca372844ac61c6c4c5d3dce30218e86a0759ca9acf74d7",
+   "sha256_new": "8324a9e3479a83ea38ca372844ac61c6c4c5d3dce30218e86a0759ca9acf74d7",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_cabrera_west_pv.md",
+   "new": "04_Venus/literature/engineering/D_cabrera_west_pv.md",
+   "sha256_old": "4a5c4bb8a51f022495e9c3c52819767f2406fc20559e8ff319c50a835551bfb0",
+   "sha256_new": "4a5c4bb8a51f022495e9c3c52819767f2406fc20559e8ff319c50a835551bfb0",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_davinci_probe_arch.md",
+   "new": "04_Venus/literature/engineering/D_davinci_probe_arch.md",
+   "sha256_old": "795d7d5f9fd0426d7903ff14e6f99cbee79827a5a4ed54b49d903d2040f2ea06",
+   "sha256_new": "795d7d5f9fd0426d7903ff14e6f99cbee79827a5a4ed54b49d903d2040f2ea06",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_delaune_2021_ingenuity_nav.md",
+   "new": "04_Venus/literature/engineering/D_delaune_2021_ingenuity_nav.md",
+   "sha256_old": "09359766c25ba955c791b2b1f34160574a30b019603c31b09627707c50531bfe",
+   "sha256_new": "09359766c25ba955c791b2b1f34160574a30b019603c31b09627707c50531bfe",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_dutta_2012_venus_entry.md",
+   "new": "04_Venus/literature/engineering/D_dutta_2012_venus_entry.md",
+   "sha256_old": "aea3d159a3a3d5834f3ed5139ec22006937807e225bf1101c5e20ca0f377f587",
+   "sha256_new": "aea3d159a3a3d5834f3ed5139ec22006937807e225bf1101c5e20ca0f377f587",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_eclipse_magnets.md",
+   "new": "04_Venus/literature/engineering/D_eclipse_magnets.md",
+   "sha256_old": "26806a52bb09a58e61cead3d4d9e0623e2c62b0adefb21d9444dded00fd4e4ba",
+   "sha256_new": "26806a52bb09a58e61cead3d4d9e0623e2c62b0adefb21d9444dded00fd4e4ba",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_fep_chemical_resistance.md",
+   "new": "04_Venus/literature/engineering/D_fep_chemical_resistance.md",
+   "sha256_old": "1d287dca052bf681e0e51c18ca323b3abd666f9aac1401c8529393e20494aa06",
+   "sha256_new": "1d287dca052bf681e0e51c18ca323b3abd666f9aac1401c8529393e20494aa06",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_grandidier_2020_liht.md",
+   "new": "04_Venus/literature/engineering/D_grandidier_2020_liht.md",
+   "sha256_old": "8a61f55a2fb22bf237ea5893cc3e62b2da5c478a31f8cf547fc7b62b18eda672",
+   "sha256_new": "8a61f55a2fb22bf237ea5893cc3e62b2da5c478a31f8cf547fc7b62b18eda672",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_havoc_2016_acid.md",
+   "new": "04_Venus/literature/engineering/D_havoc_2016_acid.md",
+   "sha256_old": "a619055bccd8a5bbb0429d39eb58209a14614d11a9faa4be2b81934d8a811717",
+   "sha256_new": "a619055bccd8a5bbb0429d39eb58209a14614d11a9faa4be2b81934d8a811717",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_heeet_ellerby_2016.md",
+   "new": "04_Venus/literature/engineering/D_heeet_ellerby_2016.md",
+   "sha256_old": "3f96489249a6b40514173ba5cc474212339593d578af62601889521f9ab4b287",
+   "sha256_new": "3f96489249a6b40514173ba5cc474212339593d578af62601889521f9ab4b287",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_jpl_aerobot_materials.md",
+   "new": "04_Venus/literature/engineering/D_jpl_aerobot_materials.md",
+   "sha256_old": "a1bba5a53398f57b50966cbf3534180b74a5f5933d71966608a510e5f4b9d593",
+   "sha256_new": "a1bba5a53398f57b50966cbf3534180b74a5f5933d71966608a510e5f4b9d593",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_jpl_m2020_ingenuity_battery.md",
+   "new": "04_Venus/literature/engineering/D_jpl_m2020_ingenuity_battery.md",
+   "sha256_old": "4d7e10b8b5205f329f99d9336bce0bdb59d1580750ab8f293976934556c9b3fa",
+   "sha256_new": "4d7e10b8b5205f329f99d9336bce0bdb59d1580750ab8f293976934556c9b3fa",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_jpl_solar_acid_2022.md",
+   "new": "04_Venus/literature/engineering/D_jpl_solar_acid_2022.md",
+   "sha256_old": "c7dc102c52cac4f907fc10bf89484a3d14213ad85907df0ada2d963f8e8b93f1",
+   "sha256_new": "c7dc102c52cac4f907fc10bf89484a3d14213ad85907df0ada2d963f8e8b93f1",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_landis_haag_2013_solar.md",
+   "new": "04_Venus/literature/engineering/D_landis_haag_2013_solar.md",
+   "sha256_old": "141922a9c03628cb3702b44b6842b00c507a343f3f74f381bf60c9294f533b9c",
+   "sha256_new": "141922a9c03628cb3702b44b6842b00c507a343f3f74f381bf60c9294f533b9c",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_panasonic_ncr18650b.md",
+   "new": "04_Venus/literature/engineering/D_panasonic_ncr18650b.md",
+   "sha256_old": "c5096fbca8a1aa14cc60f528182abd00ee95f38a183a063ff479dbf20a0e0321",
+   "sha256_new": "c5096fbca8a1aa14cc60f528182abd00ee95f38a183a063ff479dbf20a0e0321",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_saft_lsh20.md",
+   "new": "04_Venus/literature/engineering/D_saft_lsh20.md",
+   "sha256_old": "b8ae38c3da1bc689c8df2073fa8f173dcc322c8f533c50e8b0aae4236a055f2b",
+   "sha256_new": "b8ae38c3da1bc689c8df2073fa8f173dcc322c8f533c50e8b0aae4236a055f2b",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_sutton_graves_1971.md",
+   "new": "04_Venus/literature/engineering/D_sutton_graves_1971.md",
+   "sha256_old": "5a679b2020860ccf21054e7483e9d4bf0be555bbee6b6512e833823a333ba2f7",
+   "sha256_new": "5a679b2020860ccf21054e7483e9d4bf0be555bbee6b6512e833823a333ba2f7",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_tauber_sutton_1991.md",
+   "new": "04_Venus/literature/engineering/D_tauber_sutton_1991.md",
+   "sha256_old": "6a9818d3c4d3ba79d5f85d469cce54611465a3927b168932607973f331e954ee",
+   "sha256_new": "6a9818d3c4d3ba79d5f85d469cce54611465a3927b168932607973f331e954ee",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_tauber_venus_rad_2012.md",
+   "new": "04_Venus/literature/engineering/D_tauber_venus_rad_2012.md",
+   "sha256_old": "09ac13f1b4f65f0f72515bae6c2dedaf7988d6c1dd61b1044519f9dc93b911dc",
+   "sha256_new": "09ac13f1b4f65f0f72515bae6c2dedaf7988d6c1dd61b1044519f9dc93b911dc",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_timet_titanium_h2so4.md",
+   "new": "04_Venus/literature/engineering/D_timet_titanium_h2so4.md",
+   "sha256_old": "120eb4a4ce698edf82c0ba27f0c6d1c1893498a1777f968ee220e31a3046fab9",
+   "sha256_new": "120eb4a4ce698edf82c0ba27f0c6d1c1893498a1777f968ee220e31a3046fab9",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_vaps_2018.md",
+   "new": "04_Venus/literature/engineering/D_vaps_2018.md",
+   "sha256_old": "87a093777b4a2c2896b7eec9f029744b55131e7eac19c799e94aa1421b75b77f",
+   "sha256_new": "87a093777b4a2c2896b7eec9f029744b55131e7eac19c799e94aa1421b75b77f",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_vega_balloon_tda1986.md",
+   "new": "04_Venus/literature/engineering/D_vega_balloon_tda1986.md",
+   "sha256_old": "bb2b5afb08a7a59f01206981a272d9771467d156670c7f9315f1d5cd6d942388",
+   "sha256_new": "bb2b5afb08a7a59f01206981a272d9771467d156670c7f9315f1d5cd6d942388",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_venkatapathy_2017_venus_edd.md",
+   "new": "04_Venus/literature/engineering/D_venkatapathy_2017_venus_edd.md",
+   "sha256_old": "00b361d45a6b2c94bacbc6b9644c77eea95e9981a733f9735e813affd827cfa0",
+   "sha256_new": "00b361d45a6b2c94bacbc6b9644c77eea95e9981a733f9735e813affd827cfa0",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_venus_microwave_absorption.md",
+   "new": "04_Venus/literature/engineering/D_venus_microwave_absorption.md",
+   "sha256_old": "7f398c5c754dc14a3b864903648cb71c82690b71a89fce5d13889a78ced3a2dc",
+   "sha256_new": "7f398c5c754dc14a3b864903648cb71c82690b71a89fce5d13889a78ced3a2dc",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/D_veva_cutts_1999.md",
+   "new": "04_Venus/literature/engineering/D_veva_cutts_1999.md",
+   "sha256_old": "964807dae412085ecb838a96c5e99e84a768cf787cc0ab17cb674c01abb4cde9",
+   "sha256_new": "964807dae412085ecb838a96c5e99e84a768cf787cc0ab17cb674c01abb4cde9",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/data/venus_atmosphere_40_70km.csv",
+   "new": "04_Venus/literature/data/venus_atmosphere_40_70km.csv",
+   "sha256_old": "2f79a38aa522e073f0edf25efb583242835d7dc9f27a9b1a823bf91b9a1cd72b",
+   "sha256_new": "2f79a38aa522e073f0edf25efb583242835d7dc9f27a9b1a823bf91b9a1cd72b",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/data/venus_atmosphere_40_70km.md",
+   "new": "04_Venus/literature/data/venus_atmosphere_40_70km.md",
+   "sha256_old": "bc117f9d357ebdfc56cec7f05c49f4fae105ddd8faaa8b039b6a14eadac09227",
+   "sha256_new": "bc117f9d357ebdfc56cec7f05c49f4fae105ddd8faaa8b039b6a14eadac09227",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/data/venus_turbulence_model.json",
+   "new": "04_Venus/literature/data/venus_turbulence_model.json",
+   "sha256_old": "801acd66174383702597b1e9aba1e0b2e110bfdf80cd940be8c272125c862c58",
+   "sha256_new": "801acd66174383702597b1e9aba1e0b2e110bfdf80cd940be8c272125c862c58",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_00_index.md",
+   "new": "04_Venus/literature/simulator/E_00_index.md",
+   "sha256_old": "6299217ed6c605b2c4b75708f8e82be5ffa118fc757402b75ee1286c8dbd76fe",
+   "sha256_new": "f9464a39f4b036b4e8ff2c055bbee53a96467934bd490d0f8bda0c9e8dfca152",
+   "content_changed": true
+  },
+  {
+   "old": "04_Venus/research/E_01_pv_sed_probe_tables.md",
+   "new": "04_Venus/literature/simulator/E_01_pv_sed_probe_tables.md",
+   "sha256_old": "20689d754bc3c1a87e45e079a7223bc08895dad5f564a042043854bfd38c07cc",
+   "sha256_new": "0e5d4b7641a24d581d3bbff1c200b36445d76d9769fdad882c7c63a8b700d12e",
+   "content_changed": true
+  },
+  {
+   "old": "04_Venus/research/E_02_pv_dlbi_winds.md",
+   "new": "04_Venus/literature/simulator/E_02_pv_dlbi_winds.md",
+   "sha256_old": "619dfa685f8c1caa688fb3b9705b632cb5b4cfee11c935b113b086a6c0bdbd62",
+   "sha256_new": "619dfa685f8c1caa688fb3b9705b632cb5b4cfee11c935b113b086a6c0bdbd62",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_03_pv_lsfr_solar_flux.md",
+   "new": "04_Venus/literature/simulator/E_03_pv_lsfr_solar_flux.md",
+   "sha256_old": "b9ce1ec944caf2d09252b6abd1be729ef4d9a9fba144ecee4949301961a8876e",
+   "sha256_new": "b9ce1ec944caf2d09252b6abd1be729ef4d9a9fba144ecee4949301961a8876e",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_04_vega_balloons_lander_pds.md",
+   "new": "04_Venus/literature/simulator/E_04_vega_balloons_lander_pds.md",
+   "sha256_old": "e679673aa3d6b45089c6aa1d84c7bb5fc5f44d4a1e9dcb83c4bc6f883cad48d0",
+   "sha256_new": "e679673aa3d6b45089c6aa1d84c7bb5fc5f44d4a1e9dcb83c4bc6f883cad48d0",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_05_nist_co2_n2_properties.md",
+   "new": "04_Venus/literature/simulator/E_05_nist_co2_n2_properties.md",
+   "sha256_old": "d7222cc0fcbdb0ab2d967d6a8c334701ae884e112dbd96a50e0169cba3bc8d3e",
+   "sha256_new": "d7222cc0fcbdb0ab2d967d6a8c334701ae884e112dbd96a50e0169cba3bc8d3e",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_06_jpl_ssd_venus_constants.md",
+   "new": "04_Venus/literature/simulator/E_06_jpl_ssd_venus_constants.md",
+   "sha256_old": "ee4ca44f8f19d38e235efa79a3c40b62b748c9039506e5fb80c50594e29a5b7d",
+   "sha256_new": "ee4ca44f8f19d38e235efa79a3c40b62b748c9039506e5fb80c50594e29a5b7d",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_07_venus_gram_amat.md",
+   "new": "04_Venus/literature/simulator/E_07_venus_gram_amat.md",
+   "sha256_old": "f5dc1f88303e9b1f2ffe19ef776540d2d6880c6a2fdcc9c515d5a76ba0487998",
+   "sha256_new": "f5dc1f88303e9b1f2ffe19ef776540d2d6880c6a2fdcc9c515d5a76ba0487998",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_08_ando2020_radio_occultation.md",
+   "new": "04_Venus/literature/simulator/E_08_ando2020_radio_occultation.md",
+   "sha256_old": "d3f70f8725bec66b514004593fcb829ab9e87c3b338ba5f65445c6aa3aef1745",
+   "sha256_new": "d3f70f8725bec66b514004593fcb829ab9e87c3b338ba5f65445c6aa3aef1745",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_09_lefevre2017_les_convective_layer.md",
+   "new": "04_Venus/literature/simulator/E_09_lefevre2017_les_convective_layer.md",
+   "sha256_old": "724e09bdb48dbcd8e9f9ce3451221e89d8a8b538761a4e110ac85b01eb04ef19",
+   "sha256_new": "724e09bdb48dbcd8e9f9ce3451221e89d8a8b538761a4e110ac85b01eb04ef19",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_10_lefevre2018_les_wind_shear.md",
+   "new": "04_Venus/literature/simulator/E_10_lefevre2018_les_wind_shear.md",
+   "sha256_old": "c94eac217696962f043bcafad43fdd0e1c6d092dd2c159b8319c20fc8d997685",
+   "sha256_new": "c94eac217696962f043bcafad43fdd0e1c6d092dd2c159b8319c20fc8d997685",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_11_sanchezlavega2017_dynamics_review.md",
+   "new": "04_Venus/literature/simulator/E_11_sanchezlavega2017_dynamics_review.md",
+   "sha256_old": "0d574d426bf1f62f215f311c1ddc4825d4af89cde232f04dc2767f6bf1b4bf64",
+   "sha256_new": "0d574d426bf1f62f215f311c1ddc4825d4af89cde232f04dc2767f6bf1b4bf64",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_12_knollenberg_hunten1980_clouds.md",
+   "new": "04_Venus/literature/simulator/E_12_knollenberg_hunten1980_clouds.md",
+   "sha256_old": "9060d991ec0710f7f839b2f6d5999e3cb7226b93403ffc0b967195d1d517b3e8",
+   "sha256_new": "9060d991ec0710f7f839b2f6d5999e3cb7226b93403ffc0b967195d1d517b3e8",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_13_dryden_mil_f_8785c_mathworks.md",
+   "new": "04_Venus/literature/simulator/E_13_dryden_mil_f_8785c_mathworks.md",
+   "sha256_old": "f06ef818f4d4f553c579ec0b0362eba160dc830ec95bc0a2dac8317220a30814",
+   "sha256_new": "9dae644d2842b67dd0d48f29eedc7a5f54eb4f185fc5094a088d21cf38cc03b1",
+   "content_changed": true
+  },
+  {
+   "old": "04_Venus/research/E_14_johnson2005_vortex_ring_state.md",
+   "new": "04_Venus/literature/simulator/E_14_johnson2005_vortex_ring_state.md",
+   "sha256_old": "8770328136261f19f3e598bd0badd23c856c5d3ffa1dab22e625697ed82e1afe",
+   "sha256_new": "8770328136261f19f3e598bd0badd23c856c5d3ffa1dab22e625697ed82e1afe",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_15_chen1989_dynamic_inflow.md",
+   "new": "04_Venus/literature/simulator/E_15_chen1989_dynamic_inflow.md",
+   "sha256_old": "4245cad2b90b1272d5b5dfab3843cd2a0f2deeadb19f302ef801fe275e4bbc42",
+   "sha256_new": "4245cad2b90b1272d5b5dfab3843cd2a0f2deeadb19f302ef801fe275e4bbc42",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_16_yoon2016_multirotor_interaction.md",
+   "new": "04_Venus/literature/simulator/E_16_yoon2016_multirotor_interaction.md",
+   "sha256_old": "366618bc281da78cb6b437d61d1e990599b42503df72058dbca3785b85ab5361",
+   "sha256_new": "366618bc281da78cb6b437d61d1e990599b42503df72058dbca3785b85ab5361",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_17_johnson2020_msh_weights_flap.md",
+   "new": "04_Venus/literature/simulator/E_17_johnson2020_msh_weights_flap.md",
+   "sha256_old": "dfe439a7a66569e209364210425bbc78df55f41a1e7354d61e1259c94956275e",
+   "sha256_new": "dfe439a7a66569e209364210425bbc78df55f41a1e7354d61e1259c94956275e",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_18_lugus_skypersonic_mars_simulator.md",
+   "new": "04_Venus/literature/simulator/E_18_lugus_skypersonic_mars_simulator.md",
+   "sha256_old": "42d9b7704f87b4cbce03521d2e510f450aae52f96f573be4730f741d78879dd3",
+   "sha256_new": "42d9b7704f87b4cbce03521d2e510f450aae52f96f573be4730f741d78879dd3",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_19_venus_flagship_2020_aerobot.md",
+   "new": "04_Venus/literature/simulator/E_19_venus_flagship_2020_aerobot.md",
+   "sha256_old": "a50966d676fd57cd5777dc729004847a8622103c0c467ebab905415e933ff680",
+   "sha256_new": "a50966d676fd57cd5777dc729004847a8622103c0c467ebab905415e933ff680",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/E_20_seals_and_other_snippets.md",
+   "new": "04_Venus/literature/simulator/E_20_seals_and_other_snippets.md",
+   "sha256_old": "a41686af21fb718ecbc3c81c14fde9470229999c84382eb10ed858979769db03",
+   "sha256_new": "a41686af21fb718ecbc3c81c14fde9470229999c84382eb10ed858979769db03",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/K_entry_crosschecks.md",
+   "new": "04_Venus/reviews/K_entry_crosschecks.md",
+   "sha256_old": "c4d7d12b36acd3a02c3dea685e353fa4b33b5c443b7cb996b774ec65f29b207e",
+   "sha256_new": "d2db8f483ff3e8e5ffce9a507f5b7e9b98a3ce0685e68bc54adabe2e7bb1b49a",
+   "content_changed": true
+  },
+  {
+   "old": "04_Venus/research/K_nist_co2_properties.md",
+   "new": "04_Venus/reviews/K_nist_co2_properties.md",
+   "sha256_old": "f17ea2c83cf47038d4c5f047d133196fac23654aa282289b8a4d8c0e92b68c35",
+   "sha256_new": "f17ea2c83cf47038d4c5f047d133196fac23654aa282289b8a4d8c0e92b68c35",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/K_review_doc25.md",
+   "new": "04_Venus/reviews/K_review_doc25.md",
+   "sha256_old": "7c2a391adddea45b828071c0950493fc44bbe669688455ce292266f48b359908",
+   "sha256_new": "7c2a391adddea45b828071c0950493fc44bbe669688455ce292266f48b359908",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/R_audit_2026-11-04.md",
+   "new": "04_Venus/reviews/R_audit_2026-11-04.md",
+   "sha256_old": "7d4b0315327eecb39a96d873e3b1d545637eccb4bca20daf26e12fded7814020",
+   "sha256_new": "7d4b0315327eecb39a96d873e3b1d545637eccb4bca20daf26e12fded7814020",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/R_jury_questions_2026-11-04.md",
+   "new": "04_Venus/reviews/R_jury_questions_2026-11-04.md",
+   "sha256_old": "676c8a6ee4d1113a64b2f4e13a8fb7b84b6bf695b330a7c6daee6006c5f748ea",
+   "sha256_new": "676c8a6ee4d1113a64b2f4e13a8fb7b84b6bf695b330a7c6daee6006c5f748ea",
+   "content_changed": false
+  },
+  {
+   "old": "04_Venus/research/README.md",
+   "new": "04_Venus/literature/README.md",
+   "sha256_old": "d5d9765c0804162e8974c2f145e67f05791cedd9583690889ac1948b6d2e29f9",
+   "sha256_new": "9da32d9bfb69497f4686c7e0887c53dfaff040d03424dd14ac81ca5c8edb7c03",
+   "content_changed": true
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+Automated PAR Approach: interactive 3D simulation
+
+Open this link in a desktop browser (Chrome or Edge):
+https://sunumatik.vercel.app/sunum.html?k=aero&s=par_approach
+
+What it shows
+The simulation shows our automated Precision Approach Radar concept: Radar, Correction, Pilot Cue.
+The aircraft flies a replay of our guidance model. The right panel separates what the pilot gets from what is only for the viewer.
+
+How to use it
+1. Click "Play approach". You can also drag the time bar.
+2. Select a scenario:
+   A Return: the aircraft starts off the path and returns to it.
+   B Bad data: radar data is late, then invalid. Guidance is removed until good data returns.
+   C Lost: radar contact is lost. The pilot gets the missed approach condition.
+3. Click "Sound off" to hear the voice calls.
+
+How to read the panel
+Pilot will see: the flight display and the cue. The diamonds show where the path is. The small marker shows where the aircraft goes. The pilot puts the marker in the ring.
+Pilot will hear: only the voice call.
+Simulation only: everything else, including the 3D view, the map and the labels. The pilot does not see these.
+
+Limits
+Simulated data. Educational concept. Not approved for flight use.
+The replay pilot and the aircraft are simple models. The flare and rollout are illustrative. The airfield is schematic.
+The page needs a computer with WebGL and a graphics card. The same scenarios are also provided as videos.

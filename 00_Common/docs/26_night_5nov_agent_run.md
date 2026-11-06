@@ -5,7 +5,7 @@ Started ~21:50 local (EASA agent ran 977 s and finished 22:09). Times below are 
 | # | Work | Owner of paths | Output to check |
 |---|---|---|---|
 | 1 | LaTeX replica of the Word report template | `00_Common/latex_template/` | `README.md`, `compare/` (side-by-side PNG + numbers) |
-| 2a | Venus research expansion (data book for the simulator) | `04_Venus/research/E_*`, `04_Venus/research/data/`, `04_Venus/docs/26_venus_sim_databook.md` | data book, atmosphere CSV, turbulence JSON |
+| 2a | Venus research expansion (data book for the simulator) | `04_Venus/literature/simulator/E_*`, `04_Venus/literature/data/`, `04_Venus/docs/26_venus_sim_databook.md` | data book, atmosphere CSV, turbulence JSON |
 | 2b | Venus rotorcraft physics engine + visuals | sunumatik worktree `.claude/worktrees/venus-rotorcraft-visual-44d0d1` (no commit) | preset README, validation table, screenshots |
 | 3 | Advionics case-based code, catalogs, triage | `03_Advionics/` (not `submission/`), `src/aerokit/atc/`, `src/aerokit/comms/`, `tests/test_atc_*`, `tests/comms/` | `cases/CATALOG.md`, `cases/REVEAL_DAY.md`, `scripts/triage.py` |
 | 4a | Ansys 4:00 deck from the submitted report | `01_Ansys/submission/deck/` | pptx, png/, talk_script.md, traceability.md, ux_denetim.md |
@@ -14,7 +14,7 @@ Started ~21:50 local (EASA agent ran 977 s and finished 22:09). Times below are 
 Sources of truth for the decks: the submitted PDFs in `D:\Kullanici\Downloads\` (`Team_Beetiful_Ansys_Report.pdf` 15:04,
 `Team_Beetiful_EASA_Report (2).pdf` 20:46). Decks add nothing that is not in the report.
 
-Read-only for everyone: `src/aerokit/venus*`, `04_Venus/outputs/`, `04_Venus/scripts/`, doc 25, the submitted reports,
+Read-only for everyone: `src/aerokit/venus*`, `04_Venus/outputs/`, `04_Venus/code/`, doc 25, the submitted reports,
 the templates in `00_Common/rules_and_templates/`.
 
 Results log: appended below when each agent finishes.
@@ -33,7 +33,7 @@ Results log: appended below when each agent finishes.
   52.6 vs 52.7 t, 14.5 vs 14.6 t; yellow highlight in Table 3.
 - Both decks first used 3 speakers; team has 4 and all must speak → both agents asked to re-split notes to 4 (22:20).
 - **2a Venus data book — done ~22:35.** `04_Venus/docs/26_venus_sim_databook.md` (447 lines), 20 `E_*` source notes,
-  `research/data/venus_atmosphere_40_70km.csv` (40–70 km, 0.5 km, 51 cols), `venus_turbulence_model.json` (4 additive
+  `04_Venus/literature/data/venus_atmosphere_40_70km.csv` (40–70 km, 0.5 km, 51 cols), `venus_turbulence_model.json` (4 additive
   parts). Main-session check: 55 km row T 299.1 K, ρ 0.889 kg/m³ (envelope 0.854–0.907) — agrees with doc 25 (26 °C,
   0.89). Discrepancies with doc 25 listed in data book §8: vertical gust correlation 80 s (sim_params) vs ~1500 s
   (VEGA) → doc 25 §4.7 gust result should be re-run; 3 m/s straight descent is inside the VRS band; rotor–rotor loss
@@ -102,7 +102,7 @@ Results log: appended below when each agent finishes.
   is the unfitted SUI 5 m/s point (+12.5 %), left failing on purpose. 55 km minimum electric power: off 1325 W, low 1475,
   nominal 1572, high 1664 W. Motor-out 24.5 m, tilt 66°; deployment peak 56.7 A > 53.6 A limit; canopy 0.33 m; dive
   8.1–10.8°. Data-book "−28 %" corrected (misquote; −17.7 % at 10 m/s). Sim work since e279882 is uncommitted.
-- **Budget update — done 6 Nov ~12:30.** `04_Venus/scripts/venus_budget_update.py` → `outputs/variants/budget_update/`
+- **Budget update — done 6 Nov ~12:30.** `04_Venus/code/analysis/venus_budget_update.py` → `outputs/variants/budget_update/`
   (B1–B3, result.md). As built 43.66 kg: energy closes, but hover reserve 0.484 h < 0.5 h rule with interaction on.
   Recommended 44.63 kg / 1109 Wh closes all four cases: nominal loiter 1622 W at 8.9 m/s, hover 2.22 kW, 43.8 h flight
   (38.7 h on sunlight), sun within 47°. Doc 25 updated (new §0, old copy in `docs/versions/`). Gust re-run: 5.9 m RMS,
@@ -121,3 +121,19 @@ Results log: appended below when each agent finishes.
   - "Doc 25 is not edited" was wrong: doc 25 gained a two-line pointer (anchor `docs/versions/..._before_v07_pointer.md`). Numbers in doc 25 are unchanged.
 - Open before promotion: `src/aerokit/venus/design.py` still has `DESIGN_VERSION = "0.6"`, so `venus_design.py` / `venus_final.py` would write v0.6 back into `outputs/` (agent read the code, did not run it; I confirmed the version line only).
 - Not rerun at 44.63 kg: simulator. Pull-out current 52.7 A at cos z 0.68 against the 53.6 A limit is a 43.66 kg number.
+
+## 6 Nov 14:30: simulator pass 6 checked
+
+- `sim/DOGRULAMA.md` (10:55Z, 1048 s): 109 checks, 97 pass, 1 FAIL, 11 info; counted by me from `dogrulama.json`. The FAIL: De Gregorio 2024 fixed-rpm thrust, sim 0.986 against 0.937, unfitted, left failing. SUI 5 m/s now +7.3 % at the unchanged 12 % tolerance.
+- Motor out 1.4°, 0.36 m (rows read in `DOGRULAMA.md`); moment balance in the frame checked by hand, 94 N against 93 N.
+- Pull-out current control run by me: script reproduces 50.84 A and 53.52 A at v0.6. At 44.63 kg: 51.64 A at cos z 0.708, 54.06 A at 0.68 (over 53.6 A), 52.44 A at 0.70 (high case 52.86 A). So the 0.68 floor fails at 44.63 kg; use 0.70. One-off script, not the full harness.
+- Budget rerun with new `guc_egrisi.json` (`D:\tmp_ideathon\curve_copy`, stopped by my 500 s limit, `result.json` not written): 44.6 kg, 43.5 h, closes True.
+- Doc 25 gained a dated update note at §0 (anchor `docs/versions/..._before_sim_pass6_note.md`). The older numbers below it stay. `CHANGES.md` gained "Before promotion: three things to do".
+- Live page: loads with 0 console errors. It stops at "Building rotor maps" while the pane is hidden, because `requestAnimationFrame` does not fire (tested, 3 s). Not a sim bug. The 8 frames of 13:44–13:49 are the browser proof.
+- Not committed. Sim work after e279882 is local only.
+
+## 6 Nov 14:50: stop-hook items rechecked
+
+- LaTeX: contents entry "1.1" closed with `\tocfirstsubstop{33bp}`, used only in `example_lorem.tex`. `compare/report.md`: page 2 max dx 3.86 → 0.16 mm, words over tolerance 2 → 0. All pages now within 0.16 mm. Left: 11.00 vs 11.04 pt (Word's glyph size grid), PDF font name spelling, leader dot count on contents lines. `main.tex` clean build in a temp folder: 0 errors, 5 pages. `tests/run_tests.py` values unchanged. Starters in `03_Advionics` and `04_Venus` keep the older class copy; the new macro is not needed there.
+- Advionics: official task is in `03_Advionics/official_2026-11-06/`; old kit in `prev_guess/03_Advionics/comms_kit_2026-11-05/` (`manifest.json`, cases 1–3, 5–8); active: case 4, 9, 10. `pytest -k "atc or comms or triage or advionics or case"`: 635 passed, 280/280 numeric checks. Case 10 was moved on by another session (files of 13:57–14:23).
+- Decks: speaker notes read by Windows speech synthesis, labels removed. Rate 0: Ansys 234.9 s (Zira), 240.5 s (David); EASA 232.3 s, 235.6 s. Rate −1: 253.7–262.5 s. So the talk fits 4:00 at normal rate with almost no spare time, and goes over if read slower. Machine reading, not a team rehearsal; slide changes not counted.

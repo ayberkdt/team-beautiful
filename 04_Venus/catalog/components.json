@@ -1,0 +1,473 @@
+{
+ "schema": "venus_catalog_components/1",
+ "sources": {
+  "v0.6": {
+   "file": "04_Venus/outputs/design.json",
+   "version": "0.6",
+   "status": "draft",
+   "total_mass_kg": 43.66
+  },
+  "v0.7": {
+   "file": "04_Venus/outputs/variants/v0_7_44p6kg/design.json",
+   "version": "0.7",
+   "status": "draft",
+   "total_mass_kg": 44.63
+  }
+ },
+ "components": [
+  {
+   "id": "rotors",
+   "label": "Rotors & motors",
+   "tag": "K",
+   "v0.6": {
+    "name": "6 folding 2-blade rotors + 5:1 geared motors + collective actuators",
+    "mass_kg": 6.08,
+    "material": "CFRP blades with FEP film wrap; Sm2Co17-magnet motors + planetary gearbox in PFA-sealed cans",
+    "colour": "#c9cdd3",
+    "position_m": [
+     0.0,
+     0.0,
+     0.13999999999999999
+    ],
+    "size_m": [
+     8.0,
+     8.0,
+     0.12
+    ]
+   },
+   "v0.7": {
+    "name": "6 folding 2-blade rotors + 5:1 geared motors + collective actuators",
+    "mass_kg": 6.353,
+    "material": "CFRP blades with FEP film wrap; Sm2Co17-magnet motors + planetary gearbox in PFA-sealed cans",
+    "colour": "#c9cdd3",
+    "position_m": [
+     0.0,
+     0.0,
+     0.13999999999999999
+    ],
+    "size_m": [
+     8.0,
+     8.0,
+     0.12
+    ]
+   },
+   "mass_delta_kg": 0.273
+  },
+  {
+   "id": "arms",
+   "label": "Folding arms",
+   "tag": "K",
+   "v0.6": {
+    "name": "6 folding CFRP arms with Ti hinges",
+    "mass_kg": 7.66,
+    "material": "CFRP tube, FEP sleeve, Ti-6Al-4V hinge and latch",
+    "colour": "#2b2b2b",
+    "position_m": [
+     0.0,
+     0.0,
+     0.13999999999999999
+    ],
+    "size_m": [
+     5.4,
+     5.4,
+     0.06
+    ]
+   },
+   "v0.7": {
+    "name": "6 folding CFRP arms with Ti hinges",
+    "mass_kg": 7.66,
+    "material": "CFRP tube, FEP sleeve, Ti-6Al-4V hinge and latch",
+    "colour": "#2b2b2b",
+    "position_m": [
+     0.0,
+     0.0,
+     0.13999999999999999
+    ],
+    "size_m": [
+     5.4,
+     5.4,
+     0.06
+    ]
+   },
+   "mass_delta_kg": 0.0
+  },
+  {
+   "id": "body",
+   "label": "Sealed Ti vessel",
+   "tag": "K",
+   "v0.6": {
+    "name": "Sealed Ti vessel: battery, avionics, payload electronics",
+    "mass_kg": 3.153,
+    "material": "Ti-6Al-4V shell, silvered-FEP skin (α 0.08, ε 0.52), dry N2 fill",
+    "colour": "#e8e4da",
+    "position_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "size_m": [
+     0.6,
+     0.6,
+     0.32
+    ]
+   },
+   "v0.7": {
+    "name": "Sealed Ti vessel: battery, avionics, payload electronics",
+    "mass_kg": 3.203,
+    "material": "Ti-6Al-4V shell, silvered-FEP skin (α 0.08, ε 0.52), dry N2 fill",
+    "colour": "#e8e4da",
+    "position_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "size_m": [
+     0.6,
+     0.6,
+     0.32
+    ]
+   },
+   "mass_delta_kg": 0.05
+  },
+  {
+   "id": "battery",
+   "label": "Li-ion battery",
+   "tag": "K",
+   "v0.6": {
+    "name": "Li-ion battery 1044 Wh (inside vessel)",
+    "mass_kg": 6.74,
+    "material": "18650 energy cells (243 Wh/kg cell), charge 0-45 °C",
+    "colour": "#4f6d7a",
+    "position_m": [
+     0.0,
+     0.0,
+     -0.06
+    ],
+    "size_m": [
+     0.42,
+     0.42,
+     0.12
+    ]
+   },
+   "v0.7": {
+    "name": "Li-ion battery 1109 Wh (inside vessel)",
+    "mass_kg": 7.162,
+    "material": "18650 energy cells (243 Wh/kg cell), charge 0-45 °C",
+    "colour": "#4f6d7a",
+    "position_m": [
+     0.0,
+     0.0,
+     -0.06
+    ],
+    "size_m": [
+     0.42,
+     0.42,
+     0.12
+    ]
+   },
+   "mass_delta_kg": 0.422
+  },
+  {
+   "id": "solar",
+   "label": "Bifacial solar deck",
+   "tag": "K",
+   "v0.6": {
+    "name": "Bifacial solar deck 4.45 m² (6 folding petals)",
+    "mass_kg": 4.007,
+    "material": "triple-junction cells, Parylene + FEP cover, CFRP frame",
+    "colour": "#1f3a5f",
+    "position_m": [
+     0.0,
+     0.0,
+     0.08999999999999998
+    ],
+    "size_m": [
+     2.7,
+     2.7,
+     0.012
+    ]
+   },
+   "v0.7": {
+    "name": "Bifacial solar deck 4.45 m² (6 folding petals)",
+    "mass_kg": 4.007,
+    "material": "triple-junction cells, Parylene + FEP cover, CFRP frame",
+    "colour": "#1f3a5f",
+    "position_m": [
+     0.0,
+     0.0,
+     0.08999999999999998
+    ],
+    "size_m": [
+     2.7,
+     2.7,
+     0.012
+    ]
+   },
+   "mass_delta_kg": 0.0
+  },
+  {
+   "id": "payload",
+   "label": "Science payload",
+   "tag": "Y",
+   "v0.6": {
+    "name": "Science: nephelometer, aerosol mass spectrometer, T/p/wind/turbulence, camera",
+    "mass_kg": 3.0,
+    "material": "sapphire windows, PTFE inlets",
+    "colour": "#d98e04",
+    "position_m": [
+     0.0,
+     0.0,
+     -0.25
+    ],
+    "size_m": [
+     0.32,
+     0.32,
+     0.18
+    ]
+   },
+   "v0.7": {
+    "name": "Science: nephelometer, aerosol mass spectrometer, T/p/wind/turbulence, camera",
+    "mass_kg": 3.0,
+    "material": "sapphire windows, PTFE inlets",
+    "colour": "#d98e04",
+    "position_m": [
+     0.0,
+     0.0,
+     -0.25
+    ],
+    "size_m": [
+     0.32,
+     0.32,
+     0.18
+    ]
+   },
+   "mass_delta_kg": 0.0
+  },
+  {
+   "id": "avionics",
+   "label": "Avionics & IMU",
+   "tag": "D-ag (MSH 1.2 kg)",
+   "v0.6": {
+    "name": "Flight computer, IMU, baro, sun sensor, radio",
+    "mass_kg": 1.2,
+    "material": "inside the vessel",
+    "colour": "#6b8e23",
+    "position_m": [
+     0.0,
+     0.0,
+     0.08
+    ],
+    "size_m": [
+     0.26,
+     0.26,
+     0.08
+    ]
+   },
+   "v0.7": {
+    "name": "Flight computer, IMU, baro, sun sensor, radio",
+    "mass_kg": 1.2,
+    "material": "inside the vessel",
+    "colour": "#6b8e23",
+    "position_m": [
+     0.0,
+     0.0,
+     0.08
+    ],
+    "size_m": [
+     0.26,
+     0.26,
+     0.08
+    ]
+   },
+   "mass_delta_kg": 0.0
+  },
+  {
+   "id": "antenna",
+   "label": "UHF relay antenna",
+   "tag": "Y",
+   "v0.6": {
+    "name": "UHF crossed dipole on mast (relay link)",
+    "mass_kg": 0.8,
+    "material": "Ti mast, PTFE radome",
+    "colour": "#b0b7bf",
+    "position_m": [
+     0.0,
+     0.0,
+     0.45999999999999996
+    ],
+    "size_m": [
+     0.34,
+     0.34,
+     0.6
+    ]
+   },
+   "v0.7": {
+    "name": "UHF crossed dipole on mast (relay link)",
+    "mass_kg": 0.8,
+    "material": "Ti mast, PTFE radome",
+    "colour": "#b0b7bf",
+    "position_m": [
+     0.0,
+     0.0,
+     0.45999999999999996
+    ],
+    "size_m": [
+     0.34,
+     0.34,
+     0.6
+    ]
+   },
+   "mass_delta_kg": 0.0
+  },
+  {
+   "id": "thermal",
+   "label": "Heat pipe & insulation",
+   "tag": "K",
+   "v0.6": {
+    "name": "Aerogel blanket + variable-conductance heat pipe to shell fins",
+    "mass_kg": 0.876,
+    "material": "silica aerogel, Al/NH3 VCHP, coated fins",
+    "colour": "#f2f2f2",
+    "position_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "size_m": [
+     0.64,
+     0.64,
+     0.32
+    ]
+   },
+   "v0.7": {
+    "name": "Aerogel blanket + variable-conductance heat pipe to shell fins",
+    "mass_kg": 0.902,
+    "material": "silica aerogel, Al/NH3 VCHP, coated fins",
+    "colour": "#f2f2f2",
+    "position_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "size_m": [
+     0.64,
+     0.64,
+     0.32
+    ]
+   },
+   "mass_delta_kg": 0.026
+  },
+  {
+   "id": "coating",
+   "label": "Acid-proof FEP skin",
+   "tag": "K",
+   "v0.6": {
+    "name": "Acid-protection skin on all exposed parts",
+    "mass_kg": 0.686,
+    "material": "FEP/PTFE film, PFA coat, Parylene on cells",
+    "colour": "#ffffff",
+    "position_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "size_m": null
+   },
+   "v0.7": {
+    "name": "Acid-protection skin on all exposed parts",
+    "mass_kg": 0.702,
+    "material": "FEP/PTFE film, PFA coat, Parylene on cells",
+    "colour": "#ffffff",
+    "position_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "size_m": null
+   },
+   "mass_delta_kg": 0.016
+  },
+  {
+   "id": "attach",
+   "label": "Bridle & release",
+   "tag": "Y",
+   "v0.6": {
+    "name": "Bridle ring, pyro release, deployment fittings",
+    "mass_kg": 0.8,
+    "material": "Ti fittings, Kevlar/PBO bridle",
+    "colour": "#a0522d",
+    "position_m": [
+     0.0,
+     0.0,
+     0.19
+    ],
+    "size_m": [
+     0.18,
+     0.18,
+     0.06
+    ]
+   },
+   "v0.7": {
+    "name": "Bridle ring, pyro release, deployment fittings",
+    "mass_kg": 0.8,
+    "material": "Ti fittings, Kevlar/PBO bridle",
+    "colour": "#a0522d",
+    "position_m": [
+     0.0,
+     0.0,
+     0.19
+    ],
+    "size_m": [
+     0.18,
+     0.18,
+     0.06
+    ]
+   },
+   "mass_delta_kg": 0.0
+  },
+  {
+   "id": "wiring",
+   "label": "Harness",
+   "tag": "K",
+   "v0.6": {
+    "name": "Harness and connectors",
+    "mass_kg": 1.373,
+    "material": "PTFE-insulated wire",
+    "colour": "#555555",
+    "position_m": null,
+    "size_m": null
+   },
+   "v0.7": {
+    "name": "Harness and connectors",
+    "mass_kg": 1.403,
+    "material": "PTFE-insulated wire",
+    "colour": "#555555",
+    "position_m": null,
+    "size_m": null
+   },
+   "mass_delta_kg": 0.03
+  },
+  {
+   "id": "contingency",
+   "label": "Mass margin 20 %",
+   "tag": "D-ag",
+   "v0.6": {
+    "name": "Mass contingency 20 % (MSH practice)",
+    "mass_kg": 7.276,
+    "material": "—",
+    "colour": "#999999",
+    "position_m": null,
+    "size_m": null
+   },
+   "v0.7": {
+    "name": "Mass contingency 20 % (MSH practice)",
+    "mass_kg": 7.438,
+    "material": "—",
+    "colour": "#999999",
+    "position_m": null,
+    "size_m": null
+   },
+   "mass_delta_kg": 0.162
+  }
+ ]
+}

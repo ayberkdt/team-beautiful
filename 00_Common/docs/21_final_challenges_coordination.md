@@ -31,7 +31,7 @@ your doc's "Environment" section. Node packages: inside the project folder on D:
 | Ansys bracket | `src/aerokit/bracket/` (new), `src/aerokit/materials/**`, `src/aerokit/optimization/**`, `src/aerokit/fem/**`, `src/aerokit/design/card*.py`, `scripts/bracket_*.py`, `prev_guess/01_Ansys/scripts/card_day.py`, `01_Ansys/`, `prev_guess/01_Ansys/cards/`, `docs/22_*.md`, `tests/test_bracket*.py` + tests of the modules it owns, `src/aerokit/references/_task_bracket.py` | everything else |
 | EASA canopy | `src/aerokit/canopy/` (new), `scripts/canopy_*.py`, `02_EASA/`, `02_EASA/research/`, `docs/23_*.md`, `tests/test_canopy*.py`, `src/aerokit/references/_task_canopy.py` | everything else (`investigation.py` read-only) |
 | Advionics comms/ATC | `src/aerokit/atc/` (new), `scripts/atc_*.py`, `03_Advionics/`, `03_Advionics/research/`, `docs/24_*.md`, `tests/test_atc*.py`, `src/aerokit/references/_task_atc.py` | everything else (`approach.py`, `autoland.py`, `comms/` read-only) |
-| Venus rotorcraft | `src/aerokit/venus/` (new), `src/aerokit/planetary.py`, `src/aerokit/venus_flight.py`, `scripts/venus_*.py`, `04_Venus/`, `studies/cards_2026/venus*`, `04_Venus/research/`, `docs/25_*.md`, `tests/test_venus*.py`, `tests/test_planetary.py`, `src/aerokit/references/_task_venus2.py` | everything else |
+| Venus rotorcraft | `src/aerokit/venus/` (new), `src/aerokit/planetary.py`, `src/aerokit/venus_flight.py`, `04_Venus/code/`, `04_Venus/`, `studies/cards_2026/venus*`, `04_Venus/literature/`, `docs/25_*.md`, `tests/test_venus*.py`, `tests/test_planetary.py`, `src/aerokit/references/_task_venus2.py` | everything else |
 | Coordinator (this session) | this file, `README.md`, `docs/20_*.md`, `src/aerokit/references/__init__.py`, shared test infra | — |
 
 Shared rules:

@@ -8,7 +8,7 @@ import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_DIRS = [ROOT / "scripts", *(ROOT / d for d in ("01_Ansys/scripts", "02_EASA/scripts", "prev_guess/03_Advionics/comms_kit_2026-11-05/scripts",
-                                                       "04_Venus/scripts", "prev_guess/00_general/scripts",
+                                                       "04_Venus/code/pipeline", "prev_guess/00_general/scripts",
                                                        "prev_guess/01_Ansys/scripts", "prev_guess/02_EASA/scripts",
                                                        "prev_guess/03_Advionics/scripts"))]
 

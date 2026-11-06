@@ -1,6 +1,6 @@
 """BEMT validation: closed-form limits and published rotor test data.
 
-Data (read by the research agent; see 04_Venus/research/):
+Data (read by the research agent; see 04_Venus/literature/):
 * Knight & Hefner 1937, NACA TN 626, Tables I-IV (printed): 2-5 blade rotor, R 0.762 m, c 0.0508 m, NACA 0015,
   untwisted, 960 rpm; coefficients there use ½ρ, so standard = printed / 2. Section polar at Re 242 000 from the
   same report (Tables V-VI): lift slope ~5.6/rad, cd_min 0.0113, cl_max ~0.93 → the rotor is *predicted*, not fitted.

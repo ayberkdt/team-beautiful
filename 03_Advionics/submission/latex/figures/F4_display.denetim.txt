@@ -1,3 +1,0 @@
-figür denetimi: 0 HATA · 1 UYARI · 0 BİLGİ · TESLİM EDİLEBİLİR
-  [UYARI] panel-boslugu      sabit oranlı paneller arasında 48 mm boşluk (figür genişliğinin %27'i)
-          → layout='compressed' (S.figur(..., layout='compressed')) ya da figür oranını panellere göre seç; boşluk sayfada veriye ayrılabilecek yeri harcar  [datawiz-secimi (%15 figür genişliği) — veri-mürekkep/alan ekonomisi: Wilke2019Ch21 §21.2 (paneller hizalı, düzenli); MPL compressed layout belgesi]

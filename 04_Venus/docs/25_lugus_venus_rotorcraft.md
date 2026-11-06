@@ -7,13 +7,15 @@ material, power, thermal, what does it look like, (3) how does it get there; del
 components, altitude justified with atmospheric data, propulsion/power/thermal/control/comms, feasibility, risks,
 open challenges.
 
+> **Selected design, 6 Nov 17:00.** The official task asks for a short demonstrator with no science goals (`04_Venus/official_2026-11-06/`). The team chose a 0.5 kg flight camera and recorder: 38.23 kg, release at cos z 0.94 (floor 0.65), 6 h demonstration, no dives. Files: `04_Venus/outputs/variants/short_demo/files_0p5kg/`, numbers `short_demo/result.md`. This document keeps the 44 h science study as background. Hybrids are allowed by the task, so §8 and §10 question 1 no longer need mentor approval. §7.2-1: "~27 h" is the 4 Nov power; for the selected design at cos z 0.94 one-sided cells give loiter x1.18 nominal, x1.09 high, hover x0.88 (`submission/report_build/report_numbers.json`).
+
 **Tags** (user rule, `docs/21`): **[D]** read from the primary source by this session · **[D-ag]** read by a research
-agent (notes in `04_Venus/research/`, one file per source; index `README.md`) · **[K]** computed here ·
-**[Y]** our judgement/assumption. Every [K] number comes from `python 04_Venus/scripts/venus_day.py --final`
+agent (notes in `04_Venus/literature/`, one file per source; index `README.md`) · **[K]** computed here ·
+**[Y]** our judgement/assumption. Every [K] number comes from `python 04_Venus/code/pipeline/venus_day.py --final`
 (`04_Venus/outputs/result.json`) unless another command is named.
 
 **Friday morning checklist** (state on 4 Nov, 23:15; pitch numbers updated 6 Nov, §0; details in §9–§11):
-1. `python 04_Venus/scripts/venus_day.py --final` (~5 min tonight): it must end with "15 figures + set consistency, 0 errors".
+1. `python 04_Venus/code/pipeline/venus_day.py --final` (~5 min tonight): it must end with "15 figures + set consistency, 0 errors".
 2. Venus tests: `python -m pytest -q -p no:cacheprovider tests/test_venus_*.py tests/test_planetary.py tests/typing`.
 3. Ask the mentor first: is a pure rotorcraft required, or is the helium hybrid (§8) allowed? Their payload/altitude → `--payload-kg … --cruise-km …` (§11).
 4. The pitch in four numbers: 44.6 kg, hover 2.2 kW / loiter 1.62 kW at 8.9 m/s at 55 km, ~44 h of flight (42–46 h over the interaction range), 56 g entry.
@@ -43,8 +45,15 @@ agent (notes in `04_Venus/research/`, one file per source; index `README.md`) ·
 
 ## 0. What changed on 6 Nov [K unless tagged]
 
+> **Simulator update, 6 Nov 14:30 (pass 6; `sim/DOGRULAMA.md` of 10:55Z, 43.66 kg). These numbers replace the older ones below.**
+> - Motor out: 1.4° peak tilt, 0.36 m lost (was 66°, 24.5 m). Worst of 12 runs: 6.3°, 4.8 m. With slow detection: 29.3°, 6.7 m.
+> - Pull-out current: 50.8 A at cos z 0.708, 53.5 A at cos z 0.68 (was 50.1 A, 52.7 A), limit 53.6 A. High interaction at cos z 0.68: 54.4 A, over the limit; cos z 0.70 clears it (52.8 A).
+> - Loiter, minimum, 55 km: 1327 / 1484 / 1585 / 1680 W for off / low / nominal / high (nominal was 1572 W). 7.8 m/s: 1595 W (was 1578 W).
+> - Hover interaction stays +3.42 %. Measured data near 0.05 D now exist (`sim/kaynaklar/`). Sources near VESPER's Reynolds number show about 0, so +3.42 % is an upper estimate.
+> - At 44.63 kg the cos z 0.68 floor fails (54.1 A); the floor must be cos z 0.70. See `outputs/variants/v0_7_44p6kg/CHANGES.md`.
+
 Three things we learned on 5–6 Nov change the numbers: rotors interfere with each other, vertical gusts are slow, and a
-3 m/s descent cannot be flown. All new numbers come from `python 04_Venus/scripts/venus_budget_update.py`
+3 m/s descent cannot be flown. All new numbers come from `python 04_Venus/code/analysis/venus_budget_update.py`
 (→ `04_Venus/outputs/variants/budget_update/result.json`, `result.md`, B1–B3; simulator logs in `sim_runs/`). The
 previous text is anchored at `docs/versions/25_lugus_venus_rotorcraft_2026-11-06_before_budget_update.md`.
 
@@ -166,13 +175,13 @@ helium-assisted variant that can is offered as an alternative needing mentor app
 |---|---|---|
 | CO₂ Cp (Shomate), viscosity, conductivity, speed of sound 225–400 K | NIST WebBook pages fetched by this session (`K_nist_co2_properties.md`) | D |
 | GM of Venus and Sun | JPL SSD astrodynamic-parameters page fetched by this session | D |
-| Pioneer Venus T, p, ρ (4 probes), DLBI winds, LSFR solar flux | raw PDS4 tables (downloaded by agent A) **extracted by this session** with `04_Venus/scripts/venus_pds_extract.py` → `src/aerokit/venus/data/pv_profiles.json`; reproduces agent A's table to the last digit | D |
+| Pioneer Venus T, p, ρ (4 probes), DLBI winds, LSFR solar flux | raw PDS4 tables (downloaded by agent A) **extracted by this session** with `04_Venus/code/data/venus_pds_extract.py` → `src/aerokit/venus/data/pv_profiles.json`; reproduces agent A's table to the last digit | D |
 | VIRA (Seiff et al. 1985) tables | **not obtained** (ADS 403/CAPTCHA, NTRS none); agent A used a Venus-GRAM copy (tertiary); the Wikipedia/VIRA-like table is kept only outside 40–64 km | — |
 | Sutton–Graves constants (TR R-376 Table II), Tauber 2012 radiative fit + PV trajectory table, Harrington 1951, Knight & Hefner 1937, MSH, Ingenuity, Dragonfly, Venera/Vega/PV/DAVINCI precedents, materials/batteries/solar/comms data | four research agents read the primary documents where accessible (notes `A_*`, `B_*`, `C_*`, `D_*`; secondary or abstract-only items are marked [A] in the notes) | D-ag |
 | Entry-model cross-checks incl. Venus-GRAM upper atmosphere | this session (`K_entry_crosschecks.md`) | K |
 | Every number without a source tag in §3–§9 | computed by `aerokit.venus` (tests `tests/test_venus_*.py`) | K |
 | Evidence audit (round 3) | a fresh agent drew 15 random [D]/[D-ag] values from this doc (seeded), re-read each at its source: 9 match, 2 rounded correctly, 3 context errors, 1 minor mismatch, none fabricated; I re-read every flagged source and fixed the text (`R_audit_2026-11-04.md`) | D-ag → D |
-| Headline numbers by a second, simpler method | `04_Venus/scripts/venus_crosscheck.py` (§7.1) | K |
+| Headline numbers by a second, simpler method | `04_Venus/code/analysis/venus_crosscheck.py` (§7.1) | K |
 
 Validation actually performed here (all in tests): BEMT vs Knight & Hefner (20 printed points, predicted from the
 report's own NACA 0015 polar — no rotor fitting) and Harrington rotor 1 (digitised; cd₀ from the printed zero-thrust
@@ -250,7 +259,7 @@ Why 55 km [K]:
 
 `aerokit.venus.bemt`: blade-element momentum theory with Prandtl tip loss, Reynolds-scaled drag, Prandtl–Glauert lift,
 coaxial wake model; vectorised (one solve ≈ 0.1 s). Design rules: MSH used C_T/σ 0.11–0.115, a 40 % thrust
-margin to stall and tip Mach ≤ 0.7–0.8 [D-ag]; we take C_T/σ = 0.10 for extra stall margin [Y]. Trade over 72 design points (69 close) (`04_Venus/scripts/venus_trade.py`, F7): bigger rotors lower
+margin to stall and tip Mach ≤ 0.7–0.8 [D-ag]; we take C_T/σ = 0.10 for extra stall margin [Y]. Trade over 72 design points (69 close) (`04_Venus/code/analysis/venus_trade.py`, F7): bigger rotors lower
 the sun height needed but add mass; at 2.6 m, 55 m/s tip speed needs slightly less sun (cos z 0.58 vs 0.60) but is
 3 kg heavier, 90 m/s is 1 kg lighter but needs more sun (0.65) — 70 m/s is the compromise. Robustness (F10,
 §7) decided the rest: with **direct-drive** motors the closure diverges for 180 Wh/kg cells or 5 N·m/kg motors; with a
@@ -369,7 +378,7 @@ only been demonstrated for 2–4-fold aircraft [D-ag].
 Closed mass budget (`aerokit.venus.sizing`).
 
 Visual hand-off: **`04_Venus/outputs/design.json`** v0.6 (schema `venus_rotorcraft_design/1`, regenerated by
-`python 04_Venus/scripts/venus_design.py`; old versions anchored in `04_Venus/outputs/versions/`): atmosphere 30–80 km
+`python 04_Venus/code/pipeline/venus_design.py`; old versions anchored in `04_Venus/outputs/versions/`): atmosphere 30–80 km
 with bands and solar fraction, operating band, rotor geometry (6 arms at 30°+60°·i, alternating spin, arm radius
 2.7 m, span 8.0 m), body, solar deck, 13 labelled components with positions/sizes/masses/materials/colours, stowed
 envelope and fold description, entry and deployment sequence with altitudes and times, mission events (with kind and
@@ -420,7 +429,7 @@ catalogue summary], floated at 53–54 km for ~46 h [D-ag]; DAVINCI (planned): 1
 
 ### 5.1 Entry validation against every Venus entry with published conditions (F11) [K vs D-ag]
 
-`python 04_Venus/scripts/venus_entry_validation.py` flies our entry model with the ballistic coefficient, angle, speed
+`python 04_Venus/code/analysis/venus_entry_validation.py` flies our entry model with the ballistic coefficient, angle, speed
 (200 km interface) and size of each historical probe as tabulated by Dutta, Smith, Prabhu & Venkatapathy 2012
 (Table 1; their peak g and heat flux are engineering re-simulations, not measurements) and compares with flight-
 reported values where they exist (SP-461, Siddiqi 2018 via agent notes). Nose radius: sphere D/2, 45° cone D/4
@@ -525,7 +534,7 @@ radiative fluxes (bifacial array = radiometer), imaging of cloud structure.
 
 ### 6.1 What LuGus would simulate (the sponsor builds drone simulators — doc 19) [K numbers, Y scenarios]
 
-**`sim_params.json`** (`python 04_Venus/scripts/venus_sim_params.py`, README `sim_params_README.md`) is the simulator-ready
+**`sim_params.json`** (`python 04_Venus/code/pipeline/venus_sim_params.py`, README `sim_params_README.md`) is the simulator-ready
 superset: atmosphere/wind/solar table 30–80 km every 0.5 km, rotor curve, mass and inertia, drive/power/thermal
 parameters, 11 limits and 9 failure modes (trigger → effect → recovery), deployment replay and mission series;
 every value carries its unit, tag and source. `outputs/vesper_for_simulator.json` is the short flight-model card: 43.7 kg, inertia diag 33 / 33 / 65 kg m², six rotor
@@ -607,7 +616,7 @@ near 34 km.* Altitude and battery-bay temperature after the sunset dive.
 
 **F9.** *With the geared drive no single assumption costs more than ~8 h of flight — except a 1 h no-sun battery
 reserve, which does not close at all.* One-at-a-time sensitivity;
-each bar a closed design re-flown (`04_Venus/scripts/venus_sensitivity.py`). "No closure" = no design exists.
+each bar a closed design re-flown (`04_Venus/code/analysis/venus_sensitivity.py`). "No closure" = no design exists.
 
 ![F10](../outputs/F10_robustness.png)
 
@@ -667,7 +676,7 @@ the 55 → 51 → 55 km dive profile; (5) *flight software* — the whole CONOPS
 
 These check the 4 Nov isolated-rotor numbers. The 6 Nov budget has its own checks: `off` at 55 km reproduces this table, and the end states follow the 6-DOF simulator (§0).
 
-`python 04_Venus/scripts/venus_crosscheck.py` re-derives the three headline numbers without BEMT, without the mass closure
+`python 04_Venus/code/analysis/venus_crosscheck.py` re-derives the three headline numbers without BEMT, without the mass closure
 and without the simulator (→ `outputs/crosscheck.json`, `.md`):
 
 | Quantity | Main method | Simple method | Spread |
@@ -698,7 +707,7 @@ and without the simulator (→ `outputs/crosscheck.json`, `.md`):
 ### 7.2 Jury questions — the ten most damaging, with our answers
 
 A fresh agent read this document cold as a hostile LuGus/planetary-science jury and ranked the questions that hurt
-most (`04_Venus/research/R_jury_questions_2026-11-04.md`). I re-ran the numbers in answers 1 and 5
+most (`04_Venus/reviews/R_jury_questions_2026-11-04.md`). I re-ran the numbers in answers 1 and 5
 myself (`D:/tmp_ideathon/venus/r5/my_checks.py`, `windmill.py`); the rest cite this document and its notes. Where the
 answer is "we have not done it", we say so.
 
@@ -791,7 +800,7 @@ lift model gives a 3–4 m sphere for VEGA's numbers (test).
 | 1:30–3:00 | Q2 slides: configuration table, rotor numbers + F8 validation, geared drive, power (F2), thermal, materials, control/nav, comms, structure, F4 |
 | 3:00–4:00 | Q3 slides: transfer → entry (F3) → chute → spin-up → release (26 m vs 559 m); deployment strip from the visual |
 | 4:00–5:00 | Mission F6, risks F5, sensitivity F9/F10, honest feasibility, hybrid alternative |
-| 5:00–6:00 | Rerun with any mentor numbers — `python 04_Venus/scripts/venus_day.py --final --payload-kg 5 --cruise-km 56 --rotor-d 2.3` (~2 min; writes `out_variant_*/` and `design_variant_*.json`, never touching the baseline hand-off); consistency and units check; rehearse |
+| 5:00–6:00 | Rerun with any mentor numbers — `python 04_Venus/code/pipeline/venus_day.py --final --payload-kg 5 --cruise-km 56 --rotor-d 2.3` (~2 min; writes `out_variant_*/` and `design_variant_*.json`, never touching the baseline hand-off); consistency and units check; rehearse |
 
 One-line answers to rehearse: *why rotors on Venus?* — at 55 km a rotor works as on Earth (Re ~1.7×10⁵, ~48 W/kg), and it
 controls altitude and position *fast* (a 52 km dive and back in about 1 h); variable-altitude balloons last longer (§7.2-2). *Wind 65 m/s?* — we fly in the air mass; ground position is irrelevant to
@@ -814,15 +823,15 @@ what makes the design robust, and a 1 h no-sun reserve still does not close.
 
 ```bash
 export TEMP=D:/tmp_ideathon/venus TMP=D:/tmp_ideathon/venus MPLCONFIGDIR=D:/tmp_ideathon/venus/mpl PYTHONPATH=src PYTHONIOENCODING=utf-8
-python -I 04_Venus/scripts/venus_pds_extract.py D:/tmp_ideathon/venus/downloads/atmo   # PDS -> pv_profiles.json (already in repo)
-python 04_Venus/scripts/venus_trade.py            # 72-design trade, ~2 min
-python 04_Venus/scripts/venus_entry_validation.py # 12 historical entries + DAVINCI, ~1 min (also run by --final)
-python 04_Venus/scripts/venus_sensitivity.py      # one-at-a-time + robustness (39 closed designs re-flown), ~10 min
-python 04_Venus/scripts/venus_day.py --final      # numbers, F1-F15 (datawiz audit), design.json, simulator file
-python 04_Venus/scripts/venus_crosscheck.py       # headline numbers by simpler methods (§7.1)
-python 04_Venus/scripts/venus_sim_params.py       # sim_params.json for the LuGus simulator
-python 04_Venus/scripts/venus_day.py --final --payload-kg 5 --cruise-km 56   # what-if with mentor numbers -> out_variant_*/
-python 04_Venus/scripts/venus_budget_update.py    # 6 Nov budget (§0), reads guc_egrisi.json, ~13 min -> outputs/variants/budget_update/
+python -I 04_Venus/code/data/venus_pds_extract.py D:/tmp_ideathon/venus/downloads/atmo   # PDS -> pv_profiles.json (already in repo)
+python 04_Venus/code/analysis/venus_trade.py            # 72-design trade, ~2 min
+python 04_Venus/code/analysis/venus_entry_validation.py # 12 historical entries + DAVINCI, ~1 min (also run by --final)
+python 04_Venus/code/analysis/venus_sensitivity.py      # one-at-a-time + robustness (39 closed designs re-flown), ~10 min
+python 04_Venus/code/pipeline/venus_day.py --final      # numbers, F1-F15 (datawiz audit), design.json, simulator file
+python 04_Venus/code/analysis/venus_crosscheck.py       # headline numbers by simpler methods (§7.1)
+python 04_Venus/code/pipeline/venus_sim_params.py       # sim_params.json for the LuGus simulator
+python 04_Venus/code/pipeline/venus_day.py --final --payload-kg 5 --cruise-km 56   # what-if with mentor numbers -> out_variant_*/
+python 04_Venus/code/analysis/venus_budget_update.py    # 6 Nov budget (§0), reads guc_egrisi.json, ~13 min -> outputs/variants/budget_update/
 python -m pytest -q -p no:cacheprovider tests/test_venus_bemt.py tests/test_venus_entry.py tests/test_venus_atmosphere.py tests/test_venus_system.py
 ```
 

@@ -154,7 +154,7 @@ Result of the last run (`compare/report.md`, 5 Word pages vs 5 LaTeX pages):
 | page | changed px % | changed px %, +-1 px tolerant | words W/L | matched | max dx mm | max dy mm | mean dx / dy mm | max d size pt | words > 1 mm or > 0.5 pt |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 1 cover | 0.06 | 0.01 | 3/3 | 3 | 0.13 | 0.00 | 0.11 / 0.00 | 0.04 | 0 |
-| 2 contents | 0.48 | 0.18 | 39/35 | 31 | 3.86 | 0.04 | 0.29 / 0.02 | 0.04 | 2 |
+| 2 contents | 0.46 | 0.17 | 39/35 | 31 | 0.16 | 0.04 | 0.05 / 0.02 | 0.04 | 0 |
 | 3 | 3.77 | 1.29 | 449/449 | 449 | 0.13 | 0.07 | 0.03 / 0.03 | 0.04 | 0 |
 | 4 | 3.69 | 1.24 | 431/431 | 431 | 0.14 | 0.06 | 0.03 / 0.03 | 0.04 | 0 |
 | 5 | 2.24 | 0.84 | 286/286 | 286 | 0.13 | 0.05 | 0.03 / 0.03 | 0.04 | 0 |
@@ -174,12 +174,11 @@ and row baselines within 0.15 bp of Word; picture-to-caption distance 11.91 bp
 
 ## What still differs (measured)
 
-1. **Contents, entry "1.1 Title 2": text 3.86 mm further right** (92.2 bp
-   instead of 81.26 bp). The template's cached contents uses a 33 bp tab for
-   this one entry and 44 bp for the other level-2 entries ("2.1", "2.2"); the
-   class uses 44 bp for all. (When Word itself updates the contents of the
-   template, it moves all level 2-4 texts to 48/60/72 bp — measured on a
-   Word-updated copy.) Use `\settocstops` to change the stops.
+1. **Contents, entry "1.1 Title 2": closed on 6 Nov.** The template's cached contents has a one-off 33 bp stop on this
+   entry and 44 bp on "2.1" and "2.2". `\tocfirstsubstop{33bp}` before `\tableofcontents` reproduces it, and
+   `example_lorem.tex` uses it: was 3.86 mm, now within 0.16 mm. `main.tex` does not use it, so a real report keeps 44 bp
+   for every level-2 entry. (When Word itself updates the contents of the template, it moves all level 2-4 texts to
+   48/60/72 bp, measured on a Word-updated copy.) Use `\settocstops` to change the stops.
 2. **PDF font name of Montserrat Medium**: Word writes `Montserrat Medium`,
    LuaTeX writes `Montserrat-Medium` (it replaces the space). Same font file.
    `Montserrat` and `Montserrat,Bold` are identical.

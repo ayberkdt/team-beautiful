@@ -8,7 +8,7 @@ REFERENCES: tuple[Reference, ...] = (
               url="https://webbook.nist.gov/chemistry/",
               note="read by the Venus session 2026-11-04: CO2 Shomate 298-1200 K, N2 100-500 K; CO2 isobars 0.05 and "
                    "0.1 MPa: speed of sound, viscosity, conductivity, Cp 225-400 K "
-                   "(04_Venus/research/K_nist_co2_properties.md)"),
+                   "(04_Venus/reviews/K_nist_co2_properties.md)"),
     Reference("jpl_ssd_constants_2026", "JPL Solar System Dynamics", 2026, "Astrodynamic parameters",
               "NASA Jet Propulsion Laboratory", url="https://ssd.jpl.nasa.gov/astro_par.html",
               note="read by the Venus session 2026-11-04: GM Sun 1.32712440041279419e20 m3/s2, GM Venus system "
@@ -26,7 +26,7 @@ REFERENCES: tuple[Reference, ...] = (
               "A general stagnation-point convective-heating equation for arbitrary gas mixtures",
               "NASA TR R-376", url="https://ntrs.nasa.gov/citations/19720003329",
               note="q = k sqrt(rho/Rn) V^3; the constant for the Venus mixture is taken from the research agent's "
-                   "note 04_Venus/research/D_*sutton* (see that file for what was read)"),
+                   "note 04_Venus/literature/engineering/D_*sutton* (see that file for what was read)"),
     Reference("leishman_2006_helicopter", "J. G. Leishman", 2006, "Principles of Helicopter Aerodynamics",
               "Cambridge University Press, Cambridge", edition="2nd ed.",
               note="NOT read in this session: standard BEMT relations (momentum + blade element per annulus, Prandtl "
@@ -36,7 +36,7 @@ REFERENCES: tuple[Reference, ...] = (
               "An optimum coaxial rotor system for axial flight", "Journal of the American Helicopter Society "
               "53(4):366-381", doi="10.4050/JAHS.53.366",
               note="simplified coaxial BEMT: lower rotor inside the contracted upper wake; what was read is in "
-                   "04_Venus/research/C_* (research agent)"),
+                   "04_Venus/literature/rotorcraft/C_* (research agent)"),
     Reference("tauber_palmer_prabhu_2012", "M. E. Tauber, G. E. Palmer, D. K. Prabhu", 2012,
               "Stagnation point radiative heating relations for Venus entry", "NASA Ames preprint ARC-E-DAA-TN2887, "
               "NTRS 20120001655", url="https://ntrs.nasa.gov/citations/20120001655",
@@ -49,7 +49,7 @@ REFERENCES: tuple[Reference, ...] = (
               "NASA Planetary Data System, Atmospheres Node", doi="10.17189/m5zf-6f12",
               url="https://atmos.nmsu.edu/PDS/data/PDS4/pv_sed_bundle/",
               note="raw CSV tables downloaded by the research agent and extracted by the Venus session itself "
-                   "(04_Venus/scripts/venus_pds_extract.py -> src/aerokit/venus/data/pv_profiles.json); the JGR paper was "
+                   "(04_Venus/code/data/venus_pds_extract.py -> src/aerokit/venus/data/pv_profiles.json); the JGR paper was "
                    "NOT read"),
     Reference("counselman_1980_pv_winds", "C. C. Counselman III et al. (data, PDS DLBI bundle)", 1980,
               "Pioneer Venus differential long-baseline interferometry probe velocities; paper: Zonal and "

@@ -1,0 +1,209 @@
+{
+  "kaynak": "presets/venus_rotorcraft/arac/katalog.mjs",
+  "tasarim": "0.8 · 38.226 kg",
+  "arac": {
+    "mesh": 506,
+    "tri": 129952
+  },
+  "mekanizmalar": [
+    {
+      "id": "pervane",
+      "ad": "Pervane",
+      "modul": "arac/pervane.mjs",
+      "gorev": "Kaldırma kuvveti üretir. İki pala, doğrusal burulma, katlanır kök.",
+      "alt": [
+        "Pala: NACA tipi kesit, uca doğru incelir",
+        "Hücum kenarı PFA şeridi",
+        "Uç bandı",
+        "Katlama mafsalı"
+      ],
+      "mesh": 21,
+      "tri": 6376,
+      "boyut_m": [
+        3.528,
+        3.528,
+        0.083
+      ],
+      "kutle_kg": 5.404,
+      "kutle_notu": "grup kütlesi, 6 rotora bölünür"
+    },
+    {
+      "id": "gobek",
+      "ad": "Rotor göbeği",
+      "modul": "arac/pervane.mjs",
+      "gorev": "Palaları mile bağlar. Kolektif hatve burada değişir; tutum denetimi bu yolla yapılır.",
+      "alt": [
+        "Pala kavrama yuvası",
+        "Hatve kolu ve çubuğu",
+        "Dönen kolektif bilezik",
+        "Ti mil"
+      ],
+      "mesh": 21,
+      "tri": 6376,
+      "boyut_m": [
+        3.528,
+        3.528,
+        0.083
+      ],
+      "kutle_kg": 5.404,
+      "kutle_notu": "grup kütlesi, 6 rotora bölünür"
+    },
+    {
+      "id": "tahrik",
+      "ad": "Tahrik kabı",
+      "modul": "arac/tahrik.mjs",
+      "gorev": "Motor gücünü 5:1 dişliyle rotora verir. Asitli havaya karşı tek kapalı kap.",
+      "alt": [
+        "Sm₂Co₁₇ motor, soğutma kanatçıkları",
+        "5:1 gezegen dişli kabı",
+        "PFA şaft contası",
+        "ESC kutusu",
+        "Kuyruk konisi"
+      ],
+      "mesh": 9,
+      "tri": 3632,
+      "boyut_m": [
+        0.252,
+        0.209,
+        0.249
+      ],
+      "kutle_kg": 5.404,
+      "kutle_notu": "grup kütlesi, 6 rotora bölünür"
+    },
+    {
+      "id": "kol",
+      "ad": "Katlanır kol",
+      "modul": "arac/kol.mjs",
+      "gorev": "Rotoru gövdeye bağlar. Kapsüle sığmak için iki yerden Z biçiminde katlanır.",
+      "alt": [
+        "80 mm CFRP tüp, FEP kılıf",
+        "Kök ve orta Ti menteşe",
+        "Burulma yayı, kilit bileziği",
+        "Kablo kanalı",
+        "Motor beşiği"
+      ],
+      "mesh": 26,
+      "tri": 4888,
+      "boyut_m": [
+        2.524,
+        0.153,
+        0.136
+      ],
+      "kutle_kg": 7.66,
+      "kutle_notu": "grup kütlesi, 6 rotora bölünür"
+    },
+    {
+      "id": "govde",
+      "ad": "Gövde ve termal",
+      "modul": "arac/govde.mjs",
+      "gorev": "İç donanımı asitten ve ısıdan korur. Isıyı kanatçıklara tek yönlü borudan atar.",
+      "alt": [
+        "Ti basınçlı kap, bulonlu flanş",
+        "Aerojel battaniye",
+        "Değişken iletkenlikli ısı borusu",
+        "Kanatçık halkası",
+        "Kol yuvaları"
+      ],
+      "mesh": 25,
+      "tri": 13792,
+      "boyut_m": [
+        0.743,
+        0.743,
+        0.329
+      ],
+      "kutle_kg": 3.863,
+      "kutle_notu": "body + thermal"
+    },
+    {
+      "id": "ic",
+      "ad": "Batarya ve aviyonik",
+      "modul": "arac/ic-donanim.mjs",
+      "gorev": "Gündüz güneş fazlasını depolar, gece uçuşu değil rezervi taşır. Uçuş bilgisayarı ve IMU burada.",
+      "alt": [
+        "14S8P hücre dizisi",
+        "Bara ve BMS",
+        "Kart yığını",
+        "IMU ve barometre"
+      ],
+      "mesh": 29,
+      "tri": 6712,
+      "boyut_m": [
+        0.42,
+        0.445,
+        0.242
+      ],
+      "kutle_kg": 7.018,
+      "kutle_notu": "battery + avionics"
+    },
+    {
+      "id": "gunes",
+      "ad": "Güneş güvertesi",
+      "modul": "arac/gunes.mjs",
+      "gorev": "Uçuş gücünü üretir. Altı yaprak gövdeye doğru yukarı katlanır.",
+      "alt": [
+        "Üç eklemli hücre, çift yüz",
+        "Yaprak çerçevesi ve kaburga",
+        "Menteşe mili",
+        "Bağlantı kutusu"
+      ],
+      "mesh": 66,
+      "tri": 3048,
+      "boyut_m": [
+        2.7,
+        2.347,
+        0.042
+      ],
+      "kutle_kg": 4.007,
+      "kutle_notu": "solar"
+    },
+    {
+      "id": "yuk",
+      "ad": "Bilim yükü",
+      "modul": "arac/yuk.mjs",
+      "gorev": "Aerosolü ve bulut yapısını ölçer. Giriş ileri bakar, kamera aşağı.",
+      "alt": [
+        "İzokinetik aerosol girişi",
+        "Nefelometre kolları",
+        "Safir pencereler",
+        "Kamera kubbesi",
+        "T/p/rüzgâr bumu"
+      ],
+      "mesh": 9,
+      "tri": 3804,
+      "boyut_m": [
+        0.204,
+        0.179,
+        0.156
+      ],
+      "kutle_kg": 0.5,
+      "kutle_notu": "payload"
+    },
+    {
+      "id": "anten",
+      "ad": "Anten ve dizgin",
+      "modul": "arac/anten-baglanti.mjs",
+      "gorev": "Veriyi röle yörüngecisine yollar. Dizgin aracı paraşüt altında tutar, piro somunlar bırakır.",
+      "alt": [
+        "UHF çapraz dipol",
+        "Yer düzlemi radyalleri",
+        "Radom",
+        "Dizgin halkası ve üç kulak",
+        "Piro somunlar"
+      ],
+      "mesh": 22,
+      "tri": 5012,
+      "boyut_m": [
+        0.27,
+        0.271,
+        0.596
+      ],
+      "kutle_kg": 1.6,
+      "kutle_notu": "antenna + attach"
+    }
+  ],
+  "kol_arka_golge": {
+    "alan_m2": 0.417,
+    "guverte_orani": 0.094,
+    "etiket": "K on Y; çizim yerleşiminden, hesapta yok"
+  }
+}

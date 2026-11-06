@@ -8,7 +8,7 @@
   0.5 bar), interpolated linearly; outside the table a Sutherland-type power law fitted to its ends extrapolates.
   N₂ is neglected (≈3.5 % by volume; effect on μ estimated < 1 % [Y]).
 
-All in SI. Reference: ``04_Venus/research/K_nist_co2_properties.md``.
+All in SI. Reference: ``04_Venus/reviews/K_nist_co2_properties.md``.
 """
 from __future__ import annotations
 

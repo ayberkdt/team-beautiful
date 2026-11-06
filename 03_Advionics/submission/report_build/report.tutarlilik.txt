@@ -1,9 +1,0 @@
-set tutarlılığı (3 figür): 0 HATA · 2 UYARI · 2 BİLGİ · SET TUTARLI
-  [UYARI] cizim-alani-hizasi genel-cift: çizim alanının sol kenarı figürden figüre 8.0 pt oynuyor — F2_return_to_path 13.4 mm, F3_real_data 10.6 mm
-          → alt alta duran figürlerde eksenler aynı hizada olsun: S.kenar(*S.kenar_oner()) ile sabit kenar, sonra figürleri yeniden üret  [06 T15: Wilke2019Ch21 §21.2 (paneller hizalı) — figürler arasına genişletme datawiz-secimi]
-  [UYARI] izgara             izgara figürden figüre değişiyor — değer: F2_return_to_path, F3_real_data · yok: F4_display
-          → aynı tema her figürde: Seti.figur(...)  [06 T6: AIAAFig; ElsevierSizing; Kosslyn2012 (anlamsız görsel değişim)]
-  [BİLGİ] nicelik-aralik     'distancetotouchdown' (x) aralığı figürden figüre farklı — 0.6…5.05: F2_return_to_path · 0.7…5.2: F3_real_data
-          → figürler karşılaştırılacaksa ortak sınır: Seti.nicelik(ad, sinir=(a, b))  [06 T5 + §7a: Wilke2019Ch21 §21.1; UrbanStyle; Qu2018 C1.1; mekanizma (tek grafik, dolaylı): Correll2020, Witt2019 — dar aralık aynı etkiyi büyük gösterir; serbest/ortak ölçek deneyi yok]
-  [BİLGİ] nicelik-aralik     'verticaldeviation' (y) aralığı figürden figüre farklı — -20…56.12: F2_return_to_path · -110…175: F3_real_data
-          → figürler karşılaştırılacaksa ortak sınır: Seti.nicelik(ad, sinir=(a, b))  [06 T5 + §7a: Wilke2019Ch21 §21.1; UrbanStyle; Qu2018 C1.1; mekanizma (tek grafik, dolaylı): Correll2020, Witt2019 — dar aralık aynı etkiyi büyük gösterir; serbest/ortak ölçek deneyi yok]

@@ -9,7 +9,7 @@ stay at the root.
 01_Ansys/       bracket redesign           docs/ inputs/ official_2026-11-05/ scripts/ outputs/ submission/
 02_EASA/        canopy alert retrofit      docs/ inputs/ research/ scripts/ outputs/
 03_Advionics/   automated PAR guidance (radar -> pilot cue)   official_2026-11-06/ cases/ research/ templates/ submission/
-04_Venus/       VESPER rotorcraft          docs/ research/ scripts/ outputs/
+04_Venus/       VESPER rotorcraft          docs/ literature/ code/ catalog/ reviews/ outputs/
 prev_guess/     all preparation from before the real tasks (per challenge + 00_general)
 src/aerokit/    the library (bracket/, canopy/, atc/, comms/, venus/ … see below)
 tests/          pytest suite for the library and the day scripts

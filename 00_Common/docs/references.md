@@ -803,7 +803,7 @@ Cited by: `aerokit.venus.bemt._mean_lambda`, `aerokit.venus.bemt.solve`, `aeroki
 
 ### `leishman_ananthan_2008_coaxial`
 
-J. G. Leishman, S. Ananthan (2008). An optimum coaxial rotor system for axial flight. Journal of the American Helicopter Society 53(4):366-381. doi:10.4050/JAHS.53.366. — simplified coaxial BEMT: lower rotor inside the contracted upper wake; what was read is in 04_Venus/research/C_* (research agent)
+J. G. Leishman, S. Ananthan (2008). An optimum coaxial rotor system for axial flight. Journal of the American Helicopter Society 53(4):366-381. doi:10.4050/JAHS.53.366. — simplified coaxial BEMT: lower rotor inside the contracted upper wake; what was read is in 04_Venus/literature/rotorcraft/C_* (research agent)
 
 Cited by: `aerokit.venus.bemt._mean_lambda`
 
@@ -989,7 +989,7 @@ Cited by: `aerokit.reliability.Weibull`, `aerokit.reliability.fit_weibull`
 
 ### `nist_webbook_co2_2026`
 
-P. J. Linstrom, W. G. Mallard (eds.); E. W. Lemmon, M. O. McLinden, D. G. Friend; M. W. Chase (2026). NIST Chemistry WebBook, SRD 69: carbon dioxide and nitrogen (Shomate Cp; thermophysical properties of fluid systems). National Institute of Standards and Technology. <https://webbook.nist.gov/chemistry/>. — read by the Venus session 2026-11-04: CO2 Shomate 298-1200 K, N2 100-500 K; CO2 isobars 0.05 and 0.1 MPa: speed of sound, viscosity, conductivity, Cp 225-400 K (04_Venus/research/K_nist_co2_properties.md)
+P. J. Linstrom, W. G. Mallard (eds.); E. W. Lemmon, M. O. McLinden, D. G. Friend; M. W. Chase (2026). NIST Chemistry WebBook, SRD 69: carbon dioxide and nitrogen (Shomate Cp; thermophysical properties of fluid systems). National Institute of Standards and Technology. <https://webbook.nist.gov/chemistry/>. — read by the Venus session 2026-11-04: CO2 Shomate 298-1200 K, N2 100-500 K; CO2 isobars 0.05 and 0.1 MPa: speed of sound, viscosity, conductivity, Cp 225-400 K (04_Venus/reviews/K_nist_co2_properties.md)
 
 Cited by: `aerokit.venus.atmosphere.state`, `aerokit.venus.gas.conductivity`, `aerokit.venus.gas.cp_molar`, `aerokit.venus.gas.viscosity`
 
@@ -1209,7 +1209,7 @@ Cited by: `aerokit.optimization.sizing.ten_bar_truss`
 
 ### `seiff_1980_pv_structure`
 
-A. Seiff, V. E. Suomi, A. Barnes, G. M. Keating, M. G. Tomasko (data); A. Seiff et al. (paper) (1980). Pioneer Venus probes atmospheric structure (LAS/SAS) and solar flux radiometer (LSFR) data, PDS4 pv_sed_bundle; paper: Measurements of thermal structure and thermal contrasts in the atmosphere of Venus and related dynamical observations, JGR 85(A13):7903-7933. NASA Planetary Data System, Atmospheres Node. doi:10.17189/m5zf-6f12. — raw CSV tables downloaded by the research agent and extracted by the Venus session itself (04_Venus/scripts/venus_pds_extract.py -> src/aerokit/venus/data/pv_profiles.json); the JGR paper was NOT read
+A. Seiff, V. E. Suomi, A. Barnes, G. M. Keating, M. G. Tomasko (data); A. Seiff et al. (paper) (1980). Pioneer Venus probes atmospheric structure (LAS/SAS) and solar flux radiometer (LSFR) data, PDS4 pv_sed_bundle; paper: Measurements of thermal structure and thermal contrasts in the atmosphere of Venus and related dynamical observations, JGR 85(A13):7903-7933. NASA Planetary Data System, Atmospheres Node. doi:10.17189/m5zf-6f12. — raw CSV tables downloaded by the research agent and extracted by the Venus session itself (04_Venus/code/data/venus_pds_extract.py -> src/aerokit/venus/data/pv_profiles.json); the JGR paper was NOT read
 
 Cited by: `aerokit.venus.atmosphere.state`
 
@@ -1303,7 +1303,7 @@ Cited by: `aerokit.structures.section._clip_half_plane`
 
 ### `sutton_graves_1971`
 
-K. Sutton, R. A. Graves Jr. (1971). A general stagnation-point convective-heating equation for arbitrary gas mixtures. NASA TR R-376. <https://ntrs.nasa.gov/citations/19720003329>. — q = k sqrt(rho/Rn) V^3; the constant for the Venus mixture is taken from the research agent's note 04_Venus/research/D_*sutton* (see that file for what was read)
+K. Sutton, R. A. Graves Jr. (1971). A general stagnation-point convective-heating equation for arbitrary gas mixtures. NASA TR R-376. <https://ntrs.nasa.gov/citations/19720003329>. — q = k sqrt(rho/Rn) V^3; the constant for the Venus mixture is taken from the research agent's note 04_Venus/literature/engineering/D_*sutton* (see that file for what was read)
 
 Cited by: `aerokit.venus.entry.sutton_graves`
 

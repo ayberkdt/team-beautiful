@@ -37,16 +37,20 @@ EXCLUDE = [
     "prev_guess/01_Ansys/tradeoff/decision_rules.json",  # quotes the Do-Not-Share deck
     "tests/data/*.xml",  # third-party Ansys Workbench Engineering Data export
     # third-party documents (handbooks, regulations, papers): cite, do not redistribute
-    "*.pdf.part", "*/research/*.pdf", "references/*",
+    "*.pdf.part", "*/research/*.pdf", "*/literature/*.pdf", "references/*",
     # organiser rules, templates and competition PDFs; the team's working report; legacy archive (never exported before)
     "00_Common/rules_and_templates/*", "01_Ansys/submission/final_report/*", "prev_guess/00_general/archive/*",
     # official task files of the other challenges and anything holding their verbatim text
+    "04_Venus/official_2026-*/*.pdf",
     "02_EASA/official_2026-*/*.docx", "03_Advionics/official_2026-*/*.pdf", "03_Advionics/official_2026-*/task_text.txt",
     "prev_guess/03_Advionics/comms_kit_2026-11-05/triage_plan.*",
     "*/official_2026-*/00_OFFICIAL_TASK_vs_KIT.md",        # section 1 follows the organisers' text closely
     # organiser report template art and renders; filled-in organiser sheets; the team's report before the jury
     "00_Common/latex_template/compare/*", "00_Common/latex_template/images/*", "*/submission/latex/images/*",
     "01_Ansys/submission/*TASLAK*", "02_EASA/submission/Team_Beetiful_EASA_Report.*",
+    "03_Advionics/submission/Team_Beetiful_Advionics_Report.*", "03_Advionics/submission/versions/*",
+    "04_Venus/submission/*",                               # Venus report and its build files stay private until the jury
+    "*/submission/latex/main.*", "03_Advionics/submission/report_build/*",   # report text, same rule
     "*/research/S_intersoft_res_update_2025.md",           # holds a named person's work e-mail
     "prev_guess/00_general/past_competitions/*",
     # bulky / machine-local

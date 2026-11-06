@@ -45,7 +45,7 @@ Doc 25 quotes these for 43.66 kg, or from the simulator at 43.66 kg. Doc 25 numb
 | Gust thrust peak, margin | 33 % W, 1.8× | 32.8 % W, 1.83× |
 | Fall to the surface, windmilling | ~12 h | 12.6 h, from 50.4 km |
 
-**Not rerun at 44.63 kg:** the simulator (sunumatik). Pull-out current 52.7 A at cos z 0.68, canopy clearance 0.33 m and the motor-out result stay 43.66 kg numbers. The 2C limit is 53.6 A, so only 0.9 A separates it from the cos z 0.68 case; recheck that case at the new mass before relying on the rule. Planned release is at cos z 0.71.
+**Pull-out current at 44.63 kg (one-off simulator run, 6 Nov 14:20, not the full harness):** 51.6 A at the planned cos z 0.708; 54.1 A at cos z 0.68, above the 53.6 A limit. **The cos z 0.68 rule does not hold at this mass.** Use cos z 0.70: 52.4 A nominal, 52.9 A high interaction. Canopy clearance and the motor-out result stay 43.66 kg numbers. Planned release is at cos z 0.71.
 
 ## Figures
 
@@ -213,6 +213,23 @@ Target: `sunum-tam`. Each brief gives the message; form and data are the baselin
 | `failure_modes[acid degradation].recovery` | mission ends at ~49 h anyway | mission ends at ~44 h anyway | - | K | recomputed for the variant (python 04_Venus/scripts/venus_variant_v07.py) |
 | `deployment_replay.rows` | 338 rows | 340 rows | table | K | rebuilt for the variant; rows in sim_params.json |
 | `mission_series.rows` | 50 rows | 44 rows | table | K | rebuilt for the variant; rows in sim_params.json |
+
+## Before promotion: three things to do
+
+These files were built before simulator pass 6, so they are out of date in these ways.
+
+1. **Release floor.** `limits[release sun height, minimum cos z]` and `deployment_sequence[8].decision` still say 0.68. Set `RELEASE_MIN_MU0 = 0.70` in `venus_variant_v07.py`, change the two test lines that assert 0.68, and rerun. Peak current, 14S8P, limit 53.6 A:
+
+   | cos z | Nominal | High interaction |
+   |---:|---:|---:|
+   | 0.68 | 54.06 A | 54.50 A |
+   | 0.69 | 53.25 A | 53.70 A |
+   | 0.70 | 52.44 A | 52.86 A |
+   | 0.708 (planned) | 51.64 A | 52.11 A |
+
+   The run used the variant `sim_params.json`, `design.json` chords and suspended mass, on the v0.6 reference file. The same script gave the harness values at v0.6 (50.84 A, 53.52 A).
+2. **Power curves.** This variant uses `guc_egrisi.input.json` of 08:12Z. The curves were regenerated at 10:43Z. A budget rerun with the new curves (temporary copy, stopped by a 500 s limit after the options table, `result.json` not written) printed: nominal at 43.66 kg 1591 W at 8.9 m/s, re-closed design 44.6 kg, 43.5 h, closes True. So the mass stays; loiter W and the hours in this file move a little. Regenerate with the new curves.
+3. **`src` version.** `src/aerokit/venus/design.py` still has `DESIGN_VERSION = "0.6"`. `venus_design.py` or `venus_final.py` could write v0.6 back into `outputs/`. Add a guard or move the values into `src` first.
 
 ## Promotion: only after the team says yes
 

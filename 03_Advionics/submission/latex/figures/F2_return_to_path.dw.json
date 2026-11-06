@@ -3,26 +3,26 @@
  "ad": "F2_return_to_path",
  "boyut_pt": [
   510.2,
-  124.7
+  130.4
  ],
  "metin_kutusu_pt": [
   3.0,
   3.0,
-  490.1,
-  119.3
+  490.4,
+  125.0
  ],
  "hedef": "genel-cift",
  "ortam": "makale",
  "boyut_mm": [
   180.0,
-  44.0
+  46.0
  ],
  "yazi_tipleri": [
   "Source Sans 3"
  ],
  "punto": {
   "tik": [
-   8.1
+   9.0
   ],
   "eksen_adi": [
    9.0
@@ -33,15 +33,14 @@
    10.0
   ],
   "metin": [
-   8.1,
    9.0
   ]
  },
  "punto_tepe": {
-  "tik": 8.1,
+  "tik": 9.0,
   "eksen_adi": 9.0,
   "panel": 10.0,
-  "metin": 8.1
+  "metin": 9.0
  },
  "panel_harfleri": [
   {
@@ -66,10 +65,10 @@
  "eksenler": [
   {
    "konum_pt": [
-    38.0,
+    39.8,
     32.0,
-    254.1,
-    105.2
+    254.4,
+    110.9
    ],
    "baslik": "",
    "seriler": [
@@ -135,9 +134,9 @@
     "e_gosterimi": false,
     "ofset": "",
     "etiket_pt": [
-     92.6,
+     93.6,
      3.0,
-     199.6,
+     200.6,
      11.2
     ]
    },
@@ -172,9 +171,9 @@
     "ofset": "",
     "etiket_pt": [
      3.0,
-     29.4,
+     32.2,
      11.2,
-     107.9
+     110.7
     ]
    },
    "lejant": [],
@@ -195,10 +194,10 @@
   },
   {
    "konum_pt": [
-    291.2,
+    292.7,
     32.0,
     507.2,
-    105.2
+    110.9
    ],
    "baslik": "",
    "seriler": [
@@ -264,9 +263,9 @@
     "e_gosterimi": false,
     "ofset": "",
     "etiket_pt": [
-     345.7,
+     346.4,
      3.0,
-     452.7,
+     453.5,
      11.2
     ]
    },
@@ -301,10 +300,10 @@
     "e_gosterimi": false,
     "ofset": "",
     "etiket_pt": [
-     260.1,
-     28.4,
-     268.3,
-     108.9
+     260.4,
+     31.2,
+     268.5,
+     111.7
     ]
    },
    "lejant": [],

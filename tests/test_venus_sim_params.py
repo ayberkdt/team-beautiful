@@ -1,4 +1,4 @@
-"""Contract of 04_Venus/outputs/sim_params.json (written by 04_Venus/scripts/venus_sim_params.py)."""
+"""Contract of 04_Venus/outputs/sim_params.json (written by 04_Venus/code/pipeline/venus_sim_params.py)."""
 from __future__ import annotations
 
 import json

@@ -312,6 +312,16 @@
   \endgroup
   \@starttoc{toc}%
   \clearpage}
+% \tocfirstsubstop{33bp}: text stop of the FIRST level-2 entry only. The Word
+% template's cached contents has this one-off 33 bp stop on "1.1"; a real report
+% does not need it (example_lorem.tex uses it for the 1:1 comparison).
+\let\ideathon@firstsubstop\relax
+\newcommand\tocfirstsubstop[1]{\gdef\ideathon@firstsubstop{#1}}
+\def\ideathon@tocpick#1{%
+  \edef\ideathon@thisstop{\@nameuse{ideathon@toc@stop#1}}%
+  \ifnum#1=2\relax\ifx\ideathon@firstsubstop\relax\else
+    \let\ideathon@thisstop\ideathon@firstsubstop
+    \global\let\ideathon@firstsubstop\relax\fi\fi}
 \def\ideathon@tocline#1#2#3{% level, entry, page
   \par
   \begingroup
@@ -320,8 +330,8 @@
     \rightskip=\z@ \parfillskip=\z@
     \def\numberline##1{%
       \setbox\ideathon@numbox\hbox{\ideathon@tocfont ##1}%
-      \ideathon@tabto{\@nameuse{ideathon@toc@ind#1}}%
-                     {\@nameuse{ideathon@toc@stop#1}}}%
+      \ideathon@tocpick{#1}%
+      \ideathon@tabto{\@nameuse{ideathon@toc@ind#1}}{\ideathon@thisstop}}%
     \noindent{\ideathon@tocfont #2}%
     \nobreak\leaders\hbox to 2.4bp{.\hss}\hfill
     \nobreak\hbox{#3}\hskip 0.5bp\relax\par
